@@ -1,0 +1,59 @@
+name: Collect GitHub Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Build backend
+        run: |
+          cd backend
+          go mod download
+          go build -o github-collector .
+
+      - name: Run collection
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data
+          
+          cd backend
+          ./github-collector serve --http=0.0.0.0:8090 &
+          sleep 5
+          
+          echo "Collecting starred repos..."
+          curl -X POST http://localhost:8090/api/github/collect/qdriven
+          
+          echo "Collecting trending repos..."
+          curl -X POST "http://localhost:8090/api/github/trending/collect?period=daily"
+          curl -X POST "http://localhost:8090/api/github/trending/collect?period=weekly"
+          curl -X POST "http://localhost:8090/api/github/trending/collect?period=monthly"
+          
+          echo "Exporting to JSON..."
+          curl -s "http://localhost:8090/api/starred/search?github_user=qdriven&perPage=10000" > ../data/starred_repos.json
+          curl -s "http://localhost:8090/api/trending/search?period=daily&perPage=100" > ../data/trending_daily.json
+          curl -s "http://localhost:8090/api/trending/search?period=weekly&perPage=100" > ../data/trending_weekly.json
+          curl -s "http://localhost:8090/api/trending/search?period=monthly&perPage=100" > ../data/trending_monthly.json
+          
+          pkill -f github-collector
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/*.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update GitHub data (starred + trending) [skip ci]"
+          git push

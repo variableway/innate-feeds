@@ -1,0 +1,25 @@
+# Build stage for backend
+FROM golang:1.21-alpine AS backend-builder
+
+WORKDIR /app/backend
+
+COPY backend/go.mod ./
+COPY backend/go.sum* ./
+RUN go mod download || true
+
+COPY backend/ ./
+RUN go build -o github-collector .
+
+# Production stage for backend
+FROM alpine:latest AS backend
+
+WORKDIR /app
+
+RUN apk --no-cache add ca-certificates tzdata
+
+COPY --from=backend-builder /app/backend/github-collector /app/
+COPY --from=backend-builder /app/backend/pb_migrations /app/pb_migrations
+
+EXPOSE 8090
+
+CMD ["./github-collector", "serve", "--http=0.0.0.0:8090"]
