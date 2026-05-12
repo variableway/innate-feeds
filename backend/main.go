@@ -16,7 +16,9 @@ import (
 	"github.com/pocketbase/pocketbase"
 	"github.com/pocketbase/pocketbase/apis"
 	"github.com/pocketbase/pocketbase/core"
+	"github.com/pocketbase/pocketbase/daos"
 	"github.com/pocketbase/pocketbase/models"
+	"github.com/pocketbase/pocketbase/models/schema"
 	"github.com/pocketbase/pocketbase/tools/cron"
 )
 
@@ -77,6 +79,9 @@ func main() {
 	app := pocketbase.New()
 
 	app.OnBeforeServe().Add(func(e *core.ServeEvent) error {
+		if err := ensureCollections(app); err != nil {
+			return err
+		}
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodGet,
 			Path:   "/api/github/starred/:username",
@@ -122,10 +127,23 @@ func main() {
 				}
 
 				savedCount := 0
+				updatedCount := 0
 				for _, repo := range repos {
-					record := models.NewRecord(collection)
-					record.Set("github_user", username)
-					record.Set("repo_id", repo.ID)
+					existing, _ := app.Dao().FindFirstRecordByFilter(
+						collection.Id,
+						"github_user = {:user} && repo_id = {:repoId}",
+						map[string]interface{}{"user": username, "repoId": repo.ID},
+					)
+
+					record := existing
+					if record == nil {
+						record = models.NewRecord(collection)
+						record.Set("github_user", username)
+						record.Set("repo_id", repo.ID)
+					} else {
+						updatedCount++
+					}
+
 					record.Set("repo_name", repo.Name)
 					record.Set("full_name", repo.FullName)
 					record.Set("description", repo.Description)
@@ -150,6 +168,7 @@ func main() {
 					"username": username,
 					"fetched":  len(repos),
 					"saved":    savedCount,
+					"updated":  updatedCount,
 					"message":  "Starred repositories collected successfully",
 				})
 			},
@@ -179,19 +198,28 @@ func main() {
 					return apis.NewBadRequestError("Collection not found", err)
 				}
 
-				expr := fmt.Sprintf("github_user = '%s'", githubUser)
+				expr := "github_user = {:user}"
+				params := map[string]interface{}{"user": githubUser}
 
 				if minStars != "" {
-					expr += fmt.Sprintf(" && star_num >= %s", minStars)
+					if ms, err := strconv.Atoi(minStars); err == nil {
+						expr += " && star_num >= {:minStars}"
+						params["minStars"] = ms
+					}
 				}
 				if maxStars != "" {
-					expr += fmt.Sprintf(" && star_num <= %s", maxStars)
+					if ms, err := strconv.Atoi(maxStars); err == nil {
+						expr += " && star_num <= {:maxStars}"
+						params["maxStars"] = ms
+					}
 				}
 				if language != "" {
-					expr += fmt.Sprintf(" && language = '%s'", language)
+					expr += " && language = {:language}"
+					params["language"] = language
 				}
 				if tag != "" {
-					expr += fmt.Sprintf(" && tags ~ '%s'", tag)
+					expr += " && tags ~ {:tag}"
+					params["tag"] = tag
 				}
 
 				pageNum := 1
@@ -212,8 +240,9 @@ func main() {
 					collection.Id,
 					expr,
 					"-star_num",
-					pageNum,
 					perPageNum,
+					(pageNum-1)*perPageNum,
+					params,
 				)
 
 				if err != nil {
@@ -247,10 +276,11 @@ func main() {
 
 				records, err := app.Dao().FindRecordsByFilter(
 					collection.Id,
-					fmt.Sprintf("github_user = '%s'", username),
+					"github_user = {:user}",
 					"",
-					1,
 					10000,
+					0,
+					map[string]interface{}{"user": username},
 				)
 
 				if err != nil {
@@ -290,10 +320,11 @@ func main() {
 
 				records, err := app.Dao().FindRecordsByFilter(
 					collection.Id,
-					fmt.Sprintf("github_user = '%s'", username),
+					"github_user = {:user}",
 					"",
-					1,
 					10000,
+					0,
+					map[string]interface{}{"user": username},
 				)
 
 				if err != nil {
@@ -406,19 +437,28 @@ func main() {
 					return apis.NewBadRequestError("Collection not found", err)
 				}
 
-				expr := fmt.Sprintf("trending_period = '%s'", period)
+				expr := "trending_period = {:period}"
+				params := map[string]interface{}{"period": period}
 
 				if snapshotDate != "" {
-					expr += fmt.Sprintf(" && snapshot_date = '%s'", snapshotDate)
+					expr += " && snapshot_date = {:snapshotDate}"
+					params["snapshotDate"] = snapshotDate
 				}
 				if language != "" {
-					expr += fmt.Sprintf(" && language = '%s'", language)
+					expr += " && language = {:language}"
+					params["language"] = language
 				}
 				if minStars != "" {
-					expr += fmt.Sprintf(" && star_num >= %s", minStars)
+					if ms, err := strconv.Atoi(minStars); err == nil {
+						expr += " && star_num >= {:minStars}"
+						params["minStars"] = ms
+					}
 				}
 				if maxStars != "" {
-					expr += fmt.Sprintf(" && star_num <= %s", maxStars)
+					if ms, err := strconv.Atoi(maxStars); err == nil {
+						expr += " && star_num <= {:maxStars}"
+						params["maxStars"] = ms
+					}
 				}
 
 				pageNum := 1
@@ -439,8 +479,9 @@ func main() {
 					collection.Id,
 					expr,
 					"rank",
-					pageNum,
 					perPageNum,
+					(pageNum-1)*perPageNum,
+					params,
 				)
 
 				if err != nil {
@@ -474,10 +515,11 @@ func main() {
 
 				records, err := app.Dao().FindRecordsByFilter(
 					collection.Id,
-					fmt.Sprintf("trending_period = '%s'", period),
+					"trending_period = {:period}",
 					"-snapshot_date",
-					1,
 					10000,
+					0,
+					map[string]interface{}{"period": period},
 				)
 
 				if err != nil {
@@ -523,17 +565,20 @@ func main() {
 					return apis.NewBadRequestError("Collection not found", err)
 				}
 
-				expr := fmt.Sprintf("trending_period = '%s'", period)
+				expr := "trending_period = {:period}"
+				params := map[string]interface{}{"period": period}
 				if snapshotDate != "" {
-					expr += fmt.Sprintf(" && snapshot_date = '%s'", snapshotDate)
+					expr += " && snapshot_date = {:snapshotDate}"
+					params["snapshotDate"] = snapshotDate
 				}
 
 				records, err := app.Dao().FindRecordsByFilter(
 					collection.Id,
 					expr,
 					"",
-					1,
 					10000,
+					0,
+					params,
 				)
 
 				if err != nil {
@@ -571,8 +616,8 @@ func main() {
 				collection.Id,
 				"enabled = true",
 				"",
-				1,
 				100,
+				0,
 			)
 
 			if err != nil {
@@ -597,23 +642,33 @@ func main() {
 				}
 
 				for _, repo := range repos {
-					record := models.NewRecord(starredCollection)
-					record.Set("github_user", username)
-					record.Set("repo_id", repo.ID)
-					record.Set("repo_name", repo.Name)
-					record.Set("full_name", repo.FullName)
-					record.Set("description", repo.Description)
-					record.Set("html_url", repo.HTMLURL)
-					record.Set("star_num", repo.Stargazers)
-					record.Set("language", repo.Language)
-					record.Set("fork_num", repo.ForksCount)
-					record.Set("tags", strings.Join(repo.Topics, ","))
-					record.Set("created_at", repo.CreatedAt)
-					record.Set("updated_at", repo.UpdatedAt)
-					record.Set("pushed_at", repo.PushedAt)
-					record.Set("collected_at", time.Now())
+					existing, _ := app.Dao().FindFirstRecordByFilter(
+						starredCollection.Id,
+						"github_user = {:user} && repo_id = {:repoId}",
+						map[string]interface{}{"user": username, "repoId": repo.ID},
+					)
 
-					if err := app.Dao().SaveRecord(record); err != nil {
+					r := existing
+					if r == nil {
+						r = models.NewRecord(starredCollection)
+						r.Set("github_user", username)
+						r.Set("repo_id", repo.ID)
+					}
+
+					r.Set("repo_name", repo.Name)
+					r.Set("full_name", repo.FullName)
+					r.Set("description", repo.Description)
+					r.Set("html_url", repo.HTMLURL)
+					r.Set("star_num", repo.Stargazers)
+					r.Set("language", repo.Language)
+					r.Set("fork_num", repo.ForksCount)
+					r.Set("tags", strings.Join(repo.Topics, ","))
+					r.Set("created_at", repo.CreatedAt)
+					r.Set("updated_at", repo.UpdatedAt)
+					r.Set("pushed_at", repo.PushedAt)
+					r.Set("collected_at", time.Now())
+
+					if err := app.Dao().SaveRecord(r); err != nil {
 						app.Logger().Error("Failed to save repo", "repo", repo.FullName, "error", err)
 					}
 				}
@@ -678,13 +733,114 @@ func main() {
 	}
 }
 
+func ensureCollections(app *pocketbase.PocketBase) error {
+	dao := app.Dao()
+
+	collections := []struct {
+		name   string
+		schema []*schema.SchemaField
+		indexes []string
+		rules  func() *string
+	}{
+		{
+			name: "starred_repos",
+			schema: []*schema.SchemaField{
+				{Name: "github_user", Type: schema.FieldTypeText, Required: true},
+				{Name: "repo_id", Type: schema.FieldTypeNumber, Required: true, Unique: true},
+				{Name: "repo_name", Type: schema.FieldTypeText, Required: true},
+				{Name: "full_name", Type: schema.FieldTypeText, Required: true},
+				{Name: "description", Type: schema.FieldTypeText},
+				{Name: "html_url", Type: schema.FieldTypeUrl, Required: true},
+				{Name: "star_num", Type: schema.FieldTypeNumber, Required: true},
+				{Name: "language", Type: schema.FieldTypeText},
+				{Name: "fork_num", Type: schema.FieldTypeNumber, Required: true},
+				{Name: "tags", Type: schema.FieldTypeText},
+				{Name: "created_at", Type: schema.FieldTypeDate},
+				{Name: "updated_at", Type: schema.FieldTypeDate},
+				{Name: "pushed_at", Type: schema.FieldTypeDate},
+				{Name: "collected_at", Type: schema.FieldTypeDate, Required: true},
+			},
+			indexes: []string{
+				"CREATE INDEX idx_starred_github_user ON starred_repos (github_user)",
+				"CREATE INDEX idx_starred_repo_id ON starred_repos (repo_id)",
+				"CREATE INDEX idx_starred_star_num ON starred_repos (star_num)",
+				"CREATE INDEX idx_starred_language ON starred_repos (language)",
+			},
+		},
+		{
+			name: "collection_configs",
+			schema: []*schema.SchemaField{
+				{Name: "github_user", Type: schema.FieldTypeText, Required: true},
+				{Name: "enabled", Type: schema.FieldTypeBool},
+				{Name: "schedule", Type: schema.FieldTypeText},
+				{Name: "last_collected", Type: schema.FieldTypeDate},
+			},
+		},
+		{
+			name: "trending_repos",
+			schema: []*schema.SchemaField{
+				{Name: "repo_id", Type: schema.FieldTypeNumber},
+				{Name: "repo_name", Type: schema.FieldTypeText, Required: true},
+				{Name: "full_name", Type: schema.FieldTypeText, Required: true},
+				{Name: "description", Type: schema.FieldTypeText},
+				{Name: "html_url", Type: schema.FieldTypeUrl, Required: true},
+				{Name: "star_num", Type: schema.FieldTypeNumber, Required: true},
+				{Name: "language", Type: schema.FieldTypeText},
+				{Name: "fork_num", Type: schema.FieldTypeNumber},
+				{Name: "tags", Type: schema.FieldTypeText},
+				{Name: "trending_period", Type: schema.FieldTypeSelect, Required: true,
+					Options: &schema.SelectOptions{MaxSelect: 1, Values: []string{"daily", "weekly", "monthly"}}},
+				{Name: "snapshot_date", Type: schema.FieldTypeText, Required: true},
+				{Name: "stars_today", Type: schema.FieldTypeNumber},
+				{Name: "rank", Type: schema.FieldTypeNumber},
+				{Name: "collected_at", Type: schema.FieldTypeDate, Required: true},
+			},
+			indexes: []string{
+				"CREATE INDEX idx_trending_period ON trending_repos (trending_period)",
+				"CREATE INDEX idx_trending_snapshot ON trending_repos (snapshot_date)",
+			},
+		},
+	}
+
+	for _, c := range collections {
+		existing, _ := dao.FindCollectionByNameOrId(c.name)
+		if existing != nil {
+			continue
+		}
+
+		collection := &models.Collection{
+			Name: c.name,
+			Type: models.CollectionTypeBase,
+			Schema: schema.NewSchema(c.schema...),
+		}
+
+		collection.MarkAsNew()
+		if len(c.indexes) > 0 {
+			collection.Indexes = c.indexes
+		}
+
+		emptyStr := ""
+		collection.ListRule = &emptyStr
+		collection.ViewRule = &emptyStr
+		collection.CreateRule = &emptyStr
+		collection.UpdateRule = &emptyStr
+		collection.DeleteRule = &emptyStr
+
+		if err := daos.New(dao.DB()).SaveCollection(collection); err != nil {
+			return fmt.Errorf("failed to create collection %s: %w", c.name, err)
+		}
+		app.Logger().Info("Created collection", "name", c.name)
+	}
+
+	return nil
+}
+
 func fetchGitHubStarredRepos(username string) ([]GitHubRepo, error) {
 	var allRepos []GitHubRepo
 	page := 1
 	perPage := 100
 
 	client := &http.Client{Timeout: 30 * time.Second}
-
 	token := os.Getenv("GITHUB_TOKEN")
 
 	for {
@@ -706,17 +862,19 @@ func fetchGitHubStarredRepos(username string) ([]GitHubRepo, error) {
 		if err != nil {
 			return nil, err
 		}
-		defer resp.Body.Close()
 
 		if resp.StatusCode != http.StatusOK {
 			body, _ := io.ReadAll(resp.Body)
+			resp.Body.Close()
 			return nil, fmt.Errorf("GitHub API error: %s - %s", resp.Status, string(body))
 		}
 
 		var repos []GitHubRepo
 		if err := json.NewDecoder(resp.Body).Decode(&repos); err != nil {
+			resp.Body.Close()
 			return nil, err
 		}
+		resp.Body.Close()
 
 		if len(repos) == 0 {
 			break
@@ -737,19 +895,7 @@ func fetchGitHubStarredRepos(username string) ([]GitHubRepo, error) {
 func fetchGitHubTrending(period string) ([]TrendingRepo, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 
-	var since string
-	switch period {
-	case "daily":
-		since = "daily"
-	case "weekly":
-		since = "weekly"
-	case "monthly":
-		since = "monthly"
-	default:
-		since = "daily"
-	}
-
-	url := fmt.Sprintf("https://github.com/trending?since=%s", since)
+	url := fmt.Sprintf("https://github.com/trending?since=%s", period)
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -798,15 +944,21 @@ func parseTrendingHTML(html string, period string) ([]TrendingRepo, error) {
 		repoName := strings.TrimSpace(match[2])
 		fullName := strings.TrimPrefix(repoPath, "/")
 
-		startIdx := match[0]
-		endIdx := 0
+		startMatch := match[0]
+		endIdx := len(html)
 		if i < len(repoMatches)-1 {
-			endIdx = repoMatches[i+1][0]
-		} else {
-			endIdx = len(html)
+			nextMatch := repoMatches[i+1][0]
+			endIdx = strings.Index(html, nextMatch)
+			if endIdx == -1 {
+				endIdx = len(html)
+			}
 		}
 
-		repoHTML := html[strings.Index(html, startIdx):endIdx]
+		startIdx := strings.Index(html, startMatch)
+		if startIdx == -1 {
+			continue
+		}
+		repoHTML := html[startIdx:endIdx]
 
 		description := ""
 		if descMatch := descRegex.FindStringSubmatch(repoHTML); len(descMatch) > 1 {

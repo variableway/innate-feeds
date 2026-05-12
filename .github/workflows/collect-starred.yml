@@ -54,6 +54,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          mkdir -p data
           git add data/*.json
           git diff --quiet && git diff --staged --quiet || git commit -m "Update GitHub data (starred + trending) [skip ci]"
           git push

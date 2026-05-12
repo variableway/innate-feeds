@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Star, GitFork, ExternalLink, RefreshCw, TrendingUp, Calendar } from 'lucide-react'
-import { api, TrendingRepo } from '@/lib/api'
+import { Input } from '@/components/ui/input'
+import { Star, GitFork, ExternalLink, RefreshCw, TrendingUp, Calendar, WifiOff, Settings2 } from 'lucide-react'
+import { api, TrendingRepo, BackendStatus } from '@/lib/api'
+import { openExternalUrl } from '@/lib/tauri'
 
 export default function TrendingPage() {
   const [period, setPeriod] = useState('daily')
@@ -18,13 +20,37 @@ export default function TrendingPage() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('')
   const [currentPage, setCurrentPage] = useState(1)
   const [message, setMessage] = useState('')
+  const [backendStatus, setBackendStatus] = useState<BackendStatus | null>(null)
+  const [showSettings, setShowSettings] = useState(false)
+  const [apiUrlInput, setApiUrlInput] = useState('')
 
   useEffect(() => {
-    loadDates()
+    checkBackend()
+  }, [])
+
+  const checkBackend = async () => {
+    const status = await api.checkBackend()
+    setBackendStatus(status)
+    setApiUrlInput(status.url)
+    if (status.available) {
+      loadDates()
+    }
+  }
+
+  const handleSetApiUrl = () => {
+    api.setApiUrl(apiUrlInput)
+    checkBackend()
+    setShowSettings(false)
+  }
+
+  useEffect(() => {
+    if (backendStatus?.available) {
+      loadDates()
+    }
   }, [period])
 
   useEffect(() => {
-    if (snapshotDate) {
+    if (snapshotDate && backendStatus?.available) {
       searchRepos()
     }
   }, [period, snapshotDate])
@@ -45,18 +71,19 @@ export default function TrendingPage() {
   const searchRepos = async (page = 1) => {
     setLoading(true)
     try {
-      const params: any = { period, snapshot_date: snapshotDate, page, perPage: 50 }
+      const params: Record<string, unknown> = { period, snapshot_date: snapshotDate, page, perPage: 50 }
       if (selectedLanguage && selectedLanguage !== 'all') params.language = selectedLanguage
 
-      const result = await api.searchTrendingRepos(params)
+      const result = await api.searchTrendingRepos(params as any)
       setRepos(result.items)
       setCurrentPage(page)
 
       const langsResult = await api.getTrendingLanguages(period, snapshotDate)
       setLanguages(langsResult.languages || {})
+      setMessage('')
     } catch (error) {
       console.error('Failed to search repos:', error)
-      setMessage('Failed to search repositories')
+      setMessage('Failed to search repositories. Make sure the backend is running.')
     } finally {
       setLoading(false)
     }
@@ -67,19 +94,19 @@ export default function TrendingPage() {
     setMessage('')
     try {
       const result = await api.collectTrendingRepos(period)
-      setMessage(`Successfully collected ${result.saved} repositories`)
+      setMessage(`Collected ${result.saved} trending repositories for ${period}`)
       await loadDates()
       setSnapshotDate(result.snapshot_date)
     } catch (error) {
       console.error('Failed to collect repos:', error)
-      setMessage('Failed to collect repositories')
+      setMessage('Failed to collect repositories. Check backend connection.')
     } finally {
       setCollecting(false)
     }
   }
 
   useEffect(() => {
-    if (snapshotDate) {
+    if (snapshotDate && backendStatus?.available) {
       searchRepos(1)
     }
   }, [selectedLanguage])
@@ -95,13 +122,56 @@ export default function TrendingPage() {
             </h1>
             <p className="text-muted-foreground">View trending repositories by date and period</p>
           </div>
-          <Link href="/">
-            <Button variant="outline" className="flex items-center gap-2">
-              <Star className="h-4 w-4" />
-              View Starred
+          <div className="flex items-center gap-2">
+            <Link href="/">
+              <Button variant="outline" className="flex items-center gap-2">
+                <Star className="h-4 w-4" />
+                View Starred
+              </Button>
+            </Link>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setShowSettings(!showSettings)}
+              title="Backend settings"
+            >
+              <Settings2 className="h-4 w-4" />
             </Button>
-          </Link>
+          </div>
         </div>
+
+        {backendStatus && !backendStatus.available && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+            <WifiOff className="h-5 w-5 text-red-600" />
+            <div className="flex-1">
+              <p className="font-medium text-red-800">Backend not connected</p>
+              <p className="text-sm text-red-600">
+                Start the backend at <code className="bg-red-100 px-1 rounded">{backendStatus.url}</code> or change the URL in settings.
+              </p>
+            </div>
+            <Button variant="outline" size="sm" onClick={checkBackend}>
+              Retry
+            </Button>
+          </div>
+        )}
+
+        {showSettings && (
+          <div className="mb-6 p-4 bg-card rounded-lg border">
+            <p className="text-sm font-medium mb-2">Backend URL</p>
+            <div className="flex gap-2">
+              <Input
+                value={apiUrlInput}
+                onChange={(e) => setApiUrlInput(e.target.value)}
+                placeholder="http://localhost:8090"
+                className="max-w-sm"
+              />
+              <Button onClick={handleSetApiUrl} size="sm">Save</Button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-1">
+              Current: {api.getApiUrl()}
+            </p>
+          </div>
+        )}
 
         <div className="bg-card rounded-lg border p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
@@ -156,7 +226,7 @@ export default function TrendingPage() {
             </div>
 
             <div className="flex items-end">
-              <Button onClick={collectRepos} disabled={collecting} className="w-full">
+              <Button onClick={collectRepos} disabled={collecting || !backendStatus?.available} className="w-full">
                 <RefreshCw className={`mr-2 h-4 w-4 ${collecting ? 'animate-spin' : ''}`} />
                 {collecting ? 'Collecting...' : 'Collect Trending'}
               </Button>
@@ -164,7 +234,11 @@ export default function TrendingPage() {
           </div>
 
           {message && (
-            <div className="p-3 bg-blue-50 border border-blue-200 rounded text-blue-800 text-sm">
+            <div className={`p-3 rounded text-sm ${
+              message.startsWith('Collected')
+                ? 'bg-green-50 border border-green-200 text-green-800'
+                : 'bg-blue-50 border border-blue-200 text-blue-800'
+            }`}>
               {message}
             </div>
           )}
@@ -196,18 +270,16 @@ export default function TrendingPage() {
                     <span className="text-2xl font-bold text-muted-foreground">#{repo.rank}</span>
                     <h3 className="font-semibold text-lg truncate flex-1">{repo.repo_name}</h3>
                   </div>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => openExternalUrl(repo.html_url)}
                     className="text-blue-600 hover:text-blue-800"
                   >
                     <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </button>
                 </div>
-                
+
                 <p className="text-xs text-muted-foreground mb-2">{repo.full_name}</p>
-                
+
                 <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                   {repo.description || 'No description available'}
                 </p>

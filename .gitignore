@@ -26,3 +26,8 @@ build/
 
 coverage/
 .nyc_output/
+
+# Tauri
+frontend/src-tauri/target/
+frontend/src-tauri/WixTools/
+frontend/out/

@@ -1,0 +1,13 @@
+package tui
+
+import (
+	tea "github.com/charmbracelet/bubbletea"
+)
+
+// Run starts the TUI application.
+func Run() error {
+	m := NewModel()
+	p := tea.NewProgram(m, tea.WithAltScreen())
+	_, err := p.Run()
+	return err
+}

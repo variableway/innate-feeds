@@ -1,6 +1,15 @@
 import axios from 'axios'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8090'
+const DEFAULT_API_URL = 'http://localhost:8090'
+
+function getApiUrl(): string {
+  if (typeof window === 'undefined') return DEFAULT_API_URL
+  return localStorage.getItem('api_url') || process.env.NEXT_PUBLIC_API_URL || DEFAULT_API_URL
+}
+
+function setApiUrl(url: string) {
+  localStorage.setItem('api_url', url)
+}
 
 export interface StarredRepo {
   id: string
@@ -44,73 +53,100 @@ export interface TagsResponse {
   tags: Record<string, number>
 }
 
-export const api = {
-  async fetchStarredRepos(username: string): Promise<{ username: string; count: number; repos: any[] }> {
-    const response = await axios.get(`${API_URL}/api/github/starred/${username}`)
+export interface CollectResult {
+  username: string
+  fetched: number
+  saved: number
+  updated: number
+  message: string
+}
+
+export interface BackendStatus {
+  available: boolean
+  url: string
+}
+
+async function request<T>(method: 'get' | 'post', path: string, data?: unknown): Promise<T> {
+  const url = `${getApiUrl()}${path}`
+  try {
+    const response = method === 'post'
+      ? await axios.post(url, data, { timeout: 120000 })
+      : await axios.get(url, { timeout: 30000 })
     return response.data
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response?.data?.message) {
+      throw new Error(error.response.data.message)
+    }
+    throw error
+  }
+}
+
+export const api = {
+  getApiUrl,
+  setApiUrl,
+
+  async checkBackend(): Promise<BackendStatus> {
+    try {
+      await axios.get(`${getApiUrl()}/api/health`, { timeout: 5000 })
+      return { available: true, url: getApiUrl() }
+    } catch {
+      return { available: false, url: getApiUrl() }
+    }
   },
 
-  async collectStarredRepos(username: string): Promise<{ username: string; fetched: number; saved: number; message: string }> {
-    const response = await axios.post(`${API_URL}/api/github/collect/${username}`)
-    return response.data
+  async fetchStarredRepos(username: string) {
+    return request<{ username: string; count: number; repos: unknown[] }>('get', `/api/github/starred/${username}`)
+  },
+
+  async collectStarredRepos(username: string): Promise<CollectResult> {
+    return request<CollectResult>('post', `/api/github/collect/${username}`)
   },
 
   async searchStarredRepos(params: SearchParams): Promise<SearchResult> {
-    const queryParams = new URLSearchParams()
-    queryParams.append('github_user', params.github_user)
-    
-    if (params.min_stars !== undefined) queryParams.append('min_stars', params.min_stars.toString())
-    if (params.max_stars !== undefined) queryParams.append('max_stars', params.max_stars.toString())
-    if (params.language) queryParams.append('language', params.language)
-    if (params.tag) queryParams.append('tag', params.tag)
-    if (params.page) queryParams.append('page', params.page.toString())
-    if (params.perPage) queryParams.append('perPage', params.perPage.toString())
-
-    const response = await axios.get(`${API_URL}/api/starred/search?${queryParams.toString()}`)
-    return response.data
+    const sp = new URLSearchParams()
+    sp.append('github_user', params.github_user)
+    if (params.min_stars !== undefined) sp.append('min_stars', params.min_stars.toString())
+    if (params.max_stars !== undefined) sp.append('max_stars', params.max_stars.toString())
+    if (params.language) sp.append('language', params.language)
+    if (params.tag) sp.append('tag', params.tag)
+    if (params.page) sp.append('page', params.page.toString())
+    if (params.perPage) sp.append('perPage', params.perPage.toString())
+    return request<SearchResult>('get', `/api/starred/search?${sp.toString()}`)
   },
 
   async getLanguages(username: string): Promise<LanguagesResponse> {
-    const response = await axios.get(`${API_URL}/api/starred/languages/${username}`)
-    return response.data
+    return request<LanguagesResponse>('get', `/api/starred/languages/${username}`)
   },
 
   async getTags(username: string): Promise<TagsResponse> {
-    const response = await axios.get(`${API_URL}/api/starred/tags/${username}`)
-    return response.data
+    return request<TagsResponse>('get', `/api/starred/tags/${username}`)
   },
 
-  async collectTrendingRepos(period: string = 'daily'): Promise<{ period: string; fetched: number; saved: number; snapshot_date: string; message: string }> {
-    const response = await axios.post(`${API_URL}/api/github/trending/collect?period=${period}`)
-    return response.data
+  async collectTrendingRepos(period: string = 'daily') {
+    return request<{ period: string; fetched: number; saved: number; snapshot_date: string; message: string }>('post', `/api/github/trending/collect?period=${period}`)
   },
 
   async searchTrendingRepos(params: TrendingSearchParams): Promise<TrendingSearchResult> {
-    const queryParams = new URLSearchParams()
-    if (params.period) queryParams.append('period', params.period)
-    if (params.snapshot_date) queryParams.append('snapshot_date', params.snapshot_date)
-    if (params.language) queryParams.append('language', params.language)
-    if (params.min_stars !== undefined) queryParams.append('min_stars', params.min_stars.toString())
-    if (params.max_stars !== undefined) queryParams.append('max_stars', params.max_stars.toString())
-    if (params.page) queryParams.append('page', params.page.toString())
-    if (params.perPage) queryParams.append('perPage', params.perPage.toString())
-
-    const response = await axios.get(`${API_URL}/api/trending/search?${queryParams.toString()}`)
-    return response.data
+    const sp = new URLSearchParams()
+    if (params.period) sp.append('period', params.period)
+    if (params.snapshot_date) sp.append('snapshot_date', params.snapshot_date)
+    if (params.language) sp.append('language', params.language)
+    if (params.min_stars !== undefined) sp.append('min_stars', params.min_stars.toString())
+    if (params.max_stars !== undefined) sp.append('max_stars', params.max_stars.toString())
+    if (params.page) sp.append('page', params.page.toString())
+    if (params.perPage) sp.append('perPage', params.perPage.toString())
+    return request<TrendingSearchResult>('get', `/api/trending/search?${sp.toString()}`)
   },
 
-  async getTrendingDates(period: string = 'daily'): Promise<{ period: string; dates: string[] }> {
-    const response = await axios.get(`${API_URL}/api/trending/dates?period=${period}`)
-    return response.data
+  async getTrendingDates(period: string = 'daily') {
+    return request<{ period: string; dates: string[] }>('get', `/api/trending/dates?period=${period}`)
   },
 
-  async getTrendingLanguages(period?: string, snapshotDate?: string): Promise<{ languages: Record<string, number> }> {
-    const queryParams = new URLSearchParams()
-    if (period) queryParams.append('period', period)
-    if (snapshotDate) queryParams.append('snapshot_date', snapshotDate)
-    
-    const response = await axios.get(`${API_URL}/api/trending/languages?${queryParams.toString()}`)
-    return response.data
+  async getTrendingLanguages(period?: string, snapshotDate?: string) {
+    const sp = new URLSearchParams()
+    if (period) sp.append('period', period)
+    if (snapshotDate) sp.append('snapshot_date', snapshotDate)
+    return request<{ languages: Record<string, number> }>('get', `/api/trending/languages?${sp.toString()}`)
   },
 }
 

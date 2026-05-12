@@ -5,8 +5,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Star, GitFork, ExternalLink, Search, RefreshCw, TrendingUp } from 'lucide-react'
-import { api, StarredRepo, LanguagesResponse, TagsResponse } from '@/lib/api'
+import { Star, GitFork, ExternalLink, Search, RefreshCw, TrendingUp, WifiOff, Settings2 } from 'lucide-react'
+import { api, StarredRepo, BackendStatus } from '@/lib/api'
+import { openExternalUrl } from '@/lib/tauri'
 
 export default function Home() {
   const [username, setUsername] = useState('qdriven')
@@ -21,9 +22,32 @@ export default function Home() {
   const [maxStars, setMaxStars] = useState<string>('')
   const [currentPage, setCurrentPage] = useState(1)
   const [message, setMessage] = useState('')
+  const [backendStatus, setBackendStatus] = useState<BackendStatus | null>(null)
+  const [showSettings, setShowSettings] = useState(false)
+  const [apiUrlInput, setApiUrlInput] = useState('')
 
   useEffect(() => {
-    if (username) {
+    checkBackend()
+  }, [])
+
+  const checkBackend = async () => {
+    const status = await api.checkBackend()
+    setBackendStatus(status)
+    setApiUrlInput(status.url)
+    if (status.available && username) {
+      loadFilters()
+      searchRepos()
+    }
+  }
+
+  const handleSetApiUrl = () => {
+    api.setApiUrl(apiUrlInput)
+    checkBackend()
+    setShowSettings(false)
+  }
+
+  useEffect(() => {
+    if (backendStatus?.available && username) {
       loadFilters()
       searchRepos()
     }
@@ -45,18 +69,19 @@ export default function Home() {
   const searchRepos = async (page = 1) => {
     setLoading(true)
     try {
-      const params: any = { github_user: username, page, perPage: 30 }
+      const params: Record<string, unknown> = { github_user: username, page, perPage: 30 }
       if (minStars) params.min_stars = parseInt(minStars)
       if (maxStars) params.max_stars = parseInt(maxStars)
       if (selectedLanguage && selectedLanguage !== 'all') params.language = selectedLanguage
       if (selectedTag && selectedTag !== 'all') params.tag = selectedTag
 
-      const result = await api.searchStarredRepos(params)
+      const result = await api.searchStarredRepos(params as any)
       setRepos(result.items)
       setCurrentPage(page)
-    } catch (error) {
-      console.error('Failed to search repos:', error)
-      setMessage('Failed to search repositories')
+      setMessage('')
+    } catch (error: any) {
+      const msg = error?.message || 'Failed to search repositories. Make sure the backend is running.'
+      setMessage(msg)
     } finally {
       setLoading(false)
     }
@@ -67,12 +92,12 @@ export default function Home() {
     setMessage('')
     try {
       const result = await api.collectStarredRepos(username)
-      setMessage(`Successfully collected ${result.saved} repositories`)
+      setMessage(`Collected ${result.fetched} repos: ${result.saved} new, ${result.updated} updated`)
       await loadFilters()
       await searchRepos()
-    } catch (error) {
-      console.error('Failed to collect repos:', error)
-      setMessage('Failed to collect repositories')
+    } catch (error: any) {
+      const msg = error?.message || 'Failed to collect repositories. Check backend connection.'
+      setMessage(msg)
     } finally {
       setCollecting(false)
     }
@@ -82,7 +107,7 @@ export default function Home() {
     searchRepos(1)
   }
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSearch()
     }
@@ -96,13 +121,56 @@ export default function Home() {
             <h1 className="text-4xl font-bold mb-2">GitHub Starred Repositories</h1>
             <p className="text-muted-foreground">View and filter starred repositories for any GitHub user</p>
           </div>
-          <Link href="/trending">
-            <Button variant="outline" className="flex items-center gap-2">
-              <TrendingUp className="h-4 w-4" />
-              View Trending
+          <div className="flex items-center gap-2">
+            <Link href="/trending">
+              <Button variant="outline" className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                View Trending
+              </Button>
+            </Link>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setShowSettings(!showSettings)}
+              title="Backend settings"
+            >
+              <Settings2 className="h-4 w-4" />
             </Button>
-          </Link>
+          </div>
         </div>
+
+        {backendStatus && !backendStatus.available && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+            <WifiOff className="h-5 w-5 text-red-600" />
+            <div className="flex-1">
+              <p className="font-medium text-red-800">Backend not connected</p>
+              <p className="text-sm text-red-600">
+                Start the backend at <code className="bg-red-100 px-1 rounded">{backendStatus.url}</code> or change the URL in settings.
+              </p>
+            </div>
+            <Button variant="outline" size="sm" onClick={checkBackend}>
+              Retry
+            </Button>
+          </div>
+        )}
+
+        {showSettings && (
+          <div className="mb-6 p-4 bg-card rounded-lg border">
+            <p className="text-sm font-medium mb-2">Backend URL</p>
+            <div className="flex gap-2">
+              <Input
+                value={apiUrlInput}
+                onChange={(e) => setApiUrlInput(e.target.value)}
+                placeholder="http://localhost:8090"
+                className="max-w-sm"
+              />
+              <Button onClick={handleSetApiUrl} size="sm">Save</Button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-1">
+              Current: {api.getApiUrl()}
+            </p>
+          </div>
+        )}
 
         <div className="bg-card rounded-lg border p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-4">
@@ -112,7 +180,7 @@ export default function Home() {
                 placeholder="Enter username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyDown}
               />
             </div>
             <div>
@@ -122,7 +190,7 @@ export default function Home() {
                 placeholder="0"
                 value={minStars}
                 onChange={(e) => setMinStars(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyDown}
               />
             </div>
             <div>
@@ -132,7 +200,7 @@ export default function Home() {
                 placeholder="Any"
                 value={maxStars}
                 onChange={(e) => setMaxStars(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyDown}
               />
             </div>
             <div>
@@ -170,18 +238,22 @@ export default function Home() {
           </div>
 
           <div className="flex gap-2">
-            <Button onClick={handleSearch} disabled={loading}>
+            <Button onClick={handleSearch} disabled={loading || !backendStatus?.available}>
               <Search className="mr-2 h-4 w-4" />
               Search
             </Button>
-            <Button onClick={collectRepos} disabled={collecting} variant="outline">
+            <Button onClick={collectRepos} disabled={collecting || !backendStatus?.available} variant="outline">
               <RefreshCw className={`mr-2 h-4 w-4 ${collecting ? 'animate-spin' : ''}`} />
               {collecting ? 'Collecting...' : 'Collect Repos'}
             </Button>
           </div>
 
           {message && (
-            <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-blue-800 text-sm">
+            <div className={`mt-4 p-3 rounded text-sm ${
+              message.startsWith('Collected')
+                ? 'bg-green-50 border border-green-200 text-green-800'
+                : 'bg-blue-50 border border-blue-200 text-blue-800'
+            }`}>
               {message}
             </div>
           )}
@@ -202,16 +274,14 @@ export default function Home() {
               <div key={repo.id} className="bg-card rounded-lg border p-4 hover:shadow-lg transition-shadow">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-semibold text-lg truncate flex-1">{repo.repo_name}</h3>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => openExternalUrl(repo.html_url)}
                     className="ml-2 text-blue-600 hover:text-blue-800"
                   >
                     <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </button>
                 </div>
-                
+
                 <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                   {repo.description || 'No description available'}
                 </p>
