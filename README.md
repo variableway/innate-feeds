@@ -1,222 +1,234 @@
-# GitHub Starred Repositories Collector
+# Trending Aggregator
 
-A full-stack application to collect, store, and view GitHub starred repositories with advanced filtering capabilities.
+A full-stack trending content aggregator platform that collects and presents data from **GitHub Trending Repositories**, **GitHub User Starred Repos**, and **Product Hunt** — available as a REST API, CLI tool, TUI dashboard, web application, and desktop app.
 
-## Features
-
-- ✅ Fetch and store GitHub starred repositories
-- ✅ Advanced filtering by stars, language, and tags
-- ✅ Scheduled automatic collection
-- ✅ Web UI for easy viewing and searching
-- ✅ RESTful API for programmatic access
-- ✅ GitHub Actions integration for automated collection
-
-## Tech Stack
-
-### Backend
-- **PocketBase** - Go-based backend as a service
-- **GitHub API** - Fetch starred repositories
-- **SQLite** - Embedded database
-
-### Frontend
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type safety
-- **shadcn-ui** - Beautiful UI components
-- **Tailwind CSS** - Styling
-- **Axios** - HTTP client
-
-### Automation
-- **GitHub Actions** - Scheduled collection
-- **Docker** - Containerization
-
-## Project Structure
+## System Architecture
 
 ```
-github-collectors/
-├── backend/
-│   ├── main.go                 # Main application entry
-│   ├── go.mod                  # Go dependencies
-│   ├── pb_migrations/          # Database migrations
-│   └── pb_data/               # PocketBase data (created at runtime)
-├── frontend/
-│   ├── src/
-│   │   ├── app/               # Next.js App Router pages
-│   │   ├── components/        # React components
-│   │   └── lib/               # Utilities and API client
-│   ├── package.json
-│   └── tsconfig.json
-├── .github/
-│   └── workflows/
-│       └── collect-starred.yml # GitHub Action workflow
-├── API.md                      # API documentation
-├── build.sh                    # Build script
-├── setup.sh                    # Setup script
-├── deploy.sh                   # Deployment script
-├── Dockerfile.backend         # Backend Docker image
-└── Dockerfile.frontend        # Frontend Docker image
+ +-----------------------------------------------------------+
+ |                    Desktop App (Tauri)                     |
+ |  +-----------------------------------------------------+  |
+ |  |                 Web Frontend (React)                 |  |
+ |  |  +----------------+ +----------------+ +----------+  |  |
+ |  |  | GitHub Trending| | GitHub Starred | | Product  |  |  |
+ |  |  +----------------+ +----------------+ |  Hunt    |  |  |
+ |  |  +----------------+ +----------------+ +----------+  |  |
+ |  |  |   Dashboard    | |   Settings     | |          |  |  |
+ |  |  +----------------+ +----------------+ +----------+  |  |
+ |  +-----------------------------------------------------+  |
+ +-----------------------------------------------------------+
+                            |
+                            v
+ +-----------------------------------------------------------+
+ |              Go Backend (Gin REST API)                     |
+ |  +------------------+  +------------------+               |
+ |  | GitHub Service   |  | ProductHunt Svc  |               |
+ |  | - Trending       |  | - Trending       |               |
+ |  | - Starred        |  | - Categories     |               |
+ |  +------------------+  +------------------+               |
+ |  +------------------+  +------------------+               |
+ |  | CLI (Cobra)      |  | TUI (Bubble Tea) |               |
+ |  | - fetch/list     |  | - Interactive    |               |
+ |  | - serve/config   |  |   terminal UI    |               |
+ |  +------------------+  +------------------+               |
+ +-----------------------------------------------------------+
+                            |
+              +-------------+-------------+
+              |                           |
+              v                           v
+ +----------------------+  +----------------------------+
+ | SQLite (development)  |  | PostgreSQL (production)    |
+ +----------------------+  +----------------------------+
 ```
 
 ## Quick Start
 
 ### Prerequisites
+- Go 1.22+
+- Node.js 20+
+- Rust + Cargo (for desktop app)
+- Docker & Docker Compose (optional)
 
-- Go 1.21 or later
-- Node.js 18 or later
-- GitHub Personal Access Token (optional, for higher rate limits)
-
-### Installation
-
-1. **Clone and setup:**
-   ```bash
-   cd github-collectors
-   chmod +x *.sh
-   ./setup.sh
-   ```
-
-2. **Configure environment:**
-   ```bash
-   # Edit .env file with your GitHub token
-   GITHUB_TOKEN=your_github_token_here
-   NEXT_PUBLIC_API_URL=http://localhost:8090
-   ```
-
-3. **Start the backend:**
-   ```bash
-   cd backend
-   go run main.go serve
-   ```
-
-4. **Start the frontend:**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-5. **Access the application:**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8090
-   - PocketBase Admin: http://localhost:8090/_/
-
-## Usage
-
-### Web Interface
-
-1. Open http://localhost:3000
-2. Enter a GitHub username (default: qdriven)
-3. Click "Collect Repos" to fetch starred repositories
-4. Use filters to search by:
-   - Star count range
-   - Programming language
-   - Tags/topics
-
-### API Usage
-
-See [API.md](./API.md) for complete API documentation.
-
-Quick examples:
+### Option 1: Docker Compose (Recommended)
 
 ```bash
-# Collect starred repos
-curl -X POST http://localhost:8090/api/github/collect/qdriven
+# Start everything (PostgreSQL + Backend + Frontend)
+export GITHUB_TOKEN=your_github_token
+export PRODUCTHUNT_TOKEN=your_producthunt_token
+docker-compose up -d
 
-# Search with filters
-curl "http://localhost:8090/api/starred/search?github_user=qdriven&min_stars=100&language=TypeScript"
+# Access:
+# Frontend: http://localhost
+# API: http://localhost:8080/api/v1
+# Swagger: http://localhost:8080/swagger/index.html
 ```
 
-### Scheduled Collection
-
-1. Access PocketBase admin at http://localhost:8090/_/
-2. Create a new collection config in `collection_configs`
-3. Set `github_user` and `enabled` to `true`
-4. The system will collect daily at midnight UTC
-
-### GitHub Actions
-
-The repository includes a GitHub Action workflow that:
-- Runs daily at midnight UTC
-- Collects starred repositories for configured users
-- Saves data to a JSON file
-- Commits changes to the repository
-
-To enable:
-1. Push this repository to GitHub
-2. Set `GITHUB_TOKEN` secret in repository settings
-3. The workflow will run automatically or can be triggered manually
-
-## Development
-
-### Build
+### Option 2: Run Backend + Frontend Separately
 
 ```bash
-./build.sh
+# Terminal 1: Start Backend
+cd trending-backend
+cp .env.example .env
+# Edit .env with your API tokens
+go run ./cmd/api
+
+# Terminal 2: Start Frontend
+cd trending-web
+npm install
+npm run dev
 ```
 
-### Test
+### Option 3: CLI Tool
 
 ```bash
-./test.sh
+cd trending-backend
+go run ./cmd/cli fetch github-trending --period daily
+go run ./cmd/cli list github-trending
+go run ./cmd/cli serve  # Start API server via CLI
 ```
 
-### Docker Deployment
+### Option 4: TUI (Terminal UI)
 
 ```bash
-./deploy.sh
+cd trending-backend
+go run ./cmd/tui
 ```
 
-## Configuration
+### Option 5: Desktop App
 
-### Environment Variables
+```bash
+cd trending-desktop/src-tauri
+cargo tauri dev    # Development
+cargo tauri build  # Production build
+```
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `GITHUB_TOKEN` | GitHub Personal Access Token | None |
-| `NEXT_PUBLIC_API_URL` | Backend API URL | `http://localhost:8090` |
-| `BACKEND_PORT` | Backend server port | `8090` |
-| `FRONTEND_PORT` | Frontend server port | `3000` |
+## Project Structure
 
-### PocketBase Collections
-
-1. **starred_repos** - Stores collected repositories
-2. **collection_configs** - Scheduled collection configuration
+```
+trending-aggregator/
+├── trending-backend/        # Go Backend Service
+│   ├── cmd/
+│   │   ├── api/             # REST API entry point
+│   │   ├── cli/             # CLI tool entry point
+│   │   └── tui/             # TUI entry point
+│   ├── internal/
+│   │   ├── api/             # Gin handlers, routes, middleware
+│   │   ├── cli/             # Cobra commands
+│   │   ├── config/          # Environment configuration
+│   │   ├── db/              # GORM database connection
+│   │   ├── models/          # GORM models
+│   │   ├── services/        # Business logic
+│   │   └── tui/             # Bubble Tea TUI components
+│   ├── pkg/
+│   │   ├── github/          # GitHub API client
+│   │   └── producthunt/     # Product Hunt API client
+│   ├── Dockerfile
+│   ├── Makefile
+│   └── go.mod
+│
+├── trending-web/            # React Web Frontend
+│   ├── src/
+│   │   ├── components/      # Shared UI components
+│   │   ├── pages/           # Page components
+│   │   ├── hooks/           # React Query hooks
+│   │   ├── lib/             # API client + mock data
+│   │   └── types/           # TypeScript types
+│   ├── Dockerfile
+│   └── package.json
+│
+├── trending-desktop/        # Tauri Desktop App
+│   └── src-tauri/
+│       ├── src/             # Rust source code
+│       ├── Cargo.toml
+│       └── tauri.conf.json
+│
+└── docker-compose.yml
+```
 
 ## API Endpoints
 
-- `GET /api/github/starred/:username` - Fetch starred repos
-- `POST /api/github/collect/:username` - Collect and save repos
-- `GET /api/starred/search` - Search with filters
-- `GET /api/starred/languages/:username` - Get language statistics
-- `GET /api/starred/tags/:username` - Get tag statistics
+Base URL: `http://localhost:8080/api/v1`
 
-See [API.md](./API.md) for detailed documentation.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/health` | Health check |
+| GET | `/stats` | Dashboard statistics |
+| GET | `/github/trending` | List trending repos |
+| GET | `/github/trending/languages` | Get all languages |
+| POST | `/github/trending/fetch` | Fetch trending repos |
+| GET | `/github/starred/:username` | List user's starred repos |
+| POST | `/github/starred/fetch` | Fetch starred repos |
+| GET | `/github/starred/:username/languages` | Language breakdown |
+| GET | `/producthunt/trending` | List trending products |
+| GET | `/producthunt/categories` | Get categories |
+| POST | `/producthunt/fetch` | Fetch Product Hunt |
+| GET | `/swagger/index.html` | Swagger UI |
 
-## Architecture
+## CLI Commands
 
-### Backend Flow
+```bash
+# Fetch data
+trending-cli fetch github-trending [--period daily|weekly|monthly] [--language go]
+trending-cli fetch github-starred <username>
+trending-cli fetch producthunt [--day 2024-01-01]
 
-1. User triggers collection via API or scheduled job
-2. Backend fetches all starred repos from GitHub (with pagination)
-3. Repos are saved to PocketBase database
-4. Data is available for search and filtering
+# List stored data
+trending-cli list github-trending [--period daily] [--language go]
+trending-cli list github-starred <username>
+trending-cli list producthunt [--day 2024-01-01]
 
-### Frontend Flow
+# Start API server
+trending-cli serve [--port 8080]
 
-1. User enters GitHub username
-2. Frontend calls backend API to collect or search
-3. Results are displayed with filtering options
-4. Real-time updates as user applies filters
+# Configuration
+trending-cli config show
+```
 
-## Contributing
+## TUI Key Bindings
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests: `./test.sh`
-5. Submit a pull request
+| Key | Action |
+|-----|--------|
+| Tab / Shift+Tab | Switch tabs |
+| j/k or Up/Down | Navigate rows |
+| / | Search/filter |
+| r | Refresh data |
+| f | Fetch new data |
+| q / Ctrl+C | Quit |
+
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `DB_DRIVER` | sqlite | Database: sqlite or postgres |
+| `DB_NAME` | trending.db | SQLite file / PostgreSQL DB name |
+| `API_PORT` | 8080 | API server port |
+| `GITHUB_TOKEN` | - | GitHub Personal Access Token |
+| `PRODUCTHUNT_TOKEN` | - | Product Hunt Developer Token |
+| `FETCH_INTERVAL` | 3600 | Auto-fetch interval (seconds) |
+
+## Technology Stack
+
+### Backend
+- **Go 1.22** with standard library
+- **Gin** - Web framework
+- **GORM** - ORM for SQLite & PostgreSQL
+- **Cobra** - CLI framework
+- **Bubble Tea** - TUI framework
+- **go-co-op/gocron** - Background scheduler
+
+### Frontend
+- **React 19 + TypeScript**
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **TanStack Query** - Data fetching
+- **Recharts** - Charts
+- **Framer Motion** - Animations
+
+### Desktop
+- **Tauri v2** - Rust-based desktop framework
+- **System tray**, native menus, keyboard shortcuts
 
 ## License
 
 MIT
-
-## Support
-
-For issues and feature requests, please create an issue in the repository.

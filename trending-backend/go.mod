@@ -1,6 +1,6 @@
 module trending-backend
 
-go 1.22
+go 1.25
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1

@@ -9,9 +9,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-backend/pb_data/
-backend/github-collector
-backend/github-collector.exe
+# Trending backend build artifacts
+trending-backend/trending-cli
+trending-backend/trending-backend
 
 dist/
 build/
@@ -28,6 +28,5 @@ coverage/
 .nyc_output/
 
 # Tauri
-frontend/src-tauri/target/
-frontend/src-tauri/WixTools/
-frontend/out/
+trending-desktop/src-tauri/target/
+trending-desktop/src-tauri/WixTools/
