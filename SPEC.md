@@ -7,10 +7,9 @@ A full-stack trending content aggregator platform that collects and presents:
 - **GitHub User Starred Repos** — a user's starred repositories with search/filter
 - **Product Hunt Trending** — trending product launches with votes and categories
 
-The system comprises three components:
+The system comprises two components:
 1. **Go Backend** — CLI + TUI + REST API service
 2. **React Web Frontend** — Dashboard UI consuming the REST API
-3. **Tauri Desktop App** — Native desktop wrapper around the web frontend
 
 ---
 
@@ -319,49 +318,6 @@ export const api = {
 
 ---
 
-## Desktop Architecture (Tauri)
-
-### Tech Stack
-- **Framework**: Tauri v2 (Rust)
-- **Frontend**: Same React app as web frontend (built as static files)
-- **Bundling**: Tauri bundles the web assets into the desktop app
-
-### Tauri Configuration
-
-```json
-// src-tauri/tauri.conf.json
-{
-  "productName": "Trending Aggregator",
-  "identifier": "com.trending.app",
-  "build": {
-    "frontendDist": "../../trending-web/dist",
-    "devUrl": "http://localhost:5173"
-  },
-  "app": {
-    "windows": [
-      {
-        "title": "Trending Aggregator",
-        "width": 1280,
-        "height": 800,
-        "minWidth": 900,
-        "minHeight": 600,
-        "center": true,
-        "decorations": true
-      }
-    ]
-  }
-}
-```
-
-### Native Integrations
-- System tray icon with menu (Show / Hide / Quit)
-- Native menu bar
-- Keyboard shortcuts: `Cmd/Ctrl+R` refresh, `Cmd/Ctrl+1-4` tab switching
-- Auto-updater configuration placeholder
-- Single instance enforcement
-
----
-
 ## Data Flow
 
 ```
@@ -370,8 +326,6 @@ GitHub API ──┐
 ProductHunt ─┘                              ↑
                                             │
 React Web/TUI/CLI ←── REST API/DB queries ←─┘
-     │
-Tauri (desktop wrapper)
 ```
 
 ### Fetch Flow
@@ -435,14 +389,6 @@ cd trending-web
 npm install
 npm run dev    # Development server
 npm run build  # Production build
-```
-
-### Desktop
-```bash
-cd trending-desktop
-npm install          # Install frontend deps
-cargo tauri dev      # Development mode
-cargo tauri build    # Build desktop app
 ```
 
 ### Docker

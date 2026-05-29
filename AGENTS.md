@@ -2,7 +2,11 @@
 
 ## Project Identity
 
-**innate-feeds** is a full-stack trending content aggregator platform that collects and presents data from GitHub Trending, GitHub Starred Repos, and Product Hunt. It offers multiple interfaces: REST API, CLI tool, TUI dashboard, web application, and native desktop app.
+**innate-feeds** is a unified content aggregation platform combining:
+- **Innate Hub**: RSS/Atom feed reader + TrendRadar hot news + GitHub Trending + Product Hunt
+- **TrendRadar**: Independent Python-based hot-news crawler (Zhihu, Weibo, Baidu, Douyin, etc.)
+
+All trending services (GitHub Trending, GitHub Starred, Product Hunt) have been merged into `innate-hub`.
 
 ---
 
@@ -10,165 +14,165 @@
 
 ```
 innate-feeds/
-├── trending-backend/                 # Go backend (Gin + GORM + Cobra + Bubble Tea)
-│   ├── cmd/api/main.go               # REST API server entry
-│   ├── cmd/cli/main.go               # CLI tool entry
-│   ├── cmd/tui/main.go               # TUI dashboard entry
-│   ├── internal/api/                 # handlers, middleware, router, Swagger docs
-│   ├── internal/cli/                 # Cobra commands: fetch, list, serve, config
-│   ├── internal/config/              # Env-based configuration
-│   ├── internal/db/                  # GORM DB connection
-│   ├── internal/models/              # GORM models (GitHubTrending, GitHubStarred, ProductHunt)
-│   ├── internal/services/            # GitHub & ProductHunt business logic + interfaces
-│   ├── internal/tui/                 # Bubble Tea TUI components
-│   ├── pkg/github/client.go          # GitHub API client
-│   ├── pkg/producthunt/client.go     # Product Hunt API client
-│   ├── .env.example
-│   ├── Dockerfile
-│   ├── Makefile
-│   └── go.mod
+├── innate-hub/                         # Unified feed reader + trending aggregator
+│   ├── backend/
+│   │   ├── cmd/hub/main.go             # Main server entry (RSS + Trending API)
+│   │   ├── cmd/trending-cli/main.go    # CLI tool (fetch / list)
+│   │   ├── cmd/trending-tui/main.go    # TUI terminal dashboard
+│   │   ├── internal/
+│   │   │   ├── handler/                # HTTP handlers (feed + trending)
+│   │   │   ├── adapter/                # Pluggable feed sources
+│   │   │   │   ├── rss/                # RSS/Atom adapter
+│   │   │   │   ├── trendradar/         # TrendRadar SQLite adapter
+│   │   │   │   ├── githubtrending/     # GitHub Trending adapter
+│   │   │   │   └── producthunt/        # Product Hunt adapter
+│   │   │   ├── store/                  # database/sql store (feed data)
+│   │   │   └── trending/               # ★ Trending sub-system
+│   │   │       ├── pkg/github/         # GitHub API client
+│   │   │       ├── pkg/producthunt/    # Product Hunt API client
+│   │   │       ├── model/              # GORM models (3 tables)
+│   │   │       ├── store/              # GORM store layer
+│   │   │       └── service/            # Business logic
+│   │   ├── internal/web/dist/          # Embedded frontend build
+│   │   └── go.mod
+│   ├── frontend/                       # React + TanStack Router + shadcn/ui
+│   ├── docs/
+│   ├── docker-compose.yml
+│   ├── docker-start.sh
+│   └── start.sh
 │
-├── trending-web/                     # React 19 + Vite frontend
-│   ├── src/App.tsx                   # Router: /, /github-trending, /github-starred, /product-hunt, /settings
-│   ├── src/pages/                    # Dashboard, GitHubTrending, GitHubStarred, ProductHunt, Settings
-│   ├── src/components/               # UI components (shadcn/ui) + DataTable, Footer, Navbar, etc.
-│   ├── src/hooks/                    # useTrending, useStarred, useProductHunt, useStats, useI18n
-│   ├── src/i18n/                     # en.ts, zh.ts (i18n support)
-│   ├── src/lib/                      # api.ts, mock.ts, utils.ts
-│   ├── src/types/index.ts
-│   ├── scripts/fetch-data.js         # Data fetch script
-│   ├── .github/workflows/            # CI: daily data update
-│   ├── Dockerfile
-│   ├── nginx.conf
-│   ├── vite.config.ts
-│   └── package.json
+├── TrendRadar/                         # Independent hot-news crawler (Python)
+│   ├── trendradar/                     # Crawler modules
+│   ├── output/news/                    # Daily SQLite databases
+│   ├── config/
+│   └── ...
 │
-├── trending-desktop/                 # Tauri v2 desktop wrapper
-│   ├── src-tauri/src/                # lib.rs, main.rs
-│   ├── src-tauri/tauri.conf.json
-│   ├── src-tauri/Cargo.toml
-│   └── scripts/generate-icons.sh
-│
-├── data/                             # JSON data exports
-│   ├── starred_repos.json
-│   ├── trending_daily.json
-│   ├── trending_weekly.json
-│   └── trending_monthly.json
-│
-├── docker-compose.yml                # PostgreSQL + backend + frontend
-├── SPEC.md                           # Full system specification
-├── plan.md                           # Implementation plan
-├── DATA_REFRESH_SOLUTION.md          # Data refresh strategy (zh-CN)
-├── .env.example                      # GITHUB_TOKEN + PRODUCTHUNT_TOKEN
+├── data/                               # JSON data exports (legacy)
+├── docker-compose.yml                  # Root-level orchestration (legacy)
+├── MERGE_SUMMARY.md                    # Trending merge documentation
+├── SPEC.md                             # System specification
 ├── README.md
 └── AGENTS.md
 ```
 
 ---
 
-## Backend (`trending-backend/`)
+## Innate Hub Backend
 
-**Framework**: Gin (Go web framework) + GORM ORM
-**Database**: SQLite (default) or PostgreSQL
-**Three interfaces**:
-- REST API (`cmd/api`): Gin server on `:8080`
-- CLI tool (`cmd/cli`): Cobra commands for `fetch`, `list`, `serve`, `config`
-- TUI dashboard (`cmd/tui`): Bubble Tea interactive terminal UI
+**Framework**: Gin + `database/sql` (feed data) + GORM (trending data) + SQLite/PostgreSQL
+**Database**: All tables share one database (`fusion.db` or PostgreSQL)
 
-**Services**: `internal/services/` — GitHub service (trending scraper + API), ProductHunt service
-**API**: `http://localhost:8080/api/v1/` with Swagger at `/swagger/index.html`
-**Scheduler**: Auto-fetch via gocron (configurable interval)
+### Interfaces
+- **REST API** (`cmd/hub`): Unified server on `:8080` — feeds, items, bookmarks, search, trending
+- **CLI** (`cmd/trending-cli`): Cobra commands for `fetch`, `list`
+- **TUI** (`cmd/trending-tui`): Bubble Tea interactive terminal UI
 
-### Key API Endpoints
-
-| Method | Endpoint | Description |
+### Feed Adapters
+| Adapter | SourceType | Description |
 |---|---|---|
-| GET | `/api/v1/health` | Health check |
-| GET | `/api/v1/stats` | Dashboard statistics |
-| GET | `/api/v1/github/trending` | List trending repos |
-| POST | `/api/v1/github/trending/fetch` | Fetch trending repos |
-| GET | `/api/v1/github/starred/:username` | List user's starred repos |
-| POST | `/api/v1/github/starred/fetch` | Fetch starred repos |
-| GET | `/api/v1/producthunt/trending` | List trending products |
-| POST | `/api/v1/producthunt/fetch` | Fetch Product Hunt data |
-| GET | `/swagger/index.html` | Swagger UI |
+| `rss` | `rss` | Standard RSS/Atom feeds |
+| `trendradar` | `trendradar` | Reads TrendRadar daily SQLite DBs |
+| `githubtrending` | `githubtrending` | Scrapes GitHub Trending page |
+| `producthunt` | `producthunt` | Product Hunt GraphQL API |
+
+### Trending API Endpoints
+
+Mounted under `/api/trending/*`, protected by innate-hub auth (session / API Key).
+
+| Method | Path | Description |
+|---|---|---|
+| GET | `/api/trending/stats` | Dashboard stats |
+| GET | `/api/trending/github/trending` | List trending repos |
+| POST | `/api/trending/github/trending/fetch` | Fetch trending repos |
+| GET | `/api/trending/github/trending/languages` | Language list |
+| GET | `/api/trending/github/starred/:username` | User's starred repos |
+| POST | `/api/trending/github/starred/fetch` | Fetch starred repos |
+| GET | `/api/trending/github/starred/:username/languages` | Language breakdown |
+| GET | `/api/trending/producthunt` | List Product Hunt products |
+| POST | `/api/trending/producthunt/fetch` | Fetch Product Hunt data |
+| GET | `/api/trending/producthunt/categories` | Topic categories |
+
+### Feed API Endpoints (Existing)
+
+| Method | Path | Description |
+|---|---|---|
+| GET/POST/PATCH/DELETE | `/api/groups` | Feed groups |
+| GET/POST/PATCH/DELETE | `/api/feeds` | Feed sources |
+| GET/PATCH | `/api/items` | Feed items (articles) |
+| GET | `/api/search` | Full-text + semantic search |
+| GET/POST/DELETE | `/api/bookmarks` | Saved items |
+| POST | `/fever` | Fever API compatibility |
 
 ---
 
-## Frontend (`trending-web/`)
+## Innate Hub Frontend
 
-**Framework**: React 19 + Vite + TypeScript + Tailwind CSS
-**UI**: shadcn/ui (40+ components) + Recharts + Framer Motion
-**Data fetching**: TanStack Query (React Query v5)
-**i18n**: English + Chinese (zh-CN)
+**Framework**: React 19 + Vite + TypeScript + Tailwind CSS + shadcn/ui
+**Router**: TanStack Router (file-based)
+**State**: TanStack Query + Zustand stores
+**UI**: next-themes (dark/light), sonner (toasts)
 
-### Pages
-| Route | Page |
+### Routes
+| Path | Page |
 |---|---|
-| `/` | Dashboard with summary statistics |
-| `/github-trending` | GitHub trending repos (daily/weekly/monthly) |
-| `/github-starred` | GitHub user starred repos explorer |
-| `/product-hunt` | Product Hunt trending products |
-| `/settings` | API URL, theme, refresh settings |
+| `/` | Feed reader (all / unread items) |
+| `/feeds` | Feed management |
+| `/groups/:groupId` | Group-filtered items |
+| `/login` | Login |
 
----
-
-## Desktop (`trending-desktop/`)
-
-**Framework**: Tauri v2 (Rust) — wraps the web frontend
-**Features**: System tray, native menus, keyboard shortcuts, cross-platform (Windows, macOS, Linux)
+Trending content appears naturally in the feed reader via Adapters.
 
 ---
 
 ## Development Conventions
 
 ### Go
-- **Stdlib logging**: Use `log` or `slog` (stdlib), not third-party loggers
+- **Stdlib logging**: Use `log/slog`, not third-party loggers
 - **Error handling**: Return errors up the stack, wrap with `fmt.Errorf`
-- **GORM**: Models in `internal/models/`, DB connection in `internal/db/`
-- **CLI**: Cobra commands in `internal/cli/`, each as separate file
-- **TUI**: Bubble Tea components in `internal/tui/`, each tab as separate file
-- **API**: Gin handlers in `internal/api/`, routes defined in `router.go`
+- **Feed store**: `database/sql` with named parameters in `internal/store/`
+- **Trending store**: GORM in `internal/trending/store/` (bridged from `*sql.DB`)
+- **CLI**: Cobra commands in `cmd/trending-cli/`
+- **TUI**: Bubble Tea in `cmd/trending-tui/`
+- **API**: Gin handlers in `internal/handler/`
 
 ### TypeScript / React
-- **Framework**: Vite SPA with react-router, no SSR
-- **UI components**: shadcn/ui patterns — use `cn()` from `clsx` + `tailwind-merge`
-- **API calls**: Axios-based client in `lib/api.ts`
-- **Data fetching**: TanStack Query hooks in `hooks/`
-- **i18n**: Translation files in `i18n/`, consumed via `useI18n` hook
+- **Framework**: Vite SPA with TanStack Router, no SSR
+- **UI components**: shadcn/ui — use `cn()` from `clsx` + `tailwind-merge`
+- **Data fetching**: TanStack Query
+- **Styling**: Tailwind CSS
 
 ### Shared Patterns
-- **Environment vars**: `.env` files at project roots, `.env.example` templates provided
-- **GitHub Token**: `GITHUB_TOKEN` env var for higher API rate limits (5000 vs 60 req/hr)
-- **No authentication required**: API is currently unauthenticated for local use
+- **Environment vars**: `.env` files at project roots
+- **GitHub Token**: `GITHUB_TOKEN` env var for higher API rate limits
+- **Database**: `FUSION_DB_PATH` (SQLite file or `postgres://` DSN)
 
 ---
 
 ## Common Commands
 
 ```bash
-# Backend
-cd trending-backend
-cp .env.example .env
-go run ./cmd/api                              # Start API server (port 8080)
-go run ./cmd/cli fetch github-trending --period daily
-go run ./cmd/cli list github-starred <username>
-go run ./cmd/tui                              # Launch TUI
+# Main server
+cd innate-hub/backend
+cp .env.example .env  # if needed
+go run ./cmd/hub
 
-# Web Frontend
-cd trending-web
-npm install
-npm run dev                                   # Vite dev server
-npm run build && npm run preview              # Production build
+# CLI
+cd innate-hub/backend
+go run ./cmd/trending-cli fetch github-trending --period daily
+go run ./cmd/trending-cli list github-starred <username>
 
-# Desktop
-cd trending-desktop/src-tauri
-cargo tauri dev
-cargo tauri build
+# TUI
+cd innate-hub/backend
+go run ./cmd/trending-tui
 
-# Docker
-GITHUB_TOKEN=xxx PRODUCTHUNT_TOKEN=xxx docker-compose up -d
-# Frontend: http://localhost | API: http://localhost:8080
+# Frontend
+cd innate-hub/frontend
+pnpm install
+pnpm dev
+
+# Docker (Innate Hub)
+cd innate-hub
+./docker-start.sh
 ```
 
 ---
@@ -177,19 +181,21 @@ GITHUB_TOKEN=xxx PRODUCTHUNT_TOKEN=xxx docker-compose up -d
 
 | Variable | Default | Purpose |
 |---|---|---|
+| `FUSION_DB_PATH` | `fusion.db` | Database file or PostgreSQL DSN |
+| `FUSION_PASSWORD` | — | Hub login password (required) |
+| `FUSION_PORT` | `8080` | API server port |
 | `GITHUB_TOKEN` | — | GitHub PAT for higher rate limits |
-| `PRODUCTHUNT_TOKEN` | — | Product Hunt API developer token |
-| `DB_DRIVER` | `sqlite` | `sqlite` or `postgres` |
-| `DB_NAME` | `trending.db` | Database name/file |
-| `API_PORT` | `8080` | API server port |
-| `FETCH_INTERVAL` | `3600` | Auto-fetch interval (seconds) |
+| `PRODUCTHUNT_TOKEN` | — | Product Hunt API token |
+| `HUB_EMBEDDER_PROVIDER` | — | Semantic search: `openai` / `ollama` |
+| `HUB_EMBEDDER_MODEL` | — | Embedder model name |
+| `HUB_EMBEDDER_API_KEY` | — | OpenAI API key |
 
 ---
 
 ## When Making Changes
 
-1. **Backend changes**: Go to `trending-backend/`, follow Go conventions above
-2. **Frontend changes**: Go to `trending-web/`, follow React conventions above
-3. **Desktop changes**: Go to `trending-desktop/`, work with Tauri v2 Rust code
-4. **Docker**: Update `docker-compose.yml` at repo root
-5. **Docs**: Update `README.md`, `SPEC.md`, or this file as needed
+1. **Backend changes**: Go to `innate-hub/backend/`
+2. **Frontend changes**: Go to `innate-hub/frontend/`
+3. **Trending backend**: `innate-hub/backend/internal/trending/`
+4. **Docker**: Update `innate-hub/docker-compose.yml`
+5. **Docs**: Update `README.md`, `MERGE_SUMMARY.md`, or this file as needed

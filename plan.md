@@ -4,7 +4,6 @@
 Build a complete trending content aggregator that pulls from GitHub Trending, GitHub Starred Repos, and Product Hunt. The system comprises:
 1. **Go Backend** — CLI + TUI + REST API (Gin, GORM, SQLite/PostgreSQL)
 2. **Web Frontend** — React + TypeScript + Tailwind + shadcn/ui + base-ui + 21st.dev
-3. **Desktop App** — Rust + Tauri wrapping the web UI
 
 ---
 
@@ -46,23 +45,7 @@ Build a complete trending content aggregator that pulls from GitHub Trending, Gi
 
 ---
 
-## Stage 3 — Desktop App (vibecoding-general-swarm)
-**Skill**: `vibecoding-general-swarm`
-**Goal**: Tauri + Rust desktop wrapper
-
-### Sub-tasks:
-- 3a. Tauri scaffold: Rust project, Tauri config, build setup
-- 3b. Embed web UI: Static file serving, dev/prod build integration
-- -3c. Native integrations: System tray, menu bar, keyboard shortcuts
-- 3d. Auto-updater: Tauri updater configuration
-- 3e. Build scripts: Cross-platform compilation (Windows, macOS, Linux)
-
-### Output:
-- `/mnt/agents/output/trending-desktop/` — complete Tauri project
-
----
-
-## Stage 4 — Integration & Final Assembly
+## Stage 3 — Integration & Final Assembly
 **Goal**: Wire everything together, test, and package
 
 ### Sub-tasks:

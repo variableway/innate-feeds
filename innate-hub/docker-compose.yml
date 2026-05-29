@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  # Option 1: SQLite-only (default, simplest)
+  hub-sqlite:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: innate-hub
+    restart: unless-stopped
+    profiles: ["sqlite"]
+    environment:
+      - HUB_PASSWORD=${HUB_PASSWORD:-secret}
+      - HUB_PORT=8080
+      - HUB_DB_PATH=/data/hub.db
+      - TRENDRADAR_DATA_DIR=/data/trendradar
+      - HUB_LOG_LEVEL=${HUB_LOG_LEVEL:-INFO}
+      - HUB_PULL_INTERVAL=${HUB_PULL_INTERVAL:-1800}
+    volumes:
+      - hub_data:/data
+      - ./TrendRadar/output/news:/data/trendradar:ro
+    ports:
+      - "${HUB_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/sessions"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  # Option 2: PostgreSQL (for InsForge or self-hosted Postgres)
+  hub-postgres:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: innate-hub
+    restart: unless-stopped
+    profiles: ["postgres"]
+    environment:
+      - HUB_PASSWORD=${HUB_PASSWORD:-secret}
+      - HUB_PORT=8080
+      - HUB_DB_PATH=postgres://${POSTGRES_USER:-hub}:${POSTGRES_PASSWORD:-hub}@postgres:5432/${POSTGRES_DB:-hub}?sslmode=disable
+      - TRENDRADAR_DATA_DIR=/data/trendradar
+      - HUB_LOG_LEVEL=${HUB_LOG_LEVEL:-INFO}
+      - HUB_PULL_INTERVAL=${HUB_PULL_INTERVAL:-1800}
+    volumes:
+      - ./TrendRadar/output/news:/data/trendradar:ro
+    ports:
+      - "${HUB_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/sessions"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: innate-hub-postgres
+    restart: unless-stopped
+    profiles: ["postgres"]
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-hub}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-hub}
+      - POSTGRES_DB=${POSTGRES_DB:-hub}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-hub} -d ${POSTGRES_DB:-hub}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  hub_data:
+  postgres_data:

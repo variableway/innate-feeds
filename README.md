@@ -1,21 +1,18 @@
 # Trending Aggregator
 
-A full-stack trending content aggregator platform that collects and presents data from **GitHub Trending Repositories**, **GitHub User Starred Repos**, and **Product Hunt** — available as a REST API, CLI tool, TUI dashboard, web application, and desktop app.
+A full-stack trending content aggregator platform that collects and presents data from **GitHub Trending Repositories**, **GitHub User Starred Repos**, and **Product Hunt** — available as a REST API, CLI tool, TUI dashboard, and web application.
 
 ## System Architecture
 
 ```
  +-----------------------------------------------------------+
- |                    Desktop App (Tauri)                     |
- |  +-----------------------------------------------------+  |
- |  |                 Web Frontend (React)                 |  |
- |  |  +----------------+ +----------------+ +----------+  |  |
- |  |  | GitHub Trending| | GitHub Starred | | Product  |  |  |
- |  |  +----------------+ +----------------+ |  Hunt    |  |  |
- |  |  +----------------+ +----------------+ +----------+  |  |
- |  |  |   Dashboard    | |   Settings     | |          |  |  |
- |  |  +----------------+ +----------------+ +----------+  |  |
- |  +-----------------------------------------------------+  |
+ |                 Web Frontend (React)                     |
+ |  +----------------+ +----------------+ +----------+      |
+ |  | GitHub Trending| | GitHub Starred | | Product  |      |
+ |  +----------------+ +----------------+ |  Hunt    |      |
+ |  +----------------+ +----------------+ +----------+      |
+ |  |   Dashboard    | |   Settings     | |          |      |
+ |  +----------------+ +----------------+ +----------+      |
  +-----------------------------------------------------------+
                             |
                             v
@@ -46,7 +43,6 @@ A full-stack trending content aggregator platform that collects and presents dat
 ### Prerequisites
 - Go 1.22+
 - Node.js 20+
-- Rust + Cargo (for desktop app)
 - Docker & Docker Compose (optional)
 
 ### Option 1: Docker Compose (Recommended)
@@ -94,14 +90,6 @@ cd trending-backend
 go run ./cmd/tui
 ```
 
-### Option 5: Desktop App
-
-```bash
-cd trending-desktop/src-tauri
-cargo tauri dev    # Development
-cargo tauri build  # Production build
-```
-
 ## Project Structure
 
 ```
@@ -135,12 +123,6 @@ trending-aggregator/
 │   │   └── types/           # TypeScript types
 │   ├── Dockerfile
 │   └── package.json
-│
-├── trending-desktop/        # Tauri Desktop App
-│   └── src-tauri/
-│       ├── src/             # Rust source code
-│       ├── Cargo.toml
-│       └── tauri.conf.json
 │
 └── docker-compose.yml
 ```
@@ -224,10 +206,6 @@ trending-cli config show
 - **TanStack Query** - Data fetching
 - **Recharts** - Charts
 - **Framer Motion** - Animations
-
-### Desktop
-- **Tauri v2** - Rust-based desktop framework
-- **System tray**, native menus, keyboard shortcuts
 
 ## License
 

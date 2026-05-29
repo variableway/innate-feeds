@@ -1,60 +1,28 @@
 version: "3.8"
 
-services:
-  postgres:
-    image: postgres:16-alpine
-    container_name: trending-postgres
-    environment:
-      POSTGRES_USER: trending
-      POSTGRES_PASSWORD: trending-secret
-      POSTGRES_DB: trending
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U trending"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+# This root-level compose is a convenience wrapper around innate-hub.
+# For full options (SQLite / PostgreSQL / profiles), use innate-hub/docker-compose.yml directly.
 
-  backend:
+services:
+  hub:
     build:
-      context: ./trending-backend
+      context: ./innate-hub/backend
       dockerfile: Dockerfile
-    container_name: trending-backend
+    container_name: innate-hub
     environment:
-      DB_DRIVER: postgres
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_USER: trending
-      DB_PASSWORD: trending-secret
-      DB_NAME: trending
-      DB_SSL_MODE: disable
-      API_HOST: 0.0.0.0
-      API_PORT: 8080
+      FUSION_DB_PATH: ${FUSION_DB_PATH:-fusion.db}
+      FUSION_PASSWORD: ${FUSION_PASSWORD:-innate}
+      FUSION_PORT: ${FUSION_PORT:-8080}
       GITHUB_TOKEN: ${GITHUB_TOKEN:-}
       PRODUCTHUNT_TOKEN: ${PRODUCTHUNT_TOKEN:-}
-      FETCH_INTERVAL: 3600
+      HUB_EMBEDDER_PROVIDER: ${HUB_EMBEDDER_PROVIDER:-}
+      HUB_EMBEDDER_MODEL: ${HUB_EMBEDDER_MODEL:-}
+      HUB_EMBEDDER_API_KEY: ${HUB_EMBEDDER_API_KEY:-}
     ports:
       - "8080:8080"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    restart: unless-stopped
-
-  frontend:
-    build:
-      context: ./trending-web
-      dockerfile: Dockerfile
-    container_name: trending-frontend
-    environment:
-      VITE_API_URL: http://localhost:8080/api/v1
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
+    volumes:
+      - hub_data:/data
     restart: unless-stopped
 
 volumes:
-  postgres_data:
+  hub_data:
