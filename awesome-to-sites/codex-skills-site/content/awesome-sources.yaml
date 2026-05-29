@@ -1,0 +1,82 @@
+# Awesome Sources Registry
+# All GitHub repositories used as data sources or referenced in this project.
+# Run `npm run awesome:sync` to pull latest from each source.
+
+sources:
+  # ── Primary awesome list repos ──────────────────────────────────
+  - id: awesome-codex-skills
+    name: Awesome Codex Skills
+    url: https://github.com/ComposioHQ/awesome-codex-skills
+    type: awesome-list
+    description: Curated list of practical Codex skills for automating workflows.
+    data: content/sources/awesome-codex-skills.json
+
+# ── Individual skill / tool repos ─────────────────────────────────
+skills:
+  # Development & Code Tools
+  - name: brooks-lint
+    url: https://github.com/hyhmrright/brooks-lint
+    category: development
+    description: AI code reviews grounded in six classic engineering books.
+
+  - name: bringyour-migration-auditor
+    url: https://github.com/unitedideas/bringyour-mcp
+    category: development
+    description: Audit Claude Code to Codex harness migrations.
+
+  - name: codebase-recon
+    url: https://github.com/yujiachen-y/codebase-recon-skill
+    category: development
+    description: Analyze git history to understand a codebase before reading code.
+
+  - name: emdash-skills
+    url: https://github.com/megabytespace/claude-skills
+    category: development
+    description: 14-category autonomous product-building OS.
+
+  - name: aurakit
+    url: https://github.com/smorky850612/Aurakit
+    category: development
+    description: All-in-one skill framework with 46 modes and OWASP security.
+
+  - name: vibe-skills
+    url: https://github.com/foryourhealth111-pixel/Vibe-Skills
+    category: development
+    description: Governed Codex skill harness for staged, test-driven work.
+
+  - name: polywave
+    url: https://github.com/blackwell-systems/polywave-codex
+    category: development
+    description: Parallel agent coordination with structural merge safety.
+
+  - name: bernstein
+    url: https://github.com/chernistry/bernstein
+    category: development
+    description: Multi-agent orchestrator with Codex CLI adapter.
+
+  # Communication & Writing
+  - name: codex-sms-verification
+    url: https://github.com/virtualsms-io/codex-sms-verification
+    category: communication
+    description: Real-SIM SMS verification for AI agents via VirtualSMS MCP.
+
+  - name: diasporic-intelligence
+    url: https://github.com/MinistaJazz/diasporic-intelligence
+    category: communication
+    description: Source-credit skill for consent-governed lineage AI.
+
+  - name: novel-writing
+    url: https://github.com/wgwtest/novel-writing
+    category: communication
+    description: Public Codex skill for fiction planning and chapter drafting.
+
+  - name: unslop
+    url: https://github.com/MohamedAbdallah-14/unslop
+    category: communication
+    description: CLI and MCP server that removes AI writing patterns from text.
+
+# ── Infrastructure / framework repos ──────────────────────────────
+infra:
+  - name: next.js
+    url: https://github.com/vercel/next
+    description: The React framework used by this site.
