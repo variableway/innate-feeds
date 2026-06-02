@@ -1,113 +1,154 @@
-# Innate Hub
+# innate-feeds
 
-A unified feed reader that combines **RSS/Atom feeds** with **TrendRadar hot-news** in a single interface. Built on Fusion's solid foundation with an adapter layer for pluggable feed sources.
+A plugin-based feed aggregator. Source plugins (RSS, TrendRadar, GitHub Trending,
+Product Hunt, remote Fusion, ...) pull content into a unified store; the aggregator
+re-emits everything as standard **RSS 2.0 / Atom 1.0 / JSON Feed 1.1** so any
+reader — Fusion, NetNewsWire, Reeder, Unread — can subscribe.
 
-## Features
-
-- **RSS/Atom Reader** — Subscribe, group, and read RSS feeds (from Fusion)
-- **TrendRadar Integration** — Hot news from Zhihu, Weibo, Baidu, Douyin, etc. auto-synced
-- **Semantic Search** — AI-powered vector search across all content (OpenAI or Ollama)
-- **Hybrid Search** — Keyword + semantic search combined for best recall & precision
-- **Bookmarking** — Save articles for later reading
-- **Fever API** — Compatible with Reeder, Unread, FeedMe, etc.
-- **Dual Database** — SQLite (default, zero-config) or PostgreSQL (for cloud/InsForge)
-- **Pluggable Adapters** — Easy to add new feed sources (see `internal/adapter/`)
-
-## Quick Start
-
-### Docker (Recommended)
-
-**一键启动脚本：**
-
-```bash
-cd innate-hub
-./docker-start.sh        # SQLite 模式（默认）
-./docker-start.sh postgres  # PostgreSQL 模式
+```
+ ┌─────────────────────────── source plugins ──────────────────────────┐
+ │  rss  ·  trendradar  ·  githubtrending  ·  producthunt  ·  fusion  │
+ └──────────────────────────────────────────────────────────────────────┘
+                                  │
+                                  ▼
+              ┌───────────────────────────────┐
+              │   SQLite / PostgreSQL store   │  groups, feeds, items,
+              │  (PostgreSQL uses pgvector)   │  bookmarks, sessions
+              └───────────────────────────────┘
+                                  │
+        ┌─────────────────────────┼─────────────────────────┐
+        ▼                         ▼                         ▼
+   REST / JSON API        RSS / Atom / JSON Feed        Fever API
+   (own UI, optional)     (Fusion, any reader)         (mobile clients)
 ```
 
-脚本会自动：检测 Docker、创建 `.env`（交互式配置密码和语义搜索）、检测 TrendRadar 数据、构建镜像、等待健康检查、输出访问地址。
+## Quick start — pick your path
 
-**手动启动（如果你更喜欢）：**
+| Path | When | Command |
+|---|---|---|
+| **SQLite** | Dev, single-user, small library | `./docker-start.sh` |
+| **PostgreSQL + pgvector** | Production, large library, semantic search at scale | `./docker-start.sh postgres` |
+| **InsForge** | Self-hosted BaaS-style Postgres (with Studio UI) | `./docker-start.sh insforge` |
+| **Full stack** | innate-hub + Fusion UI side-by-side | `./docker-start.sh stack` |
+| **Local (no Docker)** | You're on a machine with Go + Node already | `./start.sh` |
 
-```bash
-cd innate-hub
-cp .env.example .env
-# 编辑 .env，至少设置 HUB_PASSWORD
+The first time you run any of these, the script will ask for a password
+and (optionally) an embedder provider. The answers go into a fresh `.env`.
 
-docker-compose --profile sqlite up -d     # SQLite 模式
-docker-compose --profile postgres up -d   # PostgreSQL 模式
-```
+After startup:
 
-**脚本命令速查：**
+- **Hub UI / API**: <http://localhost:8080>
+- **Output feeds** (any reader): <http://localhost:8080/all/rss.xml>
+- **Fusion UI** (stack profile only): <http://localhost:8081>
 
-| 命令 | 说明 |
-|------|------|
-| `./docker-start.sh` | 一键启动（SQLite） |
-| `./docker-start.sh postgres` | 一键启动（PostgreSQL） |
-| `./docker-start.sh stop` | 停止所有服务 |
-| `./docker-start.sh down` | 停止并删除数据卷 |
-| `./docker-start.sh logs` | 实时查看日志 |
-| `./docker-start.sh update` | 重新构建并重启 |
-
-### Run Locally (SQLite / PostgreSQL / InsForge)
-
-**Requirements:** Go 1.26+, Node.js 20+, pnpm
-
-**一键启动脚本：**
+## Install with Docker (recommended)
 
 ```bash
-cd innate-hub
-./start.sh              # 同时启动后端 + 前端（前台）
-./start.sh -d           # 后台模式
-./start.sh backend      # 只启动后端
-./start.sh frontend     # 只启动前端
-./start.sh stop         # 停止所有服务
-./start.sh status       # 查看运行状态
-./start.sh logs         # 查看日志
+git clone <this-repo> innate-feeds
+cd innate-feeds
+
+# Pick one:
+./docker-start.sh             # SQLite
+./docker-start.sh postgres    # PostgreSQL + pgvector
+./docker-start.sh insforge    # Self-host InsForge-compatible Postgres
+./docker-start.sh stack       # innate-hub + Fusion UI
 ```
 
-脚本会自动：检查依赖、创建 `.env`（交互式配置数据库/密码/语义搜索）、安装前端依赖、启动服务、等待后端就绪。
+The script:
 
-**数据库模式自动检测**（由 `.env` 中的 `HUB_DB_PATH` 决定）：
+1. Detects Docker and Docker Compose.
+2. Creates `.env` from `.env.example` if missing.
+3. Asks for a password and (optionally) OpenAI/Ollama API keys.
+4. Builds the hub image.
+5. Brings the chosen profile up.
+6. Waits for the health check.
+7. Prints the URLs.
 
-| 模式 | HUB_DB_PATH 值 | 说明 |
-|------|---------------|------|
-| SQLite | `hub.db` | 零配置，默认 |
-| PostgreSQL | `postgres://...` | 自托管或云数据库 |
-| InsForge | InsForge 提供的 URL | 本地运行 + 云端 PostgreSQL |
+Stop with `./docker-start.sh stop`. Wipe data with `./docker-start.sh down`.
 
-**手动启动（如果你更喜欢）：**
+### InsForge in detail
+
+[InsForge](https://insforge.dev) is a self-hostable Firebase alternative
+with a Postgres + Studio UI under the hood. innate-feeds treats InsForge
+as just another Postgres (the `insforge` profile runs the same
+`pgvector/pgvector:pg16` image InsForge bundles).
+
+**Local self-hosted InsForge** via this repo:
 
 ```bash
-# 后端
-cd innate-hub/backend
-cp .env.example .env
-# 编辑 .env，设置 HUB_PASSWORD 和 HUB_DB_PATH
-go run ./cmd/hub
-
-# 前端（另开终端）
-cd ../frontend
-pnpm install
-pnpm dev
+./docker-start.sh insforge
+# Hub:      http://localhost:8080
+# Postgres: localhost:5432  (postgres / postgres)
 ```
 
-### Environment Variables
+**Cloud InsForge** (their managed offering):
+
+1. Sign up at <https://insforge.dev> and create a project.
+2. Copy the connection string from the InsForge dashboard.
+3. Set it in `.env`:
+   ```env
+   FUSION_DB_PATH=postgres://user:pass@your-insforge-host:5432/dbname?sslmode=require
+   ```
+4. Run `./start.sh` (or `./docker-start.sh sqlite` and let the hub talk
+   to the cloud InsForge over the network — the `sqlite` profile is
+   only for the hub's own container; the database can be anywhere).
+
+The Hub automatically:
+
+- Creates the `vector` extension on startup.
+- Adds an `embedding_vec vector(N)` column.
+- Creates an HNSW index for fast similarity search.
+
+## Install without Docker
+
+Requirements: **Go 1.22+**, **Node.js 20+**, **pnpm** (auto-installed via corepack).
+
+```bash
+git clone <this-repo> innate-feeds
+cd innate-feeds
+
+./start.sh              # Start backend + frontend (foreground)
+./start.sh -d           # Daemon mode
+./start.sh backend      # Backend only
+./start.sh status       # Check status
+./start.sh doctor       # Sanity-check the install
+./start.sh logs         # Tail logs
+./start.sh stop         # Stop everything
+```
+
+`start.sh` reuses the same `.env` and the same profile selection as
+`docker-start.sh`. Pick your database, password, and embedder once; the
+script remembers.
+
+## Environment Variables
+
+The canonical names are `FUSION_*`. `HUB_*` is accepted as an alias for
+backward compatibility.
 
 | Variable | Default | Required | Description |
 |----------|---------|----------|-------------|
-| `HUB_PASSWORD` | — | **Yes** | Login password |
-| `HUB_PORT` | `8080` | No | HTTP port |
-| `HUB_DB_PATH` | `hub.db` | No | SQLite path or `postgres://...` DSN |
-| `TRENDRADAR_DATA_DIR` | `TrendRadar/output/news` | No | TrendRadar SQLite directory |
-| `HUB_EMBEDDER_PROVIDER` | — | No | `openai`, `ollama`, or empty |
-| `HUB_EMBEDDER_MODEL` | — | No | Model name (provider-specific) |
-| `HUB_EMBEDDER_API_KEY` | — | No | API key (required for OpenAI) |
-| `HUB_EMBEDDER_BASE_URL` | — | No | API base URL (optional) |
-| `FUSION_OIDC_ISSUER` | — | No | OIDC provider URL (e.g. Google, Authelia) |
-| `FUSION_OIDC_CLIENT_ID` | — | No | OAuth2 client ID |
-| `FUSION_OIDC_CLIENT_SECRET` | — | No | OAuth2 client secret |
-| `FUSION_OIDC_REDIRECT_URI` | — | No | Callback URL (e.g. `http://localhost:8080/api/oidc/callback`) |
-| `FUSION_OIDC_ALLOWED_USER` | — | No | Restrict login to specific email/sub |
+| `FUSION_PASSWORD` (or `HUB_PASSWORD`) | — | yes (or set `FUSION_ALLOW_EMPTY_PASSWORD=true`) | Login password |
+| `FUSION_PORT` (or `HUB_PORT`) | `8080` | no | HTTP port |
+| `FUSION_DB_PATH` (or `HUB_DB_PATH`) | `hub.db` | no | SQLite file or `postgres://...` DSN |
+| `TRENDRADAR_DATA_DIR` | `TrendRadar/output/news` | no | TrendRadar SQLite directory |
+| `FUSION_PUBLIC_URL` | _(auto from request)_ | no | Absolute base URL for feed self-links |
+| `HUB_EMBEDDER_PROVIDER` | _(disabled)_ | no | `openai`, `ollama`, or empty |
+| `HUB_EMBEDDER_MODEL` | _(auto)_ | no | Embedder model name |
+| `HUB_EMBEDDER_API_KEY` | — | required for OpenAI | API key |
+| `HUB_EMBEDDER_BASE_URL` | _(provider default)_ | no | Embedder endpoint |
+| `HUB_EMBEDDER_DIMENSIONS` | _(auto from model)_ | no | Vector size; must match the column dim if you change it |
+| `FUSION_SOURCES_JSON` | — | no | JSON array of remote Fusion sources to pull from |
+| `FUSION_OIDC_ISSUER` | — | no | OIDC provider URL |
+| `FUSION_OIDC_CLIENT_ID` / `FUSION_OIDC_CLIENT_SECRET` | — | no | OIDC credentials |
+| `FUSION_OIDC_REDIRECT_URI` | — | required with OIDC | e.g. `http://localhost:8080/api/oidc/callback` |
+| `FUSION_OIDC_ALLOWED_USER` | — | no | Restrict to a single identity |
+| `FUSION_CORS_ALLOWED_ORIGINS` | _(allow all)_ | no | Comma-separated Origins |
+| `FUSION_TRUSTED_PROXIES` | _(none)_ | no | Comma-separated CIDRs |
+| `FUSION_ALLOW_PRIVATE_FEEDS` | `false` | no | Allow `localhost` / private IP feed URLs |
+| `FUSION_LOG_LEVEL` | `INFO` | no | `DEBUG`, `INFO`, `WARN`, `ERROR` |
+| `FUSION_LOG_FORMAT` | `auto` | no | `text`, `json`, or `auto` |
+
+See `.env.example` for the full file with comments.
 
 ## Plugin Coverage
 
@@ -171,7 +212,7 @@ To subscribe in Fusion, add a feed pointing at
 Innate Hub supports three authentication methods:
 
 ### 1. Password Authentication (default)
-- Set `HUB_PASSWORD` in `.env`
+- Set `FUSION_PASSWORD` in `.env` (or `HUB_PASSWORD` for back-compat)
 - Login via Web UI or POST `/api/sessions`
 - Session cookies are **persisted to database** (survives server restarts)
 
@@ -339,7 +380,7 @@ runs both side by side:
 
 ```bash
 # Set a password for the hub (Fusion inherits it).
-export HUB_PASSWORD=changeme
+export FUSION_PASSWORD=changeme
 # If you want absolute feed links to work behind a domain, also set:
 # export FUSION_PUBLIC_URL=https://hub.example.com
 
@@ -348,7 +389,7 @@ docker compose --profile stack up -d
 
 Then:
 
-- **Fusion UI**: <http://localhost:8081> — log in with `HUB_PASSWORD`
+- **Fusion UI**: <http://localhost:8081> — log in with `FUSION_PASSWORD`
 - **innate-hub API**: <http://localhost:8080> — for direct REST/Fever access
 
 Inside Fusion, add a feed pointing at the innate-hub aggregator:

@@ -63,22 +63,15 @@ type Config struct {
 }
 
 func Load() (*Config, error) {
-	// Backward compatible env vars:
-	// - DB (legacy) -> FUSION_DB_PATH
-	// - PASSWORD (legacy) -> FUSION_PASSWORD
-	// - PORT (legacy) -> FUSION_PORT
-	dbPath := os.Getenv("FUSION_DB_PATH")
-	if dbPath == "" {
-		dbPath = os.Getenv("DB")
-	}
-	if dbPath == "" {
-		dbPath = "fusion.db"
-	}
+	// Env var lookup order, newest first:
+	//   FUSION_DB_PATH   > HUB_DB_PATH   > DB       > "fusion.db"
+	//   FUSION_PASSWORD  > HUB_PASSWORD  > PASSWORD > ""
+	//   FUSION_PORT      > HUB_PORT      > PORT     > "8080"
+	// The HUB_* aliases exist so existing scripts and muscle memory keep
+	// working; FUSION_* is the canonical name.
+	dbPath := firstNonEmpty(os.Getenv("FUSION_DB_PATH"), os.Getenv("HUB_DB_PATH"), os.Getenv("DB"), "fusion.db")
 
-	password := os.Getenv("FUSION_PASSWORD")
-	if password == "" {
-		password = os.Getenv("PASSWORD")
-	}
+	password := firstNonEmpty(os.Getenv("FUSION_PASSWORD"), os.Getenv("HUB_PASSWORD"), os.Getenv("PASSWORD"), "")
 
 	allowEmptyPassword, err := getEnvBool("FUSION_ALLOW_EMPTY_PASSWORD", false)
 	if err != nil {
@@ -89,13 +82,7 @@ func Load() (*Config, error) {
 		return nil, fmt.Errorf("FUSION_PASSWORD is required (or set FUSION_ALLOW_EMPTY_PASSWORD=true)")
 	}
 
-	port := os.Getenv("FUSION_PORT")
-	if port == "" {
-		port = os.Getenv("PORT")
-	}
-	if port == "" {
-		port = "8080"
-	}
+	port := firstNonEmpty(os.Getenv("FUSION_PORT"), os.Getenv("HUB_PORT"), os.Getenv("PORT"), "8080")
 	parsedPort, err := parsePort(port)
 	if err != nil {
 		return nil, fmt.Errorf("invalid FUSION_PORT: %w", err)
@@ -199,6 +186,17 @@ func getEnvString(key, defaultVal string) string {
 	}
 
 	return val
+}
+
+// firstNonEmpty returns the first non-empty string after trimming. Used
+// for env-var alias chains like FUSION_PASSWORD -> HUB_PASSWORD -> PASSWORD.
+func firstNonEmpty(values ...string) string {
+	for _, v := range values {
+		if strings.TrimSpace(v) != "" {
+			return v
+		}
+	}
+	return ""
 }
 
 func getEnvInt(key string, defaultVal, minVal int) (int, error) {
