@@ -9,9 +9,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Trending backend build artifacts
+# Build artifacts
 trending-backend/trending-cli
 trending-backend/trending-backend
+innate-hub/backend/hub
+innate-hub/backend/trending-cli
+innate-hub/backend/trending-tui
+*/hub
+*/trending-cli
+*/trending-tui
 
 dist/
 build/

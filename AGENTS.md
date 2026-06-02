@@ -1,201 +1,58 @@
-# Agents.md — Innate Feeds
+# AGENTS.md
 
-## Project Identity
+Workspace index for `innate-feeds`. The repo bundles four sub-projects; the
+aggregator is the only product. The rest are reference / source material.
 
-**innate-feeds** is a unified content aggregation platform combining:
-- **Innate Hub**: RSS/Atom feed reader + TrendRadar hot news + GitHub Trending + Product Hunt
-- **TrendRadar**: Independent Python-based hot-news crawler (Zhihu, Weibo, Baidu, Douyin, etc.)
+## Sub-projects
 
-All trending services (GitHub Trending, GitHub Starred, Product Hunt) have been merged into `innate-hub`.
-
----
-
-## Repository Structure
-
-```
-innate-feeds/
-├── innate-hub/                         # Unified feed reader + trending aggregator
-│   ├── backend/
-│   │   ├── cmd/hub/main.go             # Main server entry (RSS + Trending API)
-│   │   ├── cmd/trending-cli/main.go    # CLI tool (fetch / list)
-│   │   ├── cmd/trending-tui/main.go    # TUI terminal dashboard
-│   │   ├── internal/
-│   │   │   ├── handler/                # HTTP handlers (feed + trending)
-│   │   │   ├── adapter/                # Pluggable feed sources
-│   │   │   │   ├── rss/                # RSS/Atom adapter
-│   │   │   │   ├── trendradar/         # TrendRadar SQLite adapter
-│   │   │   │   ├── githubtrending/     # GitHub Trending adapter
-│   │   │   │   └── producthunt/        # Product Hunt adapter
-│   │   │   ├── store/                  # database/sql store (feed data)
-│   │   │   └── trending/               # ★ Trending sub-system
-│   │   │       ├── pkg/github/         # GitHub API client
-│   │   │       ├── pkg/producthunt/    # Product Hunt API client
-│   │   │       ├── model/              # GORM models (3 tables)
-│   │   │       ├── store/              # GORM store layer
-│   │   │       └── service/            # Business logic
-│   │   ├── internal/web/dist/          # Embedded frontend build
-│   │   └── go.mod
-│   ├── frontend/                       # React + TanStack Router + shadcn/ui
-│   ├── docs/
-│   ├── docker-compose.yml
-│   ├── docker-start.sh
-│   └── start.sh
-│
-├── TrendRadar/                         # Independent hot-news crawler (Python)
-│   ├── trendradar/                     # Crawler modules
-│   ├── output/news/                    # Daily SQLite databases
-│   ├── config/
-│   └── ...
-│
-├── data/                               # JSON data exports (legacy)
-├── docker-compose.yml                  # Root-level orchestration (legacy)
-├── MERGE_SUMMARY.md                    # Trending merge documentation
-├── SPEC.md                             # System specification
-├── README.md
-└── AGENTS.md
-```
-
----
-
-## Innate Hub Backend
-
-**Framework**: Gin + `database/sql` (feed data) + GORM (trending data) + SQLite/PostgreSQL
-**Database**: All tables share one database (`fusion.db` or PostgreSQL)
-
-### Interfaces
-- **REST API** (`cmd/hub`): Unified server on `:8080` — feeds, items, bookmarks, search, trending
-- **CLI** (`cmd/trending-cli`): Cobra commands for `fetch`, `list`
-- **TUI** (`cmd/trending-tui`): Bubble Tea interactive terminal UI
-
-### Feed Adapters
-| Adapter | SourceType | Description |
+| Path | Role | Read more |
 |---|---|---|
-| `rss` | `rss` | Standard RSS/Atom feeds |
-| `trendradar` | `trendradar` | Reads TrendRadar daily SQLite DBs |
-| `githubtrending` | `githubtrending` | Scrapes GitHub Trending page |
-| `producthunt` | `producthunt` | Product Hunt GraphQL API |
+| `innate-hub/` | The product. Go backend + DB, emits RSS/Atom/JSON-Feed. Source plugins live in `backend/internal/adapter/`. | `innate-hub/backend/cmd/hub/main.go`, `innate-hub/backend/internal/adapter/registry.go` |
+| `fusion/` | Reference consumer. Not built or modified from this repo. Use as the canonical reader to verify the RSS output. | upstream `fusion/README.md` |
+| `TrendRadar/` | Python hot-news crawler. Read-only input to the `trendradar` adapter. | upstream `TrendRadar/README.md` |
+| `awesome-to-sites/` | A collection of published awesome-list websites, each a separate git submodule. **Out of scope for the aggregator.** | per-submodule `README.md` |
 
-### Trending API Endpoints
+## Where to make changes
 
-Mounted under `/api/trending/*`, protected by innate-hub auth (session / API Key).
-
-| Method | Path | Description |
-|---|---|---|
-| GET | `/api/trending/stats` | Dashboard stats |
-| GET | `/api/trending/github/trending` | List trending repos |
-| POST | `/api/trending/github/trending/fetch` | Fetch trending repos |
-| GET | `/api/trending/github/trending/languages` | Language list |
-| GET | `/api/trending/github/starred/:username` | User's starred repos |
-| POST | `/api/trending/github/starred/fetch` | Fetch starred repos |
-| GET | `/api/trending/github/starred/:username/languages` | Language breakdown |
-| GET | `/api/trending/producthunt` | List Product Hunt products |
-| POST | `/api/trending/producthunt/fetch` | Fetch Product Hunt data |
-| GET | `/api/trending/producthunt/categories` | Topic categories |
-
-### Feed API Endpoints (Existing)
-
-| Method | Path | Description |
-|---|---|---|
-| GET/POST/PATCH/DELETE | `/api/groups` | Feed groups |
-| GET/POST/PATCH/DELETE | `/api/feeds` | Feed sources |
-| GET/PATCH | `/api/items` | Feed items (articles) |
-| GET | `/api/search` | Full-text + semantic search |
-| GET/POST/DELETE | `/api/bookmarks` | Saved items |
-| POST | `/fever` | Fever API compatibility |
-
----
-
-## Innate Hub Frontend
-
-**Framework**: React 19 + Vite + TypeScript + Tailwind CSS + shadcn/ui
-**Router**: TanStack Router (file-based)
-**State**: TanStack Query + Zustand stores
-**UI**: next-themes (dark/light), sonner (toasts)
-
-### Routes
-| Path | Page |
+| If you are… | Go to… |
 |---|---|
-| `/` | Feed reader (all / unread items) |
-| `/feeds` | Feed management |
-| `/groups/:groupId` | Group-filtered items |
-| `/login` | Login |
+| Adding a new feed source | `innate-hub/backend/internal/adapter/<name>/` — implement `adapter.Adapter`, register in `innate-hub/backend/cmd/hub/main.go` |
+| Changing RSS / Atom output | `innate-hub/backend/internal/handler/` (new feed-output routes) |
+| Changing the Fever API | `innate-hub/backend/internal/handler/fever.go` |
+| Changing puller / store | `innate-hub/backend/internal/pull/`, `innate-hub/backend/internal/store/` |
+| Updating the embedded UI (fusion's frontend) | build the frontend in `fusion/frontend/`, drop the output into `innate-hub/backend/internal/web/dist/` (or wire a reverse proxy in `docker-compose.yml`) |
+| Updating the planned work | `plan.md` |
 
-Trending content appears naturally in the feed reader via Adapters.
+## Conventions
 
----
+- **Go**: `log/slog` for logging, `database/sql` for the main store, GORM only
+  inside `internal/trending/`. Errors bubble up with `fmt.Errorf("...: %w", err)`.
+- **Adapters**: a Go package exposing `Name() string` and
+  `Pull(ctx, *model.Feed, timeout) (*adapter.Result, error)`. See
+  `internal/adapter/adapter.go`.
+- **Feed identity**: every pulled item is keyed by `GUID` inside its feed
+  (`BatchCreateItemsIgnore`). Two sources can produce the same item only if
+  they share a feed row, not a global GUID.
+- **Auth**: session cookie or `X-API-Key` header on `/api/*`. Fever at
+  `/fever` uses its own key derived from `FUSION_PASSWORD`. RSS output
+  endpoints are unauthenticated by design (they are consumed by external
+  readers).
+- **Config**: every env var defaults are documented in
+  `innate-hub/backend/internal/config/config.go`. There is **no** root
+  `.env.example` — the canonical one lives at `innate-hub/.env.example`.
 
-## Development Conventions
-
-### Go
-- **Stdlib logging**: Use `log/slog`, not third-party loggers
-- **Error handling**: Return errors up the stack, wrap with `fmt.Errorf`
-- **Feed store**: `database/sql` with named parameters in `internal/store/`
-- **Trending store**: GORM in `internal/trending/store/` (bridged from `*sql.DB`)
-- **CLI**: Cobra commands in `cmd/trending-cli/`
-- **TUI**: Bubble Tea in `cmd/trending-tui/`
-- **API**: Gin handlers in `internal/handler/`
-
-### TypeScript / React
-- **Framework**: Vite SPA with TanStack Router, no SSR
-- **UI components**: shadcn/ui — use `cn()` from `clsx` + `tailwind-merge`
-- **Data fetching**: TanStack Query
-- **Styling**: Tailwind CSS
-
-### Shared Patterns
-- **Environment vars**: `.env` files at project roots
-- **GitHub Token**: `GITHUB_TOKEN` env var for higher API rate limits
-- **Database**: `FUSION_DB_PATH` (SQLite file or `postgres://` DSN)
-
----
-
-## Common Commands
+## Quick commands
 
 ```bash
-# Main server
+# Run the aggregator
 cd innate-hub/backend
-cp .env.example .env  # if needed
+cp .env.example .env  # edit FUSION_PASSWORD, GITHUB_TOKEN, etc.
 go run ./cmd/hub
 
-# CLI
-cd innate-hub/backend
-go run ./cmd/trending-cli fetch github-trending --period daily
-go run ./cmd/trending-cli list github-starred <username>
+# Verify it works
+curl http://localhost:8080/api/feeds
+curl http://localhost:8080/feeds/1/rss.xml
 
-# TUI
-cd innate-hub/backend
-go run ./cmd/trending-tui
-
-# Frontend
-cd innate-hub/frontend
-pnpm install
-pnpm dev
-
-# Docker (Innate Hub)
-cd innate-hub
-./docker-start.sh
+# Point Fusion at it (consumer side)
+FUSION_API_URL=http://localhost:8080  # in fusion's config
 ```
-
----
-
-## Environment Variables
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `FUSION_DB_PATH` | `fusion.db` | Database file or PostgreSQL DSN |
-| `FUSION_PASSWORD` | — | Hub login password (required) |
-| `FUSION_PORT` | `8080` | API server port |
-| `GITHUB_TOKEN` | — | GitHub PAT for higher rate limits |
-| `PRODUCTHUNT_TOKEN` | — | Product Hunt API token |
-| `HUB_EMBEDDER_PROVIDER` | — | Semantic search: `openai` / `ollama` |
-| `HUB_EMBEDDER_MODEL` | — | Embedder model name |
-| `HUB_EMBEDDER_API_KEY` | — | OpenAI API key |
-
----
-
-## When Making Changes
-
-1. **Backend changes**: Go to `innate-hub/backend/`
-2. **Frontend changes**: Go to `innate-hub/frontend/`
-3. **Trending backend**: `innate-hub/backend/internal/trending/`
-4. **Docker**: Update `innate-hub/docker-compose.yml`
-5. **Docs**: Update `README.md`, `MERGE_SUMMARY.md`, or this file as needed
