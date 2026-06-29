@@ -8,6 +8,7 @@ interface FilterBarProps extends React.HTMLAttributes<HTMLDivElement> {
   languages: string[];
   dates: string[];
   onFiltersChange: (filters: FeedFilters) => void;
+  showStarsRange?: boolean;
 }
 
 /**
@@ -15,7 +16,7 @@ interface FilterBarProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
   (
-    { filters, languages, dates, onFiltersChange, className, ...props },
+    { filters, languages, dates, onFiltersChange, showStarsRange = false, className, ...props },
     ref,
   ) => {
     const updateFilter = (
@@ -25,12 +26,25 @@ const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
       onFiltersChange({ ...filters, [key]: value || undefined });
     };
 
+    const updateStarsRange = (key: "starsMin" | "starsMax", raw: string) => {
+      const parsed = raw.trim() === "" ? undefined : Number(raw);
+      const value =
+        parsed === undefined || Number.isNaN(parsed) ? undefined : parsed;
+      onFiltersChange({ ...filters, [key]: value });
+    };
+
+    const removeTopic = (topic: string) => {
+      const next = (filters.topics ?? []).filter((t) => t !== topic);
+      onFiltersChange({ ...filters, topics: next.length ? next : undefined });
+    };
+
     return (
       <div
         ref={ref}
-        className={cn("flex flex-wrap items-center gap-3", className)}
+        className={cn("flex flex-col gap-2", className)}
         {...props}
       >
+        <div className="flex flex-wrap items-center gap-3">
         <div className="relative flex-1 min-w-[200px]">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
@@ -78,26 +92,52 @@ const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
           </select>
         )}
 
-        <input
-          type="text"
-          placeholder="Filter by topic..."
-          value={filters.topic || ""}
-          onChange={(e) => updateFilter("topic", e.target.value)}
-          className="rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring w-[150px]"
-        />
+        {showStarsRange && (
+          <div className="flex items-center gap-1.5">
+            <input
+              type="number"
+              min={0}
+              placeholder="Min stars"
+              value={filters.starsMin ?? ""}
+              onChange={(e) => updateStarsRange("starsMin", e.target.value)}
+              className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+            <span className="text-sm text-muted-foreground">-</span>
+            <input
+              type="number"
+              min={0}
+              placeholder="Max stars"
+              value={filters.starsMax ?? ""}
+              onChange={(e) => updateStarsRange("starsMax", e.target.value)}
+              className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+          </div>
+        )}
+        </div>
 
-        <select
-          value={filters.sort || "stars"}
-          onChange={(e) =>
-            updateFilter("sort", e.target.value as FeedFilters["sort"])
-          }
-          className="rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-        >
-          <option value="stars">Stars</option>
-          <option value="updated">Updated</option>
-          <option value="created">Created</option>
-          <option value="starred">Starred Time</option>
-        </select>
+        {filters.topics && filters.topics.length > 0 && (
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-xs text-muted-foreground">Topics:</span>
+            {filters.topics.map((topic) => (
+              <button
+                key={topic}
+                type="button"
+                onClick={() => removeTopic(topic)}
+                className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2.5 py-0.5 text-xs font-medium text-primary hover:bg-primary/25"
+              >
+                {topic}
+                <X className="h-3 w-3" />
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={() => onFiltersChange({ ...filters, topics: undefined })}
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              Clear all
+            </button>
+          </div>
+        )}
       </div>
     );
   },

@@ -165,16 +165,33 @@ export function insertStarredTopics(
   }
 }
 
+function appendTopicFilters(
+  where: string,
+  params: unknown[],
+  topics: string[] | undefined,
+  topicsTable: "trending_repo_topics" | "starred_repo_topics",
+): string {
+  if (!topics?.length) return where;
+  let result = where;
+  for (const topic of topics) {
+    result += ` AND EXISTS (SELECT 1 FROM ${topicsTable} rt WHERE rt.repo_id = r.id AND rt.topic = ?)`;
+    params.push(topic);
+  }
+  return result;
+}
+
 export function getFeedItems(
   db: Database.Database,
   type: string,
   filters: {
     language?: string;
-    topic?: string;
+    topics?: string[];
     search?: string;
     sort?: string;
     order?: string;
     date?: string;
+    starsMin?: number;
+    starsMax?: number;
   },
   page = 1,
   pageSize = 20,
@@ -189,7 +206,7 @@ function getTrendingItems(
   db: Database.Database,
   filters: {
     language?: string;
-    topic?: string;
+    topics?: string[];
     search?: string;
     sort?: string;
     order?: string;
@@ -206,11 +223,12 @@ function getTrendingItems(
     params.push(filters.language);
   }
 
-  if (filters.topic) {
-    where +=
-      " AND EXISTS (SELECT 1 FROM trending_repo_topics rt WHERE rt.repo_id = r.id AND rt.topic = ?)";
-    params.push(filters.topic);
-  }
+  where = appendTopicFilters(
+    where,
+    params,
+    filters.topics,
+    "trending_repo_topics",
+  );
 
   if (filters.search) {
     where +=
@@ -303,10 +321,12 @@ function getStarredItems(
   db: Database.Database,
   filters: {
     language?: string;
-    topic?: string;
+    topics?: string[];
     search?: string;
     sort?: string;
     order?: string;
+    starsMin?: number;
+    starsMax?: number;
   },
   page: number,
   pageSize: number,
@@ -319,17 +339,28 @@ function getStarredItems(
     params.push(filters.language);
   }
 
-  if (filters.topic) {
-    where +=
-      " AND EXISTS (SELECT 1 FROM starred_repo_topics rt WHERE rt.repo_id = r.id AND rt.topic = ?)";
-    params.push(filters.topic);
-  }
+  where = appendTopicFilters(
+    where,
+    params,
+    filters.topics,
+    "starred_repo_topics",
+  );
 
   if (filters.search) {
     where +=
       " AND (r.name LIKE ? OR r.description LIKE ? OR r.full_name LIKE ?)";
     const search = `%${filters.search}%`;
     params.push(search, search, search);
+  }
+
+  if (filters.starsMin != null) {
+    where += " AND r.stars >= ?";
+    params.push(filters.starsMin);
+  }
+
+  if (filters.starsMax != null) {
+    where += " AND r.stars <= ?";
+    params.push(filters.starsMax);
   }
 
   const sortColumn =

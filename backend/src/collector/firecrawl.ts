@@ -14,10 +14,6 @@ interface TrendingRepo {
   starsToday: string;
 }
 
-/**
- * Fetch trending repos using Firecrawl
- * Uses JSON extraction with schema to get structured data from GitHub trending page
- */
 export async function fetchTrendingWithFirecrawl(
   period: TrendingPeriod = "daily",
   language?: string,
@@ -61,16 +57,13 @@ export async function fetchTrendingWithFirecrawl(
       ],
     });
 
-    // @ts-ignore - Firecrawl types may not be perfect
+    // @ts-ignore Firecrawl SDK typing gap.
     const data = result.json as { repos?: TrendingRepo[] };
     if (!data || !data.repos) {
       console.log("No trending repos found via Firecrawl");
       return [];
     }
 
-    console.log(`Found ${data.repos.length} trending repos via Firecrawl`);
-
-    // Convert to GitHubRepo format
     const repos: GitHubRepo[] = data.repos.map((repo: TrendingRepo) => {
       const [owner, name] = (repo.fullName || "").split("/");
       return {
@@ -102,9 +95,6 @@ export async function fetchTrendingWithFirecrawl(
   }
 }
 
-/**
- * Generate a consistent repo ID from full name
- */
 function generateRepoId(fullName: string): number {
   let hash = 0;
   for (let i = 0; i < fullName.length; i++) {
@@ -115,20 +105,12 @@ function generateRepoId(fullName: string): number {
   return Math.abs(hash);
 }
 
-/**
- * Parse star count string like "448k" or "1,234" to number
- */
 function parseStarCount(stars: string): number {
   if (!stars) return 0;
 
   const cleaned = stars.replace(/,/g, "").trim();
-
-  if (cleaned.endsWith("k")) {
-    return Math.round(parseFloat(cleaned) * 1000);
-  }
-  if (cleaned.endsWith("m")) {
-    return Math.round(parseFloat(cleaned) * 1000000);
-  }
+  if (cleaned.endsWith("k")) return Math.round(parseFloat(cleaned) * 1000);
+  if (cleaned.endsWith("m")) return Math.round(parseFloat(cleaned) * 1000000);
 
   return parseInt(cleaned, 10) || 0;
 }

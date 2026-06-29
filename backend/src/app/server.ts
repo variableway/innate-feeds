@@ -7,60 +7,70 @@ import {
   getStats,
   getLanguages,
   getTrendingDates,
-} from "./db/index.js";
-import { syncTrending, syncAllTrending, syncStarred } from "./sync.js";
-import type { TrendingPeriod } from "./github.js";
+} from "../db/index.js";
+import {
+  syncTrending,
+  syncAllTrending,
+  syncStarred,
+} from "../collector/sync.js";
+import type { TrendingPeriod } from "../collector/github.js";
 
 const app = new Hono();
 
 app.use("/*", cors());
 
-// GET /api/feeds - Get feed items with filtering
 app.get("/api/feeds", (c) => {
   const db = getDb();
-
   const type = c.req.query("type") || "trending";
   const language = c.req.query("language");
-  const topic = c.req.query("topic");
+  const topicsParam = c.req.query("topics");
+  const topicLegacy = c.req.query("topic");
+  const topics = topicsParam
+    ? topicsParam
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean)
+    : topicLegacy
+      ? [topicLegacy]
+      : undefined;
   const search = c.req.query("search");
   const sort = c.req.query("sort") || "stars";
   const order = c.req.query("order") || "desc";
   const date = c.req.query("date");
+  const starsMin = c.req.query("starsMin")
+    ? parseInt(c.req.query("starsMin")!, 10)
+    : undefined;
+  const starsMax = c.req.query("starsMax")
+    ? parseInt(c.req.query("starsMax")!, 10)
+    : undefined;
   const page = parseInt(c.req.query("page") || "1", 10);
   const pageSize = parseInt(c.req.query("pageSize") || "20", 10);
 
   const result = getFeedItems(
     db,
     type,
-    { language, topic, search, sort, order, date },
+    { language, topics, search, sort, order, date, starsMin, starsMax },
     page,
     pageSize,
   );
   return c.json({ ...result, page, pageSize });
 });
 
-// GET /api/feeds/stats - Get feed statistics
 app.get("/api/feeds/stats", (c) => {
   const db = getDb();
-  const stats = getStats(db);
-  return c.json(stats);
+  return c.json(getStats(db));
 });
 
-// GET /api/feeds/languages - Get available languages
 app.get("/api/feeds/languages", (c) => {
   const db = getDb();
-  const languages = getLanguages(db);
-  return c.json(languages);
+  return c.json(getLanguages(db));
 });
 
-// GET /api/feeds/dates - Get available trending dates
 app.get("/api/feeds/dates", (c) => {
   const db = getDb();
-  const dates = getTrendingDates(db);
-  return c.json(dates);
+  return c.json(getTrendingDates(db));
 });
 
-// POST /api/feeds/sync - Sync feeds from GitHub
 app.post("/api/feeds/sync", async (c) => {
   const body = await c.req.json();
   const type = body.type || "trending";
@@ -68,8 +78,7 @@ app.post("/api/feeds/sync", async (c) => {
   const username = body.username;
 
   if (type === "all-trending") {
-    const result = await syncAllTrending();
-    return c.json(result);
+    return c.json(await syncAllTrending());
   }
 
   const force = body.force === true;

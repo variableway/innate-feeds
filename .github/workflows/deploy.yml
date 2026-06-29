@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -40,28 +40,30 @@ jobs:
           cd backend && bun install
           cd ../frontend && bun install
 
-      - name: Restore database cache
-        uses: actions/cache@v4
-        id: db-cache
-        with:
-          path: backend/.cache/feeds.db
-          key: feeds-db-${{ github.repository }}-${{ github.run_id }}
-          restore-keys: |
-            feeds-db-${{ github.repository }}-
-
-      - name: Prepare database
+      - name: Prepare database from JSON
         run: |
           mkdir -p backend/.cache
           cd backend
-          if [ ! -f .cache/feeds.db ]; then
-            echo "No cached database — seeding from committed JSON"
-            bun run import:static
-          fi
+          bun run import:static
 
       - name: Sync trending data
         env:
           GH_TOKEN: ${{ github.token }}
         run: bun run data:update
+
+      - name: Commit updated data chunks
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "chore: update feed chunks $(date -u +%Y-%m-%d)"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
 
       - name: Build static site
         run: cd frontend && VITE_STATIC_MODE=true bun run build

@@ -5,13 +5,15 @@ import { formatNumber, cn } from "@/lib/utils";
 
 interface FeedCardProps extends React.HTMLAttributes<HTMLDivElement> {
   item: FeedItem;
+  selectedTopics?: string[];
+  onTopicClick?: (topic: string) => void;
 }
 
 /**
  * FeedCard - simplified, no period tags
  */
 const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
-  ({ item, className, ...props }, ref) => {
+  ({ item, selectedTopics, onTopicClick, className, ...props }, ref) => {
     const { repo } = item;
 
     return (
@@ -70,19 +72,36 @@ const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
                 <GitFork className="h-3.5 w-3.5" />
                 {formatNumber(repo.forks)}
               </span>
-              {repo.topics.length > 0 && (
-                <div className="flex flex-wrap gap-1">
-                  {repo.topics.slice(0, 3).map((topic) => (
+            </div>
+            {repo.topics.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-1">
+                {repo.topics.map((topic) => {
+                  const isSelected = selectedTopics?.includes(topic);
+                  return onTopicClick ? (
+                    <button
+                      key={topic}
+                      type="button"
+                      onClick={() => onTopicClick(topic)}
+                      className={cn(
+                        "rounded-full px-2 py-0.5 text-xs transition-colors",
+                        isSelected
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-primary/15 hover:text-primary",
+                      )}
+                    >
+                      {topic}
+                    </button>
+                  ) : (
                     <span
                       key={topic}
                       className="inline-block rounded-full bg-secondary px-2 py-0.5 text-xs"
                     >
                       {topic}
                     </span>
-                  ))}
-                </div>
-              )}
-            </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

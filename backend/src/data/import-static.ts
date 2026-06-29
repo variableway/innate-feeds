@@ -7,10 +7,8 @@ import {
   upsertStarredRepo,
   insertTrendingTopics,
   insertStarredTopics,
-} from "./db/index.js";
-import { getDefaultDbPath } from "./db/paths.js";
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+} from "../db/index.js";
+import { getDefaultDbPath } from "../db/paths.js";
 
 interface StaticFeedItem {
   id: string;
@@ -39,33 +37,59 @@ interface StaticFeedResponse {
   items: StaticFeedItem[];
 }
 
-function loadJson(path: string): StaticFeedResponse | null {
+interface Manifest {
+  feeds?: {
+    trending?: string[];
+    starred?: string[];
+  };
+}
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+function loadJson<T>(path: string): T | null {
   if (!existsSync(path)) return null;
-  return JSON.parse(readFileSync(path, "utf-8")) as StaticFeedResponse;
+  return JSON.parse(readFileSync(path, "utf-8")) as T;
+}
+
+function collectFeedItems(dataDir: string): { trending: StaticFeedItem[]; starred: StaticFeedItem[] } {
+  const legacyTrending =
+    loadJson<StaticFeedResponse>(join(dataDir, "trending.json"))?.items ?? [];
+  const legacyStarred =
+    loadJson<StaticFeedResponse>(join(dataDir, "starred.json"))?.items ?? [];
+
+  const manifest = loadJson<Manifest>(join(dataDir, "manifest.json"));
+  const trendingPaths = manifest?.feeds?.trending ?? [];
+  const starredPaths = manifest?.feeds?.starred ?? [];
+
+  const trendingChunks = trendingPaths.flatMap(
+    (p) => loadJson<StaticFeedResponse>(join(dataDir, p))?.items ?? [],
+  );
+  const starredChunks = starredPaths.flatMap(
+    (p) => loadJson<StaticFeedResponse>(join(dataDir, p))?.items ?? [],
+  );
+
+  return {
+    trending: [...legacyTrending, ...trendingChunks],
+    starred: [...legacyStarred, ...starredChunks],
+  };
 }
 
 function main() {
   const dbPath = getDefaultDbPath();
-  const dataDir =
-    process.argv[2] || join(__dirname, "../../frontend/public/data");
-
+  const dataDir = process.argv[2] || join(__dirname, "../../../frontend/public/data");
   const db = getDb(dbPath);
 
-  const trending = loadJson(join(dataDir, "trending.json"));
-  const starred = loadJson(join(dataDir, "starred.json"));
-
-  if (!trending?.items.length && !starred?.items.length) {
+  const { trending, starred } = collectFeedItems(dataDir);
+  if (!trending.length && !starred.length) {
     console.log("No static JSON data found to import");
     return;
   }
-
-  console.log(`Importing static data from ${dataDir} into ${dbPath}...`);
 
   const tx = db.transaction(() => {
     let trendingCount = 0;
     let starredCount = 0;
 
-    for (const item of trending?.items ?? []) {
+    for (const item of trending) {
       if (item.type !== "trending" || !item.snapshotDate) continue;
       const periodMatch = item.id.match(
         /^trending-\d{4}-\d{2}-\d{2}-(daily|weekly|monthly)-/,
@@ -95,7 +119,7 @@ function main() {
       trendingCount++;
     }
 
-    for (const item of starred?.items ?? []) {
+    for (const item of starred) {
       if (item.type !== "starred") continue;
       upsertStarredRepo(db, {
         id: item.repo.id,
@@ -123,9 +147,7 @@ function main() {
   });
 
   const { trendingCount, starredCount } = tx();
-  console.log(
-    `Imported ${trendingCount} trending and ${starredCount} starred items`,
-  );
+  console.log(`Imported ${trendingCount} trending and ${starredCount} starred items`);
 }
 
 main();

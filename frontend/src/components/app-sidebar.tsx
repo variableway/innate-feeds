@@ -36,7 +36,7 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
       <div
         ref={ref}
         className={cn(
-          "app-sidebar app-panel flex h-screen flex-col border-r transition-all duration-200",
+          "app-sidebar flex h-screen flex-col border-r transition-all duration-200",
           collapsed ? "w-16" : "w-64",
           className,
         )}

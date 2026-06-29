@@ -161,12 +161,13 @@
 .app-sidebar {
   background: transparent;
   box-shadow: none;
-  border-color: transparent;
+  border-right-color: color-mix(in oklch, var(--border) 45%, transparent);
 }
 
 .app-panel {
   background: color-mix(in oklch, var(--card) 92%, transparent);
   backdrop-filter: blur(8px);
+  border-right-color: color-mix(in oklch, var(--border) 45%, transparent);
 }
 
 .app-content {

@@ -1,24 +1,20 @@
 import { useState, useEffect, useCallback } from "react";
-import { RefreshCw } from "lucide-react";
 import type { FeedItem, FeedFilters } from "@/types/feed";
-import {
-  fetchFeeds,
-  fetchLanguages,
-  fetchDates,
-  syncFeeds,
-  isStaticMode,
-} from "@/services/feeds";
+import { toggleTopicFilter } from "@/types/feed";
+import { fetchFeeds, fetchLanguages, fetchDates } from "@/services/feeds";
 import { FeedCard } from "@/components/feed-card";
 import { FilterBar } from "@/components/filter-bar";
+import { usePersistedFeedFilters } from "@/hooks/use-persisted-feed-filters";
 import { toast } from "sonner";
+
+const DEFAULT_FILTERS: FeedFilters = { sort: "stars" };
 
 export function TrendingPage() {
   const [items, setItems] = useState<FeedItem[]>([]);
   const [languages, setLanguages] = useState<string[]>([]);
   const [dates, setDates] = useState<string[]>([]);
-  const [filters, setFilters] = useState<FeedFilters>({ sort: "stars" });
+  const [filters, setFilters] = usePersistedFeedFilters("trending", DEFAULT_FILTERS);
   const [loading, setLoading] = useState(true);
-  const [syncing, setSyncing] = useState(false);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const pageSize = 20;
@@ -46,41 +42,24 @@ export function TrendingPage() {
     loadData();
   }, [loadData]);
 
-  const handleSync = async () => {
-    setSyncing(true);
-    try {
-      const result = await syncFeeds("all-trending");
-      toast.success(
-        `Synced: ${result.daily} daily, ${result.weekly} weekly, ${result.monthly} monthly`,
-      );
-      await loadData();
-    } catch (err) {
-      toast.error("Failed to sync trending feeds");
-    } finally {
-      setSyncing(false);
-    }
+  const handleFiltersChange = (next: FeedFilters) => {
+    setPage(1);
+    setFilters(next);
+  };
+
+  const handleTopicClick = (topic: string) => {
+    handleFiltersChange(toggleTopicFilter(filters, topic));
   };
 
   return (
     <div className="p-6">
-      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-6">
         <FilterBar
           filters={filters}
           languages={languages}
           dates={dates}
-          onFiltersChange={setFilters}
-          className="flex-1"
+          onFiltersChange={handleFiltersChange}
         />
-        {!isStaticMode() && (
-          <button
-            onClick={handleSync}
-            disabled={syncing}
-            className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
-          >
-            <RefreshCw className={`h-4 w-4 ${syncing ? "animate-spin" : ""}`} />
-            {syncing ? "Syncing..." : "Sync Trending"}
-          </button>
-        )}
       </div>
 
       <div className="space-y-4">
@@ -94,11 +73,16 @@ export function TrendingPage() {
         ) : items.length === 0 ? (
           <div className="rounded-lg border bg-card p-8 text-center text-muted-foreground">
             No trending repositories found.
-            {!isStaticMode() &&
-              ' Click "Sync Trending" to fetch data from GitHub.'}
           </div>
         ) : (
-          items.map((item) => <FeedCard key={item.id} item={item} />)
+          items.map((item) => (
+            <FeedCard
+              key={item.id}
+              item={item}
+              selectedTopics={filters.topics}
+              onTopicClick={handleTopicClick}
+            />
+          ))
         )}
       </div>
 

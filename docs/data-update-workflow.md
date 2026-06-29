@@ -20,12 +20,19 @@ Run from repository root:
 - `bun run data:stats`
   - Show DB statistics.
 - `bun run data:export`
-  - Export JSON to `frontend/public/data/*.json`.
+  - Export incremental JSON chunks + manifest to `frontend/public/data/`.
 - `bun run data:update`
   - One-shot update pipeline for automation:
     1) sync trending
     2) sync recent starred
-    3) export static JSON
+    3) export incremental JSON
+
+## Static data layout
+
+- `frontend/public/data/manifest.json`: chunk index used by frontend.
+- `frontend/public/data/chunks/trending/<YYYY-MM-DD>.json`
+- `frontend/public/data/chunks/starred/<YYYY-MM-DD>.json`
+- `frontend/public/data/{stats,languages,dates}.json`
 
 ## Suggested schedule usage (local AI Agent / cron / launchd)
 

@@ -37,11 +37,25 @@ export interface FeedResponse {
 
 export interface FeedFilters {
   language?: string;
-  topic?: string;
+  topics?: string[];
   search?: string;
   sort?: "stars" | "updated" | "created" | "starred";
   order?: "asc" | "desc";
   date?: string;
+  starsMin?: number;
+  starsMax?: number;
+}
+
+export function toggleTopicFilter(
+  filters: FeedFilters,
+  topic: string,
+): FeedFilters {
+  const topics = filters.topics ?? [];
+  if (topics.includes(topic)) {
+    const next = topics.filter((t) => t !== topic);
+    return { ...filters, topics: next.length ? next : undefined };
+  }
+  return { ...filters, topics: [...topics, topic] };
 }
 
 export interface FeedStats {

@@ -3,7 +3,6 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { TrendingUp, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { FeedStats } from "@/types/feed";
-import { formatNumber } from "@/lib/utils";
 
 interface CategoryPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   stats: FeedStats | null;
@@ -15,7 +14,6 @@ interface CategoryItem {
   title: string;
   href: string;
   icon: React.ElementType;
-  count: number;
 }
 
 const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
@@ -29,14 +27,12 @@ const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
         title: "Trending",
         href: "/trending",
         icon: TrendingUp,
-        count: stats?.trendingCount || 0,
       },
       {
         id: "starred",
         title: "Starred",
         href: "/starred",
         icon: Star,
-        count: stats?.starredCount || 0,
       },
     ];
 
@@ -44,7 +40,7 @@ const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
       <div
         ref={ref}
         className={cn(
-          "app-panel flex h-full w-64 flex-col border-r",
+          "app-panel flex h-full w-44 flex-col border-r",
           className,
         )}
         {...props}
@@ -74,7 +70,7 @@ const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
                     key={category.id}
                     to={category.href}
                     className={cn(
-                      "flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors",
+                      "flex items-center rounded-md px-3 py-2 text-sm transition-colors",
                       isActive
                         ? "bg-primary text-primary-foreground"
                         : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
@@ -84,9 +80,6 @@ const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
                       <category.icon className="h-4 w-4" />
                       <span className="font-medium">{category.title}</span>
                     </div>
-                    <span className="text-xs opacity-80">
-                      {formatNumber(category.count)}
-                    </span>
                   </Link>
                 );
               })}
