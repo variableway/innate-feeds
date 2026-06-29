@@ -1,15 +1,61 @@
+# Dependencies
 node_modules/
-.next/
-out/
+
+# Environment & secrets
 .env
-.env.local
+.env.*
+!.env.example
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Build artifacts
+# Build output
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+.vite/
+
+# SQLite (local default: ~/.innate/feeds.db)
+backend/feeds.db
+backend/feeds.db-*
+backend/feeds.db.*
+backend/.cache/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Local reference clones (nested git repos, not part of this project)
+references/
+
+# IDE / editor
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Go scanner build artifacts
+git-repo-scanner/git-repo-scanner
+git-repo-scanner/repos.json
+git-repo-scanner/repos.md
+
+# Legacy binaries from removed architectures
 trending-backend/trending-cli
 trending-backend/trending-backend
 innate-hub/backend/hub
@@ -18,21 +64,8 @@ innate-hub/backend/trending-tui
 */hub
 */trending-cli
 */trending-tui
-
-dist/
-build/
-*.db
-*.db-journal
-
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-coverage/
-.nyc_output/
-
-# Tauri
 trending-desktop/src-tauri/target/
 trending-desktop/src-tauri/WixTools/
+
+# Task artifacts
+tasks/issues/*.png

@@ -1,0 +1,29 @@
+{
+  "name": "innate-feeds",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "bash dev.sh",
+    "dev:concurrent": "concurrently \"cd backend && bun run dev\" \"cd frontend && bun run dev\"",
+    "dev:backend": "cd backend && bun run dev",
+    "dev:frontend": "cd frontend && bun run dev",
+    "sync": "cd backend && bun run sync:trending",
+    "data:sync:trending": "cd backend && bun run sync:trending",
+    "data:sync:starred": "cd backend && bun run sync:starred",
+    "data:sync:starred:recent": "cd backend && bun run sync:starred:recent",
+    "data:stats": "cd backend && bun run stats",
+    "data:export": "cd backend && bun run export:static",
+    "data:update": "bun run data:sync:trending && bun run data:sync:starred:recent && bun run data:export",
+    "build": "cd frontend && bun run build",
+    "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
+    "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
+    "export:static": "cd backend && bun run export:static",
+    "build:static": "cd backend && bun run export:static && cd ../frontend && VITE_STATIC_MODE=true bun run build",
+    "build:pages": "VITE_BASE_PATH=${VITE_BASE_PATH:-/} VITE_STATIC_MODE=true bun run build:static",
+    "install:all": "cd backend && bun install && cd ../frontend && bun install"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "prettier": "^3.9.1"
+  }
+}

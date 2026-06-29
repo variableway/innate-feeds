@@ -1,0 +1,37 @@
+{
+  "name": "innate-feeds-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "sync:daily": "tsx src/cli.ts sync trending daily",
+    "sync:weekly": "tsx src/cli.ts sync trending weekly",
+    "sync:monthly": "tsx src/cli.ts sync trending monthly",
+    "sync:trending": "tsx src/cli.ts sync all-trending",
+    "sync:starred": "tsx src/cli.ts sync starred",
+    "sync:starred:recent": "tsx src/cli.ts sync starred --days 1",
+    "import:static": "tsx src/import-static.ts",
+    "list": "tsx src/cli.ts list",
+    "list:trending": "tsx src/cli.ts list trending",
+    "list:starred": "tsx src/cli.ts list starred",
+    "dates": "tsx src/cli.ts trending-dates",
+    "stats": "tsx src/cli.ts stats",
+    "export:static": "tsx src/export-static.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.0",
+    "better-sqlite3": "^11.8.0",
+    "firecrawl": "^4.28.0",
+    "hono": "^4.7.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
