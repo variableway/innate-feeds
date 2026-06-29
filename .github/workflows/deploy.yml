@@ -1,0 +1,101 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Daily at 08:00 UTC
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    env:
+      DB_PATH: ${{ github.workspace }}/backend/.cache/feeds.db
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: |
+          bun install
+          cd backend && bun install
+          cd ../frontend && bun install
+
+      - name: Restore database cache
+        uses: actions/cache@v4
+        id: db-cache
+        with:
+          path: backend/.cache/feeds.db
+          key: feeds-db-${{ github.repository }}-${{ github.run_id }}
+          restore-keys: |
+            feeds-db-${{ github.repository }}-
+
+      - name: Prepare database
+        run: |
+          mkdir -p backend/.cache
+          cd backend
+          if [ ! -f .cache/feeds.db ]; then
+            echo "No cached database — seeding from committed JSON"
+            bun run import:static
+          fi
+
+      - name: Sync trending data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: cd backend && bun run sync:trending
+
+      - name: Sync recent starred data
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_PAT" ]; then
+            echo "GH_PAT secret not set — skipping starred sync (using cached/seeded data)"
+            exit 0
+          fi
+          cd backend && GH_TOKEN="$GH_PAT" bun run sync:starred:recent
+
+      - name: Export static JSON
+        run: cd backend && bun run export:static
+
+      - name: Save database cache
+        if: hashFiles('backend/.cache/feeds.db') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: backend/.cache/feeds.db
+          key: feeds-db-${{ github.repository }}-${{ github.run_id }}
+
+      - name: Build static site
+        run: cd frontend && VITE_STATIC_MODE=true bun run build
+        env:
+          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || format('/{0}/', github.event.repository.name) }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./frontend/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,35 +1,27 @@
-import { execSync } from "child_process";
-import path from "path";
-import tailwindcss from "@tailwindcss/vite";
+import { copyFileSync, writeFileSync } from "fs";
+import { join } from "path";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
-import { tanstackRouter } from "@tanstack/router-vite-plugin";
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-function getGitVersion(): string {
-  try {
-    return execSync("git describe --tags --always").toString().trim();
-  } catch {
-    return "unknown";
-  }
+function githubPagesPlugin(): Plugin {
+  return {
+    name: "github-pages",
+    closeBundle() {
+      const dist = join(__dirname, "dist");
+      copyFileSync(join(dist, "index.html"), join(dist, "404.html"));
+      writeFileSync(join(dist, ".nojekyll"), "");
+    },
+  };
 }
 
-// https://vite.dev/config/
 export default defineConfig({
-  define: {
-    __APP_VERSION__: JSON.stringify(getGitVersion()),
-  },
-  plugins: [react(), tanstackRouter(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  base: process.env.VITE_BASE_PATH || "/",
+  plugins: [tsconfigPaths(), tailwindcss(), react(), githubPagesPlugin()],
   server: {
     proxy: {
-      "/api": {
-        target: "http://localhost:8080",
-        changeOrigin: true,
-      },
+      "/api": "http://localhost:4000",
     },
   },
 });
