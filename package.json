@@ -7,7 +7,6 @@
     "dev:concurrent": "concurrently \"cd backend && bun run dev\" \"cd frontend && bun run dev\"",
     "dev:backend": "cd backend && bun run dev",
     "dev:frontend": "cd frontend && bun run dev",
-    "sync": "cd backend && bun run sync:trending",
     "data:sync:trending": "cd backend && bun run sync:trending",
     "data:sync:starred": "cd backend && bun run sync:starred",
     "data:sync:starred:recent": "cd backend && bun run sync:starred:recent",
