@@ -1,8 +1,6 @@
 # AGENTS.md
 
-Workspace guide for `innate-feeds`. This repository contains a web application for discovering and browsing GitHub trending and starred repositories, plus a standalone Go utility for scanning local git repositories.
-
-> **Note for AI agents:** The previous version of this file described an older architecture (`innate-hub`, a Go-based RSS/Atom aggregator). That code is no longer present. The project was reorganized into the TypeScript stack described below. Rely on this file and the actual file tree, not on historical references in `.gitignore` or older commits.
+Workspace guide for `innate-feeds`. This repository contains a full-stack web application for discovering and browsing GitHub trending and starred repositories.
 
 ## Project overview
 
@@ -10,56 +8,61 @@ Workspace guide for `innate-feeds`. This repository contains a web application f
 
 - Displays GitHub trending repositories (daily, weekly, monthly snapshots).
 - Displays GitHub starred repositories for the authenticated user.
-- Supports filtering by language, topic, search term, snapshot date, and sorting by stars / updated / created date.
+- Supports filtering by language, topic, search term, snapshot date, stars range, and sorting by stars / updated / created / starred date.
 - Syncs data from GitHub via the `gh` CLI and/or Firecrawl.
-
-The repository also includes `git-repo-scanner/`, a separate Go CLI that recursively scans folders for git repositories and emits JSON/Markdown reports with metadata fetched from GitHub/GitLab APIs.
+- Supports dual deployment modes: API mode (Hono backend + SQLite) and static mode (GitHub Pages with pre-exported JSON data).
 
 ## Repository layout
 
 ```
 innate-feeds/
-├── backend/                 # Hono API server + CLI + sync logic
+├── backend/                 # Hono API server + CLI + sync logic + data export/import
 │   ├── src/
-│   │   ├── server.ts        # Hono HTTP server, API routes
-│   │   ├── cli.ts           # Command-line interface for sync/list/stats
-│   │   ├── github.ts        # GitHub API / gh CLI wrappers
-│   │   ├── sync.ts          # Trending and starred sync orchestration
-│   │   ├── firecrawl.ts     # Firecrawl-based GitHub Trending scraper
+│   │   ├── app/             # Application entry points
+│   │   │   ├── server.ts    # Hono HTTP server, API routes
+│   │   │   └── cli.ts       # Command-line interface for sync/list/stats
+│   │   ├── collector/       # Data collection layer
+│   │   │   ├── github.ts    # GitHub API / gh CLI wrappers (uses execFileSync)
+│   │   │   ├── firecrawl.ts # Firecrawl-based GitHub Trending scraper
+│   │   │   └── sync.ts      # Trending and starred sync orchestration
+│   │   ├── data/            # Static data export/import utilities
+│   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
+│   │   │   ├── export-static.ts       # Full static exporter
+│   │   │   ├── import-static.ts       # Import static JSON into SQLite
+│   │   │   └── manifest-utils.ts      # Manifest read/write helpers
 │   │   └── db/              # SQLite database layer
 │   │       ├── index.ts     # Connection, queries, CRUD helpers
-│   │       └── schema.sql   # SQLite schema
+│   │       ├── schema.sql   # SQLite schema (trending_repos, starred_repos, topics)
+│   │       └── paths.ts     # Database path resolution (INNATE_HOME / DB_PATH)
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── feeds.db*            # Runtime SQLite database (WAL mode)
 ├── frontend/                # TanStack Router + Vite + React 19 + Tailwind v4
 │   ├── src/
-│   │   ├── routes/          # Manual TanStack Router route definitions
-│   │   ├── components/      # AppSidebar, FeedCard, FilterBar, StatsCards
-│   │   ├── services/        # API client (feeds.ts)
-│   │   ├── types/           # TypeScript domain types
-│   │   ├── lib/             # utils.ts (cn, formatNumber, formatDate)
+│   │   ├── pages/           # TanStack Router route definitions (page.tsx + route.tsx)
+│   │   │   ├── __root/      # Root layout with sidebar, header, category panel
+│   │   │   ├── index/       # Redirects to /trending
+│   │   │   ├── trending/    # Trending repos page
+│   │   │   └── starred/     # Starred repos page
+│   │   ├── components/      # AppHeader, AppSidebar, CategoryPanel, FeedCard, FilterBar, StatsCards
+│   │   ├── hooks/           # usePersistedFeedFilters
+│   │   ├── services/        # API client (feeds.ts) — supports both API and static modes
+│   │   ├── types/           # TypeScript domain types (feed.ts)
+│   │   ├── lib/             # utils.ts (cn, formatNumber, formatDate), theme.tsx, feed-filters-storage.ts
+│   │   ├── themes/          # CSS theme files (linear.css, notion.css)
 │   │   ├── main.tsx         # React entry point
 │   │   ├── router.tsx       # Route tree assembly
 │   │   └── styles.css       # Tailwind CSS v4 theme + dark mode
 │   ├── index.html
 │   ├── package.json
 │   ├── tsconfig.json
-│   └── vite.config.ts
+│   └── vite.config.ts       # Vite config with GitHub Pages plugin + API proxy
 ├── git-repo-scanner/        # Standalone Go CLI (not part of the web app)
-│   ├── main.go
-│   ├── Makefile
-│   ├── go.mod
-│   ├── scan-all.sh
-│   ├── repos.json           # Sample generated output
-│   └── repos.md
-├── tasks/                   # Task working directories (mostly empty)
-│   └── issues/ui-layout.md  # Historical UI layout requirement note
+├── docs/                    # Documentation
+├── tasks/                   # Task working directories
 ├── package.json             # Root workspace scripts (uses concurrently)
 ├── dev.sh                   # Bash helper to start both dev servers
-├── README.md
-├── CLAUDE.md
-└── .env.example             # Legacy env template (not wired to current code)
+└── CLAUDE.md
 ```
 
 ## Technology stack
@@ -71,14 +74,14 @@ innate-feeds/
 | Routing | TanStack Router (manual route registration, not file-based) |
 | Build tool | Vite 6 |
 | Styling | Tailwind CSS v4 with CSS-based theme configuration |
-| UI utilities | `lucide-react`, `clsx`, `tailwind-merge`, `sonner` (toasts) |
+| UI utilities | `lucide-react`, `clsx`, `tailwind-merge`, `sonner` (toasts), `next-themes` |
 | Backend framework | Hono 4 |
 | HTTP server | `@hono/node-server` |
 | Database | SQLite via `better-sqlite3` |
 | Data fetching | GitHub CLI (`gh`) and Firecrawl |
-| Validation | Zod (available, currently used implicitly) |
+| Validation | Zod (used in API input validation) |
 | Type checking | TypeScript 5.7+ |
-| Side utility | Go 1.26.1 (`git-repo-scanner`) |
+| Side utility | Go 1.26+ (`git-repo-scanner`) |
 
 ## Build and development commands
 
@@ -87,13 +90,8 @@ All commands assume you are in the project root unless noted.
 ### Install dependencies
 
 ```bash
-# Install root + backend + frontend dependencies
 bun install
-cd backend && bun install
-cd ../frontend && bun install
-
-# Or use the convenience script
-bun run install:all
+bun run install:all   # or: cd backend && bun install && cd ../frontend && bun install
 ```
 
 ### Start development
@@ -131,10 +129,13 @@ bun run sync:monthly
 # Sync authenticated user's starred repos
 bun run sync:starred
 
+# Sync only recently starred (last 24h) — incremental
+bun run sync:starred:recent
+
 # CLI equivalents
-bunx tsx src/cli.ts sync all-trending
-bunx tsx src/cli.ts sync trending daily
-bunx tsx src/cli.ts sync starred [username]
+bunx tsx src/app/cli.ts sync all-trending
+bunx tsx src/app/cli.ts sync trending daily
+bunx tsx src/app/cli.ts sync starred [username] [--force] [--days N]
 ```
 
 ### Other backend CLI commands
@@ -148,6 +149,21 @@ bun run dates           # List available trending snapshot dates
 bun run stats           # Show database statistics
 ```
 
+### Static data export / import
+
+```bash
+cd backend
+
+# Export incremental JSON chunks (for GitHub Pages static mode)
+bun run export:incremental
+
+# Full static export
+bun run export:static
+
+# Import static JSON data back into SQLite
+bun run import:static
+```
+
 ### Frontend build
 
 ```bash
@@ -157,6 +173,16 @@ bun run build     # Production build to frontend/dist/
 bun run preview   # Preview production build
 ```
 
+### Static site build (GitHub Pages)
+
+```bash
+# From repo root — exports data then builds frontend in static mode
+bun run build:static
+
+# Or with custom base path for project pages
+VITE_BASE_PATH=/your-repo bun run build:pages
+```
+
 ### Type checking
 
 ```bash
@@ -164,20 +190,11 @@ cd backend  && bun run typecheck
 cd frontend && bun run typecheck
 ```
 
-### Git repository scanner (Go)
+### Code formatting
 
 ```bash
-cd git-repo-scanner
-make build
-
-# Scan current directory, skip API calls
-./git-repo-scanner . --output repos --skip-api
-
-# Scan with GitHub/GitLab API calls (set GITHUB_TOKEN for higher rate limits)
-./git-repo-scanner . --output repos
-
-# Batch scan sibling folders
-make scan-all
+bun run format:ts         # Format all TS files with Prettier
+bun run format:ts:check   # Check formatting without writing
 ```
 
 ## Runtime architecture
@@ -185,7 +202,7 @@ make scan-all
 ```
 ┌─────────────────┐      /api/*       ┌─────────────────────────────┐
 │  Vite dev server│ ─────────────────> │  Hono server (backend/src/  │
-│  port 3000      │   (proxied)        │  server.ts) port 4000       │
+│  port 3000      │   (proxied)        │  app/server.ts) port 4000   │
 └─────────────────┘                    └─────────────────────────────┘
                                                   │
                        ┌──────────────────────────┼──────────────────────────┐
@@ -194,34 +211,38 @@ make scan-all
               (feeds.db)                  github.ts firecrawl.ts
 ```
 
+### Dual deployment modes
+
+1. **API mode** (default): Frontend calls `/api/*` endpoints, backed by SQLite.
+2. **Static mode** (`VITE_STATIC_MODE=true`): Frontend fetches pre-exported JSON files from `/data/`, no backend needed. Supports incremental chunked data via `manifest.json`.
+
 ### API endpoints
 
 | Method | Path | Description |
 |---|---|---|
-| GET | `/api/feeds` | List feed items. Query params: `type` (`trending` or `starred`), `language`, `topic`, `search`, `sort` (`stars`\| `updated`\| `created`), `order` (`asc`\| `desc`), `date`, `page`, `pageSize`. |
+| GET | `/api/feeds` | List feed items. Query params: `type` (`trending` or `starred`), `language`, `topics` (comma-separated), `search`, `sort` (`stars`\| `updated`\| `created`\| `starred`), `order` (`asc`\| `desc`), `date`, `starsMin`, `starsMax`, `page`, `pageSize`. |
 | GET | `/api/feeds/stats` | Aggregate stats: total repos, trending count, starred count, top languages. |
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
-| POST | `/api/feeds/sync` | Trigger sync. Body: `{ type: "trending" \| "starred" \| "all-trending", period?, username? }`. |
+| POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
 
 ### Sync pipeline
 
 1. **Trending**: `sync.ts` calls `fetchTrendingWithFirecrawl()` first. If Firecrawl returns no results, it falls back to `fetchTrendingRepos()`, which scrapes `https://github.com/trending` via `gh api` and then fetches full repo metadata via the GitHub API.
-2. **Starred**: `sync.ts` calls `fetchStarredReposWithDate()`, which paginates through `gh api user/starred` (or `users/{username}/starred`) using the `application/vnd.github.v3.star+json` accept header to obtain `starred_at` timestamps.
-3. Both pipelines call `upsertRepo()`, `insertTopics()`, and `insertFeedItem()` inside a single `better-sqlite3` transaction.
+2. **Starred**: `sync.ts` calls `fetchStarredReposWithDate()`, which paginates through `gh api user/starred` (or `users/{username}/starred`) using the `application/vnd.github.v3.star+json` accept header to obtain `starred_at` timestamps. Supports incremental sync via `stopAt` / `days` parameters.
+3. Both pipelines call `upsertTrendingRepo()` / `upsertStarredRepo()`, `insertTrendingTopics()` / `insertStarredTopics()` inside a single `better-sqlite3` transaction.
 
 ## Database
 
-SQLite database file: `backend/feeds.db` (with `-shm` / `-wal` WAL-mode files).
+SQLite database file: `~/.innate/feeds.db` by default (configurable via `DB_PATH` or `INNATE_HOME` env vars). Uses WAL mode with foreign keys enabled.
 
 Schema is defined in `backend/src/db/schema.sql`:
 
-- `repos` — repository metadata (stars, forks, language, owner, etc.).
-- `feed_items` — individual trending / starred entries keyed by composite IDs such as `trending-{date}-{period}-{repoId}` or `starred-{repoId}`.
-- `repo_topics` — many-to-many mapping of repository topics.
-- `trending_snapshots` — historical trending snapshot records (currently defined but not written to by the sync code).
-
-The connection is opened lazily via `getDb(dbPath)` and automatically applies the schema, enables WAL mode, and enables foreign keys.
+- `trending_repos` — trending repository snapshots (composite text PK `trending-{date}-{period}-{repoId}`, includes `period`, `snapshot_date`).
+- `trending_repo_topics` — many-to-many topics for trending repos.
+- `starred_repos` — starred repository metadata (integer PK = GitHub repo ID, includes `starred_at`).
+- `starred_repo_topics` — many-to-many topics for starred repos.
+- `trending_snapshots` — historical snapshot analytics table (defined but not yet written to by sync code).
 
 ## Code organization and conventions
 
@@ -230,72 +251,67 @@ The connection is opened lazily via `getDb(dbPath)` and automatically applies th
 - **ES modules** everywhere (`"type": "module"` in both `package.json` files).
 - **Strict TypeScript** is enabled (`strict: true`).
 - **Path alias**: `@/*` maps to `src/*` in the frontend. In the backend, local imports use relative paths with explicit `.js` extensions (e.g., `import { … } from "./db/index.js"`).
-- **No test suite** is currently present. There are no `*.test.*`, `*.spec.*`, Vitest, Jest, Playwright, or Cypress configuration files.
+- **No test suite** is currently present.
 
 ### Backend
 
-- `server.ts` — keeps route handlers thin; business logic is delegated to `db/index.ts` and `sync.ts`.
-- `cli.ts` — mirrors the sync/list/stats functionality for command-line use.
-- `github.ts` — wraps the `gh` CLI with `execSync`. Handles both trending HTML scraping and starred API pagination.
-- `firecrawl.ts` — uses the `firecrawl` SDK to scrape GitHub Trending with a JSON extraction schema, then normalizes the result to the `GitHubRepo` interface. Generates deterministic repo IDs from the full name because GitHub Trending pages do not expose numeric IDs.
-- `db/index.ts` — all SQL lives here. Uses prepared statements from `better-sqlite3`.
+- `app/server.ts` — Hono HTTP server with Zod input validation, global error handler, and try/catch on all routes.
+- `app/cli.ts` — mirrors the sync/list/stats functionality for command-line use.
+- `collector/github.ts` — wraps the `gh` CLI with `execFileSync` (not `execSync`) to prevent shell injection. Validates `username` against a whitelist regex.
+- `collector/firecrawl.ts` — uses the `firecrawl` SDK to scrape GitHub Trending with a JSON extraction schema. Generates deterministic repo IDs from SHA-256 hash of `fullName`.
+- `collector/sync.ts` — orchestrates trending/starred sync with transactional writes.
+- `data/export-incremental.ts` — exports data as incremental JSON chunks with a manifest for static mode.
+- `data/import-static.ts` — imports static JSON back into SQLite.
+- `db/index.ts` — all SQL lives here. Uses prepared statements from `better-sqlite3`. Batch-fetches topics to avoid N+1 queries. Exports typed interfaces (`FeedItemDTO`, `FeedStatsDTO`, `TrendingItemRow`, `StarredItemRow`).
+- `db/paths.ts` — resolves database path via `DB_PATH` env var or `INNATE_HOME` (defaults to `~/.innate`).
 
 ### Frontend
 
-- `router.tsx` manually wires routes (`__root`, `index`, `trending`, `starred`). `index` redirects to `/trending`.
-- Route components (`trending.tsx`, `starred.tsx`) manage their own state with `useState` / `useEffect` / `useCallback` and call `services/feeds.ts`.
+- `router.tsx` manually wires routes (`__root`, `index`, `trending`, `starred`). `index` redirects to `/trending`. Supports GitHub Pages base path.
+- Page components (`trending/page.tsx`, `starred/page.tsx`) manage state with `useState` / `useEffect` / `useCallback` and call `services/feeds.ts`.
+- `FilterBar` implements 300ms search debouncing to avoid excessive API calls.
+- `usePersistedFeedFilters` hook persists filter state to localStorage.
 - Components use `React.forwardRef` and accept a `className` prop merged via the `cn()` utility.
-- `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant.
-- `services/feeds.ts` uses the `/api` base path, which Vite proxies to the backend during development.
+- `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json` and merges them client-side with `applyFilters()`.
+- `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.
 
 ### Go scanner
 
 - `main.go` is a single-file CLI.
-- Recursively walks a folder, detects `.git` directories, parses `.git/config` for `remote "origin"` URLs, and extracts owner/repo via regex for SSH and HTTPS URLs.
-- Supports GitHub and GitLab API enrichment. Bitbucket/Gitee/other remotes are classified but not enriched via API.
-- Rate-limits itself with a 100 ms sleep between API calls.
+- Recursively walks a folder, detects `.git` directories, parses `.git/config` for `remote "origin"` URLs.
+- Supports GitHub and GitLab API enrichment.
 
 ## Where to make changes
 
 | If you are… | Go to… |
 |---|---|
-| Adding or changing API endpoints | `backend/src/server.ts` |
-| Changing how repos are fetched from GitHub | `backend/src/github.ts` |
-| Changing trending sync behavior or fallback strategy | `backend/src/sync.ts` and `backend/src/firecrawl.ts` |
+| Adding or changing API endpoints | `backend/src/app/server.ts` |
+| Changing how repos are fetched from GitHub | `backend/src/collector/github.ts` |
+| Changing trending sync behavior or fallback strategy | `backend/src/collector/sync.ts` and `backend/src/collector/firecrawl.ts` |
 | Changing the database schema or queries | `backend/src/db/schema.sql` and `backend/src/db/index.ts` |
-| Adding new CLI commands | `backend/src/cli.ts` and `backend/package.json` scripts |
-| Changing pages / routes | `frontend/src/routes/` and `frontend/src/router.tsx` |
+| Changing database path resolution | `backend/src/db/paths.ts` |
+| Adding new CLI commands | `backend/src/app/cli.ts` and `backend/package.json` scripts |
+| Changing static data export/import | `backend/src/data/` |
+| Changing pages / routes | `frontend/src/pages/` and `frontend/src/router.tsx` |
 | Changing UI components | `frontend/src/components/` |
 | Changing API client | `frontend/src/services/feeds.ts` |
-| Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types) |
-| Changing styling / theme | `frontend/src/styles.css` |
+| Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types in `db/index.ts`) |
+| Changing styling / theme | `frontend/src/styles.css` and `frontend/src/themes/` |
 | Updating the git scanner | `git-repo-scanner/main.go` |
-
-## Testing instructions
-
-There is no automated test suite in this project yet. To verify changes manually:
-
-1. Start both dev servers: `bun run dev`.
-2. Sync data: `cd backend && bun run sync:trending`.
-3. Open `http://localhost:3000` and confirm:
-   - Trending list loads and filters/sorts work.
-   - Starred list loads after running `bun run sync:starred`.
-   - Stats cards reflect the synced data.
-   - Pagination works when more than 20 items exist.
-4. Run type checks: `cd backend && bun run typecheck` and `cd frontend && bun run typecheck`.
 
 ## Security considerations
 
 - The backend enables CORS for all origins (`app.use("/*", cors())`). If deployed publicly, restrict this to known origins.
-- No authentication or authorization is implemented on API endpoints.
-- The sync endpoints (`POST /api/feeds/sync`) execute external processes (`gh`) and network calls (Firecrawl, GitHub). Do not expose them to untrusted users without protection.
-- `github.ts` uses `execSync` with string-interpolated URLs. The inputs come from constants or CLI arguments, but be cautious when adding user-controlled parameters.
-- The SQLite database path is controlled by the `DB_PATH` environment variable in CLI mode and defaults to `feeds.db` in API mode. Ensure the database file is not served or committed.
-- `.env.example` in the repo root is a leftover from the previous architecture and is **not** read by the current backend. The current app does not require environment variables to run locally, although `PORT` and `DB_PATH` are honored where used.
-- `git-repo-scanner` reads `GITHUB_TOKEN` from the environment. Do not log or commit tokens.
+- No authentication or authorization is implemented on API endpoints. The sync endpoints should not be exposed to untrusted users.
+- `github.ts` uses `execFileSync` with argument arrays (not string interpolation) to prevent shell injection. The `username` parameter is validated against `/^[\w.-]{1,39}$/`.
+- POST `/api/feeds/sync` validates request body with Zod schema before processing.
+- All GET API routes have try/catch error handling and return structured JSON errors.
+- The SQLite database path is controlled by the `DB_PATH` environment variable or defaults to `~/.innate/feeds.db`. Ensure the database file is not served or committed.
+- Environment variables: `PORT` (backend port, default 4000), `DB_PATH` (SQLite path), `INNATE_HOME` (data directory, default `~/.innate`), `VITE_STATIC_MODE` (frontend static mode), `VITE_BASE_PATH` (base URL for GitHub Pages).
 
 ## Deployment notes
 
-- No Dockerfile, docker-compose file, or CI/CD configuration is present.
-- For production, build the frontend (`cd frontend && bun run build`) and serve the resulting `frontend/dist/` folder. The backend is a single Node/Bun process that can be started with `cd backend && bun run start` (or `tsx src/server.ts`).
-- Remember to set `PORT` for the backend and configure the frontend to proxy `/api` to the correct backend URL in production (the current Vite config only proxies in dev).
+- No Dockerfile or CI/CD configuration is currently present.
+- For production API mode: build the frontend (`cd frontend && bun run build`) and serve `frontend/dist/`. Start the backend with `cd backend && bun run start`.
+- For GitHub Pages static mode: run `bun run build:static` (or `bun run build:pages` with a base path) and deploy `frontend/dist/`.
+- The Vite config only proxies `/api` in dev mode. For production API mode, configure a reverse proxy or update the frontend API base URL.

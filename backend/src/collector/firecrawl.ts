@@ -1,4 +1,5 @@
 import Firecrawl from "firecrawl";
+import { createHash } from "crypto";
 import type { GitHubRepo } from "./github.js";
 
 export type TrendingPeriod = "daily" | "weekly" | "monthly";
@@ -96,13 +97,10 @@ export async function fetchTrendingWithFirecrawl(
 }
 
 function generateRepoId(fullName: string): number {
-  let hash = 0;
-  for (let i = 0; i < fullName.length; i++) {
-    const char = fullName.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash |= 0;
-  }
-  return Math.abs(hash);
+  const hash = createHash("sha256").update(fullName).digest();
+  // Use the first 6 bytes (48 bits) as a positive integer to fit in SQLite INTEGER.
+  const value = hash.readUIntBE(0, 6);
+  return value;
 }
 
 function parseStarCount(stars: string): number {

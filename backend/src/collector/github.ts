@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 
 export interface GitHubRepo {
   id: number;
@@ -23,6 +23,16 @@ export interface GitHubRepo {
 
 export type TrendingPeriod = "daily" | "weekly" | "monthly";
 
+const GITHUB_USERNAME_RE = /^[\w.-]{1,39}$/;
+
+function validateUsername(username: string | undefined): string | undefined {
+  if (!username) return undefined;
+  if (!GITHUB_USERNAME_RE.test(username)) {
+    throw new Error(`Invalid GitHub username: ${username}`);
+  }
+  return username;
+}
+
 export function fetchTrendingRepos(
   period: TrendingPeriod = "daily",
   language?: string,
@@ -34,11 +44,15 @@ export function fetchTrendingRepos(
   console.log(`Fetching ${period} trending from ${url}...`);
 
   try {
-    const html = execSync(`gh api -H "Accept: text/html" "${url}"`, {
-      encoding: "utf-8",
-      stdio: ["pipe", "pipe", "pipe"],
-      maxBuffer: 5 * 1024 * 1024,
-    });
+    const html = execFileSync(
+      "gh",
+      ["api", "-H", "Accept: text/html", url],
+      {
+        encoding: "utf-8",
+        stdio: ["pipe", "pipe", "pipe"],
+        maxBuffer: 5 * 1024 * 1024,
+      },
+    );
 
     const repoRegex = /<h2[^>]*>[\s\S]*?<a[^>]*href="\/([^"]+)"[^>]*>/g;
     const repos: string[] = [];
@@ -61,10 +75,14 @@ export function fetchTrendingRepos(
     const fullRepos: GitHubRepo[] = [];
     for (const repoFullName of repos.slice(0, 25)) {
       try {
-        const repoData = execSync(`gh api "repos/${repoFullName}"`, {
-          encoding: "utf-8",
-          stdio: ["pipe", "pipe", "pipe"],
-        });
+        const repoData = execFileSync(
+          "gh",
+          ["api", `repos/${repoFullName}`],
+          {
+            encoding: "utf-8",
+            stdio: ["pipe", "pipe", "pipe"],
+          },
+        );
         fullRepos.push(JSON.parse(repoData));
       } catch (err) {
         console.error(`Failed to fetch repo ${repoFullName}:`, err);
@@ -90,13 +108,14 @@ export function fetchStarredReposWithDate(
   options: FetchStarredOptions = {},
 ): { repo: GitHubRepo; starred_at: string }[] {
   const {
-    username,
+    username: rawUsername,
     maxPages = 50,
     sort = "created",
     direction = "desc",
     stopAt = null,
   } = options;
 
+  const username = validateUsername(rawUsername);
   const endpoint = username ? `users/${username}/starred` : "user/starred";
   const allItems: { repo: GitHubRepo; starred_at: string }[] = [];
 
@@ -104,8 +123,14 @@ export function fetchStarredReposWithDate(
     console.log(`Fetching starred page ${page} with dates...`);
 
     try {
-      const result = execSync(
-        `gh api "${endpoint}?per_page=100&page=${page}&sort=${sort}&direction=${direction}" --header "Accept: application/vnd.github.v3.star+json"`,
+      const result = execFileSync(
+        "gh",
+        [
+          "api",
+          `${endpoint}?per_page=100&page=${page}&sort=${sort}&direction=${direction}`,
+          "--header",
+          "Accept: application/vnd.github.v3.star+json",
+        ],
         {
           encoding: "utf-8",
           stdio: ["pipe", "pipe", "pipe"],

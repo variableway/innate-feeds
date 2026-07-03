@@ -180,6 +180,105 @@ function appendTopicFilters(
   return result;
 }
 
+export interface TrendingItemRow {
+  id: string;
+  repo_id: number;
+  name: string;
+  full_name: string;
+  description: string | null;
+  url: string;
+  homepage: string | null;
+  stars: number;
+  forks: number;
+  watchers: number;
+  language: string | null;
+  owner_login: string;
+  owner_avatar_url: string;
+  owner_url: string;
+  created_at: string;
+  updated_at: string;
+  snapshot_date: string;
+}
+
+export interface StarredItemRow {
+  repo_id: number;
+  name: string;
+  full_name: string;
+  description: string | null;
+  url: string;
+  homepage: string | null;
+  stars: number;
+  forks: number;
+  watchers: number;
+  language: string | null;
+  owner_login: string;
+  owner_avatar_url: string;
+  owner_url: string;
+  created_at: string;
+  updated_at: string;
+  starred_at: string | null;
+  fetched_at: string;
+}
+
+export interface FeedItemDTO {
+  id: string;
+  type: "trending" | "starred";
+  snapshotDate?: string;
+  starredAt?: string | null;
+  fetchedAt?: string;
+  repo: {
+    id: number;
+    name: string;
+    fullName: string;
+    description: string | null;
+    url: string;
+    homepage: string | null;
+    stars: number;
+    forks: number;
+    watchers: number;
+    language: string | null;
+    topics: string[];
+    owner: {
+      login: string;
+      avatarUrl: string;
+      url: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+  };
+}
+
+export interface FeedStatsDTO {
+  totalRepos: number;
+  trendingCount: number;
+  starredCount: number;
+  topLanguages: { name: string; count: number }[];
+}
+
+function batchFetchTopics(
+  db: Database.Database,
+  repoIds: (string | number)[],
+  table: "trending_repo_topics" | "starred_repo_topics",
+): Map<string | number, string[]> {
+  const result = new Map<string | number, string[]>();
+  if (repoIds.length === 0) return result;
+
+  const placeholders = repoIds.map(() => "?").join(",");
+  const stmt = db.prepare(
+    `SELECT repo_id, topic FROM ${table} WHERE repo_id IN (${placeholders})`,
+  );
+  const rows = stmt.all(...repoIds) as {
+    repo_id: string | number;
+    topic: string;
+  }[];
+  for (const row of rows) {
+    const existing = result.get(row.repo_id) ?? [];
+    existing.push(row.topic);
+    result.set(row.repo_id, existing);
+  }
+  return result;
+}
+
 export function getFeedItems(
   db: Database.Database,
   type: string,
@@ -195,7 +294,7 @@ export function getFeedItems(
   },
   page = 1,
   pageSize = 20,
-): { items: any[]; total: number } {
+): { items: FeedItemDTO[]; total: number } {
   if (type === "trending") {
     return getTrendingItems(db, filters, page, pageSize);
   }
@@ -214,9 +313,9 @@ function getTrendingItems(
   },
   page: number,
   pageSize: number,
-): { items: any[]; total: number } {
+): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
-  const params: any[] = [];
+  const params: unknown[] = [];
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -277,19 +376,21 @@ function getTrendingItems(
     LIMIT ? OFFSET ?
   `);
 
-  const rows = itemsStmt.all(...params, pageSize, offset) as any[];
+  const rows = itemsStmt.all(...params, pageSize, offset) as TrendingItemRow[];
+
+  const repoIds = rows.map((r) => r.id);
+  const topicsMap = batchFetchTopics(
+    db,
+    repoIds,
+    "trending_repo_topics",
+  );
 
   const items = rows.map((row) => {
-    const topicsStmt = db.prepare(
-      "SELECT topic FROM trending_repo_topics WHERE repo_id = ?",
-    );
-    const topics = (topicsStmt.all(row.id) as { topic: string }[]).map(
-      (t) => t.topic,
-    );
+    const topics = topicsMap.get(row.id) ?? [];
 
     return {
       id: row.id,
-      type: "trending",
+      type: "trending" as const,
       snapshotDate: row.snapshot_date,
       repo: {
         id: row.repo_id,
@@ -330,9 +431,9 @@ function getStarredItems(
   },
   page: number,
   pageSize: number,
-): { items: any[]; total: number } {
+): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
-  const params: any[] = [];
+  const params: unknown[] = [];
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -391,19 +492,21 @@ function getStarredItems(
     LIMIT ? OFFSET ?
   `);
 
-  const rows = itemsStmt.all(...params, pageSize, offset) as any[];
+  const rows = itemsStmt.all(...params, pageSize, offset) as StarredItemRow[];
+
+  const repoIds = rows.map((r) => r.repo_id);
+  const topicsMap = batchFetchTopics(
+    db,
+    repoIds,
+    "starred_repo_topics",
+  );
 
   const items = rows.map((row) => {
-    const topicsStmt = db.prepare(
-      "SELECT topic FROM starred_repo_topics WHERE repo_id = ?",
-    );
-    const topics = (topicsStmt.all(row.repo_id) as { topic: string }[]).map(
-      (t) => t.topic,
-    );
+    const topics = topicsMap.get(row.repo_id) ?? [];
 
     return {
       id: `starred-${row.repo_id}`,
-      type: "starred",
+      type: "starred" as const,
       starredAt: row.starred_at,
       fetchedAt: row.fetched_at,
       repo: {
@@ -446,16 +549,18 @@ export function getTrendingDates(db: Database.Database): string[] {
   return rows.map((r) => r.snapshot_date);
 }
 
-export function getStats(db: Database.Database): any {
+export function getStats(db: Database.Database): FeedStatsDTO {
   const trendingCount = (
     db
       .prepare(
         "SELECT COUNT(DISTINCT github_repo_id) as count FROM trending_repos",
       )
-      .get() as any
+      .get() as { count: number }
   ).count;
   const starredCount = (
-    db.prepare("SELECT COUNT(*) as count FROM starred_repos").get() as any
+    db.prepare("SELECT COUNT(*) as count FROM starred_repos").get() as {
+      count: number;
+    }
   ).count;
   const totalRepos = trendingCount + starredCount;
 
@@ -479,7 +584,10 @@ export function getStats(db: Database.Database): any {
     totalRepos,
     trendingCount,
     starredCount,
-    topLanguages,
+    topLanguages: topLanguages.map((l) => ({
+      name: l.language,
+      count: l.count,
+    })),
   };
 }
 

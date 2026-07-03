@@ -11,14 +11,42 @@ interface FilterBarProps extends React.HTMLAttributes<HTMLDivElement> {
   showStarsRange?: boolean;
 }
 
-/**
- * FilterBar - simplified with date filter for trending
- */
+const SEARCH_DEBOUNCE_MS = 300;
+
 const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
   (
     { filters, languages, dates, onFiltersChange, showStarsRange = false, className, ...props },
     ref,
   ) => {
+    const [searchInput, setSearchInput] = React.useState(filters.search || "");
+
+    // Sync external search value when filters.search changes externally (e.g. cleared).
+    React.useEffect(() => {
+      setSearchInput(filters.search || "");
+    }, [filters.search]);
+
+    const debounceRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const handleSearchChange = (value: string) => {
+      setSearchInput(value);
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        onFiltersChange({ ...filters, search: value || undefined });
+      }, SEARCH_DEBOUNCE_MS);
+    };
+
+    const clearSearch = () => {
+      setSearchInput("");
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      onFiltersChange({ ...filters, search: undefined });
+    };
+
+    React.useEffect(() => {
+      return () => {
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+      };
+    }, []);
+
     const updateFilter = (
       key: keyof FeedFilters,
       value: string | undefined,
@@ -50,13 +78,13 @@ const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
           <input
             type="text"
             placeholder="Search repositories..."
-            value={filters.search || ""}
-            onChange={(e) => updateFilter("search", e.target.value)}
+            value={searchInput}
+            onChange={(e) => handleSearchChange(e.target.value)}
             className="w-full rounded-md border bg-background py-2 pl-9 pr-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           />
-          {filters.search && (
+          {searchInput && (
             <button
-              onClick={() => updateFilter("search", undefined)}
+              onClick={clearSearch}
               className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
             >
               <X className="h-4 w-4" />

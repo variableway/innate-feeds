@@ -1,0 +1,13 @@
+node_modules
+backend/node_modules
+frontend/node_modules
+backend/feeds.db
+backend/feeds.db-wal
+backend/feeds.db-shm
+*.log
+.git
+.github
+docs
+tasks
+git-repo-scanner
+frontend/dist
