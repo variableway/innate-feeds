@@ -1,5 +1,7 @@
 # AGENTS.md
 
+> **项目事实来源：** [`docs/project/index.md`](docs/project/index.md) — spec、issues、多 Agent 交接日志均在该目录。下文为仓库地图与开发命令（L2），新任务请先读 project 文档再动手。
+
 Workspace guide for `innate-feeds`. This repository contains a full-stack web application for discovering and browsing GitHub trending and starred repositories.
 
 ## Project overview
