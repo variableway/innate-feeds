@@ -2,19 +2,47 @@
  * Standalone sync script for GitHub Pages static mode.
  * Uses gh CLI directly — no SQLite / better-sqlite3 required.
  */
-import { execFileSync } from "child_process";
-import { mkdirSync, writeFileSync } from "fs";
+import { execFileSync, spawnSync } from "child_process";
+import { mkdirSync, writeFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, "../frontend/public/data");
 
+// 优先使用项目自带的 gh.exe，避免依赖系统 PATH 或临时目录
+const GH_EXE = join(__dirname, ".bin/gh.exe");
+
+function ensureGh() {
+  if (existsSync(GH_EXE)) return;
+  console.log("gh CLI not found, downloading...");
+  const binDir = join(__dirname, ".bin");
+  mkdirSync(binDir, { recursive: true });
+  const zipPath = join(binDir, "gh.zip");
+  const url = "https://github.com/cli/cli/releases/download/v2.65.0/gh_2.65.0_windows_amd64.zip";
+
+  // 下载
+  const dl = spawnSync("curl", ["-L", "-o", zipPath, url], { encoding: "utf-8" });
+  if (dl.status !== 0) throw new Error(`Failed to download gh: ${dl.stderr}`);
+
+  // 解压
+  const unzip = spawnSync("unzip", ["-q", "-o", zipPath, "-d", binDir], { encoding: "utf-8" });
+  if (unzip.status !== 0) throw new Error(`Failed to unzip gh: ${unzip.stderr}`);
+
+  // 移动到目标位置
+  const extracted = join(binDir, "gh_2.65.0_windows_amd64", "bin", "gh.exe");
+  spawnSync("mv", [extracted, GH_EXE], { encoding: "utf-8" });
+  spawnSync("rm", ["-rf", zipPath, join(binDir, "gh_2.65.0_windows_amd64")], { encoding: "utf-8" });
+  console.log("gh CLI ready:", GH_EXE);
+}
+
+ensureGh();
+
 const today = new Date().toISOString().split("T")[0];
 const fetchedAt = new Date().toISOString();
 
 function gh(args, opts = {}) {
-  return execFileSync("gh", args, {
+  return execFileSync(GH_EXE, args, {
     encoding: "utf-8",
     stdio: ["pipe", "pipe", "pipe"],
     maxBuffer: 10 * 1024 * 1024,
