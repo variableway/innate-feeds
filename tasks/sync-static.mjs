@@ -25,14 +25,21 @@ function ensureGh() {
   const dl = spawnSync("curl", ["-L", "-o", zipPath, url], { encoding: "utf-8" });
   if (dl.status !== 0) throw new Error(`Failed to download gh: ${dl.stderr}`);
 
-  // 解压
-  const unzip = spawnSync("unzip", ["-q", "-o", zipPath, "-d", binDir], { encoding: "utf-8" });
+  // 解压到临时目录
+  const tmpDir = join(binDir, "tmp");
+  mkdirSync(tmpDir, { recursive: true });
+  const unzip = spawnSync("unzip", ["-q", "-o", zipPath, "-d", tmpDir], { encoding: "utf-8" });
   if (unzip.status !== 0) throw new Error(`Failed to unzip gh: ${unzip.stderr}`);
 
-  // 移动到目标位置
-  const extracted = join(binDir, "gh_2.65.0_windows_amd64", "bin", "gh.exe");
-  spawnSync("mv", [extracted, GH_EXE], { encoding: "utf-8" });
-  spawnSync("rm", ["-rf", zipPath, join(binDir, "gh_2.65.0_windows_amd64")], { encoding: "utf-8" });
+  // 在解压目录中查找 gh.exe
+  const find = spawnSync("find", [tmpDir, "-name", "gh.exe", "-type", "f"], { encoding: "utf-8" });
+  const found = find.stdout.trim().split("\n").filter(Boolean);
+  if (found.length === 0) throw new Error("gh.exe not found after unzip");
+
+  // 移动第一个找到的 gh.exe 到目标位置
+  spawnSync("mv", [found[0], GH_EXE], { encoding: "utf-8" });
+  // 清理临时文件
+  spawnSync("rm", ["-rf", zipPath, tmpDir], { encoding: "utf-8" });
   console.log("gh CLI ready:", GH_EXE);
 }
 
