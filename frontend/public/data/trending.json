@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "id": "trending-2026-07-09-daily-1185389803",
+      "id": "trending-2026-07-10-daily-1185389803",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1185389803,
         "name": "ai-job-search",
@@ -11,9 +11,9 @@
         "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "homepage": null,
-        "stars": 16334,
-        "forks": 4924,
-        "watchers": 16334,
+        "stars": 19276,
+        "forks": 5545,
+        "watchers": 19276,
         "language": "TypeScript",
         "topics": [],
         "owner": {
@@ -22,14 +22,40 @@
           "url": "https://github.com/MadsLorentzen"
         },
         "createdAt": "2026-03-18T14:33:04Z",
-        "updatedAt": "2026-07-09T08:16:14Z"
+        "updatedAt": "2026-07-10T02:46:01Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-1158722119",
+      "id": "trending-2026-07-10-daily-107067951",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 107067951,
+        "name": "U3-SDK",
+        "fullName": "SmartlyDressedGames/U3-SDK",
+        "description": "Source code for Unturned, a free open-world zombie survival sandbox game.",
+        "url": "https://github.com/SmartlyDressedGames/U3-SDK",
+        "homepage": "https://smartlydressedgames.com/unturned/",
+        "stars": 2086,
+        "forks": 266,
+        "watchers": 2086,
+        "language": "C#",
+        "topics": [],
+        "owner": {
+          "login": "SmartlyDressedGames",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/12567656?v=4",
+          "url": "https://github.com/SmartlyDressedGames"
+        },
+        "createdAt": "2017-10-16T02:20:16Z",
+        "updatedAt": "2026-07-10T02:45:00Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-1158722119",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1158722119,
         "name": "agent-skills",
@@ -37,9 +63,9 @@
         "description": "Production-grade engineering skills for AI coding agents.",
         "url": "https://github.com/addyosmani/agent-skills",
         "homepage": "",
-        "stars": 75033,
-        "forks": 8079,
-        "watchers": 75033,
+        "stars": 75984,
+        "forks": 8172,
+        "watchers": 75984,
         "language": "JavaScript",
         "topics": [
           "agent-skills",
@@ -55,97 +81,315 @@
           "url": "https://github.com/addyosmani"
         },
         "createdAt": "2026-02-15T20:20:26Z",
-        "updatedAt": "2026-07-09T08:16:01Z"
+        "updatedAt": "2026-07-10T02:46:04Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-997737944",
+      "id": "trending-2026-07-10-daily-1197515131",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 997737944,
-        "name": "RuView",
-        "fullName": "ruvnet/RuView",
-        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
-        "url": "https://github.com/ruvnet/RuView",
-        "homepage": "https://Cognitum.One/RuView",
-        "stars": 79406,
-        "forks": 10677,
-        "watchers": 79406,
-        "language": "Rust",
+        "id": 1197515131,
+        "name": "awesome-design-md",
+        "fullName": "VoltAgent/awesome-design-md",
+        "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+        "url": "https://github.com/VoltAgent/awesome-design-md",
+        "homepage": "https://getdesign.md/",
+        "stars": 99835,
+        "forks": 11581,
+        "watchers": 99835,
+        "language": null,
         "topics": [
-          "awesome",
-          "claude",
-          "densepose",
-          "esp32",
-          "firmware",
-          "home-assistant",
-          "home-automation",
-          "iot",
-          "monitoring",
-          "networking",
-          "npm",
-          "pose-estimation",
-          "react",
-          "rf",
-          "self-learning",
-          "skills",
-          "spatial-intelligence",
-          "typescript",
-          "wifi",
-          "wifi-security"
+          "awesome-list",
+          "design-md",
+          "design-system",
+          "design-tokens",
+          "figma",
+          "google-stitch",
+          "landing-page",
+          "vibe-coding",
+          "vibe-design",
+          "vibecoding"
         ],
         "owner": {
-          "login": "ruvnet",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/2934394?v=4",
-          "url": "https://github.com/ruvnet"
+          "login": "VoltAgent",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/201282378?v=4",
+          "url": "https://github.com/VoltAgent"
         },
-        "createdAt": "2025-06-07T04:32:30Z",
-        "updatedAt": "2026-07-09T08:15:50Z"
+        "createdAt": "2026-03-31T16:37:01Z",
+        "updatedAt": "2026-07-10T02:44:55Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-1203558071",
+      "id": "trending-2026-07-10-daily-1182212878",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1203558071,
-        "name": "TencentDB-Agent-Memory",
-        "fullName": "TencentCloud/TencentDB-Agent-Memory",
-        "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
-        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-        "homepage": "",
-        "stars": 7868,
-        "forks": 726,
-        "watchers": 7868,
+        "id": 1182212878,
+        "name": "OfficeCLI",
+        "fullName": "iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "homepage": "https://officecli.ai",
+        "stars": 13580,
+        "forks": 923,
+        "watchers": 13580,
+        "language": "C#",
+        "topics": [
+          "agent",
+          "ai",
+          "claude-code",
+          "cli",
+          "codex",
+          "docx",
+          "excel",
+          "office",
+          "openclaw",
+          "pptx",
+          "presentation",
+          "skills",
+          "word",
+          "xlsx"
+        ],
+        "owner": {
+          "login": "iOfficeAI",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/145246968?v=4",
+          "url": "https://github.com/iOfficeAI"
+        },
+        "createdAt": "2026-03-15T07:39:12Z",
+        "updatedAt": "2026-07-10T02:45:29Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-898345892",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 898345892,
+        "name": "DesktopCommanderMCP",
+        "fullName": "wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "homepage": "https://desktopcommander.app/",
+        "stars": 6592,
+        "forks": 781,
+        "watchers": 6592,
         "language": "TypeScript",
         "topics": [
           "agent",
-          "ai-agent",
-          "embedding",
-          "llm",
-          "local-first",
-          "long-term-memory",
-          "memory",
-          "openclaw-plugin",
-          "vector-search"
+          "ai",
+          "code-analysis",
+          "code-generation",
+          "gemini-cli-extension",
+          "mcp",
+          "terminal-ai",
+          "terminal-automation",
+          "vibe-coding"
         ],
         "owner": {
-          "login": "TencentCloud",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/20101770?v=4",
-          "url": "https://github.com/TencentCloud"
+          "login": "wonderwhy-er",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/1150639?v=4",
+          "url": "https://github.com/wonderwhy-er"
         },
-        "createdAt": "2026-04-07T06:34:26Z",
-        "updatedAt": "2026-07-09T08:15:13Z"
+        "createdAt": "2024-12-04T08:26:08Z",
+        "updatedAt": "2026-07-10T02:31:36Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-192925833",
+      "id": "trending-2026-07-10-daily-678973052",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 678973052,
+        "name": "claude-cookbooks",
+        "fullName": "anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "homepage": null,
+        "stars": 47206,
+        "forks": 5556,
+        "watchers": 47206,
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "owner": {
+          "login": "anthropics",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/76263028?v=4",
+          "url": "https://github.com/anthropics"
+        },
+        "createdAt": "2023-08-15T20:23:51Z",
+        "updatedAt": "2026-07-10T02:41:40Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-913030762",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 913030762,
+        "name": "pentagi",
+        "fullName": "vxcontrol/pentagi",
+        "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+        "url": "https://github.com/vxcontrol/pentagi",
+        "homepage": "https://pentagi.com",
+        "stars": 19474,
+        "forks": 2627,
+        "watchers": 19474,
+        "language": "Go",
+        "topics": [
+          "ai-agents",
+          "ai-security-tool",
+          "anthropic",
+          "autonomous-agents",
+          "golang",
+          "gpt",
+          "graphql",
+          "multi-agent-system",
+          "offensive-security",
+          "open-source",
+          "openai",
+          "penetration-testing",
+          "penetration-testing-tools",
+          "react",
+          "security-automation",
+          "security-testing",
+          "security-tools",
+          "self-hosted"
+        ],
+        "owner": {
+          "login": "vxcontrol",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/39194251?v=4",
+          "url": "https://github.com/vxcontrol"
+        },
+        "createdAt": "2025-01-06T22:22:48Z",
+        "updatedAt": "2026-07-10T02:45:31Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-798201435",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 798201435,
+        "name": "crawl4ai",
+        "fullName": "unclecode/crawl4ai",
+        "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+        "url": "https://github.com/unclecode/crawl4ai",
+        "homepage": "https://crawl4ai.com",
+        "stars": 71885,
+        "forks": 7380,
+        "watchers": 71885,
+        "language": "Python",
+        "topics": [],
+        "owner": {
+          "login": "unclecode",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/12494079?v=4",
+          "url": "https://github.com/unclecode"
+        },
+        "createdAt": "2024-05-09T09:48:50Z",
+        "updatedAt": "2026-07-10T02:44:25Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-169839893",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 169839893,
+        "name": "How-To-Secure-A-Linux-Server",
+        "fullName": "imthenachoman/How-To-Secure-A-Linux-Server",
+        "description": "An evolving how-to guide for securing a Linux server.",
+        "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server",
+        "homepage": null,
+        "stars": 29123,
+        "forks": 1940,
+        "watchers": 29123,
+        "language": null,
+        "topics": [
+          "cc-by-sa",
+          "hardening",
+          "hardening-steps",
+          "linux",
+          "linux-server",
+          "security",
+          "security-hardening",
+          "server"
+        ],
+        "owner": {
+          "login": "imthenachoman",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/83817?v=4",
+          "url": "https://github.com/imthenachoman"
+        },
+        "createdAt": "2019-02-09T06:44:37Z",
+        "updatedAt": "2026-07-10T02:40:46Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-273084732",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 273084732,
+        "name": "autoremesher",
+        "fullName": "huxingyi/autoremesher",
+        "description": "Automatic quad remeshing tool",
+        "url": "https://github.com/huxingyi/autoremesher",
+        "homepage": "https://autoremesher.dust3d.org",
+        "stars": 2394,
+        "forks": 173,
+        "watchers": 2394,
+        "language": "C++",
+        "topics": [
+          "quadremesh",
+          "retopology"
+        ],
+        "owner": {
+          "login": "huxingyi",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/3941597?v=4",
+          "url": "https://github.com/huxingyi"
+        },
+        "createdAt": "2020-06-17T21:48:08Z",
+        "updatedAt": "2026-07-10T02:45:58Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-1219644159",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1219644159,
+        "name": "claude-video",
+        "fullName": "bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "url": "https://github.com/bradautomates/claude-video",
+        "homepage": null,
+        "stars": 6757,
+        "forks": 774,
+        "watchers": 6757,
+        "language": "Python",
+        "topics": [],
+        "owner": {
+          "login": "bradautomates",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/186665980?v=4",
+          "url": "https://github.com/bradautomates"
+        },
+        "createdAt": "2026-04-24T04:40:43Z",
+        "updatedAt": "2026-07-10T02:45:54Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-daily-192925833",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 192925833,
         "name": "prisma",
@@ -153,9 +397,9 @@
         "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
         "url": "https://github.com/prisma/prisma",
         "homepage": "https://www.prisma.io",
-        "stars": 46681,
-        "forks": 2288,
-        "watchers": 46681,
+        "stars": 46926,
+        "forks": 2330,
+        "watchers": 46926,
         "language": "TypeScript",
         "topics": [
           "cockroachdb",
@@ -185,145 +429,40 @@
           "url": "https://github.com/prisma"
         },
         "createdAt": "2019-06-20T13:33:47Z",
-        "updatedAt": "2026-07-09T08:15:12Z"
+        "updatedAt": "2026-07-10T02:41:19Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-1140843380",
+      "id": "trending-2026-07-10-daily-1129863360",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1140843380,
-        "name": "last30days-skill",
-        "fullName": "mvanhorn/last30days-skill",
-        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-        "url": "https://github.com/mvanhorn/last30days-skill",
+        "id": 1129863360,
+        "name": "pocket-tts",
+        "fullName": "kyutai-labs/pocket-tts",
+        "description": "A TTS that fits in your CPU (and pocket)",
+        "url": "https://github.com/kyutai-labs/pocket-tts",
         "homepage": null,
-        "stars": 51012,
-        "forks": 4255,
-        "watchers": 51012,
+        "stars": 7020,
+        "forks": 704,
+        "watchers": 7020,
         "language": "Python",
-        "topics": [
-          "ai-prompts",
-          "ai-skill",
-          "bluesky",
-          "claude",
-          "claude-code",
-          "clawhub",
-          "deep-research",
-          "hackernews",
-          "instagram",
-          "openclaw",
-          "polymarket",
-          "recency",
-          "reddit",
-          "research",
-          "social-media",
-          "tiktok",
-          "trends",
-          "twitter",
-          "web-search",
-          "youtube"
-        ],
+        "topics": [],
         "owner": {
-          "login": "mvanhorn",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/455140?v=4",
-          "url": "https://github.com/mvanhorn"
+          "login": "kyutai-labs",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/151010778?v=4",
+          "url": "https://github.com/kyutai-labs"
         },
-        "createdAt": "2026-01-23T20:37:37Z",
-        "updatedAt": "2026-07-09T08:16:10Z"
+        "createdAt": "2026-01-07T17:33:32Z",
+        "updatedAt": "2026-07-10T02:41:36Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-120896210",
+      "id": "trending-2026-07-10-daily-976921297",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 120896210,
-        "name": "argo-cd",
-        "fullName": "argoproj/argo-cd",
-        "description": "Declarative Continuous Deployment for Kubernetes",
-        "url": "https://github.com/argoproj/argo-cd",
-        "homepage": "https://argo-cd.readthedocs.io",
-        "stars": 23493,
-        "forks": 7430,
-        "watchers": 23493,
-        "language": "Go",
-        "topics": [
-          "argo",
-          "argo-cd",
-          "cd",
-          "ci-cd",
-          "cicd",
-          "continuous-delivery",
-          "continuous-deployment",
-          "devops",
-          "docker",
-          "gitops",
-          "hacktoberfest",
-          "helm",
-          "jsonnet",
-          "kubernetes",
-          "kustomize",
-          "pipeline"
-        ],
-        "owner": {
-          "login": "argoproj",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/30269780?v=4",
-          "url": "https://github.com/argoproj"
-        },
-        "createdAt": "2018-02-09T11:12:01Z",
-        "updatedAt": "2026-07-09T08:06:27Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-1182212878",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1182212878,
-        "name": "OfficeCLI",
-        "fullName": "iOfficeAI/OfficeCLI",
-        "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-        "url": "https://github.com/iOfficeAI/OfficeCLI",
-        "homepage": "https://officecli.ai",
-        "stars": 12587,
-        "forks": 846,
-        "watchers": 12587,
-        "language": "C#",
-        "topics": [
-          "agent",
-          "ai",
-          "claude-code",
-          "cli",
-          "codex",
-          "docx",
-          "excel",
-          "office",
-          "openclaw",
-          "pptx",
-          "presentation",
-          "skills",
-          "word",
-          "xlsx"
-        ],
-        "owner": {
-          "login": "iOfficeAI",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/145246968?v=4",
-          "url": "https://github.com/iOfficeAI"
-        },
-        "createdAt": "2026-03-15T07:39:12Z",
-        "updatedAt": "2026-07-09T08:16:53Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-976921297",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 976921297,
         "name": "system_prompts_leaks",
@@ -331,9 +470,9 @@
         "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "homepage": "",
-        "stars": 54553,
-        "forks": 8875,
-        "watchers": 54553,
+        "stars": 55220,
+        "forks": 9025,
+        "watchers": 55220,
         "language": "JavaScript",
         "topics": [
           "ai",
@@ -363,236 +502,40 @@
           "url": "https://github.com/asgeirtj"
         },
         "createdAt": "2025-05-03T02:43:56Z",
-        "updatedAt": "2026-07-09T08:15:25Z"
+        "updatedAt": "2026-07-10T02:45:45Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-1073224795",
+      "id": "trending-2026-07-10-weekly-1185389803",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1073224795,
-        "name": "superpowers",
-        "fullName": "obra/superpowers",
-        "description": "An agentic skills framework & software development methodology that works.",
-        "url": "https://github.com/obra/superpowers",
-        "homepage": "",
-        "stars": 250260,
-        "forks": 22205,
-        "watchers": 250260,
-        "language": "Shell",
-        "topics": [
-          "ai",
-          "brainstorming",
-          "coding",
-          "obra",
-          "sdlc",
-          "skills",
-          "subagent-driven-development",
-          "superpowers"
-        ],
-        "owner": {
-          "login": "obra",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
-          "url": "https://github.com/obra"
-        },
-        "createdAt": "2025-10-09T19:45:18Z",
-        "updatedAt": "2026-07-09T08:16:52Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-1110443421",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1110443421,
-        "name": "zvec",
-        "fullName": "alibaba/zvec",
-        "description": "A lightweight, lightning-fast, in-process vector database",
-        "url": "https://github.com/alibaba/zvec",
-        "homepage": "https://zvec.org",
-        "stars": 14559,
-        "forks": 898,
-        "watchers": 14559,
-        "language": "C++",
-        "topics": [
-          "agent-skills",
-          "db",
-          "embedded",
-          "faiss",
-          "hnsw",
-          "llm-memory",
-          "local",
-          "rag",
-          "search-engine",
-          "semantic-search",
-          "similarity-search",
-          "vector-database",
-          "vector-db"
-        ],
-        "owner": {
-          "login": "alibaba",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1961952?v=4",
-          "url": "https://github.com/alibaba"
-        },
-        "createdAt": "2025-12-05T07:45:38Z",
-        "updatedAt": "2026-07-09T08:14:15Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-273572029",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 273572029,
-        "name": "PhotoGIMP",
-        "fullName": "Diolinux/PhotoGIMP",
-        "description": "A Patch for GIMP 3+ for Photoshop Users",
-        "url": "https://github.com/Diolinux/PhotoGIMP",
-        "homepage": "",
-        "stars": 15206,
-        "forks": 605,
-        "watchers": 15206,
-        "language": "CSS",
-        "topics": [],
-        "owner": {
-          "login": "Diolinux",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/13944967?v=4",
-          "url": "https://github.com/Diolinux"
-        },
-        "createdAt": "2020-06-19T19:32:09Z",
-        "updatedAt": "2026-07-09T08:13:49Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-898345892",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 898345892,
-        "name": "DesktopCommanderMCP",
-        "fullName": "wonderwhy-er/DesktopCommanderMCP",
-        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-        "homepage": "https://desktopcommander.app/",
-        "stars": 6438,
-        "forks": 752,
-        "watchers": 6438,
-        "language": "TypeScript",
-        "topics": [
-          "agent",
-          "ai",
-          "code-analysis",
-          "code-generation",
-          "gemini-cli-extension",
-          "mcp",
-          "terminal-ai",
-          "terminal-automation",
-          "vibe-coding"
-        ],
-        "owner": {
-          "login": "wonderwhy-er",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1150639?v=4",
-          "url": "https://github.com/wonderwhy-er"
-        },
-        "createdAt": "2024-12-04T08:26:08Z",
-        "updatedAt": "2026-07-09T07:56:00Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-273084732",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 273084732,
-        "name": "autoremesher",
-        "fullName": "huxingyi/autoremesher",
-        "description": "Automatic quad remeshing tool",
-        "url": "https://github.com/huxingyi/autoremesher",
-        "homepage": "https://autoremesher.dust3d.org",
-        "stars": 2136,
-        "forks": 159,
-        "watchers": 2136,
-        "language": "C++",
-        "topics": [
-          "quadremesh",
-          "retopology"
-        ],
-        "owner": {
-          "login": "huxingyi",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/3941597?v=4",
-          "url": "https://github.com/huxingyi"
-        },
-        "createdAt": "2020-06-17T21:48:08Z",
-        "updatedAt": "2026-07-09T08:16:08Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-daily-1219644159",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1219644159,
-        "name": "claude-video",
-        "fullName": "bradautomates/claude-video",
-        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
-        "url": "https://github.com/bradautomates/claude-video",
+        "id": 1185389803,
+        "name": "ai-job-search",
+        "fullName": "MadsLorentzen/ai-job-search",
+        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
         "homepage": null,
-        "stars": 6291,
-        "forks": 739,
-        "watchers": 6291,
-        "language": "Python",
+        "stars": 19277,
+        "forks": 5545,
+        "watchers": 19277,
+        "language": "TypeScript",
         "topics": [],
         "owner": {
-          "login": "bradautomates",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/186665980?v=4",
-          "url": "https://github.com/bradautomates"
+          "login": "MadsLorentzen",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/50207393?v=4",
+          "url": "https://github.com/MadsLorentzen"
         },
-        "createdAt": "2026-04-24T04:40:43Z",
-        "updatedAt": "2026-07-09T08:13:24Z"
+        "createdAt": "2026-03-18T14:33:04Z",
+        "updatedAt": "2026-07-10T02:46:26Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-daily-1206553433",
+      "id": "trending-2026-07-10-weekly-908589694",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1206553433,
-        "name": "CubeSandbox",
-        "fullName": "TencentCloud/CubeSandbox",
-        "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
-        "url": "https://github.com/TencentCloud/CubeSandbox",
-        "homepage": "https://cubesandbox.com",
-        "stars": 9110,
-        "forks": 751,
-        "watchers": 9110,
-        "language": "Rust",
-        "topics": [
-          "agents",
-          "container",
-          "sandbox"
-        ],
-        "owner": {
-          "login": "TencentCloud",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/20101770?v=4",
-          "url": "https://github.com/TencentCloud"
-        },
-        "createdAt": "2026-04-10T03:00:31Z",
-        "updatedAt": "2026-07-09T08:16:08Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-908589694",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 908589694,
         "name": "meetily",
@@ -600,9 +543,9 @@
         "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted,  Open-source Ai meeting note taker for macOS & Windows.  ",
         "url": "https://github.com/Zackriya-Solutions/meetily",
         "homepage": "https://meetily.ai",
-        "stars": 21849,
-        "forks": 2184,
-        "watchers": 21849,
+        "stars": 22241,
+        "forks": 2236,
+        "watchers": 22241,
         "language": "Rust",
         "topics": [
           "ai",
@@ -632,14 +575,14 @@
           "url": "https://github.com/Zackriya-Solutions"
         },
         "createdAt": "2024-12-26T12:52:14Z",
-        "updatedAt": "2026-07-09T08:16:25Z"
+        "updatedAt": "2026-07-10T02:42:01Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1032808806",
+      "id": "trending-2026-07-10-weekly-1032808806",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1032808806,
         "name": "strix",
@@ -647,9 +590,9 @@
         "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
         "url": "https://github.com/usestrix/strix",
         "homepage": "https://strix.ai",
-        "stars": 39263,
-        "forks": 3992,
-        "watchers": 39263,
+        "stars": 39660,
+        "forks": 4061,
+        "watchers": 39660,
         "language": "Python",
         "topics": [
           "agents",
@@ -679,40 +622,14 @@
           "url": "https://github.com/usestrix"
         },
         "createdAt": "2025-08-05T21:28:30Z",
-        "updatedAt": "2026-07-09T08:13:24Z"
+        "updatedAt": "2026-07-10T02:44:15Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1185389803",
+      "id": "trending-2026-07-10-weekly-1131202426",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1185389803,
-        "name": "ai-job-search",
-        "fullName": "MadsLorentzen/ai-job-search",
-        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
-        "url": "https://github.com/MadsLorentzen/ai-job-search",
-        "homepage": null,
-        "stars": 16336,
-        "forks": 4925,
-        "watchers": 16336,
-        "language": "TypeScript",
-        "topics": [],
-        "owner": {
-          "login": "MadsLorentzen",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/50207393?v=4",
-          "url": "https://github.com/MadsLorentzen"
-        },
-        "createdAt": "2026-03-18T14:33:04Z",
-        "updatedAt": "2026-07-09T08:17:14Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1131202426",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1131202426,
         "name": "astryx",
@@ -720,9 +637,9 @@
         "description": "An open source design system that's fully customizable and agent ready",
         "url": "https://github.com/facebook/astryx",
         "homepage": "http://astryx.atmeta.com",
-        "stars": 7290,
-        "forks": 485,
-        "watchers": 7290,
+        "stars": 7491,
+        "forks": 518,
+        "watchers": 7491,
         "language": "TypeScript",
         "topics": [],
         "owner": {
@@ -731,167 +648,14 @@
           "url": "https://github.com/facebook"
         },
         "createdAt": "2026-01-09T16:20:32Z",
-        "updatedAt": "2026-07-09T08:15:16Z"
+        "updatedAt": "2026-07-10T02:44:17Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1196321162",
+      "id": "trending-2026-07-10-weekly-976921297",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1196321162,
-        "name": "codex-plugin-cc",
-        "fullName": "openai/codex-plugin-cc",
-        "description": "Use Codex from Claude Code to review code or delegate tasks.",
-        "url": "https://github.com/openai/codex-plugin-cc",
-        "homepage": null,
-        "stars": 27014,
-        "forks": 1627,
-        "watchers": 27014,
-        "language": "JavaScript",
-        "topics": [],
-        "owner": {
-          "login": "openai",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/14957082?v=4",
-          "url": "https://github.com/openai"
-        },
-        "createdAt": "2026-03-30T15:29:52Z",
-        "updatedAt": "2026-07-09T08:15:29Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1062458369",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1062458369,
-        "name": "page-agent",
-        "fullName": "alibaba/page-agent",
-        "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
-        "url": "https://github.com/alibaba/page-agent",
-        "homepage": "https://alibaba.github.io/page-agent/",
-        "stars": 25317,
-        "forks": 2179,
-        "watchers": 25317,
-        "language": "TypeScript",
-        "topics": [
-          "agent",
-          "ai",
-          "ai-agents",
-          "browser-automation",
-          "javascript",
-          "mcp",
-          "typescript",
-          "web"
-        ],
-        "owner": {
-          "login": "alibaba",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1961952?v=4",
-          "url": "https://github.com/alibaba"
-        },
-        "createdAt": "2025-09-23T09:30:17Z",
-        "updatedAt": "2026-07-09T08:11:47Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1193909050",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1193909050,
-        "name": "herdr",
-        "fullName": "ogulcancelik/herdr",
-        "description": "agent multiplexer that lives in your terminal.",
-        "url": "https://github.com/ogulcancelik/herdr",
-        "homepage": "https://herdr.dev",
-        "stars": 14537,
-        "forks": 830,
-        "watchers": 14537,
-        "language": "Rust",
-        "topics": [
-          "agent",
-          "agent-orchestration",
-          "ai",
-          "ai-agents",
-          "claude-code",
-          "cli",
-          "codex",
-          "coding-agents",
-          "developer-tools",
-          "devtools",
-          "multiplexer",
-          "rust",
-          "terminal",
-          "terminal-multiplexer",
-          "terminal-ui",
-          "tmux",
-          "tui",
-          "workspace-manager"
-        ],
-        "owner": {
-          "login": "ogulcancelik",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/7064011?v=4",
-          "url": "https://github.com/ogulcancelik"
-        },
-        "createdAt": "2026-03-27T17:54:33Z",
-        "updatedAt": "2026-07-09T08:16:52Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1157102282",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1157102282,
-        "name": "OmniRoute",
-        "fullName": "diegosouzapw/OmniRoute",
-        "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
-        "url": "https://github.com/diegosouzapw/OmniRoute",
-        "homepage": "https://omniroute.online",
-        "stars": 13964,
-        "forks": 2028,
-        "watchers": 13964,
-        "language": "TypeScript",
-        "topics": [
-          "a2a",
-          "ai-agents",
-          "ai-gateway",
-          "anthropic",
-          "claude",
-          "claude-code",
-          "cline",
-          "codex",
-          "copilot",
-          "cursor",
-          "deepseek",
-          "free-ai",
-          "gemini",
-          "gemini-cli",
-          "llm-gateway",
-          "mcp",
-          "openai",
-          "openai-proxy",
-          "qwen",
-          "token-saver"
-        ],
-        "owner": {
-          "login": "diegosouzapw",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/8016841?v=4",
-          "url": "https://github.com/diegosouzapw"
-        },
-        "createdAt": "2026-02-13T12:38:31Z",
-        "updatedAt": "2026-07-09T08:15:37Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-976921297",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 976921297,
         "name": "system_prompts_leaks",
@@ -899,9 +663,9 @@
         "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "homepage": "",
-        "stars": 54554,
-        "forks": 8875,
-        "watchers": 54554,
+        "stars": 55221,
+        "forks": 9025,
+        "watchers": 55221,
         "language": "JavaScript",
         "topics": [
           "ai",
@@ -931,14 +695,193 @@
           "url": "https://github.com/asgeirtj"
         },
         "createdAt": "2025-05-03T02:43:56Z",
-        "updatedAt": "2026-07-09T08:17:07Z"
+        "updatedAt": "2026-07-10T02:46:37Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1206553433",
+      "id": "trending-2026-07-10-weekly-1196321162",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1196321162,
+        "name": "codex-plugin-cc",
+        "fullName": "openai/codex-plugin-cc",
+        "description": "Use Codex from Claude Code to review code or delegate tasks.",
+        "url": "https://github.com/openai/codex-plugin-cc",
+        "homepage": null,
+        "stars": 27181,
+        "forks": 1666,
+        "watchers": 27181,
+        "language": "JavaScript",
+        "topics": [],
+        "owner": {
+          "login": "openai",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/14957082?v=4",
+          "url": "https://github.com/openai"
+        },
+        "createdAt": "2026-03-30T15:29:52Z",
+        "updatedAt": "2026-07-10T02:37:23Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1193909050",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1193909050,
+        "name": "herdr",
+        "fullName": "ogulcancelik/herdr",
+        "description": "agent multiplexer that lives in your terminal.",
+        "url": "https://github.com/ogulcancelik/herdr",
+        "homepage": "https://herdr.dev",
+        "stars": 14845,
+        "forks": 871,
+        "watchers": 14845,
+        "language": "Rust",
+        "topics": [
+          "agent",
+          "agent-orchestration",
+          "ai",
+          "ai-agents",
+          "claude-code",
+          "cli",
+          "codex",
+          "coding-agents",
+          "developer-tools",
+          "devtools",
+          "multiplexer",
+          "rust",
+          "terminal",
+          "terminal-multiplexer",
+          "terminal-ui",
+          "tmux",
+          "tui",
+          "workspace-manager"
+        ],
+        "owner": {
+          "login": "ogulcancelik",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/7064011?v=4",
+          "url": "https://github.com/ogulcancelik"
+        },
+        "createdAt": "2026-03-27T17:54:33Z",
+        "updatedAt": "2026-07-10T02:34:33Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1062458369",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1062458369,
+        "name": "page-agent",
+        "fullName": "alibaba/page-agent",
+        "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+        "url": "https://github.com/alibaba/page-agent",
+        "homepage": "https://alibaba.github.io/page-agent/",
+        "stars": 25540,
+        "forks": 2240,
+        "watchers": 25540,
+        "language": "TypeScript",
+        "topics": [
+          "agent",
+          "ai",
+          "ai-agents",
+          "browser-automation",
+          "javascript",
+          "mcp",
+          "typescript",
+          "web"
+        ],
+        "owner": {
+          "login": "alibaba",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/1961952?v=4",
+          "url": "https://github.com/alibaba"
+        },
+        "createdAt": "2025-09-23T09:30:17Z",
+        "updatedAt": "2026-07-10T02:46:25Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1157102282",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1157102282,
+        "name": "OmniRoute",
+        "fullName": "diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "homepage": "https://omniroute.online",
+        "stars": 14361,
+        "forks": 2126,
+        "watchers": 14361,
+        "language": "TypeScript",
+        "topics": [
+          "a2a",
+          "ai-agents",
+          "ai-gateway",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "cline",
+          "codex",
+          "copilot",
+          "cursor",
+          "deepseek",
+          "free-ai",
+          "gemini",
+          "gemini-cli",
+          "llm-gateway",
+          "mcp",
+          "openai",
+          "openai-proxy",
+          "qwen",
+          "token-saver"
+        ],
+        "owner": {
+          "login": "diegosouzapw",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/8016841?v=4",
+          "url": "https://github.com/diegosouzapw"
+        },
+        "createdAt": "2026-02-13T12:38:31Z",
+        "updatedAt": "2026-07-10T02:45:28Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1219644159",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1219644159,
+        "name": "claude-video",
+        "fullName": "bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "url": "https://github.com/bradautomates/claude-video",
+        "homepage": null,
+        "stars": 6758,
+        "forks": 774,
+        "watchers": 6758,
+        "language": "Python",
+        "topics": [],
+        "owner": {
+          "login": "bradautomates",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/186665980?v=4",
+          "url": "https://github.com/bradautomates"
+        },
+        "createdAt": "2026-04-24T04:40:43Z",
+        "updatedAt": "2026-07-10T02:46:24Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1206553433",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1206553433,
         "name": "CubeSandbox",
@@ -946,9 +889,9 @@
         "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
         "url": "https://github.com/TencentCloud/CubeSandbox",
         "homepage": "https://cubesandbox.com",
-        "stars": 9110,
-        "forks": 751,
-        "watchers": 9110,
+        "stars": 9366,
+        "forks": 802,
+        "watchers": 9366,
         "language": "Rust",
         "topics": [
           "agents",
@@ -961,14 +904,87 @@
           "url": "https://github.com/TencentCloud"
         },
         "createdAt": "2026-04-10T03:00:31Z",
-        "updatedAt": "2026-07-09T08:16:08Z"
+        "updatedAt": "2026-07-10T02:43:26Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-839428333",
+      "id": "trending-2026-07-10-weekly-1149257427",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1149257427,
+        "name": "skills",
+        "fullName": "dotnet/skills",
+        "description": "Repository for skills to assist AI coding agents with .NET and C#",
+        "url": "https://github.com/dotnet/skills",
+        "homepage": "",
+        "stars": 4494,
+        "forks": 330,
+        "watchers": 4494,
+        "language": "C#",
+        "topics": [
+          "agent-skills"
+        ],
+        "owner": {
+          "login": "dotnet",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/9141961?v=4",
+          "url": "https://github.com/dotnet"
+        },
+        "createdAt": "2026-02-03T22:51:09Z",
+        "updatedAt": "2026-07-10T02:19:55Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-1183888342",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1183888342,
+        "name": "orca",
+        "fullName": "stablyai/orca",
+        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+        "url": "https://github.com/stablyai/orca",
+        "homepage": "https://onOrca.dev",
+        "stars": 15176,
+        "forks": 1059,
+        "watchers": 15176,
+        "language": "TypeScript",
+        "topics": [
+          "ade",
+          "agent-ide",
+          "ai-agents",
+          "claude-code",
+          "cli",
+          "codex",
+          "cursor-agent",
+          "devtools",
+          "ghostty",
+          "ide",
+          "mobile-app",
+          "opencode",
+          "orchestration",
+          "parallel-agents",
+          "pi",
+          "terminal",
+          "worktrees",
+          "yc-backed"
+        ],
+        "owner": {
+          "login": "stablyai",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/127256420?v=4",
+          "url": "https://github.com/stablyai"
+        },
+        "createdAt": "2026-03-17T03:28:57Z",
+        "updatedAt": "2026-07-10T02:44:29Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-839428333",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 839428333,
         "name": "speech-to-speech",
@@ -976,9 +992,9 @@
         "description": "Build local voice agents with open-source models",
         "url": "https://github.com/huggingface/speech-to-speech",
         "homepage": "",
-        "stars": 5747,
-        "forks": 692,
-        "watchers": 5747,
+        "stars": 5840,
+        "forks": 725,
+        "watchers": 5840,
         "language": "Python",
         "topics": [
           "ai",
@@ -997,244 +1013,53 @@
           "url": "https://github.com/huggingface"
         },
         "createdAt": "2024-08-07T15:32:09Z",
-        "updatedAt": "2026-07-09T08:15:29Z"
+        "updatedAt": "2026-07-10T02:34:21Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1149257427",
+      "id": "trending-2026-07-10-weekly-688164459",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1149257427,
-        "name": "skills",
-        "fullName": "dotnet/skills",
-        "description": "Repository for skills to assist AI coding agents with .NET and C#",
-        "url": "https://github.com/dotnet/skills",
-        "homepage": "",
-        "stars": 4445,
-        "forks": 328,
-        "watchers": 4445,
-        "language": "C#",
-        "topics": [
-          "agent-skills"
-        ],
-        "owner": {
-          "login": "dotnet",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/9141961?v=4",
-          "url": "https://github.com/dotnet"
-        },
-        "createdAt": "2026-02-03T22:51:09Z",
-        "updatedAt": "2026-07-09T08:03:54Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1219644159",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1219644159,
-        "name": "claude-video",
-        "fullName": "bradautomates/claude-video",
-        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
-        "url": "https://github.com/bradautomates/claude-video",
-        "homepage": null,
-        "stars": 6291,
-        "forks": 739,
-        "watchers": 6291,
+        "id": 688164459,
+        "name": "cs249r_book",
+        "fullName": "harvard-edge/cs249r_book",
+        "description": "Machine Learning Systems",
+        "url": "https://github.com/harvard-edge/cs249r_book",
+        "homepage": "http://mlsysbook.ai/",
+        "stars": 27255,
+        "forks": 3274,
+        "watchers": 27255,
         "language": "Python",
-        "topics": [],
-        "owner": {
-          "login": "bradautomates",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/186665980?v=4",
-          "url": "https://github.com/bradautomates"
-        },
-        "createdAt": "2026-04-24T04:40:43Z",
-        "updatedAt": "2026-07-09T08:13:24Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1184892122",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1184892122,
-        "name": "exercises-dataset",
-        "fullName": "hasaneyldrm/exercises-dataset",
-        "description": "1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
-        "url": "https://github.com/hasaneyldrm/exercises-dataset",
-        "homepage": "",
-        "stars": 11136,
-        "forks": 1265,
-        "watchers": 11136,
-        "language": "HTML",
         "topics": [
-          "dataset",
-          "exercise-database",
-          "exercises",
-          "fitness",
-          "fitness-app",
-          "gym",
-          "json",
-          "logpress",
-          "react-native",
-          "workout"
+          "artificial-intelligence",
+          "cloud-ml",
+          "computer-systems",
+          "courseware",
+          "deep-learning",
+          "edge-machine-learning",
+          "embedded-ml",
+          "machine-learning",
+          "machine-learning-systems",
+          "mobile-ml",
+          "textbook",
+          "tinyml"
         ],
         "owner": {
-          "login": "hasaneyldrm",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/28005450?v=4",
-          "url": "https://github.com/hasaneyldrm"
+          "login": "harvard-edge",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/47722602?v=4",
+          "url": "https://github.com/harvard-edge"
         },
-        "createdAt": "2026-03-18T03:07:18Z",
-        "updatedAt": "2026-07-09T08:16:21Z"
+        "createdAt": "2023-09-06T19:31:06Z",
+        "updatedAt": "2026-07-10T02:18:59Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-455229168",
+      "id": "trending-2026-07-10-weekly-1203777920",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 455229168,
-        "name": "immich",
-        "fullName": "immich-app/immich",
-        "description": "High performance self-hosted photo and video management solution.",
-        "url": "https://github.com/immich-app/immich",
-        "homepage": "https://immich.app",
-        "stars": 106988,
-        "forks": 6133,
-        "watchers": 106988,
-        "language": "TypeScript",
-        "topics": [
-          "backup-tool",
-          "flutter",
-          "google-photos",
-          "google-photos-alternative",
-          "javascript",
-          "mobile-app",
-          "nestjs",
-          "nodejs",
-          "photo-gallery",
-          "photos",
-          "photos-management",
-          "self-hosted",
-          "svelte",
-          "sveltekit",
-          "typescript",
-          "videos"
-        ],
-        "owner": {
-          "login": "immich-app",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/109746326?v=4",
-          "url": "https://github.com/immich-app"
-        },
-        "createdAt": "2022-02-03T15:56:27Z",
-        "updatedAt": "2026-07-09T08:08:36Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1061327311",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1061327311,
-        "name": "FluidVoice",
-        "fullName": "altic-dev/FluidVoice",
-        "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
-        "url": "https://github.com/altic-dev/FluidVoice",
-        "homepage": "https://altic.dev/fluid",
-        "stars": 6934,
-        "forks": 432,
-        "watchers": 6934,
-        "language": "Swift",
-        "topics": [
-          "ai",
-          "dictation",
-          "ios",
-          "llama-cpp",
-          "macos",
-          "swift"
-        ],
-        "owner": {
-          "login": "altic-dev",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/224717674?v=4",
-          "url": "https://github.com/altic-dev"
-        },
-        "createdAt": "2025-09-21T17:35:02Z",
-        "updatedAt": "2026-07-09T07:53:37Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1201173969",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1201173969,
-        "name": "caveman",
-        "fullName": "JuliusBrussee/caveman",
-        "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
-        "url": "https://github.com/JuliusBrussee/caveman",
-        "homepage": "https://caveman.so/",
-        "stars": 86984,
-        "forks": 4865,
-        "watchers": 86984,
-        "language": "JavaScript",
-        "topics": [
-          "ai",
-          "anthropic",
-          "caveman",
-          "claude",
-          "claude-code",
-          "llm",
-          "meme",
-          "prompt-engineering",
-          "skill",
-          "tokens"
-        ],
-        "owner": {
-          "login": "JuliusBrussee",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/104168679?v=4",
-          "url": "https://github.com/JuliusBrussee"
-        },
-        "createdAt": "2026-04-04T10:03:00Z",
-        "updatedAt": "2026-07-09T08:16:05Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1075372545",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1075372545,
-        "name": "agency-agents",
-        "fullName": "msitarzewski/agency-agents",
-        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-        "url": "https://github.com/msitarzewski/agency-agents",
-        "homepage": "",
-        "stars": 129520,
-        "forks": 21049,
-        "watchers": 129520,
-        "language": "Shell",
-        "topics": [],
-        "owner": {
-          "login": "msitarzewski",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1972242?v=4",
-          "url": "https://github.com/msitarzewski"
-        },
-        "createdAt": "2025-10-13T12:12:29Z",
-        "updatedAt": "2026-07-09T08:16:06Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1203777920",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1203777920,
         "name": "ai-berkshire",
@@ -1242,9 +1067,9 @@
         "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
         "url": "https://github.com/xbtlin/ai-berkshire",
         "homepage": "https://github.com/xbtlin/ai-berkshire#readme",
-        "stars": 12173,
-        "forks": 1600,
-        "watchers": 12173,
+        "stars": 12364,
+        "forks": 1656,
+        "watchers": 12364,
         "language": "Python",
         "topics": [
           "ai",
@@ -1274,141 +1099,182 @@
           "url": "https://github.com/xbtlin"
         },
         "createdAt": "2026-04-07T11:19:51Z",
-        "updatedAt": "2026-07-09T08:15:12Z"
+        "updatedAt": "2026-07-10T02:44:04Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1183888342",
+      "id": "trending-2026-07-10-weekly-997737944",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1183888342,
-        "name": "orca",
-        "fullName": "stablyai/orca",
-        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-        "url": "https://github.com/stablyai/orca",
-        "homepage": "https://onOrca.dev",
-        "stars": 14509,
-        "forks": 977,
-        "watchers": 14509,
+        "id": 997737944,
+        "name": "RuView",
+        "fullName": "ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "url": "https://github.com/ruvnet/RuView",
+        "homepage": "https://Cognitum.One/RuView",
+        "stars": 79690,
+        "forks": 10722,
+        "watchers": 79690,
+        "language": "Rust",
+        "topics": [
+          "awesome",
+          "claude",
+          "densepose",
+          "esp32",
+          "firmware",
+          "home-assistant",
+          "home-automation",
+          "iot",
+          "monitoring",
+          "networking",
+          "npm",
+          "pose-estimation",
+          "react",
+          "rf",
+          "self-learning",
+          "skills",
+          "spatial-intelligence",
+          "typescript",
+          "wifi",
+          "wifi-security"
+        ],
+        "owner": {
+          "login": "ruvnet",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/2934394?v=4",
+          "url": "https://github.com/ruvnet"
+        },
+        "createdAt": "2025-06-07T04:32:30Z",
+        "updatedAt": "2026-07-10T02:26:04Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-316836816",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 316836816,
+        "name": "daisyui",
+        "fullName": "saadeghi/daisyui",
+        "description": "🌼 🌼 🌼 🌼 🌼  The most popular, free and open-source Tailwind CSS component library",
+        "url": "https://github.com/saadeghi/daisyui",
+        "homepage": "https://daisyui.com",
+        "stars": 41541,
+        "forks": 1649,
+        "watchers": 41541,
+        "language": "Svelte",
+        "topics": [
+          "component",
+          "component-library",
+          "components",
+          "css",
+          "css-components",
+          "css-framework",
+          "daisyui",
+          "design-system",
+          "design-systems",
+          "front-end",
+          "postcss",
+          "svelte",
+          "tailwind",
+          "tailwind-css",
+          "tailwindcss",
+          "ui-design",
+          "ui-framework",
+          "ui-kit",
+          "ui-library",
+          "ui-pattern"
+        ],
+        "owner": {
+          "login": "saadeghi",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/7342023?v=4",
+          "url": "https://github.com/saadeghi"
+        },
+        "createdAt": "2020-11-28T22:57:27Z",
+        "updatedAt": "2026-07-10T02:29:45Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-weekly-455229168",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 455229168,
+        "name": "immich",
+        "fullName": "immich-app/immich",
+        "description": "High performance self-hosted photo and video management solution.",
+        "url": "https://github.com/immich-app/immich",
+        "homepage": "https://immich.app",
+        "stars": 107112,
+        "forks": 6148,
+        "watchers": 107112,
         "language": "TypeScript",
         "topics": [
-          "ade",
-          "agent-ide",
-          "ai-agents",
-          "claude-code",
-          "cli",
-          "codex",
-          "cursor-agent",
-          "devtools",
-          "ghostty",
-          "ide",
+          "backup-tool",
+          "flutter",
+          "google-photos",
+          "google-photos-alternative",
+          "javascript",
           "mobile-app",
-          "opencode",
-          "orchestration",
-          "parallel-agents",
-          "pi",
-          "terminal",
-          "worktrees",
-          "yc-backed"
+          "nestjs",
+          "nodejs",
+          "photo-gallery",
+          "photos",
+          "photos-management",
+          "self-hosted",
+          "svelte",
+          "sveltekit",
+          "typescript",
+          "videos"
         ],
         "owner": {
-          "login": "stablyai",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/127256420?v=4",
-          "url": "https://github.com/stablyai"
+          "login": "immich-app",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/109746326?v=4",
+          "url": "https://github.com/immich-app"
         },
-        "createdAt": "2026-03-17T03:28:57Z",
-        "updatedAt": "2026-07-09T08:17:06Z"
+        "createdAt": "2022-02-03T15:56:27Z",
+        "updatedAt": "2026-07-10T02:23:46Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1054793726",
+      "id": "trending-2026-07-10-weekly-1097695258",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1054793726,
-        "name": "chrome-devtools-mcp",
-        "fullName": "ChromeDevTools/chrome-devtools-mcp",
-        "description": "Chrome DevTools for coding agents",
-        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-        "homepage": "https://npmjs.org/package/chrome-devtools-mcp",
-        "stars": 46434,
-        "forks": 3027,
-        "watchers": 46434,
-        "language": "TypeScript",
+        "id": 1097695258,
+        "name": "CodexBar",
+        "fullName": "steipete/CodexBar",
+        "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+        "url": "https://github.com/steipete/CodexBar",
+        "homepage": "https://codex.bar",
+        "stars": 17382,
+        "forks": 1418,
+        "watchers": 17382,
+        "language": "Swift",
         "topics": [
-          "browser",
-          "chrome",
-          "chrome-devtools",
-          "debugging",
-          "devtools",
-          "mcp",
-          "mcp-server",
-          "puppeteer"
-        ],
-        "owner": {
-          "login": "ChromeDevTools",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/11260967?v=4",
-          "url": "https://github.com/ChromeDevTools"
-        },
-        "createdAt": "2025-09-11T10:39:55Z",
-        "updatedAt": "2026-07-09T08:05:50Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-weekly-1079084637",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1079084637,
-        "name": "claude-skills",
-        "fullName": "alirezarezvani/claude-skills",
-        "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
-        "url": "https://github.com/alirezarezvani/claude-skills",
-        "homepage": "https://alirezarezvani.medium.com/",
-        "stars": 21765,
-        "forks": 2912,
-        "watchers": 21765,
-        "language": "Python",
-        "topics": [
-          "agent-plugins",
-          "agent-skills",
-          "agentic-ai",
-          "ai-coding-agent",
-          "anthropic-claude",
-          "claude-ai",
+          "ai",
           "claude-code",
-          "claude-code-plugins",
-          "claude-code-skills",
-          "claude-skills",
-          "codex-skills",
-          "coding-agent-plugins",
-          "cursor-skills",
-          "developer-tools",
-          "gemini-cli-skills",
-          "openai-codex",
-          "openclaw",
-          "openclaw-plugins",
-          "openclaw-skills",
-          "prompt-engineering"
+          "codex",
+          "swift"
         ],
         "owner": {
-          "login": "alirezarezvani",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/5697919?v=4",
-          "url": "https://github.com/alirezarezvani"
+          "login": "steipete",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
+          "url": "https://github.com/steipete"
         },
-        "createdAt": "2025-10-19T04:04:05Z",
-        "updatedAt": "2026-07-09T08:16:49Z"
+        "createdAt": "2025-11-16T17:00:44Z",
+        "updatedAt": "2026-07-10T02:46:00Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-weekly-1208221543",
+      "id": "trending-2026-07-10-weekly-1208221543",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1208221543,
         "name": "video-use",
@@ -1416,9 +1282,9 @@
         "description": "Edit videos with coding agents",
         "url": "https://github.com/browser-use/video-use",
         "homepage": "",
-        "stars": 16136,
-        "forks": 1867,
-        "watchers": 16136,
+        "stars": 16280,
+        "forks": 1917,
+        "watchers": 16280,
         "language": "Python",
         "topics": [],
         "owner": {
@@ -1427,14 +1293,14 @@
           "url": "https://github.com/browser-use"
         },
         "createdAt": "2026-04-12T01:34:42Z",
-        "updatedAt": "2026-07-09T08:11:06Z"
+        "updatedAt": "2026-07-10T02:38:02Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1166102148",
+      "id": "trending-2026-07-10-monthly-1166102148",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1166102148,
         "name": "codebase-memory-mcp",
@@ -1442,9 +1308,9 @@
         "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
         "url": "https://github.com/DeusData/codebase-memory-mcp",
         "homepage": "https://deusdata.github.io/codebase-memory-mcp/",
-        "stars": 28829,
-        "forks": 2139,
-        "watchers": 28829,
+        "stars": 29205,
+        "forks": 2206,
+        "watchers": 29205,
         "language": "C",
         "topics": [
           "aider",
@@ -1474,40 +1340,14 @@
           "url": "https://github.com/DeusData"
         },
         "createdAt": "2026-02-24T22:01:00Z",
-        "updatedAt": "2026-07-09T08:17:35Z"
+        "updatedAt": "2026-07-10T02:46:10Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-993475914",
+      "id": "trending-2026-07-10-monthly-1195360525",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 993475914,
-        "name": "container",
-        "fullName": "apple/container",
-        "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon. ",
-        "url": "https://github.com/apple/container",
-        "homepage": "https://apple.github.io/container/documentation/",
-        "stars": 47210,
-        "forks": 1429,
-        "watchers": 47210,
-        "language": "Swift",
-        "topics": [],
-        "owner": {
-          "login": "apple",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/10639145?v=4",
-          "url": "https://github.com/apple"
-        },
-        "createdAt": "2025-05-30T21:26:05Z",
-        "updatedAt": "2026-07-09T08:08:31Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1195360525",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1195360525,
         "name": "OpenMontage",
@@ -1515,9 +1355,9 @@
         "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
         "url": "https://github.com/calesthio/OpenMontage",
         "homepage": "https://github.com/calesthio/OpenMontage",
-        "stars": 35877,
-        "forks": 4165,
-        "watchers": 35877,
+        "stars": 36207,
+        "forks": 4238,
+        "watchers": 36207,
         "language": "Python",
         "topics": [
           "agent",
@@ -1546,40 +1386,14 @@
           "url": "https://github.com/calesthio"
         },
         "createdAt": "2026-03-29T15:23:22Z",
-        "updatedAt": "2026-07-09T08:15:33Z"
+        "updatedAt": "2026-07-10T02:46:06Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1187630119",
+      "id": "trending-2026-07-10-monthly-1165277268",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1187630119,
-        "name": "SkillSpector",
-        "fullName": "NVIDIA/SkillSpector",
-        "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
-        "url": "https://github.com/NVIDIA/SkillSpector",
-        "homepage": null,
-        "stars": 12540,
-        "forks": 1032,
-        "watchers": 12540,
-        "language": "Python",
-        "topics": [],
-        "owner": {
-          "login": "NVIDIA",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1728152?v=4",
-          "url": "https://github.com/NVIDIA"
-        },
-        "createdAt": "2026-03-21T00:28:43Z",
-        "updatedAt": "2026-07-09T08:13:25Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1165277268",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1165277268,
         "name": "Agent-Reach",
@@ -1587,9 +1401,9 @@
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "url": "https://github.com/Panniantong/Agent-Reach",
         "homepage": null,
-        "stars": 53499,
-        "forks": 4285,
-        "watchers": 53499,
+        "stars": 53920,
+        "forks": 4350,
+        "watchers": 53920,
         "language": "Python",
         "topics": [
           "agent-infrastructure",
@@ -1616,14 +1430,40 @@
           "url": "https://github.com/Panniantong"
         },
         "createdAt": "2026-02-24T02:10:24Z",
-        "updatedAt": "2026-07-09T08:15:07Z"
+        "updatedAt": "2026-07-10T02:46:28Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-976921297",
+      "id": "trending-2026-07-10-monthly-1187630119",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1187630119,
+        "name": "SkillSpector",
+        "fullName": "NVIDIA/SkillSpector",
+        "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+        "url": "https://github.com/NVIDIA/SkillSpector",
+        "homepage": null,
+        "stars": 12633,
+        "forks": 1043,
+        "watchers": 12633,
+        "language": "Python",
+        "topics": [],
+        "owner": {
+          "login": "NVIDIA",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/1728152?v=4",
+          "url": "https://github.com/NVIDIA"
+        },
+        "createdAt": "2026-03-21T00:28:43Z",
+        "updatedAt": "2026-07-10T02:33:26Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-976921297",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 976921297,
         "name": "system_prompts_leaks",
@@ -1631,9 +1471,9 @@
         "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "homepage": "",
-        "stars": 54554,
-        "forks": 8875,
-        "watchers": 54554,
+        "stars": 55221,
+        "forks": 9025,
+        "watchers": 55221,
         "language": "JavaScript",
         "topics": [
           "ai",
@@ -1663,14 +1503,66 @@
           "url": "https://github.com/asgeirtj"
         },
         "createdAt": "2025-05-03T02:43:56Z",
-        "updatedAt": "2026-07-09T08:17:07Z"
+        "updatedAt": "2026-07-10T02:46:37Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-157616880",
+      "id": "trending-2026-07-10-monthly-1185389803",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1185389803,
+        "name": "ai-job-search",
+        "fullName": "MadsLorentzen/ai-job-search",
+        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "homepage": null,
+        "stars": 19279,
+        "forks": 5546,
+        "watchers": 19279,
+        "language": "TypeScript",
+        "topics": [],
+        "owner": {
+          "login": "MadsLorentzen",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/50207393?v=4",
+          "url": "https://github.com/MadsLorentzen"
+        },
+        "createdAt": "2026-03-18T14:33:04Z",
+        "updatedAt": "2026-07-10T02:47:01Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-993475914",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 993475914,
+        "name": "container",
+        "fullName": "apple/container",
+        "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon. ",
+        "url": "https://github.com/apple/container",
+        "homepage": "https://apple.github.io/container/documentation/",
+        "stars": 47321,
+        "forks": 1471,
+        "watchers": 47321,
+        "language": "Swift",
+        "topics": [],
+        "owner": {
+          "login": "apple",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/10639145?v=4",
+          "url": "https://github.com/apple"
+        },
+        "createdAt": "2025-05-30T21:26:05Z",
+        "updatedAt": "2026-07-10T02:41:19Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-157616880",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 157616880,
         "name": "iptv",
@@ -1678,9 +1570,9 @@
         "description": "Collection of publicly available IPTV channels from all over the world",
         "url": "https://github.com/iptv-org/iptv",
         "homepage": "https://iptv-org.github.io",
-        "stars": 131443,
-        "forks": 7320,
-        "watchers": 131443,
+        "stars": 131802,
+        "forks": 7373,
+        "watchers": 131802,
         "language": "TypeScript",
         "topics": [
           "iptv",
@@ -1695,76 +1587,14 @@
           "url": "https://github.com/iptv-org"
         },
         "createdAt": "2018-11-14T22:00:57Z",
-        "updatedAt": "2026-07-09T08:15:21Z"
+        "updatedAt": "2026-07-10T02:40:35Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-229407566",
+      "id": "trending-2026-07-10-monthly-1193909050",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 229407566,
-        "name": "simplex-chat",
-        "fullName": "simplex-chat/simplex-chat",
-        "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps 📱!",
-        "url": "https://github.com/simplex-chat/simplex-chat",
-        "homepage": "https://simplex.chat",
-        "stars": 18175,
-        "forks": 1077,
-        "watchers": 18175,
-        "language": "Haskell",
-        "topics": [
-          "chat",
-          "double-ratchet",
-          "e2ee",
-          "encryption",
-          "haskell",
-          "messaging",
-          "privacy",
-          "protocol",
-          "security"
-        ],
-        "owner": {
-          "login": "simplex-chat",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/59927747?v=4",
-          "url": "https://github.com/simplex-chat"
-        },
-        "createdAt": "2019-12-21T09:50:09Z",
-        "updatedAt": "2026-07-09T08:01:21Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1185389803",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1185389803,
-        "name": "ai-job-search",
-        "fullName": "MadsLorentzen/ai-job-search",
-        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
-        "url": "https://github.com/MadsLorentzen/ai-job-search",
-        "homepage": null,
-        "stars": 16337,
-        "forks": 4925,
-        "watchers": 16337,
-        "language": "TypeScript",
-        "topics": [],
-        "owner": {
-          "login": "MadsLorentzen",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/50207393?v=4",
-          "url": "https://github.com/MadsLorentzen"
-        },
-        "createdAt": "2026-03-18T14:33:04Z",
-        "updatedAt": "2026-07-09T08:17:42Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1193909050",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1193909050,
         "name": "herdr",
@@ -1772,9 +1602,9 @@
         "description": "agent multiplexer that lives in your terminal.",
         "url": "https://github.com/ogulcancelik/herdr",
         "homepage": "https://herdr.dev",
-        "stars": 14537,
-        "forks": 830,
-        "watchers": 14537,
+        "stars": 14846,
+        "forks": 871,
+        "watchers": 14846,
         "language": "Rust",
         "topics": [
           "agent",
@@ -1802,14 +1632,50 @@
           "url": "https://github.com/ogulcancelik"
         },
         "createdAt": "2026-03-27T17:54:33Z",
-        "updatedAt": "2026-07-09T08:16:52Z"
+        "updatedAt": "2026-07-10T02:46:58Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1032808806",
+      "id": "trending-2026-07-10-monthly-229407566",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 229407566,
+        "name": "simplex-chat",
+        "fullName": "simplex-chat/simplex-chat",
+        "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps 📱!",
+        "url": "https://github.com/simplex-chat/simplex-chat",
+        "homepage": "https://simplex.chat",
+        "stars": 18228,
+        "forks": 1108,
+        "watchers": 18228,
+        "language": "Haskell",
+        "topics": [
+          "chat",
+          "double-ratchet",
+          "e2ee",
+          "encryption",
+          "haskell",
+          "messaging",
+          "privacy",
+          "protocol",
+          "security"
+        ],
+        "owner": {
+          "login": "simplex-chat",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/59927747?v=4",
+          "url": "https://github.com/simplex-chat"
+        },
+        "createdAt": "2019-12-21T09:50:09Z",
+        "updatedAt": "2026-07-10T02:44:54Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-1032808806",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1032808806,
         "name": "strix",
@@ -1817,9 +1683,9 @@
         "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
         "url": "https://github.com/usestrix/strix",
         "homepage": "https://strix.ai",
-        "stars": 39264,
-        "forks": 3993,
-        "watchers": 39264,
+        "stars": 39660,
+        "forks": 4061,
+        "watchers": 39660,
         "language": "Python",
         "topics": [
           "agents",
@@ -1849,14 +1715,14 @@
           "url": "https://github.com/usestrix"
         },
         "createdAt": "2025-08-05T21:28:30Z",
-        "updatedAt": "2026-07-09T08:17:19Z"
+        "updatedAt": "2026-07-10T02:44:15Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1110443421",
+      "id": "trending-2026-07-10-monthly-1110443421",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1110443421,
         "name": "zvec",
@@ -1864,9 +1730,9 @@
         "description": "A lightweight, lightning-fast, in-process vector database",
         "url": "https://github.com/alibaba/zvec",
         "homepage": "https://zvec.org",
-        "stars": 14559,
-        "forks": 898,
-        "watchers": 14559,
+        "stars": 14658,
+        "forks": 906,
+        "watchers": 14658,
         "language": "C++",
         "topics": [
           "agent-skills",
@@ -1889,40 +1755,14 @@
           "url": "https://github.com/alibaba"
         },
         "createdAt": "2025-12-05T07:45:38Z",
-        "updatedAt": "2026-07-09T08:14:15Z"
+        "updatedAt": "2026-07-10T02:46:28Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1028069336",
+      "id": "trending-2026-07-10-monthly-1183888342",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1028069336,
-        "name": "hiring-agent",
-        "fullName": "interviewstreet/hiring-agent",
-        "description": "AI agent to evaluate and score resumes.",
-        "url": "https://github.com/interviewstreet/hiring-agent",
-        "homepage": null,
-        "stars": 5245,
-        "forks": 962,
-        "watchers": 5245,
-        "language": "Python",
-        "topics": [],
-        "owner": {
-          "login": "interviewstreet",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1030588?v=4",
-          "url": "https://github.com/interviewstreet"
-        },
-        "createdAt": "2025-07-29T01:50:34Z",
-        "updatedAt": "2026-07-09T08:15:10Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1183888342",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1183888342,
         "name": "orca",
@@ -1930,9 +1770,9 @@
         "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
         "url": "https://github.com/stablyai/orca",
         "homepage": "https://onOrca.dev",
-        "stars": 14509,
-        "forks": 977,
-        "watchers": 14509,
+        "stars": 15176,
+        "forks": 1059,
+        "watchers": 15176,
         "language": "TypeScript",
         "topics": [
           "ade",
@@ -1960,14 +1800,14 @@
           "url": "https://github.com/stablyai"
         },
         "createdAt": "2026-03-17T03:28:57Z",
-        "updatedAt": "2026-07-09T08:17:06Z"
+        "updatedAt": "2026-07-10T02:44:29Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-908589694",
+      "id": "trending-2026-07-10-monthly-908589694",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 908589694,
         "name": "meetily",
@@ -1975,9 +1815,9 @@
         "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted,  Open-source Ai meeting note taker for macOS & Windows.  ",
         "url": "https://github.com/Zackriya-Solutions/meetily",
         "homepage": "https://meetily.ai",
-        "stars": 21849,
-        "forks": 2184,
-        "watchers": 21849,
+        "stars": 22241,
+        "forks": 2236,
+        "watchers": 22241,
         "language": "Rust",
         "topics": [
           "ai",
@@ -2007,48 +1847,40 @@
           "url": "https://github.com/Zackriya-Solutions"
         },
         "createdAt": "2024-12-26T12:52:14Z",
-        "updatedAt": "2026-07-09T08:16:25Z"
+        "updatedAt": "2026-07-10T02:42:01Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1170266927",
+      "id": "trending-2026-07-10-monthly-1028069336",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1170266927,
-        "name": "pm-skills",
-        "fullName": "phuryn/pm-skills",
-        "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
-        "url": "https://github.com/phuryn/pm-skills",
-        "homepage": "https://www.productcompass.pm/p/pm-skills-2-red-team-ship",
-        "stars": 23109,
-        "forks": 2320,
-        "watchers": 23109,
-        "language": null,
-        "topics": [
-          "agent-skill-repository",
-          "agent-skills",
-          "agentic-skills",
-          "claude-code-marketplace",
-          "claude-code-plugins",
-          "claude-cowork-plugin",
-          "product-management"
-        ],
+        "id": 1028069336,
+        "name": "hiring-agent",
+        "fullName": "interviewstreet/hiring-agent",
+        "description": "AI agent to evaluate and score resumes.",
+        "url": "https://github.com/interviewstreet/hiring-agent",
+        "homepage": null,
+        "stars": 5326,
+        "forks": 1003,
+        "watchers": 5326,
+        "language": "Python",
+        "topics": [],
         "owner": {
-          "login": "phuryn",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/7837354?v=4",
-          "url": "https://github.com/phuryn"
+          "login": "interviewstreet",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/1030588?v=4",
+          "url": "https://github.com/interviewstreet"
         },
-        "createdAt": "2026-03-01T23:33:44Z",
-        "updatedAt": "2026-07-09T08:15:12Z"
+        "createdAt": "2025-07-29T01:50:34Z",
+        "updatedAt": "2026-07-10T02:28:45Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1062458369",
+      "id": "trending-2026-07-10-monthly-1062458369",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1062458369,
         "name": "page-agent",
@@ -2056,9 +1888,9 @@
         "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
         "url": "https://github.com/alibaba/page-agent",
         "homepage": "https://alibaba.github.io/page-agent/",
-        "stars": 25317,
-        "forks": 2179,
-        "watchers": 25317,
+        "stars": 25541,
+        "forks": 2240,
+        "watchers": 25541,
         "language": "TypeScript",
         "topics": [
           "agent",
@@ -2076,14 +1908,14 @@
           "url": "https://github.com/alibaba"
         },
         "createdAt": "2025-09-23T09:30:17Z",
-        "updatedAt": "2026-07-09T08:11:47Z"
+        "updatedAt": "2026-07-10T02:46:47Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-469877060",
+      "id": "trending-2026-07-10-monthly-469877060",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 469877060,
         "name": "iroh",
@@ -2091,9 +1923,9 @@
         "description": "IP addresses break, dial keys instead. A library that adds QUIC + NAT Traversal to your apps.",
         "url": "https://github.com/n0-computer/iroh",
         "homepage": "https://iroh.computer",
-        "stars": 11257,
-        "forks": 522,
-        "watchers": 11257,
+        "stars": 11303,
+        "forks": 559,
+        "watchers": 11303,
         "language": "Rust",
         "topics": [
           "does-anyone-read-these",
@@ -2113,14 +1945,14 @@
           "url": "https://github.com/n0-computer"
         },
         "createdAt": "2022-03-14T19:30:08Z",
-        "updatedAt": "2026-07-09T08:15:29Z"
+        "updatedAt": "2026-07-10T01:35:30Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1157102282",
+      "id": "trending-2026-07-10-monthly-1157102282",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1157102282,
         "name": "OmniRoute",
@@ -2128,9 +1960,9 @@
         "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
         "url": "https://github.com/diegosouzapw/OmniRoute",
         "homepage": "https://omniroute.online",
-        "stars": 13964,
-        "forks": 2028,
-        "watchers": 13964,
+        "stars": 14362,
+        "forks": 2126,
+        "watchers": 14362,
         "language": "TypeScript",
         "topics": [
           "a2a",
@@ -2160,89 +1992,48 @@
           "url": "https://github.com/diegosouzapw"
         },
         "createdAt": "2026-02-13T12:38:31Z",
-        "updatedAt": "2026-07-09T08:15:37Z"
+        "updatedAt": "2026-07-10T02:47:10Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1131513930",
+      "id": "trending-2026-07-10-monthly-1170266927",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
-        "id": 1131513930,
-        "name": "daily_stock_analysis",
-        "fullName": "ZhuLinsen/daily_stock_analysis",
-        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-        "homepage": "https://dsa.zhulinsen.tech",
-        "stars": 56034,
-        "forks": 48283,
-        "watchers": 56034,
-        "language": "Python",
+        "id": 1170266927,
+        "name": "pm-skills",
+        "fullName": "phuryn/pm-skills",
+        "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+        "url": "https://github.com/phuryn/pm-skills",
+        "homepage": "https://www.productcompass.pm/p/pm-skills-2-red-team-ship",
+        "stars": 23257,
+        "forks": 2358,
+        "watchers": 23257,
+        "language": null,
         "topics": [
-          "a-stock",
-          "ai-agent",
-          "aigc",
-          "llm",
-          "quant",
-          "quantitative-finance",
-          "quantitative-trading"
+          "agent-skill-repository",
+          "agent-skills",
+          "agentic-skills",
+          "claude-code-marketplace",
+          "claude-code-plugins",
+          "claude-cowork-plugin",
+          "product-management"
         ],
         "owner": {
-          "login": "ZhuLinsen",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/42829555?v=4",
-          "url": "https://github.com/ZhuLinsen"
+          "login": "phuryn",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/7837354?v=4",
+          "url": "https://github.com/phuryn"
         },
-        "createdAt": "2026-01-10T06:43:20Z",
-        "updatedAt": "2026-07-09T08:13:46Z"
+        "createdAt": "2026-03-01T23:33:44Z",
+        "updatedAt": "2026-07-10T02:45:45Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1224172037",
+      "id": "trending-2026-07-10-monthly-1186219527",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
-      "repo": {
-        "id": 1224172037,
-        "name": "dbx",
-        "fullName": "t8y2/dbx",
-        "description": "20MB, lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server and more.20MB，轻量级跨平台数据库客户端、数据库管理工具。支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、ClickHouse、SQL Server 等。",
-        "url": "https://github.com/t8y2/dbx",
-        "homepage": "https://dbxio.com",
-        "stars": 9361,
-        "forks": 803,
-        "watchers": 9361,
-        "language": "Rust",
-        "topics": [
-          "clickhouse",
-          "database",
-          "database-client",
-          "database-management",
-          "gui",
-          "mongodb",
-          "mysql",
-          "postgresql",
-          "redis",
-          "rust",
-          "sql-server",
-          "sqlite",
-          "tauri",
-          "vue"
-        ],
-        "owner": {
-          "login": "t8y2",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/77960507?v=4",
-          "url": "https://github.com/t8y2"
-        },
-        "createdAt": "2026-04-29T03:00:36Z",
-        "updatedAt": "2026-07-09T08:17:01Z"
-      },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
-    },
-    {
-      "id": "trending-2026-07-09-monthly-1186219527",
-      "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1186219527,
         "name": "TREK",
@@ -2250,9 +2041,9 @@
         "description": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.",
         "url": "https://github.com/mauriceboe/TREK",
         "homepage": "https://demo.liketrek.com",
-        "stars": 9647,
-        "forks": 799,
-        "watchers": 9647,
+        "stars": 9754,
+        "forks": 843,
+        "watchers": 9754,
         "language": "TypeScript",
         "topics": [
           "budget-tracker",
@@ -2281,14 +2072,48 @@
           "url": "https://github.com/mauriceboe"
         },
         "createdAt": "2026-03-19T11:51:54Z",
-        "updatedAt": "2026-07-09T08:14:28Z"
+        "updatedAt": "2026-07-10T02:26:28Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     },
     {
-      "id": "trending-2026-07-09-monthly-1180745961",
+      "id": "trending-2026-07-10-monthly-1131513930",
       "type": "trending",
-      "snapshotDate": "2026-07-09",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1131513930,
+        "name": "daily_stock_analysis",
+        "fullName": "ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "homepage": "https://dsa.zhulinsen.tech",
+        "stars": 56267,
+        "forks": 48423,
+        "watchers": 56267,
+        "language": "Python",
+        "topics": [
+          "a-stock",
+          "ai-agent",
+          "aigc",
+          "llm",
+          "quant",
+          "quantitative-finance",
+          "quantitative-trading"
+        ],
+        "owner": {
+          "login": "ZhuLinsen",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/42829555?v=4",
+          "url": "https://github.com/ZhuLinsen"
+        },
+        "createdAt": "2026-01-10T06:43:20Z",
+        "updatedAt": "2026-07-10T02:44:19Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-1180745961",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
       "repo": {
         "id": 1180745961,
         "name": "ai-website-cloner-template",
@@ -2296,9 +2121,9 @@
         "description": "Clone any website with one command using AI coding agents",
         "url": "https://github.com/JCodesMore/ai-website-cloner-template",
         "homepage": "https://dsc.gg/jcodesmore",
-        "stars": 27010,
-        "forks": 3817,
-        "watchers": 27010,
+        "stars": 27221,
+        "forks": 3871,
+        "watchers": 27221,
         "language": "TypeScript",
         "topics": [
           "ai",
@@ -2327,12 +2152,53 @@
           "url": "https://github.com/JCodesMore"
         },
         "createdAt": "2026-03-13T11:14:39Z",
-        "updatedAt": "2026-07-09T08:13:27Z"
+        "updatedAt": "2026-07-10T02:42:57Z"
       },
-      "fetchedAt": "2026-07-09T08:16:51.265Z"
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
+    },
+    {
+      "id": "trending-2026-07-10-monthly-1224172037",
+      "type": "trending",
+      "snapshotDate": "2026-07-10",
+      "repo": {
+        "id": 1224172037,
+        "name": "dbx",
+        "fullName": "t8y2/dbx",
+        "description": "20MB, lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server and more.20MB，轻量级跨平台数据库客户端、数据库管理工具。支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、ClickHouse、SQL Server 等。",
+        "url": "https://github.com/t8y2/dbx",
+        "homepage": "https://dbxio.com",
+        "stars": 9481,
+        "forks": 841,
+        "watchers": 9481,
+        "language": "Rust",
+        "topics": [
+          "clickhouse",
+          "database",
+          "database-client",
+          "database-management",
+          "gui",
+          "mongodb",
+          "mysql",
+          "postgresql",
+          "redis",
+          "rust",
+          "sql-server",
+          "sqlite",
+          "tauri",
+          "vue"
+        ],
+        "owner": {
+          "login": "t8y2",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/77960507?v=4",
+          "url": "https://github.com/t8y2"
+        },
+        "createdAt": "2026-04-29T03:00:36Z",
+        "updatedAt": "2026-07-10T02:40:15Z"
+      },
+      "fetchedAt": "2026-07-10T02:46:01.913Z"
     }
   ],
-  "total": 62,
+  "total": 59,
   "page": 1,
-  "pageSize": 62
+  "pageSize": 59
 }
