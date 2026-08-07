@@ -70,3 +70,12 @@ trending-desktop/src-tauri/WixTools/
 # Task artifacts
 tasks/issues/*.png
 tasks/.bin/
+
+# Tauri desktop (current)
+src-tauri/target/
+src-tauri/binaries/
+src-tauri/gen/
+
+# Desktop distributable artifacts (macOS DMG / app bundles)
+*.dmg
+*.app

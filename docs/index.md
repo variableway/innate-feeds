@@ -8,5 +8,6 @@
 | [project/issues/](./project/issues/README.md) | 任务契约 |
 | [project/tasks/](./project/tasks/README.md) | 多 Agent 工作流 |
 | [data-update-workflow.md](./data-update-workflow.md) | 数据更新运维 |
+| [cargo-build-cache.md](./cargo-build-cache.md) | Cargo 编译缓存共享（sccache） |
 
 控制平面（只读链接）：`innate-works/projects/innate-feeds/index.md`

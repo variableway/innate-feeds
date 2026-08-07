@@ -1,4 +1,3 @@
-import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { z } from "zod";
@@ -15,10 +14,30 @@ import {
   syncStarred,
 } from "../collector/sync.js";
 import type { TrendingPeriod } from "../collector/github.js";
+import {
+  buildAuthStatus,
+  removePat,
+  savePatFromBody,
+} from "../auth/index.js";
 
 const app = new Hono();
 
 app.use("/*", cors());
+
+/** Liveness for Desktop sidecar / orchestrators (ADR-D2). */
+app.get("/api/health", (c) => {
+  try {
+    getDb();
+    return c.json({
+      ok: true,
+      host: process.env.HOST || null,
+      port: parseInt(process.env.PORT || "4000", 10),
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Database unavailable";
+    return c.json({ ok: false, error: message }, 503);
+  }
+});
 
 app.onError((err, c) => {
   console.error("Unhandled error:", err);
@@ -118,6 +137,49 @@ app.get("/api/feeds/dates", (c) => {
   }
 });
 
+/** Auth status: gh CLI and whether a PAT is stored (never returns the token). */
+app.get("/api/auth/status", (c) => {
+  try {
+    return c.json(buildAuthStatus());
+  } catch (err) {
+    console.error("Error in /api/auth/status:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/** Store GitHub PAT encrypted at rest (ADR-D5). Body: { token }. */
+app.put("/api/auth/pat", async (c) => {
+  try {
+    const body = await c.req.json();
+    const result = savePatFromBody(body);
+    if (!result.ok) {
+      return c.json(
+        { error: result.error, details: result.details },
+        400,
+      );
+    }
+    return c.json(result);
+  } catch (err) {
+    console.error("Error in PUT /api/auth/pat:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.delete("/api/auth/pat", (c) => {
+  try {
+    return c.json(removePat());
+  } catch (err) {
+    console.error("Error in DELETE /api/auth/pat:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
 app.post("/api/feeds/sync", async (c) => {
   const body = await c.req.json();
   const parsed = SYNC_BODY_SCHEMA.safeParse(body);
@@ -146,9 +208,18 @@ app.post("/api/feeds/sync", async (c) => {
 });
 
 const port = parseInt(process.env.PORT || "4000", 10);
-console.log(`Feeds API server running on http://localhost:${port}`);
+/** Desktop sidecar sets HOST=127.0.0.1; Docker/web may set 0.0.0.0 or omit. */
+const hostname = process.env.HOST || undefined;
+const listenLabel = hostname
+  ? `http://${hostname}:${port}`
+  : `http://localhost:${port}`;
+console.log(`Feeds API server running on ${listenLabel}`);
+if (process.env.DB_PATH) {
+  console.log(`DB_PATH=${process.env.DB_PATH}`);
+}
 
-serve({
+Bun.serve({
   fetch: app.fetch,
   port,
+  hostname,
 });

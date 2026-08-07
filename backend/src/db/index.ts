@@ -1,15 +1,11 @@
-import Database from "better-sqlite3";
-import { readFileSync } from "fs";
-import { join } from "path";
-import { fileURLToPath } from "url";
+import { Database, type SQLQueryBindings } from "bun:sqlite";
+import schemaSql from "./schema.sql" with { type: "text" };
 import { getDefaultDbPath } from "./paths.js";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-
-let db: Database.Database | null = null;
+let db: Database | null = null;
 let activeDbPath: string | null = null;
 
-export function getDb(dbPath?: string): Database.Database {
+export function getDb(dbPath?: string): Database {
   const resolved = dbPath || getDefaultDbPath();
   if (!db || activeDbPath !== resolved) {
     if (db) {
@@ -17,13 +13,24 @@ export function getDb(dbPath?: string): Database.Database {
     }
     db = new Database(resolved);
     activeDbPath = resolved;
-    db.pragma("journal_mode = WAL");
-    db.pragma("foreign_keys = ON");
+    db.exec("PRAGMA journal_mode = WAL");
+    db.exec("PRAGMA foreign_keys = ON");
 
-    const schema = readFileSync(join(__dirname, "schema.sql"), "utf-8");
-    db.exec(schema);
+    db.exec(schemaSql);
   }
   return db;
+}
+
+/**
+ * Prefix object keys with `@` for bun:sqlite named-parameter binding.
+ * bun:sqlite requires the prefix in the key (better-sqlite3 did not).
+ * Typed as `SQLQueryBindings` because @types/bun's `Statement.run` overload
+ * does not model the named-binding record form (supported at runtime).
+ */
+export function atParams(obj: object): SQLQueryBindings {
+  const out: Record<string, SQLQueryBindings> = {};
+  for (const [k, v] of Object.entries(obj)) out[`@${k}`] = v as SQLQueryBindings;
+  return out as unknown as SQLQueryBindings;
 }
 
 export interface TrendingRepoRow {
@@ -69,7 +76,7 @@ export interface StarredRepoRow {
 }
 
 export function upsertTrendingRepo(
-  db: Database.Database,
+  db: Database,
   repo: Omit<TrendingRepoRow, "fetched_at">,
 ): void {
   const stmt = db.prepare(`
@@ -101,11 +108,11 @@ export function upsertTrendingRepo(
       snapshot_date = excluded.snapshot_date,
       fetched_at = datetime('now')
   `);
-  stmt.run(repo);
+  stmt.run(atParams(repo));
 }
 
 export function upsertStarredRepo(
-  db: Database.Database,
+  db: Database,
   repo: Omit<StarredRepoRow, "fetched_at">,
 ): void {
   const stmt = db.prepare(`
@@ -136,11 +143,11 @@ export function upsertStarredRepo(
       starred_at = excluded.starred_at,
       fetched_at = datetime('now')
   `);
-  stmt.run(repo);
+  stmt.run(atParams(repo));
 }
 
 export function insertTrendingTopics(
-  db: Database.Database,
+  db: Database,
   repoId: string,
   topics: string[],
 ): void {
@@ -153,7 +160,7 @@ export function insertTrendingTopics(
 }
 
 export function insertStarredTopics(
-  db: Database.Database,
+  db: Database,
   repoId: number,
   topics: string[],
 ): void {
@@ -167,7 +174,7 @@ export function insertStarredTopics(
 
 function appendTopicFilters(
   where: string,
-  params: unknown[],
+  params: SQLQueryBindings[],
   topics: string[] | undefined,
   topicsTable: "trending_repo_topics" | "starred_repo_topics",
 ): string {
@@ -256,7 +263,7 @@ export interface FeedStatsDTO {
 }
 
 function batchFetchTopics(
-  db: Database.Database,
+  db: Database,
   repoIds: (string | number)[],
   table: "trending_repo_topics" | "starred_repo_topics",
 ): Map<string | number, string[]> {
@@ -280,7 +287,7 @@ function batchFetchTopics(
 }
 
 export function getFeedItems(
-  db: Database.Database,
+  db: Database,
   type: string,
   filters: {
     language?: string;
@@ -302,7 +309,7 @@ export function getFeedItems(
 }
 
 function getTrendingItems(
-  db: Database.Database,
+  db: Database,
   filters: {
     language?: string;
     topics?: string[];
@@ -315,7 +322,7 @@ function getTrendingItems(
   pageSize: number,
 ): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
-  const params: unknown[] = [];
+  const params: SQLQueryBindings[] = [];
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -419,7 +426,7 @@ function getTrendingItems(
 }
 
 function getStarredItems(
-  db: Database.Database,
+  db: Database,
   filters: {
     language?: string;
     topics?: string[];
@@ -433,7 +440,7 @@ function getStarredItems(
   pageSize: number,
 ): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
-  const params: unknown[] = [];
+  const params: SQLQueryBindings[] = [];
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -535,7 +542,7 @@ function getStarredItems(
   return { items, total };
 }
 
-export function getTrendingDates(db: Database.Database): string[] {
+export function getTrendingDates(db: Database): string[] {
   const rows = db
     .prepare(
       `
@@ -549,7 +556,7 @@ export function getTrendingDates(db: Database.Database): string[] {
   return rows.map((r) => r.snapshot_date);
 }
 
-export function getStats(db: Database.Database): FeedStatsDTO {
+export function getStats(db: Database): FeedStatsDTO {
   const trendingCount = (
     db
       .prepare(
@@ -591,7 +598,7 @@ export function getStats(db: Database.Database): FeedStatsDTO {
   };
 }
 
-export function getLanguages(db: Database.Database): string[] {
+export function getLanguages(db: Database): string[] {
   const rows = db
     .prepare(
       `
@@ -607,7 +614,7 @@ export function getLanguages(db: Database.Database): string[] {
   return rows.map((r) => r.language);
 }
 
-export function getLatestStarredAt(db: Database.Database): string | null {
+export function getLatestStarredAt(db: Database): string | null {
   const row = db
     .prepare("SELECT MAX(starred_at) as starred_at FROM starred_repos")
     .get() as

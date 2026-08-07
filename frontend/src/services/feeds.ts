@@ -4,8 +4,8 @@ import type {
   FeedStats,
   FeedItem,
 } from "@/types/feed";
+import { resolveApiBase } from "@/lib/desktop";
 
-const API_BASE = "/api";
 const STATIC_BASE =
   import.meta.env.VITE_STATIC_BASE ||
   `${import.meta.env.BASE_URL}data`.replace(/\/{2,}/g, "/");
@@ -215,7 +215,8 @@ export async function fetchFeeds(
   if (filters.starsMin != null) params.set("starsMin", String(filters.starsMin));
   if (filters.starsMax != null) params.set("starsMax", String(filters.starsMax));
 
-  const res = await fetch(`${API_BASE}/feeds?${params}`);
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds?${params}`);
   if (!res.ok) throw new Error(`Failed to fetch feeds: ${res.statusText}`);
   return res.json();
 }
@@ -228,7 +229,8 @@ export async function fetchStats(): Promise<FeedStats> {
     return res.json();
   }
 
-  const res = await fetch(`${API_BASE}/feeds/stats`);
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds/stats`);
   if (!res.ok) throw new Error(`Failed to fetch stats: ${res.statusText}`);
   return res.json();
 }
@@ -241,7 +243,8 @@ export async function fetchLanguages(): Promise<string[]> {
     return res.json();
   }
 
-  const res = await fetch(`${API_BASE}/feeds/languages`);
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds/languages`);
   if (!res.ok) throw new Error(`Failed to fetch languages: ${res.statusText}`);
   return res.json();
 }
@@ -260,7 +263,8 @@ export async function fetchDates(): Promise<string[]> {
     return res.json();
   }
 
-  const res = await fetch(`${API_BASE}/feeds/dates`);
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds/dates`);
   if (!res.ok) throw new Error(`Failed to fetch dates: ${res.statusText}`);
   return res.json();
 }
@@ -275,7 +279,8 @@ export async function syncFeeds(
     throw new Error("Sync is not available in static/GitHub Pages mode");
   }
 
-  const res = await fetch(`${API_BASE}/feeds/sync`, {
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds/sync`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ type, period, force, days }),

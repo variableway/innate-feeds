@@ -1,22 +1,18 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import Database from "better-sqlite3";
-import { readFileSync } from "fs";
-import { join } from "path";
-import { fileURLToPath } from "url";
+import { Database } from "bun:sqlite";
+import schemaSql from "./schema.sql" with { type: "text" };
+import { atParams } from "./index.js";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-
-function createTestDb(): Database.Database {
+function createTestDb(): Database {
   const db = new Database(":memory:");
-  db.pragma("journal_mode = WAL");
-  db.pragma("foreign_keys = ON");
-  const schema = readFileSync(join(__dirname, "schema.sql"), "utf-8");
-  db.exec(schema);
+  db.exec("PRAGMA journal_mode = WAL");
+  db.exec("PRAGMA foreign_keys = ON");
+  db.exec(schemaSql);
   return db;
 }
 
 function insertTrendingRepo(
-  db: Database.Database,
+  db: Database,
   overrides: Partial<{
     id: string;
     github_repo_id: number;
@@ -59,12 +55,12 @@ function insertTrendingRepo(
       @stars, @forks, @watchers, @language, @owner_login, @owner_avatar_url, @owner_url,
       @created_at, @updated_at, @period, @snapshot_date
     )
-  `).run(repo);
+  `).run(atParams(repo));
   return repo;
 }
 
 function insertStarredRepo(
-  db: Database.Database,
+  db: Database,
   overrides: Partial<{
     id: number;
     full_name: string;
@@ -103,12 +99,12 @@ function insertStarredRepo(
       @stars, @forks, @watchers, @language, @owner_login, @owner_avatar_url, @owner_url,
       @created_at, @updated_at, @starred_at
     )
-  `).run(repo);
+  `).run(atParams(repo));
   return repo;
 }
 
 describe("Database schema", () => {
-  let db: Database.Database;
+  let db: Database;
 
   beforeEach(() => {
     db = createTestDb();
@@ -140,7 +136,7 @@ describe("Database schema", () => {
 });
 
 describe("Trending queries", () => {
-  let db: Database.Database;
+  let db: Database;
 
   beforeEach(() => {
     db = createTestDb();
@@ -218,7 +214,7 @@ describe("Trending queries", () => {
 });
 
 describe("Starred queries", () => {
-  let db: Database.Database;
+  let db: Database;
 
   beforeEach(() => {
     db = createTestDb();
@@ -274,7 +270,7 @@ describe("Starred queries", () => {
 });
 
 describe("Topics", () => {
-  let db: Database.Database;
+  let db: Database;
 
   beforeEach(() => {
     db = createTestDb();

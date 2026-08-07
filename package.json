@@ -22,9 +22,12 @@
     "build:static": "cd backend && bun run export:incremental && cd ../frontend && VITE_STATIC_MODE=true bun run build",
     "build:pages": "VITE_BASE_PATH=${VITE_BASE_PATH:-/} VITE_STATIC_MODE=true bun run build:static",
     "install:all": "cd backend && bun install && cd ../frontend && bun install",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck"
+    "test": "bun --bun vitest run",
+    "test:watch": "bun --bun vitest",
+    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck",
+    "sidecar:build": "cd backend && bun run build:sidecar",
+    "tauri:dev": "bunx tauri dev",
+    "tauri:build": "bun run sidecar:build && bunx tauri build --bundles app && bash tasks/build-dmg.sh"
   },
   "devDependencies": {
     "@vitest/expect": "^4.1.9",
