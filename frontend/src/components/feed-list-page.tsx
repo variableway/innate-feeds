@@ -45,12 +45,12 @@ export function FeedListPage({
   const totalPages = Math.ceil(total / pageSize);
   const selectedItem =
     selectedRepoId != null
-      ? items.find(
+      ? (items.find(
           (item) =>
             item.id === selectedRepoId ||
             String(item.repo.id) === selectedRepoId ||
             item.repo.fullName === decodeURIComponent(selectedRepoId),
-        ) ?? null
+        ) ?? null)
       : null;
 
   const productTabs = (

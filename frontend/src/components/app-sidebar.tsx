@@ -1,6 +1,12 @@
 import * as React from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Github, Newspaper, PanelLeft, Settings, HelpCircle } from "lucide-react";
+import {
+  Github,
+  Newspaper,
+  PanelLeft,
+  Settings,
+  HelpCircle,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface AppSidebarProps extends React.HTMLAttributes<HTMLDivElement> {

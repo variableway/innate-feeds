@@ -51,7 +51,9 @@ export function RepoDetailPane({ item, onClose }: RepoDetailPaneProps) {
       })
       .catch((err) => {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load README");
+          setError(
+            err instanceof Error ? err.message : "Failed to load README",
+          );
           setMarkdown(null);
         }
       })
@@ -74,7 +76,9 @@ export function RepoDetailPane({ item, onClose }: RepoDetailPaneProps) {
               alt=""
               className="h-7 w-7 rounded-full"
             />
-            <h2 className="truncate text-base font-semibold">{repo.fullName}</h2>
+            <h2 className="truncate text-base font-semibold">
+              {repo.fullName}
+            </h2>
           </div>
           <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             {repo.language && <span>{repo.language}</span>}

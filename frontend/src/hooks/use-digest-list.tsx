@@ -15,7 +15,11 @@ const DEFAULT_FILTERS: DigestFilters = { sort: "created", order: "desc" };
 interface DigestFiltersContextValue {
   filters: DigestFilters;
   categories: string[];
-  sources: { id: "ruanyf-weekly" | "github-daily"; repo: string; count: number }[];
+  sources: {
+    id: "ruanyf-weekly" | "github-daily";
+    repo: string;
+    count: number;
+  }[];
   loadingMeta: boolean;
   setFilters: (next: DigestFilters) => void;
 }
@@ -27,9 +31,9 @@ const DigestFiltersContext = createContext<DigestFiltersContextValue | null>(
 export function DigestFiltersProvider({ children }: { children: ReactNode }) {
   const [filters, setFiltersState] = useState<DigestFilters>(DEFAULT_FILTERS);
   const [categories, setCategories] = useState<string[]>([]);
-  const [sources, setSources] = useState<
-    DigestFiltersContextValue["sources"]
-  >([]);
+  const [sources, setSources] = useState<DigestFiltersContextValue["sources"]>(
+    [],
+  );
   const [loadingMeta, setLoadingMeta] = useState(true);
 
   const setFilters = useCallback((next: DigestFilters) => {
@@ -71,19 +75,16 @@ export function DigestFiltersProvider({ children }: { children: ReactNode }) {
 export function useDigestFilters(): DigestFiltersContextValue {
   const ctx = useContext(DigestFiltersContext);
   if (!ctx) {
-    throw new Error("useDigestFilters must be used within DigestFiltersProvider");
+    throw new Error(
+      "useDigestFilters must be used within DigestFiltersProvider",
+    );
   }
   return ctx;
 }
 
 export function useDigestList(pageSize = 20) {
-  const {
-    filters,
-    setFilters,
-    categories,
-    sources,
-    loadingMeta,
-  } = useDigestFilters();
+  const { filters, setFilters, categories, sources, loadingMeta } =
+    useDigestFilters();
   const [items, setItems] = useState<DigestFeedItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

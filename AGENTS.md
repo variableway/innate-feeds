@@ -134,10 +134,16 @@ bun run sync:starred
 # Sync only recently starred (last 24h) — incremental
 bun run sync:starred:recent
 
+# Last 90 days of digest issues + current trending + starred window + READMEs
+bun run sync:window
+# or from repo root: bun run data:sync:window
+
 # CLI equivalents
 bunx tsx src/app/cli.ts sync all-trending
 bunx tsx src/app/cli.ts sync trending daily
 bunx tsx src/app/cli.ts sync starred [username] [--force] [--days N]
+bunx tsx src/app/cli.ts sync digest --days 90
+bunx tsx src/app/cli.ts sync window [--days 90] [--skip-readme] [--force]
 ```
 
 ### Other backend CLI commands
@@ -178,8 +184,11 @@ bun run preview   # Preview production build
 ### Static site build (GitHub Pages)
 
 ```bash
-# From repo root — exports data then builds frontend in static mode
+# From repo root — sync/export first (see docs/data-update-workflow.md), then:
 bun run build:static
+
+# Full 90-day snapshot then static build
+bun run data:update:window && bun run build:static
 
 # Or with custom base path for project pages
 VITE_BASE_PATH=/your-repo bun run build:pages
@@ -215,8 +224,12 @@ bun run format:ts:check   # Check formatting without writing
 
 ### Dual deployment modes
 
-1. **API mode** (default): Frontend calls `/api/*` endpoints, backed by SQLite.
-2. **Static mode** (`VITE_STATIC_MODE=true`): Frontend fetches pre-exported JSON files from `/data/`, no backend needed. Supports incremental chunked data via `manifest.json`.
+1. **API mode** (default): Frontend calls `/api/*` endpoints, backed by SQLite. README disk cache (`./readmes`) is returned immediately; the backend refreshes from GitHub in the background. Digest is served from the newest local dump (`~/.innate/digest` or `frontend/public/data/digest.json`), with a live GitHub fallback if the dump is empty.
+2. **Static mode** (`VITE_STATIC_MODE=true`): Frontend fetches pre-exported JSON from `/data/` (`manifest.json` chunks, `digest.json`). No backend. The browser still calls GitHub live for digest freshness and READMEs, and falls back to bundled `/data/readmes/{owner}/{repo}.md` when live fetch fails.
+
+Both modes are meant to be used together: `bun run data:update:window` writes snapshots into the repo, then `bun run build:static` ships them. Live fetch keeps Pages from going stale between deploys.
+
+GitHub Trending has no historical API. A 90-day window syncs **current** daily/weekly/monthly lists, starred repos in that window, digest issues **created** in that window, and README prefetch for those repos.
 
 ### API endpoints
 
@@ -233,6 +246,9 @@ bun run format:ts:check   # Check formatting without writing
 1. **Trending**: `sync.ts` calls `fetchTrendingWithFirecrawl()` first. If Firecrawl returns no results, it falls back to `fetchTrendingRepos()`, which scrapes `https://github.com/trending` via `gh api` and then fetches full repo metadata via the GitHub API.
 2. **Starred**: `sync.ts` calls `fetchStarredReposWithDate()`, which paginates through `gh api user/starred` (or `users/{username}/starred`) using the `application/vnd.github.v3.star+json` accept header to obtain `starred_at` timestamps. Supports incremental sync via `stopAt` / `days` parameters.
 3. Both pipelines call `upsertTrendingRepo()` / `upsertStarredRepo()`, `insertTrendingTopics()` / `insertStarredTopics()` inside a single `better-sqlite3` transaction.
+4. **Window sync** (`sync window`, default 90 days): current trending + starred since cutoff + digest issues created in-window + README prefetch into `./readmes` and `frontend/public/data/readmes`.
+5. **Digest**: `issues-digest.ts` writes JSON (not SQLite). `data:export` copies the newest dump to `frontend/public/data/digest.json`.
+6. **README (API)**: `fetchRepoReadme()` is cache-first with a background remote refresh. **README (static / browser)**: live GitHub first, bundled `/data/readmes` fallback. Batch prefetch skips files newer than 7 days unless `--force`.
 
 ## Database
 
@@ -262,6 +278,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/github.ts` — wraps the `gh` CLI with `execFileSync` (not `execSync`) to prevent shell injection. Validates `username` against a whitelist regex.
 - `collector/firecrawl.ts` — uses the `firecrawl` SDK to scrape GitHub Trending with a JSON extraction schema. Generates deterministic repo IDs from SHA-256 hash of `fullName`.
 - `collector/sync.ts` — orchestrates trending/starred sync with transactional writes.
+- `collector/sync-window.ts` — 90-day window: trending + starred + digest + README prefetch for static/API snapshots.
 - `data/export-incremental.ts` — exports data as incremental JSON chunks with a manifest for static mode.
 - `data/import-static.ts` — imports static JSON back into SQLite.
 - `db/index.ts` — all SQL lives here. Uses prepared statements from `better-sqlite3`. Batch-fetches topics to avoid N+1 queries. Exports typed interfaces (`FeedItemDTO`, `FeedStatsDTO`, `TrendingItemRow`, `StarredItemRow`).
@@ -274,7 +291,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `FilterBar` implements 300ms search debouncing to avoid excessive API calls.
 - `usePersistedFeedFilters` hook persists filter state to localStorage.
 - Components use `React.forwardRef` and accept a `className` prop merged via the `cn()` utility.
-- `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json` and merges them client-side with `applyFilters()`.
+- `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json`, merges digest `digest.json` with live GitHub, and prefers live READMEs with a static-file fallback.
 - `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.
 
 ### Go scanner
@@ -289,11 +306,13 @@ Schema is defined in `backend/src/db/schema.sql`:
 |---|---|
 | Adding or changing API endpoints | `backend/src/app/server.ts` |
 | Changing how repos are fetched from GitHub | `backend/src/collector/github.ts` |
-| Changing trending sync behavior or fallback strategy | `backend/src/collector/sync.ts` and `backend/src/collector/firecrawl.ts` |
+| Changing trending/starred/window sync | `backend/src/collector/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
+| Changing the 90-day window / README prefetch | `backend/src/collector/sync-window.ts` |
+| Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Changing the database schema or queries | `backend/src/db/schema.sql` and `backend/src/db/index.ts` |
 | Changing database path resolution | `backend/src/db/paths.ts` |
 | Adding new CLI commands | `backend/src/app/cli.ts` and `backend/package.json` scripts |
-| Changing static data export/import | `backend/src/data/` |
+| Changing GitHub Pages deploy / data cron | `.github/workflows/deploy.yml` |
 | Changing pages / routes | `frontend/src/pages/` and `frontend/src/router.tsx` |
 | Changing UI components | `frontend/src/components/` |
 | Changing API client | `frontend/src/services/feeds.ts` |
@@ -313,7 +332,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 
 ## Deployment notes
 
-- No Dockerfile or CI/CD configuration is currently present.
+- CI: `.github/workflows/ci.yml` (test, typecheck, format, build). Pages: `.github/workflows/deploy.yml`.
 - For production API mode: `bun run start` builds the frontend and serves it from the backend at `http://localhost:4000` (same origin as `/api`). Bind with `HOST` / `PORT` as needed.
-- For GitHub Pages static mode: run `bun run build:static` (or `bun run build:pages` with a base path) and deploy `frontend/dist/`.
+- For GitHub Pages: daily cron runs `sync window` (90 days) then deploys `frontend/dist/`. Manual **Run workflow** can choose window / daily / skip. See `docs/data-update-workflow.md`.
 - Dev still uses Vite on port 3000 with `/api` proxied to the backend.

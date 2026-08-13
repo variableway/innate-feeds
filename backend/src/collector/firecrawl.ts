@@ -74,7 +74,10 @@ export async function fetchTrendingWithFirecrawl(
       }
       const [owner, name] = fullName.split("/");
       if (!owner || !name) {
-        console.warn("Skipping Firecrawl repo with invalid fullName:", fullName);
+        console.warn(
+          "Skipping Firecrawl repo with invalid fullName:",
+          fullName,
+        );
         continue;
       }
       repos.push({

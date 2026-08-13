@@ -34,7 +34,9 @@ export function SettingsPage() {
       })
       .catch((err) => {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load settings");
+          setError(
+            err instanceof Error ? err.message : "Failed to load settings",
+          );
         }
       })
       .finally(() => {

@@ -11,9 +11,9 @@
 - Trending：日/周/月快照、历史日期
 - Starred：`starred_at`、增量同步
 - 筛选：语言、topic、搜索、日期、stars、排序
-- 双模式：API+SQLite / 静态 JSON + GitHub Pages
+- 双模式：API+SQLite / 静态 JSON + GitHub Pages（快照 + 浏览器 live GitHub）
 - 多主题、筛选 localStorage 持久化
-- CI + 定时数据流水线
+- CI + 定时数据流水线（`data:update`；完整 90 日窗口用 `data:update:window`）
 
 ## 非目标
 
@@ -25,7 +25,8 @@
 ## 验收标准
 
 - [x] `bun run dev` 可浏览 trending / starred
-- [x] `bun run data:update` 更新静态 JSON
+- [x] `bun run data:update` 更新静态 JSON（含近 90 日 digest）
+- [x] `bun run data:update:window` 近 90 日 starred/digest/README 预取
 - [x] CI：test + typecheck + build
 - [x] GitHub Pages 部署 workflow
 - [ ] [sheet-display](../issues/sheet-display.md) 后台 SQLite 浏览

@@ -44,10 +44,7 @@ interface DigestCachePayload {
   items: DigestFeedItem[];
 }
 
-const readmeMemory = new Map<
-  string,
-  { at: number; value: RepoReadme }
->();
+const readmeMemory = new Map<string, { at: number; value: RepoReadme }>();
 let digestMemory: DigestCachePayload | null = null;
 
 function ghHeaders(): HeadersInit {
@@ -151,10 +148,7 @@ function toDigestItem(
 ): DigestFeedItem | null {
   if (issue.pull_request) return null;
   const urls = extractUrls(issue.body);
-  const { primaryUrl, githubRepoFullName } = pickPrimaryLink(
-    urls,
-    source.repo,
-  );
+  const { primaryUrl, githubRepoFullName } = pickPrimaryLink(urls, source.repo);
   return {
     id: `digest-${source.id}-${issue.id}`,
     type: "digest",
@@ -184,12 +178,11 @@ function readSessionCache(): DigestCachePayload | null {
   try {
     const raw = sessionStorage.getItem(DIGEST_CACHE_KEY);
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as DigestCachePayload & { cachedAt?: number };
+    const parsed = JSON.parse(raw) as DigestCachePayload & {
+      cachedAt?: number;
+    };
     const cachedAt = Date.parse(parsed.fetchedAt);
-    if (
-      Number.isNaN(cachedAt) ||
-      Date.now() - cachedAt > DIGEST_CACHE_TTL_MS
-    ) {
+    if (Number.isNaN(cachedAt) || Date.now() - cachedAt > DIGEST_CACHE_TTL_MS) {
       return null;
     }
     if (!Array.isArray(parsed.items)) return null;
@@ -199,8 +192,32 @@ function readSessionCache(): DigestCachePayload | null {
   }
 }
 
-function compactDigestItems(items: DigestFeedItem[]): DigestFeedItem[] {
+export function compactDigestItems(items: DigestFeedItem[]): DigestFeedItem[] {
   return items.map(({ bodyMarkdown: _body, ...rest }) => rest);
+}
+
+/** Live GitHub items win on id collision; snapshot supplies the longer archive. */
+export function mergeDigestItems(
+  snapshot: DigestFeedItem[],
+  live: DigestFeedItem[],
+): DigestFeedItem[] {
+  const byId = new Map<string, DigestFeedItem>();
+  for (const item of snapshot) byId.set(item.id, item);
+  for (const item of live) {
+    const prev = byId.get(item.id);
+    byId.set(item.id, {
+      ...prev,
+      ...item,
+      bodyMarkdown: item.bodyMarkdown || prev?.bodyMarkdown,
+    });
+  }
+  return [...byId.values()].sort((a, b) =>
+    a.issueCreatedAt < b.issueCreatedAt
+      ? 1
+      : a.issueCreatedAt > b.issueCreatedAt
+        ? -1
+        : 0,
+  );
 }
 
 function writeSessionCache(payload: DigestCachePayload): void {
@@ -246,8 +263,61 @@ async function fetchSourceIssues(
   return items;
 }
 
+export function normalizeDigestItem(
+  raw: unknown,
+  fetchedAt: string,
+): DigestFeedItem | null {
+  if (!raw || typeof raw !== "object") return null;
+  const row = raw as Record<string, unknown>;
+  if (typeof row.id !== "string") return null;
+  const source = row.source;
+  if (source !== "ruanyf-weekly" && source !== "github-daily") return null;
+  const excerpt =
+    typeof row.excerpt === "string"
+      ? row.excerpt
+      : typeof row.bodyExcerpt === "string"
+        ? row.bodyExcerpt
+        : "";
+  return {
+    id: row.id,
+    type: "digest",
+    source,
+    sourceRepo: typeof row.sourceRepo === "string" ? row.sourceRepo : "",
+    title: typeof row.title === "string" ? row.title : "",
+    category: typeof row.category === "string" ? row.category : null,
+    excerpt,
+    bodyMarkdown:
+      typeof row.bodyMarkdown === "string" ? row.bodyMarkdown : null,
+    primaryUrl: typeof row.primaryUrl === "string" ? row.primaryUrl : null,
+    githubRepoFullName:
+      typeof row.githubRepoFullName === "string"
+        ? row.githubRepoFullName
+        : null,
+    issueUrl: typeof row.issueUrl === "string" ? row.issueUrl : "",
+    issueNumber:
+      typeof row.issueNumber === "number" ? row.issueNumber : undefined,
+    authorLogin:
+      typeof row.authorLogin === "string" ? row.authorLogin : "unknown",
+    authorAvatarUrl:
+      typeof row.authorAvatarUrl === "string" ? row.authorAvatarUrl : null,
+    issueCreatedAt:
+      typeof row.issueCreatedAt === "string" ? row.issueCreatedAt : "",
+    issueUpdatedAt:
+      typeof row.issueUpdatedAt === "string" ? row.issueUpdatedAt : "",
+    labels: Array.isArray(row.labels)
+      ? row.labels.filter((l): l is string => typeof l === "string")
+      : [],
+    comments: typeof row.comments === "number" ? row.comments : 0,
+    state: typeof row.state === "string" ? row.state : "open",
+    fetchedAt: typeof row.fetchedAt === "string" ? row.fetchedAt : fetchedAt,
+  };
+}
+
 export async function fetchDigestLive(): Promise<DigestCachePayload> {
-  if (digestMemory && Date.now() - Date.parse(digestMemory.fetchedAt) < DIGEST_CACHE_TTL_MS) {
+  if (
+    digestMemory &&
+    Date.now() - Date.parse(digestMemory.fetchedAt) < DIGEST_CACHE_TTL_MS
+  ) {
     return digestMemory;
   }
   const fromSession = readSessionCache();
@@ -324,7 +394,9 @@ export function applyDigestFilters(
   });
 
   const categories = [
-    ...new Set(all.map((i) => i.category).filter((c): c is string => Boolean(c))),
+    ...new Set(
+      all.map((i) => i.category).filter((c): c is string => Boolean(c)),
+    ),
   ].sort();
   const sources = DIGEST_SOURCES.map((s) => ({
     id: s.id,
@@ -420,9 +492,7 @@ export async function fetchRepoReadmeLive(
   }
 
   try {
-    const payload = (await ghGetJson(
-      `repos/${owner}/${repo}/readme`,
-    )) as {
+    const payload = (await ghGetJson(`repos/${owner}/${repo}/readme`)) as {
       name?: string;
       content?: string;
       encoding?: string;

@@ -14,15 +14,7 @@ interface MarkdownBodyProps extends React.HTMLAttributes<HTMLDivElement> {
  * Raw HTML is sanitized via rehype-sanitize.
  */
 const MarkdownBody = React.forwardRef<HTMLDivElement, MarkdownBodyProps>(
-  (
-    {
-      markdown,
-      emptyMessage = "No content.",
-      className,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ markdown, emptyMessage = "No content.", className, ...props }, ref) => {
     if (!markdown.trim()) {
       return (
         <div
@@ -38,10 +30,7 @@ const MarkdownBody = React.forwardRef<HTMLDivElement, MarkdownBodyProps>(
     return (
       <div
         ref={ref}
-        className={cn(
-          "markdown-body max-w-none",
-          className,
-        )}
+        className={cn("markdown-body max-w-none", className)}
         {...props}
       >
         <ReactMarkdown

@@ -12,10 +12,7 @@ interface DigestCardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function displayTitle(item: DigestFeedItem): string {
   if (!item.category) return item.title;
-  const prefixes = [
-    `【${item.category}】`,
-    `[${item.category}]`,
-  ];
+  const prefixes = [`【${item.category}】`, `[${item.category}]`];
   for (const p of prefixes) {
     if (item.title.startsWith(p)) {
       return item.title.slice(p.length).trim() || item.title;
@@ -26,7 +23,14 @@ function displayTitle(item: DigestFeedItem): string {
 
 const DigestCard = React.forwardRef<HTMLDivElement, DigestCardProps>(
   (
-    { item, compact = false, selected = false, onItemSelect, className, ...props },
+    {
+      item,
+      compact = false,
+      selected = false,
+      onItemSelect,
+      className,
+      ...props
+    },
     ref,
   ) => {
     const title = displayTitle(item);
@@ -62,7 +66,9 @@ const DigestCard = React.forwardRef<HTMLDivElement, DigestCardProps>(
               {item.category}
             </span>
           )}
-          <span className="rounded-full border px-2 py-0.5">{item.sourceRepo}</span>
+          <span className="rounded-full border px-2 py-0.5">
+            {item.sourceRepo}
+          </span>
           <span className="ml-auto">{formatDate(item.issueCreatedAt)}</span>
         </div>
 

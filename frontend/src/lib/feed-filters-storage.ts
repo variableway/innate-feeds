@@ -17,9 +17,7 @@ function storageKey(feedType: "trending" | "starred"): string {
   return `${STORAGE_PREFIX}:v${STORAGE_VERSION}:${feedType}`;
 }
 
-function sanitizePersistedFilters(
-  raw: unknown,
-): PersistedFeedFilters | null {
+function sanitizePersistedFilters(raw: unknown): PersistedFeedFilters | null {
   if (!raw || typeof raw !== "object") return null;
 
   const input = raw as Record<string, unknown>;

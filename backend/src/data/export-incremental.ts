@@ -14,6 +14,8 @@ import {
   getTrendingDatesFromManifest,
   upsertManifestPath,
 } from "./manifest-utils.js";
+import { exportNewestDigestToStatic } from "./digest-store.js";
+import { copyReadmesToPublic } from "./export-digest.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -49,7 +51,8 @@ function exportTrendingChunk(
 
 function main() {
   const dbPath = getDefaultDbPath();
-  const outDir = process.argv[2] || join(__dirname, "../../../frontend/public/data");
+  const outDir =
+    process.argv[2] || join(__dirname, "../../../frontend/public/data");
   const db = getDb(dbPath);
   const today = new Date().toISOString().slice(0, 10);
 
@@ -69,13 +72,19 @@ function main() {
     const chunkPath = `chunks/trending/${date}.json`;
     const chunkExists = existsSync(join(outDir, chunkPath));
     if (chunkExists && date !== today) {
-      manifest.feeds.trending = upsertManifestPath(manifest.feeds.trending, chunkPath);
+      manifest.feeds.trending = upsertManifestPath(
+        manifest.feeds.trending,
+        chunkPath,
+      );
       continue;
     }
 
     const trending = exportTrendingChunk(db, outDir, date);
     if (trending) {
-      manifest.feeds.trending = upsertManifestPath(manifest.feeds.trending, chunkPath);
+      manifest.feeds.trending = upsertManifestPath(
+        manifest.feeds.trending,
+        chunkPath,
+      );
     }
   }
 
@@ -92,7 +101,10 @@ function main() {
     join(outDir, starredChunkPath),
     JSON.stringify(starredRecent, null, 2),
   );
-  manifest.feeds.starred = upsertManifestPath(manifest.feeds.starred, starredChunkPath);
+  manifest.feeds.starred = upsertManifestPath(
+    manifest.feeds.starred,
+    starredChunkPath,
+  );
 
   const starredBootstrapPath = join(outDir, "starred.json");
   if (!existsSync(starredBootstrapPath)) {
@@ -103,7 +115,10 @@ function main() {
   if (!existsSync(trendingBootstrapPath)) {
     const allTrending = getFeedItems(db, "trending", {}, 1, 100000);
     if (allTrending.items.length > 0) {
-      writeFileSync(trendingBootstrapPath, JSON.stringify(allTrending, null, 2));
+      writeFileSync(
+        trendingBootstrapPath,
+        JSON.stringify(allTrending, null, 2),
+      );
     }
   }
 
@@ -115,8 +130,25 @@ function main() {
     join(outDir, "languages.json"),
     JSON.stringify(getLanguages(db), null, 2),
   );
-  writeFileSync(join(outDir, "dates.json"), JSON.stringify(publishedDates, null, 2));
-  writeFileSync(join(outDir, "stats.json"), JSON.stringify(getStats(db), null, 2));
+  writeFileSync(
+    join(outDir, "dates.json"),
+    JSON.stringify(publishedDates, null, 2),
+  );
+  writeFileSync(
+    join(outDir, "stats.json"),
+    JSON.stringify(getStats(db), null, 2),
+  );
+
+  const digestPath = join(outDir, "digest.json");
+  const digestExported = exportNewestDigestToStatic(digestPath);
+  if (digestExported) {
+    console.log(`Exported digest snapshot → ${digestExported}`);
+  }
+
+  const readmes = copyReadmesToPublic();
+  if (readmes.copied) {
+    console.log(`Copied README cache → ${readmes.dest}`);
+  }
 
   console.log(
     `Exported incremental chunks: trending dates=${publishedDates.join(", ")}, starred=${starredRecent.items.length}`,

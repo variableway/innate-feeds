@@ -1,11 +1,13 @@
 # Innate Feeds
 
-A full-stack web application for discovering and browsing GitHub trending and starred repositories. Supports dual deployment modes: a traditional API+SQLite backend, or a static GitHub Pages site with pre-exported JSON data.
+A full-stack web application for discovering and browsing GitHub trending and starred repositories, plus a community issues digest. Supports dual deployment modes: a traditional API+SQLite backend, or a static GitHub Pages site with pre-exported JSON data. Both modes keep a **snapshot** (SQLite / JSON / `./readmes`) and still **fetch GitHub live** when you open digest items or READMEs.
 
 ## Features
 
 - **GitHub Trending** — Browse daily, weekly, and monthly trending repositories with snapshot history.
 - **GitHub Starred** — View your starred repositories with `starred_at` timestamps and incremental sync.
+- **Issues digest** — ruanyf/weekly and GitHubDaily issue boards; static builds ship a 90-day JSON snapshot and merge live GitHub on top.
+- **Repo README** — In-app Markdown. API mode serves `./readmes` then refreshes from GitHub. Static mode live-fetches GitHub and falls back to bundled `/data/readmes`.
 - **Filtering & Search** — Filter by language, topics, date snapshot, stars range; search by name/description; sort by stars, updated, created, or starred date.
 - **Dual Mode** — Run as a full-stack app (Hono API + SQLite) or deploy as a static site (GitHub Pages) with incremental JSON data chunks.
 - **Multi-theme** — Default, Notion, and Linear theme support.
@@ -54,25 +56,22 @@ Override bind address / port:
 HOST=0.0.0.0 PORT=8080 bun run start
 ```
 
-### Sync Data
+### Sync data
 
 ```bash
-cd backend
+# Daily-ish (trending today, starred last 24h, digest last 90 days, export JSON)
+bun run data:update
 
-# Sync trending repos (all periods: daily, weekly, monthly)
-bun run sync:trending
+# Last ~3 months: trending now, starred since cutoff, digest issues, README prefetch
+bun run data:update:window
 
-# Sync your starred repos (full)
-bun run sync:starred
-
-# Sync only recently starred (last 24h, incremental)
-bun run sync:starred:recent
-
-# View stats
-bun run stats
+# Then static GitHub Pages build
+bun run build:static
 ```
 
-### Build for Production
+See [docs/data-update-workflow.md](docs/data-update-workflow.md) for flags (`--days 90`, `--skip-readme`, `--force`) and what “3 months trending” means.
+
+### Build for production
 
 **API mode (one process):**
 ```bash
@@ -82,12 +81,16 @@ bun run start
 
 **Static mode (GitHub Pages):**
 ```bash
-# Export data + build frontend in static mode
+# After a window or daily sync+export:
 bun run build:static
 
 # For project pages with a sub-path
 VITE_BASE_PATH=/your-repo bun run build:pages
 ```
+
+Static mode still calls `api.github.com` / `raw.githubusercontent.com` from the browser for digest freshness and READMEs. Bundled `digest.json` and `/data/readmes/` are fallbacks when GitHub is slow or rate-limited.
+
+The **Deploy to GitHub Pages** workflow runs a **90-day window sync** on the daily cron (and on **Run workflow**, default). Pushes to `main` use the lighter daily update. See [docs/data-update-workflow.md](docs/data-update-workflow.md).
 
 ## Project Structure
 
@@ -96,14 +99,14 @@ innate-feeds/
 ├── backend/
 │   └── src/
 │       ├── app/          # server.ts (Hono API), cli.ts (CLI)
-│       ├── collector/    # github.ts, firecrawl.ts, sync.ts
-│       ├── data/         # export/import static JSON
+│       ├── collector/    # github.ts, firecrawl.ts, sync.ts, sync-window.ts
+│       ├── data/         # export/import static JSON, digest snapshot, README cache
 │       └── db/           # SQLite schema, queries, path config
 ├── frontend/
 │   └── src/
-│       ├── pages/        # TanStack Router routes (trending, starred)
+│       ├── pages/        # TanStack Router routes (trending, starred, digest)
 │       ├── components/   # FeedCard, FilterBar, AppSidebar, etc.
-│       ├── services/     # feeds.ts (API + static mode client)
+│       ├── services/     # feeds.ts (API + static), github-live.ts (browser GitHub)
 │       ├── hooks/        # usePersistedFeedFilters
 │       ├── lib/          # utils, theme, filter storage
 │       └── types/        # TypeScript domain types
@@ -116,9 +119,9 @@ innate-feeds/
 | Layer | Technology |
 |---|---|
 | Frontend | React 19, TanStack Router, Vite 6, Tailwind CSS v4 |
-| Backend | Hono 4, @hono/node-server |
-| Database | SQLite via better-sqlite3 (WAL mode) |
-| Data Sources | GitHub CLI (`gh`), Firecrawl |
+| Backend | Hono 4, Bun SQLite |
+| Database | SQLite (WAL mode) |
+| Data Sources | GitHub CLI (`gh`), Firecrawl, public GitHub REST from the browser |
 | Validation | Zod |
 | Runtime | Bun / Node.js 18+ |
 
@@ -132,6 +135,7 @@ innate-feeds/
 | `VITE_STATIC_MODE` | — | Set to `true` for static/GitHub Pages mode |
 | `VITE_BASE_PATH` | `/` | Base URL path for GitHub Pages project sites |
 | `GITHUB_TOKEN` | — | Used by `git-repo-scanner` for higher API rate limits |
+| `READMES_DIR` | `./readmes` | On-disk README cache root |
 
 ## License
 

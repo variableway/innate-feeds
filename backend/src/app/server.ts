@@ -15,21 +15,11 @@ import {
   syncAllTrending,
   syncStarred,
 } from "../collector/sync.js";
-import {
-  fetchRepoReadme,
-  type TrendingPeriod,
-} from "../collector/github.js";
-import {
-  getDigestFeedItems,
-  getDigestItemById,
-} from "../data/digest-store.js";
+import { fetchRepoReadme, type TrendingPeriod } from "../collector/github.js";
+import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";
 import { listCachedReadmes } from "../data/readme-cache.js";
-import {
-  buildAuthStatus,
-  removePat,
-  savePatFromBody,
-} from "../auth/index.js";
+import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
 
 const app = new Hono();
 
@@ -52,8 +42,7 @@ app.get("/api/health", (c) => {
 
 app.onError((err, c) => {
   console.error("Unhandled error:", err);
-  const message =
-    err instanceof Error ? err.message : "Internal server error";
+  const message = err instanceof Error ? err.message : "Internal server error";
   return c.json({ error: message }, 500);
 });
 
@@ -178,10 +167,7 @@ app.get("/api/repos/:owner/:repo/readme/download", async (c) => {
     const readme = await fetchRepoReadme(owner, repo);
     const filename = `${owner}-${repo}.md`;
     c.header("Content-Type", "text/markdown; charset=utf-8");
-    c.header(
-      "Content-Disposition",
-      `attachment; filename="${filename}"`,
-    );
+    c.header("Content-Disposition", `attachment; filename="${filename}"`);
     return c.body(readme.markdown);
   } catch (err) {
     const status =
@@ -273,10 +259,7 @@ app.put("/api/auth/pat", async (c) => {
     const body = await c.req.json();
     const result = savePatFromBody(body);
     if (!result.ok) {
-      return c.json(
-        { error: result.error, details: result.details },
-        400,
-      );
+      return c.json({ error: result.error, details: result.details }, 400);
     }
     return c.json(result);
   } catch (err) {
@@ -341,7 +324,8 @@ function mountWebsite(app: Hono): string | null {
   const distRoot = resolve(distDir);
 
   const resolvePublicFile = (pathname: string): string | null => {
-    const relative = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+    const relative =
+      pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
     const candidate = resolve(distRoot, relative);
     if (candidate !== distRoot && !candidate.startsWith(`${distRoot}/`)) {
       return null;

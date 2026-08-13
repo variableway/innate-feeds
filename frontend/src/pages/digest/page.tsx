@@ -25,7 +25,7 @@ export function DigestPage() {
   } = useDigestList(20);
 
   const selected = digestId
-    ? items.find((i) => i.id === digestId) ?? null
+    ? (items.find((i) => i.id === digestId) ?? null)
     : null;
 
   const openDetail = (item: DigestFeedItem) => {
@@ -41,9 +41,9 @@ export function DigestPage() {
 
   const hasActiveFilters = Boolean(
     filters.search ||
-      filters.source ||
-      filters.category ||
-      filters.hasPrimaryUrl,
+    filters.source ||
+    filters.category ||
+    filters.hasPrimaryUrl,
   );
 
   const filterBar = (
@@ -74,8 +74,8 @@ export function DigestPage() {
     if (fetchedAt === null) {
       return (
         <div className="rounded-lg border bg-card p-8 text-center text-muted-foreground">
-          No digest items found. Issues are loaded live from GitHub (ruanyf/weekly
-          and GitHubDaily/GitHubDaily).
+          No digest items found. Issues are loaded live from GitHub
+          (ruanyf/weekly and GitHubDaily/GitHubDaily).
         </div>
       );
     }
@@ -118,26 +118,24 @@ export function DigestPage() {
         list={
           <div className="space-y-2 p-3">
             {filterBar}
-            {loading ? (
-              Array.from({ length: 8 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="h-20 animate-pulse rounded-lg border bg-card"
-                />
-              ))
-            ) : items.length === 0 ? (
-              emptyMessage
-            ) : (
-              items.map((item) => (
-                <DigestCard
-                  key={item.id}
-                  item={item}
-                  compact
-                  selected={item.id === digestId}
-                  onItemSelect={openDetail}
-                />
-              ))
-            )}
+            {loading
+              ? Array.from({ length: 8 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="h-20 animate-pulse rounded-lg border bg-card"
+                  />
+                ))
+              : items.length === 0
+                ? emptyMessage
+                : items.map((item) => (
+                    <DigestCard
+                      key={item.id}
+                      item={item}
+                      compact
+                      selected={item.id === digestId}
+                      onItemSelect={openDetail}
+                    />
+                  ))}
             {pagination}
           </div>
         }

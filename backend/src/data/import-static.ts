@@ -51,7 +51,10 @@ function loadJson<T>(path: string): T | null {
   return JSON.parse(readFileSync(path, "utf-8")) as T;
 }
 
-function collectFeedItems(dataDir: string): { trending: StaticFeedItem[]; starred: StaticFeedItem[] } {
+function collectFeedItems(dataDir: string): {
+  trending: StaticFeedItem[];
+  starred: StaticFeedItem[];
+} {
   const legacyTrending =
     loadJson<StaticFeedResponse>(join(dataDir, "trending.json"))?.items ?? [];
   const legacyStarred =
@@ -76,7 +79,8 @@ function collectFeedItems(dataDir: string): { trending: StaticFeedItem[]; starre
 
 function main() {
   const dbPath = getDefaultDbPath();
-  const dataDir = process.argv[2] || join(__dirname, "../../../frontend/public/data");
+  const dataDir =
+    process.argv[2] || join(__dirname, "../../../frontend/public/data");
   const db = getDb(dbPath);
 
   const { trending, starred } = collectFeedItems(dataDir);
@@ -147,7 +151,9 @@ function main() {
   });
 
   const { trendingCount, starredCount } = tx();
-  console.log(`Imported ${trendingCount} trending and ${starredCount} starred items`);
+  console.log(
+    `Imported ${trendingCount} trending and ${starredCount} starred items`,
+  );
 }
 
 main();

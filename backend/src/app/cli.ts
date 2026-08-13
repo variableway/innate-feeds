@@ -3,6 +3,7 @@ import {
   syncAllTrending,
   syncStarred,
 } from "../collector/sync.js";
+import { parseWindowArgs, syncWindow } from "../collector/sync-window.js";
 import {
   getDefaultDigestDir,
   parseDigestArgs,
@@ -27,17 +28,28 @@ Usage:
   tsx src/app/cli.ts sync trending [daily|weekly|monthly]
   tsx src/app/cli.ts sync all-trending
   tsx src/app/cli.ts sync starred [user] [--force] [--days N]
-  tsx src/app/cli.ts sync digest [--since YYYY-MM-DD] [--until YYYY-MM-DD] [--created-only] [--out DIR] [--source ID]
+  tsx src/app/cli.ts sync digest [--since YYYY-MM-DD | --days N] [--until YYYY-MM-DD] [--created-only] [--out DIR] [--source ID]
+  tsx src/app/cli.ts sync window [--days 90] [--skip-trending] [--skip-starred] [--skip-digest] [--skip-readme] [--force]
   tsx src/app/cli.ts list [trending|starred]
   tsx src/app/cli.ts dates
   tsx src/app/cli.ts stats
 
 Digest notes:
   Writes JSON under ~/.innate/digest/ by default (override with --out).
+  Also copies a frontend snapshot to frontend/public/data/digest.json via sync window.
   Does not touch trending/starred SQLite tables.
   Examples:
+    bun run sync:digest -- --days 90
     bun run sync:digest -- --since 2026-08-01
     bun run export:digest-local -- --since 2026-08-01 --until 2026-09-01 --created-only
+
+Window notes:
+  Default --days 90: current trending snapshots, starred since cutoff,
+  digest issues created in-window, README prefetch (./readmes + frontend/public/data/readmes).
+  Example:
+    bun run sync:window
+    bun run sync:window -- --days 90 --skip-readme
+    bun run sync:window -- --force
 `);
 }
 
@@ -47,9 +59,7 @@ async function main() {
       const type = process.argv[3];
       if (type === "trending") {
         const period = (process.argv[4] || "daily") as
-          | "daily"
-          | "weekly"
-          | "monthly";
+          "daily" | "weekly" | "monthly";
         const count = await syncTrending(period, dbPath);
         console.log(`Synced ${count} ${period} trending repositories`);
       } else if (type === "all-trending") {
@@ -89,6 +99,11 @@ async function main() {
             2,
           ),
         );
+      } else if (type === "window") {
+        const summary = await syncWindow(
+          parseWindowArgs(process.argv.slice(4)),
+        );
+        console.log(JSON.stringify(summary, null, 2));
       } else {
         process.exit(1);
       }

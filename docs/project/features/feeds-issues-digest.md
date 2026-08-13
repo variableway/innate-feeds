@@ -1,10 +1,10 @@
 # Feature: feeds-issues-digest
 
-**Status:** proposed  
-**Updated:** 2026-08-12  
+**Status:** done  
+**Updated:** 2026-08-13  
 **Contract impact:** extends [feeds-api-v1](../spec/contracts/feeds-api-v1.md) (`type=digest`) — document when Slice 3 lands  
 **Related UX:** [repo-detail-panel.md](./repo-detail-panel.md)（trending/starred 共用 master-detail 模式）  
-**Prototype:** [`backend/src/collector/issues-digest.ts`](../../../backend/src/collector/issues-digest.ts)（standalone，未接 DB/API/UI）
+**Prototype:** [`backend/src/collector/issues-digest.ts`](../../../backend/src/collector/issues-digest.ts)；静态快照 `frontend/public/data/digest.json` + 浏览器 live GitHub；90 日窗口 `bun run data:sync:window`
 
 **Sources (v1):**
 

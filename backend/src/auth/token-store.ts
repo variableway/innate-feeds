@@ -4,7 +4,13 @@ import {
   randomBytes,
   scryptSync,
 } from "crypto";
-import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  unlinkSync,
+  writeFileSync,
+} from "fs";
 import { dirname, join } from "path";
 import { getDefaultDbPath, INNATE_HOME } from "../db/paths.js";
 

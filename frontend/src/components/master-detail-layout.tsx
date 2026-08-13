@@ -28,10 +28,7 @@ const MasterDetailLayout = React.forwardRef<
     return (
       <div
         ref={ref}
-        className={cn(
-          "flex h-full min-h-0 flex-col md:flex-row",
-          className,
-        )}
+        className={cn("flex h-full min-h-0 flex-col md:flex-row", className)}
         {...props}
       >
         <div

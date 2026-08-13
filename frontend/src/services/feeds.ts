@@ -13,6 +13,8 @@ import {
   fetchDigestDetailLive,
   fetchDigestLive,
   fetchRepoReadmeLive,
+  mergeDigestItems,
+  normalizeDigestItem,
 } from "./github-live";
 
 const API_BASE = "/api";
@@ -35,7 +37,9 @@ async function loadStaticManifest(): Promise<StaticManifest | null> {
   return res.json();
 }
 
-function getTrendingDatesFromManifest(manifest: StaticManifest | null): string[] {
+function getTrendingDatesFromManifest(
+  manifest: StaticManifest | null,
+): string[] {
   const paths = manifest?.feeds?.trending ?? [];
   return paths
     .map((path) => path.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
@@ -52,7 +56,9 @@ function getLatestTrendingSnapshotDate(items: FeedItem[]): string | null {
   return dates.sort().at(-1) ?? null;
 }
 
-async function loadOptionalStaticFeed(path: string): Promise<FeedResponse | null> {
+async function loadOptionalStaticFeed(
+  path: string,
+): Promise<FeedResponse | null> {
   const res = await fetch(path);
   if (!res.ok) return null;
   return (await res.json()) as FeedResponse;
@@ -195,7 +201,9 @@ export async function fetchFeeds(
       const feedsToMerge: FeedResponse[] = [...chunkFeeds];
 
       // Keep compatibility with initial full snapshot files (especially starred.json).
-      const baseFeed = await loadOptionalStaticFeed(`${STATIC_BASE}/${type}.json`);
+      const baseFeed = await loadOptionalStaticFeed(
+        `${STATIC_BASE}/${type}.json`,
+      );
       if (baseFeed) {
         feedsToMerge.unshift(baseFeed);
       }
@@ -223,8 +231,10 @@ export async function fetchFeeds(
   if (filters.sort) params.set("sort", filters.sort);
   if (filters.order) params.set("order", filters.order);
   if (filters.date) params.set("date", filters.date);
-  if (filters.starsMin != null) params.set("starsMin", String(filters.starsMin));
-  if (filters.starsMax != null) params.set("starsMax", String(filters.starsMax));
+  if (filters.starsMin != null)
+    params.set("starsMin", String(filters.starsMin));
+  if (filters.starsMax != null)
+    params.set("starsMax", String(filters.starsMax));
 
   const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds?${params}`);
@@ -305,52 +315,118 @@ export async function fetchDigestFeeds(
   page = 1,
   pageSize = 20,
 ): Promise<DigestResponse> {
-  if (IS_STATIC) {
-    const live = await fetchDigestLive();
-    return applyDigestFilters(live.items, filters, page, pageSize, live.fetchedAt);
+  if (!IS_STATIC) {
+    try {
+      const params = new URLSearchParams({
+        type: "digest",
+        page: String(page),
+        pageSize: String(pageSize),
+      });
+      if (filters.search) params.set("search", filters.search);
+      if (filters.source) params.set("source", filters.source);
+      if (filters.category) params.set("category", filters.category);
+      if (filters.sort) params.set("sort", filters.sort);
+      if (filters.order) params.set("order", filters.order);
+      if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
+
+      const res = await fetch(`${API_BASE}/feeds?${params}`);
+      if (res.ok) {
+        const data = (await res.json()) as DigestResponse;
+        if ((data.total ?? 0) > 0 || data.fetchedAt) return data;
+      }
+    } catch {
+      /* backend dump missing — fall through */
+    }
   }
 
+  const snapshot = await loadStaticDigestSnapshot();
+  let liveItems: DigestFeedItem[] = [];
+  let liveFetchedAt: string | null = null;
   try {
-    const params = new URLSearchParams({
-      type: "digest",
-      page: String(page),
-      pageSize: String(pageSize),
-    });
-    if (filters.search) params.set("search", filters.search);
-    if (filters.source) params.set("source", filters.source);
-    if (filters.category) params.set("category", filters.category);
-    if (filters.sort) params.set("sort", filters.sort);
-    if (filters.order) params.set("order", filters.order);
-    if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
-
-    const res = await fetch(`${API_BASE}/feeds?${params}`);
-    if (!res.ok) throw new Error(`Failed to fetch digest: ${res.statusText}`);
-    const data = (await res.json()) as DigestResponse;
-    if ((data.total ?? 0) > 0 || data.fetchedAt) return data;
-  } catch {
-    /* backend dump missing — fall through to live GitHub */
+    const live = await fetchDigestLive();
+    liveItems = live.items;
+    liveFetchedAt = live.fetchedAt;
+  } catch (err) {
+    if (!snapshot) throw err;
   }
 
-  const live = await fetchDigestLive();
-  return applyDigestFilters(live.items, filters, page, pageSize, live.fetchedAt);
+  const merged = mergeDigestItems(snapshot?.items ?? [], liveItems);
+  if (merged.length === 0) {
+    throw new Error("Could not load digest from snapshot or GitHub.");
+  }
+  return applyDigestFilters(
+    merged,
+    filters,
+    page,
+    pageSize,
+    liveFetchedAt || snapshot?.fetchedAt || new Date().toISOString(),
+  );
 }
 
-export async function fetchDigestDetail(
-  id: string,
-): Promise<DigestFeedItem> {
-  if (IS_STATIC) {
-    return fetchDigestDetailLive(id);
+async function loadStaticDigestSnapshot(): Promise<{
+  fetchedAt: string;
+  items: DigestFeedItem[];
+} | null> {
+  try {
+    const res = await fetch(`${STATIC_BASE}/digest.json`);
+    if (!res.ok) return null;
+    const data = (await res.json()) as {
+      fetchedAt?: string;
+      items?: unknown[];
+    };
+    const fetchedAt = data.fetchedAt || new Date().toISOString();
+    const items = (Array.isArray(data.items) ? data.items : [])
+      .map((row) => normalizeDigestItem(row, fetchedAt))
+      .filter((row): row is DigestFeedItem => Boolean(row));
+    if (items.length === 0) return null;
+    return { fetchedAt, items };
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchDigestDetail(id: string): Promise<DigestFeedItem> {
+  if (!IS_STATIC) {
+    try {
+      const res = await fetch(
+        `${API_BASE}/feeds/digest/${encodeURIComponent(id)}`,
+      );
+      if (res.ok) return res.json();
+    } catch {
+      /* fall through */
+    }
   }
 
   try {
-    const res = await fetch(
-      `${API_BASE}/feeds/digest/${encodeURIComponent(id)}`,
-    );
-    if (res.ok) return res.json();
-  } catch {
-    /* fall through */
+    return await fetchDigestDetailLive(id);
+  } catch (err) {
+    const snapshot = await loadStaticDigestSnapshot();
+    const hit = snapshot?.items.find((item) => item.id === id);
+    if (hit) return hit;
+    throw err;
   }
-  return fetchDigestDetailLive(id);
+}
+
+async function fetchStaticReadme(
+  owner: string,
+  repo: string,
+): Promise<RepoReadme | null> {
+  try {
+    const res = await fetch(`${STATIC_BASE}/readmes/${owner}/${repo}.md`);
+    if (!res.ok) return null;
+    const markdown = await res.text();
+    if (!markdown.trim()) return null;
+    const fullName = `${owner}/${repo}`;
+    return {
+      fullName,
+      name: "README.md",
+      markdown,
+      htmlUrl: `https://github.com/${fullName}`,
+      encoding: "utf-8",
+    };
+  } catch {
+    return null;
+  }
 }
 
 export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
@@ -370,7 +446,13 @@ export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
     }
   }
 
-  return fetchRepoReadmeLive(fullName);
+  const bundled = IS_STATIC ? await fetchStaticReadme(owner, repo) : null;
+  try {
+    return await fetchRepoReadmeLive(fullName);
+  } catch (err) {
+    if (bundled) return bundled;
+    throw err;
+  }
 }
 
 export interface CachedReadmeListItem {

@@ -7,14 +7,14 @@
 
 ## 一句话
 
-发现与浏览 GitHub Trending / Starred 仓库；支持 API+SQLite 本地运行，或静态 JSON + GitHub Pages 发布。
+发现与浏览 GitHub Trending / Starred 仓库与 Issues digest；支持 API+SQLite 本地运行，或静态 JSON + GitHub Pages 发布。Digest / README 在两种模式下都是 **本地快照 + 实时 GitHub**。
 
 ## 当前阶段
 
 | 项 | 状态 |
 |---|---|
 | 阶段 | **building** — 核心链路可用，UI 与数据流水线持续迭代 |
-| 数据 | 静态 chunks 至 2026-07-05；日调度 `data:update` |
+| 数据 | 静态 chunks + `digest.json`；日调度 `data:update`；90 日窗口 `data:update:window` |
 | CI | test、typecheck、format、build |
 | 部署 | GitHub Pages workflow |
 | 待办 | [sheet-display](./issues/sheet-display.md) 后台数据浏览 |
@@ -33,7 +33,7 @@
 innate-feeds/
 ├── backend/src/
 │   ├── app/          # Hono API、CLI
-│   ├── collector/    # github、firecrawl、sync
+│   ├── collector/    # github、firecrawl、sync、sync-window
 │   ├── data/         # 静态 JSON 导出/导入
 │   └── db/           # SQLite
 ├── frontend/src/
@@ -51,7 +51,7 @@ innate-feeds/
 
 ## 关键约束
 
-- 双模式：API（开发）与静态 Pages（公开部署）须同时可维护
+- 双模式：API（开发）与静态 Pages（公开部署）须同时可维护；digest/README 为快照 + live
 - `/api/feeds` 合约见 [feeds-api-v1](./spec/contracts/feeds-api-v1.md)
 - sync API 不对外暴露给未授权用户
 

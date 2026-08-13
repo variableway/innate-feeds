@@ -33,7 +33,8 @@ export type TrendingPeriod = "daily" | "weekly" | "monthly";
 const GITHUB_USERNAME_RE = /^[\w.-]{1,39}$/;
 const TRENDING_FETCH_HEADERS = {
   Accept: "text/html,application/xhtml+xml",
-  "User-Agent": "innate-feeds/0.1 (+https://github.com/variableway/innate-feeds)",
+  "User-Agent":
+    "innate-feeds/0.1 (+https://github.com/variableway/innate-feeds)",
 };
 
 function validateUsername(username: string | undefined): string | undefined {
@@ -76,7 +77,8 @@ export function parseTrendingRepoPaths(html: string): string[] {
   const repos: string[] = [];
   const seen = new Set<string>();
 
-  const articles = html.match(/<article class="Box-row">[\s\S]*?<\/article>/g) ?? [];
+  const articles =
+    html.match(/<article class="Box-row">[\s\S]*?<\/article>/g) ?? [];
   for (const article of articles) {
     const h2Match = article.match(
       /<h2[^>]*>[\s\S]*?<a[^>]*href="\/([^"]+)"[^>]*>/,
@@ -484,7 +486,9 @@ export async function fetchRepoReadmeRemote(
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     errors.push(`REST API: ${msg.split("\n")[0]}`);
-    console.warn(`[readme] REST API failed for ${fullName}: ${msg.split("\n")[0]}`);
+    console.warn(
+      `[readme] REST API failed for ${fullName}: ${msg.split("\n")[0]}`,
+    );
   }
 
   const fromGh = fetchReadmeViaGhCli(fullName);
@@ -530,7 +534,9 @@ function scheduleReadmeRefresh(owner: string, repo: string): void {
     })
     .catch((err) => {
       const msg = err instanceof Error ? err.message : String(err);
-      console.warn(`[readme] background refresh failed ${key}: ${msg.split("\n")[0]}`);
+      console.warn(
+        `[readme] background refresh failed ${key}: ${msg.split("\n")[0]}`,
+      );
     })
     .finally(() => {
       refreshInFlight.delete(key);

@@ -1,7 +1,7 @@
 # Feature: repo-detail-panel
 
-**Status:** proposed  
-**Updated:** 2026-08-12  
+**Status:** done  
+**Updated:** 2026-08-13  
 **Depends on UX pattern:** [feeds-issues-digest.md](./feeds-issues-digest.md) §3 Mode B（共用 master-detail）  
 **Surfaces:** `/trending`、`/starred`（feeds 壳层，**不是** DigestSidebar）
 
@@ -115,7 +115,11 @@ GET /api/repos/:owner/:repo/readme
 → { fullName, ref, name, markdown: string, htmlUrl: string }
 ```
 
-缓存：内存 / SQLite 短缓存（按 `full_name` + `pushed_at` 或 ETag）；勿把巨大 README 永久塞进 trending 行。
+缓存：
+
+- **API 模式：** `./readmes/{owner}/{repo}.md` 立即返回，后台再拉 GitHub 覆盖磁盘。
+- **静态模式：** 浏览器 live 拉 GitHub README；失败则用 `/data/readmes/{owner}/{repo}.md`（`bun run data:sync:window` 预取）。
+- 打开详情时两种模式都会尝试实时 GitHub，不是「有缓存就不再请求」。
 
 前端：与 Digest 相同 Markdown 栈（GFM + sanitize）。相对链接可解析为 `https://github.com/{owner}/{repo}/blob/{ref}/…`（尽力而为）。
 

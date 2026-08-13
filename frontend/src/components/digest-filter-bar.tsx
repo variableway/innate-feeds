@@ -17,12 +17,14 @@ const SOURCE_OPTIONS: { value: DigestSourceId | ""; label: string }[] = [
   { value: "github-daily", label: "GitHubDaily" },
 ];
 
-const SORT_OPTIONS: { value: NonNullable<DigestFilters["sort"]>; label: string }[] =
-  [
-    { value: "created", label: "Created" },
-    { value: "updated", label: "Updated" },
-    { value: "comments", label: "Comments" },
-  ];
+const SORT_OPTIONS: {
+  value: NonNullable<DigestFilters["sort"]>;
+  label: string;
+}[] = [
+  { value: "created", label: "Created" },
+  { value: "updated", label: "Updated" },
+  { value: "comments", label: "Comments" },
+];
 
 function categoryLabel(cat: string): string {
   return cat === "__uncategorized__" ? "未分类" : cat;
@@ -91,8 +93,7 @@ const DigestFilterBar = React.forwardRef<HTMLDivElement, DigestFilterBarProps>(
             onFiltersChange({
               ...filters,
               source: (e.target.value || undefined) as
-                | DigestSourceId
-                | undefined,
+                DigestSourceId | undefined,
             })
           }
           className="rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"

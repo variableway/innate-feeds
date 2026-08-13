@@ -29,7 +29,8 @@ export function getDb(dbPath?: string): Database {
  */
 export function atParams(obj: object): SQLQueryBindings {
   const out: Record<string, SQLQueryBindings> = {};
-  for (const [k, v] of Object.entries(obj)) out[`@${k}`] = v as SQLQueryBindings;
+  for (const [k, v] of Object.entries(obj))
+    out[`@${k}`] = v as SQLQueryBindings;
   return out as unknown as SQLQueryBindings;
 }
 
@@ -408,11 +409,7 @@ function getTrendingItems(
   const rows = itemsStmt.all(...params, pageSize, offset) as TrendingItemRow[];
 
   const repoIds = rows.map((r) => r.id);
-  const topicsMap = batchFetchTopics(
-    db,
-    repoIds,
-    "trending_repo_topics",
-  );
+  const topicsMap = batchFetchTopics(db, repoIds, "trending_repo_topics");
 
   const items = rows.map((row) => {
     const topics = topicsMap.get(row.id) ?? [];
@@ -524,11 +521,7 @@ function getStarredItems(
   const rows = itemsStmt.all(...params, pageSize, offset) as StarredItemRow[];
 
   const repoIds = rows.map((r) => r.repo_id);
-  const topicsMap = batchFetchTopics(
-    db,
-    repoIds,
-    "starred_repo_topics",
-  );
+  const topicsMap = batchFetchTopics(db, repoIds, "starred_repo_topics");
 
   const items = rows.map((row) => {
     const topics = topicsMap.get(row.repo_id) ?? [];
@@ -645,4 +638,40 @@ export function getLatestStarredAt(db: Database): string | null {
       }
     | undefined;
   return row?.starred_at || null;
+}
+
+/** Distinct starred repos whose `starred_at` is on or after `sinceIso`. */
+export function listStarredFullNamesSince(
+  db: Database,
+  sinceIso: string,
+): string[] {
+  const rows = db
+    .prepare(
+      `
+    SELECT DISTINCT full_name
+    FROM starred_repos
+    WHERE starred_at IS NOT NULL AND starred_at >= ?
+    ORDER BY starred_at DESC
+  `,
+    )
+    .all(sinceIso) as { full_name: string }[];
+  return rows.map((r) => r.full_name);
+}
+
+/** Distinct trending repos that appeared in a snapshot on or after `sinceDate` (YYYY-MM-DD). */
+export function listTrendingFullNamesSince(
+  db: Database,
+  sinceDate: string,
+): string[] {
+  const rows = db
+    .prepare(
+      `
+    SELECT DISTINCT full_name
+    FROM trending_repos
+    WHERE snapshot_date >= ?
+    ORDER BY full_name
+  `,
+    )
+    .all(sinceDate) as { full_name: string }[];
+  return rows.map((r) => r.full_name);
 }

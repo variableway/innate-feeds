@@ -1,7 +1,11 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { Database } from "bun:sqlite";
 import schemaSql from "./schema.sql" with { type: "text" };
-import { atParams } from "./index.js";
+import {
+  atParams,
+  listStarredFullNamesSince,
+  listTrendingFullNamesSince,
+} from "./index.js";
 
 function createTestDb(): Database {
   const db = new Database(":memory:");
@@ -45,7 +49,8 @@ function insertTrendingRepo(
     snapshot_date: "2024-01-01",
   };
   const repo = { ...defaults, ...overrides };
-  db.prepare(`
+  db.prepare(
+    `
     INSERT INTO trending_repos (
       id, github_repo_id, name, full_name, description, url, homepage,
       stars, forks, watchers, language, owner_login, owner_avatar_url, owner_url,
@@ -55,7 +60,8 @@ function insertTrendingRepo(
       @stars, @forks, @watchers, @language, @owner_login, @owner_avatar_url, @owner_url,
       @created_at, @updated_at, @period, @snapshot_date
     )
-  `).run(atParams(repo));
+  `,
+  ).run(atParams(repo));
   return repo;
 }
 
@@ -89,7 +95,8 @@ function insertStarredRepo(
     starred_at: "2024-06-01T00:00:00Z",
   };
   const repo = { ...defaults, ...overrides };
-  db.prepare(`
+  db.prepare(
+    `
     INSERT INTO starred_repos (
       id, name, full_name, description, url, homepage,
       stars, forks, watchers, language, owner_login, owner_avatar_url, owner_url,
@@ -99,7 +106,8 @@ function insertStarredRepo(
       @stars, @forks, @watchers, @language, @owner_login, @owner_avatar_url, @owner_url,
       @created_at, @updated_at, @starred_at
     )
-  `).run(atParams(repo));
+  `,
+  ).run(atParams(repo));
   return repo;
 }
 
@@ -129,9 +137,7 @@ describe("Database schema", () => {
   });
 
   it("enforces period CHECK constraint", () => {
-    expect(() =>
-      insertTrendingRepo(db, { period: "invalid" }),
-    ).toThrow();
+    expect(() => insertTrendingRepo(db, { period: "invalid" })).toThrow();
   });
 });
 
@@ -211,6 +217,17 @@ describe("Trending queries", () => {
       "2024-01-01",
     ]);
   });
+
+  it("lists trending full names since a snapshot date", () => {
+    expect(listTrendingFullNamesSince(db, "2024-01-02")).toEqual([
+      "user/repo3",
+    ]);
+    expect(listTrendingFullNamesSince(db, "2024-01-01").sort()).toEqual([
+      "user/repo1",
+      "user/repo2",
+      "user/repo3",
+    ]);
+  });
 });
 
 describe("Starred queries", () => {
@@ -249,7 +266,9 @@ describe("Starred queries", () => {
 
   it("filters by stars range", () => {
     const rows = db
-      .prepare("SELECT full_name FROM starred_repos WHERE stars >= ? AND stars <= ?")
+      .prepare(
+        "SELECT full_name FROM starred_repos WHERE stars >= ? AND stars <= ?",
+      )
       .all(600, 1200) as { full_name: string }[];
     expect(rows).toHaveLength(1);
     expect(rows[0].full_name).toBe("user/s1");
@@ -260,6 +279,16 @@ describe("Starred queries", () => {
       .prepare("SELECT MAX(starred_at) as starred_at FROM starred_repos")
       .get() as { starred_at: string };
     expect(starred_at).toBe("2024-06-02T00:00:00Z");
+  });
+
+  it("lists starred full names since a cutoff", () => {
+    expect(listStarredFullNamesSince(db, "2024-06-02T00:00:00Z")).toEqual([
+      "user/s2",
+    ]);
+    expect(listStarredFullNamesSince(db, "2024-05-01T00:00:00Z")).toEqual([
+      "user/s2",
+      "user/s1",
+    ]);
   });
 
   it("enforces unique full_name", () => {
@@ -288,7 +317,9 @@ describe("Topics", () => {
 
   it("retrieves topics for a repo", () => {
     const topics = db
-      .prepare("SELECT topic FROM trending_repo_topics WHERE repo_id = ? ORDER BY topic")
+      .prepare(
+        "SELECT topic FROM trending_repo_topics WHERE repo_id = ? ORDER BY topic",
+      )
       .all("t1") as { topic: string }[];
     expect(topics.map((t) => t.topic)).toEqual(["frontend", "react"]);
   });

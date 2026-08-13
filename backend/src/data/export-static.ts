@@ -14,7 +14,8 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 function main() {
   const dbPath = getDefaultDbPath();
-  const outDir = process.argv[2] || join(__dirname, "../../../frontend/public/data");
+  const outDir =
+    process.argv[2] || join(__dirname, "../../../frontend/public/data");
   const db = getDb(dbPath);
 
   mkdirSync(outDir, { recursive: true });
@@ -25,9 +26,15 @@ function main() {
   const dates = getTrendingDates(db);
   const stats = getStats(db);
 
-  writeFileSync(join(outDir, "trending.json"), JSON.stringify(trending, null, 2));
+  writeFileSync(
+    join(outDir, "trending.json"),
+    JSON.stringify(trending, null, 2),
+  );
   writeFileSync(join(outDir, "starred.json"), JSON.stringify(starred, null, 2));
-  writeFileSync(join(outDir, "languages.json"), JSON.stringify(languages, null, 2));
+  writeFileSync(
+    join(outDir, "languages.json"),
+    JSON.stringify(languages, null, 2),
+  );
   writeFileSync(join(outDir, "dates.json"), JSON.stringify(dates, null, 2));
   writeFileSync(join(outDir, "stats.json"), JSON.stringify(stats, null, 2));
 }

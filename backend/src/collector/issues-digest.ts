@@ -14,6 +14,7 @@ import { execFileSync } from "child_process";
 import { mkdirSync, writeFileSync } from "fs";
 import { homedir } from "os";
 import { join } from "path";
+import { DEFAULT_SYNC_WINDOW_DAYS, dateDaysAgo } from "../data/date-window.js";
 
 export type DigestSourceId = "ruanyf-weekly" | "github-daily";
 
@@ -73,7 +74,8 @@ const URL_RE = /https?:\/\/[^\s)\]>"'<]+/g;
 const GH_REPO_RE =
   /^https?:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?(?:[\/?#]|$)/i;
 
-const USER_AGENT = "innate-feeds/0.1 (+https://github.com/variableway/innate-feeds)";
+const USER_AGENT =
+  "innate-feeds/0.1 (+https://github.com/variableway/innate-feeds)";
 
 function toIsoSince(input: string): string {
   if (/^\d{4}-\d{2}-\d{2}$/.test(input)) {
@@ -202,10 +204,7 @@ export function normalizeIssue(
   if (issue.pull_request) return null;
 
   const urls = extractUrls(issue.body);
-  const { primaryUrl, githubRepoFullName } = pickPrimaryLink(
-    urls,
-    source.repo,
-  );
+  const { primaryUrl, githubRepoFullName } = pickPrimaryLink(urls, source.repo);
 
   return {
     id: `digest-${source.id}-${issue.id}`,
@@ -514,7 +513,13 @@ export function parseDigestArgs(argv: string[]): DigestCliArgs {
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--since" && argv[i + 1]) since = argv[++i];
-    else if (a === "--until" && argv[i + 1]) until = argv[++i];
+    else if (a === "--days" && argv[i + 1] && !since) {
+      const days = Number(argv[++i]);
+      since = dateDaysAgo(
+        Number.isFinite(days) && days > 0 ? days : DEFAULT_SYNC_WINDOW_DAYS,
+      );
+      createdOnly = true;
+    } else if (a === "--until" && argv[i + 1]) until = argv[++i];
     else if (a === "--created-only") createdOnly = true;
     else if (a === "--save" || a === "--export-local") save = true;
     else if ((a === "--out" || a === "--out-dir") && argv[i + 1])

@@ -39,8 +39,11 @@ backend/.cache/
 backend/data/digest/*.json
 
 # On-demand README cache (project-relative; path configurable in Settings)
-readmes/
+/readmes/
 innate-feeds.config.json
+
+# Generated static README snapshots (rebuilt by `data:sync:window` / Pages CI)
+frontend/public/data/readmes/
 
 # Local reference clones (nested git repos, not part of this project)
 references/

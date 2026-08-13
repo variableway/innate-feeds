@@ -47,7 +47,9 @@ export function DigestDetailPane({
       })
       .catch((err) => {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load digest");
+          setError(
+            err instanceof Error ? err.message : "Failed to load digest",
+          );
         }
       })
       .finally(() => {

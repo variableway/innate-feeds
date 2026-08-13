@@ -27,17 +27,49 @@ export interface CachedReadmeMeta {
  * Avoids collisions across owners; root via `./readmes`,
  * `innate-feeds.config.json`, or `READMES_DIR`.
  */
-function cachePaths(owner: string, repo: string): { md: string; meta: string } {
+function cachePaths(
+  owner: string,
+  repo: string,
+  root = resolveReadmesRoot(),
+): { md: string; meta: string } {
   if (!REPO_NAME_RE.test(owner) || !REPO_NAME_RE.test(repo)) {
     throw new Error(`Invalid owner/repo for cache: ${owner}/${repo}`);
   }
-  const root = resolveReadmesRoot();
   const dir = join(root, owner);
   mkdirSync(dir, { recursive: true });
   return {
     md: join(dir, `${repo}.md`),
     meta: join(dir, `${repo}.json`),
   };
+}
+
+/** Skip a batch refresh when the on-disk copy is newer than `maxAgeMs`. */
+export function shouldSkipReadmeRefresh(
+  fetchedAt: string | null | undefined,
+  maxAgeMs: number,
+  now = Date.now(),
+): boolean {
+  if (!fetchedAt || maxAgeMs <= 0) return false;
+  const t = Date.parse(fetchedAt);
+  if (Number.isNaN(t)) return false;
+  return now - t < maxAgeMs;
+}
+
+export function readCachedReadmeFetchedAt(
+  owner: string,
+  repo: string,
+  root?: string,
+): string | null {
+  const { meta } = cachePaths(owner, repo, root);
+  if (!existsSync(meta)) return null;
+  try {
+    const payload = JSON.parse(readFileSync(meta, "utf-8")) as {
+      fetchedAt?: string;
+    };
+    return typeof payload.fetchedAt === "string" ? payload.fetchedAt : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Absolute path to the cached markdown file (for logging / verification). */
@@ -77,8 +109,9 @@ export function writeCachedReadme(
   owner: string,
   repo: string,
   readme: RepoReadmeDTO,
+  root?: string,
 ): string {
-  const { md, meta } = cachePaths(owner, repo);
+  const { md, meta } = cachePaths(owner, repo, root);
   writeFileSync(md, readme.markdown, "utf-8");
   const payload: CachedReadmeMeta = {
     fullName: readme.fullName,
@@ -137,7 +170,8 @@ export function listCachedReadmes(): CachedReadmeListItem[] {
           const meta = JSON.parse(readFileSync(metaPath, "utf-8")) as {
             fetchedAt?: string;
           };
-          fetchedAt = typeof meta.fetchedAt === "string" ? meta.fetchedAt : null;
+          fetchedAt =
+            typeof meta.fetchedAt === "string" ? meta.fetchedAt : null;
         }
       } catch {
         fetchedAt = null;

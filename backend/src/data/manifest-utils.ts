@@ -20,7 +20,10 @@ export function getTrendingDatesFromManifest(manifest: DataManifest): string[] {
     .reverse();
 }
 
-export function upsertManifestPath(paths: string[], nextPath: string): string[] {
+export function upsertManifestPath(
+  paths: string[],
+  nextPath: string,
+): string[] {
   const merged = new Set(paths);
   merged.add(nextPath);
   return Array.from(merged).sort();

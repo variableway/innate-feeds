@@ -1,9 +1,4 @@
-import {
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  writeFileSync,
-} from "fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { dirname, isAbsolute, join, normalize, resolve } from "path";
 import { fileURLToPath } from "url";
 
@@ -103,4 +98,14 @@ export function getAppSettings(): AppSettingsDTO {
     projectRoot: getProjectRoot(),
     configPath: configPath(),
   };
+}
+
+/** Vite copies this into `frontend/dist/data` for static / Pages builds. */
+export function getFrontendPublicDataDir(): string {
+  return join(getProjectRoot(), "frontend/public/data");
+}
+
+/** Bundled README snapshots for static mode (`/data/readmes/{owner}/{repo}.md`). */
+export function getStaticReadmesDir(): string {
+  return join(getFrontendPublicDataDir(), "readmes");
 }

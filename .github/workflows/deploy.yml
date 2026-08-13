@@ -4,9 +4,30 @@ on:
   push:
     branches: [main]
   schedule:
-    # Daily at 08:00 UTC
+    # Daily 08:00 UTC — 90-day window (trending now, starred, digest, READMEs)
     - cron: "0 8 * * *"
   workflow_dispatch:
+    inputs:
+      sync_mode:
+        description: "Data sync before the static build"
+        type: choice
+        options:
+          - window
+          - daily
+          - skip
+        default: window
+      days:
+        description: "Lookback days for window sync"
+        type: string
+        default: "90"
+      skip_readme:
+        description: "Skip README prefetch (browser still live-fetches GitHub)"
+        type: boolean
+        default: false
+      force_readme:
+        description: "Refetch READMEs even if Actions cache is fresh"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -23,8 +44,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     env:
       DB_PATH: ${{ github.workspace }}/backend/.cache/feeds.db
+      INNATE_HOME: ${{ github.workspace }}/backend/.cache
+      DIGEST_DIR: ${{ github.workspace }}/backend/.cache/digest
+      GH_TOKEN: ${{ secrets.SYNC_GITHUB_TOKEN || github.token }}
+      FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,19 +63,72 @@ jobs:
       - name: Install dependencies
         run: |
           bun install
-          cd backend && bun install
-          cd ../frontend && bun install
+          bun run install:all
+
+      - name: Restore README snapshot cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            readmes
+            frontend/public/data/readmes
+          key: readmes-${{ github.run_id }}
+          restore-keys: |
+            readmes-
 
       - name: Prepare database from JSON
         run: |
-          mkdir -p backend/.cache
+          mkdir -p backend/.cache/digest readmes frontend/public/data/readmes
           cd backend
           bun run import:static
 
-      - name: Sync trending data
+      - name: Resolve sync mode
+        id: sync
         env:
-          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_MODE: ${{ github.event.inputs.sync_mode }}
+          DISPATCH_DAYS: ${{ github.event.inputs.days }}
+          SKIP_README: ${{ github.event.inputs.skip_readme }}
+          FORCE_README: ${{ github.event.inputs.force_readme }}
+          STARRED_USERNAME: ${{ vars.STARRED_USERNAME }}
+        run: |
+          set -euo pipefail
+          MODE="daily"
+          DAYS="90"
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            MODE="window"
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            MODE="${DISPATCH_MODE:-window}"
+            DAYS="${DISPATCH_DAYS:-90}"
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "Sync mode=$MODE days=$DAYS skip_readme=${SKIP_README:-false} force_readme=${FORCE_README:-false}"
+
+      - name: Sync feed window (90-day digest / trending / starred / READMEs)
+        if: steps.sync.outputs.mode == 'window'
+        run: |
+          set -euo pipefail
+          FLAGS=(--days "${{ steps.sync.outputs.days }}")
+          if [ "${{ github.event.inputs.skip_readme }}" = "true" ]; then
+            FLAGS+=(--skip-readme)
+          fi
+          if [ "${{ github.event.inputs.force_readme }}" = "true" ]; then
+            FLAGS+=(--force)
+          fi
+          if [ -n "${{ vars.STARRED_USERNAME }}" ]; then
+            FLAGS+=(--username "${{ vars.STARRED_USERNAME }}")
+          fi
+          cd backend
+          bun src/app/cli.ts sync window "${FLAGS[@]}"
+          bun run export:incremental
+
+      - name: Sync daily snapshot
+        if: steps.sync.outputs.mode == 'daily'
         run: bun run data:update
+
+      - name: Export committed JSON only
+        if: steps.sync.outputs.mode == 'skip'
+        run: bun run data:export
 
       - name: Commit updated data chunks
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
@@ -60,7 +139,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else
-            git commit -m "chore: update feed chunks $(date -u +%Y-%m-%d)"
+            git commit -m "chore: update feed snapshot $(date -u +%Y-%m-%d)"
             git pull --rebase origin "${GITHUB_REF_NAME}" || true
             git push
           fi

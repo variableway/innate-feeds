@@ -15,7 +15,15 @@ const SEARCH_DEBOUNCE_MS = 300;
 
 const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
   (
-    { filters, languages, dates, onFiltersChange, showStarsRange = false, className, ...props },
+    {
+      filters,
+      languages,
+      dates,
+      onFiltersChange,
+      showStarsRange = false,
+      className,
+      ...props
+    },
     ref,
   ) => {
     const [searchInput, setSearchInput] = React.useState(filters.search || "");
@@ -25,7 +33,9 @@ const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
       setSearchInput(filters.search || "");
     }, [filters.search]);
 
-    const debounceRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+    const debounceRef = React.useRef<ReturnType<typeof setTimeout> | null>(
+      null,
+    );
 
     const handleSearchChange = (value: string) => {
       setSearchInput(value);
@@ -73,74 +83,74 @@ const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
         {...props}
       >
         <div className="flex flex-wrap items-center gap-3">
-        <div className="relative flex-1 min-w-[200px]">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <input
-            type="text"
-            placeholder="Search repositories..."
-            value={searchInput}
-            onChange={(e) => handleSearchChange(e.target.value)}
-            className="w-full rounded-md border bg-background py-2 pl-9 pr-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          />
-          {searchInput && (
-            <button
-              onClick={clearSearch}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
+          <div className="relative flex-1 min-w-[200px]">
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Search repositories..."
+              value={searchInput}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              className="w-full rounded-md border bg-background py-2 pl-9 pr-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+            {searchInput && (
+              <button
+                onClick={clearSearch}
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
 
-        <select
-          value={filters.language || ""}
-          onChange={(e) => updateFilter("language", e.target.value)}
-          className="rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-        >
-          <option value="">All Languages</option>
-          {languages.map((lang) => (
-            <option key={lang} value={lang}>
-              {lang}
-            </option>
-          ))}
-        </select>
-
-        {dates.length > 0 && (
           <select
-            value={filters.date || ""}
-            onChange={(e) => updateFilter("date", e.target.value)}
+            value={filters.language || ""}
+            onChange={(e) => updateFilter("language", e.target.value)}
             className="rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            <option value="">Latest</option>
-            {dates.map((date) => (
-              <option key={date} value={date}>
-                {date}
+            <option value="">All Languages</option>
+            {languages.map((lang) => (
+              <option key={lang} value={lang}>
+                {lang}
               </option>
             ))}
           </select>
-        )}
 
-        {showStarsRange && (
-          <div className="flex items-center gap-1.5">
-            <input
-              type="number"
-              min={0}
-              placeholder="Min stars"
-              value={filters.starsMin ?? ""}
-              onChange={(e) => updateStarsRange("starsMin", e.target.value)}
-              className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-            <span className="text-sm text-muted-foreground">-</span>
-            <input
-              type="number"
-              min={0}
-              placeholder="Max stars"
-              value={filters.starsMax ?? ""}
-              onChange={(e) => updateStarsRange("starsMax", e.target.value)}
-              className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-          </div>
-        )}
+          {dates.length > 0 && (
+            <select
+              value={filters.date || ""}
+              onChange={(e) => updateFilter("date", e.target.value)}
+              className="rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Latest</option>
+              {dates.map((date) => (
+                <option key={date} value={date}>
+                  {date}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {showStarsRange && (
+            <div className="flex items-center gap-1.5">
+              <input
+                type="number"
+                min={0}
+                placeholder="Min stars"
+                value={filters.starsMin ?? ""}
+                onChange={(e) => updateStarsRange("starsMin", e.target.value)}
+                className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <span className="text-sm text-muted-foreground">-</span>
+              <input
+                type="number"
+                min={0}
+                placeholder="Max stars"
+                value={filters.starsMax ?? ""}
+                onChange={(e) => updateStarsRange("starsMax", e.target.value)}
+                className="w-[110px] rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+            </div>
+          )}
         </div>
 
         {filters.topics && filters.topics.length > 0 && (

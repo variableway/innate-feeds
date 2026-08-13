@@ -1,10 +1,6 @@
 import { z } from "zod";
 import { getGhAuthStatus } from "./gh-status.js";
-import {
-  clearStoredPat,
-  isPatConfigured,
-  storePat,
-} from "./token-store.js";
+import { clearStoredPat, isPatConfigured, storePat } from "./token-store.js";
 
 export function buildAuthStatus() {
   const gh = getGhAuthStatus();
@@ -29,7 +25,11 @@ export const PAT_BODY_SCHEMA = z.object({
 export function savePatFromBody(body: unknown) {
   const parsed = PAT_BODY_SCHEMA.safeParse(body);
   if (!parsed.success) {
-    return { ok: false as const, error: "Validation error", details: parsed.error.issues };
+    return {
+      ok: false as const,
+      error: "Validation error",
+      details: parsed.error.issues,
+    };
   }
   storePat(parsed.data.token);
   return { ok: true as const, pat: { configured: true } };

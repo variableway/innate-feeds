@@ -3,14 +3,23 @@
  * v1: no SQLite — serves the newest combined dump for API list/detail.
  */
 
-import { existsSync, readdirSync, readFileSync, statSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import {
   getDefaultDigestDir,
+  type DigestFetchResult,
   type DigestItemLocal,
   type DigestSourceId,
 } from "../collector/issues-digest.js";
+import { getFrontendPublicDataDir } from "./app-config.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 /** Relative to this module: backend/src/data → backend/data/digest */
@@ -28,6 +37,7 @@ export interface DigestFeedItemDTO {
   primaryUrl: string | null;
   githubRepoFullName: string | null;
   issueUrl: string;
+  issueNumber?: number;
   authorLogin: string;
   authorAvatarUrl: string | null;
   issueCreatedAt: string;
@@ -77,11 +87,19 @@ function candidateDirs(): string[] {
     envDir || null,
     getDefaultDigestDir(),
     REPO_DIGEST_DIR,
-    // When cwd is backend/ or repo root during `bun run dev` / CLI
+    getFrontendPublicDataDir(),
     join(cwd, "data/digest"),
     join(cwd, "backend/data/digest"),
+    join(cwd, "frontend/public/data"),
   ].filter((d): d is string => Boolean(d));
   return [...new Set(dirs.filter((d) => existsSync(d)))];
+}
+
+function isCombinedDumpName(name: string): boolean {
+  if (!name.endsWith(".json")) return false;
+  if (name.includes(".summary.")) return false;
+  if (name.includes("__")) return false;
+  return name === "digest.json" || name.startsWith("digest-");
 }
 
 /** Prefer combined dumps (no `__source` / `.summary` suffix). */
@@ -89,9 +107,7 @@ function listCombinedDumpPaths(): string[] {
   const paths: string[] = [];
   for (const dir of candidateDirs()) {
     for (const name of readdirSync(dir)) {
-      if (!name.startsWith("digest-") || !name.endsWith(".json")) continue;
-      if (name.includes(".summary.")) continue;
-      if (name.includes("__")) continue;
+      if (!isCombinedDumpName(name)) continue;
       paths.push(join(dir, name));
     }
   }
@@ -124,10 +140,66 @@ function loadItems(): {
   }
 
   const raw = JSON.parse(readFileSync(path, "utf-8")) as DigestFilePayload;
-  const items = Array.isArray(raw.items) ? raw.items : [];
+  const items = (Array.isArray(raw.items) ? raw.items : [])
+    .map((row) => coerceLocalItem(row))
+    .filter((row): row is DigestItemLocal => Boolean(row));
   const fetchedAt = raw.fetchedAt || new Date(mtimeMs).toISOString();
   cache = { path, mtimeMs, fetchedAt, items };
   return { items, fetchedAt, path };
+}
+
+function coerceLocalItem(raw: unknown): DigestItemLocal | null {
+  if (!raw || typeof raw !== "object") return null;
+  const row = raw as Record<string, unknown>;
+  if (typeof row.id !== "string") return null;
+  const source = row.source;
+  if (source !== "ruanyf-weekly" && source !== "github-daily") return null;
+  const excerpt =
+    typeof row.bodyExcerpt === "string"
+      ? row.bodyExcerpt
+      : typeof row.excerpt === "string"
+        ? row.excerpt
+        : "";
+  return {
+    id: row.id,
+    source,
+    sourceRepo: typeof row.sourceRepo === "string" ? row.sourceRepo : "",
+    issueNumber: typeof row.issueNumber === "number" ? row.issueNumber : 0,
+    issueId: typeof row.issueId === "number" ? row.issueId : 0,
+    title: typeof row.title === "string" ? row.title : "",
+    category: typeof row.category === "string" ? row.category : null,
+    bodyExcerpt: excerpt,
+    primaryUrl: typeof row.primaryUrl === "string" ? row.primaryUrl : null,
+    githubRepoFullName:
+      typeof row.githubRepoFullName === "string"
+        ? row.githubRepoFullName
+        : null,
+    authorLogin:
+      typeof row.authorLogin === "string" ? row.authorLogin : "unknown",
+    authorAvatarUrl:
+      typeof row.authorAvatarUrl === "string" ? row.authorAvatarUrl : "",
+    issueUrl: typeof row.issueUrl === "string" ? row.issueUrl : "",
+    state: typeof row.state === "string" ? row.state : "open",
+    labels: Array.isArray(row.labels)
+      ? row.labels.filter((l): l is string => typeof l === "string")
+      : [],
+    comments: typeof row.comments === "number" ? row.comments : 0,
+    issueCreatedAt:
+      typeof row.issueCreatedAt === "string" ? row.issueCreatedAt : "",
+    issueUpdatedAt:
+      typeof row.issueUpdatedAt === "string" ? row.issueUpdatedAt : "",
+    bodyMarkdown:
+      typeof row.bodyMarkdown === "string" ? row.bodyMarkdown : null,
+  };
+}
+
+/** Newest combined digest dump (API cache or `frontend/public/data/digest.json`). */
+export function loadNewestDigestDump(): {
+  items: DigestItemLocal[];
+  fetchedAt: string;
+  path: string;
+} | null {
+  return loadItems();
 }
 
 function toListDTO(
@@ -147,6 +219,7 @@ function toListDTO(
     primaryUrl: item.primaryUrl,
     githubRepoFullName: item.githubRepoFullName,
     issueUrl: item.issueUrl,
+    issueNumber: item.issueNumber,
     authorLogin: item.authorLogin,
     authorAvatarUrl: item.authorAvatarUrl || null,
     issueCreatedAt: item.issueCreatedAt,
@@ -295,4 +368,68 @@ export function getDigestItemById(id: string): DigestFeedItemDTO | null {
   const item = loaded.items.find((i) => i.id === id);
   if (!item) return null;
   return toListDTO(item, loaded.fetchedAt, true);
+}
+
+export function getDigestGithubRepoFullNames(): string[] {
+  const loaded = loadItems();
+  if (!loaded) return [];
+  const names = loaded.items
+    .map((i) => i.githubRepoFullName)
+    .filter((n): n is string => Boolean(n && n.includes("/")));
+  return [...new Set(names)];
+}
+
+export function toStaticDigestItem(
+  item: DigestItemLocal,
+  fetchedAt: string,
+): DigestFeedItemDTO {
+  return toListDTO(item, fetchedAt, true);
+}
+
+/** Write `frontend/public/data/digest.json` in the shape the static frontend loads. */
+export function writeStaticDigestJson(
+  outPath: string,
+  result: DigestFetchResult,
+): string {
+  mkdirSync(dirname(outPath), { recursive: true });
+  const items = result.items.map((item) =>
+    toStaticDigestItem(item, result.fetchedAt),
+  );
+  const payload = {
+    fetchedAt: result.fetchedAt,
+    since: result.since ?? null,
+    until: result.until ?? null,
+    createdOnly: result.createdOnly,
+    count: items.length,
+    items,
+  };
+  writeFileSync(outPath, `${JSON.stringify(payload, null, 2)}\n`, "utf-8");
+  cache = null;
+  console.log(
+    `[digest] wrote static snapshot ${outPath} (${items.length} items)`,
+  );
+  return outPath;
+}
+
+/** Copy the newest local dump into `frontend/public/data/digest.json`. */
+export function exportNewestDigestToStatic(outPath: string): string | null {
+  const loaded = loadItems();
+  if (!loaded || loaded.items.length === 0) return null;
+  mkdirSync(dirname(outPath), { recursive: true });
+  const items = loaded.items.map((item) =>
+    toStaticDigestItem(item, loaded.fetchedAt),
+  );
+  const payload = {
+    fetchedAt: loaded.fetchedAt,
+    since: null,
+    until: null,
+    createdOnly: false,
+    count: items.length,
+    items,
+  };
+  writeFileSync(outPath, `${JSON.stringify(payload, null, 2)}\n`, "utf-8");
+  console.log(
+    `[digest] exported static snapshot ${outPath} (${items.length} items)`,
+  );
+  return outPath;
 }
