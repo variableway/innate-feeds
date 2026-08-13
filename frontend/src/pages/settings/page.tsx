@@ -111,9 +111,8 @@ export function SettingsPage() {
               </div>
               {staticMode && (
                 <p>
-                  Static / GitHub Pages mode cannot write a cache. Open a
-                  repository in Trending or Starred to review its README, then
-                  download from the detail pane when the API is available.
+                  On GitHub Pages, READMEs are fetched live from GitHub when you
+                  open a repository. Download from the detail pane.
                 </p>
               )}
             </dl>
@@ -129,8 +128,8 @@ export function SettingsPage() {
 
             {cached.length === 0 ? (
               <p className="text-sm text-muted-foreground">
-                No cached READMEs yet. Open a repository detail view to fetch
-                one into {WEB_READMES_DIR}.
+                No cached READMEs yet. Open a repository in Trending or Starred
+                to load its README from GitHub.
               </p>
             ) : (
               <ul className="divide-y rounded-md border">

@@ -59,8 +59,7 @@ export function DigestPage() {
     if (error) {
       return (
         <div className="rounded-lg border bg-card p-8 text-center text-muted-foreground">
-          Could not load digest from the API. Is the backend running on port
-          4000?
+          Could not load digest from GitHub.
           <div className="mt-2 text-xs">{error}</div>
         </div>
       );
@@ -75,15 +74,8 @@ export function DigestPage() {
     if (fetchedAt === null) {
       return (
         <div className="rounded-lg border bg-card p-8 text-center text-muted-foreground">
-          No digest items found. Run{" "}
-          <code className="rounded bg-muted px-1.5 py-0.5 text-xs">
-            bun run sync:digest
-          </code>{" "}
-          in backend to populate local JSON (
-          <code className="rounded bg-muted px-1.5 py-0.5 text-xs">
-            ~/.innate/digest
-          </code>
-          ).
+          No digest items found. Issues are loaded live from GitHub (ruanyf/weekly
+          and GitHubDaily/GitHubDaily).
         </div>
       );
     }

@@ -8,6 +8,12 @@ import type {
   DigestFeedItem,
   RepoReadme,
 } from "@/types/feed";
+import {
+  applyDigestFilters,
+  fetchDigestDetailLive,
+  fetchDigestLive,
+  fetchRepoReadmeLive,
+} from "./github-live";
 
 const API_BASE = "/api";
 
@@ -300,73 +306,71 @@ export async function fetchDigestFeeds(
   pageSize = 20,
 ): Promise<DigestResponse> {
   if (IS_STATIC) {
-    throw new Error(
-      "Digest is not available in static mode yet — use API mode",
-    );
+    const live = await fetchDigestLive();
+    return applyDigestFilters(live.items, filters, page, pageSize, live.fetchedAt);
   }
 
-  const params = new URLSearchParams({
-    type: "digest",
-    page: String(page),
-    pageSize: String(pageSize),
-  });
-  if (filters.search) params.set("search", filters.search);
-  if (filters.source) params.set("source", filters.source);
-  if (filters.category) params.set("category", filters.category);
-  if (filters.sort) params.set("sort", filters.sort);
-  if (filters.order) params.set("order", filters.order);
-  if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
+  try {
+    const params = new URLSearchParams({
+      type: "digest",
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+    if (filters.search) params.set("search", filters.search);
+    if (filters.source) params.set("source", filters.source);
+    if (filters.category) params.set("category", filters.category);
+    if (filters.sort) params.set("sort", filters.sort);
+    if (filters.order) params.set("order", filters.order);
+    if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
 
-  const apiBase = API_BASE;
-  const res = await fetch(`${apiBase}/feeds?${params}`);
-  if (!res.ok) throw new Error(`Failed to fetch digest: ${res.statusText}`);
-  return res.json();
+    const res = await fetch(`${API_BASE}/feeds?${params}`);
+    if (!res.ok) throw new Error(`Failed to fetch digest: ${res.statusText}`);
+    const data = (await res.json()) as DigestResponse;
+    if ((data.total ?? 0) > 0 || data.fetchedAt) return data;
+  } catch {
+    /* backend dump missing — fall through to live GitHub */
+  }
+
+  const live = await fetchDigestLive();
+  return applyDigestFilters(live.items, filters, page, pageSize, live.fetchedAt);
 }
 
 export async function fetchDigestDetail(
   id: string,
 ): Promise<DigestFeedItem> {
   if (IS_STATIC) {
-    throw new Error(
-      "Digest detail is not available in static mode yet — use API mode",
-    );
+    return fetchDigestDetailLive(id);
   }
 
-  const apiBase = API_BASE;
-  const res = await fetch(
-    `${apiBase}/feeds/digest/${encodeURIComponent(id)}`,
-  );
-  if (!res.ok) {
-    throw new Error(`Failed to fetch digest detail: ${res.statusText}`);
+  try {
+    const res = await fetch(
+      `${API_BASE}/feeds/digest/${encodeURIComponent(id)}`,
+    );
+    if (res.ok) return res.json();
+  } catch {
+    /* fall through */
   }
-  return res.json();
+  return fetchDigestDetailLive(id);
 }
 
 export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
-  if (IS_STATIC) {
-    throw new Error(
-      "README fetch is not available in static mode yet — use API mode",
-    );
-  }
-
   const [owner, repo] = fullName.split("/");
   if (!owner || !repo) {
     throw new Error(`Invalid repo full name: ${fullName}`);
   }
 
-  const apiBase = API_BASE;
-  const res = await fetch(
-    `${apiBase}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/readme`,
-  );
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({}));
-    const message =
-      typeof body === "object" && body && "error" in body
-        ? String((body as { error: string }).error)
-        : res.statusText;
-    throw new Error(message || `Failed to fetch README (${res.status})`);
+  if (!IS_STATIC) {
+    try {
+      const res = await fetch(
+        `${API_BASE}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/readme`,
+      );
+      if (res.ok) return res.json();
+    } catch {
+      /* fall through to live GitHub */
+    }
   }
-  return res.json();
+
+  return fetchRepoReadmeLive(fullName);
 }
 
 export interface CachedReadmeListItem {

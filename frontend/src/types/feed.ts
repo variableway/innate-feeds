@@ -87,6 +87,8 @@ export interface DigestFeedItem {
   comments: number;
   state: string;
   fetchedAt: string;
+  /** Present when loaded live from GitHub Issues API. */
+  issueNumber?: number;
 }
 
 export interface DigestFilters {
