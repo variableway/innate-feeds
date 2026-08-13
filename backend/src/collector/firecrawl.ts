@@ -19,8 +19,6 @@ export async function fetchTrendingWithFirecrawl(
   period: TrendingPeriod = "daily",
   language?: string,
 ): Promise<GitHubRepo[]> {
-  const firecrawl = new Firecrawl();
-
   let url = "https://github.com/trending";
   if (language) url += `/${language}`;
   if (period !== "daily") url += `?since=${period}`;
@@ -28,6 +26,7 @@ export async function fetchTrendingWithFirecrawl(
   console.log(`Fetching ${period} trending from ${url} using Firecrawl...`);
 
   try {
+    const firecrawl = new Firecrawl();
     const result = await firecrawl.scrape(url, {
       formats: [
         {
@@ -56,6 +55,7 @@ export async function fetchTrendingWithFirecrawl(
           },
         },
       ],
+      timeout: 60000,
     });
 
     // @ts-ignore Firecrawl SDK typing gap.
@@ -65,14 +65,24 @@ export async function fetchTrendingWithFirecrawl(
       return [];
     }
 
-    const repos: GitHubRepo[] = data.repos.map((repo: TrendingRepo) => {
-      const [owner, name] = (repo.fullName || "").split("/");
-      return {
-        id: generateRepoId(repo.fullName),
+    const repos: GitHubRepo[] = [];
+    for (const repo of data.repos) {
+      const fullName = (repo.fullName || "").trim();
+      if (!fullName.includes("/")) {
+        console.warn("Skipping Firecrawl repo with invalid fullName:", repo);
+        continue;
+      }
+      const [owner, name] = fullName.split("/");
+      if (!owner || !name) {
+        console.warn("Skipping Firecrawl repo with invalid fullName:", fullName);
+        continue;
+      }
+      repos.push({
+        id: generateRepoId(fullName),
         name: name || repo.name,
-        full_name: repo.fullName,
+        full_name: fullName,
         description: repo.description || null,
-        html_url: repo.url || `https://github.com/${repo.fullName}`,
+        html_url: repo.url || `https://github.com/${fullName}`,
         homepage: null,
         stargazers_count: parseStarCount(repo.stars),
         forks_count: parseStarCount(repo.forks),
@@ -86,9 +96,10 @@ export async function fetchTrendingWithFirecrawl(
         },
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
-      };
-    });
+      });
+    }
 
+    console.log(`Firecrawl extracted ${repos.length} trending repos`);
     return repos;
   } catch (err) {
     console.error("Firecrawl error:", err);

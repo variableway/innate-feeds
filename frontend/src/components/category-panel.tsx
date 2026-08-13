@@ -64,7 +64,7 @@ const CategoryPanel = React.forwardRef<HTMLDivElement, CategoryPanelProps>(
           ) : (
             <div className="space-y-1">
               {categories.map((category) => {
-                const isActive = currentPath === category.href;
+                const isActive = currentPath.startsWith(category.href);
                 return (
                   <Link
                     key={category.id}

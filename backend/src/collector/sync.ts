@@ -5,12 +5,16 @@ import {
   insertTrendingTopics,
   insertStarredTopics,
   getLatestStarredAt,
+  deleteTrendingSnapshot,
 } from "../db/index.js";
 import {
   fetchTrendingRepos,
   fetchStarredReposWithDate,
   type TrendingPeriod,
 } from "./github.js";
+
+/** Prefer gh scrape when Firecrawl returns an incomplete page. */
+const MIN_FIRECRAWL_REPOS = 15;
 
 export async function syncTrending(
   period: TrendingPeriod = "daily",
@@ -24,13 +28,33 @@ export async function syncTrending(
     const { fetchTrendingWithFirecrawl } = await import("./firecrawl.js");
     repos = await fetchTrendingWithFirecrawl(period);
   } catch (err) {
-    console.warn("Firecrawl unavailable, using GitHub API:", err);
+    console.warn("Firecrawl unavailable, using GitHub scrape:", err);
   }
+
+  if (repos.length === 0 || repos.length < MIN_FIRECRAWL_REPOS) {
+    if (repos.length > 0) {
+      console.warn(
+        `Firecrawl returned only ${repos.length} repos (< ${MIN_FIRECRAWL_REPOS}); trying GitHub scrape fallback`,
+      );
+    }
+    const fallback = await fetchTrendingRepos(period);
+    if (fallback.length >= repos.length) {
+      repos = fallback;
+    } else if (fallback.length > 0) {
+      console.warn(
+        `GitHub scrape returned ${fallback.length} repos; keeping Firecrawl result (${repos.length})`,
+      );
+    }
+  }
+
   if (repos.length === 0) {
-    repos = fetchTrendingRepos(period);
+    console.error(`No trending repos fetched for ${period}; skipping DB write`);
+    return 0;
   }
 
   const tx = db.transaction(() => {
+    deleteTrendingSnapshot(db, snapshotDate, period);
+
     let count = 0;
     for (const repo of repos) {
       try {

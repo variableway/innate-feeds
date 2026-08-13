@@ -64,3 +64,54 @@ export interface FeedStats {
   starredCount: number;
   topLanguages: { name: string; count: number }[];
 }
+
+export type DigestSourceId = "ruanyf-weekly" | "github-daily";
+
+export interface DigestFeedItem {
+  id: string;
+  type: "digest";
+  source: DigestSourceId;
+  sourceRepo: string;
+  title: string;
+  category: string | null;
+  excerpt: string;
+  bodyMarkdown?: string | null;
+  primaryUrl: string | null;
+  githubRepoFullName: string | null;
+  issueUrl: string;
+  authorLogin: string;
+  authorAvatarUrl: string | null;
+  issueCreatedAt: string;
+  issueUpdatedAt: string;
+  labels: string[];
+  comments: number;
+  state: string;
+  fetchedAt: string;
+}
+
+export interface DigestFilters {
+  search?: string;
+  source?: DigestSourceId;
+  category?: string;
+  sort?: "created" | "updated" | "comments";
+  order?: "asc" | "desc";
+  hasPrimaryUrl?: boolean;
+}
+
+export interface DigestResponse {
+  items: DigestFeedItem[];
+  total: number;
+  page: number;
+  pageSize: number;
+  categories: string[];
+  sources: { id: DigestSourceId; repo: string; count: number }[];
+  fetchedAt: string | null;
+}
+
+export interface RepoReadme {
+  fullName: string;
+  name: string;
+  markdown: string;
+  htmlUrl: string;
+  encoding: string;
+}

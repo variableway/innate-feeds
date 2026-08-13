@@ -9,13 +9,29 @@ interface AppHeaderProps extends React.HTMLAttributes<HTMLElement> {}
 const pageTitles: Record<string, { title: string; parent?: string }> = {
   "/trending": { title: "Trending", parent: "GitHub" },
   "/starred": { title: "Starred", parent: "GitHub" },
+  "/digest": { title: "Digest", parent: "Community" },
+  "/settings": { title: "Settings" },
 };
+
+function resolvePage(path: string): { title: string; parent?: string } {
+  if (pageTitles[path]) return pageTitles[path];
+  if (path.startsWith("/trending/")) {
+    return { title: "Repository", parent: "Trending" };
+  }
+  if (path.startsWith("/starred/")) {
+    return { title: "Repository", parent: "Starred" };
+  }
+  if (path.startsWith("/digest/")) {
+    return { title: "Issue", parent: "Digest" };
+  }
+  return { title: "Feeds" };
+}
 
 const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
   ({ className, ...props }, ref) => {
     const router = useRouterState();
     const currentPath = router.location.pathname;
-    const page = pageTitles[currentPath] || { title: "Feeds" };
+    const page = resolvePage(currentPath);
     const { theme, setTheme } = useTheme();
 
     return (

@@ -7,57 +7,101 @@ interface FeedCardProps extends React.HTMLAttributes<HTMLDivElement> {
   item: FeedItem;
   selectedTopics?: string[];
   onTopicClick?: (topic: string) => void;
+  compact?: boolean;
+  selected?: boolean;
+  onItemSelect?: (item: FeedItem) => void;
 }
 
 /**
  * FeedCard - simplified, no period tags
  */
 const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
-  ({ item, selectedTopics, onTopicClick, className, ...props }, ref) => {
+  (
+    {
+      item,
+      selectedTopics,
+      onTopicClick,
+      compact = false,
+      selected = false,
+      onItemSelect,
+      className,
+      ...props
+    },
+    ref,
+  ) => {
     const { repo } = item;
 
     return (
       <div
         ref={ref}
+        role={onItemSelect ? "button" : undefined}
+        tabIndex={onItemSelect ? 0 : undefined}
+        onClick={onItemSelect ? () => onItemSelect(item) : undefined}
+        onKeyDown={
+          onItemSelect
+            ? (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  onItemSelect(item);
+                }
+              }
+            : undefined
+        }
         className={cn(
-          "group rounded-lg border bg-card p-4 transition-colors hover:bg-accent",
+          "group flex h-full flex-col rounded-lg border bg-card transition-colors",
+          onItemSelect && "cursor-pointer hover:bg-accent",
+          selected && "border-primary bg-accent/60 ring-1 ring-primary/30",
+          compact ? "p-3" : "p-4",
           className,
         )}
         {...props}
       >
-        <div className="flex items-start gap-3">
-          <a href={repo.owner.url} target="_blank" rel="noopener noreferrer">
+        <div className="flex min-h-0 flex-1 items-start gap-3">
+          <a
+            href={repo.owner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="shrink-0"
+          >
             <img
               src={repo.owner.avatarUrl}
               alt={repo.owner.login}
-              className="h-10 w-10 rounded-full"
+              className={cn("rounded-full", compact ? "h-8 w-8" : "h-10 w-10")}
             />
           </a>
-          <div className="flex-1 min-w-0">
+          <div className="flex min-w-0 flex-1 flex-col">
             <div className="flex items-center gap-2">
-              <a
-                href={repo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-foreground hover:underline truncate"
+              <span
+                className={cn(
+                  "truncate font-semibold text-foreground",
+                  onItemSelect && "group-hover:underline",
+                )}
               >
                 {repo.fullName}
-              </a>
+              </span>
               <a
                 href={repo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
+                onClick={(e) => e.stopPropagation()}
+                className="shrink-0 text-muted-foreground hover:text-foreground"
+                title="Open on GitHub"
               >
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>
             {repo.description && (
-              <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+              <p
+                className={cn(
+                  "mt-1 text-sm text-muted-foreground",
+                  compact ? "line-clamp-1" : "line-clamp-3",
+                )}
+              >
                 {repo.description}
               </p>
             )}
-            <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+            <div className="mt-auto flex flex-wrap items-center gap-3 pt-2 text-xs text-muted-foreground">
               {repo.language && (
                 <span className="inline-flex items-center gap-1">
                   <span className="h-2.5 w-2.5 rounded-full bg-primary" />
@@ -68,20 +112,25 @@ const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
                 <Star className="h-3.5 w-3.5" />
                 {formatNumber(repo.stars)}
               </span>
-              <span className="inline-flex items-center gap-1">
-                <GitFork className="h-3.5 w-3.5" />
-                {formatNumber(repo.forks)}
-              </span>
+              {!compact && (
+                <span className="inline-flex items-center gap-1">
+                  <GitFork className="h-3.5 w-3.5" />
+                  {formatNumber(repo.forks)}
+                </span>
+              )}
             </div>
-            {repo.topics.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-1">
-                {repo.topics.map((topic) => {
+            {!compact && repo.topics.length > 0 && (
+              <div className="mt-2 flex max-h-14 flex-wrap gap-1 overflow-hidden">
+                {repo.topics.slice(0, 8).map((topic) => {
                   const isSelected = selectedTopics?.includes(topic);
                   return onTopicClick ? (
                     <button
                       key={topic}
                       type="button"
-                      onClick={() => onTopicClick(topic)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onTopicClick(topic);
+                      }}
                       className={cn(
                         "rounded-full px-2 py-0.5 text-xs transition-colors",
                         isSelected

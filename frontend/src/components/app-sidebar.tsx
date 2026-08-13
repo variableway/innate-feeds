@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Github, PanelLeft, Settings, HelpCircle } from "lucide-react";
+import { Github, Newspaper, PanelLeft, Settings, HelpCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface AppSidebarProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,6 +12,7 @@ interface NavItem {
   title: string;
   href: string;
   icon: React.ElementType;
+  isActive: (path: string) => boolean;
 }
 
 const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
@@ -24,12 +25,24 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
         title: "GitHub",
         href: "/trending",
         icon: Github,
+        isActive: (path) =>
+          path.startsWith("/trending") || path.startsWith("/starred"),
+      },
+      {
+        title: "Digest",
+        href: "/digest",
+        icon: Newspaper,
+        isActive: (path) => path.startsWith("/digest"),
       },
     ];
 
     const bottomItems: NavItem[] = [
-      { title: "Settings", href: "#", icon: Settings },
-      { title: "Help", href: "#", icon: HelpCircle },
+      {
+        title: "Settings",
+        href: "/settings",
+        icon: Settings,
+        isActive: (path) => path.startsWith("/settings"),
+      },
     ];
 
     return (
@@ -65,7 +78,7 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
         <nav className="flex-1 overflow-y-auto p-3">
           <div className="space-y-1">
             {navItems.map((item) => {
-              const isActive = currentPath.startsWith(item.href);
+              const isActive = item.isActive(currentPath);
               return (
                 <Link
                   key={item.title}
@@ -89,20 +102,37 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
 
         <div className="border-t p-3">
           <div className="space-y-1">
-            {bottomItems.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                title={collapsed ? item.title : undefined}
-                className={cn(
-                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground",
-                  collapsed && "justify-center px-2",
-                )}
-              >
-                <item.icon className="h-4 w-4 shrink-0" />
-                {!collapsed && item.title}
-              </a>
-            ))}
+            {bottomItems.map((item) => {
+              const isActive = item.isActive(currentPath);
+              return (
+                <Link
+                  key={item.title}
+                  to={item.href}
+                  title={collapsed ? item.title : undefined}
+                  className={cn(
+                    "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
+                    isActive
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                    collapsed && "justify-center px-2",
+                  )}
+                >
+                  <item.icon className="h-4 w-4 shrink-0" />
+                  {!collapsed && item.title}
+                </Link>
+              );
+            })}
+            <a
+              href="#"
+              title={collapsed ? "Help" : undefined}
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground",
+                collapsed && "justify-center px-2",
+              )}
+            >
+              <HelpCircle className="h-4 w-4 shrink-0" />
+              {!collapsed && "Help"}
+            </a>
           </div>
 
           <button

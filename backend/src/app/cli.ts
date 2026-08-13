@@ -4,6 +4,11 @@ import {
   syncStarred,
 } from "../collector/sync.js";
 import {
+  getDefaultDigestDir,
+  parseDigestArgs,
+  runDigestExport,
+} from "../collector/issues-digest.js";
+import {
   getDb,
   getFeedItems,
   getStats,
@@ -22,9 +27,17 @@ Usage:
   tsx src/app/cli.ts sync trending [daily|weekly|monthly]
   tsx src/app/cli.ts sync all-trending
   tsx src/app/cli.ts sync starred [user] [--force] [--days N]
+  tsx src/app/cli.ts sync digest [--since YYYY-MM-DD] [--until YYYY-MM-DD] [--created-only] [--out DIR] [--source ID]
   tsx src/app/cli.ts list [trending|starred]
   tsx src/app/cli.ts dates
   tsx src/app/cli.ts stats
+
+Digest notes:
+  Writes JSON under ~/.innate/digest/ by default (override with --out).
+  Does not touch trending/starred SQLite tables.
+  Examples:
+    bun run sync:digest -- --since 2026-08-01
+    bun run export:digest-local -- --since 2026-08-01 --until 2026-09-01 --created-only
 `);
 }
 
@@ -52,6 +65,30 @@ async function main() {
         );
         const count = syncStarred(username, dbPath, force, days);
         console.log(`Synced ${count} starred repositories`);
+      } else if (type === "digest") {
+        const args = parseDigestArgs(process.argv.slice(4));
+        const { result, saved } = await runDigestExport({
+          ...args,
+          save: true,
+          outDir: args.outDir || getDefaultDigestDir(),
+        });
+        console.log(
+          JSON.stringify(
+            {
+              synced: result.items.length,
+              transport: result.transport,
+              since: result.since ?? null,
+              until: result.until ?? null,
+              createdOnly: result.createdOnly,
+              bySource: result.bySource,
+              outDir: saved?.outDir,
+              files: saved?.files,
+              bytes: saved?.bytes,
+            },
+            null,
+            2,
+          ),
+        );
       } else {
         process.exit(1);
       }

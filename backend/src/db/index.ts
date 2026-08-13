@@ -146,6 +146,28 @@ export function upsertStarredRepo(
   stmt.run(atParams(repo));
 }
 
+export function deleteTrendingSnapshot(
+  db: Database,
+  snapshotDate: string,
+  period: string,
+): void {
+  const rows = db
+    .prepare(
+      `SELECT id FROM trending_repos WHERE snapshot_date = ? AND period = ?`,
+    )
+    .all(snapshotDate, period) as Array<{ id: string }>;
+
+  const deleteTopics = db.prepare(
+    `DELETE FROM trending_repo_topics WHERE repo_id = ?`,
+  );
+  const deleteRepo = db.prepare(`DELETE FROM trending_repos WHERE id = ?`);
+
+  for (const row of rows) {
+    deleteTopics.run(row.id);
+    deleteRepo.run(row.id);
+  }
+}
+
 export function insertTrendingTopics(
   db: Database,
   repoId: string,

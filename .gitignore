@@ -35,6 +35,13 @@ backend/.cache/
 *.db-shm
 *.db-wal
 
+# Issues digest local JSON dumps (also under ~/.innate/digest/)
+backend/data/digest/*.json
+
+# On-demand README cache (project-relative; path configurable in Settings)
+readmes/
+innate-feeds.config.json
+
 # Local reference clones (nested git repos, not part of this project)
 references/
 

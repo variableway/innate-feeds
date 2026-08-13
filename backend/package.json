@@ -12,6 +12,8 @@
     "sync:trending": "bun src/app/cli.ts sync all-trending",
     "sync:starred": "bun src/app/cli.ts sync starred",
     "sync:starred:recent": "bun src/app/cli.ts sync starred --days 1",
+    "sync:digest": "bun src/app/cli.ts sync digest",
+    "export:digest-local": "bun src/app/cli.ts sync digest",
     "import:static": "bun src/data/import-static.ts",
     "list": "bun src/app/cli.ts list",
     "list:trending": "bun src/app/cli.ts list trending",

@@ -13,7 +13,18 @@ import {
   syncAllTrending,
   syncStarred,
 } from "../collector/sync.js";
-import type { TrendingPeriod } from "../collector/github.js";
+import {
+  fetchRepoReadme,
+  type TrendingPeriod,
+} from "../collector/github.js";
+import {
+  getDigestFeedItems,
+  getDigestItemById,
+} from "../data/digest-store.js";
+import {
+  getAppSettings,
+  writeAppConfig,
+} from "../data/app-config.js";
 import {
   buildAuthStatus,
   removePat,
@@ -21,6 +32,10 @@ import {
 } from "../auth/index.js";
 
 const app = new Hono();
+
+const SETTINGS_BODY_SCHEMA = z.object({
+  readmesDir: z.string().min(1).max(1024),
+});
 
 app.use("/*", cors());
 
@@ -59,8 +74,33 @@ const SYNC_BODY_SCHEMA = z.object({
 
 app.get("/api/feeds", (c) => {
   try {
-    const db = getDb();
     const type = c.req.query("type") || "trending";
+    const page = parseInt(c.req.query("page") || "1", 10);
+    const pageSize = parseInt(c.req.query("pageSize") || "20", 10);
+    const search = c.req.query("search");
+    const sort = c.req.query("sort");
+    const order = c.req.query("order");
+
+    if (type === "digest") {
+      const hasPrimaryUrl =
+        c.req.query("hasPrimaryUrl") === "1" ||
+        c.req.query("hasPrimaryUrl") === "true";
+      const result = getDigestFeedItems(
+        {
+          search: search || undefined,
+          source: c.req.query("source") || undefined,
+          category: c.req.query("category") || undefined,
+          sort: sort || "created",
+          order: order || "desc",
+          hasPrimaryUrl: hasPrimaryUrl || undefined,
+        },
+        page,
+        pageSize,
+      );
+      return c.json(result);
+    }
+
+    const db = getDb();
     const language = c.req.query("language");
     const topicsParam = c.req.query("topics");
     const topicLegacy = c.req.query("topic");
@@ -72,9 +112,6 @@ app.get("/api/feeds", (c) => {
       : topicLegacy
         ? [topicLegacy]
         : undefined;
-    const search = c.req.query("search");
-    const sort = c.req.query("sort") || "stars";
-    const order = c.req.query("order") || "desc";
     const date = c.req.query("date");
     const starsMin = c.req.query("starsMin")
       ? parseInt(c.req.query("starsMin")!, 10)
@@ -82,13 +119,20 @@ app.get("/api/feeds", (c) => {
     const starsMax = c.req.query("starsMax")
       ? parseInt(c.req.query("starsMax")!, 10)
       : undefined;
-    const page = parseInt(c.req.query("page") || "1", 10);
-    const pageSize = parseInt(c.req.query("pageSize") || "20", 10);
 
     const result = getFeedItems(
       db,
       type,
-      { language, topics, search, sort, order, date, starsMin, starsMax },
+      {
+        language,
+        topics,
+        search,
+        sort: sort || "stars",
+        order: order || "desc",
+        date,
+        starsMin,
+        starsMax,
+      },
       page,
       pageSize,
     );
@@ -98,6 +142,81 @@ app.get("/api/feeds", (c) => {
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/feeds/digest/:id", (c) => {
+  try {
+    const id = c.req.param("id");
+    const item = getDigestItemById(id);
+    if (!item) {
+      return c.json({ error: "Digest item not found" }, 404);
+    }
+    return c.json(item);
+  } catch (err) {
+    console.error("Error in /api/feeds/digest/:id:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/repos/:owner/:repo/readme", async (c) => {
+  try {
+    const owner = c.req.param("owner");
+    const repo = c.req.param("repo");
+    const readme = await fetchRepoReadme(owner, repo);
+    return c.json(readme);
+  } catch (err) {
+    const status =
+      err && typeof err === "object" && "status" in err
+        ? Number((err as { status: number }).status)
+        : 500;
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    if (status === 404) {
+      return c.json({ error: message }, 404);
+    }
+    console.error("Error in /api/repos/:owner/:repo/readme:", err);
+    return c.json({ error: message }, status >= 400 && status < 600 ? status : 500);
+  }
+});
+
+app.get("/api/settings", (c) => {
+  try {
+    return c.json(getAppSettings());
+  } catch (err) {
+    console.error("Error in GET /api/settings:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.put("/api/settings", async (c) => {
+  try {
+    const body = await c.req.json();
+    const parsed = SETTINGS_BODY_SCHEMA.safeParse(body);
+    if (!parsed.success) {
+      return c.json(
+        { error: "Validation error", details: parsed.error.issues },
+        400,
+      );
+    }
+    writeAppConfig({ readmesDir: parsed.data.readmesDir });
+    return c.json(getAppSettings());
+  } catch (err) {
+    const status =
+      err && typeof err === "object" && "status" in err
+        ? Number((err as { status: number }).status)
+        : 500;
+    console.error("Error in PUT /api/settings:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json(
+      { error: message },
+      status >= 400 && status < 600 ? status : 500,
+    );
   }
 });
 

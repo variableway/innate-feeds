@@ -3,6 +3,10 @@ import type {
   FeedFilters,
   FeedStats,
   FeedItem,
+  DigestFilters,
+  DigestResponse,
+  DigestFeedItem,
+  RepoReadme,
 } from "@/types/feed";
 import { resolveApiBase } from "@/lib/desktop";
 
@@ -286,5 +290,123 @@ export async function syncFeeds(
     body: JSON.stringify({ type, period, force, days }),
   });
   if (!res.ok) throw new Error(`Failed to sync feeds: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchDigestFeeds(
+  filters: DigestFilters = {},
+  page = 1,
+  pageSize = 20,
+): Promise<DigestResponse> {
+  if (IS_STATIC) {
+    throw new Error(
+      "Digest is not available in static mode yet — use API mode",
+    );
+  }
+
+  const params = new URLSearchParams({
+    type: "digest",
+    page: String(page),
+    pageSize: String(pageSize),
+  });
+  if (filters.search) params.set("search", filters.search);
+  if (filters.source) params.set("source", filters.source);
+  if (filters.category) params.set("category", filters.category);
+  if (filters.sort) params.set("sort", filters.sort);
+  if (filters.order) params.set("order", filters.order);
+  if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
+
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/feeds?${params}`);
+  if (!res.ok) throw new Error(`Failed to fetch digest: ${res.statusText}`);
+  return res.json();
+}
+
+export async function fetchDigestDetail(
+  id: string,
+): Promise<DigestFeedItem> {
+  if (IS_STATIC) {
+    throw new Error(
+      "Digest detail is not available in static mode yet — use API mode",
+    );
+  }
+
+  const apiBase = await resolveApiBase();
+  const res = await fetch(
+    `${apiBase}/feeds/digest/${encodeURIComponent(id)}`,
+  );
+  if (!res.ok) {
+    throw new Error(`Failed to fetch digest detail: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
+  if (IS_STATIC) {
+    throw new Error(
+      "README fetch is not available in static mode yet — use API mode",
+    );
+  }
+
+  const [owner, repo] = fullName.split("/");
+  if (!owner || !repo) {
+    throw new Error(`Invalid repo full name: ${fullName}`);
+  }
+
+  const apiBase = await resolveApiBase();
+  const res = await fetch(
+    `${apiBase}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/readme`,
+  );
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    const message =
+      typeof body === "object" && body && "error" in body
+        ? String((body as { error: string }).error)
+        : res.statusText;
+    throw new Error(message || `Failed to fetch README (${res.status})`);
+  }
+  return res.json();
+}
+
+export interface AppSettings {
+  readmesDir: string;
+  readmesDirResolved: string;
+  filenameScheme: string;
+  projectRoot: string;
+  configPath: string;
+}
+
+export async function fetchAppSettings(): Promise<AppSettings> {
+  if (IS_STATIC) {
+    throw new Error("Settings are not available in static mode");
+  }
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/settings`);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch settings: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function updateAppSettings(input: {
+  readmesDir: string;
+}): Promise<AppSettings> {
+  if (IS_STATIC) {
+    throw new Error("Settings are not available in static mode");
+  }
+  const apiBase = await resolveApiBase();
+  const res = await fetch(`${apiBase}/settings`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    const message =
+      typeof body === "object" && body && "error" in body
+        ? String((body as { error: string }).error)
+        : res.statusText;
+    throw new Error(message || `Failed to update settings (${res.status})`);
+  }
   return res.json();
 }
