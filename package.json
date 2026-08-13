@@ -16,6 +16,7 @@
     "data:export": "cd backend && bun run export:incremental",
     "data:update": "bun run sync && bun run data:export",
     "build": "cd frontend && bun run build",
+    "start": "bun run build && cd backend && bun run start",
     "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
     "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
     "export:static": "cd backend && bun run export:incremental",
@@ -24,10 +25,7 @@
     "install:all": "cd backend && bun install && cd ../frontend && bun install",
     "test": "bun --bun vitest run",
     "test:watch": "bun --bun vitest",
-    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck",
-    "sidecar:build": "cd backend && bun run build:sidecar",
-    "tauri:dev": "bunx tauri dev",
-    "tauri:build": "bun run sidecar:build && bunx tauri build --bundles app && bash tasks/build-dmg.sh"
+    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck"
   },
   "devDependencies": {
     "@vitest/expect": "^4.1.9",

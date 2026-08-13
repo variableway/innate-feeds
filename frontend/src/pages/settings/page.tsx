@@ -1,26 +1,35 @@
 import { useEffect, useState } from "react";
+import { Download, Eye, X } from "lucide-react";
 import { toast } from "sonner";
 import {
-  fetchAppSettings,
-  updateAppSettings,
-  type AppSettings,
+  downloadRepoReadme,
+  fetchCachedReadmes,
+  fetchRepoReadme,
+  isStaticMode,
+  type CachedReadmeListItem,
 } from "@/services/feeds";
+import { MarkdownBody } from "@/components/markdown-body";
+
+const WEB_READMES_DIR = "./readmes";
 
 export function SettingsPage() {
-  const [settings, setSettings] = useState<AppSettings | null>(null);
-  const [readmesDir, setReadmesDir] = useState("readmes");
+  const staticMode = isStaticMode();
+  const [cached, setCached] = useState<CachedReadmeListItem[]>([]);
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const [reviewing, setReviewing] = useState<CachedReadmeListItem | null>(null);
+  const [reviewMarkdown, setReviewMarkdown] = useState<string | null>(null);
+  const [reviewError, setReviewError] = useState<string | null>(null);
+  const [reviewLoading, setReviewLoading] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    fetchAppSettings()
-      .then((s) => {
+    fetchCachedReadmes()
+      .then((list) => {
         if (cancelled) return;
-        setSettings(s);
-        setReadmesDir(s.readmesDir);
+        setCached(list.items);
         setError(null);
       })
       .catch((err) => {
@@ -36,17 +45,28 @@ export function SettingsPage() {
     };
   }, []);
 
-  const onSave = async () => {
-    setSaving(true);
+  const openReview = async (item: CachedReadmeListItem) => {
+    setReviewing(item);
+    setReviewMarkdown(null);
+    setReviewError(null);
+    setReviewLoading(true);
     try {
-      const next = await updateAppSettings({ readmesDir: readmesDir.trim() });
-      setSettings(next);
-      setReadmesDir(next.readmesDir);
-      toast.success("Settings saved");
+      const readme = await fetchRepoReadme(item.fullName);
+      setReviewMarkdown(readme.markdown);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Failed to save");
+      setReviewError(
+        err instanceof Error ? err.message : "Failed to load README",
+      );
     } finally {
-      setSaving(false);
+      setReviewLoading(false);
+    }
+  };
+
+  const onDownload = async (item: CachedReadmeListItem) => {
+    try {
+      await downloadRepoReadme(item.owner, item.repo);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Download failed");
     }
   };
 
@@ -55,7 +75,8 @@ export function SettingsPage() {
       <div>
         <h1 className="text-xl font-semibold">Settings</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Configure where fetched repository READMEs are stored on disk.
+          READMEs are stored under ./readmes. Review them here or download a
+          Markdown copy — this is not a folder on your PC.
         </p>
       </div>
 
@@ -71,64 +92,133 @@ export function SettingsPage() {
           <p className="mt-1">{error}</p>
         </div>
       ) : (
-        <section className="space-y-4 rounded-lg border p-4">
-          <div>
-            <h2 className="text-sm font-medium">README cache directory</h2>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Relative paths resolve against the project root. Absolute paths
-              are used as-is. Files are written as{" "}
-              <code className="rounded bg-muted px-1 py-0.5">
-                {"{owner}/{repo}.md"}
-              </code>
-              .
-            </p>
-          </div>
-
-          <label className="block space-y-1.5 text-sm">
-            <span className="text-muted-foreground">Directory</span>
-            <input
-              type="text"
-              value={readmesDir}
-              onChange={(e) => setReadmesDir(e.target.value)}
-              placeholder="readmes"
-              className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-            />
-          </label>
-
-          {settings && (
+        <>
+          <section className="space-y-3 rounded-lg border p-4">
+            <div>
+              <h2 className="text-sm font-medium">README cache directory</h2>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Files are written as{" "}
+                <code className="rounded bg-muted px-1 py-0.5">
+                  {"{owner}/{repo}.md"}
+                </code>
+                .
+              </p>
+            </div>
             <dl className="space-y-2 text-xs text-muted-foreground">
               <div>
-                <dt className="font-medium text-foreground">Resolved path</dt>
-                <dd className="mt-0.5 break-all font-mono">
-                  {settings.readmesDirResolved}
-                </dd>
+                <dt className="font-medium text-foreground">Directory</dt>
+                <dd className="mt-0.5 font-mono">{WEB_READMES_DIR}</dd>
               </div>
-              <div>
-                <dt className="font-medium text-foreground">Config file</dt>
-                <dd className="mt-0.5 break-all font-mono">
-                  {settings.configPath}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-medium text-foreground">Example file</dt>
-                <dd className="mt-0.5 break-all font-mono">
-                  {settings.readmesDirResolved}/practical-tutorials/project-based-learning.md
-                </dd>
-              </div>
+              {staticMode && (
+                <p>
+                  Static / GitHub Pages mode cannot write a cache. Open a
+                  repository in Trending or Starred to review its README, then
+                  download from the detail pane when the API is available.
+                </p>
+              )}
             </dl>
-          )}
+          </section>
 
-          <div className="flex justify-end">
-            <button
-              type="button"
-              disabled={saving || !readmesDir.trim()}
-              onClick={onSave}
-              className="rounded-md border border-primary bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-50"
-            >
-              {saving ? "Saving…" : "Save"}
-            </button>
+          <section className="space-y-3 rounded-lg border p-4">
+            <div>
+              <h2 className="text-sm font-medium">Cached READMEs</h2>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Review in the app or download a Markdown file.
+              </p>
+            </div>
+
+            {cached.length === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                No cached READMEs yet. Open a repository detail view to fetch
+                one into {WEB_READMES_DIR}.
+              </p>
+            ) : (
+              <ul className="divide-y rounded-md border">
+                {cached.map((item) => (
+                  <li
+                    key={item.fullName}
+                    className="flex items-center justify-between gap-3 px-3 py-2 text-sm"
+                  >
+                    <div className="min-w-0">
+                      <p className="truncate font-medium">{item.fullName}</p>
+                      <p className="truncate font-mono text-xs text-muted-foreground">
+                        {WEB_READMES_DIR}/{item.relativePath}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 gap-1">
+                      <button
+                        type="button"
+                        onClick={() => void openReview(item)}
+                        className="inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs hover:bg-accent"
+                      >
+                        <Eye className="h-3 w-3" />
+                        Review
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => void onDownload(item)}
+                        className="inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs hover:bg-accent"
+                      >
+                        <Download className="h-3 w-3" />
+                        Download
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        </>
+      )}
+
+      {reviewing && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-4">
+          <div className="flex max-h-[90vh] w-full max-w-3xl flex-col rounded-lg border bg-card shadow-lg">
+            <div className="flex items-center justify-between border-b px-4 py-3">
+              <h3 className="truncate text-sm font-semibold">
+                {reviewing.fullName}
+              </h3>
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => void onDownload(reviewing)}
+                  className="inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs hover:bg-accent"
+                >
+                  <Download className="h-3 w-3" />
+                  Download
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setReviewing(null)}
+                  className="rounded-md border p-1.5 hover:bg-accent"
+                  title="Close"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto p-4">
+              {reviewLoading ? (
+                <div className="space-y-3">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="h-4 animate-pulse rounded bg-muted"
+                      style={{ width: `${70 - i * 8}%` }}
+                    />
+                  ))}
+                </div>
+              ) : reviewError ? (
+                <p className="text-sm text-muted-foreground">{reviewError}</p>
+              ) : (
+                <MarkdownBody
+                  markdown={reviewMarkdown || ""}
+                  emptyMessage="No README content."
+                />
+              )}
+            </div>
           </div>
-        </section>
+        </div>
       )}
     </div>
   );

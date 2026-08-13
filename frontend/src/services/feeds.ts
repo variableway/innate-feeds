@@ -8,7 +8,8 @@ import type {
   DigestFeedItem,
   RepoReadme,
 } from "@/types/feed";
-import { resolveApiBase } from "@/lib/desktop";
+
+const API_BASE = "/api";
 
 const STATIC_BASE =
   import.meta.env.VITE_STATIC_BASE ||
@@ -219,7 +220,7 @@ export async function fetchFeeds(
   if (filters.starsMin != null) params.set("starsMin", String(filters.starsMin));
   if (filters.starsMax != null) params.set("starsMax", String(filters.starsMax));
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds?${params}`);
   if (!res.ok) throw new Error(`Failed to fetch feeds: ${res.statusText}`);
   return res.json();
@@ -233,7 +234,7 @@ export async function fetchStats(): Promise<FeedStats> {
     return res.json();
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds/stats`);
   if (!res.ok) throw new Error(`Failed to fetch stats: ${res.statusText}`);
   return res.json();
@@ -247,7 +248,7 @@ export async function fetchLanguages(): Promise<string[]> {
     return res.json();
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds/languages`);
   if (!res.ok) throw new Error(`Failed to fetch languages: ${res.statusText}`);
   return res.json();
@@ -267,7 +268,7 @@ export async function fetchDates(): Promise<string[]> {
     return res.json();
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds/dates`);
   if (!res.ok) throw new Error(`Failed to fetch dates: ${res.statusText}`);
   return res.json();
@@ -283,7 +284,7 @@ export async function syncFeeds(
     throw new Error("Sync is not available in static/GitHub Pages mode");
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds/sync`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -316,7 +317,7 @@ export async function fetchDigestFeeds(
   if (filters.order) params.set("order", filters.order);
   if (filters.hasPrimaryUrl) params.set("hasPrimaryUrl", "1");
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds?${params}`);
   if (!res.ok) throw new Error(`Failed to fetch digest: ${res.statusText}`);
   return res.json();
@@ -331,7 +332,7 @@ export async function fetchDigestDetail(
     );
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(
     `${apiBase}/feeds/digest/${encodeURIComponent(id)}`,
   );
@@ -353,7 +354,7 @@ export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
     throw new Error(`Invalid repo full name: ${fullName}`);
   }
 
-  const apiBase = await resolveApiBase();
+  const apiBase = API_BASE;
   const res = await fetch(
     `${apiBase}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/readme`,
   );
@@ -368,45 +369,46 @@ export async function fetchRepoReadme(fullName: string): Promise<RepoReadme> {
   return res.json();
 }
 
-export interface AppSettings {
-  readmesDir: string;
-  readmesDirResolved: string;
-  filenameScheme: string;
-  projectRoot: string;
-  configPath: string;
+export interface CachedReadmeListItem {
+  owner: string;
+  repo: string;
+  fullName: string;
+  relativePath: string;
+  fetchedAt: string | null;
+  size: number;
 }
 
-export async function fetchAppSettings(): Promise<AppSettings> {
+export async function fetchCachedReadmes(): Promise<{
+  root: string;
+  items: CachedReadmeListItem[];
+}> {
   if (IS_STATIC) {
-    throw new Error("Settings are not available in static mode");
+    return { root: "./readmes", items: [] };
   }
-  const apiBase = await resolveApiBase();
-  const res = await fetch(`${apiBase}/settings`);
+  const apiBase = API_BASE;
+  const res = await fetch(`${apiBase}/readmes`);
   if (!res.ok) {
-    throw new Error(`Failed to fetch settings: ${res.statusText}`);
+    throw new Error(`Failed to list cached READMEs: ${res.statusText}`);
   }
   return res.json();
 }
 
-export async function updateAppSettings(input: {
-  readmesDir: string;
-}): Promise<AppSettings> {
-  if (IS_STATIC) {
-    throw new Error("Settings are not available in static mode");
-  }
-  const apiBase = await resolveApiBase();
-  const res = await fetch(`${apiBase}/settings`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
-  });
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({}));
-    const message =
-      typeof body === "object" && body && "error" in body
-        ? String((body as { error: string }).error)
-        : res.statusText;
-    throw new Error(message || `Failed to update settings (${res.status})`);
-  }
-  return res.json();
+export function downloadTextFile(filename: string, content: string): void {
+  const blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+export async function downloadRepoReadme(
+  owner: string,
+  repo: string,
+): Promise<void> {
+  const readme = await fetchRepoReadme(`${owner}/${repo}`);
+  downloadTextFile(`${owner}-${repo}.md`, readme.markdown);
 }

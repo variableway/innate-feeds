@@ -22,7 +22,6 @@
     "stats": "bun src/app/cli.ts stats",
     "export:static": "bun src/data/export-static.ts",
     "export:incremental": "bun src/data/export-incremental.ts",
-    "build:sidecar": "bun build --compile --outfile=../src-tauri/binaries/innate-feeds-backend src/app/server.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

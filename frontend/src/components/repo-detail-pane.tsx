@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ExternalLink, X } from "lucide-react";
+import { Download, ExternalLink, X } from "lucide-react";
 import type { FeedItem } from "@/types/feed";
-import { fetchRepoReadme } from "@/services/feeds";
+import { downloadTextFile, fetchRepoReadme } from "@/services/feeds";
+import { toast } from "sonner";
 import { MarkdownBody } from "@/components/markdown-body";
 import { formatNumber } from "@/lib/utils";
 
@@ -85,6 +86,27 @@ export function RepoDetailPane({ item, onClose }: RepoDetailPaneProps) {
         </div>
 
         <div className="flex flex-wrap items-center gap-1">
+          {markdown && (
+            <button
+              type="button"
+              onClick={() => {
+                try {
+                  downloadTextFile(
+                    `${repo.owner.login}-${repo.name}.md`,
+                    markdown,
+                  );
+                } catch (err) {
+                  toast.error(
+                    err instanceof Error ? err.message : "Download failed",
+                  );
+                }
+              }}
+              className="inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs hover:bg-accent"
+            >
+              <Download className="h-3 w-3" />
+              Download
+            </button>
+          )}
           <a
             href={repo.url}
             target="_blank"

@@ -539,8 +539,8 @@ function scheduleReadmeRefresh(owner: string, repo: string): void {
 
 /**
  * On-demand README for repo detail: disk cache first, then public/raw remote.
- * Successful remote fetches are persisted under project `readmes/{owner}/{repo}.md`
- * (path configurable via Settings / innate-feeds.config.json / READMES_DIR).
+ * Successful remote fetches are persisted under project `./readmes/{owner}/{repo}.md`
+ * (override with `READMES_DIR` or `innate-feeds.config.json`).
  */
 export async function fetchRepoReadme(
   owner: string,

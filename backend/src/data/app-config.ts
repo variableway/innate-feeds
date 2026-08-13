@@ -8,7 +8,8 @@ import { dirname, isAbsolute, join, normalize, resolve } from "path";
 import { fileURLToPath } from "url";
 
 const CONFIG_FILENAME = "innate-feeds.config.json";
-const DEFAULT_READMES_DIR = "readmes";
+/** Web and unset desktop both persist under the project-relative `./readmes`. */
+export const DEFAULT_READMES_DIR = "./readmes";
 
 /** Monorepo root (`innate-feeds/`), derived from this file's location. */
 export function getProjectRoot(): string {

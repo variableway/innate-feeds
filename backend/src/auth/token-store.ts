@@ -11,7 +11,7 @@ import { getDefaultDbPath, INNATE_HOME } from "../db/paths.js";
 const ALGO = "aes-256-gcm";
 
 function secretsDir(): string {
-  // Prefer directory of DB_PATH so Desktop App Data stays self-contained.
+  // Prefer directory of DB_PATH so secrets stay next to the database.
   const dbPath = getDefaultDbPath();
   const dir = join(dirname(dbPath), "secrets");
   mkdirSync(dir, { recursive: true });

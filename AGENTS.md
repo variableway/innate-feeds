@@ -314,6 +314,6 @@ Schema is defined in `backend/src/db/schema.sql`:
 ## Deployment notes
 
 - No Dockerfile or CI/CD configuration is currently present.
-- For production API mode: build the frontend (`cd frontend && bun run build`) and serve `frontend/dist/`. Start the backend with `cd backend && bun run start`.
+- For production API mode: `bun run start` builds the frontend and serves it from the backend at `http://localhost:4000` (same origin as `/api`). Bind with `HOST` / `PORT` as needed.
 - For GitHub Pages static mode: run `bun run build:static` (or `bun run build:pages` with a base path) and deploy `frontend/dist/`.
-- The Vite config only proxies `/api` in dev mode. For production API mode, configure a reverse proxy or update the frontend API base URL.
+- Dev still uses Vite on port 3000 with `/api` proxied to the backend.

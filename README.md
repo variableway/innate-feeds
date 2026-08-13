@@ -38,6 +38,22 @@ This starts:
 - Backend API at `http://localhost:4000`
 - Frontend dev server at `http://localhost:3000` (proxies `/api` to backend)
 
+### Run as one web server
+
+Build the UI, then serve it from the backend (API + website on the same origin):
+
+```bash
+bun run start
+```
+
+Open `http://localhost:4000`. If `frontend/dist` already exists, you can skip the rebuild with `cd backend && bun run start`.
+
+Override bind address / port:
+
+```bash
+HOST=0.0.0.0 PORT=8080 bun run start
+```
+
 ### Sync Data
 
 ```bash
@@ -58,10 +74,10 @@ bun run stats
 
 ### Build for Production
 
-**API mode:**
+**API mode (one process):**
 ```bash
-cd frontend && bun run build
-# Serve frontend/dist/ and run backend with: cd backend && bun run start
+bun run start
+# Website + API at http://localhost:4000
 ```
 
 **Static mode (GitHub Pages):**
