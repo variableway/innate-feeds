@@ -22,6 +22,8 @@ export function StarredPage() {
     setPage,
     handleFiltersChange,
     handleTopicClick,
+    handlePageSizeChange,
+    handleHideItem,
   } = useFeedList("starred", DEFAULT_FILTERS);
 
   const openDetail = (item: FeedItem) => {
@@ -51,7 +53,9 @@ export function StarredPage() {
       onFiltersChange={handleFiltersChange}
       onTopicClick={handleTopicClick}
       onPageChange={setPage}
+      onPageSizeChange={handlePageSizeChange}
       onSelectItem={openDetail}
+      onHideItem={handleHideItem}
       onCloseDetail={closeDetail}
     />
   );

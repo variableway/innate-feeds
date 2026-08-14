@@ -31,7 +31,8 @@ innate-feeds/
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
 │   │   │   ├── import-static.ts       # Import static JSON into SQLite
-│   │   │   └── manifest-utils.ts      # Manifest read/write helpers
+│   │   │   ├── manifest-utils.ts      # Manifest read/write helpers
+│   │   │   └── hidden-store.ts        # Hidden ("deleted") items store (~/.innate/hidden.json)
 │   │   └── db/              # SQLite database layer
 │   │       ├── index.ts     # Connection, queries, CRUD helpers
 │   │       ├── schema.sql   # SQLite schema (trending_repos, starred_repos, topics)
@@ -240,6 +241,8 @@ GitHub Trending has no historical API. A 90-day window syncs **current** daily/w
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
 | POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
+| POST | `/api/feeds/hide` | Hide an item so it is filtered out of all list/detail responses. Body: `{ kind: "digest" \| "repo", id }` (`id` = digest item id, or repo `fullName`). Persisted to `hidden.json` next to the DB; also applied at static-export time. |
+| POST | `/api/feeds/unhide` | Undo a hide. Same body as `/api/feeds/hide`. |
 
 ### Sync pipeline
 
@@ -292,6 +295,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `usePersistedFeedFilters` hook persists filter state to localStorage.
 - Components use `React.forwardRef` and accept a `className` prop merged via the `cn()` utility.
 - `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json`, merges digest `digest.json` with live GitHub, and prefers live READMEs with a static-file fallback.
+- `services/hidden.ts` tracks user-hidden items (localStorage + `/api/feeds/hide`; static mode also merges the exported `hidden.json`). `feeds.ts` filters them out of every list/detail response.
 - `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.
 
 ### Go scanner

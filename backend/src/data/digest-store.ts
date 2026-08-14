@@ -4,6 +4,7 @@
  */
 
 import {
+  copyFileSync,
   existsSync,
   mkdirSync,
   readdirSync,
@@ -20,6 +21,14 @@ import {
   type DigestSourceId,
 } from "../collector/issues-digest.js";
 import { getFrontendPublicDataDir } from "./app-config.js";
+import { getHiddenDigestIds, getHiddenFilePath } from "./hidden-store.js";
+
+/** Drop items the user hid via POST /api/feeds/hide. */
+function filterHidden(items: DigestItemLocal[]): DigestItemLocal[] {
+  const hidden = getHiddenDigestIds();
+  if (hidden.size === 0) return items;
+  return items.filter((i) => !hidden.has(i.id));
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 /** Relative to this module: backend/src/data → backend/data/digest */
@@ -345,8 +354,9 @@ export function getDigestFeedItems(
     };
   }
 
-  const { categories, sources } = aggregateMeta(loaded.items);
-  const filtered = applyFilters(loaded.items, filters);
+  const visible = filterHidden(loaded.items);
+  const { categories, sources } = aggregateMeta(visible);
+  const filtered = applyFilters(visible, filters);
   const total = filtered.length;
   const start = Math.max(0, (page - 1) * pageSize);
   const slice = filtered.slice(start, start + pageSize);
@@ -363,6 +373,7 @@ export function getDigestFeedItems(
 }
 
 export function getDigestItemById(id: string): DigestFeedItemDTO | null {
+  if (getHiddenDigestIds().has(id)) return null;
   const loaded = loadItems();
   if (!loaded) return null;
   const item = loaded.items.find((i) => i.id === id);
@@ -392,7 +403,7 @@ export function writeStaticDigestJson(
   result: DigestFetchResult,
 ): string {
   mkdirSync(dirname(outPath), { recursive: true });
-  const items = result.items.map((item) =>
+  const items = filterHidden(result.items).map((item) =>
     toStaticDigestItem(item, result.fetchedAt),
   );
   const payload = {
@@ -416,7 +427,7 @@ export function exportNewestDigestToStatic(outPath: string): string | null {
   const loaded = loadItems();
   if (!loaded || loaded.items.length === 0) return null;
   mkdirSync(dirname(outPath), { recursive: true });
-  const items = loaded.items.map((item) =>
+  const items = filterHidden(loaded.items).map((item) =>
     toStaticDigestItem(item, loaded.fetchedAt),
   );
   const payload = {
@@ -428,6 +439,12 @@ export function exportNewestDigestToStatic(outPath: string): string | null {
     items,
   };
   writeFileSync(outPath, `${JSON.stringify(payload, null, 2)}\n`, "utf-8");
+  // Ship the hidden list too: the static frontend uses it to filter items
+  // that still arrive via the live GitHub fallback.
+  const hiddenSrc = getHiddenFilePath();
+  if (existsSync(hiddenSrc)) {
+    copyFileSync(hiddenSrc, join(dirname(outPath), "hidden.json"));
+  }
   console.log(
     `[digest] exported static snapshot ${outPath} (${items.length} items)`,
   );

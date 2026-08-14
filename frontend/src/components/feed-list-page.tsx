@@ -3,6 +3,7 @@ import { FeedCard } from "@/components/feed-card";
 import { FilterBar } from "@/components/filter-bar";
 import { GitHubProductTabs } from "@/components/github-product-tabs";
 import { MasterDetailLayout } from "@/components/master-detail-layout";
+import { PageSizeSelect } from "@/components/page-size-select";
 import { RepoDetailPane } from "@/components/repo-detail-pane";
 
 interface FeedListPageProps {
@@ -20,7 +21,9 @@ interface FeedListPageProps {
   onFiltersChange: (filters: FeedFilters) => void;
   onTopicClick: (topic: string) => void;
   onPageChange: (page: number) => void;
+  onPageSizeChange: (pageSize: number) => void;
   onSelectItem?: (item: FeedItem) => void;
+  onHideItem?: (item: FeedItem) => void;
   onCloseDetail?: () => void;
 }
 
@@ -39,7 +42,9 @@ export function FeedListPage({
   onFiltersChange,
   onTopicClick,
   onPageChange,
+  onPageSizeChange,
   onSelectItem,
+  onHideItem,
   onCloseDetail,
 }: FeedListPageProps) {
   const totalPages = Math.ceil(total / pageSize);
@@ -112,32 +117,38 @@ export function FeedListPage({
         selectedTopics={filters.topics}
         onTopicClick={onTopicClick}
         onItemSelect={onSelectItem}
+        onHide={onHideItem}
       />
     ));
   })();
 
   const pagination =
-    total > pageSize ? (
-      <div className="mt-6 flex justify-center gap-2">
-        <button
-          type="button"
-          onClick={() => onPageChange(Math.max(1, page - 1))}
-          disabled={page === 1}
-          className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
-        >
-          Previous
-        </button>
-        <span className="flex items-center px-3 text-sm text-muted-foreground">
-          Page {page} of {totalPages}
-        </span>
-        <button
-          type="button"
-          onClick={() => onPageChange(page + 1)}
-          disabled={page >= totalPages}
-          className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
-        >
-          Next
-        </button>
+    total > 0 ? (
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+        {total > pageSize && (
+          <>
+            <button
+              type="button"
+              onClick={() => onPageChange(Math.max(1, page - 1))}
+              disabled={page === 1}
+              className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <span className="flex items-center px-3 text-sm text-muted-foreground">
+              Page {page} of {totalPages}
+            </span>
+            <button
+              type="button"
+              onClick={() => onPageChange(page + 1)}
+              disabled={page >= totalPages}
+              className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
+            >
+              Next
+            </button>
+          </>
+        )}
+        <PageSizeSelect value={pageSize} onChange={onPageSizeChange} />
       </div>
     ) : null;
 

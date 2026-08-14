@@ -20,6 +20,8 @@ export function TrendingPage() {
     setPage,
     handleFiltersChange,
     handleTopicClick,
+    handlePageSizeChange,
+    handleHideItem,
   } = useFeedList("trending", DEFAULT_FILTERS);
 
   const openDetail = (item: FeedItem) => {
@@ -48,7 +50,9 @@ export function TrendingPage() {
       onFiltersChange={handleFiltersChange}
       onTopicClick={handleTopicClick}
       onPageChange={setPage}
+      onPageSizeChange={handlePageSizeChange}
       onSelectItem={openDetail}
+      onHideItem={handleHideItem}
       onCloseDetail={closeDetail}
     />
   );

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ExternalLink, MessageSquare } from "lucide-react";
+import { ExternalLink, EyeOff, MessageSquare } from "lucide-react";
 import type { DigestFeedItem } from "@/types/feed";
 import { cn, formatDate } from "@/lib/utils";
 
@@ -8,6 +8,7 @@ interface DigestCardProps extends React.HTMLAttributes<HTMLDivElement> {
   compact?: boolean;
   selected?: boolean;
   onItemSelect?: (item: DigestFeedItem) => void;
+  onHide?: (item: DigestFeedItem) => void;
 }
 
 function displayTitle(item: DigestFeedItem): string {
@@ -28,6 +29,7 @@ const DigestCard = React.forwardRef<HTMLDivElement, DigestCardProps>(
       compact = false,
       selected = false,
       onItemSelect,
+      onHide,
       className,
       ...props
     },
@@ -127,6 +129,20 @@ const DigestCard = React.forwardRef<HTMLDivElement, DigestCardProps>(
               View on GitHub
               <ExternalLink className="h-3 w-3" />
             </a>
+          )}
+          {onHide && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onHide(item);
+              }}
+              className="ml-auto inline-flex items-center gap-1 hover:text-destructive"
+              title="Hide this item"
+            >
+              <EyeOff className="h-3 w-3" />
+              Hide
+            </button>
           )}
         </div>
       </div>

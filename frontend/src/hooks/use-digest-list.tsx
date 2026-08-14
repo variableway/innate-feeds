@@ -8,6 +8,8 @@ import {
 } from "react";
 import type { DigestFeedItem, DigestFilters } from "@/types/feed";
 import { fetchDigestFeeds } from "@/services/feeds";
+import { hideItem, unhideItem } from "@/services/hidden";
+import { usePageSize } from "@/hooks/use-page-size";
 import { toast } from "sonner";
 
 const DEFAULT_FILTERS: DigestFilters = { sort: "created", order: "desc" };
@@ -82,7 +84,7 @@ export function useDigestFilters(): DigestFiltersContextValue {
   return ctx;
 }
 
-export function useDigestList(pageSize = 20) {
+export function useDigestList() {
   const { filters, setFilters, categories, sources, loadingMeta } =
     useDigestFilters();
   const [items, setItems] = useState<DigestFeedItem[]>([]);
@@ -93,6 +95,7 @@ export function useDigestList(pageSize = 20) {
   );
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const [pageSize, setPageSize] = usePageSize();
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -127,6 +130,22 @@ export function useDigestList(pageSize = 20) {
     setFilters(next);
   };
 
+  const handlePageSizeChange = (next: number) => {
+    setPage(1);
+    setPageSize(next);
+  };
+
+  const handleHideItem = (item: DigestFeedItem) => {
+    void hideItem("digest", item.id).then(() => loadData());
+    toast.success(`Hidden "${item.title}"`, {
+      action: {
+        label: "Undo",
+        onClick: () =>
+          void unhideItem("digest", item.id).then(() => loadData()),
+      },
+    });
+  };
+
   return {
     items,
     filters,
@@ -140,5 +159,7 @@ export function useDigestList(pageSize = 20) {
     pageSize,
     setPage,
     handleFiltersChange,
+    handlePageSizeChange,
+    handleHideItem,
   };
 }

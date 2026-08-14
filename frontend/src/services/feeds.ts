@@ -16,6 +16,32 @@ import {
   mergeDigestItems,
   normalizeDigestItem,
 } from "./github-live";
+import { getHiddenSets } from "./hidden";
+
+/** Drop repos the user hid (keyed by lowercased fullName). */
+function filterHiddenRepos<T extends FeedResponse>(
+  data: T,
+  hidden: Set<string>,
+): T {
+  if (hidden.size === 0) return data;
+  const items = data.items.filter(
+    (item) => !hidden.has(item.repo.fullName.toLowerCase()),
+  );
+  return {
+    ...data,
+    items,
+    total: Math.max(0, data.total - (data.items.length - items.length)),
+  };
+}
+
+/** Drop digest items the user hid (keyed by item id). */
+function filterHiddenDigest(
+  items: DigestFeedItem[],
+  hidden: Set<string>,
+): DigestFeedItem[] {
+  if (hidden.size === 0) return items;
+  return items.filter((item) => !hidden.has(item.id));
+}
 
 const API_BASE = "/api";
 
@@ -216,7 +242,14 @@ export async function fetchFeeds(
       data = (await res.json()) as FeedResponse;
     }
 
-    return applyFilters(data, filters, page, pageSize, type);
+    const { repos } = await getHiddenSets();
+    return applyFilters(
+      filterHiddenRepos(data, repos),
+      filters,
+      page,
+      pageSize,
+      type,
+    );
   }
 
   const params = new URLSearchParams({
@@ -239,7 +272,11 @@ export async function fetchFeeds(
   const apiBase = API_BASE;
   const res = await fetch(`${apiBase}/feeds?${params}`);
   if (!res.ok) throw new Error(`Failed to fetch feeds: ${res.statusText}`);
-  return res.json();
+  const data = (await res.json()) as FeedResponse;
+  // Server already excludes persisted hidden repos; the local set covers
+  // items hidden just now whose POST has not landed yet.
+  const { repos } = await getHiddenSets();
+  return filterHiddenRepos(data, repos);
 }
 
 export async function fetchStats(): Promise<FeedStats> {
@@ -332,7 +369,15 @@ export async function fetchDigestFeeds(
       const res = await fetch(`${API_BASE}/feeds?${params}`);
       if (res.ok) {
         const data = (await res.json()) as DigestResponse;
-        if ((data.total ?? 0) > 0 || data.fetchedAt) return data;
+        if ((data.total ?? 0) > 0 || data.fetchedAt) {
+          const { digest } = await getHiddenSets();
+          const items = filterHiddenDigest(data.items, digest);
+          return {
+            ...data,
+            items,
+            total: Math.max(0, data.total - (data.items.length - items.length)),
+          };
+        }
       }
     } catch {
       /* backend dump missing — fall through */
@@ -354,8 +399,9 @@ export async function fetchDigestFeeds(
   if (merged.length === 0) {
     throw new Error("Could not load digest from snapshot or GitHub.");
   }
+  const { digest } = await getHiddenSets();
   return applyDigestFilters(
-    merged,
+    filterHiddenDigest(merged, digest),
     filters,
     page,
     pageSize,
@@ -386,6 +432,9 @@ async function loadStaticDigestSnapshot(): Promise<{
 }
 
 export async function fetchDigestDetail(id: string): Promise<DigestFeedItem> {
+  const { digest } = await getHiddenSets();
+  if (digest.has(id)) throw new Error("Digest item not found");
+
   if (!IS_STATIC) {
     try {
       const res = await fetch(

@@ -17,6 +17,7 @@ import {
 } from "../collector/sync.js";
 import { fetchRepoReadme, type TrendingPeriod } from "../collector/github.js";
 import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
+import { hideItem, unhideItem } from "../data/hidden-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";
 import { listCachedReadmes } from "../data/readme-cache.js";
 import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
@@ -140,6 +141,44 @@ app.get("/api/feeds/digest/:id", (c) => {
     return c.json(item);
   } catch (err) {
     console.error("Error in /api/feeds/digest/:id:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+const HIDE_BODY_SCHEMA = z.object({
+  kind: z.enum(["digest", "repo"]),
+  // digest: item id ("digest-{source}-{issueId}"); repo: fullName ("owner/repo")
+  id: z.string().min(1).max(200),
+});
+
+app.post("/api/feeds/hide", async (c) => {
+  try {
+    const parsed = HIDE_BODY_SCHEMA.safeParse(await c.req.json());
+    if (!parsed.success) {
+      return c.json({ error: "Invalid body", details: parsed.error }, 400);
+    }
+    hideItem(parsed.data.kind, parsed.data.id);
+    return c.json({ ok: true });
+  } catch (err) {
+    console.error("Error in POST /api/feeds/hide:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.post("/api/feeds/unhide", async (c) => {
+  try {
+    const parsed = HIDE_BODY_SCHEMA.safeParse(await c.req.json());
+    if (!parsed.success) {
+      return c.json({ error: "Invalid body", details: parsed.error }, 400);
+    }
+    unhideItem(parsed.data.kind, parsed.data.id);
+    return c.json({ ok: true });
+  } catch (err) {
+    console.error("Error in POST /api/feeds/unhide:", err);
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);

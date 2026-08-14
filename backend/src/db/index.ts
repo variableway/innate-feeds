@@ -1,6 +1,7 @@
 import { Database, type SQLQueryBindings } from "bun:sqlite";
 import schemaSql from "./schema.sql" with { type: "text" };
 import { getDefaultDbPath } from "./paths.js";
+import { getHiddenRepoFullNames } from "../data/hidden-store.js";
 
 let db: Database | null = null;
 let activeDbPath: string | null = null;
@@ -210,6 +211,18 @@ function appendTopicFilters(
   return result;
 }
 
+/** Exclude repos the user hid (matched by lowercased full_name). */
+function appendHiddenRepoFilter(
+  where: string,
+  params: SQLQueryBindings[],
+): string {
+  const hidden = [...getHiddenRepoFullNames()];
+  if (hidden.length === 0) return where;
+  const placeholders = hidden.map(() => "?").join(", ");
+  params.push(...hidden);
+  return `${where} AND LOWER(r.full_name) NOT IN (${placeholders})`;
+}
+
 export interface TrendingItemRow {
   id: string;
   repo_id: number;
@@ -375,6 +388,8 @@ function getTrendingItems(
       " AND r.snapshot_date = (SELECT MAX(snapshot_date) FROM trending_repos)";
   }
 
+  where = appendHiddenRepoFilter(where, params);
+
   const sortColumn =
     filters.sort === "updated"
       ? "r.updated_at"
@@ -489,6 +504,8 @@ function getStarredItems(
     where += " AND r.stars <= ?";
     params.push(filters.starsMax);
   }
+
+  where = appendHiddenRepoFilter(where, params);
 
   const sortColumn =
     filters.sort === "updated"

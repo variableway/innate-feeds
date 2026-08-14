@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Star, GitFork, ExternalLink } from "lucide-react";
+import { Star, GitFork, ExternalLink, EyeOff } from "lucide-react";
 import type { FeedItem } from "@/types/feed";
 import { formatNumber, cn } from "@/lib/utils";
 
@@ -10,6 +10,7 @@ interface FeedCardProps extends React.HTMLAttributes<HTMLDivElement> {
   compact?: boolean;
   selected?: boolean;
   onItemSelect?: (item: FeedItem) => void;
+  onHide?: (item: FeedItem) => void;
 }
 
 /**
@@ -24,6 +25,7 @@ const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
       compact = false,
       selected = false,
       onItemSelect,
+      onHide,
       className,
       ...props
     },
@@ -90,6 +92,19 @@ const FeedCard = React.forwardRef<HTMLDivElement, FeedCardProps>(
               >
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
+              {onHide && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onHide(item);
+                  }}
+                  className="shrink-0 text-muted-foreground hover:text-destructive"
+                  title="Hide this repo"
+                >
+                  <EyeOff className="h-3.5 w-3.5" />
+                </button>
+              )}
             </div>
             {repo.description && (
               <p

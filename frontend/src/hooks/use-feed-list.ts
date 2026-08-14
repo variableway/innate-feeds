@@ -2,13 +2,14 @@ import { useState, useEffect, useCallback } from "react";
 import type { FeedItem, FeedFilters } from "@/types/feed";
 import { toggleTopicFilter } from "@/types/feed";
 import { fetchFeeds, fetchLanguages, fetchDates } from "@/services/feeds";
+import { hideItem, unhideItem } from "@/services/hidden";
 import { usePersistedFeedFilters } from "@/hooks/use-persisted-feed-filters";
+import { usePageSize } from "@/hooks/use-page-size";
 import { toast } from "sonner";
 
 export function useFeedList(
   feedType: "trending" | "starred",
   defaultFilters: FeedFilters,
-  pageSize = 20,
 ) {
   const [items, setItems] = useState<FeedItem[]>([]);
   const [languages, setLanguages] = useState<string[]>([]);
@@ -20,6 +21,7 @@ export function useFeedList(
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const [pageSize, setPageSize] = usePageSize();
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -60,6 +62,22 @@ export function useFeedList(
     handleFiltersChange(toggleTopicFilter(filters, topic));
   };
 
+  const handlePageSizeChange = (next: number) => {
+    setPage(1);
+    setPageSize(next);
+  };
+
+  const handleHideItem = (item: FeedItem) => {
+    const fullName = item.repo.fullName;
+    void hideItem("repo", fullName).then(() => loadData());
+    toast.success(`Hidden ${fullName}`, {
+      action: {
+        label: "Undo",
+        onClick: () => void unhideItem("repo", fullName).then(() => loadData()),
+      },
+    });
+  };
+
   return {
     items,
     languages,
@@ -72,5 +90,7 @@ export function useFeedList(
     setPage,
     handleFiltersChange,
     handleTopicClick,
+    handlePageSizeChange,
+    handleHideItem,
   };
 }

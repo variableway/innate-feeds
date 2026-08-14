@@ -4,6 +4,7 @@ import { DigestCard } from "@/components/digest-card";
 import { DigestDetailPane } from "@/components/digest-detail-pane";
 import { DigestFilterBar } from "@/components/digest-filter-bar";
 import { MasterDetailLayout } from "@/components/master-detail-layout";
+import { PageSizeSelect } from "@/components/page-size-select";
 import type { DigestFeedItem } from "@/types/feed";
 
 export function DigestPage() {
@@ -22,7 +23,9 @@ export function DigestPage() {
     pageSize,
     setPage,
     handleFiltersChange,
-  } = useDigestList(20);
+    handlePageSizeChange,
+    handleHideItem,
+  } = useDigestList();
 
   const selected = digestId
     ? (items.find((i) => i.id === digestId) ?? null)
@@ -87,27 +90,32 @@ export function DigestPage() {
   })();
 
   const pagination =
-    total > pageSize ? (
-      <div className="mt-4 flex justify-center gap-2 pb-2">
-        <button
-          type="button"
-          onClick={() => setPage(Math.max(1, page - 1))}
-          disabled={page === 1}
-          className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
-        >
-          Previous
-        </button>
-        <span className="flex items-center px-3 text-sm text-muted-foreground">
-          Page {page} of {Math.ceil(total / pageSize)}
-        </span>
-        <button
-          type="button"
-          onClick={() => setPage(page + 1)}
-          disabled={page >= Math.ceil(total / pageSize)}
-          className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
-        >
-          Next
-        </button>
+    total > 0 ? (
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2 pb-2">
+        {total > pageSize && (
+          <>
+            <button
+              type="button"
+              onClick={() => setPage(Math.max(1, page - 1))}
+              disabled={page === 1}
+              className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <span className="flex items-center px-3 text-sm text-muted-foreground">
+              Page {page} of {Math.ceil(total / pageSize)}
+            </span>
+            <button
+              type="button"
+              onClick={() => setPage(page + 1)}
+              disabled={page >= Math.ceil(total / pageSize)}
+              className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
+            >
+              Next
+            </button>
+          </>
+        )}
+        <PageSizeSelect value={pageSize} onChange={handlePageSizeChange} />
       </div>
     ) : null;
 
@@ -134,6 +142,7 @@ export function DigestPage() {
                       compact
                       selected={item.id === digestId}
                       onItemSelect={openDetail}
+                      onHide={handleHideItem}
                     />
                   ))}
             {pagination}
@@ -172,6 +181,7 @@ export function DigestPage() {
               item={item}
               className="h-full"
               onItemSelect={openDetail}
+              onHide={handleHideItem}
             />
           ))}
         </div>
