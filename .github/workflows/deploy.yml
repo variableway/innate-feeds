@@ -78,6 +78,9 @@ jobs:
       - name: Prepare database from JSON
         run: |
           mkdir -p backend/.cache/digest readmes frontend/public/data/readmes
+          # Feed the committed hidden list into the export so hidden items
+          # stay out of the regenerated chunks and hidden.json is re-shipped.
+          cp frontend/public/data/hidden.json backend/.cache/hidden.json 2>/dev/null || true
           cd backend
           bun run import:static
 
