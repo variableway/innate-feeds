@@ -1,8 +1,10 @@
 import * as React from "react";
 import { useRouterState } from "@tanstack/react-router";
-import { Github, ChevronRight, User, Palette } from "lucide-react";
+import { Github, ChevronRight, User, Palette, Moon, Sun } from "lucide-react";
+import { THEME_VARIANTS } from "@innate/shared/theme-catalog";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/lib/theme";
+import type { ThemeVariant } from "@innate/shared/theme-catalog";
 
 interface AppHeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
@@ -11,6 +13,8 @@ const pageTitles: Record<string, { title: string; parent?: string }> = {
   "/starred": { title: "Starred", parent: "GitHub" },
   "/digest": { title: "Digest", parent: "Community" },
   "/settings": { title: "Settings" },
+  "/dsh": { title: "Plugins" },
+  "/dsh/categories": { title: "Categories", parent: "Plugins" },
 };
 
 function resolvePage(path: string): { title: string; parent?: string } {
@@ -24,6 +28,15 @@ function resolvePage(path: string): { title: string; parent?: string } {
   if (path.startsWith("/digest/")) {
     return { title: "Issue", parent: "Digest" };
   }
+  if (path.startsWith("/dsh/plugins/")) {
+    return { title: "Plugin", parent: "Plugins" };
+  }
+  if (path.startsWith("/dsh/categories/")) {
+    return { title: "Category", parent: "Plugins" };
+  }
+  if (path.startsWith("/dsh")) {
+    return { title: "Plugins" };
+  }
   return { title: "Feeds" };
 }
 
@@ -32,7 +45,8 @@ const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
     const router = useRouterState();
     const currentPath = router.location.pathname;
     const page = resolvePage(currentPath);
-    const { theme, setTheme } = useTheme();
+    const { variant, setVariant, resolvedColorMode, toggleColorMode } =
+      useTheme();
 
     return (
       <header
@@ -58,16 +72,29 @@ const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
           <div className="flex items-center gap-2">
             <Palette className="h-4 w-4 text-muted-foreground" />
             <select
-              value={theme}
-              onChange={(e) =>
-                setTheme(e.target.value as "default" | "notion" | "linear")
-              }
+              value={variant}
+              onChange={(e) => setVariant(e.target.value as ThemeVariant)}
               className="rounded-md border bg-background px-2 py-1 text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              aria-label="Theme variant"
             >
-              <option value="default">Default</option>
-              <option value="notion">Notion</option>
-              <option value="linear">Linear</option>
+              {THEME_VARIANTS.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
             </select>
+            <button
+              type="button"
+              onClick={toggleColorMode}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-md border bg-background text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+              aria-label="Toggle color mode"
+            >
+              {resolvedColorMode === "dark" ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </button>
           </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground">

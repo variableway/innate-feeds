@@ -4,19 +4,14 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-# Start both backend and frontend dev servers
+# Start backend, frontend, and DSH plugin directory dev servers
 
 echo "🚀 Starting Innate Feeds development servers..."
 echo ""
 
-if [ ! -d "$ROOT/backend/node_modules" ]; then
-  echo "📦 Installing backend dependencies..."
-  (cd "$ROOT/backend" && bun install)
-fi
-
-if [ ! -d "$ROOT/frontend/node_modules" ]; then
-  echo "📦 Installing frontend dependencies..."
-  (cd "$ROOT/frontend" && bun install)
+if [ ! -d "$ROOT/node_modules" ]; then
+  echo "📦 Installing workspace dependencies..."
+  (cd "$ROOT" && bun install)
 fi
 
 # Start backend in background
@@ -48,20 +43,21 @@ fi
 
 echo "✅ Backend ready"
 
-# Start frontend
 echo "🎨 Starting frontend on port 3000..."
 (cd "$ROOT/frontend" && bun run dev) &
 FRONTEND_PID=$!
 
 echo ""
-echo "✅ Both servers starting..."
+echo "✅ All servers starting..."
+echo "   Entry:    http://localhost:3000"
+echo "   Feeds:    http://localhost:3000/trending"
+echo "   Plugins:  http://localhost:3000/dsh"
 echo "   Backend:  http://localhost:4000"
-echo "   Frontend: http://localhost:3000"
 echo ""
-echo "Press Ctrl+C to stop both servers"
+echo "Press Ctrl+C to stop all servers"
 
 # Handle Ctrl+C
 trap "kill $BACKEND_PID $FRONTEND_PID 2>/dev/null; exit" INT TERM
 
-# Wait for both processes
+# Wait for all processes
 wait

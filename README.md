@@ -29,7 +29,8 @@ Browse GitHub **trending**, **starred**, and a community **issues digest** (ruan
 - **Issues digest** — 90-day JSON snapshot merged with live GitHub Issues.
 - **Repo README** — In-app Markdown. API: `./readmes` then background refresh. Static: live GitHub, then `/data/readmes`.
 - **Filters** — Language, topics, snapshot date, stars range, search; sort by stars / updated / created / starred.
-- **Themes** — Default, Notion, Linear; filter state in localStorage.
+- **Themes** — DSH default, plus Linear, Notion, and the rest of innate-fe-base variants; persisted in localStorage.
+- **DSH plugins** — `/dsh` inside the same Vite shell (sidebar + theme). Data comes from `awesome-dsh-plugin` YAML via `/api/plugins`.
 
 ## Quick start
 
@@ -152,6 +153,8 @@ innate-feeds/
 │   └── db/           # bun:sqlite schema + queries
 ├── frontend/src/     # React pages, components, feeds.ts + github-live.ts
 ├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json)
+├── dsh-plugin-directory/   # unused Next.js prototype; live UI is frontend `/dsh`
+├── awesome/          # curated awesome lists (`awesome-dsh-plugin` is the plugin data source)
 ├── .github/workflows/      # ci.yml, deploy.yml
 └── docs/data-update-workflow.md
 ```

@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@innate/ui": "file:../../../../base/innate-fe-base/packages/ui",
     "@tanstack/react-router": "^1.132.0",
     "@tanstack/react-table": "^8.21.3",
     "clsx": "^2.1.1",

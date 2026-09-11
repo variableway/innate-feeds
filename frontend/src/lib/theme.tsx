@@ -1,50 +1,131 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
-
-type Theme = "default" | "notion" | "linear";
+import {
+  applyThemeToDocument,
+  DEFAULT_COLOR_MODE,
+  DEFAULT_THEME_VARIANT,
+  LEGACY_FEEDS_THEME_KEY,
+  readStoredTheme,
+  resolveColorMode,
+  THEME_STORAGE_KEY,
+  writeStoredTheme,
+  type ColorMode,
+  type ThemeVariant,
+} from "@innate/shared/theme-catalog";
 
 interface ThemeContextValue {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+  variant: ThemeVariant;
+  colorMode: ColorMode;
+  resolvedColorMode: "light" | "dark";
+  setVariant: (variant: ThemeVariant) => void;
+  setColorMode: (mode: ColorMode) => void;
+  toggleColorMode: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-const STORAGE_KEY = "innate-feeds-theme";
-
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "default";
-  const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-  if (stored && ["default", "notion", "linear"].includes(stored)) {
-    return stored;
-  }
-  return "default";
-}
-
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(getInitialTheme);
+  const [variant, setVariantState] = useState<ThemeVariant>(() =>
+    typeof window === "undefined"
+      ? DEFAULT_THEME_VARIANT
+      : readStoredTheme().variant,
+  );
+  const [colorMode, setColorModeState] = useState<ColorMode>(() =>
+    typeof window === "undefined"
+      ? DEFAULT_COLOR_MODE
+      : readStoredTheme().colorMode,
+  );
+  const [resolvedColorMode, setResolvedColorMode] = useState<"light" | "dark">(
+    "light",
+  );
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      theme === "default" ? "" : theme,
-    );
-    localStorage.setItem(STORAGE_KEY, theme);
-  }, [theme]);
+    const stored = readStoredTheme();
+    setVariantState(stored.variant);
+    setColorModeState(stored.colorMode);
+    const resolved = applyThemeToDocument(stored.variant, stored.colorMode);
+    setResolvedColorMode(resolved);
+    setHydrated(true);
+  }, []);
 
-  const setTheme = (next: Theme) => {
-    setThemeState(next);
-  };
+  useEffect(() => {
+    if (!hydrated) return;
+    const resolved = applyThemeToDocument(variant, colorMode);
+    setResolvedColorMode(resolved);
+  }, [variant, colorMode, hydrated]);
+
+  useEffect(() => {
+    if (colorMode !== "system") return;
+
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = () => {
+      const resolved = resolveColorMode("system");
+      setResolvedColorMode(resolved);
+      applyThemeToDocument(variant, "system");
+    };
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, [colorMode, variant]);
+
+  useEffect(() => {
+    const onStorage = (event: StorageEvent) => {
+      if (
+        event.key !== THEME_STORAGE_KEY &&
+        event.key !== LEGACY_FEEDS_THEME_KEY
+      ) {
+        return;
+      }
+      const stored = readStoredTheme();
+      setVariantState(stored.variant);
+      setColorModeState(stored.colorMode);
+      const resolved = applyThemeToDocument(stored.variant, stored.colorMode);
+      setResolvedColorMode(resolved);
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
+  const setVariant = useCallback((next: ThemeVariant) => {
+    setVariantState(next);
+    writeStoredTheme({ variant: next, colorMode });
+  }, [colorMode]);
+
+  const setColorMode = useCallback((next: ColorMode) => {
+    setColorModeState(next);
+    writeStoredTheme({ variant, colorMode: next });
+  }, [variant]);
+
+  const toggleColorMode = useCallback(() => {
+    setColorModeState((current) => {
+      const resolved = resolveColorMode(current);
+      const next = resolved === "dark" ? "light" : "dark";
+      writeStoredTheme({ variant, colorMode: next });
+      return next;
+    });
+  }, [variant]);
+
+  const value = useMemo(
+    () => ({
+      variant,
+      colorMode,
+      resolvedColorMode,
+      setVariant,
+      setColorMode,
+      toggleColorMode,
+    }),
+    [variant, colorMode, resolvedColorMode, setVariant, setColorMode, toggleColorMode],
+  );
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 }
 

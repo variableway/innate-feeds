@@ -8,5 +8,7 @@
 | [project/issues/](./project/issues/README.md) | 任务契约 |
 | [project/tasks/](./project/tasks/README.md) | 多 Agent 工作流 |
 | [data-update-workflow.md](./data-update-workflow.md) | 数据更新运维（双模式、90 日窗口） |
+| [external-collectors.md](./external-collectors.md) | 外部数据源采集（Product Hunt / YC / a16z / GitHub Topics） |
+| [collector-design.md](./collector-design.md) | 采集器架构设计文档 |
 
 控制平面（只读链接）：`innate-works/projects/innate-feeds/index.md`

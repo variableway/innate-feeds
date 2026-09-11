@@ -13,8 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@innate/shared/theme-catalog": ["../shared/theme-catalog.ts"],
+      "@innate/shared/plugin-categories": ["../shared/plugin-categories.ts"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "../shared/theme-catalog.ts", "../shared/plugin-categories.ts"]
 }

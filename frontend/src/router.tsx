@@ -8,6 +8,10 @@ import { Route as starredDetailRoute } from "./pages/starred/detail-route";
 import { Route as digestRoute } from "./pages/digest/route";
 import { Route as digestDetailRoute } from "./pages/digest/detail-route";
 import { Route as settingsRoute } from "./pages/settings/route";
+import { Route as dshRoute } from "./pages/dsh/route";
+import { Route as dshCategoriesRoute } from "./pages/dsh/categories-route";
+import { Route as dshCategoryRoute } from "./pages/dsh/category-route";
+import { Route as dshDetailRoute } from "./pages/dsh/detail-route";
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -18,6 +22,10 @@ const routeTree = rootRoute.addChildren([
   digestRoute,
   digestDetailRoute,
   settingsRoute,
+  dshRoute,
+  dshCategoriesRoute,
+  dshCategoryRoute,
+  dshDetailRoute,
 ]);
 
 // GitHub Pages project sites are served under /{repo}/ — Vite sets BASE_URL accordingly.

@@ -1,0 +1,83 @@
+// DSH Plugin Directory schema
+// Ported from openalternative-main's `Tool` model (subset) + the "路径 B" DSH fields.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum PluginStatus {
+  Draft
+  Scheduled
+  Published
+  Deleted
+}
+
+model Plugin {
+  id             String       @id @default(cuid())
+  name           String
+  slug           String       @unique
+  websiteUrl     String
+  repositoryUrl  String       @unique
+  tagline        String?
+  description    String?
+  /// Generated markdown: install command, links, screenshot gallery
+  content        String?
+  stars          Int          @default(0)
+  forks          Int          @default(0)
+  score          Int          @default(0)
+  faviconUrl     String?
+  screenshotUrl  String?
+  /// Remaining screenshot URLs (first one goes to screenshotUrl)
+  screenshots    String[]
+  isFeatured     Boolean      @default(false)
+  status         PluginStatus @default(Published)
+  /// "added to the list" date from awesome-dsh-plugin (added-dates.json / git history)
+  publishedAt    DateTime?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  // ── awesome-dsh-plugin 兼容字段（路径 B：YAML → Plugin 表）──
+  /// awesome-dsh-plugin YAML 的 20 个 bundleCategory 之一（ui/usage/theme/.../fun）
+  bundleCategory   String?
+  /// bundleCategory 的中文显示名（来自 site/locales.mjs）
+  bundleCategoryZh String?
+  /// YAML description.zh（中文单行描述）
+  taglineZh        String?
+  /// 来自 YAML 的 url 字段原始值（保留以便审计回查）
+  sourceUrl        String?      @unique
+  /// "<owner>/<repo>" 派生 slug 前缀
+  sourceRepo       String?
+  /// 反查 awesome-dsh-plugin 仓库里的 YAML 文件路径（"data/plugins/<owner>__<repo>.yml"）
+  yamlFile         String?      @unique
+  /// 导入批次标识，如 "awesome-dsh-plugin-v1"
+  importSource     String?
+  /// 可选 npm 包名
+  npmPackage       String?
+  /// 可选 GitHub 托管的 .tgz tarball
+  tarballUrl       String?
+  /// 预生成的安装命令，如 "dsh plugin --profile web add github:owner/repo"
+  installCommand   String?
+
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?
+
+  @@index([name])
+  @@index([status])
+  @@index([isFeatured, score])
+  @@index([bundleCategory])
+  @@index([importSource])
+}
+
+/// The 20 fixed awesome-dsh-plugin categories (see scripts/lib/entries.mjs CAT_IDS)
+model Category {
+  id      String   @id // bundleCategory id, e.g. "ui"
+  label   String // en display name, e.g. "UI Enhancements"
+  labelZh String?
+  emoji   String?
+  plugins Plugin[]
+}

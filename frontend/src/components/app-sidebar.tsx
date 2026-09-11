@@ -6,6 +6,7 @@ import {
   PanelLeft,
   Settings,
   HelpCircle,
+  Puzzle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +20,7 @@ interface NavItem {
   href: string;
   icon: React.ElementType;
   isActive: (path: string) => boolean;
+  external?: boolean;
 }
 
 const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
@@ -39,6 +41,12 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
         href: "/digest",
         icon: Newspaper,
         isActive: (path) => path.startsWith("/digest"),
+      },
+      {
+        title: "Plugins",
+        href: "/dsh",
+        icon: Puzzle,
+        isActive: (path) => path.startsWith("/dsh"),
       },
     ];
 
@@ -85,18 +93,34 @@ const AppSidebar = React.forwardRef<HTMLDivElement, AppSidebarProps>(
           <div className="space-y-1">
             {navItems.map((item) => {
               const isActive = item.isActive(currentPath);
+              const className = cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                collapsed && "justify-center px-2",
+              );
+
+              if (item.external) {
+                return (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    title={collapsed ? item.title : undefined}
+                    className={className}
+                  >
+                    <item.icon className="h-4 w-4 shrink-0" />
+                    {!collapsed && item.title}
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={item.title}
                   to={item.href}
                   title={collapsed ? item.title : undefined}
-                  className={cn(
-                    "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
-                    isActive
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                    collapsed && "justify-center px-2",
-                  )}
+                  className={className}
                 >
                   <item.icon className="h-4 w-4 shrink-0" />
                   {!collapsed && item.title}

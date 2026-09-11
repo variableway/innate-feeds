@@ -19,6 +19,13 @@ import { fetchRepoReadme, type TrendingPeriod } from "../collector/github.js";
 import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
 import { hideItem, unhideItem } from "../data/hidden-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";
+import {
+  findPlugin,
+  findRelatedPlugins,
+  getPluginCategories,
+  getPluginStats,
+  searchPlugins,
+} from "../data/plugin-catalog.js";
 import { listCachedReadmes } from "../data/readme-cache.js";
 import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
 
@@ -241,6 +248,77 @@ app.get("/api/repos/:owner/:repo/readme", async (c) => {
     }
     console.error("Error in /api/repos/:owner/:repo/readme:", err);
     return c.json({ error: message }, 502);
+  }
+});
+
+app.get("/api/plugins/stats", (c) => {
+  try {
+    return c.json(getPluginStats());
+  } catch (err) {
+    console.error("Error in /api/plugins/stats:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/plugins/categories", (c) => {
+  try {
+    return c.json(getPluginCategories());
+  } catch (err) {
+    console.error("Error in /api/plugins/categories:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/plugins", (c) => {
+  try {
+    const category = (c.req.query("category") || "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    return c.json(
+      searchPlugins({
+        q: c.req.query("q") || undefined,
+        category,
+        sort: c.req.query("sort") || undefined,
+        page: parseInt(c.req.query("page") || "1", 10),
+        perPage: parseInt(c.req.query("perPage") || "35", 10),
+      }),
+    );
+  } catch (err) {
+    console.error("Error in /api/plugins:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/plugins/:slug/related", (c) => {
+  try {
+    const plugin = findPlugin(c.req.param("slug"));
+    if (!plugin) return c.json({ error: "Plugin not found" }, 404);
+    return c.json(findRelatedPlugins(plugin));
+  } catch (err) {
+    console.error("Error in /api/plugins/:slug/related:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+app.get("/api/plugins/:slug", (c) => {
+  try {
+    const plugin = findPlugin(c.req.param("slug"));
+    if (!plugin) return c.json({ error: "Plugin not found" }, 404);
+    return c.json(plugin);
+  } catch (err) {
+    console.error("Error in /api/plugins/:slug:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
   }
 });
 
