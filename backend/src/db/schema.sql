@@ -80,3 +80,48 @@ CREATE INDEX IF NOT EXISTS idx_starred_repo_topics_topic ON starred_repo_topics(
 
 CREATE INDEX IF NOT EXISTS idx_trending_snapshots_date ON trending_snapshots(snapshot_date);
 CREATE INDEX IF NOT EXISTS idx_trending_snapshots_period ON trending_snapshots(period);
+
+-- Full-text search (FTS5) mirrors for keyword search with BM25 ranking.
+-- External-content tables: the text stays in the repo tables, triggers keep
+-- the index in sync, and getDb() rebuilds both indexes on connection init so
+-- databases written before FTS5 existed (or outside these triggers) are
+-- backfilled automatically.
+CREATE VIRTUAL TABLE IF NOT EXISTS trending_repos_fts USING fts5(
+  name, full_name, description,
+  content='trending_repos', content_rowid='rowid'
+);
+
+CREATE TRIGGER IF NOT EXISTS trending_repos_fts_ai AFTER INSERT ON trending_repos BEGIN
+  INSERT INTO trending_repos_fts(rowid, name, full_name, description)
+  VALUES (new.rowid, new.name, new.full_name, new.description);
+END;
+CREATE TRIGGER IF NOT EXISTS trending_repos_fts_ad AFTER DELETE ON trending_repos BEGIN
+  INSERT INTO trending_repos_fts(trending_repos_fts, rowid, name, full_name, description)
+  VALUES ('delete', old.rowid, old.name, old.full_name, old.description);
+END;
+CREATE TRIGGER IF NOT EXISTS trending_repos_fts_au AFTER UPDATE ON trending_repos BEGIN
+  INSERT INTO trending_repos_fts(trending_repos_fts, rowid, name, full_name, description)
+  VALUES ('delete', old.rowid, old.name, old.full_name, old.description);
+  INSERT INTO trending_repos_fts(rowid, name, full_name, description)
+  VALUES (new.rowid, new.name, new.full_name, new.description);
+END;
+
+CREATE VIRTUAL TABLE IF NOT EXISTS starred_repos_fts USING fts5(
+  name, full_name, description,
+  content='starred_repos', content_rowid='rowid'
+);
+
+CREATE TRIGGER IF NOT EXISTS starred_repos_fts_ai AFTER INSERT ON starred_repos BEGIN
+  INSERT INTO starred_repos_fts(rowid, name, full_name, description)
+  VALUES (new.rowid, new.name, new.full_name, new.description);
+END;
+CREATE TRIGGER IF NOT EXISTS starred_repos_fts_ad AFTER DELETE ON starred_repos BEGIN
+  INSERT INTO starred_repos_fts(starred_repos_fts, rowid, name, full_name, description)
+  VALUES ('delete', old.rowid, old.name, old.full_name, old.description);
+END;
+CREATE TRIGGER IF NOT EXISTS starred_repos_fts_au AFTER UPDATE ON starred_repos BEGIN
+  INSERT INTO starred_repos_fts(starred_repos_fts, rowid, name, full_name, description)
+  VALUES ('delete', old.rowid, old.name, old.full_name, old.description);
+  INSERT INTO starred_repos_fts(rowid, name, full_name, description)
+  VALUES (new.rowid, new.name, new.full_name, new.description);
+END;

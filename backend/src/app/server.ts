@@ -120,7 +120,9 @@ app.get("/api/feeds", (c) => {
         language,
         topics,
         search,
-        sort: sort || "stars",
+        // When searching without an explicit sort, pass undefined so the DB
+        // layer orders by FTS5 bm25() relevance instead of defaulting to stars.
+        sort: sort || (search ? undefined : "stars"),
         order: order || "desc",
         date,
         starsMin,

@@ -18,6 +18,15 @@ export function getDb(dbPath?: string): Database {
     db.exec("PRAGMA foreign_keys = ON");
 
     db.exec(schemaSql);
+    // Rebuild both FTS5 indexes from their content tables on every connection
+    // init: cheap at the current scale (~7k rows) and self-healing for
+    // databases written before FTS5 existed or outside the sync triggers.
+    db.exec(
+      "INSERT INTO trending_repos_fts(trending_repos_fts) VALUES ('rebuild')",
+    );
+    db.exec(
+      "INSERT INTO starred_repos_fts(starred_repos_fts) VALUES ('rebuild')",
+    );
   }
   return db;
 }
@@ -223,6 +232,22 @@ function appendHiddenRepoFilter(
   return `${where} AND LOWER(r.full_name) NOT IN (${placeholders})`;
 }
 
+/**
+ * Convert free-text user input into a safe FTS5 MATCH expression: every
+ * whitespace-separated term becomes a quoted prefix phrase, so punctuation
+ * can never break the query syntax and "repo" also matches "repositories".
+ * Multiple terms are combined with implicit AND. Returns null when the input
+ * contains no usable term.
+ */
+export function toFtsQuery(search: string): string | null {
+  const terms = search
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((term) => `"${term.replaceAll('"', '""')}"*`);
+  return terms.length > 0 ? terms.join(" ") : null;
+}
+
 export interface TrendingItemRow {
   id: string;
   repo_id: number;
@@ -359,6 +384,7 @@ function getTrendingItems(
 ): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
   const params: SQLQueryBindings[] = [];
+  const ftsQuery = toFtsQuery(filters.search ?? "");
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -371,13 +397,6 @@ function getTrendingItems(
     filters.topics,
     "trending_repo_topics",
   );
-
-  if (filters.search) {
-    where +=
-      " AND (r.name LIKE ? OR r.description LIKE ? OR r.full_name LIKE ?)";
-    const search = `%${filters.search}%`;
-    params.push(search, search, search);
-  }
 
   if (filters.date) {
     where += " AND r.snapshot_date = ?";
@@ -398,12 +417,40 @@ function getTrendingItems(
         : "r.stars";
   const order = filters.order === "asc" ? "ASC" : "DESC";
 
+  // FTS search: the count query filters with a direct MATCH, while the items
+  // query joins a per-row bm25() rank subquery — auxiliary functions like
+  // bm25() only evaluate per matched row, so grouped (GROUP BY) results rank
+  // via MIN(rank) over that subquery column. The subquery's LIMIT -1 is a
+  // no-op row-wise but stops SQLite from flattening it into the aggregate
+  // outer query (which would make bm25() fail with "unable to use function
+  // bm25 in the requested context"). Without an explicit sort, searching
+  // orders by relevance (bm25: smaller = better).
+  const countFromClause = ftsQuery
+    ? "FROM trending_repos r JOIN trending_repos_fts ON trending_repos_fts.rowid = r.rowid"
+    : "FROM trending_repos r";
+  const countWhere = ftsQuery
+    ? `${where} AND trending_repos_fts MATCH ?`
+    : where;
+  const countParams = ftsQuery ? [...params, ftsQuery] : params;
+
+  const itemsFromClause = ftsQuery
+    ? `FROM trending_repos r JOIN (
+        SELECT rowid AS fts_rowid, bm25(trending_repos_fts) AS fts_rank
+        FROM trending_repos_fts WHERE trending_repos_fts MATCH ? LIMIT -1
+      ) fts ON fts.fts_rowid = r.rowid`
+    : "FROM trending_repos r";
+  const itemsParams = ftsQuery ? [ftsQuery, ...params] : params;
+  const orderBy =
+    ftsQuery && !filters.sort
+      ? "MIN(fts.fts_rank) ASC"
+      : `${sortColumn} ${order}`;
+
   const countStmt = db.prepare(`
     SELECT COUNT(DISTINCT r.github_repo_id) as total
-    FROM trending_repos r
-    ${where}
+    ${countFromClause}
+    ${countWhere}
   `);
-  const { total } = countStmt.get(...params) as { total: number };
+  const { total } = countStmt.get(...countParams) as { total: number };
 
   const offset = (page - 1) * pageSize;
   const itemsStmt = db.prepare(`
@@ -414,14 +461,17 @@ function getTrendingItems(
       r.owner_login, r.owner_avatar_url, r.owner_url,
       r.created_at, r.updated_at,
       MIN(r.snapshot_date) as snapshot_date
-    FROM trending_repos r
+    ${itemsFromClause}
     ${where}
     GROUP BY r.github_repo_id
-    ORDER BY ${sortColumn} ${order}
+    ORDER BY ${orderBy}
     LIMIT ? OFFSET ?
   `);
-
-  const rows = itemsStmt.all(...params, pageSize, offset) as TrendingItemRow[];
+  const rows = itemsStmt.all(
+    ...itemsParams,
+    pageSize,
+    offset,
+  ) as TrendingItemRow[];
 
   const repoIds = rows.map((r) => r.id);
   const topicsMap = batchFetchTopics(db, repoIds, "trending_repo_topics");
@@ -475,6 +525,7 @@ function getStarredItems(
 ): { items: FeedItemDTO[]; total: number } {
   let where = "WHERE 1=1";
   const params: SQLQueryBindings[] = [];
+  const ftsQuery = toFtsQuery(filters.search ?? "");
 
   if (filters.language) {
     where += " AND r.language = ?";
@@ -488,11 +539,9 @@ function getStarredItems(
     "starred_repo_topics",
   );
 
-  if (filters.search) {
-    where +=
-      " AND (r.name LIKE ? OR r.description LIKE ? OR r.full_name LIKE ?)";
-    const search = `%${filters.search}%`;
-    params.push(search, search, search);
+  if (ftsQuery) {
+    where += " AND starred_repos_fts MATCH ?";
+    params.push(ftsQuery);
   }
 
   if (filters.starsMin != null) {
@@ -517,8 +566,18 @@ function getStarredItems(
           : "r.stars";
   const order = filters.order === "asc" ? "ASC" : "DESC";
 
+  // Same FTS join/ordering rules as getTrendingItems: join only when
+  // searching, relevance wins when the caller did not request a sort.
+  const fromClause = ftsQuery
+    ? "FROM starred_repos r JOIN starred_repos_fts ON starred_repos_fts.rowid = r.rowid"
+    : "FROM starred_repos r";
+  const orderBy =
+    ftsQuery && !filters.sort
+      ? "bm25(starred_repos_fts) ASC"
+      : `${sortColumn} ${order}`;
+
   const countStmt = db.prepare(
-    `SELECT COUNT(*) as total FROM starred_repos r ${where}`,
+    `SELECT COUNT(*) as total ${fromClause} ${where}`,
   );
   const { total } = countStmt.get(...params) as { total: number };
 
@@ -529,9 +588,9 @@ function getStarredItems(
       r.stars, r.forks, r.watchers, r.language,
       r.owner_login, r.owner_avatar_url, r.owner_url,
       r.created_at, r.updated_at, r.starred_at, r.fetched_at
-    FROM starred_repos r
+    ${fromClause}
     ${where}
-    ORDER BY ${sortColumn} ${order}
+    ORDER BY ${orderBy}
     LIMIT ? OFFSET ?
   `);
 
