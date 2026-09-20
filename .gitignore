@@ -34,6 +34,13 @@ backend/.cache/
 *.db-journal
 *.db-shm
 *.db-wal
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+# hidden.json lives next to the DB when DB_PATH points inside the repo
+/hidden.json
+backend/hidden.json
 
 # Issues digest local JSON dumps (also under ~/.innate/digest/)
 backend/data/digest/*.json
@@ -59,11 +66,6 @@ references/
 # Test / coverage
 coverage/
 .nyc_output/
-
-# Go scanner build artifacts
-git-repo-scanner/git-repo-scanner
-git-repo-scanner/repos.json
-git-repo-scanner/repos.md
 
 # Legacy binaries from removed architectures
 trending-backend/trending-cli
