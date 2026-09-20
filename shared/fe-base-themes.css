@@ -1,5 +1,5 @@
 /* Fe-base theme variants (not the DSH :root baseline). */
-@import "../../../../base/innate-fe-base/packages/ui/src/themes/linear.css";
-@import "../../../../base/innate-fe-base/packages/ui/src/themes/notion.css";
-@import "../../../../base/innate-fe-base/packages/ui/src/themes/shadcn-default.css";
-@import "../../../../base/innate-fe-base/packages/ui/src/themes/shadcn-studio.css";
+@import "./themes/linear.css";
+@import "./themes/notion.css";
+@import "./themes/shadcn-default.css";
+@import "./themes/shadcn-studio.css";
