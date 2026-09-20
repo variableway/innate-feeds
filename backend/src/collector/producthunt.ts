@@ -42,7 +42,9 @@ interface ProductHuntRaw {
 
 /** Get ISO8601 week number (1-53) for a date. */
 function getISOWeek(date: Date): number {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const d = new Date(
+    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()),
+  );
   d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
@@ -208,8 +210,7 @@ export class ProductHuntCollector implements FeedCollector {
     const html = await fetchHtml(url);
     const items: ExternalFeedItem[] = [];
 
-    const namePattern =
-      /href="\/products\/([^"]+)"[^>]*>([^<]+)<\/a>/g;
+    const namePattern = /href="\/products\/([^"]+)"[^>]*>([^<]+)<\/a>/g;
     let match: RegExpExecArray | null;
     let rank = 0;
 

@@ -45,14 +45,7 @@ interface YCApiResponse {
   totalPages: number;
 }
 
-const DEFAULT_BATCHES = [
-  "W24",
-  "S24",
-  "F25",
-  "W25",
-  "X25",
-  "P26",
-];
+const DEFAULT_BATCHES = ["W24", "S24", "F25", "W25", "X25", "P26"];
 
 export class YCCompaniesCollector implements FeedCollector {
   source = "yc" as const;

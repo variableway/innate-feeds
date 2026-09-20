@@ -70,7 +70,9 @@ function parseGithubUrl(url: string): {
   const p = url.replace(/^https:\/\/github\.com\//, "").replace(/\/+$/, "");
   const [owner, repo, ...rest] = p.split("/");
   const sub =
-    rest[0] === "tree" ? rest.slice(2).join("/") || null : rest.join("/") || null;
+    rest[0] === "tree"
+      ? rest.slice(2).join("/") || null
+      : rest.join("/") || null;
   return { owner: owner ?? "", repo: repo ?? "", sub };
 }
 
@@ -121,7 +123,9 @@ function loadAll(): DshPlugin[] {
   const root = dataDir();
   const yamlDir = join(root, "plugins");
   const stars = readJson<StarsMap>(join(root, "stars.json"));
-  const screenshotsMap = readJson<ScreenshotsMap>(join(root, "screenshots.json"));
+  const screenshotsMap = readJson<ScreenshotsMap>(
+    join(root, "screenshots.json"),
+  );
   const dates = readJson<DatesMap>(join(root, "added-dates.json"));
 
   let names: string[] = [];
@@ -180,8 +184,7 @@ function loadAll(): DshPlugin[] {
       slug,
       name: parsed.name,
       tagline: descEn,
-      taglineZh:
-        typeof descZh === "string" && descZh.trim() ? descZh : null,
+      taglineZh: typeof descZh === "string" && descZh.trim() ? descZh : null,
       description: descEn,
       content: buildContent(
         parsed as YamlEntry & { url: string },
@@ -244,7 +247,8 @@ export function findRelatedPlugins(plugin: DshPlugin, take = 6): DshPlugin[] {
   return getPlugins()
     .filter(
       (item) =>
-        item.bundleCategory === plugin.bundleCategory && item.slug !== plugin.slug,
+        item.bundleCategory === plugin.bundleCategory &&
+        item.slug !== plugin.slug,
     )
     .sort((a, b) => b.stars - a.stars)
     .slice(0, take);
@@ -271,7 +275,8 @@ export function searchPlugins(input: PluginSearchInput) {
   }
   if (q) {
     items = items.filter((plugin) => {
-      const hay = `${plugin.name} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
+      const hay =
+        `${plugin.name} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
       return hay.includes(q);
     });
   }
@@ -282,9 +287,15 @@ export function searchPlugins(input: PluginSearchInput) {
       case "stars.asc":
         return a.stars - b.stars || a.name.localeCompare(b.name);
       case "added.desc":
-        return (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "") || b.stars - a.stars;
+        return (
+          (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "") ||
+          b.stars - a.stars
+        );
       case "added.asc":
-        return (a.publishedAt ?? "").localeCompare(b.publishedAt ?? "") || b.stars - a.stars;
+        return (
+          (a.publishedAt ?? "").localeCompare(b.publishedAt ?? "") ||
+          b.stars - a.stars
+        );
       case "name.asc":
         return a.name.localeCompare(b.name);
       case "name.desc":

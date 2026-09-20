@@ -68,7 +68,10 @@ export function DshPluginDetailPage() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
       <div className="mx-auto max-w-4xl">
-        <Link to="/dsh" className="text-sm text-muted-foreground hover:text-foreground">
+        <Link
+          to="/dsh"
+          className="text-sm text-muted-foreground hover:text-foreground"
+        >
           ← All plugins
         </Link>
 
@@ -76,7 +79,9 @@ export function DshPluginDetailPage() {
           <h1 className="font-mono text-2xl font-bold tracking-tight break-all sm:text-3xl">
             {plugin.name}
           </h1>
-          {plugin.tagline ? <p className="mt-2 text-lg">{plugin.tagline}</p> : null}
+          {plugin.tagline ? (
+            <p className="mt-2 text-lg">{plugin.tagline}</p>
+          ) : null}
           {plugin.taglineZh ? (
             <p className="mt-1 text-muted-foreground">{plugin.taglineZh}</p>
           ) : null}

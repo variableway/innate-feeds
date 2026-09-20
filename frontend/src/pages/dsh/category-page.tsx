@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams, useSearch } from "@tanstack/react-router";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearch,
+} from "@tanstack/react-router";
 import { pluginCategoryById } from "@innate/shared/plugin-categories";
 import { fetchPlugins } from "@/services/plugins";
-import { PluginListing, type PluginListingSearch } from "@/components/plugin-listing";
+import {
+  PluginListing,
+  type PluginListingSearch,
+} from "@/components/plugin-listing";
 import type { DshPlugin } from "@/types/plugin";
 
 export function DshCategoryPage() {
@@ -42,7 +50,10 @@ export function DshCategoryPage() {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
-      <Link to="/dsh/categories" className="text-sm text-muted-foreground hover:text-foreground">
+      <Link
+        to="/dsh/categories"
+        className="text-sm text-muted-foreground hover:text-foreground"
+      >
         ← Categories
       </Link>
       <h1 className="mt-4 text-3xl font-bold tracking-tight">

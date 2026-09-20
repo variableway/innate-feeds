@@ -16,7 +16,9 @@ export function DshCategoriesPage() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
       <h1 className="text-3xl font-bold tracking-tight">Categories</h1>
-      <p className="mt-2 text-muted-foreground">Browse DSH plugins by category.</p>
+      <p className="mt-2 text-muted-foreground">
+        Browse DSH plugins by category.
+      </p>
       {error ? <p className="mt-4 text-sm text-destructive">{error}</p> : null}
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (

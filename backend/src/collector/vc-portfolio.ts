@@ -28,10 +28,9 @@ export async function syncVCPortfolio(
   options: SyncOptions = {},
 ): Promise<void> {
   const sources = options.sources || ["all"];
-  const targets: FeedSource[] =
-    sources.includes("all")
-      ? ["yc", "a16z"]
-      : (sources as FeedSource[]);
+  const targets: FeedSource[] = sources.includes("all")
+    ? ["yc", "a16z"]
+    : (sources as FeedSource[]);
 
   if (targets.includes("yc")) {
     console.log("[vc-sync] Syncing YC Companies...");
@@ -51,14 +50,11 @@ export async function syncVCPortfolio(
     console.log("[vc-sync] Syncing a16z Portfolio...");
     const a16z = new A16zPortfolioCollector();
     const result = await a16z.save();
-    console.log(
-      `[vc-sync] a16z: ${result.count} items -> ${result.outDir}`,
-    );
+    console.log(`[vc-sync] a16z: ${result.count} items -> ${result.outDir}`);
   }
 
   if (targets.includes("producthunt")) {
-    const date =
-      options.phDate || new Date().toISOString().split("T")[0];
+    const date = options.phDate || new Date().toISOString().split("T")[0];
     console.log(`[vc-sync] Syncing Product Hunt (${date})...`);
     const ph = new ProductHuntCollector();
     const result = await ph.save(date);
@@ -101,10 +97,13 @@ if (isDirectRun) {
     process.exit(1);
   }
 
-  syncVCPortfolio({ sources: sources.length ? sources : ["all"], ycBatches, ycQuery, phDate }).catch(
-    (err) => {
-      console.error(err);
-      process.exit(1);
-    },
-  );
+  syncVCPortfolio({
+    sources: sources.length ? sources : ["all"],
+    ycBatches,
+    ycQuery,
+    phDate,
+  }).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }

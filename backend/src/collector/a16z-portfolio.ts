@@ -249,9 +249,7 @@ export class A16zPortfolioCollector implements FeedCollector {
     return saveItems("a16z", items, "portfolio");
   }
 
-  private async fetchTopRepo(
-    org: string,
-  ): Promise<GitHubRepoInfo | null> {
+  private async fetchTopRepo(org: string): Promise<GitHubRepoInfo | null> {
     try {
       const repos = await fetchJson<GitHubRepoInfo[]>(
         `https://api.github.com/orgs/${org}/repos?sort=stars&per_page=1`,

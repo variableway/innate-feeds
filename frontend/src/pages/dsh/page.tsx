@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import { fetchPluginStats, fetchPlugins } from "@/services/plugins";
-import { PluginListing, type PluginListingSearch } from "@/components/plugin-listing";
+import {
+  PluginListing,
+  type PluginListingSearch,
+} from "@/components/plugin-listing";
 import type { DshPlugin, PluginStats } from "@/types/plugin";
 
 export function DshPluginsPage() {
@@ -71,9 +74,7 @@ export function DshPluginsPage() {
           </p>
         ) : null}
       </section>
-      {error ? (
-        <p className="mb-4 text-sm text-destructive">{error}</p>
-      ) : null}
+      {error ? <p className="mb-4 text-sm text-destructive">{error}</p> : null}
       <PluginListing
         plugins={plugins}
         total={total}

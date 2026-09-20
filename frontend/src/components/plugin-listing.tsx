@@ -62,7 +62,9 @@ export function PluginListing({
         <div className="flex items-center gap-3">
           <select
             value={search.sort}
-            onChange={(event) => onChange({ sort: event.target.value, page: 1 })}
+            onChange={(event) =>
+              onChange({ sort: event.target.value, page: 1 })
+            }
             className="h-9 rounded-md border bg-background px-2 text-sm"
             aria-label="Sort"
           >

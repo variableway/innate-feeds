@@ -27,7 +27,9 @@ export async function fetchPluginCategories(): Promise<PluginCategoryStat[]> {
   return res.json();
 }
 
-export async function fetchPlugins(query: PluginQuery): Promise<PluginSearchResult> {
+export async function fetchPlugins(
+  query: PluginQuery,
+): Promise<PluginSearchResult> {
   const params = new URLSearchParams();
   if (query.q) params.set("q", query.q);
   if (query.category) params.set("category", query.category);

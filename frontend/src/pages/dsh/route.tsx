@@ -17,7 +17,10 @@ export const Route = createRoute({
     q: typeof search.q === "string" ? search.q : undefined,
     category: typeof search.category === "string" ? search.category : undefined,
     sort: typeof search.sort === "string" ? search.sort : undefined,
-    view: search.view === "list" || search.view === "grid" ? search.view : undefined,
+    view:
+      search.view === "list" || search.view === "grid"
+        ? search.view
+        : undefined,
     page: Number(search.page) > 0 ? Number(search.page) : undefined,
   }),
   component: DshPluginsPage,

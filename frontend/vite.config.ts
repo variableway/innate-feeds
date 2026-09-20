@@ -7,10 +7,6 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const uiThemesPath = resolve(
-  __dirname,
-  "../../../../base/innate-fe-base/packages/ui/src/themes",
-);
 
 function githubPagesPlugin(): Plugin {
   return {
@@ -26,17 +22,9 @@ function githubPagesPlugin(): Plugin {
 export default defineConfig({
   base: process.env.VITE_BASE_PATH || "/",
   plugins: [tsconfigPaths(), tailwindcss(), react(), githubPagesPlugin()],
-  resolve: {
-    alias: {
-      "@innate/ui/themes": uiThemesPath,
-    },
-  },
   server: {
     fs: {
-      allow: [
-        resolve(__dirname, ".."),
-        resolve(__dirname, "../../../../base/innate-fe-base"),
-      ],
+      allow: [resolve(__dirname, "..")],
     },
     proxy: {
       "/api": "http://localhost:4000",

@@ -22,10 +22,10 @@
     "data:export": "cd backend && bun run export:incremental",
     "data:update": "bun run sync && bun run data:sync:digest && bun run data:export",
     "data:update:window": "bun run data:sync:window && bun run data:export",
-    "build": "cd frontend && bun run build",
+    "build": "cd backend && bun run build && cd ../frontend && bun run build",
     "start": "bun run build && cd backend && bun run start",
-    "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
-    "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/vite.config.ts\"",
+    "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\"",
+    "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\"",
     "export:static": "cd backend && bun run export:incremental",
     "build:static": "cd backend && bun run export:incremental && cd ../frontend && VITE_STATIC_MODE=true bun run build",
     "build:pages": "VITE_BASE_PATH=${VITE_BASE_PATH:-/} VITE_STATIC_MODE=true bun run build:static",
@@ -35,9 +35,9 @@
     "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck"
   },
   "devDependencies": {
-    "@vitest/expect": "^4.1.11",
+    "@vitest/expect": "^5.0.1",
     "concurrently": "^10.0.5",
-    "prettier": "^3.9.6",
-    "vitest": "^4.1.11"
+    "prettier": "^3.9.8",
+    "vitest": "^5.0.1"
   }
 }

@@ -93,15 +93,21 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
-  const setVariant = useCallback((next: ThemeVariant) => {
-    setVariantState(next);
-    writeStoredTheme({ variant: next, colorMode });
-  }, [colorMode]);
+  const setVariant = useCallback(
+    (next: ThemeVariant) => {
+      setVariantState(next);
+      writeStoredTheme({ variant: next, colorMode });
+    },
+    [colorMode],
+  );
 
-  const setColorMode = useCallback((next: ColorMode) => {
-    setColorModeState(next);
-    writeStoredTheme({ variant, colorMode: next });
-  }, [variant]);
+  const setColorMode = useCallback(
+    (next: ColorMode) => {
+      setColorModeState(next);
+      writeStoredTheme({ variant, colorMode: next });
+    },
+    [variant],
+  );
 
   const toggleColorMode = useCallback(() => {
     setColorModeState((current) => {
@@ -121,7 +127,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setColorMode,
       toggleColorMode,
     }),
-    [variant, colorMode, resolvedColorMode, setVariant, setColorMode, toggleColorMode],
+    [
+      variant,
+      colorMode,
+      resolvedColorMode,
+      setVariant,
+      setColorMode,
+      toggleColorMode,
+    ],
   );
 
   return (

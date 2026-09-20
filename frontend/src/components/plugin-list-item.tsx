@@ -18,7 +18,9 @@ export function PluginListItem({ plugin }: { plugin: DshPlugin }) {
       className="group flex items-center gap-4 rounded-lg border px-4 py-3 transition-colors hover:border-foreground/20"
     >
       <div className="min-w-0 flex-1">
-        <h3 className="truncate font-mono text-sm font-semibold">{plugin.name}</h3>
+        <h3 className="truncate font-mono text-sm font-semibold">
+          {plugin.name}
+        </h3>
         {plugin.tagline ? (
           <p className="mt-1 line-clamp-1 text-sm text-muted-foreground">
             {plugin.tagline}

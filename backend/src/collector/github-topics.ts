@@ -107,7 +107,7 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "mlops",
     "model-training",
   ],
-  "应用": [
+  应用: [
     "ai-coding",
     "ai-assistant",
     "chatbot",
@@ -117,7 +117,7 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "voice-assistant",
     "ai-video",
   ],
-  "基础设施": [
+  基础设施: [
     "vector-database",
     "embedding",
     "gpu",
@@ -125,7 +125,7 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "model-serving",
     "edge-ai",
   ],
-  "多模态": [
+  多模态: [
     "computer-vision",
     "natural-language-processing",
     "nlp",
@@ -137,15 +137,11 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
 };
 
 function ghApiSearch(apiPath: string): GitHubSearchResponse {
-  const raw = execFileSync(
-    "gh",
-    ["api", apiPath, "--jq", "."],
-    {
-      encoding: "utf-8",
-      stdio: ["pipe", "pipe", "pipe"],
-      maxBuffer: 10 * 1024 * 1024,
-    },
-  );
+  const raw = execFileSync("gh", ["api", apiPath, "--jq", "."], {
+    encoding: "utf-8",
+    stdio: ["pipe", "pipe", "pipe"],
+    maxBuffer: 10 * 1024 * 1024,
+  });
   return JSON.parse(raw);
 }
 
@@ -194,9 +190,7 @@ export class GitHubTopicsCollector implements FeedCollector {
     }
 
     // Dedupe by GitHub repo full_name
-    const deduped = [
-      ...new Map(allItems.map((i) => [i.url, i])).values(),
-    ];
+    const deduped = [...new Map(allItems.map((i) => [i.url, i])).values()];
     console.error(
       `[github-topics] Fetched ${deduped.length} unique repos across ${this.topics.length} topics`,
     );
@@ -316,9 +310,7 @@ if (isDirectRun) {
     collector
       .save()
       .then((r) =>
-        console.log(
-          `Saved ${r.count} repos → ${r.outDir} (${r.bytes} bytes)`,
-        ),
+        console.log(`Saved ${r.count} repos → ${r.outDir} (${r.bytes} bytes)`),
       )
       .catch(console.error);
   } else {

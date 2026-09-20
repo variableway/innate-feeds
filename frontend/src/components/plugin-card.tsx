@@ -27,7 +27,9 @@ export function PluginCard({ plugin }: { plugin: DshPlugin }) {
             />
           </div>
         ) : null}
-        <div className={`flex flex-1 flex-col gap-2 px-4 pb-4 ${plugin.screenshotUrl ? "pt-3" : "pt-4"}`}>
+        <div
+          className={`flex flex-1 flex-col gap-2 px-4 pb-4 ${plugin.screenshotUrl ? "pt-3" : "pt-4"}`}
+        >
           <div className="flex items-start justify-between gap-2">
             <h3 className="font-mono text-sm font-semibold leading-tight break-all">
               {plugin.name}

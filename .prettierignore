@@ -1,0 +1,4 @@
+# Vendored shadcn/ui registry code — keep as close to `shadcn:update` output as
+# possible so refreshing components produces clean diffs.
+frontend/src/components/ui/
+frontend/src/hooks/use-mobile.ts

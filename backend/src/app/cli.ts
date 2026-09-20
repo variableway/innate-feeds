@@ -148,7 +148,13 @@ async function main() {
           const result = await ph.savePeriod(period, date);
           console.log(
             JSON.stringify(
-              { source: "producthunt", period, count: result.count, outDir: result.outDir, bytes: result.bytes },
+              {
+                source: "producthunt",
+                period,
+                count: result.count,
+                outDir: result.outDir,
+                bytes: result.bytes,
+              },
               null,
               2,
             ),
@@ -184,7 +190,12 @@ async function main() {
         const result = await a16z.save();
         console.log(
           JSON.stringify(
-            { source: "a16z", count: result.count, outDir: result.outDir, bytes: result.bytes },
+            {
+              source: "a16z",
+              count: result.count,
+              outDir: result.outDir,
+              bytes: result.bytes,
+            },
             null,
             2,
           ),
@@ -215,7 +226,8 @@ async function main() {
         for (let i = 0; i < args.length; i++) {
           if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
           if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as any;
-          if (args[i] === "--per-page" && args[i + 1]) perPage = Number(args[++i]);
+          if (args[i] === "--per-page" && args[i + 1])
+            perPage = Number(args[++i]);
         }
         const collector = new GitHubTopicsCollector({
           topics: topics.length ? topics : undefined,
@@ -225,7 +237,12 @@ async function main() {
         const result = await collector.save();
         console.log(
           JSON.stringify(
-            { source: "github-topics", count: result.count, outDir: result.outDir, bytes: result.bytes },
+            {
+              source: "github-topics",
+              count: result.count,
+              outDir: result.outDir,
+              bytes: result.bytes,
+            },
             null,
             2,
           ),
