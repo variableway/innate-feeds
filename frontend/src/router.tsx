@@ -29,7 +29,7 @@ const routeTree = rootRoute.addChildren([
 ]);
 
 // GitHub Pages project sites are served under /{repo}/ — Vite sets BASE_URL accordingly.
-const basepath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const basepath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
 
 export const router = createRouter({
   routeTree,

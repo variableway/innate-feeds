@@ -18,5 +18,10 @@
       "@innate/shared/plugin-categories": ["../shared/plugin-categories.ts"]
     }
   },
-  "include": ["src", "../shared/theme-catalog.ts", "../shared/plugin-categories.ts"]
+  "include": [
+    "src",
+    "scripts",
+    "../shared/theme-catalog.ts",
+    "../shared/plugin-categories.ts"
+  ]
 }
