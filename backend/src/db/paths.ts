@@ -25,7 +25,10 @@ function findRepoRoot(): string | null {
         const pkg = JSON.parse(readFileSync(pkgPath, "utf8")) as {
           workspaces?: unknown;
         };
-        if (Array.isArray(pkg.workspaces) && pkg.workspaces.includes("backend")) {
+        if (
+          Array.isArray(pkg.workspaces) &&
+          pkg.workspaces.includes("backend")
+        ) {
           repoRoot = dir;
           return dir;
         }
