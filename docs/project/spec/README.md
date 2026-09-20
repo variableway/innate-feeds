@@ -18,7 +18,6 @@
 ## 非目标
 
 - 多用户鉴权（sync API 不对外暴露）
-- `git-repo-scanner` 深度集成
 - 懒猫私有云生产部署（仅 Docker 草案）
 - **admin 数据表（Univer）在静态 Pages 模式** — 仅 API 本地开发模式（见 [admin-data-sheet](../features/admin-data-sheet.md)）
 

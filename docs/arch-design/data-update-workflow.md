@@ -102,7 +102,7 @@ On-demand API cache stays at project `./readmes/` (also gitignored).
 | **Run workflow** | Choice: `window` (default), `daily`, or `skip` (build committed JSON only). Optional `--days`, skip/force README |
 | Push to `main` | Light `data:update` (today’s trending, starred 24h, digest 90d) so code deploys stay fast |
 
-README files are gitignored; CI restores them from Actions cache, refreshes, and Vite copies `frontend/public/data/readmes/` into the Pages artifact.
+README files are gitignored; CI restores them from Actions cache, refreshes, and the Bun build script copies `frontend/public/data/readmes/` into the Pages artifact.
 
 Optional repo settings:
 

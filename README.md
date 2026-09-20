@@ -11,8 +11,8 @@ Browse GitHub **trending**, **starred**, and a community **issues digest** (ruan
 |---|---|
 | Runtime | [Bun](https://bun.sh/) (HTTP via `Bun.serve`, SQLite via `bun:sqlite`) |
 | Language | TypeScript 5.7 (strict, ES modules) |
-| Frontend | React 19, TanStack Router, TanStack Table, Vite 6 |
-| Styling | Tailwind CSS v4 (`@tailwindcss/vite`), lucide-react, next-themes, sonner |
+| Frontend | React 19, TanStack Router, TanStack Table |
+| Styling | Tailwind CSS v4 (`@tailwindcss/node` + `@tailwindcss/oxide`), lucide-react, next-themes, sonner |
 | Markdown | react-markdown, remark-gfm, rehype-sanitize |
 | Backend | [Hono](https://hono.dev/) 4, Zod |
 | Database | SQLite (WAL), default `~/.innate/feeds.db` |
@@ -20,7 +20,7 @@ Browse GitHub **trending**, **starred**, and a community **issues digest** (ruan
 | Tests / format | Vitest, Prettier |
 | CI / CD | GitHub Actions — `.github/workflows/ci.yml` + `deploy.yml` |
 | Production (public) | GitHub Pages (`actions/upload-pages-artifact` + `actions/deploy-pages`) |
-| Production (self-host) | `bun run start` — Vite build served by the Hono process on one origin |
+| Production (self-host) | `bun run start` — Bun bundles (backend + frontend) served by the Hono process on one origin |
 
 ## Features
 
@@ -30,7 +30,7 @@ Browse GitHub **trending**, **starred**, and a community **issues digest** (ruan
 - **Repo README** — In-app Markdown. API: `./readmes` then background refresh. Static: live GitHub, then `/data/readmes`.
 - **Filters** — Language, topics, snapshot date, stars range, search; sort by stars / updated / created / starred.
 - **Themes** — DSH default, plus Linear, Notion, and the rest of innate-fe-base variants; persisted in localStorage.
-- **DSH plugins** — `/dsh` inside the same Vite shell (sidebar + theme). Data comes from `awesome-dsh-plugin` YAML via `/api/plugins`.
+- **DSH plugins** — `/dsh` inside the same app shell (sidebar + theme). Data comes from `awesome-dsh-plugin` YAML via `/api/plugins`.
 
 ## Quick start
 
@@ -45,7 +45,7 @@ bun run dev
 ```
 
 - API: `http://localhost:4000`
-- UI: `http://localhost:3000` (Vite proxies `/api` → `:4000`)
+- UI: `http://localhost:3000` (Bun dev server proxies `/api` → `:4000`)
 
 One process (UI + API on the same origin):
 
@@ -67,7 +67,7 @@ bun run data:update:window
 bun run build:static
 ```
 
-GitHub Trending has **no historical API**. “Last 3 months trending” means today’s daily/weekly/monthly lists plus READMEs for repos already in stored snapshots. Flags: `--days 90`, `--skip-readme`, `--force`. Details: [docs/data-update-workflow.md](docs/data-update-workflow.md).
+GitHub Trending has **no historical API**. “Last 3 months trending” means today’s daily/weekly/monthly lists plus READMEs for repos already in stored snapshots. Flags: `--days 90`, `--skip-readme`, `--force`. Details: [docs/arch-design/data-update-workflow.md](docs/arch-design/data-update-workflow.md).
 
 ---
 
@@ -111,7 +111,7 @@ Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
 | **Actions → Deploy to GitHub Pages → Run workflow** | `window` (default), `daily`, or `skip` | Same. Inputs: `days`, `skip_readme`, `force_readme` |
 | Push to `main` | Light `data:update` | Build + deploy (no data commit, so code pushes do not loop) |
 
-READMEs under `frontend/public/data/readmes/` are gitignored. CI restores them from Actions cache, refreshes, and Vite copies them into the Pages artifact. The live site still calls `api.github.com` / `raw.githubusercontent.com` from the visitor’s browser.
+READMEs under `frontend/public/data/readmes/` are gitignored. CI restores them from Actions cache, refreshes them, and the build script copies them into the Pages artifact. The live site still calls `api.github.com` / `raw.githubusercontent.com` from the visitor’s browser.
 
 ```bash
 # Manual deploy from a laptop (same pipeline as “Run workflow”)
@@ -156,7 +156,7 @@ innate-feeds/
 ├── dsh-plugin-directory/   # unused Next.js prototype; live UI is frontend `/dsh`
 ├── awesome/          # curated awesome lists (`awesome-dsh-plugin` is the plugin data source)
 ├── .github/workflows/      # ci.yml, deploy.yml
-└── docs/data-update-workflow.md
+└── docs/arch-design/data-update-workflow.md
 ```
 
 ## Environment variables
