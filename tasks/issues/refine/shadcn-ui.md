@@ -30,3 +30,8 @@
 > - **为什么补不了**：GitHub Trending 没有官方 API，也没有任何历史/日期参数（`github.com/trending?since=` 只控制时间窗口，榜单永远是"当前"）。采集器只能抓当下页面：`backend/src/collector/sync.ts:24` 的 `snapshotDate = new Date()...` 固定取当天，CLI 的 trending 同步也不支持 `--date`（对比 Product Hunt 采集器支持 `--date`，因为它有按日归档的 leaderboard）。过去没抓到的榜单在 GitHub 侧已不存在，**无法找回**。
 > - **断更根因（重要附带发现）**：`gh run list` 显示 deploy workflow 每天 cron 都在跑但全部失败（15~22 秒即挂），日志为 `ENOENT: failed to link package: @innate/ui@../../../base/innate-fe-base/packages/ui` —— `00add5b`（09-11 07:14 UTC 引入 `@innate/ui` file: 依赖）恰在当天 cron 之前合入，此后每日 `bun install` 失败导致 sync/export 全部中断。**Task 1 已移除该依赖，推送后 cron 即可恢复**，后续数据从当天继续累积。
 > - 后续（可选）：推送后手动 Run workflow 验证一次绿的；缺失的 9 天接受为永久空洞。
+> **✅ 后续（2026-09-20 晚，zcode）：GitHub Pages 已修复并恢复更新**
+>
+> - 根因链全部修复并推送：`@innate/ui` file: 依赖（fbb58ed）→ bun 构建迁移半成品（f7a09a1，补齐 `scripts/{build,dev,preview}.ts`、tsconfig、自包含 `vite-env.d.ts`、移除 vite）→ `shared/fe-base-themes.css` 引用本机路径（e938d1d，主题 CSS vendor 进 `shared/themes/`）。
+> - `actions/checkout` 升 v5（Node 20 弃用警告）；vendored shadcn 组件加入 `.prettierignore`；存量文件格式化（23a5b63）。
+> - 结果：CI ✅ + Deploy ✅（2026-09-20T12:44 UTC），线上 https://variableway.github.io/innate-feeds/ HTTP 200，trending 最新 chunk 为 2026-09-20；每日 cron（08:00 UTC）恢复自动更新。
