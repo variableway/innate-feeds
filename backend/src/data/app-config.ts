@@ -11,9 +11,22 @@ export function getProjectRoot(): string {
   if (process.env.INNATE_PROJECT_ROOT?.trim()) {
     return resolve(process.env.INNATE_PROJECT_ROOT.trim());
   }
-  // backend/src/data → ../../..
-  const here = dirname(fileURLToPath(import.meta.url));
-  return resolve(here, "../../..");
+  // Works from source (backend/src/data → 3 levels up) and from the bundled
+  // output (backend/dist → 2 levels up): walk up to the nearest directory
+  // containing both `backend/` and `frontend/`.
+  let here = dirname(fileURLToPath(import.meta.url));
+  while (true) {
+    if (
+      existsSync(join(here, "backend")) &&
+      existsSync(join(here, "frontend"))
+    ) {
+      return here;
+    }
+    const parent = dirname(here);
+    if (parent === here) break;
+    here = parent;
+  }
+  return resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 }
 
 export interface AppConfig {

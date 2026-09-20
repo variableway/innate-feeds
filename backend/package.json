@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/app/server.ts",
-    "start": "bun src/app/server.ts",
+    "build": "bun build src/app/server.ts --target=bun --minify --outdir=dist && bun build src/app/cli.ts --target=bun --minify --outfile=dist/cli.js",
+    "start": "bun dist/server.js",
     "sync:daily": "bun src/app/cli.ts sync trending daily",
     "sync:weekly": "bun src/app/cli.ts sync trending weekly",
     "sync:monthly": "bun src/app/cli.ts sync trending monthly",
