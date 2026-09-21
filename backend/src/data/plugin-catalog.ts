@@ -48,7 +48,9 @@ function dataDir(): string {
   if (process.env.DSH_PLUGIN_DATA_DIR?.trim()) {
     return resolve(process.env.DSH_PLUGIN_DATA_DIR.trim());
   }
-  return resolve(getProjectRoot(), "../awesome/awesome-dsh-plugin/data");
+  // Vendored snapshot of the awesome-dsh-plugin catalog (see AGENTS.md for
+  // how to refresh it from the upstream repo).
+  return resolve(getProjectRoot(), "awesome/awesome-dsh-plugin/data");
 }
 
 function slugFromFilename(filename: string): string {

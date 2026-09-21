@@ -83,7 +83,7 @@ innate-feeds/
 │   │   ├── server/plugins/  # queries.ts + search-params.ts (nuqs parsers)
 │   │   └── lib/             # db.ts (PrismaClient + adapter-pg), categories.ts
 │   └── docs/                # awesome-import-spec.md (awesome list → awesome.json 转换规范)
-├── awesome/                 # Curated awesome lists (dsh-plugin-directory 的数据源在 awesome/awesome-dsh-plugin)
+├── awesome/                 # Vendored awesome-dsh-plugin catalog snapshot (`awesome-dsh-plugin/data`, YAML + stars/screenshots/dates)
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
 ├── package.json             # Root bun workspace (workspaces: backend, frontend)
@@ -140,7 +140,9 @@ The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http:
 
 ### Plugin directory (`/dsh`)
 
-The DSH plugin browser is part of the same React app (same sidebar and theme). The Hono backend reads `../awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`). The old Next.js app in `dsh-plugin-directory/` is unused.
+The DSH plugin browser is part of the same React app (same sidebar and theme). The Hono backend reads the vendored catalog at `awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`). Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `export-incremental.ts`; `services/plugins.ts` mirrors the backend's search/sort/pagination client-side. The old Next.js app in `dsh-plugin-directory/` is unused.
+
+Refresh the vendored catalog from the upstream repo (https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) by copying its `data/` directory over `awesome/awesome-dsh-plugin/data/`, then re-running `bun run data:export` (regenerates `plugins.json`) — no other wiring needed.
 
 ### Sync data from GitHub
 
