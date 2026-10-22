@@ -1,0 +1,27 @@
+# innate.web-external-sources.v1
+# 外部源登记 —— 替代 git submodule 的声明式记录。
+#
+# 约定：
+# - 本仓不纳入外部源码；只登记「引用过哪个仓库、锚定哪个提交、用来做什么」。
+# - 需要读源码时按 `repo@commit` 临时检出到任意位置（或 docs 中标注的路径），
+#   读完即弃，不留在工作区。
+# - submodule 已废弃：悬空 gitlink（缺 .gitmodules）在 clone/fetch 时会造成
+#   幽灵删除项，且无法表达「仅调研、不构建」的语义。
+protocol: innate.web-external-sources.v1
+version: 1
+
+sources:
+  - id: folo
+    name: Folo (RSSNext/Follow)
+    repo: https://github.com/RSSNext/Folo
+    commit: 379a6e6daf3f7b986c6221a4aba30f022ecc04f9
+    kind: research
+    checked: 2026-09-21
+    notes: >-
+      RSS 客户端 monorepo（pnpm + Turbo，约 36MB）。仅作调研素材：
+      分析其渲染管线 / UIKit 语义色主题 / SQLite 增量同步，评估可移植性；
+      以及「innate-feeds 数据输出 RSS 供 Folo 订阅」的路线。
+      抓取与 RSS 解析全在闭源后端 api.follow.is，本仓借鉴的是客户端部分。
+    docs:
+      - docs/research/folo-analysis.md
+      - docs/research/folo-deep-dive.md

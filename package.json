@@ -7,8 +7,8 @@
     "frontend"
   ],
   "scripts": {
-    "dev": "bash dev.sh",
-    "dev:concurrent": "concurrently \"cd backend && bun run dev\" \"cd frontend && bun run dev\"",
+    "dev": "concurrently -k -n backend,frontend -c blue,magenta \"bun run dev:backend\" \"bun run dev:frontend\"",
+    "dev:concurrent": "bun run dev",
     "dev:backend": "cd backend && bun run dev",
     "dev:frontend": "cd frontend && bun run dev",
     "sync": "cd backend && bun run sync:daily && bun run sync:starred:recent",
@@ -32,12 +32,20 @@
     "install:all": "bun install",
     "test": "bun --bun vitest run",
     "test:watch": "bun --bun vitest",
-    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck"
+    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck",
+    "setup:innate": "innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
+    "data:seed": "cd backend && bun run import:static",
+    "dev:seed": "bun run data:seed && bun run dev",
+    "predev": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
+    "predev:seed": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc"
   },
   "devDependencies": {
-    "@vitest/expect": "^5.0.1",
-    "concurrently": "^10.0.5",
-    "prettier": "^3.9.8",
-    "vitest": "^5.0.1"
+    "@vitest/expect": "^5.0.5",
+    "concurrently": "^10.0.6",
+    "prettier": "^3.9.10",
+    "vitest": "^5.0.5"
+  },
+  "pnpm": {
+    "verifyDepsBeforeRun": false
   }
 }

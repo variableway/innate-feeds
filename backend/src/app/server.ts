@@ -2,7 +2,9 @@ import { existsSync, statSync } from "fs";
 import { join, resolve } from "path";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { swaggerUI } from "@hono/swagger-ui";
 import { z } from "zod";
+import { getOpenApiSpec } from "./openapi.js";
 import {
   getDb,
   getFeedItems,
@@ -426,6 +428,17 @@ app.post("/api/feeds/sync", async (c) => {
 
   return c.json({ synced });
 });
+
+// OpenAPI spec + Swagger UI — 便于浏览全部 API。挂在 catch-all 网站托管之前。
+app.get("/api/openapi.json", (c) => c.json(getOpenApiSpec()));
+app.get(
+  "/docs",
+  swaggerUI({
+    url: "/api/openapi.json",
+    docExpansion: "list",
+    persistAuthorization: true,
+  }),
+);
 
 /**
  * Serve the Vite production build (frontend/dist) from the same origin as /api.

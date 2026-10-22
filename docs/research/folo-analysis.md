@@ -1,6 +1,6 @@
 # Folo (RSSNext/Follow) Source Analysis
 
-> 调研日期：2026-09-21。源码位于仓库根目录 `Folo/`（RSSNext/Folo，pnpm + Turbo monorepo，约 36MB）。
+> 调研日期：2026-09-21。源码：[RSSNext/Folo](https://github.com/RSSNext/Folo)（pnpm + Turbo monorepo，约 36MB）——锚定提交见 [registry.yaml](../../registry.yaml)（`id: folo`），按需临时检出，不纳入本仓。
 > 调研目标：① 完整分析 Folo 的模块 / 架构 / 主题系统；② 识别可借鉴到 innate-feeds（或个人 RSS 工具）的模块；③ 分析把 innate-feeds 数据转成 RSS 供 Folo 订阅的路线。
 >
 > 深入的工程拆解（各端技术栈对照、模块可移植性 P0–P3 分级、UIKit 语义色主题设计细节、AGPL 合规提示）见 [folo-deep-dive.md](./folo-deep-dive.md)。本文 §3 中「innate-feeds 主题在 `themes/linear.css`」的表述已过时，实际位于仓库根 `shared/themes/*` + `shared/theme-catalog.ts`。

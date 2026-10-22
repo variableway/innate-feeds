@@ -1,6 +1,6 @@
 # Folo 深度拆解：架构 / 技术栈 / 模块 / 主题
 
-> 调研日期：2026-09-21。源码：仓库根目录 `Folo/`（RSSNext/Folo，pnpm@10.17.0 + Turborepo，AGPL-3.0-only）。
+> 调研日期：2026-09-21。源码：[RSSNext/Folo](https://github.com/RSSNext/Folo)（pnpm@10.17.0 + Turborepo，AGPL-3.0-only）——锚定提交见 [registry.yaml](../../registry.yaml)（`id: folo`），按需临时检出，不纳入本仓。
 > 定位：本文是工程侧深度拆解，回答「Folo 怎么搭的、主题怎么设计的、哪些模块能拆出来塞进 innate-feeds」。
 > 姊妹文档：[folo-analysis.md](./folo-analysis.md)（偏产品视角与「innate-feeds → RSS → 被 Folo 订阅」的路线对比），两者互补不重复。
 >
