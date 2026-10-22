@@ -98,3 +98,6 @@ frontend/pnpm-workspace.yaml
 # 测试 / 产物
 .playwright-cli/
 output/
+
+# 外部源临时检出（见 registry.yaml）
+Folo/
