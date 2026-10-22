@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  INNATE_FE_REPO: variableway/innate-fe
+
 jobs:
   test:
     name: Test & Type Check
@@ -13,28 +16,52 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          path: innate-feeds
+
+      # @innate/* 来自私有源：需要基础仓 + innate-fe-cli install
+      - uses: actions/checkout@v5
+        with:
+          repository: ${{ env.INNATE_FE_REPO }}
+          path: innate-fe
+          token: ${{ secrets.INNATE_FE_TOKEN || github.token }}
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12
+
+      - name: Install @innate/* via innate-fe-cli
+        working-directory: innate-feeds
+        run: |
+          bun ../innate-fe/innate-fe-cli/src/index.ts install \
+            --root "$GITHUB_WORKSPACE/innate-fe" \
+            --dir frontend
+          cp frontend/.npmrc .npmrc
+
       - name: Install root dependencies
+        working-directory: innate-feeds
         run: bun install
 
-      - name: Install all dependencies
-        run: bun run install:all
-
       - name: Run tests
+        working-directory: innate-feeds
         run: bun run test
 
       - name: Type check backend
+        working-directory: innate-feeds
         run: cd backend && bun run typecheck
 
       - name: Type check frontend
+        working-directory: innate-feeds
         run: cd frontend && bun run typecheck
 
       - name: Check formatting
+        working-directory: innate-feeds
         run: bun run format:ts:check
 
   build:
@@ -44,17 +71,37 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          path: innate-feeds
+
+      - uses: actions/checkout@v5
+        with:
+          repository: ${{ env.INNATE_FE_REPO }}
+          path: innate-fe
+          token: ${{ secrets.INNATE_FE_TOKEN || github.token }}
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12
+
+      - name: Install @innate/* via innate-fe-cli
+        working-directory: innate-feeds
+        run: |
+          bun ../innate-fe/innate-fe-cli/src/index.ts install \
+            --root "$GITHUB_WORKSPACE/innate-fe" \
+            --dir frontend
+          cp frontend/.npmrc .npmrc
+
       - name: Install root dependencies
+        working-directory: innate-feeds
         run: bun install
 
-      - name: Install all dependencies
-        run: bun run install:all
-
       - name: Build frontend
+        working-directory: innate-feeds
         run: bun run build

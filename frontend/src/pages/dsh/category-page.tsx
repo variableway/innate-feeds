@@ -12,11 +12,12 @@ import {
   type PluginListingSearch,
 } from "@/components/plugin-listing";
 import type { DshPlugin } from "@/types/plugin";
+import type { DshSearch } from "@/types/dsh";
 
 export function DshCategoryPage() {
-  const { slug } = useParams({ from: "/dsh/categories/$slug" });
-  const search = useSearch({ from: "/dsh/categories/$slug" });
-  const navigate = useNavigate({ from: "/dsh/categories/$slug" });
+  const { slug } = useParams({ strict: false }) as { slug: string };
+  const search = useSearch({ strict: false }) as Omit<DshSearch, "category">;
+  const navigate = useNavigate();
   const category = pluginCategoryById(slug);
   const [plugins, setPlugins] = useState<DshPlugin[]>([]);
   const [total, setTotal] = useState(0);
@@ -72,7 +73,10 @@ export function DshCategoryPage() {
           lockedCategory={slug}
           onChange={(next) => {
             void navigate({
-              search: (prev) => ({ ...prev, ...next }),
+              search: ((prev: Record<string, unknown>) => ({
+                ...prev,
+                ...next,
+              })) as unknown as true,
             });
           }}
         />

@@ -11,8 +11,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["src", "../shared/plugin-categories.ts"]
+  "include": [
+    "src",
+    "../shared/plugin-categories.ts"
+  ]
 }

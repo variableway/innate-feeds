@@ -1,0 +1,12 @@
+{
+  "protocol": "innate.plugin.v1",
+  "kind": "domain",
+  "id": "feeds",
+  "name": "Innate Feeds",
+  "description": "GitHub Trending / Starred 与社区 Issues Digest 浏览",
+  "version": "0.1.0",
+  "entry": "src/index.ts",
+  "outlet": "app",
+  "capabilities": ["navItems", "homeTile"],
+  "order": 20
+}

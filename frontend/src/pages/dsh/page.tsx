@@ -6,10 +6,12 @@ import {
   type PluginListingSearch,
 } from "@/components/plugin-listing";
 import type { DshPlugin, PluginStats } from "@/types/plugin";
+import type { DshSearch } from "@/types/dsh";
 
 export function DshPluginsPage() {
-  const search = useSearch({ from: "/dsh" });
-  const navigate = useNavigate({ from: "/dsh" });
+  // 路由挂在 pathless layout 下，`from: "/dsh"` 匹配不到；用 strict:false + 显式类型
+  const search = useSearch({ strict: false }) as DshSearch;
+  const navigate = useNavigate();
   const [stats, setStats] = useState<PluginStats | null>(null);
   const [plugins, setPlugins] = useState<DshPlugin[]>([]);
   const [total, setTotal] = useState(0);
@@ -55,7 +57,11 @@ export function DshPluginsPage() {
 
   const onChange = (next: Partial<PluginListingSearch>) => {
     void navigate({
-      search: (prev) => ({ ...prev, ...next }),
+      // 路由 id 含 pathless layout，search 泛型推不出；显式 DshSearch 合并
+      search: ((prev: DshSearch) => ({
+        ...prev,
+        ...next,
+      })) as unknown as true,
     });
   };
 

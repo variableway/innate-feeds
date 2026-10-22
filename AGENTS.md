@@ -49,30 +49,28 @@ innate-feeds/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── feeds.db*            # Runtime SQLite database (WAL mode)
-├── frontend/                # TanStack Router + React 19 + Tailwind v4 (built with Bun)
+├── shared/                   # Cross-layer constants (plugin-categories, theme-catalog) — NOT @innate scope
+├── frontend/                # @innate/domain-feeds — TanStack domain (track A) + minimal standalone host
 │   ├── src/
-│   │   ├── pages/           # TanStack Router route definitions (page.tsx + route.tsx)
-│   │   │   ├── __root/      # Root layout with sidebar, header, category panel
-│   │   │   ├── index/       # Redirects to /trending
-│   │   │   ├── trending/    # Trending repos page
-│   │   │   └── starred/     # Starred repos page
-│   │   ├── components/      # App components (AppHeader, AppSidebar, FeedCard…); ui/ = vendored shadcn/ui v4 (Base UI)
-│   │   │   └── ui/          # shadcn/ui official registry components (base-vega preset, @base-ui/react)
-│   │   ├── hooks/           # usePersistedFeedFilters, use-mobile (shadcn)
-│   │   ├── services/        # API client (feeds.ts) — supports both API and static modes
-│   │   ├── types/           # TypeScript domain types (feed.ts)
-│   │   ├── lib/             # utils.ts (cn, formatNumber, formatDate), theme.tsx, feed-filters-storage.ts
-│   │   ├── themes/          # CSS theme files (linear.css, notion.css)
-│   │   ├── main.tsx         # React entry point
-│   │   ├── router.tsx       # Route tree assembly
-│   │   └── styles.css       # Tailwind CSS v4 theme + dark mode
+│   │   ├── index.ts          # export { webDomain } — domain plugin hard requirement
+│   │   ├── web-domain.tsx    # createWebDomain("feeds"): routes + navItems/homeTile capability
+│   │   ├── domain-layout.tsx # Business-area layout (DigestFiltersProvider)
+│   │   ├── host-shell.tsx    # Standalone-only compact left nav (host concern, not in domain)
+│   │   ├── main.tsx          # Minimal standalone host entry (HostShell + RouterProvider)
+│   │   ├── pages/            # Business pages (trending, starred, digest, dsh, settings) — page.tsx only
+│   │   ├── components/       # Business components (FeedCard, FilterBar, plugin-*) — no shell chrome
+│   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size
+│   │   ├── services/         # API client (feeds.ts) — supports both API and static modes
+│   │   ├── types/            # TypeScript domain types (feed.ts, plugin.ts, dsh.ts)
+│   │   ├── lib/              # utils.ts (cn, formatNumber, formatDate), feed-filters-storage.ts
+│   │   └── styles.css        # Tailwind CSS v4 theme + dark mode
+│   ├── plugin.json           # innate.plugin.v1, kind: "domain"
 │   ├── index.html
-│   ├── components.json     # shadcn/ui CLI config (style: base-vega, Base UI)
-│   ├── scripts/            # Bun build toolchain (no Vite)
-│   │   ├── build.ts        # Prod build: Tailwind engine + Bun.build + index.html assembly + Pages 404
-│   │   ├── dev.ts          # Dev server: /api proxy, rebuild on change, SSE live reload
-│   │   └── preview.ts      # Static server for dist/ (replaces `vite preview`)
-│   ├── package.json
+│   ├── scripts/              # Bun build toolchain (no Vite)
+│   │   ├── build.ts          # Prod build: Tailwind engine + Bun.build + index.html assembly + Pages 404
+│   │   ├── dev.ts            # Dev server: /api proxy, rebuild on change, SSE live reload
+│   │   └── preview.ts        # Static server for dist/ (replaces `vite preview`)
+│   ├── package.json          # name: @innate/domain-feeds; @innate/ui + @innate/web-domain via innate-fe-cli install
 │   └── tsconfig.json
 ├── dsh-plugin-directory/    # Unused Next.js prototype (plugin UI now lives in frontend /dsh)
 │   ├── prisma/              # Prisma 7 schema (Plugin + Category), Postgres
@@ -87,7 +85,7 @@ innate-feeds/
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
 ├── package.json             # Root bun workspace (workspaces: backend, frontend)
-├── dev.sh                   # Bash helper to start both dev servers
+├── dev.sh                   # Bash helper (legacy; `bun run dev` is cross-platform)
 └── CLAUDE.md
 ```
 
@@ -116,24 +114,29 @@ All commands assume you are in the project root unless noted.
 
 ### Install dependencies
 
-The repo is a **bun workspace** (`workspaces: backend, frontend`) — one install at the root covers everything:
+The repo is a **bun workspace** (`workspaces: backend, frontend`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)):
 
 ```bash
-bun install   # = bun run install:all
+export INNATE_FE_ROOT=/path/to/innate-fe
+bun run setup:innate   # publish @innate/* → .npmrc → rewrite workspace:* → pnpm install
+bun install            # = bun run install:all
 ```
 
 ### Start development
 
 ```bash
-# Start backend (http://localhost:4000) and frontend (http://localhost:3000)
-bun run dev
+# Start backend (http://localhost:4000) and frontend (http://localhost:3000) together
+bun run dev            # concurrently -k -n backend,frontend
 
-# Or use the shell helper
-./dev.sh
+# Seed static snapshots into SQLite first, then start (avoids empty UI)
+bun run dev:seed
 
 # Individually
 bun run dev:backend   # cd backend && bun run dev
 bun run dev:frontend  # cd frontend && bun run dev
+
+# Legacy bash helper
+./dev.sh
 ```
 
 The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http://localhost:4000`, rebuilds the bundle on file change, and live-reloads the page (JS changes reload; CSS-only changes hot-swap the stylesheet). Plugin directory is `http://localhost:3000/dsh`.
@@ -311,15 +314,30 @@ GitHub Trending has no historical API. A 90-day window syncs **current** daily/w
 
 ### API endpoints
 
+Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`backend/src/app/openapi.ts`).
+
 | Method | Path | Description |
 |---|---|---|
-| GET | `/api/feeds` | List feed items. Query params: `type` (`trending` or `starred`), `language`, `topics` (comma-separated), `search`, `sort` (`stars`\| `updated`\| `created`\| `starred`), `order` (`asc`\| `desc`), `date`, `starsMin`, `starsMax`, `page`, `pageSize`. |
+| GET | `/api/health` | Service + DB health check. |
+| GET | `/api/feeds` | List feed items. Query params: `type` (`trending`\| `starred`\| `digest`), `language`, `topics` (comma-separated), `search`, `sort` (`stars`\| `updated`\| `created`\| `starred`), `order` (`asc`\| `desc`), `date`, `starsMin`, `starsMax`, `page`, `pageSize`. Digest-only: `source`, `category`, `hasPrimaryUrl`. |
 | GET | `/api/feeds/stats` | Aggregate stats: total repos, trending count, starred count, top languages. |
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
+| GET | `/api/feeds/digest/:id` | Single digest item (with body). |
 | POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
 | POST | `/api/feeds/hide` | Hide an item so it is filtered out of all list/detail responses. Body: `{ kind: "digest" \| "repo", id }` (`id` = digest item id, or repo `fullName`). Persisted to `hidden.json` next to the DB; also applied at static-export time. |
 | POST | `/api/feeds/unhide` | Undo a hide. Same body as `/api/feeds/hide`. |
+| GET | `/api/readmes` | List cached READMEs (`root` + `items`). |
+| GET | `/api/repos/:owner/:repo/readme` | README JSON (`{ fullName, markdown, cached }`); disk cache first, GitHub fallback. |
+| GET | `/api/repos/:owner/:repo/readme/download` | Download README as `text/markdown` attachment. |
+| GET | `/api/plugins` | DSH plugin search. Query: `q`, `category` (csv), `sort`, `page`, `perPage`. |
+| GET | `/api/plugins/stats` | Plugin totals. |
+| GET | `/api/plugins/categories` | Fixed 20 awesome-dsh-plugin categories. |
+| GET | `/api/plugins/:slug` | Plugin detail. |
+| GET | `/api/plugins/:slug/related` | Related plugins. |
+| GET | `/api/auth/status` | gh CLI + PAT presence (never returns the token). |
+| PUT | `/api/auth/pat` | Store GitHub PAT encrypted at rest. Body: `{ token }`. |
+| DELETE | `/api/auth/pat` | Remove the stored PAT. |
 
 ### Sync pipeline
 
@@ -399,12 +417,14 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing database path resolution | `backend/src/db/paths.ts` |
 | Adding new CLI commands | `backend/src/app/cli.ts` and `backend/package.json` scripts |
 | Changing GitHub Pages deploy / data cron | `.github/workflows/deploy.yml` |
-| Changing pages / routes | `frontend/src/pages/` and `frontend/src/router.tsx` |
-| Changing UI components | `frontend/src/components/` |
-| Adding / updating shadcn/ui primitives | `frontend/src/components/ui/` — in `frontend/`: `bun run shadcn:add <component>` to add, `bun run shadcn:update` to refresh all (config: `frontend/components.json`) |
+| Changing pages / routes | `frontend/src/web-domain.tsx` (route factories) and `frontend/src/pages/*/page.tsx` |
+| Changing domain nav / home tile | `frontend/src/web-domain.tsx` (`navItems` / `homeTile` capability) |
+| Changing standalone host shell (compact left nav) | `frontend/src/host-shell.tsx`, `frontend/src/main.tsx` |
+| Changing UI components | `@innate/ui` from the innate-fe base repo (`innate-fe-cli install`); business components in `frontend/src/components/` |
 | Changing API client | `frontend/src/services/feeds.ts` |
 | Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types in `db/index.ts`) |
-| Changing styling / theme | `frontend/src/styles.css` and `frontend/src/themes/` |
+| Changing shared constants (plugin categories, theme catalog) | `shared/plugin-categories.ts`, `shared/theme-catalog.ts` (non-`@innate` scope — keep it that way) |
+| Changing styling / theme | `frontend/src/styles.css` |
 | Changing the frontend build / dev toolchain | `frontend/scripts/build.ts`, `dev.ts`, `preview.ts` |
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
 | Changing the plugin directory site | `frontend/src/pages/dsh/`, `frontend/src/components/plugin-*.tsx` |

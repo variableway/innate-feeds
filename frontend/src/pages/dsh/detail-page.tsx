@@ -17,7 +17,7 @@ function formatDate(iso: string) {
 }
 
 export function DshPluginDetailPage() {
-  const { slug } = useParams({ from: "/dsh/plugins/$slug" });
+  const { slug } = useParams({ strict: false }) as { slug: string };
   const [plugin, setPlugin] = useState<DshPlugin | null>(null);
   const [related, setRelated] = useState<DshPlugin[]>([]);
   const [error, setError] = useState<string | null>(null);

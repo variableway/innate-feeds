@@ -83,3 +83,18 @@ trending-desktop/src-tauri/WixTools/
 tasks/issues/*.png
 tasks/.bin/
 
+
+# innate-fe-cli install 生成物（@innate/* 私有源接入）
+.innate-fe-cli.json
+frontend/.innate-fe-cli.json
+.npmrc
+frontend/.npmrc
+pnpm-lock.yaml
+frontend/pnpm-lock.yaml
+frontend/node_modules/
+pnpm-workspace.yaml
+frontend/pnpm-workspace.yaml
+
+# 测试 / 产物
+.playwright-cli/
+output/
