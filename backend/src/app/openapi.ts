@@ -46,6 +46,10 @@ export const openApiSpec = {
     { name: "Auth", description: "GitHub 认证状态与 PAT" },
     { name: "Sync", description: "触发数据同步（勿对外暴露）" },
     { name: "Hidden", description: "隐藏 / 取消隐藏条目" },
+    {
+      name: "AdminDb",
+      description: "简化版 SQLite 后台（只读查询 / 保存 SQL / JSON 文件查询）",
+    },
   ],
   paths: {
     "/api/health": {
@@ -752,6 +756,194 @@ export const openApiSpec = {
         },
       },
     },
+
+    "/api/admin/db/tables": {
+      get: {
+        tags: ["AdminDb"],
+        summary: "列出全部表与行数",
+        description:
+          "简化版 SQLite 后台。含 FTS 影子表（`internal: true` 标记）。只读连接执行。",
+        responses: {
+          "200": {
+            description: "表清单",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    tables: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/AdminDbTable" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "503": jsonError("数据库不可用"),
+        },
+      },
+    },
+
+    "/api/admin/db/tables/{name}/schema": {
+      get: {
+        tags: ["AdminDb"],
+        summary: "单表结构（列 / 索引 / DDL）",
+        parameters: [
+          {
+            name: "name",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "表名（按 sqlite_master 白名单校验）",
+          },
+        ],
+        responses: {
+          "200": { description: "表结构" },
+          "404": jsonError("表不存在"),
+        },
+      },
+    },
+
+    "/api/admin/db/query": {
+      post: {
+        tags: ["AdminDb"],
+        summary: "执行只读 SQL",
+        description:
+          "仅接受单条 SELECT / WITH 语句；在独立只读连接上执行（写操作被 SQLite 硬拒绝）。" +
+          "结果超过 500 行时截断（`truncated: true`）。",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/AdminDbQueryBody" },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "查询结果（表格形）",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/AdminDbQueryResult" },
+              },
+            },
+          },
+          "400": jsonError("SQL 校验失败或执行错误"),
+        },
+      },
+    },
+
+    "/api/admin/db/queries": {
+      get: {
+        tags: ["AdminDb"],
+        summary: "保存的 SQL 列表",
+        description: "首表时自动预置 R1 调研结论的示例查询。",
+        responses: {
+          "200": { description: "保存的 SQL 列表" },
+        },
+      },
+      post: {
+        tags: ["AdminDb"],
+        summary: "新增保存的 SQL",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/AdminDbSavedQueryBody" },
+            },
+          },
+        },
+        responses: {
+          "201": { description: "已创建" },
+          "400": jsonError("请求体不合法"),
+          "409": jsonError("超出保存上限（200 条）"),
+        },
+      },
+    },
+
+    "/api/admin/db/queries/{id}": {
+      put: {
+        tags: ["AdminDb"],
+        summary: "更新保存的 SQL",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: { type: "integer" },
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/AdminDbSavedQueryBody" },
+            },
+          },
+        },
+        responses: {
+          "200": { description: "已更新" },
+          "404": jsonError("不存在"),
+        },
+      },
+      delete: {
+        tags: ["AdminDb"],
+        summary: "删除保存的 SQL",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: { type: "integer" },
+          },
+        ],
+        responses: {
+          "200": { description: "已删除" },
+          "404": jsonError("不存在"),
+        },
+      },
+    },
+
+    "/api/admin/db/json/files": {
+      get: {
+        tags: ["AdminDb"],
+        summary: "已注册的 JSON 文件清单",
+        description: "见 `POST /api/admin/db/json/scan`。",
+        responses: {
+          "200": { description: "文件清单（`valid` 为 json_valid 校验结果）" },
+        },
+      },
+    },
+
+    "/api/admin/db/json/scan": {
+      post: {
+        tags: ["AdminDb"],
+        summary: "扫描 JSON 目录 → 注册进 json_documents 表",
+        description:
+          "递归扫描扫描根（默认 `~/.innate`，`ADMIN_JSON_DIR` 可覆盖），跳过 " +
+          "node_modules / secrets / 隐藏目录，单文件上限 1MB。" +
+          "注册表位于只读连接的 TEMP store，可用 `json_each` 等函数查询。",
+        responses: {
+          "200": {
+            description: "扫描结果",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    root: { type: "string" },
+                    fileCount: { type: "integer" },
+                    totalBytes: { type: "integer" },
+                    skipped: { type: "integer" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
 
   components: {
@@ -895,6 +1087,49 @@ export const openApiSpec = {
           category: { type: "string", nullable: true },
           installCommand: { type: "string", nullable: true },
         },
+      },
+
+      AdminDbTable: {
+        type: "object",
+        properties: {
+          name: { type: "string" },
+          rowCount: { type: "integer" },
+          kind: { type: "string", enum: ["table", "view"] },
+          internal: { type: "boolean", description: "FTS 影子表等内部表" },
+        },
+      },
+
+      AdminDbQueryBody: {
+        type: "object",
+        properties: {
+          sql: { type: "string", description: "单条 SELECT / WITH 语句" },
+        },
+        required: ["sql"],
+      },
+
+      AdminDbQueryResult: {
+        type: "object",
+        properties: {
+          columns: { type: "array", items: { type: "string" } },
+          rows: {
+            type: "array",
+            items: { type: "object", additionalProperties: true },
+          },
+          rowCount: { type: "integer" },
+          truncated: { type: "boolean" },
+          rowLimit: { type: "integer" },
+          durationMs: { type: "number" },
+        },
+      },
+
+      AdminDbSavedQueryBody: {
+        type: "object",
+        properties: {
+          name: { type: "string", maxLength: 120 },
+          sql: { type: "string" },
+          description: { type: "string", maxLength: 500, nullable: true },
+        },
+        required: ["name", "sql"],
       },
     },
   },

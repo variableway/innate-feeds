@@ -100,10 +100,7 @@ export function HostShell({
     return unsub;
   }, [router]);
 
-  const groups = useMemo(
-    () => groupNavItems(navItemsOf(domain)),
-    [domain],
-  );
+  const groups = useMemo(() => groupNavItems(navItemsOf(domain)), [domain]);
 
   // 含当前路由的分组默认展开；其余保持收起状态
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});

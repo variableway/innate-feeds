@@ -6,6 +6,7 @@ import { TrendingPage } from "@/pages/trending/page";
 import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
 import { SettingsPage } from "@/pages/settings/page";
+import { AdminPage } from "@/pages/admin/page";
 import { DshPluginsPage } from "@/pages/dsh/page";
 import { DshCategoriesPage } from "@/pages/dsh/categories-page";
 import { DshCategoryPage } from "@/pages/dsh/category-page";
@@ -111,6 +112,11 @@ export const webDomain = createWebDomain("feeds")
         path: "/settings",
         component: SettingsPage,
       }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/admin",
+        component: AdminPage,
+      }),
     ];
 
     return layout.addChildren(routes as never) as unknown as AnyRoute;
@@ -143,6 +149,13 @@ export const webDomain = createWebDomain("feeds")
       icon: "Puzzle",
       order: 30,
       group: "DeepSeek Harness",
+    },
+    {
+      label: "SQLite",
+      path: "/admin",
+      icon: "Database",
+      order: 40,
+      group: "Admin",
     },
   ])
   .addCapability("homeTile", {
