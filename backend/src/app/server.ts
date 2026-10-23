@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 import { swaggerUI } from "@hono/swagger-ui";
 import { z } from "zod";
 import { getOpenApiSpec } from "./openapi.js";
+import { adminDbRouter } from "./admin-db.js";
 import {
   getDb,
   getFeedItems,
@@ -34,6 +35,10 @@ import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
 const app = new Hono();
 
 app.use("/*", cors());
+
+// Simplified SQLite admin workspace (read-only queries, saved SQL, JSON files).
+// Default-on; `--no-admin` / ADMIN_DB_UI=off disables (see admin-db-flag below).
+app.route("/", adminDbRouter);
 
 /** Liveness probe (opens the database). */
 app.get("/api/health", (c) => {
