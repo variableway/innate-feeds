@@ -32,9 +32,7 @@ const JSON_FILE_MAX_BYTES = 1024 * 1024;
 
 /** Strip `--` line comments and slash-star block comments so keyword checks see real SQL. */
 function stripSqlComments(sql: string): string {
-  return sql
-    .replace(/--[^\n]*/g, " ")
-    .replace(/\/\*[\s\S]*?\*\//g, " ");
+  return sql.replace(/--[^\n]*/g, " ").replace(/\/\*[\s\S]*?\*\//g, " ");
 }
 
 /**
@@ -119,7 +117,9 @@ function listTables(db: Database): TableInfo[] {
     .all() as { name: string; type: string }[];
   return rows.map(({ name, type }) => {
     const rowCount = (
-      db.query(`SELECT COUNT(*) AS n FROM "${name.replaceAll('"', '""')}"`).get() as {
+      db
+        .query(`SELECT COUNT(*) AS n FROM "${name.replaceAll('"', '""')}"`)
+        .get() as {
         n: number;
       }
     ).n;
@@ -241,9 +241,10 @@ adminDbRouter.get("/api/admin/db/tables/:name/schema", (c) => {
       return c.json({ error: `Unknown table: ${c.req.param("name")}` }, 404);
     }
     const quoted = `"${name.replaceAll('"', '""')}"`;
-    const columns = db
-      .query(`PRAGMA table_info(${quoted})`)
-      .all() as Record<string, unknown>[];
+    const columns = db.query(`PRAGMA table_info(${quoted})`).all() as Record<
+      string,
+      unknown
+    >[];
     const indexes = (
       db.query(`PRAGMA index_list(${quoted})`).all() as {
         name: string;
@@ -253,7 +254,9 @@ adminDbRouter.get("/api/admin/db/tables/:name/schema", (c) => {
     ).map((idx) => ({
       ...idx,
       columns: (
-        db.query(`PRAGMA index_info("${idx.name.replaceAll('"', '""')}")`).all() as {
+        db
+          .query(`PRAGMA index_info("${idx.name.replaceAll('"', '""')}")`)
+          .all() as {
           name: string | null;
         }[]
       ).map((col) => col.name),
@@ -299,8 +302,9 @@ adminDbRouter.post("/api/admin/db/query", async (c) => {
     const columns =
       rows.length > 0
         ? Object.keys(rows[0])
-        : ((stmt as unknown as { columns?: { name: string }[] }).columns ?? [])
-            .map((col) => col.name);
+        : (
+            (stmt as unknown as { columns?: { name: string }[] }).columns ?? []
+          ).map((col) => col.name);
     const truncated = rows.length > DEFAULT_ROW_LIMIT;
     return c.json({
       columns,
@@ -335,7 +339,8 @@ adminDbRouter.get("/api/admin/db/queries", (c) => {
       .all();
     return c.json({ queries: rows });
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Failed to list queries";
+    const message =
+      err instanceof Error ? err.message : "Failed to list queries";
     return c.json({ error: message }, 500);
   }
 });
@@ -438,7 +443,8 @@ adminDbRouter.get("/api/admin/db/json/files", (c) => {
       .all();
     return c.json({ root: getJsonScanRoot(), files });
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Scan registry unavailable";
+    const message =
+      err instanceof Error ? err.message : "Scan registry unavailable";
     return c.json({ error: message }, 503);
   }
 });

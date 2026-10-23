@@ -18,7 +18,10 @@ const router = createStandaloneWebDomainRouter(webDomain, {
 
 function App() {
   return (
-    <HostShell domain={webDomain} router={router as unknown as Parameters<typeof HostShell>[0]["router"]}>
+    <HostShell
+      domain={webDomain}
+      router={router as unknown as Parameters<typeof HostShell>[0]["router"]}
+    >
       <RouterProvider router={router} />
     </HostShell>
   );

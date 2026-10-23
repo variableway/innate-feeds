@@ -11,15 +11,15 @@ describe("validateReadOnlySql", () => {
 
   it("accepts WITH (CTE) queries", () => {
     expect(
-      validateReadOnlySql(
-        "WITH t AS (SELECT 1 AS x) SELECT x FROM t",
-      ),
+      validateReadOnlySql("WITH t AS (SELECT 1 AS x) SELECT x FROM t"),
     ).toBeNull();
   });
 
   it("accepts commented SQL with trailing semicolon", () => {
     expect(
-      validateReadOnlySql("-- get everything\nSELECT * FROM trending_repos -- row; hint\n;"),
+      validateReadOnlySql(
+        "-- get everything\nSELECT * FROM trending_repos -- row; hint\n;",
+      ),
     ).toBeNull();
   });
 

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/app/server.ts",
+    "dev:no-admin": "bun --watch src/app/server.ts --no-admin",
     "build": "bun build src/app/server.ts --target=bun --minify --outdir=dist && bun build src/app/cli.ts --target=bun --minify --outfile=dist/cli.js",
     "start": "bun dist/server.js",
     "sync:daily": "bun src/app/cli.ts sync trending daily",

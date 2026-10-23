@@ -20,6 +20,6 @@ Issue 要求：这个后台简化版**启动需要参数控制，默认启动后
 
 ## 验收记录
 
-- [ ] 默认启动时 `/api/admin/db/tables` 可访问
-- [ ] `--no-admin` 或 `ADMIN_DB_UI=off` 时返回 404
-- [ ] README / AGENTS.md 文档同步
+- [x] 默认启动时 `/api/admin/db/tables` 可访问（200）
+- [x] `--no-admin`（tables=404，health=200）与 `ADMIN_DB_UI=off`（tables=404）均关闭 admin，启动日志打印 `Admin DB workspace: disabled`
+- [x] README（AGENTS.md）文档同步：API 表新增 admin 端点 + `/admin` 章节 + 环境变量说明；`backend/package.json` 新增 `dev:no-admin`

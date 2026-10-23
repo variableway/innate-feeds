@@ -46,7 +46,10 @@ export const openApiSpec = {
     { name: "Auth", description: "GitHub 认证状态与 PAT" },
     { name: "Sync", description: "触发数据同步（勿对外暴露）" },
     { name: "Hidden", description: "隐藏 / 取消隐藏条目" },
-    { name: "AdminDb", description: "简化版 SQLite 后台（只读查询 / 保存 SQL / JSON 文件查询）" },
+    {
+      name: "AdminDb",
+      description: "简化版 SQLite 后台（只读查询 / 保存 SQL / JSON 文件查询）",
+    },
   ],
   paths: {
     "/api/health": {

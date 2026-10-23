@@ -24,7 +24,8 @@
 
 ## 验收记录
 
-- [ ] `/admin` 页面可用（dev 与 build 产物均可）
-- [ ] SQL 高亮、执行、结果表格正常
-- [ ] 保存的 SQL 增删改查正常
-- [ ] typecheck 通过
+- [x] `/admin` 页面可用（生产构建产物由后端同源托管验证 200；dev 模式同 pipeline）
+- [x] SQL 高亮、执行、结果表格正常（CodeMirror 6 `@uiw/react-codemirror` + `@codemirror/lang-sql`；新版无需独立 CSS 文件，运行时注入主题）
+- [x] 保存的 SQL 增删改查正常（覆盖保存 / 另存 / 删除；Ctrl+Enter 执行）
+- [x] typecheck 通过
+- 备注：修复 server.ts `mountWebsite` 在 Windows 上因反斜杠路径前缀校验失败导致所有页面路由 404 的既有 bug（`toPosix` 归一化）。

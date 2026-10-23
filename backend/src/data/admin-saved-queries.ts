@@ -10,7 +10,8 @@ import type { Database } from "bun:sqlite";
 const SEED_EXAMPLES: { name: string; description: string; sql: string }[] = [
   {
     name: "AI Agent · stars > 10000（topic LIKE 兜底）",
-    description: "推荐：覆盖 ai-agent / ai-agents / *-agent 等所有含 agent 的 topic",
+    description:
+      "推荐：覆盖 ai-agent / ai-agents / *-agent 等所有含 agent 的 topic",
     sql: `SELECT s.full_name, s.stars, s.language,
        GROUP_CONCAT(t.topic) AS topics
 FROM starred_repos s
@@ -49,7 +50,8 @@ LIMIT 50`,
   },
   {
     name: "JSON 文件 · json_each 展开",
-    description: "先执行 POST /api/admin/db/json/scan，再用本查询按行展开任意 JSON 内容",
+    description:
+      "先执行 POST /api/admin/db/json/scan，再用本查询按行展开任意 JSON 内容",
     sql: `SELECT jd.name, je.key, je.type,
        CASE WHEN json_type(je.value) IN ('object','array')
             THEN substr(je.value, 1, 120) ELSE je.value END AS value
