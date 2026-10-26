@@ -49,14 +49,15 @@ ORDER BY rank
 LIMIT 50`,
   },
   {
-    name: "JSON 文件 · json_each 展开",
+    name: "JSON 文件 · json_each 展开条目",
     description:
-      "先执行 POST /api/admin/db/json/scan，再用本查询按行展开任意 JSON 内容",
-    sql: `SELECT jd.name, je.key, je.type,
-       CASE WHEN json_type(je.value) IN ('object','array')
-            THEN substr(je.value, 1, 120) ELSE je.value END AS value
-FROM json_documents jd, json_each(jd.content) je
-LIMIT 200`,
+      "先执行 POST /api/admin/db/json/scan，再用本查询按行展开 JSON 文件的 items 数组",
+    sql: `SELECT jd.name AS file,
+       json_extract(je.value, '$.title') AS title,
+       json_extract(je.value, '$.tagline') AS tagline
+FROM json_documents jd, json_each(jd.content, '$.items') je
+WHERE jd.name LIKE 'batch-%'
+LIMIT 100`,
   },
 ];
 

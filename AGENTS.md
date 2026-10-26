@@ -378,7 +378,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - **ES modules** everywhere (`"type": "module"` in both `package.json` files).
 - **Strict TypeScript** is enabled (`strict: true`).
 - **Path alias**: `@/*` maps to `src/*` in the frontend. In the backend, local imports use relative paths with explicit `.js` extensions (e.g., `import { … } from "./db/index.js"`).
-- **No test suite** is currently present.
+- **Tests** run with `bun run test` (= `bun test`; vitest is not used because its bundler cannot parse bun-only `with { type: "text" }` imports). Test files: `backend/src/**/*.test.ts`.
 
 ### Backend
 

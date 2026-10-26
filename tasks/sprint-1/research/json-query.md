@@ -40,6 +40,7 @@ FROM json_documents WHERE content ->> '$.type' = 'module';
 ```
 
 ✅ 实测全部跑通（注册 2 个真实 package.json，`json_each` 展开 7 个顶层 key，`->>` 过滤正确）。
+**2026-10-26 补充验证：** 同步 yc + github-topics 后，默认扫描根 `~/.innate` 注册 9 个收集器 JSON（2.3MB，`json_valid` 全通过）；`json_each(jd.content, '$.items')` 展开真实业务数据（YC batch 公司名 + tagline、GitHub Topics 450 条目）均正确。
 
 - 优点：零新依赖；与 admin 后台同一 SQLite 引擎，一张表搞定；`json_each` 天然把嵌套结构变成表格行；只读连接里建 `TEMP` 表即可，不污染主库。
 - 缺点：大文件全量进内存（加 1MB 上限过滤）；无二级索引（文件量级 < 1000 无所谓）。

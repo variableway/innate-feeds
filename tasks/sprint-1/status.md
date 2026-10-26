@@ -16,12 +16,13 @@
 
 ## 执行日志（追加式，最新在上）
 
+- 2026-10-26 claude-code：修复 CI 前置条件——设置 `INNATE_FE_TOKEN` secret（私有基础仓 checkout）；根 `test` 脚本 vitest → `bun test`（41/41 通过）；同步 yc + github-topics 收集器，admin JSON 查询在真实数据上验证；AGENTS.md 测试说明更新。
 - 2026-10-23 claude-code：Sprint 全部任务（R1/R2/T1–T5）完成，Issue #5–#11 全部关闭；Sprint 总结见 PR（closes #4）。
 - 2026-10-23 claude-code：R1/R2/T1/T2 完成，Issue #5 #6 #7 #8 已关闭；开始 T3。
 - 2026-10-23 claude-code：Sprint 建档（context / status / task 文档 / research 占位）。
 
 ## 已知遗留（不阻塞 Sprint 验收）
 
-- 仓库 vitest 配置无法解析 bun 专属导入（`with {type:"text"}`），测试用 `bun test` 执行（既有问题，另开 Issue 可跟进）。
-- T4 顺带修复 server.ts `mountWebsite` Windows 路径分隔符 bug（`toPosix`）。
-- `~/.innate` 下暂无外部收集器 JSON（producthunt/yc/a16z 未跑）；admin 的 JSON 扫描已用 `ADMIN_JSON_DIR` 指向仓库根验证（233 文件）。
+- ~~仓库 vitest 配置无法解析 bun 专属导入~~ → **已修复（2026-10-26）**：根 `test` 脚本改为 `bun test`（vitest 兼容层），41/41 测试通过；AGENTS.md 测试说明已同步。
+- ~~`~/.innate` 下暂无外部收集器 JSON~~ → **已修复（2026-10-26）**：`sync yc` + `sync github-topics` 已灌入 9 个真实 JSON（2.3MB），admin JSON 扫描（默认目录）与 `json_each` 展开实测通过；保存查询种子更新为 items 展开写法。
+- CI / Pages 部署在 main 上自 2026-10-22 起失败：根因是 `variableway/innate-fe` 为私有仓且 `INNATE_FE_TOKEN` secret 缺失（checkout Not Found）。2026-10-26 已设置该 secret（值为当前 gh token，建议后续换成仅含 innate-fe 读权限的 fine-grained PAT 并轮换）；测试脚本修复一并入本 PR。
