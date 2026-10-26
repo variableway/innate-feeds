@@ -42,6 +42,10 @@ innate-feeds/
 │   │   │   ├── import-static.ts       # Import static JSON into SQLite
 │   │   │   ├── manifest-utils.ts      # Manifest read/write helpers
 │   │   │   └── hidden-store.ts        # Hidden ("deleted") items store (~/.innate/hidden.json)
+│   │   ├── dsh/              # DSH plugin catalog datasource (issue #13 抽离)
+│   │   │   ├── catalog.ts    # YAML catalog loading + search/sort/pagination
+│   │   │   ├── routes.ts     # Hono sub-app: /api/plugins* (mounted by server.ts)
+│   │   │   └── export.ts     # plugins.json static export (called by export-incremental)
 │   │   └── db/              # SQLite database layer
 │   │       ├── index.ts     # Connection, queries, CRUD helpers
 │   │       ├── schema.sql   # SQLite schema (trending_repos, starred_repos, topics)
@@ -56,35 +60,39 @@ innate-feeds/
 │   │   ├── web-domain.tsx    # createWebDomain("feeds"): routes + navItems/homeTile capability
 │   │   ├── domain-layout.tsx # Business-area layout (DigestFiltersProvider)
 │   │   ├── host-shell.tsx    # Standalone-only compact left nav (host concern, not in domain)
-│   │   ├── main.tsx          # Minimal standalone host entry (HostShell + RouterProvider)
-│   │   ├── pages/            # Business pages (trending, starred, digest, dsh, settings) — page.tsx only
-│   │   ├── components/       # Business components (FeedCard, FilterBar, plugin-*) — no shell chrome
+│   │   ├── main.tsx          # Standalone host entry: composes feeds + dsh domains (host-only)
+│   │   ├── pages/            # Business pages (trending, starred, digest, settings, admin) — page.tsx only
+│   │   ├── components/       # Business components (FeedCard, FilterBar, …) — no shell chrome
 │   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size
-│   │   ├── services/         # API client (feeds.ts) — supports both API and static modes
-│   │   ├── types/            # TypeScript domain types (feed.ts, plugin.ts, dsh.ts)
+│   │   ├── services/         # API client (feeds.ts, admin-db.ts, hidden.ts) — API + static modes
+│   │   ├── types/            # TypeScript domain types (feed.ts)
 │   │   ├── lib/              # utils.ts (cn, formatNumber, formatDate), feed-filters-storage.ts
 │   │   └── styles.css        # Tailwind CSS v4 theme + dark mode
 │   ├── plugin.json           # innate.plugin.v1, kind: "domain"
 │   ├── index.html
 │   ├── scripts/              # Bun build toolchain (no Vite)
 │   │   ├── build.ts          # Prod build: Tailwind engine + Bun.build + index.html assembly + Pages 404
-│   │   ├── dev.ts            # Dev server: /api proxy, rebuild on change, SSE live reload
+│   │   ├── dev.ts            # Dev server: /api proxy, rebuild on change (src + ../shared + ../dsh), SSE live reload
 │   │   └── preview.ts        # Static server for dist/ (replaces `vite preview`)
 │   ├── package.json          # name: @innate/domain-feeds; @innate/ui + @innate/web-domain via innate-fe-cli install
 │   └── tsconfig.json
-├── dsh-plugin-directory/    # Unused Next.js prototype (plugin UI now lives in frontend /dsh)
-│   ├── prisma/              # Prisma 7 schema (Plugin + Category), Postgres
-│   ├── scripts/             # import-dsh-plugins.ts (YAML/JSON → Postgres, dry-run default)
+├── dsh/                      # @innate/domain-dsh — DSH plugin directory domain plugin (issue #13 拆分)
 │   ├── src/
-│   │   ├── app/             # App Router pages: / (listing), /plugins/[slug], /categories
-│   │   ├── components/      # shadcn ui/ + plugin cards, filters (nuqs-driven)
-│   │   ├── server/plugins/  # queries.ts + search-params.ts (nuqs parsers)
-│   │   └── lib/             # db.ts (PrismaClient + adapter-pg), categories.ts
-│   └── docs/                # awesome-import-spec.md (awesome list → awesome.json 转换规范)
+│   │   ├── index.ts          # export { webDomain }
+│   │   ├── web-domain.tsx    # createWebDomain("dsh"): /dsh* routes + navItems/homeTile
+│   │   ├── domain-layout.tsx # dsh business-area layout (scroll container)
+│   │   ├── pages/            # page.tsx, categories-page.tsx, category-page.tsx, detail-page.tsx
+│   │   ├── components/       # plugin-card / plugin-listing / plugin-list-item (+ vendored markdown-body, copy-install-button)
+│   │   ├── services/         # plugins.ts — API client + static-mode client-side search mirror
+│   │   ├── types/            # plugin.ts, dsh.ts
+│   │   └── lib/              # utils.ts (cn)
+│   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
+│   ├── package.json          # name: @innate/domain-dsh; self-contained (relative imports only)
+│   └── tsconfig.json
 ├── awesome/                 # Vendored awesome-dsh-plugin catalog snapshot (`awesome-dsh-plugin/data`, YAML + stars/screenshots/dates)
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
-├── package.json             # Root bun workspace (workspaces: backend, frontend)
+├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh)
 ├── dev.sh                   # Bash helper (legacy; `bun run dev` is cross-platform)
 └── CLAUDE.md
 ```
@@ -106,7 +114,7 @@ innate-feeds/
 | Data fetching | GitHub CLI (`gh`) and Firecrawl |
 | Validation | Zod (used in API input validation) |
 | Type checking | TypeScript 5.7+ |
-| Plugin directory | TanStack Router routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin YAML) |
+| Plugin directory | Own domain plugin `@innate/domain-dsh` (`dsh/`), routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin YAML, datasource in `backend/src/dsh/`) |
 
 ## Build and development commands
 
@@ -144,7 +152,7 @@ The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http:
 
 ### Plugin directory (`/dsh`)
 
-The DSH plugin browser is part of the same React app (same sidebar and theme). The Hono backend reads the vendored catalog at `awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`). Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `export-incremental.ts`; `services/plugins.ts` mirrors the backend's search/sort/pagination client-side. The old Next.js app in `dsh-plugin-directory/` is unused.
+The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, top-level `dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend reads the vendored catalog at `awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`) via the extracted datasource in `backend/src/dsh/`. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. The old Next.js prototype (`dsh-plugin-directory/`) was deleted in sprint-2.
 
 Refresh the vendored catalog from the upstream repo (https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) by copying its `data/` directory over `awesome/awesome-dsh-plugin/data/`, then re-running `bun run data:export` (regenerates `plugins.json`) — no other wiring needed.
 
@@ -280,6 +288,7 @@ VITE_BASE_PATH=/your-repo bun run build:pages
 ```bash
 cd backend  && bun run typecheck
 cd frontend && bun run typecheck
+cd dsh      && bun run typecheck
 ```
 
 ### Code formatting
@@ -441,8 +450,8 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing styling / theme | `frontend/src/styles.css` |
 | Changing the frontend build / dev toolchain | `frontend/scripts/build.ts`, `dev.ts`, `preview.ts` |
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
-| Changing the plugin directory site | `frontend/src/pages/dsh/`, `frontend/src/components/plugin-*.tsx` |
-| Changing plugin data loading | `backend/src/data/plugin-catalog.ts` |
+| Changing the plugin directory site | `dsh/src/` (domain plugin @innate/domain-dsh) |
+| Changing plugin data loading | `backend/src/dsh/catalog.ts`, `backend/src/dsh/routes.ts` |
 
 ## Security considerations
 

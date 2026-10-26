@@ -64,6 +64,10 @@ jobs:
         working-directory: innate-feeds
         run: cd frontend && bun run typecheck
 
+      - name: Type check dsh domain
+        working-directory: innate-feeds
+        run: cd dsh && bun run typecheck
+
       - name: Check formatting
         working-directory: innate-feeds
         run: bun run format:ts:check
