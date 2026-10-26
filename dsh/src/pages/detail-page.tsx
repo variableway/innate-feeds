@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "@tanstack/react-router";
 import { Calendar, Package, Star } from "lucide-react";
-import { pluginCategoryById } from "@innate/shared/plugin-categories";
-import { fetchPlugin, fetchRelatedPlugins } from "@/services/plugins";
-import { PluginCard } from "@/components/plugin-card";
-import { CopyInstallButton } from "@/components/copy-install-button";
-import { MarkdownBody } from "@/components/markdown-body";
-import type { DshPlugin } from "@/types/plugin";
+import { pluginCategoryById } from "../../../shared/plugin-categories";
+import { fetchPlugin, fetchRelatedPlugins } from "../services/plugins";
+import { PluginCard } from "../components/plugin-card";
+import { CopyInstallButton } from "../components/copy-install-button";
+import { MarkdownBody } from "../components/markdown-body";
+import type { DshPlugin } from "../types/plugin";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", {

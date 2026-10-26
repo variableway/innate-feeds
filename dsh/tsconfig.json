@@ -12,13 +12,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "paths": {
-      "@/*": ["./src/*"],
-      "@innate/shared/plugin-categories": ["../shared/plugin-categories.ts"]
-    }
+    "paths": {}
   },
   "include": [
-    "src",
-    "../shared/plugin-categories.ts"
+    "src"
   ]
 }

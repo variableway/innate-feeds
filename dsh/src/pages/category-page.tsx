@@ -5,14 +5,14 @@ import {
   useParams,
   useSearch,
 } from "@tanstack/react-router";
-import { pluginCategoryById } from "@innate/shared/plugin-categories";
-import { fetchPlugins } from "@/services/plugins";
+import { pluginCategoryById } from "../../../shared/plugin-categories";
+import { fetchPlugins } from "../services/plugins";
 import {
   PluginListing,
   type PluginListingSearch,
-} from "@/components/plugin-listing";
-import type { DshPlugin } from "@/types/plugin";
-import type { DshSearch } from "@/types/dsh";
+} from "../components/plugin-listing";
+import type { DshPlugin } from "../types/plugin";
+import type { DshSearch } from "../types/dsh";
 
 export function DshCategoryPage() {
   const { slug } = useParams({ strict: false }) as { slug: string };

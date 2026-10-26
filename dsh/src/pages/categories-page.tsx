@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { fetchPluginCategories } from "@/services/plugins";
-import type { PluginCategoryStat } from "@/types/plugin";
+import { fetchPluginCategories } from "../services/plugins";
+import type { PluginCategoryStat } from "../types/plugin";
 
 export function DshCategoriesPage() {
   const [categories, setCategories] = useState<PluginCategoryStat[]>([]);

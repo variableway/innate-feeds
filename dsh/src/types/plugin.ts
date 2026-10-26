@@ -1,4 +1,4 @@
-import type { PluginCategoryId } from "@innate/shared/plugin-categories";
+import type { PluginCategoryId } from "../../../shared/plugin-categories";
 
 export interface DshPlugin {
   slug: string;

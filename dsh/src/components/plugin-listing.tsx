@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { PLUGIN_CATEGORIES } from "@innate/shared/plugin-categories";
-import type { DshPlugin } from "@/types/plugin";
-import { PluginCard } from "@/components/plugin-card";
-import { PluginListItem } from "@/components/plugin-list-item";
+import { PLUGIN_CATEGORIES } from "../../../shared/plugin-categories";
+import type { DshPlugin } from "../types/plugin";
+import { PluginCard } from "./plugin-card";
+import { PluginListItem } from "./plugin-list-item";
 
 export interface PluginListingSearch {
   q: string;

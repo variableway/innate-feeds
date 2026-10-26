@@ -2,12 +2,12 @@ import { createRoute } from "@tanstack/react-router";
 import type { AnyRoute } from "@tanstack/react-router";
 import { createWebDomain } from "@innate/web-domain";
 import { DshLayout } from "./domain-layout";
-import { DshPluginsPage } from "@/pages/page";
-import { DshCategoriesPage } from "@/pages/categories-page";
-import { DshCategoryPage } from "@/pages/category-page";
-import { DshPluginDetailPage } from "@/pages/detail-page";
+import { DshPluginsPage } from "./pages/page";
+import { DshCategoriesPage } from "./pages/categories-page";
+import { DshCategoryPage } from "./pages/category-page";
+import { DshPluginDetailPage } from "./pages/detail-page";
 
-import type { DshSearch } from "@/types/dsh";
+import type { DshSearch } from "./types/dsh";
 
 type SearchRecord = Record<string, unknown>;
 

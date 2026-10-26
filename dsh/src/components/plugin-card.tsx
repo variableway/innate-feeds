@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Star } from "lucide-react";
-import { pluginCategoryById } from "@innate/shared/plugin-categories";
-import type { DshPlugin } from "@/types/plugin";
+import { pluginCategoryById } from "../../../shared/plugin-categories";
+import type { DshPlugin } from "../types/plugin";
 
 function formatStars(stars: number) {
   if (stars >= 1000) return `${(stars / 1000).toFixed(1).replace(/\.0$/, "")}k`;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearch } from "@tanstack/react-router";
-import { fetchPluginStats, fetchPlugins } from "@/services/plugins";
+import { fetchPluginStats, fetchPlugins } from "../services/plugins";
 import {
   PluginListing,
   type PluginListingSearch,
-} from "@/components/plugin-listing";
-import type { DshPlugin, PluginStats } from "@/types/plugin";
-import type { DshSearch } from "@/types/dsh";
+} from "../components/plugin-listing";
+import type { DshPlugin, PluginStats } from "../types/plugin";
+import type { DshSearch } from "../types/dsh";
 
 export function DshPluginsPage() {
   // 路由挂在 pathless layout 下，`from: "/dsh"` 匹配不到；用 strict:false + 显式类型

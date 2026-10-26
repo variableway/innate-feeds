@@ -3,8 +3,8 @@ import type {
   PluginCategoryStat,
   PluginSearchResult,
   PluginStats,
-} from "@/types/plugin";
-import { PLUGIN_CATEGORIES } from "@innate/shared/plugin-categories";
+} from "../types/plugin";
+import { PLUGIN_CATEGORIES } from "../../../shared/plugin-categories";
 
 const API_BASE = "/api";
 
