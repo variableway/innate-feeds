@@ -1,0 +1,12 @@
+{
+  "protocol": "innate.plugin.v1",
+  "kind": "domain",
+  "id": "dsh",
+  "name": "DSH Plugins",
+  "description": "awesome-dsh-plugin 目录：搜索、分类浏览与安装指引",
+  "version": "0.1.0",
+  "entry": "src/index.ts",
+  "outlet": "app",
+  "capabilities": ["navItems", "homeTile"],
+  "order": 30
+}

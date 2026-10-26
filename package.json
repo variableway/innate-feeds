@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "workspaces": [
     "backend",
-    "frontend"
+    "frontend",
+    "dsh"
   ],
   "scripts": {
     "dev": "concurrently -k -n backend,frontend -c blue,magenta \"bun run dev:backend\" \"bun run dev:frontend\"",
