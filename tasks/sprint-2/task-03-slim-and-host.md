@@ -1,6 +1,6 @@
 # T3：feeds 域瘦身 + 宿主双域组合
 
-> Issue: 待建 · 依赖：T2 · Sprint: [sprint-2](./context.md)
+> Issue: [#16](https://github.com/variableway/innate-feeds/issues/16) · 依赖：T2 · Sprint: [sprint-2](./context.md)
 
 ## 目标
 
