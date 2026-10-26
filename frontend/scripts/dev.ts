@@ -24,6 +24,8 @@ const srcDir = join(frontendRoot, "src");
 const stylesPath = join(srcDir, "styles.css");
 const sharedDir = resolve(frontendRoot, "../shared");
 const publicDir = join(frontendRoot, "public");
+/** dsh 域包（@innate/domain-dsh）源码：宿主单站构建需扫描其 Tailwind 类 */
+const dshSrcDir = resolve(frontendRoot, "../dsh/src");
 
 const PORT = Number(process.env.PORT || 3000);
 const API_ORIGIN = process.env.API_ORIGIN || "http://localhost:4000";
@@ -101,7 +103,9 @@ async function rebuildCSS(fresh: boolean): Promise<boolean> {
           : twCompiler.root === null
             ? [{ base: frontendRoot, pattern: "**/*", negated: false }]
             : [{ ...twCompiler.root, negated: false }]
-      ).concat(twCompiler.sources);
+      )
+        .concat(twCompiler.sources)
+        .concat([{ base: dshSrcDir, pattern: "**/*", negated: false }]);
       twScanner = new Scanner({ sources });
     }
     for (const candidate of twScanner.scan()) twCandidates.add(candidate);
@@ -270,6 +274,7 @@ async function main(): Promise<void> {
     [
       { dir: srcDir, label: "src" },
       { dir: sharedDir, label: "shared" },
+      { dir: dshSrcDir, label: "dsh" },
     ],
     150,
     (files) => {

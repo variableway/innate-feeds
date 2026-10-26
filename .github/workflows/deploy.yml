@@ -77,6 +77,12 @@ jobs:
         with:
           version: 12
 
+      # innate-fe-cli auto-starts Verdaccio via `npx --yes verdaccio` with a
+      # 120s readiness timeout; pre-install the binary so the download stays
+      # outside that window (see ci.yml note).
+      - name: Pre-install Verdaccio
+        run: npm install -g verdaccio
+
       - name: Install dependencies
         run: |
           bun ../innate-fe/innate-fe-cli/src/index.ts install \

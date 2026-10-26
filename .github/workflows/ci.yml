@@ -36,6 +36,12 @@ jobs:
         with:
           version: 12
 
+      # innate-fe-cli auto-starts Verdaccio via `npx --yes verdaccio` with a
+      # 120s readiness timeout. On cold runners the npx download alone can
+      # exceed that window, so install the binary up front (untimed).
+      - name: Pre-install Verdaccio
+        run: npm install -g verdaccio
+
       - name: Install @innate/* via innate-fe-cli
         working-directory: innate-feeds
         run: |
@@ -63,6 +69,10 @@ jobs:
       - name: Type check frontend
         working-directory: innate-feeds
         run: cd frontend && bun run typecheck
+
+      - name: Type check dsh domain
+        working-directory: innate-feeds
+        run: cd dsh && bun run typecheck
 
       - name: Check formatting
         working-directory: innate-feeds
@@ -93,6 +103,12 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 12
+
+      # innate-fe-cli auto-starts Verdaccio via `npx --yes verdaccio` with a
+      # 120s readiness timeout. On cold runners the npx download alone can
+      # exceed that window, so install the binary up front (untimed).
+      - name: Pre-install Verdaccio
+        run: npm install -g verdaccio
 
       - name: Install @innate/* via innate-fe-cli
         working-directory: innate-feeds

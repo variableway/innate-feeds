@@ -150,10 +150,11 @@ innate-feeds/
 │   ├── app/          # server.ts (Hono + Bun.serve), cli.ts
 │   ├── collector/    # github, firecrawl, sync, sync-window, digest
 │   ├── data/         # export/import JSON, digest snapshot, README cache
+│   ├── dsh/          # dsh plugin catalog datasource (catalog, API routes, export)
 │   └── db/           # bun:sqlite schema + queries
-├── frontend/src/     # React pages, components, feeds.ts + github-live.ts
-├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json)
-├── dsh-plugin-directory/   # unused Next.js prototype; live UI is frontend `/dsh`
+├── frontend/src/     # @innate/domain-feeds: feeds pages + standalone host (feeds + dsh)
+├── dsh/src/          # @innate/domain-dsh: plugin directory domain plugin (/dsh pages)
+├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json, plugins.json)
 ├── awesome/          # curated awesome lists (`awesome-dsh-plugin` is the plugin data source)
 ├── .github/workflows/      # ci.yml, deploy.yml
 └── docs/arch-design/data-update-workflow.md

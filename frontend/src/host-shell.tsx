@@ -1,6 +1,7 @@
 /**
  * 独立宿主壳（host-only）：webshell 缺席时提供最小导航。
- * 导航项来自 domain 的 `navItems` capability —— 与 innate-fe 插件态同一事实源。
+ * 导航项聚合自全部 domain 的 `navItems` capability（collectNavItems）——
+ * 与 innate-fe 插件态同一事实源（issue #13 后为 feeds + dsh 双域）。
  * 两个可折叠分组菜单（GitHub / DeepSeek Harness），子项按 `group` 归类。
  * 不属于 domain：插件态下 webshell 自己画侧栏，本文件不被打包进 domains/。
  */
@@ -15,7 +16,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { WebDomain } from "@innate/web-domain";
+import { collectNavItems, type WebDomain } from "@innate/web-domain";
 
 const ICONS: Record<string, LucideIcon> = {
   Github,
@@ -46,9 +47,8 @@ interface NavGroup {
   order: number;
 }
 
-function navItemsOf(domain: WebDomain): NavItem[] {
-  const raw = domain.capabilities["navItems"];
-  return Array.isArray(raw) ? (raw as NavItem[]) : [];
+function navItemsOf(domains: WebDomain[]): NavItem[] {
+  return collectNavItems(domains) as NavItem[];
 }
 
 /** 按 `group` 归类；组序取组内最小 order，无 group 的项归入默认组。 */
@@ -83,11 +83,11 @@ function isItemActive(pathname: string, itemPath: string): boolean {
 }
 
 export function HostShell({
-  domain,
+  domains,
   router,
   children,
 }: {
-  domain: WebDomain;
+  domains: WebDomain[];
   router: HostRouter;
   children: React.ReactNode;
 }) {
@@ -100,7 +100,7 @@ export function HostShell({
     return unsub;
   }, [router]);
 
-  const groups = useMemo(() => groupNavItems(navItemsOf(domain)), [domain]);
+  const groups = useMemo(() => groupNavItems(navItemsOf(domains)), [domains]);
 
   // 含当前路由的分组默认展开；其余保持收起状态
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});

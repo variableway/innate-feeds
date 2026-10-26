@@ -14,7 +14,7 @@
 | P3 | ⏳ | 需 innate-fe 侧 `plugins.registry.yaml` 登记本仓并 `gen` 联调（见 §4） |
 | P4 | ✅ | `src/main.tsx` 独立宿主 + `src/host-shell.tsx` 紧凑左栏（读 `navItems` capability）；`bun run typecheck` / `bun run test`（34）/ `frontend build` 全绿；CI/deploy 接 `innate-fe-cli install`；playwright 实测导航 |
 
-**§6 待定项的落地选择：** Pages 产物走 host 最小宿主直出（§6-1 选 a）；`@innate/*` 依赖走 `innate-fe-cli install`（Verdaccio 私有源，§6-2 选 A）；插件态 `/api` 基址维持相对路径 + `VITE_STATIC_MODE`（§6-3）；dsh 并入 `feeds` domain（§6-4）；`DigestFiltersProvider` 进 `DomainLayout`（§6-5）。
+**§6 待定项的落地选择：** Pages 产物走 host 最小宿主直出（§6-1 选 a）；`@innate/*` 依赖走 `innate-fe-cli install`（Verdaccio 私有源，§6-2 选 A）；插件态 `/api` 基址维持相对路径 + `VITE_STATIC_MODE`（§6-3）；~~dsh 并入 `feeds` domain（§6-4）~~ → **已再拆分（2026-10-26，sprint-2 / issue #13）**：dsh 独立为 `@innate/domain-dsh`（顶层 `dsh/`），datasource 抽离至 `backend/src/dsh/`，详见 [dsh-domain-split.md](./dsh-domain-split.md)；`DigestFiltersProvider` 进 `DomainLayout`（§6-5）。
 
 **去壳的最终口径（2026-10-22 修订）：** domain 不携带 sidebar/header/主题——插件态由 innate-fe webshell 承担。**独立态保留紧凑左栏**（`host-shell.tsx`，w-40），仅 host 参与、不进 `domains/` 打包面，导航项与插件态同源（`navItems` capability）。
 
