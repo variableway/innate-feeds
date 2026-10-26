@@ -1,7 +1,15 @@
+/**
+ * DSH plugin catalog datasource (issue #13 抽离).
+ *
+ * 加载 vendored awesome-dsh-plugin 快照（`awesome/awesome-dsh-plugin/data`，
+ * 可用 `DSH_PLUGIN_DATA_DIR` 覆盖）并提供搜索/排序/分页。
+ * 属 dsh 域的 datasource 层：被 `routes.ts`（API）与 `export.ts`（静态导出）
+ * 消费，与 feeds 数据层（`data/`、`collector/`）边界隔离。
+ */
 import { readdirSync, readFileSync } from "fs";
 import { join, resolve } from "path";
 import { load as yamlLoad } from "js-yaml";
-import { getProjectRoot } from "./app-config.js";
+import { getProjectRoot } from "../data/app-config.js";
 import {
   PLUGIN_CATEGORIES,
   PLUGIN_CATEGORY_IDS,

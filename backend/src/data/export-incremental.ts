@@ -16,7 +16,7 @@ import {
 } from "./manifest-utils.js";
 import { exportNewestDigestToStatic } from "./digest-store.js";
 import { copyReadmesToPublic } from "./export-digest.js";
-import { getPlugins } from "./plugin-catalog.js";
+import { exportPluginCatalog } from "../dsh/export.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -147,29 +147,8 @@ function main() {
   }
 
   // Static plugin catalog for /dsh in static mode (GitHub Pages has no
-  // backend to serve /api/plugins).
-  try {
-    const plugins = getPlugins();
-    if (plugins.length > 0) {
-      const pluginsPath = join(outDir, "plugins.json");
-      writeFileSync(
-        pluginsPath,
-        JSON.stringify({
-          version: 1,
-          generatedAt: manifest.generatedAt,
-          plugins,
-        }),
-      );
-      console.log(
-        `Exported plugin catalog → ${pluginsPath} (${plugins.length} plugins)`,
-      );
-    }
-  } catch (err) {
-    console.warn(
-      "Skipped plugin catalog export:",
-      err instanceof Error ? err.message : err,
-    );
-  }
+  // backend to serve /api/plugins). Extracted datasource (issue #13).
+  exportPluginCatalog(outDir, manifest.generatedAt);
 
   const readmes = copyReadmesToPublic();
   if (readmes.copied) {
