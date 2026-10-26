@@ -83,8 +83,9 @@ jobs:
             --root "$GITHUB_WORKSPACE/innate-fe" \
             --dir frontend
           cp frontend/.npmrc .npmrc
-          bun install
-          bun run install:all
+          # pnpm, not bun install: fresh @innate/* tarballs never match
+          # bun.lock integrity hashes (see ci.yml note).
+          pnpm install
 
       - name: Restore README snapshot cache
         uses: actions/cache@v4

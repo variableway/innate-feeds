@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 import { swaggerUI } from "@hono/swagger-ui";
 import { z } from "zod";
 import { getOpenApiSpec } from "./openapi.js";
+import { adminDbRouter } from "./admin-db.js";
 import {
   getDb,
   getFeedItems,
@@ -34,6 +35,21 @@ import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
 const app = new Hono();
 
 app.use("/*", cors());
+
+/**
+ * Simplified SQLite admin workspace (/admin UI assets + /api/admin/db/*).
+ * On by default (issue #4: 默认启动后台管理查询); disable with
+ * `--no-admin` or `ADMIN_DB_UI=off`.
+ */
+export const adminDbEnabled = !(
+  process.argv.includes("--no-admin") ||
+  ["off", "false", "0"].includes(
+    (process.env.ADMIN_DB_UI || "").trim().toLowerCase(),
+  )
+);
+if (adminDbEnabled) {
+  app.route("/", adminDbRouter);
+}
 
 /** Liveness probe (opens the database). */
 app.get("/api/health", (c) => {
@@ -444,6 +460,11 @@ app.get(
  * Serve the Vite production build (frontend/dist) from the same origin as /api.
  * Client routes like /trending fall back to index.html.
  */
+/** Windows `resolve()` emits backslashes; normalize so prefix checks work. */
+function toPosix(p: string): string {
+  return p.replace(/\\/g, "/");
+}
+
 function mountWebsite(app: Hono): string | null {
   const distDir = process.env.FRONTEND_DIST?.trim()
     ? resolve(process.env.FRONTEND_DIST.trim())
@@ -453,12 +474,12 @@ function mountWebsite(app: Hono): string | null {
     return null;
   }
 
-  const distRoot = resolve(distDir);
+  const distRoot = toPosix(resolve(distDir));
 
   const resolvePublicFile = (pathname: string): string | null => {
     const relative =
       pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
-    const candidate = resolve(distRoot, relative);
+    const candidate = toPosix(resolve(distRoot, relative));
     if (candidate !== distRoot && !candidate.startsWith(`${distRoot}/`)) {
       return null;
     }
@@ -491,6 +512,9 @@ const listenLabel = hostname
   : `http://localhost:${port}`;
 const webRoot = mountWebsite(app);
 console.log(`Feeds server running on ${listenLabel}`);
+console.log(
+  `Admin DB workspace: ${adminDbEnabled ? "enabled" : "disabled"} (default enabled; --no-admin / ADMIN_DB_UI=off to disable)`,
+);
 if (webRoot) {
   console.log(`Website: ${listenLabel}  (from ${webRoot})`);
 } else {

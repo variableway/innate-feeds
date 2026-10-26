@@ -114,12 +114,13 @@ All commands assume you are in the project root unless noted.
 
 ### Install dependencies
 
-The repo is a **bun workspace** (`workspaces: backend, frontend`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)):
+The repo is a workspace (`workspaces: backend, frontend`, `pnpm-workspace.yaml`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)). Installs are **pnpm**-based (fresh @innate/* tarballs never match `bun.lock` integrity hashes, so don't use `bun install` at the root):
 
 ```bash
 export INNATE_FE_ROOT=/path/to/innate-fe
-bun run setup:innate   # publish @innate/* → .npmrc → rewrite workspace:* → pnpm install
-bun install            # = bun run install:all
+bun run setup:innate   # publish @innate/* → write frontend/.npmrc → pnpm install
+cp frontend/.npmrc .npmrc   # root .npmrc is required for @innate scope resolution
+pnpm install           # = bun run install:all
 ```
 
 ### Start development
@@ -338,6 +339,17 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/auth/status` | gh CLI + PAT presence (never returns the token). |
 | PUT | `/api/auth/pat` | Store GitHub PAT encrypted at rest. Body: `{ token }`. |
 | DELETE | `/api/auth/pat` | Remove the stored PAT. |
+| GET | `/api/admin/db/tables` | All tables + row counts (admin workspace, API mode only). |
+| GET | `/api/admin/db/tables/:name/schema` | Columns / indexes / DDL for one table. |
+| POST | `/api/admin/db/query` | Execute a single read-only SELECT/WITH on a dedicated readonly connection; results capped at 500 rows. Body: `{ sql }`. |
+| GET / POST | `/api/admin/db/queries` | Saved SQL list / create (seeded with example queries). |
+| PUT / DELETE | `/api/admin/db/queries/:id` | Update / delete a saved SQL. |
+| POST | `/api/admin/db/json/scan` | Scan JSON dir (default `~/.innate`, override `ADMIN_JSON_DIR`) into the temp `json_documents` registry. |
+| GET | `/api/admin/db/json/files` | Registered JSON files. |
+
+### Admin workspace (`/admin`)
+
+Simplified SQLite workbench served by the backend in API mode (not available in static/Pages mode): left = tables with row counts, center = CodeMirror SQL editor (highlighting, Ctrl/Cmd+Enter) + result table, right = saved SQL. On by default — **disable with `--no-admin` or `ADMIN_DB_UI=off`** (convenience script `bun run dev:no-admin`). Query logic lives in `backend/src/app/admin-db.ts`; UI in `frontend/src/pages/admin/page.tsx`.
 
 ### Sync pipeline
 
@@ -367,7 +379,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - **ES modules** everywhere (`"type": "module"` in both `package.json` files).
 - **Strict TypeScript** is enabled (`strict: true`).
 - **Path alias**: `@/*` maps to `src/*` in the frontend. In the backend, local imports use relative paths with explicit `.js` extensions (e.g., `import { … } from "./db/index.js"`).
-- **No test suite** is currently present.
+- **Tests** run with `bun run test` (= `bun test`; vitest is not used because its bundler cannot parse bun-only `with { type: "text" }` imports). Test files: `backend/src/**/*.test.ts`.
 
 ### Backend
 
@@ -406,6 +418,8 @@ Schema is defined in `backend/src/db/schema.sql`:
 | If you are… | Go to… |
 |---|---|
 | Adding or changing API endpoints | `backend/src/app/server.ts` |
+| Changing the admin DB workspace API | `backend/src/app/admin-db.ts`, `backend/src/data/admin-saved-queries.ts` |
+| Changing the admin workspace UI | `frontend/src/pages/admin/page.tsx`, `frontend/src/services/admin-db.ts` |
 | Changing how repos are fetched from GitHub | `backend/src/collector/github.ts` |
 | Changing trending/starred/window sync | `backend/src/collector/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
 | Changing the 90-day window / README prefetch | `backend/src/collector/sync-window.ts` |
@@ -438,7 +452,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - POST `/api/feeds/sync` validates request body with Zod schema before processing.
 - All GET API routes have try/catch error handling and return structured JSON errors.
 - The SQLite database path is controlled by the `DB_PATH` environment variable or defaults to `~/.innate/feeds.db`. Ensure the database file is not served or committed.
-- Environment variables: `PORT` (backend port, default 4000), `DB_PATH` (SQLite path), `INNATE_HOME` (data directory, default `~/.innate`), `VITE_STATIC_MODE` (frontend static mode), `VITE_BASE_PATH` (base URL for GitHub Pages).
+- Environment variables: `PORT` (backend port, default 4000), `DB_PATH` (SQLite path), `INNATE_HOME` (data directory, default `~/.innate`), `VITE_STATIC_MODE` (frontend static mode), `VITE_BASE_PATH` (base URL for GitHub Pages), `ADMIN_DB_UI` (`off` disables the admin workspace; also `--no-admin`), `ADMIN_JSON_DIR` (JSON scan root for the admin workspace, default `~/.innate`).
 
 ## Deployment notes
 

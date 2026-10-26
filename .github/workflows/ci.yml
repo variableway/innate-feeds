@@ -46,7 +46,11 @@ jobs:
 
       - name: Install root dependencies
         working-directory: innate-feeds
-        run: bun install
+        # pnpm, not bun install: CI republishes @innate/* @0.1.0 tarballs to a
+        # fresh Verdaccio on every run, so bun.lock's pinned integrity hashes
+        # can never match (IntegrityCheckFailed). pnpm resolves fresh — same
+        # as local setup (innate-fe-cli install drives pnpm for frontend/).
+        run: pnpm install
 
       - name: Run tests
         working-directory: innate-feeds
@@ -100,7 +104,11 @@ jobs:
 
       - name: Install root dependencies
         working-directory: innate-feeds
-        run: bun install
+        # pnpm, not bun install: CI republishes @innate/* @0.1.0 tarballs to a
+        # fresh Verdaccio on every run, so bun.lock's pinned integrity hashes
+        # can never match (IntegrityCheckFailed). pnpm resolves fresh — same
+        # as local setup (innate-fe-cli install drives pnpm for frontend/).
+        run: pnpm install
 
       - name: Build frontend
         working-directory: innate-feeds
