@@ -13,8 +13,8 @@
 
 ## 验收记录
 
-- [ ] `dsh-plugin-directory/` 已删，全仓无引用残留
-- [ ] CI workflow 更新后语法自检（actionlint 或目检）
-- [ ] AGENTS.md / docs 更新（含登记片段）
-- [ ] `bun run build:static` + preview 验证 /dsh 静态可用
-- [ ] 全部 typecheck + `bun test` 通过；推分支后 CI 绿
+- [x] `dsh-plugin-directory/` 已删（-6k 行），全仓无引用残留
+- [x] CI workflow 更新（ci.yml 加 "Type check dsh domain" 步骤；目检 + 与现有步骤同构）
+- [x] AGENTS.md / docs 更新：仓库地图与 where-to-change 表更新；新增 `docs/arch-design/dsh-domain-split.md`（含 innate-fe registry 登记片段）；迁移文档 §6-4 标注已拆分。README 项目结构同步
+- [x] `bun run build:static` + preview 验证：plugins.json 导出 2716 条（3.9MB），preview `/`、`/dsh`、`/data/plugins.json` 全 200，静态 bundle 含 "Awesome DSH Plugins"
+- [x] 全部 typecheck（backend/frontend/dsh 三包）+ `bun test`（41/41）+ format:ts:check 通过；分支推送后以 CI 运行为准

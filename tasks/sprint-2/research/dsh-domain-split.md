@@ -64,7 +64,7 @@ innate-feeds/
 1. **dsh 拆独立域包，而非留在 feeds 域**：业务上「插件目录」与「feeds 浏览」是两个领域（navItem 分组已是 "DeepSeek Harness" vs "GitHub"）；UI 耦合面实测只有 2 个小组件 + 分类常量，拆分成本低。
 2. **路由保留 `/dsh` 前缀**：URL 不变（外链/书签不碎），且与 feeds 域在同一个 router 里天然不冲突——这也正是多 domain 共存的命名空间方式。
 3. **datasource 抽离 = backend 内独立模块树 + Hono 子应用**：`backend/src/dsh/`（catalog/routes/export）。不做顶层独立包——backend 本就是 API 宿主进程，抽成 `backend/src/dsh/` 即可与 feeds 数据层（`data/`、`collector/`）划清边界，且零构建管线改动。域包不持有目录加载逻辑（这正是 issue 要求的「datasource 部分抽离」）。
-4. **分类常量留在 `shared/`**：它同时被 backend（YAML 校验）与 dsh UI（标签）消费，属跨层常量；迁入域包会造成 datasource→domain 的反向依赖。dsh 域 tsconfig 以 paths 映射引用（与 feeds 域今日做法一致）；gen 拷贝自包含问题与 feeds 一并留待 P3。
+4. **分类常量留在 `shared/`**：它同时被 backend（YAML 校验）与 dsh UI（标签）消费，属跨层常量；迁入域包会造成 datasource→domain 的反向依赖。~~dsh 域 tsconfig 以 paths 映射引用~~ → **实施修正（T3）**：tsc 的 paths 是 program 级全局，dsh 源码被 frontend typecheck 拉入同一 program 时别名会错解析，故 dsh 包内统一改相对导入（含 shared）；gen 拷贝自包含问题与 feeds 一并留待 P3。
 5. **`markdown-body` / `copy-install-button` 在 dsh 域内各 vendor 一份**（69 + 27 行）：域包必须自包含（gen 整目录拷贝不解析跨包相对导入）；两处演进独立可接受。feeds 侧原件保留（digest/repo/settings 仍用）。
 6. **standalone/Pages 维持单站双域**：`frontend/src/main.tsx`（host-only）建根路由后把 feeds、dsh 两个 domain 的 route factory 都挂上，`HostShell` 聚合两域 navItems。保持现有导航体验与部署产物形态；域包本体保持纯净（组合逻辑全在 host 文件，不进 `domains/` 打包面）。
 7. **innate-fe 侧 registry 登记不在本期**：与 feeds 的 P3 同批做（基础仓另仓 PR）。本期交付「随时可登记」状态 + 本文档 §6 的登记片段。

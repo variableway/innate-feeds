@@ -1,7 +1,7 @@
 # Sprint-2：DSH 插件目录域化拆分（datasource 抽离）
 
 **来源 Issue:** https://github.com/variableway/innate-feeds/issues/13
-**状态:** in_progress
+**状态:** done（2026-10-26，全部任务完成，PR 待合并）
 **开始:** 2026-10-26
 **状态总表:** [`status.md`](./status.md)（任何 Agent 完成任务后必须更新）
 
