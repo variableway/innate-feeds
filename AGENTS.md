@@ -114,12 +114,13 @@ All commands assume you are in the project root unless noted.
 
 ### Install dependencies
 
-The repo is a **bun workspace** (`workspaces: backend, frontend`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)):
+The repo is a workspace (`workspaces: backend, frontend`, `pnpm-workspace.yaml`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)). Installs are **pnpm**-based (fresh @innate/* tarballs never match `bun.lock` integrity hashes, so don't use `bun install` at the root):
 
 ```bash
 export INNATE_FE_ROOT=/path/to/innate-fe
-bun run setup:innate   # publish @innate/* → .npmrc → rewrite workspace:* → pnpm install
-bun install            # = bun run install:all
+bun run setup:innate   # publish @innate/* → write frontend/.npmrc → pnpm install
+cp frontend/.npmrc .npmrc   # root .npmrc is required for @innate scope resolution
+pnpm install           # = bun run install:all
 ```
 
 ### Start development

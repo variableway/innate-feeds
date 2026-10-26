@@ -29,7 +29,7 @@
     "export:static": "cd backend && bun run export:incremental",
     "build:static": "cd backend && bun run export:incremental && cd ../frontend && VITE_STATIC_MODE=true bun run build",
     "build:pages": "VITE_BASE_PATH=${VITE_BASE_PATH:-/} VITE_STATIC_MODE=true bun run build:static",
-    "install:all": "bun install",
+    "install:all": "pnpm install",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck",
