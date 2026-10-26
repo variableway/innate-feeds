@@ -7,39 +7,12 @@ import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
 import { SettingsPage } from "@/pages/settings/page";
 import { AdminPage } from "@/pages/admin/page";
-import { DshPluginsPage } from "@/pages/dsh/page";
-import { DshCategoriesPage } from "@/pages/dsh/categories-page";
-import { DshCategoryPage } from "@/pages/dsh/category-page";
-import { DshPluginDetailPage } from "@/pages/dsh/detail-page";
-
-import type { DshSearch } from "@/types/dsh";
-
-type SearchRecord = Record<string, unknown>;
-
-function parseDshSearch(search: SearchRecord): DshSearch {
-  return {
-    q: typeof search.q === "string" ? search.q : undefined,
-    category: typeof search.category === "string" ? search.category : undefined,
-    sort: typeof search.sort === "string" ? search.sort : undefined,
-    view:
-      search.view === "list" || search.view === "grid"
-        ? search.view
-        : undefined,
-    page: Number(search.page) > 0 ? Number(search.page) : undefined,
-  };
-}
-
-function parseCategorySearch(
-  search: SearchRecord,
-): Omit<DshSearch, "category"> {
-  const { category: _category, ...rest } = parseDshSearch(search);
-  return rest;
-}
 
 /**
  * innate-feeds 的 domain 声明（轨道 A）。
  * 硬条件：包名 `@innate/domain-feeds` + 本模块 `export { webDomain }`。
  * 壳侧栏 / 首页 tile 走 capability，不携带本仓基础 UI。
+ * /dsh 插件目录已拆为独立域 @innate/domain-dsh（issue #13，顶层 dsh/）。
  */
 export const webDomain = createWebDomain("feeds")
   .addRoute("app", (parent: AnyRoute) => {
@@ -87,28 +60,6 @@ export const webDomain = createWebDomain("feeds")
       }),
       createRoute({
         getParentRoute: () => layout,
-        path: "/dsh",
-        validateSearch: parseDshSearch,
-        component: DshPluginsPage,
-      }),
-      createRoute({
-        getParentRoute: () => layout,
-        path: "/dsh/categories",
-        component: DshCategoriesPage,
-      }),
-      createRoute({
-        getParentRoute: () => layout,
-        path: "/dsh/categories/$slug",
-        validateSearch: parseCategorySearch,
-        component: DshCategoryPage,
-      }),
-      createRoute({
-        getParentRoute: () => layout,
-        path: "/dsh/plugins/$slug",
-        component: DshPluginDetailPage,
-      }),
-      createRoute({
-        getParentRoute: () => layout,
         path: "/settings",
         component: SettingsPage,
       }),
@@ -142,13 +93,6 @@ export const webDomain = createWebDomain("feeds")
       icon: "Newspaper",
       order: 20,
       group: "GitHub",
-    },
-    {
-      label: "Plugins",
-      path: "/dsh",
-      icon: "Puzzle",
-      order: 30,
-      group: "DeepSeek Harness",
     },
     {
       label: "SQLite",

@@ -14,14 +14,12 @@
     "isolatedModules": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@innate/shared/theme-catalog": ["../shared/theme-catalog.ts"],
-      "@innate/shared/plugin-categories": ["../shared/plugin-categories.ts"]
+      "@innate/shared/theme-catalog": ["../shared/theme-catalog.ts"]
     }
   },
   "include": [
     "src",
     "scripts",
-    "../shared/theme-catalog.ts",
-    "../shared/plugin-categories.ts"
+    "../shared/theme-catalog.ts"
   ]
 }
