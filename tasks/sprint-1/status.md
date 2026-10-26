@@ -16,6 +16,7 @@
 
 ## 执行日志（追加式，最新在上）
 
+- 2026-10-26 claude-code：PR #12 合并（merge SHA 71aee1d），Issue #4 关闭。CI 全绿（Test & Type Check + Build）；每日 Pages 部署恢复成功，线上站点已更新至 2026-10-26 数据。本地 SQLite 二次刷新（trending 三榜 + starred 近 4 天增量，total 7125）。Sprint-1 全部收口。
 - 2026-10-26 claude-code：修复 CI 前置条件——设置 `INNATE_FE_TOKEN` secret（私有基础仓 checkout）；根 `test` 脚本 vitest → `bun test`（41/41 通过）；同步 yc + github-topics 收集器，admin JSON 查询在真实数据上验证；AGENTS.md 测试说明更新。
 - 2026-10-23 claude-code：Sprint 全部任务（R1/R2/T1–T5）完成，Issue #5–#11 全部关闭；Sprint 总结见 PR（closes #4）。
 - 2026-10-23 claude-code：R1/R2/T1/T2 完成，Issue #5 #6 #7 #8 已关闭；开始 T3。
@@ -25,4 +26,4 @@
 
 - ~~仓库 vitest 配置无法解析 bun 专属导入~~ → **已修复（2026-10-26）**：根 `test` 脚本改为 `bun test`（vitest 兼容层），41/41 测试通过；AGENTS.md 测试说明已同步。
 - ~~`~/.innate` 下暂无外部收集器 JSON~~ → **已修复（2026-10-26）**：`sync yc` + `sync github-topics` 已灌入 9 个真实 JSON（2.3MB），admin JSON 扫描（默认目录）与 `json_each` 展开实测通过；保存查询种子更新为 items 展开写法。
-- CI / Pages 部署在 main 上自 2026-10-22 起失败：根因是 `variableway/innate-fe` 为私有仓且 `INNATE_FE_TOKEN` secret 缺失（checkout Not Found）。2026-10-26 已设置该 secret（值为当前 gh token，建议后续换成仅含 innate-fe 读权限的 fine-grained PAT 并轮换）；测试脚本修复一并入本 PR。
+- ~~CI / Pages 部署在 main 上自 2026-10-22 起失败~~ → **已修复（2026-10-26）**：① 设置 `INNATE_FE_TOKEN` secret（私有基础仓 checkout，建议后续换成仅含 innate-fe 读权限的 fine-grained PAT 并轮换）；② 根安装从 `bun install` 切到 `pnpm install`（CI 每次全新发布 @innate/* 0.1.0 tarball，bun.lock 完整性哈希永远对不上；pnpm-lock 本就在 .gitignore，是仓库既定路径）。PR #12 合并后 CI 全绿、每日 Pages 部署恢复成功（run 40257414133），线上 https://variableway.github.io/innate-feeds/ 已更新至 2026-10-26 数据。
