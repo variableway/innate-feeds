@@ -127,6 +127,45 @@ export async function ghApiJson(apiPath: string): Promise<unknown> {
   }
 }
 
+function parseNextLink(linkHeader: string | null): string | null {
+  if (!linkHeader) return null;
+  for (const part of linkHeader.split(",")) {
+    const m = part.match(/<([^>]+)>\s*;\s*rel="next"/);
+    if (m?.[1]) return m[1];
+  }
+  return null;
+}
+
+/** 整窗拉全（gh 跟随 GitHub 自己返回的翻页链接，含 cursor 式 next）。 */
+function fetchAllPagesViaCli(apiPath: string): unknown {
+  const raw = execFileSync("gh", ["api", "--paginate", apiPath], {
+    encoding: "utf-8",
+    stdio: ["pipe", "pipe", "pipe"],
+    maxBuffer: 64 * 1024 * 1024,
+  });
+  return JSON.parse(raw);
+}
+
+/** 单页 fetch，带回 GitHub 给出的下一页链接（大数据集是 cursor URL）。 */
+async function fetchDigestPage(
+  url: string,
+): Promise<{ data: unknown; nextUrl: string | null }> {
+  const res = await fetch(url, {
+    headers: {
+      Accept: "application/vnd.github+json",
+      "User-Agent": USER_AGENT,
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(
+      `GitHub API HTTP ${res.status} for ${url}: ${body.slice(0, 200)}`,
+    );
+  }
+  return { data: await res.json(), nextUrl: parseNextLink(res.headers.get("link")) };
+}
+
 export function parseCategory(title: string): string | null {
   const m = title.match(CATEGORY_RE);
   return m ? m[1].trim() : null;
@@ -311,36 +350,8 @@ export async function fetchDigestIssues(
     let kept = 0;
     let prsSkipped = 0;
 
-    for (let page = 1; page <= maxPages; page++) {
-      const params = new URLSearchParams({
-        state,
-        per_page: String(Math.min(100, Math.max(1, perPage))),
-        page: String(page),
-        sort: sinceIso ? "updated" : "created",
-        direction: "desc",
-      });
-      if (sinceIso) params.set("since", sinceIso);
-
-      const apiPath = `repos/${source.repo}/issues?${params.toString()}`;
-      console.error(`[digest] GET ${apiPath}`);
-
-      let raw: unknown;
-      try {
-        raw = ghApiJsonViaCli(apiPath);
-        usedGh = true;
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        console.error(
-          `[digest] gh api failed (${msg.split("\n")[0]}); falling back to public fetch`,
-        );
-        raw = await ghApiJsonViaFetch(apiPath);
-        usedFetch = true;
-      }
-
-      if (!Array.isArray(raw) || raw.length === 0) break;
-      pages = page;
-
-      for (const row of raw as DigestIssueRaw[]) {
+    const collectRows = (rows: DigestIssueRaw[]) => {
+      for (const row of rows) {
         if (row.pull_request) {
           prsSkipped += 1;
           continue;
@@ -352,10 +363,56 @@ export async function fetchDigestIssues(
         kept += 1;
         items.push(item);
       }
+    };
 
-      if (raw.length < perPage) break;
-      // With `since` + sort=updated, continue until the API returns a short page.
-      // Do not stop on created_at — older issues can appear mid-stream when bumped.
+    const params = new URLSearchParams({
+      state,
+      per_page: String(Math.min(100, Math.max(1, perPage))),
+      sort: sinceIso ? "updated" : "created",
+      direction: "desc",
+    });
+    if (sinceIso) params.set("since", sinceIso);
+    const apiPath = `repos/${source.repo}/issues?${params.toString()}`;
+    console.error(`[digest] GET ${apiPath}`);
+
+    // 大仓库的 90 天窗口超过 GitHub page 分页的深度上限后，手工 page=N 会
+    // 422（要求 cursor 分页）。首选 gh --paginate 让 gh 追 GitHub 自己下发
+    // 的 next 链接；失败再 fetch 逐页跟随 Link: rel="next"。
+    let rows: DigestIssueRaw[] | null = null;
+    try {
+      rows = fetchAllPagesViaCli(apiPath) as DigestIssueRaw[];
+      usedGh = true;
+      pages = Math.max(1, Math.ceil(rows.length / Math.min(100, Math.max(1, perPage))));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(
+        `[digest] gh api --paginate failed (${msg.split("\n")[0]}); falling back to public fetch`,
+      );
+    }
+
+    if (rows) {
+      collectRows(rows);
+    } else {
+      // 单页失败只丢该页及之后的内容，已拉到的条目保留。
+      let url = `https://api.github.com/${apiPath}`;
+      for (let page = 1; page <= maxPages; page++) {
+        try {
+          const result = await fetchDigestPage(url);
+          if (!Array.isArray(result.data)) break;
+          usedFetch = true;
+          pages = page;
+          const arr = result.data as DigestIssueRaw[];
+          collectRows(arr);
+          if (!result.nextUrl || arr.length === 0) break;
+          url = result.nextUrl;
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          console.error(
+            `[digest] page ${page} failed (${msg.split("\n")[0]}); keeping partial result (${kept} items)`,
+          );
+          break;
+        }
+      }
     }
 
     bySource[source.id] = { fetched, kept, pages, prsSkipped };
