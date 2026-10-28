@@ -3,6 +3,7 @@ import type { AnyRoute } from "@tanstack/react-router";
 import { createWebDomain } from "@innate/web-domain";
 import { DomainLayout } from "./domain-layout";
 import { TrendingPage } from "@/pages/trending/page";
+import { TrendingShiftPage } from "@/pages/trending-shift/page";
 import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
 import { SettingsPage } from "@/pages/settings/page";
@@ -37,6 +38,11 @@ export const webDomain = createWebDomain("feeds")
         getParentRoute: () => layout,
         path: "/trending/$repoId",
         component: TrendingPage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/trending-shift",
+        component: TrendingShiftPage,
       }),
       createRoute({
         getParentRoute: () => layout,
@@ -78,6 +84,13 @@ export const webDomain = createWebDomain("feeds")
       path: "/trending",
       icon: "Github",
       order: 10,
+      group: "GitHub",
+    },
+    {
+      label: "Trending Shift",
+      path: "/trending-shift",
+      icon: "TrendingUp",
+      order: 12,
       group: "GitHub",
     },
     {

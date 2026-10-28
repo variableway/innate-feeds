@@ -215,6 +215,11 @@ bun run sync:topics                                                # all AI topi
 bun src/app/cli.ts sync github-topics --topic llm --topic agent    # specific topics
 bun run topics:list                                                # list available topics
 
+# Trendshift — trending ranking archives (daily/weekly/monthly/yearly × 16 language slices)
+bun run sync:trendshift                                            # all timeframes, "all" language slice
+bun src/app/cli.ts sync trendshift --language python,rust          # specific language slices
+bun src/app/cli.ts sync trendshift --source scrape --timeframe daily  # fallback scraper
+
 # Unified sync (all external sources)
 bun run sync:vc
 bun src/app/cli.ts sync vc --source producthunt --source yc
@@ -341,6 +346,8 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/repos/:owner/:repo/readme` | README JSON (`{ fullName, markdown, cached }`); disk cache first, GitHub fallback. |
 | GET | `/api/repos/:owner/:repo/readme/download` | Download README as `text/markdown` attachment. |
 | GET | `/api/plugins` | DSH plugin search. Query: `q`, `category` (csv), `sort`, `page`, `perPage`. |
+| GET | `/api/trendshift` | Trendshift slice index (timeframes, languages, synced files). |
+| GET | `/api/trendshift/:timeframe` | Ranking slice. Query: `language` (default `all`), `period` (optional). Local store first, live CDN fallback. |
 | GET | `/api/plugins/stats` | Plugin totals. |
 | GET | `/api/plugins/categories` | Fixed 20 awesome-dsh-plugin categories. |
 | GET | `/api/plugins/:slug` | Plugin detail. |
@@ -434,6 +441,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing the 90-day window / README prefetch | `backend/src/collector/sync-window.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
+| Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
 | Changing external collector shared logic | `backend/src/collector/shared/types.ts`, `storage.ts`, `http.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Changing the database schema or queries | `backend/src/db/schema.sql` and `backend/src/db/index.ts` |

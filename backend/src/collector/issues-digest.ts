@@ -163,7 +163,10 @@ async function fetchDigestPage(
       `GitHub API HTTP ${res.status} for ${url}: ${body.slice(0, 200)}`,
     );
   }
-  return { data: await res.json(), nextUrl: parseNextLink(res.headers.get("link")) };
+  return {
+    data: await res.json(),
+    nextUrl: parseNextLink(res.headers.get("link")),
+  };
 }
 
 export function parseCategory(title: string): string | null {
@@ -382,7 +385,10 @@ export async function fetchDigestIssues(
     try {
       rows = fetchAllPagesViaCli(apiPath) as DigestIssueRaw[];
       usedGh = true;
-      pages = Math.max(1, Math.ceil(rows.length / Math.min(100, Math.max(1, perPage))));
+      pages = Math.max(
+        1,
+        Math.ceil(rows.length / Math.min(100, Math.max(1, perPage))),
+      );
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       console.error(
