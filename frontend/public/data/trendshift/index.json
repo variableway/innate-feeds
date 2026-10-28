@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-28T07:00:51.410Z",
+  "files": [
+    {
+      "path": "daily/daily-all.json",
+      "timeframe": "daily",
+      "language": "all",
+      "count": 1945,
+      "fetchedAt": "2026-10-28T07:00:07.163Z"
+    },
+    {
+      "path": "daily/daily-python.json",
+      "timeframe": "daily",
+      "language": "python",
+      "count": 25,
+      "fetchedAt": "2026-10-28T07:00:39.133Z"
+    },
+    {
+      "path": "weekly/weekly-rust.json",
+      "timeframe": "weekly",
+      "language": "rust",
+      "count": 25,
+      "fetchedAt": "2026-10-28T07:00:51.410Z"
+    }
+  ]
+}
