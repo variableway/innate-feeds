@@ -17,6 +17,7 @@ import {
 import { exportNewestDigestToStatic } from "./digest-store.js";
 import { copyReadmesToPublic } from "./export-digest.js";
 import { exportPluginCatalog } from "../dsh/export.js";
+import { exportTrendshiftStatic } from "./export-trendshift.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -149,6 +150,14 @@ function main() {
   // Static plugin catalog for /dsh in static mode (GitHub Pages has no
   // backend to serve /api/plugins). Extracted datasource (issue #13).
   exportPluginCatalog(outDir, manifest.generatedAt);
+
+  // Trendshift ranking archives for /trending-shift static mode (GH #23).
+  const trendshift = exportTrendshiftStatic(outDir);
+  if (trendshift.copied) {
+    console.log(
+      `Exported trendshift slices → ${trendshift.dest} (${trendshift.copied} files)`,
+    );
+  }
 
   const readmes = copyReadmesToPublic();
   if (readmes.copied) {

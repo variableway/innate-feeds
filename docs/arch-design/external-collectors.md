@@ -10,6 +10,7 @@
 | **YC Companies** | 公开 JSON API（无需认证） | `~/.innate/yc/` | 每周（新 batch） | `bun run sync:yc` |
 | **a16z Portfolio** | 静态列表 + GitHub API 补充 | `~/.innate/a16z/` | 月度手动更新 | `bun run sync:a16z` |
 | **GitHub Topics** | GitHub Search API（按 topic 搜索） | `~/.innate/github-topics/` | 每日 | `bun run sync:topics` |
+| **Trendshift** | 静态 JSON API（主）/ trendshift.io RSC 抓取（备） | `~/.innate/trendshift/` | 每日 | `bun run sync:trendshift` |
 | **统一同步** | 编排以上所有源 | 各自目录 | — | `bun run sync:vc` |
 
 ## Product Hunt
@@ -153,6 +154,44 @@ bun run sync:a16z
 └── portfolio.json
 ```
 
+## Trendshift（GH #23）
+
+[trendshift.io](https://trendshift.io) 的 GitHub trending **历史榜单**（daily/weekly/monthly/yearly × all+15 语言 top-25，含 `stars_gained`/`forks_gained` 增量、tags、社交提及）。补齐 GitHub Trending 无历史 API 的缺口。分析与方案见 [trendshift-gitradar-integration.md](./trendshift-gitradar-integration.md)。
+
+- **主源（A）**：公共静态 JSON API `https://quantavil.github.io/trendshift/data/`（CORS 开放，含历史归档）。
+- **备源（B）**：`trendshift.io` RSC flight 抓取（`RSC: 1` 头 + `initialData` 干净室解析），仅当前期次，保存时按 `(periodKey, fullName)` 合并保留历史。**不复用 AGPL-3.0 上游代码**。
+
+### 命令
+
+```bash
+cd backend
+
+# 同步全部 timeframe 的 "all" 语言切片（默认，约 5MB）
+bun run sync:trendshift
+
+# 指定语言切片 / 全量（约 50MB）
+bun src/app/cli.ts sync trendshift --language python,rust
+bun src/app/cli.ts sync trendshift --language '*'
+
+# 指定 timeframe / 采集源
+bun src/app/cli.ts sync trendshift --timeframe daily,weekly --source scrape
+bun src/app/cli.ts sync trendshift --source auto    # CDN 失败时回退 scrape
+```
+
+### 存储结构
+
+```
+~/.innate/trendshift/
+├── manifest.json              # 索引（files: path/timeframe/language/count/fetchedAt）
+├── daily/daily-all.json       # 归一化 camelCase 行数组（TrendshiftRepo[]）
+├── weekly/weekly-rust.json
+└── …
+```
+
+### API 与静态模式
+
+`GET /api/trendshift`（切片索引）、`GET /api/trendshift/:timeframe?language=all&period=…`（本地优先、公共 CDN 兜底）。`bun run data:export` 把本地切片导出到 `frontend/public/data/trendshift/`，前端 `/trending-shift` 页在静态模式下读该目录（缺片时同样兜底 CDN）。
+
 ## 统一同步
 
 一次命令同步所有源：
@@ -190,6 +229,10 @@ bun run sync:a16z
 bun run sync:topics                                   # all AI topics
 bun src/app/cli.ts sync github-topics --topic llm     # single topic
 bun run topics:list                                   # list all topics
+
+# Trendshift
+bun run sync:trendshift                               # all timeframes, "all" language slice
+bun src/app/cli.ts sync trendshift --language '*'     # every language slice
 
 # Unified
 bun run sync:vc                                       # all sources
@@ -255,3 +298,4 @@ interface ExternalFeedItem {
 4. **a16z 数据维护**：静态列表需要手动更新代码中的公司列表
 5. **GitHub Topics**：使用 `gh` CLI（已认证时有更高 rate limit），无 gh 时 fallback 到公开 API
 6. **存储空间**：JSON 文件比 SQLite 更大，但更易于调试和导出
+7. **Trendshift 许可红线**：上游 quantavil/trendshift 为 **AGPL-3.0**——本仓只消费其公开 JSON 数据 / 自建干净室抓取，不 vendor 其代码；若未来需要复用上游实现，须按 AGPL 开源组合作品

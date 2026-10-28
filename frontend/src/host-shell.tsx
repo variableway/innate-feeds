@@ -12,6 +12,7 @@ import {
   Newspaper,
   Puzzle,
   Settings,
+  TrendingUp,
   ChevronDown,
   type LucideIcon,
 } from "lucide-react";
@@ -24,6 +25,7 @@ const ICONS: Record<string, LucideIcon> = {
   Newspaper,
   Puzzle,
   Settings,
+  TrendingUp,
 };
 
 /** 分组图标（与 navItems 的 group 名对应）。 */

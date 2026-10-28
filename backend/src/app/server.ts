@@ -25,6 +25,14 @@ import { getAppSettings, getProjectRoot } from "../data/app-config.js";
 import { dshRouter } from "../dsh/routes.js";
 import { listCachedReadmes } from "../data/readme-cache.js";
 import { buildAuthStatus, removePat, savePatFromBody } from "../auth/index.js";
+import {
+  getTrendshiftOverview,
+  getTrendshiftSliceData,
+  TRENDSHIFT_LANGUAGES,
+  TRENDSHIFT_TIMEFRAMES,
+  type TrendshiftLanguageFilter,
+  type TrendshiftTimeframe,
+} from "../collector/trendshift.js";
 
 const app = new Hono();
 
@@ -299,6 +307,59 @@ app.get("/api/feeds/dates", (c) => {
     return c.json(getTrendingDates(db));
   } catch (err) {
     console.error("Error in /api/feeds/dates:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/** Trendshift slice index (GH #23): timeframes, languages, synced files. */
+app.get("/api/trendshift", (c) => {
+  try {
+    return c.json(getTrendshiftOverview());
+  } catch (err) {
+    console.error("Error in /api/trendshift:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/**
+ * Trendshift ranking slice (GH #23). Local store first, live CDN fallback.
+ * Query: language=all|python|… (default all), period=periodKey (optional).
+ */
+app.get("/api/trendshift/:timeframe", async (c) => {
+  try {
+    const timeframe = c.req.param("timeframe") as TrendshiftTimeframe;
+    if (!TRENDSHIFT_TIMEFRAMES.includes(timeframe)) {
+      return c.json(
+        {
+          error: `Invalid timeframe; expected one of ${TRENDSHIFT_TIMEFRAMES.join(", ")}`,
+        },
+        400,
+      );
+    }
+    const languageRaw = (c.req.query("language") || "all").toLowerCase();
+    if (
+      !TRENDSHIFT_LANGUAGES.includes(languageRaw as TrendshiftLanguageFilter)
+    ) {
+      return c.json(
+        {
+          error: `Invalid language; expected one of ${TRENDSHIFT_LANGUAGES.join(", ")}`,
+        },
+        400,
+      );
+    }
+    const period = c.req.query("period") || undefined;
+    const payload = await getTrendshiftSliceData(
+      timeframe,
+      languageRaw as TrendshiftLanguageFilter,
+      period,
+    );
+    return c.json(payload);
+  } catch (err) {
+    console.error("Error in /api/trendshift/:timeframe:", err);
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);

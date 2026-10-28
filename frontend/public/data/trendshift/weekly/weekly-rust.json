@@ -1,0 +1,555 @@
+[
+  {
+    "periodKey": "2026-W44",
+    "rank": 1,
+    "score": 16813,
+    "fullName": "pbakaus/impeccable",
+    "githubUrl": "https://github.com/pbakaus/impeccable",
+    "description": "The design language that makes your AI harness better at design.",
+    "language": "Rust",
+    "starsTotal": 90862,
+    "starsGained": 3320,
+    "forksTotal": 5884,
+    "forksGained": 147,
+    "createdAt": "2025-11-16T01:52:04Z",
+    "tags": [
+      "ai-skills"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 2,
+    "score": 14224,
+    "fullName": "indexable-inc/blaze",
+    "githubUrl": "https://github.com/indexable-inc/blaze",
+    "description": "Rust compiler daemon on rust-analyzer: fast incremental cargo builds and live edits to running programs. Try: nix run github:indexable-inc/ra-jit",
+    "language": "Rust",
+    "starsTotal": 1569,
+    "starsGained": 1164,
+    "forksTotal": 37,
+    "forksGained": 22,
+    "createdAt": "2026-10-19T23:31:09Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 3,
+    "score": 7540,
+    "fullName": "KrushnaVardhanReddy/PaperPilot",
+    "githubUrl": "https://github.com/KrushnaVardhanReddy/PaperPilot",
+    "description": "Your local AI copilot for documents",
+    "language": "Rust",
+    "starsTotal": 662,
+    "starsGained": 623,
+    "forksTotal": 17,
+    "forksGained": 17,
+    "createdAt": "2026-09-28T08:04:29Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 4,
+    "score": 6696,
+    "fullName": "morganlinton/BeautifulRust",
+    "githubUrl": "https://github.com/morganlinton/BeautifulRust",
+    "description": "A Claude Code plugin that teaches Claude to write idiomatic, robust Rust",
+    "language": "Rust",
+    "starsTotal": 1332,
+    "starsGained": 639,
+    "forksTotal": 57,
+    "forksGained": 26,
+    "createdAt": "2026-10-23T03:01:11Z",
+    "tags": [
+      "ai-skills"
+    ],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 5,
+    "score": 6089,
+    "fullName": "xerj-org/xerj",
+    "githubUrl": "https://github.com/xerj-org/xerj",
+    "description": "Local-first search engine and MCP server for AI agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+    "language": "Rust",
+    "starsTotal": 17165,
+    "starsGained": 1625,
+    "forksTotal": 1314,
+    "forksGained": 120,
+    "createdAt": "2026-06-30T04:32:45Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 6,
+    "score": 5799,
+    "fullName": "pollen-robotics/microduck",
+    "githubUrl": "https://github.com/pollen-robotics/microduck",
+    "description": "A Tiny biped duck robot 🦆",
+    "language": "Rust",
+    "starsTotal": 12803,
+    "starsGained": 1200,
+    "forksTotal": 1595,
+    "forksGained": 88,
+    "createdAt": "2026-07-29T07:52:16Z",
+    "tags": [
+      "robotics"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 7,
+    "score": 5254,
+    "fullName": "ludovic111/horizon",
+    "githubUrl": "https://github.com/ludovic111/horizon",
+    "description": "Minecraft: Java Edition 26.3 rewritten from scratch in Rust, checked against vanilla with 281 differential harnesses. Get it with the Horizon launcher.",
+    "language": "Rust",
+    "starsTotal": 3025,
+    "starsGained": 1049,
+    "forksTotal": 187,
+    "forksGained": 63,
+    "createdAt": "2026-10-03T17:08:48Z",
+    "tags": [
+      "game"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 8,
+    "score": 5001,
+    "fullName": "ruvnet/RuView",
+    "githubUrl": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "language": "Rust",
+    "starsTotal": 100407,
+    "starsGained": 846,
+    "forksTotal": 13756,
+    "forksGained": 106,
+    "createdAt": "2025-06-07T04:32:30Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 9,
+    "score": 4623,
+    "fullName": "storytold/photocraft",
+    "githubUrl": "https://github.com/storytold/photocraft",
+    "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+    "language": "Rust",
+    "starsTotal": 74025,
+    "starsGained": 1222,
+    "forksTotal": 13313,
+    "forksGained": 147,
+    "createdAt": "2026-09-30T13:37:48Z",
+    "tags": [
+      "image-editing"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 10,
+    "score": 3796,
+    "fullName": "farion1231/cc-switch",
+    "githubUrl": "https://github.com/farion1231/cc-switch",
+    "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
+    "language": "Rust",
+    "starsTotal": 149472,
+    "starsGained": 929,
+    "forksTotal": 10524,
+    "forksGained": 60,
+    "createdAt": "2025-08-04T14:16:16Z",
+    "tags": [
+      "ai-coding"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 11,
+    "score": 3538,
+    "fullName": "fabio-rovai/open-ontologies",
+    "githubUrl": "https://github.com/fabio-rovai/open-ontologies",
+    "description": "Plan, apply and roll back changes to a production ontology, with a blast radius report and a proof an auditor can re-check.",
+    "language": "Rust",
+    "starsTotal": 1826,
+    "starsGained": 455,
+    "forksTotal": 225,
+    "forksGained": 40,
+    "createdAt": "2026-03-09T09:08:58Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "reddit"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 12,
+    "score": 3252,
+    "fullName": "memvid/memvid",
+    "githubUrl": "https://github.com/memvid/memvid",
+    "description": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
+    "language": "Rust",
+    "starsTotal": 16842,
+    "starsGained": 268,
+    "forksTotal": 1610,
+    "forksGained": 12,
+    "createdAt": "2025-05-27T16:01:08Z",
+    "tags": [
+      "ai-memory"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 13,
+    "score": 3235,
+    "fullName": "tangency-labs/solidcraft",
+    "githubUrl": "https://github.com/tangency-labs/solidcraft",
+    "description": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+    "language": "Rust",
+    "starsTotal": 11334,
+    "starsGained": 870,
+    "forksTotal": 1414,
+    "forksGained": 96,
+    "createdAt": "2026-10-07T18:57:48Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 14,
+    "score": 2945,
+    "fullName": "trymirai/uzu",
+    "githubUrl": "https://github.com/trymirai/uzu",
+    "description": "A high-performance inference engine for AI models",
+    "language": "Rust",
+    "starsTotal": 2902,
+    "starsGained": 338,
+    "forksTotal": 195,
+    "forksGained": 25,
+    "createdAt": "2025-06-23T21:55:11Z",
+    "tags": [
+      "llm-inference"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 15,
+    "score": 2929,
+    "fullName": "IPedrax/BIMCraft",
+    "githubUrl": "https://github.com/IPedrax/BIMCraft",
+    "description": "BIMCraft: building information modeling; an open-source, clean-room take on the Revit workflow in pure Rust, built to be driven by agents",
+    "language": "Rust",
+    "starsTotal": 593,
+    "starsGained": 330,
+    "forksTotal": 72,
+    "forksGained": 31,
+    "createdAt": "2026-10-15T13:51:18Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 16,
+    "score": 2813,
+    "fullName": "clash-verge-rev/clash-verge-rev",
+    "githubUrl": "https://github.com/clash-verge-rev/clash-verge-rev",
+    "description": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience",
+    "language": "Rust",
+    "starsTotal": 154451,
+    "starsGained": 648,
+    "forksTotal": 11550,
+    "forksGained": 55,
+    "createdAt": "2023-11-21T18:24:03Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 17,
+    "score": 2534,
+    "fullName": "heydeer/pngdeer",
+    "githubUrl": "https://github.com/heydeer/pngdeer",
+    "description": "Lossy PNG compression that picks the quality for each image. Command line and browser, same bytes.",
+    "language": "Rust",
+    "starsTotal": 272,
+    "starsGained": 276,
+    "forksTotal": 22,
+    "forksGained": 22,
+    "createdAt": "2026-10-25T05:09:24Z",
+    "tags": [
+      "image-editing"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 18,
+    "score": 2502,
+    "fullName": "lexmount/moli",
+    "githubUrl": "https://github.com/lexmount/moli",
+    "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+    "language": "Rust",
+    "starsTotal": 21222,
+    "starsGained": 567,
+    "forksTotal": 800,
+    "forksGained": 9,
+    "createdAt": "2026-08-10T13:20:30Z",
+    "tags": [
+      "browser-automation"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 19,
+    "score": 2439,
+    "fullName": "jub0t/Concat",
+    "githubUrl": "https://github.com/jub0t/Concat",
+    "description": "The truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP.",
+    "language": "Rust",
+    "starsTotal": 12150,
+    "starsGained": 640,
+    "forksTotal": 1481,
+    "forksGained": 45,
+    "createdAt": "2026-08-25T18:34:47Z",
+    "tags": [
+      "video-editing"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 20,
+    "score": 2368,
+    "fullName": "akitaonrails/ai-memory",
+    "githubUrl": "https://github.com/akitaonrails/ai-memory",
+    "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+    "language": "Rust",
+    "starsTotal": 14143,
+    "starsGained": 638,
+    "forksTotal": 1074,
+    "forksGained": 49,
+    "createdAt": "2026-05-21T23:23:51Z",
+    "tags": [
+      "ai-memory"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 21,
+    "score": 2340,
+    "fullName": "storytold/artcraft",
+    "githubUrl": "https://github.com/storytold/artcraft",
+    "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+    "language": "Rust",
+    "starsTotal": 37217,
+    "starsGained": 643,
+    "forksTotal": 5988,
+    "forksGained": 107,
+    "createdAt": "2022-03-31T23:19:12Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 22,
+    "score": 2141,
+    "fullName": "AhmadHassan-BTed/OpenHeart",
+    "githubUrl": "https://github.com/AhmadHassan-BTed/OpenHeart",
+    "description": "Succinct Compositional Program Graph (SCPG) static analysis engine & 14-diagram UML generator in Rust.",
+    "language": "Rust",
+    "starsTotal": 4694,
+    "starsGained": 595,
+    "forksTotal": 0,
+    "forksGained": 0,
+    "createdAt": "2026-08-08T16:11:06Z",
+    "tags": [
+      "static-analysis"
+    ],
+    "socialMentionPlatforms": [],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 23,
+    "score": 2121,
+    "fullName": "openai/codex",
+    "githubUrl": "https://github.com/openai/codex",
+    "description": "Lightweight coding agent that runs in your terminal",
+    "language": "Rust",
+    "starsTotal": 131319,
+    "starsGained": 460,
+    "forksTotal": 21491,
+    "forksGained": 109,
+    "createdAt": "2025-04-13T05:37:54Z",
+    "tags": [
+      "ai-agent",
+      "ai-coding"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 24,
+    "score": 1848,
+    "fullName": "austin-weeks/miasma",
+    "githubUrl": "https://github.com/austin-weeks/miasma",
+    "description": "Trap AI web scrapers in an endless poison pit.",
+    "language": "Rust",
+    "starsTotal": 1355,
+    "starsGained": 154,
+    "forksTotal": 43,
+    "forksGained": 0,
+    "createdAt": "2026-03-18T04:12:41Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "reddit"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  },
+  {
+    "periodKey": "2026-W44",
+    "rank": 25,
+    "score": 1769,
+    "fullName": "AprilNEA/OpenLogi",
+    "githubUrl": "https://github.com/AprilNEA/OpenLogi",
+    "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+    "language": "Rust",
+    "starsTotal": 24401,
+    "starsGained": 308,
+    "forksTotal": 912,
+    "forksGained": 13,
+    "createdAt": "2026-05-24T10:10:36Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "weekly",
+    "languageFilter": "rust"
+  }
+]

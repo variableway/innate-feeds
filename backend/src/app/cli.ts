@@ -24,6 +24,14 @@ import {
   GitHubTopicsCollector,
   listTopics,
 } from "../collector/github-topics.js";
+import {
+  syncTrendshift,
+  TRENDSHIFT_LANGUAGES,
+  TRENDSHIFT_TIMEFRAMES,
+  type TrendshiftLanguageFilter,
+  type TrendshiftSource,
+  type TrendshiftTimeframe,
+} from "../collector/trendshift.js";
 
 const command = process.argv[2];
 const dbPath = getDefaultDbPath();
@@ -42,6 +50,7 @@ Usage:
   tsx src/app/cli.ts sync yc [--batch BATCH] [--query QUERY]
   tsx src/app/cli.ts sync a16z
   tsx src/app/cli.ts sync github-topics [--topic TOPIC] [--sort stars|updated] [--per-page N]
+  tsx src/app/cli.ts sync trendshift [--timeframe all|daily|weekly|monthly|yearly] [--language slug[,slug]|*] [--source cdn|scrape|auto] [--no-save]
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
   tsx src/app/cli.ts list [trending|starred]
   tsx src/app/cli.ts topics --list
@@ -242,6 +251,47 @@ async function main() {
               count: result.count,
               outDir: result.outDir,
               bytes: result.bytes,
+            },
+            null,
+            2,
+          ),
+        );
+      } else if (type === "trendshift") {
+        const args = process.argv.slice(4);
+        const opts: {
+          timeframes?: TrendshiftTimeframe[];
+          languages?: TrendshiftLanguageFilter[];
+          source?: TrendshiftSource | "auto";
+          save?: boolean;
+        } = {};
+        for (let i = 0; i < args.length; i++) {
+          if (args[i] === "--timeframe" && args[i + 1]) {
+            const vals = args[++i].split(",").map((s) => s.trim());
+            opts.timeframes = vals.includes("all")
+              ? [...TRENDSHIFT_TIMEFRAMES]
+              : (vals as TrendshiftTimeframe[]);
+          } else if (args[i] === "--language" && args[i + 1]) {
+            const vals = args[++i]
+              .split(",")
+              .map((s) => s.trim().toLowerCase());
+            opts.languages = vals.includes("*")
+              ? [...TRENDSHIFT_LANGUAGES]
+              : (vals as TrendshiftLanguageFilter[]);
+          } else if (args[i] === "--source" && args[i + 1]) {
+            opts.source = args[++i] as TrendshiftSource | "auto";
+          } else if (args[i] === "--no-save") {
+            opts.save = false;
+          }
+        }
+        const summary = await syncTrendshift(opts);
+        console.log(
+          JSON.stringify(
+            {
+              origin: summary.origin,
+              files: summary.files.map((f) => `${f.path} (${f.count})`),
+              totalRows: summary.totalRows,
+              bytes: summary.bytes,
+              outDir: summary.outDir,
             },
             null,
             2,

@@ -25,6 +25,9 @@ out/
 *.tsbuildinfo
 .vite/
 
+# Third-party reference clones (issue #23 analysis)
+reference/
+
 # SQLite (local default: ~/.innate/feeds.db)
 backend/feeds.db
 backend/feeds.db-*
@@ -100,4 +103,4 @@ frontend/pnpm-workspace.yaml
 output/
 
 # 外部源临时检出（见 registry.yaml）
-Folo/
+Folo
