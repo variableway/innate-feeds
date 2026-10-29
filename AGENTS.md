@@ -485,5 +485,5 @@ Schema is defined in `backend/src/db/schema.sql`:
 
 - CI: `.github/workflows/ci.yml` (test, typecheck, format, build). Pages: `.github/workflows/deploy.yml`.
 - For production API mode: `bun run start` bundles both backend (`backend/dist/server.js`) and frontend (`frontend/dist/`) with Bun, then serves the site from the backend at `http://localhost:4000` (same origin as `/api`). Bind with `HOST` / `PORT` as needed.
-- For GitHub Pages: daily cron runs `sync window` (90 days) then deploys `frontend/dist/`. Manual **Run workflow** can choose window / daily / skip. See `docs/arch-design/data-update-workflow.md`.
+- For GitHub Pages: daily cron runs `sync window` (90 days) + `sync github-topics` (GH #24, top 50 per topic) then deploys `frontend/dist/`. Manual **Run workflow** can choose window / daily / skip. See `docs/arch-design/data-update-workflow.md`.
 - Dev uses the Bun dev server (`frontend/scripts/dev.ts`) on port 3000 with `/api` proxied to the backend.

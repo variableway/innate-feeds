@@ -78,7 +78,8 @@ VITE_BASE_PATH=/your-repo bun run build:pages
 | `bun run data:sync:starred:recent` | Starred last 24h |
 | `bun run data:sync:digest` | Digest issues created in last 90 days |
 | `bun run data:sync:window` | All of the 90-day window including README prefetch |
-| `bun run data:export` | Incremental JSON + `digest.json` + copy README cache |
+| `bun run data:sync:topics` | GitHub Topics datasource (GH #24): top 50 repos per topic → `~/.innate/github-topics/topics/` |
+| `bun run data:export` | Incremental JSON + `digest.json` + topics snapshots + copy README cache |
 | `bun run data:stats` | SQLite stats |
 
 ## Static data layout
@@ -88,6 +89,7 @@ VITE_BASE_PATH=/your-repo bun run build:pages
 - `frontend/public/data/chunks/starred/<YYYY-MM-DD>.json`
 - `frontend/public/data/{stats,languages,dates}.json`
 - `frontend/public/data/digest.json`: 90-day issues snapshot (**commit this**)
+- `frontend/public/data/topics/index.json` + `topics/{topic}.json`: GitHub Topics datasource snapshot (GH #24, **commit this**)
 - `frontend/public/data/readmes/{owner}/{repo}.md`: README snapshot (**gitignored**; rebuilt on sync/export, included in the Pages artifact)
 
 On-demand API cache stays at project `./readmes/` (also gitignored).
@@ -98,7 +100,7 @@ On-demand API cache stays at project `./readmes/` (also gitignored).
 
 | Trigger | Sync |
 |---|---|
-| Daily cron (08:00 UTC) | **90-day window** (trending now, starred, digest issues, README prefetch) |
+| Daily cron (08:00 UTC) | **90-day window** (trending now, starred, digest issues, README prefetch) + **GitHub Topics** (top 50 per topic, GH #24) |
 | **Run workflow** | Choice: `window` (default), `daily`, or `skip` (build committed JSON only). Optional `--days`, skip/force README |
 | Push to `main` | Light `data:update` (today’s trending, starred 24h, digest 90d) so code deploys stay fast |
 
