@@ -43,6 +43,10 @@ export const openApiSpec = {
     { name: "Digest", description: "社区 Issues digest 单条详情" },
     { name: "Readmes", description: "README 缓存与拉取" },
     { name: "Plugins", description: "DSH 插件目录" },
+    {
+      name: "Topics",
+      description: "GitHub Topics 数据源（每个 topic 的 top N 仓库）",
+    },
     { name: "Auth", description: "GitHub 认证状态与 PAT" },
     { name: "Sync", description: "触发数据同步（勿对外暴露）" },
     { name: "Hidden", description: "隐藏 / 取消隐藏条目" },
@@ -254,6 +258,65 @@ export const openApiSpec = {
               },
             },
           },
+          "500": jsonError("服务器错误"),
+        },
+      },
+    },
+
+    "/api/topics": {
+      get: {
+        tags: ["Topics"],
+        summary: "已同步的 GitHub Topics 索引",
+        description:
+          "每个 topic 的仓库数、新发现数、已在 trending/starred 中的数量与同步时间。",
+        responses: {
+          "200": {
+            description: "topic 索引",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    topics: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/TopicSummary" },
+                    },
+                    updatedAt: { type: "string", nullable: true },
+                  },
+                },
+              },
+            },
+          },
+          "500": jsonError("服务器错误"),
+        },
+      },
+    },
+
+    "/api/topics/{topic}": {
+      get: {
+        tags: ["Topics"],
+        summary: "单个 topic 的仓库列表",
+        description:
+          "返回该 topic 的完整 top-N 列表（含采集时被跳过的仓库，用 isNew / existing 标记）。",
+        parameters: [
+          {
+            name: "topic",
+            in: "path",
+            required: true,
+            description: "topic 名，例如 edtech",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "topic 快照",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/TopicDetail" },
+              },
+            },
+          },
+          "404": jsonError("未找到"),
           "500": jsonError("服务器错误"),
         },
       },
@@ -1032,6 +1095,78 @@ export const openApiSpec = {
           pageSize: { type: "integer" },
         },
         required: ["items", "total"],
+      },
+
+      TopicSummary: {
+        type: "object",
+        properties: {
+          topic: { type: "string" },
+          count: { type: "integer", description: "快照中的仓库总数" },
+          newCount: {
+            type: "integer",
+            description: "新发现数（本次同步首次出现且不在 feeds 中）",
+          },
+          existingCount: {
+            type: "integer",
+            description: "已在 trending/starred feeds 中的仓库数",
+          },
+          fetchedAt: { type: "string" },
+        },
+        required: ["topic", "count", "newCount", "existingCount", "fetchedAt"],
+      },
+
+      TopicRepo: {
+        type: "object",
+        properties: {
+          id: { type: "string" },
+          repoId: { type: "integer" },
+          fullName: { type: "string" },
+          name: { type: "string" },
+          description: { type: "string" },
+          url: { type: "string" },
+          homepage: { type: "string", nullable: true },
+          stars: { type: "integer" },
+          forks: { type: "integer" },
+          watchers: { type: "integer" },
+          language: { type: "string", nullable: true },
+          topics: { type: "array", items: { type: "string" } },
+          owner: {
+            type: "object",
+            properties: {
+              login: { type: "string" },
+              avatarUrl: { type: "string" },
+              url: { type: "string" },
+            },
+          },
+          createdAt: { type: "string" },
+          updatedAt: { type: "string" },
+          firstSeenAt: {
+            type: "string",
+            description: "首次出现在该 topic 的时间",
+          },
+          isNew: { type: "boolean", description: "本次同步首次出现" },
+          existing: {
+            type: "boolean",
+            description: "已存在于 trending/starred feeds（采集时被跳过）",
+          },
+        },
+        required: ["id", "fullName", "url", "stars", "isNew", "existing"],
+      },
+
+      TopicDetail: {
+        type: "object",
+        properties: {
+          topic: { type: "string" },
+          fetchedAt: { type: "string" },
+          count: { type: "integer" },
+          newCount: { type: "integer" },
+          existingCount: { type: "integer" },
+          items: {
+            type: "array",
+            items: { $ref: "#/components/schemas/TopicRepo" },
+          },
+        },
+        required: ["topic", "fetchedAt", "count", "items"],
       },
 
       HideBody: {

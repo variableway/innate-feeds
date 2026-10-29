@@ -135,6 +135,13 @@ jobs:
           echo "days=$DAYS" >> "$GITHUB_OUTPUT"
           echo "Sync mode=$MODE days=$DAYS skip_readme=${SKIP_README:-false} force_readme=${FORCE_README:-false}"
 
+      - name: Sync GitHub Topics (top 50 per topic, GH #24)
+        if: steps.sync.outputs.mode == 'window' || steps.sync.outputs.mode == 'daily'
+        run: |
+          set -euo pipefail
+          cd backend
+          bun src/app/cli.ts sync github-topics --limit 50
+
       - name: Sync feed window (90-day digest / trending / starred / READMEs)
         if: steps.sync.outputs.mode == 'window'
         run: |

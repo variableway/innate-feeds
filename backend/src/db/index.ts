@@ -734,6 +734,26 @@ export function listStarredFullNamesSince(
   return rows.map((r) => r.full_name);
 }
 
+/**
+ * Distinct repo full names (lowercased) already known to the feed tables.
+ *
+ * Used by the GitHub Topics datasource (GH #24): repos that already exist in
+ * trending/starred are flagged as "existing" instead of being reported as new
+ * discoveries.
+ */
+export function listKnownRepoFullNames(db: Database): Set<string> {
+  const rows = db
+    .prepare(
+      `
+    SELECT full_name FROM trending_repos
+    UNION
+    SELECT full_name FROM starred_repos
+  `,
+    )
+    .all() as { full_name: string }[];
+  return new Set(rows.map((r) => r.full_name.toLowerCase()));
+}
+
 /** Distinct trending repos that appeared in a snapshot on or after `sinceDate` (YYYY-MM-DD). */
 export function listTrendingFullNamesSince(
   db: Database,

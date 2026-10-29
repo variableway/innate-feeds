@@ -12,6 +12,7 @@ import {
   getStats,
   getLanguages,
   getTrendingDates,
+  listKnownRepoFullNames,
 } from "../db/index.js";
 import {
   syncTrending,
@@ -33,6 +34,7 @@ import {
   type TrendshiftLanguageFilter,
   type TrendshiftTimeframe,
 } from "../collector/trendshift.js";
+import { buildTopicResponse, buildTopicsIndex } from "../data/topics-store.js";
 
 const app = new Hono();
 
@@ -360,6 +362,52 @@ app.get("/api/trendshift/:timeframe", async (c) => {
     return c.json(payload);
   } catch (err) {
     console.error("Error in /api/trendshift/:timeframe:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/**
+ * Repos already known to the trending/starred feeds (lowercased full names).
+ * Used to flag "existing" repos in the GitHub Topics datasource (GH #24).
+ */
+function knownRepoFullNames(): Set<string> {
+  try {
+    return listKnownRepoFullNames(getDb());
+  } catch (err) {
+    console.error("Error in /api/topics (known repos):", err);
+    return new Set<string>();
+  }
+}
+
+/** GitHub Topics datasource (GH #24): index of the synced topics. */
+app.get("/api/topics", (c) => {
+  try {
+    return c.json(buildTopicsIndex(knownRepoFullNames()));
+  } catch (err) {
+    console.error("Error in /api/topics:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/**
+ * GitHub Topics datasource (GH #24): one topic snapshot.
+ * Returns the full top-N list of the topic — repos that were skipped during
+ * collection (already in the feeds / seen before) are included and flagged.
+ */
+app.get("/api/topics/:topic", (c) => {
+  try {
+    const topic = c.req.param("topic");
+    const payload = buildTopicResponse(topic, knownRepoFullNames());
+    if (!payload) {
+      return c.json({ error: "Topic not found" }, 404);
+    }
+    return c.json(payload);
+  } catch (err) {
+    console.error("Error in /api/topics/:topic:", err);
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);

@@ -9,7 +9,7 @@
 | **Product Hunt** | Firecrawl 抓取 Leaderboard 页面 | `~/.innate/producthunt/` | 每日/周/月 | `bun run sync:producthunt` |
 | **YC Companies** | 公开 JSON API（无需认证） | `~/.innate/yc/` | 每周（新 batch） | `bun run sync:yc` |
 | **a16z Portfolio** | 静态列表 + GitHub API 补充 | `~/.innate/a16z/` | 月度手动更新 | `bun run sync:a16z` |
-| **GitHub Topics** | GitHub Search API（按 topic 搜索） | `~/.innate/github-topics/` | 每日 | `bun run sync:topics` |
+| **GitHub Topics** | GitHub Search API（按 topic 搜索，取 top N） | `~/.innate/github-topics/` | 每日 | `bun run sync:topics` |
 | **Trendshift** | 静态 JSON API（主）/ trendshift.io RSC 抓取（备） | `~/.innate/trendshift/` | 每日 | `bun run sync:trendshift` |
 | **统一同步** | 编排以上所有源 | 各自目录 | — | `bun run sync:vc` |
 
@@ -56,7 +56,7 @@ bun src/app/cli.ts sync producthunt --period all --save
 
 ## GitHub Topics
 
-通过 GitHub Search API 按 topic 搜索仓库，用于追踪特定领域的开源项目（AI、LLM、Agent 等）。
+通过 GitHub Search API 按 topic 搜索仓库，用于追踪特定领域的开源项目（AI、LLM、Agent、EdTech 等）。
 
 **API：** `GET https://api.github.com/search/repositories?q=topic:{topic}&sort={sort}`
 
@@ -73,12 +73,15 @@ bun src/app/cli.ts sync producthunt --period all --save
 ```bash
 cd backend
 
-# 同步默认 AI topics（20 个预设 topic）
+# 同步默认 topics（21 个预设 topic，每个取 top 50）
 bun run sync:topics
 
 # 只同步指定 topic
 bun src/app/cli.ts sync github-topics --topic llm
 bun src/app/cli.ts sync github-topics --topic agent --topic rag
+
+# 指定每个 topic 取多少个仓库（默认 50）
+bun src/app/cli.ts sync github-topics --topic edtech --limit 50
 
 # 按更新时间排序
 bun src/app/cli.ts sync github-topics --topic llm --sort updated
@@ -96,7 +99,8 @@ bun run topics:list
 | **模型 & 训练** | transformer, diffusion-model, gpt, llama, stable-diffusion, mlops, model-training |
 | **应用** | ai-coding, ai-assistant, chatbot, ai-search, text-to-image, text-to-speech, voice-assistant, ai-video |
 | **基础设施** | vector-database, embedding, gpu, inference, model-serving, edge-ai |
-| **多模态** | computer-vision, natural-language-processing, nlp, speech-recognition, image-recognition, object-detection, multimimal |
+| **多模态** | computer-vision, natural-language-processing, nlp, speech-recognition, image-recognition, object-detection, multimodal |
+| **EdTech** | edtech |
 
 Browse all: https://github.com/topics
 
@@ -104,9 +108,35 @@ Browse all: https://github.com/topics
 
 ```
 ~/.innate/github-topics/
-├── manifest.json
-└── topics-2026-08-26.json    # 按日期命名
+├── manifest.json                # 旧版扁平 manifest（保留）
+├── topics-2026-08-26.json       # 当日合并快照（admin JSON 工作区用）
+└── topics/                      # topic 数据源快照（GH #24）
+    ├── index.json               # topic 索引（topic / count / newCount / fetchedAt）
+    ├── edtech.json              # 单 topic 快照（含全部 top N 条目）
+    └── llm.json
 ```
+
+### Topic 数据源语义（GH #24）
+
+每个 topic 保留该 topic 的 **top 50**（`--limit` 可调）仓库快照。采集时对两类仓库做「跳过」处理：
+
+| 情况 | 判定 | 采集时 | 展示时 |
+|------|------|--------|--------|
+| 已在 trending/starred feeds 中 | `existing`（读 SQLite 实时判定） | 不计入新发现 | 保留在列表中，标 `In feeds` |
+| 该 topic 之前已采集过 | `firstSeenAt` 早于本次同步 | 不计入新发现 | 保留在列表中 |
+
+即：**发现（new）= 本次首次出现 且 不在 feeds 中**；被跳过的仓库仍然写入快照，因此打开某个 topic 时能看到该 topic 的完整 top 50 列表（`/topics/{topic}`）。
+
+快照写入 `firstSeenAt`，重复同步不会把老仓库重新算作新发现。
+
+### API 与静态模式
+
+| 接口 | 说明 |
+|------|------|
+| `GET /api/topics` | 已同步 topic 索引（`count` / `newCount` / `existingCount` / `fetchedAt`） |
+| `GET /api/topics/{topic}` | 单 topic 完整列表（含被跳过的条目，带 `isNew` / `existing` 标记） |
+
+`bun run data:export` 把 topic 快照导出到 `frontend/public/data/topics/`（`index.json` + `{topic}.json`，`existing` 在导出时按 SQLite 解析），前端 `/topics` 页在静态模式下读该目录。
 
 ## YC Companies
 
@@ -226,8 +256,9 @@ bun src/app/cli.ts sync yc --batch P26 --query ai     # specific batch
 bun run sync:a16z
 
 # GitHub Topics
-bun run sync:topics                                   # all AI topics
+bun run sync:topics                                   # all topics, top 50 each
 bun src/app/cli.ts sync github-topics --topic llm     # single topic
+bun src/app/cli.ts sync github-topics --topic edtech --limit 50
 bun run topics:list                                   # list all topics
 
 # Trendshift
@@ -250,7 +281,7 @@ backend/src/collector/
 ├── producthunt.ts             # Product Hunt（daily/weekly/monthly）
 ├── yc-companies.ts            # YC Companies API
 ├── a16z-portfolio.ts          # a16z Portfolio
-├── github-topics.ts           # GitHub Topics Search
+├── github-topics.ts           # GitHub Topics Search（top N + 跳过规则）
 ├── vc-portfolio.ts            # 统一编排器
 │
 ├── github.ts                  # 现有 - GitHub trending/starred

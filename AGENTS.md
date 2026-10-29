@@ -34,14 +34,16 @@ innate-feeds/
 │   │   │   ├── producthunt.ts    # Product Hunt daily/weekly/monthly collector
 │   │   │   ├── yc-companies.ts   # YC Companies API collector
 │   │   │   ├── a16z-portfolio.ts # a16z Portfolio collector
-│   │   │   ├── github-topics.ts  # GitHub Topics search collector
+│   │   │   ├── github-topics.ts  # GitHub Topics search collector (top N + skip rules)
 │   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator
 │   │   ├── data/            # Static data export/import utilities
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
 │   │   │   ├── import-static.ts       # Import static JSON into SQLite
 │   │   │   ├── manifest-utils.ts      # Manifest read/write helpers
-│   │   │   └── hidden-store.ts        # Hidden ("deleted") items store (~/.innate/hidden.json)
+│   │   │   ├── hidden-store.ts        # Hidden ("deleted") items store (~/.innate/hidden.json)
+│   │   │   ├── topics-store.ts        # GitHub Topics snapshots (~/.innate/github-topics/topics)
+│   │   │   └── export-topics.ts       # topics static export (frontend/public/data/topics)
 │   │   ├── dsh/              # DSH plugin catalog datasource (issue #13 抽离)
 │   │   │   ├── catalog.ts    # YAML catalog loading + search/sort/pagination
 │   │   │   ├── routes.ts     # Hono sub-app: /api/plugins* (mounted by server.ts)
@@ -61,11 +63,11 @@ innate-feeds/
 │   │   ├── domain-layout.tsx # Business-area layout (DigestFiltersProvider)
 │   │   ├── host-shell.tsx    # Standalone-only compact left nav (host concern, not in domain)
 │   │   ├── main.tsx          # Standalone host entry: composes feeds + dsh domains (host-only)
-│   │   ├── pages/            # Business pages (trending, starred, digest, settings, admin) — page.tsx only
-│   │   ├── components/       # Business components (FeedCard, FilterBar, …) — no shell chrome
-│   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size
-│   │   ├── services/         # API client (feeds.ts, admin-db.ts, hidden.ts) — API + static modes
-│   │   ├── types/            # TypeScript domain types (feed.ts)
+│   │   ├── pages/            # Business pages (trending, starred, digest, topics, settings, admin) — page.tsx only
+│   │   ├── components/       # Business components (FeedCard, FilterBar, TopicRepoCard, …) — no shell chrome
+│   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size, use-topics
+│   │   ├── services/         # API client (feeds.ts, topics.ts, admin-db.ts, hidden.ts) — API + static modes
+│   │   ├── types/            # TypeScript domain types (feed.ts, topics.ts)
 │   │   ├── lib/              # utils.ts (cn, formatNumber, formatDate), feed-filters-storage.ts
 │   │   └── styles.css        # Tailwind CSS v4 theme + dark mode
 │   ├── plugin.json           # innate.plugin.v1, kind: "domain"
@@ -210,9 +212,10 @@ bun src/app/cli.ts sync yc --batch P26 --query "open source"
 # a16z Portfolio — static list + GitHub enrichment
 bun run sync:a16z
 
-# GitHub Topics — search repos by topic (AI/LLM/Agent etc.)
-bun run sync:topics                                                # all AI topics
+# GitHub Topics — search repos by topic (AI/LLM/Agent/EdTech etc.)
+bun run sync:topics                                                # all topics, top 50 each
 bun src/app/cli.ts sync github-topics --topic llm --topic agent    # specific topics
+bun src/app/cli.ts sync github-topics --topic edtech --limit 50    # single topic, top N
 bun run topics:list                                                # list available topics
 
 # Trendshift — trending ranking archives (daily/weekly/monthly/yearly × 16 language slices)
@@ -352,6 +355,8 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/plugins/categories` | Fixed 20 awesome-dsh-plugin categories. |
 | GET | `/api/plugins/:slug` | Plugin detail. |
 | GET | `/api/plugins/:slug/related` | Related plugins. |
+| GET | `/api/topics` | GitHub Topics datasource index (GH #24): synced topics with `count` / `newCount` / `existingCount` / `fetchedAt`. |
+| GET | `/api/topics/:topic` | One topic snapshot (GH #24): full top-N list, skipped repos included, flagged `isNew` / `existing`. |
 | GET | `/api/auth/status` | gh CLI + PAT presence (never returns the token). |
 | PUT | `/api/auth/pat` | Store GitHub PAT encrypted at rest. Body: `{ token }`. |
 | DELETE | `/api/auth/pat` | Remove the stored PAT. |
@@ -408,13 +413,15 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/producthunt.ts` — Product Hunt daily/weekly/monthly leaderboard collector (Firecrawl + HTML fallback). Stores JSON to `~/.innate/producthunt/`.
 - `collector/yc-companies.ts` — YC Companies public API collector. Stores JSON to `~/.innate/yc/`.
 - `collector/a16z-portfolio.ts` — a16z AI Portfolio static list + GitHub enrichment. Stores JSON to `~/.innate/a16z/`.
-- `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Stores JSON to `~/.innate/github-topics/`.
+- `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Keeps the top N (default 50) repos per topic and skips repos already in the feeds / already seen in that topic (GH #24). Stores JSON to `~/.innate/github-topics/`.
 - `collector/vc-portfolio.ts` — Unified orchestrator for all external collectors.
 - `collector/shared/types.ts` — Shared types (`ExternalFeedItem`, `FeedCollector`, `FeedSource`).
 - `collector/shared/storage.ts` — JSON storage abstraction (manifest + saveItems).
 - `collector/shared/http.ts` — HTTP utilities (fetchJson, fetchHtml, retry).
 - `data/export-incremental.ts` — exports data as incremental JSON chunks with a manifest for static mode.
 - `data/import-static.ts` — imports static JSON back into SQLite.
+- `data/topics-store.ts` — GitHub Topics snapshots (`~/.innate/github-topics/topics/{topic}.json` + `index.json`) and the DTO mapping used by the API/static export.
+- `data/export-topics.ts` — exports the topic snapshots to `frontend/public/data/topics/` (static mode), resolving the "existing" flag from SQLite.
 - `db/index.ts` — all SQL lives here. Uses prepared statements from `bun:sqlite`. Batch-fetches topics to avoid N+1 queries. Exports typed interfaces (`FeedItemDTO`, `FeedStatsDTO`, `TrendingItemRow`, `StarredItemRow`).
 - `db/paths.ts` — resolves database path via `DB_PATH` env var or `INNATE_HOME` (defaults to `~/.innate`).
 
@@ -426,6 +433,8 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `usePersistedFeedFilters` hook persists filter state to localStorage.
 - Components use `React.forwardRef` and accept a `className` prop merged via the `cn()` utility.
 - `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json`, merges digest `digest.json` with live GitHub, and prefers live READMEs with a static-file fallback.
+- `services/topics.ts` — GitHub Topics datasource client (GH #24): `/api/topics*` in API mode, `/data/topics/*.json` in static mode.
+- `pages/topics/` — topic index + topic detail view (GH #24): badges `New` / `In feeds`, topic chips navigate to the clicked topic.
 - `services/hidden.ts` tracks user-hidden items (localStorage + `/api/feeds/hide`; static mode also merges the exported `hidden.json`). `feeds.ts` filters them out of every list/detail response.
 - `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.
 
@@ -442,6 +451,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
 | Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
+| Changing the GitHub Topics datasource (GH #24) | `backend/src/collector/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |
 | Changing external collector shared logic | `backend/src/collector/shared/types.ts`, `storage.ts`, `http.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Changing the database schema or queries | `backend/src/db/schema.sql` and `backend/src/db/index.ts` |
@@ -475,5 +485,5 @@ Schema is defined in `backend/src/db/schema.sql`:
 
 - CI: `.github/workflows/ci.yml` (test, typecheck, format, build). Pages: `.github/workflows/deploy.yml`.
 - For production API mode: `bun run start` bundles both backend (`backend/dist/server.js`) and frontend (`frontend/dist/`) with Bun, then serves the site from the backend at `http://localhost:4000` (same origin as `/api`). Bind with `HOST` / `PORT` as needed.
-- For GitHub Pages: daily cron runs `sync window` (90 days) then deploys `frontend/dist/`. Manual **Run workflow** can choose window / daily / skip. See `docs/arch-design/data-update-workflow.md`.
+- For GitHub Pages: daily cron runs `sync window` (90 days) + `sync github-topics` (GH #24, top 50 per topic) then deploys `frontend/dist/`. Manual **Run workflow** can choose window / daily / skip. See `docs/arch-design/data-update-workflow.md`.
 - Dev uses the Bun dev server (`frontend/scripts/dev.ts`) on port 3000 with `/api` proxied to the backend.

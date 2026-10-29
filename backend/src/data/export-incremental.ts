@@ -18,6 +18,7 @@ import { exportNewestDigestToStatic } from "./digest-store.js";
 import { copyReadmesToPublic } from "./export-digest.js";
 import { exportPluginCatalog } from "../dsh/export.js";
 import { exportTrendshiftStatic } from "./export-trendshift.js";
+import { exportTopicsStatic } from "./export-topics.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -156,6 +157,14 @@ function main() {
   if (trendshift.copied) {
     console.log(
       `Exported trendshift slices → ${trendshift.dest} (${trendshift.copied} files)`,
+    );
+  }
+
+  // GitHub Topics snapshots for /topics static mode (GH #24).
+  const topics = exportTopicsStatic(outDir, db);
+  if (topics.exported) {
+    console.log(
+      `Exported github topics → ${topics.dest} (${topics.exported} topics)`,
     );
   }
 

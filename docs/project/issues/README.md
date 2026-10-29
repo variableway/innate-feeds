@@ -5,6 +5,7 @@
 | [ui-layout](./ui-layout.md) | 三栏 UI 与 Sidebar | vertical | done | human | [ui-shell](../features/ui-shell.md) | [tasks/issues/ui-layout.md](../tasks/issues/ui-layout.md) |
 | [refactor-plugin-mode](./refactor-plugin-mode.md) | datasource 分离分析 + domain 插件迁移方案（GH #2） | vertical | done | — | — | [tasks/issues/refactor-plugin-mode.md](../tasks/issues/refactor-plugin-mode.md) |
 | [trendshift-integration](./trendshift-integration.md) | trendshift + gitradar 集成（GH #23） | vertical | done | — | — | — |
+| [github-topics-datasource](./github-topics-datasource.md) | GitHub Topic 数据源（GH #24，edtech top 50） | vertical | done | — | — | [tasks/issues/github-topics-datasource.md](../tasks/issues/github-topics-datasource.md) |
 | [sheet-display](./sheet-display.md) | Epic：后台数据表 | horizontal | open | human | [admin-data-sheet](../features/admin-data-sheet.md) | — |
 | [sheet-display-shell](./sheet-display-shell.md) | 路由 + Sidebar 入口 | horizontal | open | claude-code | admin-data-sheet | [tasks/issues/sheet-display-shell.md](../tasks/issues/sheet-display-shell.md) |
 | [sheet-display-api](./sheet-display-api.md) | Admin 只读 API | horizontal | open | code-buddy | admin-data-sheet | [tasks/issues/sheet-display-api.md](../tasks/issues/sheet-display-api.md) |
