@@ -13,6 +13,7 @@ import {
   Puzzle,
   Settings,
   TrendingUp,
+  Hash,
   ChevronDown,
   type LucideIcon,
 } from "lucide-react";
@@ -26,6 +27,7 @@ const ICONS: Record<string, LucideIcon> = {
   Puzzle,
   Settings,
   TrendingUp,
+  Hash,
 };
 
 /** 分组图标（与 navItems 的 group 名对应）。 */

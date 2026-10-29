@@ -14,6 +14,7 @@ import {
   getFeedItems,
   getStats,
   getTrendingDates,
+  listKnownRepoFullNames,
 } from "../db/index.js";
 import { getDefaultDbPath } from "../db/paths.js";
 import { ProductHuntCollector } from "../collector/producthunt.js";
@@ -21,9 +22,11 @@ import { YCCompaniesCollector } from "../collector/yc-companies.js";
 import { A16zPortfolioCollector } from "../collector/a16z-portfolio.js";
 import { syncVCPortfolio } from "../collector/vc-portfolio.js";
 import {
-  GitHubTopicsCollector,
   listTopics,
+  syncTopics,
+  TOPIC_LIMIT,
 } from "../collector/github-topics.js";
+import { saveItems } from "../collector/shared/storage.js";
 import {
   syncTrendshift,
   TRENDSHIFT_LANGUAGES,
@@ -49,7 +52,7 @@ Usage:
   tsx src/app/cli.ts sync producthunt [--date YYYY-MM-DD] [--period daily|weekly|monthly|all]
   tsx src/app/cli.ts sync yc [--batch BATCH] [--query QUERY]
   tsx src/app/cli.ts sync a16z
-  tsx src/app/cli.ts sync github-topics [--topic TOPIC] [--sort stars|updated] [--per-page N]
+  tsx src/app/cli.ts sync github-topics [--topic TOPIC] [--sort stars|updated] [--per-page N] [--limit N]
   tsx src/app/cli.ts sync trendshift [--timeframe all|daily|weekly|monthly|yearly] [--language slug[,slug]|*] [--source cdn|scrape|auto] [--no-save]
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
   tsx src/app/cli.ts list [trending|starred]
@@ -231,26 +234,56 @@ async function main() {
         const args = process.argv.slice(4);
         const topics: string[] = [];
         let sort: "stars" | "updated" = "stars";
-        let perPage = 30;
+        let perPage: number | undefined;
+        let limit = TOPIC_LIMIT;
         for (let i = 0; i < args.length; i++) {
           if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
           if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as any;
           if (args[i] === "--per-page" && args[i + 1])
             perPage = Number(args[++i]);
+          if (args[i] === "--limit" && args[i + 1]) limit = Number(args[++i]);
         }
-        const collector = new GitHubTopicsCollector({
+
+        // Repos already known to the trending/starred feeds count as
+        // "existing" (GH #24): they are not reported as new discoveries.
+        let existingFullNames: string[] = [];
+        try {
+          existingFullNames = [...listKnownRepoFullNames(getDb(dbPath))];
+        } catch {
+          /* no database yet — treat every repo as new */
+        }
+
+        const results = await syncTopics({
           topics: topics.length ? topics : undefined,
           sort,
           perPage,
+          limit,
+          existingFullNames,
         });
-        const result = await collector.save();
+
+        // Keep the merged daily snapshot for the admin JSON workspace.
+        const merged = [
+          ...new Map(
+            results.flatMap((r) => r.items).map((i) => [i.url, i]),
+          ).values(),
+        ];
+        const today = new Date().toISOString().split("T")[0];
+        const saved = saveItems("github-topics", merged, `topics-${today}`);
+
         console.log(
           JSON.stringify(
             {
               source: "github-topics",
-              count: result.count,
-              outDir: result.outDir,
-              bytes: result.bytes,
+              topics: results.map((r) => ({
+                topic: r.topic,
+                count: r.count,
+                new: r.newCount,
+                skippedExisting: r.skippedExisting,
+                skippedSeen: r.skippedSeen,
+              })),
+              merged: saved.count,
+              outDir: saved.outDir,
+              bytes: saved.bytes,
             },
             null,
             2,

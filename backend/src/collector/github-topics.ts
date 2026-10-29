@@ -2,23 +2,34 @@
  * GitHub Topics collector.
  *
  * Fetches repos by topic from the GitHub Search API.
- * Useful for tracking specific domains (AI, ML, LLM, etc.)
+ * Useful for tracking specific domains (AI, ML, LLM, EdTech, etc.)
  * that may not appear on the trending page.
  *
  * API: GET https://api.github.com/search/repositories?q=topic:{topic}&sort={sort}
  *   sort: stars (default), updated, best-match
  *   order: desc (default), asc
  *
+ * GH #24: a topic datasource keeps the **top N** repos of a topic (default 50)
+ * in `~/.innate/github-topics/topics/{topic}.json`. Repos that already exist
+ * (trending/starred feeds) or that were seen in an earlier snapshot of the same
+ * topic are flagged as "known" instead of being re-reported as discoveries —
+ * but they stay in the snapshot so that opening a topic shows the full list.
+ *
  * Run:
- *   bunx tsx src/collector/github-topics.ts                                 # default AI topics
- *   bunx tsx src/collector/github-topics.ts --topic artificial-intelligence
+ *   bunx tsx src/collector/github-topics.ts                                 # default topics
+ *   bunx tsx src/collector/github-topics.ts --topic edtech
  *   bunx tsx src/collector/github-topics.ts --topic llm --topic agent --sort stars
- *   bunx tsx src/collector/github-topics.ts --save
+ *   bunx tsx src/collector/github-topics.ts --limit 50 --save
  *   bunx tsx src/collector/github-topics.ts --list                          # list known topics
  */
 
 import { execFileSync } from "child_process";
 import { saveItems } from "./shared/storage.js";
+import {
+  readTopicSnapshot,
+  saveTopicSnapshot,
+  type TopicSnapshotItem,
+} from "../data/topics-store.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
@@ -26,6 +37,12 @@ import type {
 } from "./shared/types.js";
 
 export type TopicSort = "stars" | "updated" | "best-match";
+
+/** GH #24: "only get top 50" per topic. */
+export const TOPIC_LIMIT = 50;
+
+/** GitHub Search API caps `per_page` at 100. */
+const MAX_PER_PAGE = 100;
 
 interface GitHubSearchRepo {
   id: number;
@@ -77,6 +94,12 @@ export const AI_TOPICS = [
   "ai-coding",
   "ai-assistant",
 ];
+
+/** Education / EdTech topics (GH #24). */
+export const EDTECH_TOPICS = ["edtech"];
+
+/** Topics synced when no explicit `--topic` is given. */
+export const DEFAULT_TOPICS = [...AI_TOPICS, ...EDTECH_TOPICS];
 
 /** GitHub Topics: https://github.com/topics */
 export const TOPIC_CATEGORIES: Record<string, string[]> = {
@@ -134,6 +157,7 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "object-detection",
     "multimodal",
   ],
+  EdTech: ["edtech"],
 };
 
 function ghApiSearch(apiPath: string): GitHubSearchResponse {
@@ -147,21 +171,40 @@ function ghApiSearch(apiPath: string): GitHubSearchResponse {
 
 async function fetchSearchViaHttp(
   query: string,
-  perPage = 30,
+  sort: TopicSort,
+  perPage: number,
+  page = 1,
 ): Promise<GitHubSearchResponse> {
-  const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&per_page=${perPage}`;
-  const res = await fetch(url, {
-    headers: {
-      Accept: "application/vnd.github+json",
-      "User-Agent": "innate-feeds/0.1",
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-    signal: AbortSignal.timeout(30000),
+  const params = new URLSearchParams({
+    q: query,
+    sort,
+    per_page: String(perPage),
+    page: String(page),
   });
+  const res = await fetch(
+    `https://api.github.com/search/repositories?${params}`,
+    {
+      headers: {
+        Accept: "application/vnd.github+json",
+        "User-Agent": "innate-feeds/0.1",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      signal: AbortSignal.timeout(30000),
+    },
+  );
   if (!res.ok) {
     throw new Error(`GitHub Search API HTTP ${res.status}`);
   }
   return res.json();
+}
+
+export interface GitHubTopicsCollectorOptions {
+  topics?: string[];
+  sort?: TopicSort;
+  /** Deprecated alias of `limit`; kept for backwards compatibility. */
+  perPage?: number;
+  /** Max repos per topic (GH #24: default 50). */
+  limit?: number;
 }
 
 export class GitHubTopicsCollector implements FeedCollector {
@@ -170,15 +213,16 @@ export class GitHubTopicsCollector implements FeedCollector {
   private topics: string[];
   private sort: TopicSort;
   private perPage: number;
+  private limit: number;
 
-  constructor(options?: {
-    topics?: string[];
-    sort?: TopicSort;
-    perPage?: number;
-  }) {
-    this.topics = options?.topics || AI_TOPICS;
+  constructor(options?: GitHubTopicsCollectorOptions) {
+    this.topics = options?.topics || DEFAULT_TOPICS;
     this.sort = options?.sort || "stars";
-    this.perPage = options?.perPage || 30;
+    this.limit = Math.max(1, options?.limit ?? TOPIC_LIMIT);
+    this.perPage = Math.min(
+      Math.max(1, options?.perPage ?? this.limit),
+      MAX_PER_PAGE,
+    );
   }
 
   async fetchLatest(): Promise<ExternalFeedItem[]> {
@@ -197,24 +241,33 @@ export class GitHubTopicsCollector implements FeedCollector {
     return deduped;
   }
 
+  /** Fetch up to `limit` repos of one topic (paged, GitHub caps per_page at 100). */
   async fetchTopic(topic: string): Promise<ExternalFeedItem[]> {
-    const sortParam = this.sort === "best-match" ? "best%20match" : this.sort;
     const query = `topic:${topic}`;
-    const apiPath = `search/repositories?q=${query}&sort=${sortParam}&per_page=${this.perPage}`;
+    const perPage = Math.min(this.perPage, this.limit, MAX_PER_PAGE);
+    const pages = Math.ceil(this.limit / perPage);
 
-    console.error(`[github-topics] Searching: ${query} sort=${sortParam}`);
+    console.error(
+      `[github-topics] Searching: ${query} sort=${this.sort} limit=${this.limit}`,
+    );
 
-    let data: GitHubSearchResponse;
-    try {
-      data = ghApiSearch(apiPath);
-    } catch {
-      data = await fetchSearchViaHttp(
-        `search/repositories?q=${query}&sort=${sortParam}`,
-        this.perPage,
-      );
+    const items: ExternalFeedItem[] = [];
+    for (let page = 1; page <= pages; page++) {
+      const apiPath = `search/repositories?q=${query}&sort=${this.sort}&per_page=${perPage}&page=${page}`;
+
+      let data: GitHubSearchResponse;
+      try {
+        data = ghApiSearch(apiPath);
+      } catch {
+        data = await fetchSearchViaHttp(query, this.sort, perPage, page);
+      }
+
+      if (data.items.length === 0) break;
+      items.push(...data.items.map((repo) => this.normalize(repo, topic)));
+      if (data.items.length < perPage) break;
     }
 
-    return data.items.map((repo) => this.normalize(repo, topic));
+    return items.slice(0, this.limit);
   }
 
   async save(): Promise<SaveResult> {
@@ -248,6 +301,9 @@ export class GitHubTopicsCollector implements FeedCollector {
         githubRepoId: repo.id,
         fullName: repo.full_name,
         owner,
+        ownerLogin: repo.owner.login,
+        ownerAvatarUrl: repo.owner.avatar_url,
+        ownerUrl: repo.owner.html_url,
         language: repo.language,
         forks: repo.forks_count,
         watchers: repo.watchers_count,
@@ -260,6 +316,119 @@ export class GitHubTopicsCollector implements FeedCollector {
       publishedAt: null,
     };
   }
+}
+
+export interface TopicSyncOptions {
+  /** Topics to sync; defaults to DEFAULT_TOPICS. */
+  topics?: string[];
+  /** Max repos per topic (default 50). */
+  limit?: number;
+  /** Page size of the GitHub Search API (max 100). */
+  perPage?: number;
+  sort?: TopicSort;
+  /**
+   * Full names already present in the trending/starred feeds. Those repos are
+   * "existing" — they are not reported as new discoveries (but they stay in
+   * the snapshot so the topic view can still show them).
+   */
+  existingFullNames?: Iterable<string>;
+  /** Test seam: override how a topic is fetched. */
+  fetchTopic?: (topic: string) => Promise<ExternalFeedItem[]>;
+}
+
+export interface TopicSyncResult {
+  topic: string;
+  /** Repos in the snapshot. */
+  count: number;
+  /** New discoveries: neither in the feeds nor seen before in this topic. */
+  newCount: number;
+  /** Repos skipped because they already exist in the feeds. */
+  skippedExisting: number;
+  /** Repos skipped because they were already seen in this topic. */
+  skippedSeen: number;
+  fetchedAt: string;
+  /** Fetched repos (deduped across topics). */
+  items: ExternalFeedItem[];
+}
+
+/**
+ * Sync topics into the topic store (GH #24).
+ *
+ * Skips (does not re-report as new) repos that
+ *  - already exist in the trending/starred feeds, or
+ *  - were already seen in an earlier snapshot of the same topic.
+ *
+ * Skipped repos are still stored, so opening a topic shows the full list.
+ */
+export async function syncTopics(
+  options: TopicSyncOptions = {},
+): Promise<TopicSyncResult[]> {
+  const topics = options.topics?.length ? options.topics : DEFAULT_TOPICS;
+  const limit = Math.max(1, options.limit ?? TOPIC_LIMIT);
+  const existing = new Set(
+    [...(options.existingFullNames ?? [])].map((name) => name.toLowerCase()),
+  );
+
+  const collector = new GitHubTopicsCollector({
+    topics,
+    sort: options.sort,
+    perPage: options.perPage,
+    limit,
+  });
+
+  const results: TopicSyncResult[] = [];
+  for (const topic of topics) {
+    const items = options.fetchTopic
+      ? await options.fetchTopic(topic)
+      : await collector.fetchTopic(topic);
+    const previous = readTopicSnapshot(topic);
+    const previousFirstSeen = new Map(
+      (previous?.items ?? []).map((item) => [item.id, item.firstSeenAt]),
+    );
+
+    const fetchedAt = new Date().toISOString();
+    let newCount = 0;
+    let skippedExisting = 0;
+    let skippedSeen = 0;
+
+    const snapshotItems: TopicSnapshotItem[] = items.map((item) => {
+      const fullName = String(
+        (item.metadata as Record<string, unknown>).fullName ?? "",
+      ).toLowerCase();
+      const seenBefore = previousFirstSeen.has(item.id);
+      const firstSeenAt = seenBefore
+        ? (previousFirstSeen.get(item.id) as string)
+        : fetchedAt;
+      const isExisting = existing.has(fullName);
+
+      if (isExisting) skippedExisting++;
+      if (seenBefore) skippedSeen++;
+      if (!seenBefore && !isExisting) newCount++;
+
+      return {
+        ...item,
+        firstSeenAt,
+        metadata: {
+          ...item.metadata,
+          existingInFeeds: isExisting,
+        },
+      };
+    });
+
+    saveTopicSnapshot(topic, snapshotItems, fetchedAt, newCount);
+
+    results.push({
+      topic,
+      count: snapshotItems.length,
+      newCount,
+      skippedExisting,
+      skippedSeen,
+      fetchedAt,
+      items,
+    });
+  }
+
+  return results;
 }
 
 export function listTopics(): void {
@@ -284,6 +453,7 @@ if (isDirectRun) {
   const topics: string[] = [];
   let sort: TopicSort = "stars";
   let perPage = 30;
+  let limit = TOPIC_LIMIT;
   let save = false;
   let list = false;
 
@@ -291,6 +461,7 @@ if (isDirectRun) {
     if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
     if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as TopicSort;
     if (args[i] === "--per-page" && args[i + 1]) perPage = Number(args[++i]);
+    if (args[i] === "--limit" && args[i + 1]) limit = Number(args[++i]);
     if (args[i] === "--save") save = true;
     if (args[i] === "--list") list = true;
   }
@@ -304,6 +475,7 @@ if (isDirectRun) {
     topics: topics.length ? topics : undefined,
     sort,
     perPage,
+    limit,
   });
 
   if (save) {

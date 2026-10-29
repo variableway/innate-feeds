@@ -4,6 +4,8 @@ import { createWebDomain } from "@innate/web-domain";
 import { DomainLayout } from "./domain-layout";
 import { TrendingPage } from "@/pages/trending/page";
 import { TrendingShiftPage } from "@/pages/trending-shift/page";
+import { TopicsPage } from "@/pages/topics/page";
+import { TopicPage } from "@/pages/topics/topic-page";
 import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
 import { SettingsPage } from "@/pages/settings/page";
@@ -43,6 +45,16 @@ export const webDomain = createWebDomain("feeds")
         getParentRoute: () => layout,
         path: "/trending-shift",
         component: TrendingShiftPage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/topics",
+        component: TopicsPage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/topics/$topic",
+        component: TopicPage,
       }),
       createRoute({
         getParentRoute: () => layout,
@@ -98,6 +110,13 @@ export const webDomain = createWebDomain("feeds")
       path: "/starred",
       icon: "Star",
       order: 11,
+      group: "GitHub",
+    },
+    {
+      label: "Topics",
+      path: "/topics",
+      icon: "Hash",
+      order: 13,
       group: "GitHub",
     },
     {
