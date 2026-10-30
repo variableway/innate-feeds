@@ -34,7 +34,12 @@ import {
   type TrendshiftLanguageFilter,
   type TrendshiftTimeframe,
 } from "../collector/trendshift.js";
-import { buildTopicResponse, buildTopicsIndex } from "../data/topics-store.js";
+import {
+  addUserTopic,
+  buildTopicResponse,
+  buildTopicsIndex,
+  readUserTopics,
+} from "../data/topics-store.js";
 
 const app = new Hono();
 
@@ -384,9 +389,31 @@ function knownRepoFullNames(): Set<string> {
 /** GitHub Topics datasource (GH #24): index of the synced topics. */
 app.get("/api/topics", (c) => {
   try {
-    return c.json(buildTopicsIndex(knownRepoFullNames()));
+    return c.json(buildTopicsIndex(knownRepoFullNames(), readUserTopics()));
   } catch (err) {
     console.error("Error in /api/topics:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+const TOPIC_BODY_SCHEMA = z.object({ topic: z.string().min(1).max(100) });
+
+/**
+ * Save a user-added topic (GH #26). Subsequent default syncs collect it with
+ * the same top-N and first-seen rules as the curated topic datasource.
+ */
+app.post("/api/topics", async (c) => {
+  try {
+    const parsed = TOPIC_BODY_SCHEMA.safeParse(await c.req.json());
+    if (!parsed.success) {
+      return c.json({ error: "Invalid body", details: parsed.error }, 400);
+    }
+    const topics = addUserTopic(parsed.data.topic);
+    return c.json({ topics }, 201);
+  } catch (err) {
+    console.error("Error in POST /api/topics:", err);
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);

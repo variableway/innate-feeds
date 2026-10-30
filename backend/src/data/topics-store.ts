@@ -86,6 +86,12 @@ export interface TopicsIndexResponse {
   updatedAt: string | null;
 }
 
+export interface UserTopicsFile {
+  source: "github-topics";
+  updatedAt: string;
+  topics: string[];
+}
+
 export interface TopicResponse {
   topic: string;
   fetchedAt: string;
@@ -245,30 +251,90 @@ export function toTopicRepo(
 /** Index of every synced topic, with live counts. */
 export function buildTopicsIndex(
   existingFullNames: Set<string>,
+  /** Topics configured by the user that have not been synced yet (GH #26). */
+  allTopics: string[] = [],
 ): TopicsIndexResponse {
   const index = readTopicIndex();
-  if (!index) return { topics: [], updatedAt: null };
-
   const topics: TopicSummary[] = [];
-  for (const entry of index.topics) {
-    const snapshot = readTopicSnapshot(entry.topic);
-    if (!snapshot) continue;
-    const items = snapshot.items.map((item) =>
-      toTopicRepo(item, snapshot.fetchedAt, existingFullNames),
-    );
+  const seen = new Set<string>();
+
+  if (index) {
+    for (const entry of index.topics) {
+      const snapshot = readTopicSnapshot(entry.topic);
+      if (!snapshot) continue;
+      const items = snapshot.items.map((item) =>
+        toTopicRepo(item, snapshot.fetchedAt, existingFullNames),
+      );
+      topics.push({
+        topic: entry.topic,
+        count: items.length,
+        newCount: items.filter((i) => i.isNew && !i.existing).length,
+        existingCount: items.filter((i) => i.existing).length,
+        fetchedAt: snapshot.fetchedAt,
+      });
+      seen.add(entry.topic);
+    }
+  }
+
+  // User-added topics (GH #26) show up immediately, even before their first
+  // sync, so the UI can present them as pending collection.
+  for (const topic of allTopics) {
+    const key = slugifyTopic(topic);
+    if (!key || seen.has(key)) continue;
     topics.push({
-      topic: entry.topic,
-      count: items.length,
-      newCount: items.filter((i) => i.isNew && !i.existing).length,
-      existingCount: items.filter((i) => i.existing).length,
-      fetchedAt: snapshot.fetchedAt,
+      topic: key,
+      count: 0,
+      newCount: 0,
+      existingCount: 0,
+      fetchedAt: "",
     });
+    seen.add(key);
   }
 
   topics.sort(
     (a, b) => b.newCount - a.newCount || a.topic.localeCompare(b.topic),
   );
-  return { topics, updatedAt: index.updatedAt };
+  return { topics, updatedAt: index?.updatedAt ?? null };
+}
+
+/** File that keeps user-added topics across server restarts (GH #26). */
+function userTopicsPath(): string {
+  return join(getTopicsDir(), "user-topics.json");
+}
+
+/** User-added topic slugs, lowercased and filesystem safe. */
+export function readUserTopics(): string[] {
+  const path = userTopicsPath();
+  if (!existsSync(path)) return [];
+  try {
+    const raw = JSON.parse(
+      readFileSync(path, "utf-8"),
+    ) as Partial<UserTopicsFile>;
+    if (!Array.isArray(raw.topics)) return [];
+    return [...new Set(raw.topics.map((t) => slugifyTopic(String(t))))].filter(
+      Boolean,
+    );
+  } catch {
+    console.warn(`Corrupt user topics store at ${path}, treating as empty`);
+    return [];
+  }
+}
+
+/** Persist one user topic; returns the deduped list (GH #26). */
+export function addUserTopic(rawTopic: string): string[] {
+  const topic = slugifyTopic(rawTopic);
+  const current = readUserTopics();
+  if (topic && !current.includes(topic)) {
+    current.push(topic);
+    mkdirSync(getTopicsDir(), { recursive: true });
+    const payload: UserTopicsFile = {
+      source: "github-topics",
+      updatedAt: new Date().toISOString(),
+      topics: current,
+    };
+    writeFileSync(userTopicsPath(), JSON.stringify(payload, null, 2), "utf-8");
+  }
+  return current;
 }
 
 /** Full payload of one topic (all repos, skipped ones included). */

@@ -1,15 +1,24 @@
 import { Link, useNavigate, useParams } from "@tanstack/react-router";
-import { ArrowLeft, Hash, Search } from "lucide-react";
+import {
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
+  Hash,
+  Search,
+} from "lucide-react";
 import { useTopic } from "@/hooks/use-topics";
 import { TopicRepoCard } from "@/components/topic-repo-card";
 import { formatDate } from "@/lib/utils";
 import type { TopicSort } from "@/types/topics";
+import * as React from "react";
 
 const SORTS: { value: TopicSort; label: string }[] = [
   { value: "stars", label: "Stars" },
   { value: "updated", label: "Updated" },
   { value: "new", label: "New first" },
 ];
+
+const PAGE_SIZE = 24;
 
 /**
  * One GitHub topic (GH #24) — the top 50 repos of the topic.
@@ -37,10 +46,24 @@ export function TopicPage() {
     hideExisting,
     setHideExisting,
   } = useTopic(topic);
+  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE);
 
   const openTopic = (next: string) => {
     if (!next || next === topic) return;
     void navigate({ to: "/topics/$topic", params: { topic: next } });
+  };
+
+  React.useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [topic, hideExisting, search, sort]);
+
+  const visibleItems = items.slice(0, visibleCount);
+  const remainingCount = Math.max(0, items.length - visibleCount);
+
+  const stepVisibleCount = (delta: number) => {
+    setVisibleCount((current) =>
+      Math.min(items.length, Math.max(PAGE_SIZE, current + delta * PAGE_SIZE)),
+    );
   };
 
   return (
@@ -133,16 +156,45 @@ export function TopicPage() {
             : `No repos collected for "${topic}" yet.`}
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {items.map((repo) => (
-            <TopicRepoCard
-              key={repo.id}
-              repo={repo}
-              className="h-full"
-              onTopicClick={openTopic}
-            />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {visibleItems.map((repo) => (
+              <TopicRepoCard
+                key={repo.id}
+                repo={repo}
+                className="h-full"
+                onTopicClick={openTopic}
+              />
+            ))}
+          </div>
+          {items.length > PAGE_SIZE && (
+            <div className="flex items-center justify-end gap-3 text-xs text-muted-foreground">
+              <span>
+                Showing {visibleItems.length} of {items.length} repos
+              </span>
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => stepVisibleCount(-1)}
+                  disabled={visibleCount <= PAGE_SIZE}
+                  className="rounded-md border px-2 py-1 disabled:opacity-40"
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => stepVisibleCount(1)}
+                  disabled={remainingCount === 0}
+                  className="rounded-md border px-2 py-1 disabled:opacity-40"
+                  aria-label="Next page"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Hash, Search } from "lucide-react";
+import { Hash, Loader2, Plus, Search } from "lucide-react";
 import { useTopicsIndex } from "@/hooks/use-topics";
 import { formatDate } from "@/lib/utils";
 
@@ -12,8 +12,20 @@ import { formatDate } from "@/lib/utils";
  * shows the complete picture.
  */
 export function TopicsPage() {
-  const { topics, total, updatedAt, loading, error, search, setSearch } =
-    useTopicsIndex();
+  const {
+    topics,
+    total,
+    updatedAt,
+    loading,
+    error,
+    search,
+    setSearch,
+    saving,
+    savingError,
+    addTopic,
+  } = useTopicsIndex();
+
+  const pendingTopic = topics.find((topic) => !topic.fetchedAt);
 
   return (
     <div className="w-full space-y-4 p-4">
@@ -41,7 +53,54 @@ export function TopicsPage() {
             synced {formatDate(updatedAt)}
           </span>
         )}
+        <form
+          className="flex items-center gap-2"
+          onSubmit={(event) => {
+            event.preventDefault();
+            const input = event.currentTarget.elements.namedItem(
+              "topic",
+            ) as HTMLInputElement | null;
+            const value = input?.value.trim();
+            if (!value) return;
+            void addTopic(value).then((added) => {
+              if (added && input) input.value = "";
+            });
+          }}
+        >
+          <input
+            name="topic"
+            placeholder="Add topic…"
+            aria-label="Add topic"
+            className="w-36 rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+          />
+          <button
+            type="submit"
+            disabled={saving}
+            className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-opacity disabled:opacity-50"
+          >
+            {saving ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Plus className="h-4 w-4" />
+            )}
+            Add
+          </button>
+        </form>
       </div>
+
+      {savingError && (
+        <div className="rounded-md border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+          {savingError}
+        </div>
+      )}
+      {pendingTopic && (
+        <div className="rounded-md border bg-card px-3 py-2 text-xs text-muted-foreground">
+          <span className="font-medium text-foreground">
+            #{pendingTopic.topic}
+          </span>{" "}
+          is saved and will be collected on the next topic sync.
+        </div>
+      )}
 
       {loading ? (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,15 +142,21 @@ export function TopicsPage() {
                     {topic.topic}
                   </span>
                 </div>
-                <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                  <span className="rounded-full bg-primary/15 px-2 py-0.5 font-medium text-primary">
-                    {topic.newCount} new
-                  </span>
-                  <span>{topic.count} repos</span>
-                  {topic.existingCount > 0 && (
-                    <span>{topic.existingCount} in feeds</span>
-                  )}
-                </div>
+                {topic.fetchedAt ? (
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                    <span className="rounded-full bg-primary/15 px-2 py-0.5 font-medium text-primary">
+                      {topic.newCount} new
+                    </span>
+                    <span>{topic.count} repos</span>
+                    {topic.existingCount > 0 && (
+                      <span>{topic.existingCount} in feeds</span>
+                    )}
+                  </div>
+                ) : (
+                  <div className="text-xs text-muted-foreground">
+                    Pending sync
+                  </div>
+                )}
                 {topic.fetchedAt && (
                   <span className="text-[11px] text-muted-foreground">
                     updated {formatDate(topic.fetchedAt)}

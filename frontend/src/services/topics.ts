@@ -118,6 +118,22 @@ export async function fetchTopicsIndex(): Promise<TopicsIndex> {
   };
 }
 
+/** Save a user-added topic in API mode (GH #26). */
+export async function addUserTopic(topic: string): Promise<string[]> {
+  const res = await fetch(`${API_BASE}/topics`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ topic }),
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  });
+  const payload = (await res.json()) as { topics?: unknown; error?: string };
+  if (!res.ok) {
+    throw new Error(payload.error || `HTTP ${res.status} for /api/topics`);
+  }
+  if (!Array.isArray(payload.topics)) return [];
+  return payload.topics.map((value) => str(value));
+}
+
 /** All repos of one topic (skipped ones included — they are flagged). */
 export async function fetchTopicDetail(topic: string): Promise<TopicDetail> {
   const raw = isStaticMode()

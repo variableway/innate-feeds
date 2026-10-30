@@ -355,7 +355,8 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/plugins/categories` | Fixed 20 awesome-dsh-plugin categories. |
 | GET | `/api/plugins/:slug` | Plugin detail. |
 | GET | `/api/plugins/:slug/related` | Related plugins. |
-| GET | `/api/topics` | GitHub Topics datasource index (GH #24): synced topics with `count` / `newCount` / `existingCount` / `fetchedAt`. |
+| GET | `/api/topics` | GitHub Topics datasource index (GH #24): synced and user-added topics with `count` / `newCount` / `existingCount` / `fetchedAt`; unsynced user topics use `fetchedAt: ""`. |
+| POST | `/api/topics` | Save a user-added topic (GH #26). Body: `{ topic }`; persisted to `~/.innate/github-topics/topics/user-topics.json`. |
 | GET | `/api/topics/:topic` | One topic snapshot (GH #24): full top-N list, skipped repos included, flagged `isNew` / `existing`. |
 | GET | `/api/auth/status` | gh CLI + PAT presence (never returns the token). |
 | PUT | `/api/auth/pat` | Store GitHub PAT encrypted at rest. Body: `{ token }`. |
@@ -420,7 +421,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/shared/http.ts` — HTTP utilities (fetchJson, fetchHtml, retry).
 - `data/export-incremental.ts` — exports data as incremental JSON chunks with a manifest for static mode.
 - `data/import-static.ts` — imports static JSON back into SQLite.
-- `data/topics-store.ts` — GitHub Topics snapshots (`~/.innate/github-topics/topics/{topic}.json` + `index.json`) and the DTO mapping used by the API/static export.
+- `data/topics-store.ts` — GitHub Topics snapshots (`~/.innate/github-topics/topics/{topic}.json` + `index.json`), user-added topic persistence (`user-topics.json`, GH #26), and the DTO mapping used by the API/static export.
 - `data/export-topics.ts` — exports the topic snapshots to `frontend/public/data/topics/` (static mode), resolving the "existing" flag from SQLite.
 - `db/index.ts` — all SQL lives here. Uses prepared statements from `bun:sqlite`. Batch-fetches topics to avoid N+1 queries. Exports typed interfaces (`FeedItemDTO`, `FeedStatsDTO`, `TrendingItemRow`, `StarredItemRow`).
 - `db/paths.ts` — resolves database path via `DB_PATH` env var or `INNATE_HOME` (defaults to `~/.innate`).
@@ -433,7 +434,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `usePersistedFeedFilters` hook persists filter state to localStorage.
 - Components use `React.forwardRef` and accept a `className` prop merged via the `cn()` utility.
 - `services/feeds.ts` supports both API and static modes. In static mode, fetches JSON chunks via `manifest.json`, merges digest `digest.json` with live GitHub, and prefers live READMEs with a static-file fallback.
-- `services/topics.ts` — GitHub Topics datasource client (GH #24): `/api/topics*` in API mode, `/data/topics/*.json` in static mode.
+- `services/topics.ts` — GitHub Topics datasource client (GH #24): `/api/topics*` in API mode, `/data/topics/*.json` in static mode; POST `/api/topics` is API-only (GH #26).
 - `pages/topics/` — topic index + topic detail view (GH #24): badges `New` / `In feeds`, topic chips navigate to the clicked topic.
 - `services/hidden.ts` tracks user-hidden items (localStorage + `/api/feeds/hide`; static mode also merges the exported `hidden.json`). `feeds.ts` filters them out of every list/detail response.
 - `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.

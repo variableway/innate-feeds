@@ -41,6 +41,9 @@ Issue #24 要求为 [github.com/topics/edtech](https://github.com/topics/edtech)
 - 真机：`sync github-topics --topic edtech --limit 50` → count 50 / new 41 / skippedExisting 7；重复同步 → new 0 / skippedSeen 50
 - 浏览器实测（headless Chrome 截图）：`/topics` 21 个 topic 卡片；`/topics/edtech` 50 条，含 `In feeds` 徽章与可点击 topic 标签
 
-## 结论
+## 后续（GH #26，2026-10-31）
 
-Issue #24 已闭环：topic 数据源可采集、可查询、可浏览；「跳过」只影响新发现计数，不影响列表完整性。
+- [x] `/topics` 增加 `Add Topic` 表单：`POST /api/topics`，保存到 `topics/user-topics.json`，去重并统一 slug
+- [x] 已保存 topics 显示在 topic 索引列表；未同步项标 `Pending sync`
+- [x] `syncTopics` 无显式 topic 时合并 `DEFAULT_TOPICS` + `user-topics.json`，沿用已有 top N / first-seen 逻辑
+- [x] OpenAPI、静态导出与文档同步；后端 65/65 测试通过

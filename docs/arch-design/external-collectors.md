@@ -73,7 +73,7 @@ bun src/app/cli.ts sync producthunt --period all --save
 ```bash
 cd backend
 
-# 同步默认 topics（21 个预设 topic，每个取 top 50）
+# 同步默认 topics + 已保存的用户 topics（每个取 top 50）
 bun run sync:topics
 
 # 只同步指定 topic
@@ -112,6 +112,7 @@ Browse all: https://github.com/topics
 ├── topics-2026-08-26.json       # 当日合并快照（admin JSON 工作区用）
 └── topics/                      # topic 数据源快照（GH #24）
     ├── index.json               # topic 索引（topic / count / newCount / fetchedAt）
+    ├── user-topics.json         # 用户通过 /topics 页面保存的 topics（GH #26）
     ├── edtech.json              # 单 topic 快照（含全部 top N 条目）
     └── llm.json
 ```
@@ -134,9 +135,10 @@ Browse all: https://github.com/topics
 | 接口 | 说明 |
 |------|------|
 | `GET /api/topics` | 已同步 topic 索引（`count` / `newCount` / `existingCount` / `fetchedAt`） |
+| `POST /api/topics` | 保存用户新增 topic（body `{ topic }`；API 模式，GH #26） |
 | `GET /api/topics/{topic}` | 单 topic 完整列表（含被跳过的条目，带 `isNew` / `existing` 标记） |
 
-`bun run data:export` 把 topic 快照导出到 `frontend/public/data/topics/`（`index.json` + `{topic}.json`，`existing` 在导出时按 SQLite 解析），前端 `/topics` 页在静态模式下读该目录。
+`bun run data:export` 把 topic 快照导出到 `frontend/public/data/topics/`（`index.json` + `{topic}.json`，`existing` 在导出时按 SQLite 解析），前端 `/topics` 页在静态模式下读该目录。用户新增的 topic 会立即出现在 index 中，未同步时显示 `Pending sync`；后续默认 `sync:topics` 自动采集，仍沿用 top N 与 `firstSeenAt` 语义。
 
 ## YC Companies
 

@@ -2,13 +2,19 @@ import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { mkdtempSync, rmSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
-import { syncTopics, TOPIC_LIMIT } from "./github-topics.js";
+import {
+  getConfiguredTopics,
+  syncTopics,
+  TOPIC_LIMIT,
+} from "./github-topics.js";
 import {
   buildTopicResponse,
   buildTopicsIndex,
   readTopicSnapshot,
   saveTopicSnapshot,
   slugifyTopic,
+  addUserTopic,
+  readUserTopics,
   type TopicSnapshotItem,
 } from "../data/topics-store.js";
 import type { ExternalFeedItem } from "./shared/types.js";
@@ -162,5 +168,25 @@ describe("topics store", () => {
     expect(slugifyTopic("edtech")).toBe("edtech");
     expect(slugifyTopic("AI Agents")).toBe("ai-agents");
     expect(slugifyTopic("../escape")).toBe("escape");
+  });
+});
+
+describe("user topics", () => {
+  test("adds, dedupes, slugs, and persists configured topics", () => {
+    expect(readUserTopics()).toEqual([]);
+    expect(addUserTopic("AI Agents")).toEqual(["ai-agents"]);
+    expect(addUserTopic("  AI Agents  ")).toEqual(["ai-agents"]);
+    expect(readUserTopics()).toEqual(["ai-agents"]);
+    expect(getConfiguredTopics()).toContain("ai-agents");
+  });
+
+  test("syncs user topics with the same first-seen rules", async () => {
+    addUserTopic("rust-tools");
+    const [result] = await syncTopics({
+      topics: ["rust-tools"],
+      fetchTopic: async () => [repo(1, "d/rust-tool")],
+    });
+    expect(result.topic).toBe("rust-tools");
+    expect(result.newCount).toBe(1);
   });
 });

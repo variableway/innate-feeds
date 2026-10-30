@@ -19,6 +19,7 @@ import type { Database } from "bun:sqlite";
 import { listKnownRepoFullNames } from "../db/index.js";
 import {
   getTopicsDir,
+  readUserTopics,
   readTopicIndex,
   readTopicSnapshot,
   topicFileName,
@@ -53,6 +54,7 @@ export function exportTopicsStatic(
   mkdirSync(destDir, { recursive: true });
 
   const existing = listKnownRepoFullNames(db);
+  const userTopics = readUserTopics();
   const topics: {
     topic: string;
     count: number;
@@ -86,6 +88,18 @@ export function exportTopicsStatic(
       newCount: payload.newCount,
       existingCount: payload.existingCount,
       fetchedAt: payload.fetchedAt,
+    });
+  }
+
+  const syncedTopics = new Set(topics.map((topic) => topic.topic));
+  for (const topic of userTopics) {
+    if (syncedTopics.has(topic)) continue;
+    topics.push({
+      topic,
+      count: 0,
+      newCount: 0,
+      existingCount: 0,
+      fetchedAt: "",
     });
   }
 

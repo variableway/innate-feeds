@@ -28,6 +28,7 @@ import { saveItems } from "./shared/storage.js";
 import {
   readTopicSnapshot,
   saveTopicSnapshot,
+  readUserTopics,
   type TopicSnapshotItem,
 } from "../data/topics-store.js";
 import type {
@@ -336,6 +337,11 @@ export interface TopicSyncOptions {
   fetchTopic?: (topic: string) => Promise<ExternalFeedItem[]>;
 }
 
+/** All configured topics: the curated defaults plus user-added ones (GH #26). */
+export function getConfiguredTopics(): string[] {
+  return [...new Set([...DEFAULT_TOPICS, ...readUserTopics()])];
+}
+
 export interface TopicSyncResult {
   topic: string;
   /** Repos in the snapshot. */
@@ -363,7 +369,9 @@ export interface TopicSyncResult {
 export async function syncTopics(
   options: TopicSyncOptions = {},
 ): Promise<TopicSyncResult[]> {
-  const topics = options.topics?.length ? options.topics : DEFAULT_TOPICS;
+  const topics = options.topics?.length
+    ? options.topics
+    : getConfiguredTopics();
   const limit = Math.max(1, options.limit ?? TOPIC_LIMIT);
   const existing = new Set(
     [...(options.existingFullNames ?? [])].map((name) => name.toLowerCase()),

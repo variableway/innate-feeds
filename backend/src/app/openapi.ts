@@ -290,6 +290,32 @@ export const openApiSpec = {
           "500": jsonError("服务器错误"),
         },
       },
+      post: {
+        tags: ["Topics"],
+        summary: "保存用户新增的 GitHub Topic（GH #26）",
+        description:
+          "持久化到 topics/user-topics.json；后续默认 topic 同步会自动采集该 topic。",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/AddTopicBody" },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "已保存；返回去重后的用户 topic 列表",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/UserTopics" },
+              },
+            },
+          },
+          "400": jsonError("请求体无效"),
+          "500": jsonError("服务器错误"),
+        },
+      },
     },
 
     "/api/topics/{topic}": {
@@ -1113,6 +1139,27 @@ export const openApiSpec = {
           fetchedAt: { type: "string" },
         },
         required: ["topic", "count", "newCount", "existingCount", "fetchedAt"],
+      },
+
+      AddTopicBody: {
+        type: "object",
+        properties: {
+          topic: {
+            type: "string",
+            minLength: 1,
+            maxLength: 100,
+            description: "GitHub topic 名，保存时统一为小写 slug",
+          },
+        },
+        required: ["topic"],
+      },
+
+      UserTopics: {
+        type: "object",
+        properties: {
+          topics: { type: "array", items: { type: "string" } },
+        },
+        required: ["topics"],
       },
 
       TopicRepo: {

@@ -1,5 +1,9 @@
 import * as React from "react";
-import { fetchTopicDetail, fetchTopicsIndex } from "@/services/topics";
+import {
+  addUserTopic,
+  fetchTopicDetail,
+  fetchTopicsIndex,
+} from "@/services/topics";
 import type {
   TopicDetail,
   TopicRepo,
@@ -44,6 +48,9 @@ export function useTopicsIndex() {
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [search, setSearch] = React.useState("");
+  const [saving, setSaving] = React.useState(false);
+  const [savingError, setSavingError] = React.useState<string | null>(null);
+  const [reloadKey, setReloadKey] = React.useState(0);
 
   React.useEffect(() => {
     let cancelled = false;
@@ -66,7 +73,26 @@ export function useTopicsIndex() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [reloadKey]);
+
+  const addTopic = async (rawTopic: string): Promise<boolean> => {
+    const topic = rawTopic.trim().toLowerCase();
+    if (!topic || saving) return false;
+    setSaving(true);
+    setSavingError(null);
+    try {
+      await addUserTopic(topic);
+      setReloadKey((value) => value + 1);
+      return true;
+    } catch (err) {
+      setSavingError(
+        err instanceof Error ? err.message : "Failed to add topic",
+      );
+      return false;
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const filtered = React.useMemo(() => {
     const needle = search.trim().toLowerCase();
@@ -82,6 +108,9 @@ export function useTopicsIndex() {
     error,
     search,
     setSearch,
+    saving,
+    savingError,
+    addTopic,
   };
 }
 

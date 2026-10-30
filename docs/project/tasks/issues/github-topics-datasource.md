@@ -20,3 +20,10 @@ Issue：[issues/github-topics-datasource.md](../../issues/github-topics-datasour
 - **证据**：`bun test backend` 63/63；backend/frontend/dsh `typecheck` 全绿；`frontend bun run build` 通过；真机同步 edtech（count 50 / new 41 / skippedExisting 7；重复同步 new 0 / skippedSeen 50）；headless Chrome 截图确认 `/topics` 与 `/topics/edtech` 渲染正常
 - **文档**：`docs/arch-design/external-collectors.md`（topic 数据源语义 + 存储 + API）、`AGENTS.md`（接口表 / 模块地图 / 命令 / 变更指引）、`docs/project/issues/github-topics-datasource.md`
 - 状态变更：open → done
+
+## 2026-10-31 — done
+
+- 实现 GitHub issue #26：`/topics` 的 Add Topic 表单 + topic 索引列表；未同步用户 topic 显示 Pending sync
+- 后端新增 `POST /api/topics` 与 `topics/user-topics.json` 持久化；默认 `syncTopics` 合并已保存 topics，采集逻辑与既有 first-seen 规则一致
+- 静态导出与 OpenAPI 同步；新增 user topic 存储与配置合并测试
+- 验证：`bun test backend` 65/65；backend + frontend typecheck/build 通过；`git diff --check` 通过
