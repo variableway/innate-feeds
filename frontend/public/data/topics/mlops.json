@@ -1,6 +1,6 @@
 {
   "topic": "mlops",
-  "fetchedAt": "2026-10-29T14:56:02.311Z",
+  "fetchedAt": "2026-10-30T14:48:43.555Z",
   "count": 50,
   "newCount": 40,
   "existingCount": 10,
@@ -13,9 +13,9 @@
       "description": "Learn how to develop, deploy and iterate on production-grade ML applications.",
       "url": "https://github.com/GokuMohandas/Made-With-ML",
       "homepage": "https://madewithml.com",
-      "stars": 49840,
-      "forks": 7811,
-      "watchers": 49840,
+      "stars": 49847,
+      "forks": 7813,
+      "watchers": 49847,
       "language": "Jupyter Notebook",
       "topics": [
         "data-engineering",
@@ -39,8 +39,8 @@
         "url": "https://github.com/GokuMohandas"
       },
       "createdAt": "2018-11-05T03:44:27Z",
-      "updatedAt": "2026-10-29T14:30:20Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:44:57Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -52,9 +52,9 @@
       "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
       "url": "https://github.com/apache/airflow",
       "homepage": "https://airflow.apache.org/",
-      "stars": 47308,
-      "forks": 18214,
-      "watchers": 47308,
+      "stars": 47320,
+      "forks": 18234,
+      "watchers": 47320,
       "language": "Python",
       "topics": [
         "airflow",
@@ -84,8 +84,8 @@
         "url": "https://github.com/apache"
       },
       "createdAt": "2015-04-13T18:04:58Z",
-      "updatedAt": "2026-10-29T14:39:15Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:10:27Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -97,9 +97,9 @@
       "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
       "url": "https://github.com/qdrant/qdrant",
       "homepage": "https://qdrant.tech",
-      "stars": 35308,
-      "forks": 2784,
-      "watchers": 35308,
+      "stars": 35334,
+      "forks": 2786,
+      "watchers": 35334,
       "language": "Rust",
       "topics": [
         "ai-search",
@@ -129,8 +129,8 @@
         "url": "https://github.com/qdrant"
       },
       "createdAt": "2020-05-30T21:37:01Z",
-      "updatedAt": "2026-10-29T14:09:29Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T13:22:03Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -142,9 +142,9 @@
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "url": "https://github.com/mlflow/mlflow",
       "homepage": "https://mlflow.org",
-      "stars": 28585,
-      "forks": 6547,
-      "watchers": 28585,
+      "stars": 28599,
+      "forks": 6550,
+      "watchers": 28599,
       "language": "Python",
       "topics": [
         "agentops",
@@ -172,8 +172,8 @@
         "url": "https://github.com/mlflow"
       },
       "createdAt": "2018-06-05T16:05:58Z",
-      "updatedAt": "2026-10-29T14:50:55Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:35:38Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -185,9 +185,9 @@
       "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
       "url": "https://github.com/HumanSignal/label-studio",
       "homepage": "https://labelstud.io",
-      "stars": 28582,
-      "forks": 3775,
-      "watchers": 28582,
+      "stars": 28590,
+      "forks": 3776,
+      "watchers": 28590,
       "language": "TypeScript",
       "topics": [
         "annotation",
@@ -217,8 +217,8 @@
         "url": "https://github.com/HumanSignal"
       },
       "createdAt": "2019-06-19T02:00:44Z",
-      "updatedAt": "2026-10-29T13:22:12Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:36:47Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -263,7 +263,7 @@
       },
       "createdAt": "2020-02-13T17:04:44Z",
       "updatedAt": "2026-10-28T08:19:28Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -275,9 +275,9 @@
       "description": "End-to-end, code-first tutorials for building production-grade GenAI agents. From prototype to enterprise deployment.",
       "url": "https://github.com/NirDiamant/agents-towards-production",
       "homepage": "https://diamant-ai.com",
-      "stars": 21792,
+      "stars": 21797,
       "forks": 2884,
-      "watchers": 21792,
+      "watchers": 21797,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -306,8 +306,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2025-06-16T17:33:44Z",
-      "updatedAt": "2026-10-29T14:54:01Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:33:43Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -319,9 +319,9 @@
       "description": "A curated list of awesome open source libraries to deploy, monitor, version and scale your machine learning",
       "url": "https://github.com/EthicalML/awesome-production-machine-learning",
       "homepage": "https://ethicalml.github.io/awesome-production-machine-learning",
-      "stars": 21055,
+      "stars": 21060,
       "forks": 2616,
-      "watchers": 21055,
+      "watchers": 21060,
       "language": null,
       "topics": [
         "awesome",
@@ -350,8 +350,8 @@
         "url": "https://github.com/EthicalML"
       },
       "createdAt": "2018-08-15T14:28:41Z",
-      "updatedAt": "2026-10-29T14:05:52Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T10:39:41Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -363,9 +363,9 @@
       "description": "Machine Learning Engineering Open Book",
       "url": "https://github.com/stas00/ml-engineering",
       "homepage": "https://stasosphere.com/machine-learning/",
-      "stars": 19630,
+      "stars": 19633,
       "forks": 1300,
-      "watchers": 19630,
+      "watchers": 19633,
       "language": "Python",
       "topics": [
         "ai",
@@ -391,8 +391,8 @@
         "url": "https://github.com/stas00"
       },
       "createdAt": "2020-09-02T19:23:01Z",
-      "updatedAt": "2026-10-29T00:29:55Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T12:03:27Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -404,9 +404,9 @@
       "description": "Turns Data and AI algorithms into production-ready web applications in no time.",
       "url": "https://github.com/Avaiga/taipy",
       "homepage": "https://www.taipy.io",
-      "stars": 19450,
-      "forks": 1996,
-      "watchers": 19450,
+      "stars": 19451,
+      "forks": 1998,
+      "watchers": 19451,
       "language": "Python",
       "topics": [
         "automation",
@@ -436,8 +436,8 @@
         "url": "https://github.com/Avaiga"
       },
       "createdAt": "2022-02-18T15:55:45Z",
-      "updatedAt": "2026-10-29T12:18:44Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T10:03:01Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -449,9 +449,9 @@
       "description": "The absolute trainer to light up AI agents.",
       "url": "https://github.com/microsoft/agent-lightning",
       "homepage": "https://microsoft.github.io/agent-lightning/",
-      "stars": 18843,
-      "forks": 1699,
-      "watchers": 18843,
+      "stars": 18848,
+      "forks": 1700,
+      "watchers": 18848,
       "language": "Python",
       "topics": [
         "agent",
@@ -466,8 +466,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2025-06-18T07:28:45Z",
-      "updatedAt": "2026-10-29T14:27:37Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T11:15:47Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -479,9 +479,9 @@
       "description": "Workflow Engine for Kubernetes",
       "url": "https://github.com/argoproj/argo-workflows",
       "homepage": "https://argo-workflows.readthedocs.io/",
-      "stars": 17067,
-      "forks": 3721,
-      "watchers": 17067,
+      "stars": 17070,
+      "forks": 3722,
+      "watchers": 17070,
       "language": "Go",
       "topics": [
         "airflow",
@@ -509,8 +509,8 @@
         "url": "https://github.com/argoproj"
       },
       "createdAt": "2017-08-21T18:50:44Z",
-      "updatedAt": "2026-10-29T13:52:53Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:11:06Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -522,9 +522,9 @@
       "description": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.",
       "url": "https://github.com/weaviate/weaviate",
       "homepage": "https://weaviate.io/developers/weaviate/",
-      "stars": 16927,
+      "stars": 16931,
       "forks": 1430,
-      "watchers": 16927,
+      "watchers": 16931,
       "language": "Go",
       "topics": [
         "approximate-nearest-neighbor-search",
@@ -554,8 +554,8 @@
         "url": "https://github.com/weaviate"
       },
       "createdAt": "2016-03-30T15:03:17Z",
-      "updatedAt": "2026-10-29T08:44:04Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:03:07Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -567,9 +567,9 @@
       "description": "An orchestration platform for the development, production, and observation of data assets.",
       "url": "https://github.com/dagster-io/dagster",
       "homepage": "https://dagster.io",
-      "stars": 16348,
-      "forks": 2383,
-      "watchers": 16348,
+      "stars": 16354,
+      "forks": 2385,
+      "watchers": 16354,
       "language": "Python",
       "topics": [
         "analytics",
@@ -594,8 +594,8 @@
         "url": "https://github.com/dagster-io"
       },
       "createdAt": "2018-04-30T16:30:04Z",
-      "updatedAt": "2026-10-28T21:56:35Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T10:29:15Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -607,9 +607,9 @@
       "description": "Free MLOps course from DataTalks.Club. Register here 👇🏼 to get notified about the next cohort",
       "url": "https://github.com/DataTalksClub/mlops-zoomcamp",
       "homepage": "https://courses.datatalks.club/register/mlops-zoomcamp/",
-      "stars": 15490,
+      "stars": 15496,
       "forks": 3077,
-      "watchers": 15490,
+      "watchers": 15496,
       "language": "Jupyter Notebook",
       "topics": [
         "machine-learning",
@@ -624,8 +624,8 @@
         "url": "https://github.com/DataTalksClub"
       },
       "createdAt": "2021-10-21T09:35:28Z",
-      "updatedAt": "2026-10-29T13:28:11Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T03:38:56Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -670,7 +670,7 @@
       },
       "createdAt": "2018-06-01T05:51:44Z",
       "updatedAt": "2026-10-28T08:34:28Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -682,9 +682,9 @@
       "description": "A curated list of references for MLOps ",
       "url": "https://github.com/visenger/awesome-mlops",
       "homepage": "https://ml-ops.org",
-      "stars": 14254,
+      "stars": 14257,
       "forks": 2130,
-      "watchers": 14254,
+      "watchers": 14257,
       "language": null,
       "topics": [
         "ai",
@@ -703,8 +703,8 @@
         "url": "https://github.com/visenger"
       },
       "createdAt": "2020-03-03T11:37:19Z",
-      "updatedAt": "2026-10-29T08:45:30Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T13:49:31Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -716,9 +716,9 @@
       "description": "Run any open-source LLMs, such as DeepSeek and Llama, as OpenAI compatible API endpoint in the cloud.",
       "url": "https://github.com/bentoml/OpenLLM",
       "homepage": "https://bentoml.com",
-      "stars": 12572,
-      "forks": 850,
-      "watchers": 12572,
+      "stars": 12574,
+      "forks": 848,
+      "watchers": 12574,
       "language": "Python",
       "topics": [
         "bentoml",
@@ -746,8 +746,8 @@
         "url": "https://github.com/bentoml"
       },
       "createdAt": "2023-04-19T00:27:52Z",
-      "updatedAt": "2026-10-29T03:34:17Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T06:48:28Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -759,9 +759,9 @@
       "description": "Always know what to expect from your data.",
       "url": "https://github.com/fivetran/great_expectations",
       "homepage": "https://docs.greatexpectations.io/",
-      "stars": 11907,
-      "forks": 1881,
-      "watchers": 11907,
+      "stars": 11911,
+      "forks": 1882,
+      "watchers": 11911,
       "language": "Python",
       "topics": [
         "cleandata",
@@ -791,8 +791,8 @@
         "url": "https://github.com/fivetran"
       },
       "createdAt": "2017-09-11T00:18:46Z",
-      "updatedAt": "2026-10-29T13:30:05Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T12:11:54Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -804,9 +804,9 @@
       "description": "TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation.",
       "url": "https://github.com/tensorzero/tensorzero",
       "homepage": "https://tensorzero.com",
-      "stars": 11708,
+      "stars": 11710,
       "forks": 967,
-      "watchers": 11708,
+      "watchers": 11710,
       "language": "Rust",
       "topics": [
         "ai",
@@ -836,8 +836,8 @@
         "url": "https://github.com/tensorzero"
       },
       "createdAt": "2024-07-16T21:00:53Z",
-      "updatedAt": "2026-10-29T13:05:23Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T04:48:53Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -849,9 +849,9 @@
       "description": "The AI developer platform. Use Weights & Biases to train and fine-tune models, and manage models from experimentation to production.",
       "url": "https://github.com/wandb/wandb",
       "homepage": "https://wandb.ai",
-      "stars": 11311,
-      "forks": 910,
-      "watchers": 11311,
+      "stars": 11310,
+      "forks": 912,
+      "watchers": 11310,
       "language": "Python",
       "topics": [
         "ai",
@@ -880,8 +880,8 @@
         "url": "https://github.com/wandb"
       },
       "createdAt": "2017-03-24T05:46:23Z",
-      "updatedAt": "2026-10-29T03:34:38Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T03:45:16Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -893,9 +893,9 @@
       "description": "Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help you create data engineering and data science pipelines that are reproducible, maintainable, and modular.",
       "url": "https://github.com/kedro-org/kedro",
       "homepage": "https://kedro.org",
-      "stars": 11036,
+      "stars": 11037,
       "forks": 1097,
-      "watchers": 11036,
+      "watchers": 11037,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -914,8 +914,8 @@
         "url": "https://github.com/kedro-org"
       },
       "createdAt": "2019-04-18T10:29:56Z",
-      "updatedAt": "2026-10-29T13:30:12Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-29T15:50:23Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -927,9 +927,9 @@
       "description": "Example 📓 Jupyter notebooks that demonstrate how to build, train, and deploy machine learning models using 🧠 Amazon SageMaker. ",
       "url": "https://github.com/aws/amazon-sagemaker-examples",
       "homepage": "https://sagemaker-examples.readthedocs.io",
-      "stars": 10997,
-      "forks": 6944,
-      "watchers": 10997,
+      "stars": 10998,
+      "forks": 6945,
+      "watchers": 10998,
       "language": "Jupyter Notebook",
       "topics": [
         "aws",
@@ -950,8 +950,8 @@
         "url": "https://github.com/aws"
       },
       "createdAt": "2017-10-23T05:55:22Z",
-      "updatedAt": "2026-10-29T11:27:33Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-29T18:07:07Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -963,9 +963,9 @@
       "description": "The AI Compute Platform for frontier teams. SkyPilot turns fragmented AI compute into one AI supercomputer, so frontier AI teams build custom intelligence faster.",
       "url": "https://github.com/skypilot-org/skypilot",
       "homepage": "https://skypilot.ai/",
-      "stars": 10762,
-      "forks": 1315,
-      "watchers": 10762,
+      "stars": 10768,
+      "forks": 1318,
+      "watchers": 10768,
       "language": "Python",
       "topics": [
         "cloud-computing",
@@ -994,8 +994,8 @@
         "url": "https://github.com/skypilot-org"
       },
       "createdAt": "2021-08-11T23:32:15Z",
-      "updatedAt": "2026-10-29T14:27:59Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T11:27:56Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1007,9 +1007,9 @@
       "description": "A booklet on machine learning systems design with exercises. NOT the repo for the book \"Designing Machine Learning Systems\", which is `dmls-book`",
       "url": "https://github.com/chiphuyen/machine-learning-systems-design",
       "homepage": "https://huyenchip.com/machine-learning-systems-design/toc.html",
-      "stars": 10714,
+      "stars": 10716,
       "forks": 1653,
-      "watchers": 10714,
+      "watchers": 10716,
       "language": "HTML",
       "topics": [
         "data-science",
@@ -1022,8 +1022,8 @@
         "url": "https://github.com/chiphuyen"
       },
       "createdAt": "2019-11-24T23:16:28Z",
-      "updatedAt": "2026-10-29T10:31:35Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T08:20:29Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1035,9 +1035,9 @@
       "description": "Build, Manage and Deploy AI/ML Systems",
       "url": "https://github.com/Netflix/metaflow",
       "homepage": "https://metaflow.org",
-      "stars": 10325,
-      "forks": 1387,
-      "watchers": 10325,
+      "stars": 10329,
+      "forks": 1388,
+      "watchers": 10329,
       "language": "Python",
       "topics": [
         "agents",
@@ -1067,8 +1067,8 @@
         "url": "https://github.com/Netflix"
       },
       "createdAt": "2019-09-17T17:48:25Z",
-      "updatedAt": "2026-10-29T11:07:40Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T05:57:58Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1080,9 +1080,9 @@
       "description": "Open-source, low-code AutoML platform for Python. PyCaret 4.0: sklearn-native engine + React control plane.",
       "url": "https://github.com/pycaret/pycaret",
       "homepage": "https://pycaret.org",
-      "stars": 9859,
+      "stars": 9858,
       "forks": 1840,
-      "watchers": 9859,
+      "watchers": 9858,
       "language": "Python",
       "topics": [
         "anomaly-detection",
@@ -1107,8 +1107,8 @@
         "url": "https://github.com/pycaret"
       },
       "createdAt": "2019-11-23T18:40:48Z",
-      "updatedAt": "2026-10-29T04:58:59Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-29T14:56:44Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1152,7 +1152,7 @@
       },
       "createdAt": "2019-08-09T06:17:59Z",
       "updatedAt": "2026-10-29T13:40:01Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1164,9 +1164,9 @@
       "description": "The easiest way to serve AI apps and models - Build Model Inference APIs, Job queues, LLM apps, Multi-model pipelines, and more!",
       "url": "https://github.com/bentoml/BentoML",
       "homepage": "https://bentoml.com",
-      "stars": 8924,
-      "forks": 1051,
-      "watchers": 8924,
+      "stars": 8927,
+      "forks": 1050,
+      "watchers": 8927,
       "language": "Python",
       "topics": [
         "ai-inference",
@@ -1191,8 +1191,8 @@
         "url": "https://github.com/bentoml"
       },
       "createdAt": "2019-04-02T01:39:27Z",
-      "updatedAt": "2026-10-29T11:04:17Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T10:37:59Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1204,9 +1204,9 @@
       "description": "Evidently is ​​an open-source ML and LLM observability framework. Evaluate, test, and monitor any AI-powered system or data pipeline. From tabular data to Gen AI. 100+ metrics.",
       "url": "https://github.com/evidentlyai/evidently",
       "homepage": "https://discord.gg/xZjKRaNp8b",
-      "stars": 8022,
+      "stars": 8024,
       "forks": 963,
-      "watchers": 8022,
+      "watchers": 8024,
       "language": "Jupyter Notebook",
       "topics": [
         "data-drift",
@@ -1230,8 +1230,8 @@
         "url": "https://github.com/evidentlyai"
       },
       "createdAt": "2020-11-25T15:20:08Z",
-      "updatedAt": "2026-10-29T14:51:20Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T08:23:26Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1243,9 +1243,9 @@
       "description": "Type-safe, distributed orchestration of agents, ML pipelines, and real-time inference on your k8s — in pure Python with async/await, also other languages (rust, go and ts)",
       "url": "https://github.com/flyteorg/flyte",
       "homepage": "https://flyte.org",
-      "stars": 7794,
-      "forks": 918,
-      "watchers": 7794,
+      "stars": 7833,
+      "forks": 917,
+      "watchers": 7833,
       "language": "Go",
       "topics": [
         "agent-runtime",
@@ -1270,8 +1270,8 @@
         "url": "https://github.com/flyteorg"
       },
       "createdAt": "2019-10-21T17:40:04Z",
-      "updatedAt": "2026-10-29T10:02:33Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T08:47:08Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1283,9 +1283,9 @@
       "description": "The Open Source Feature Store for AI/ML",
       "url": "https://github.com/feast-dev/feast",
       "homepage": "https://feast.dev",
-      "stars": 7350,
-      "forks": 1486,
-      "watchers": 7350,
+      "stars": 7351,
+      "forks": 1488,
+      "watchers": 7351,
       "language": "Python",
       "topics": [
         "big-data",
@@ -1305,8 +1305,8 @@
         "url": "https://github.com/feast-dev"
       },
       "createdAt": "2018-12-10T07:20:15Z",
-      "updatedAt": "2026-10-28T11:28:58Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-29T15:42:17Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1318,9 +1318,9 @@
       "description": "Open Lakehouse Format for Multimodal AI. Convert from Parquet in 2 lines of code for 100x faster random access, vector index, and data versioning. Compatible with Pandas, DuckDB, Polars, Pyarrow, and PyTorch with more integrations coming..",
       "url": "https://github.com/lance-format/lance",
       "homepage": "https://lance.org",
-      "stars": 7230,
+      "stars": 7233,
       "forks": 915,
-      "watchers": 7230,
+      "watchers": 7233,
       "language": "Rust",
       "topics": [
         "apache-arrow",
@@ -1346,8 +1346,8 @@
         "url": "https://github.com/lance-format"
       },
       "createdAt": "2022-07-07T22:29:29Z",
-      "updatedAt": "2026-10-29T14:38:06Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T12:37:29Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1359,9 +1359,9 @@
       "description": "ClearML - Auto-Magical CI/CD to streamline your AI workload. Experiment Management, Data Management, Pipeline, Orchestration, Scheduling & Serving in one MLOps/LLMOps solution",
       "url": "https://github.com/clearml/clearml",
       "homepage": "https://clear.ml/docs",
-      "stars": 6923,
+      "stars": 6926,
       "forks": 809,
-      "watchers": 6923,
+      "watchers": 6926,
       "language": "Python",
       "topics": [
         "ai",
@@ -1386,8 +1386,8 @@
         "url": "https://github.com/clearml"
       },
       "createdAt": "2019-06-10T08:18:32Z",
-      "updatedAt": "2026-10-29T06:23:20Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T03:10:37Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1399,9 +1399,9 @@
       "description": "Ship AI Agents to Google Cloud in minutes, not months. Production-ready templates with built-in CI/CD, evaluation, and observability.",
       "url": "https://github.com/GoogleCloudPlatform/agent-starter-pack",
       "homepage": "http://goo.gle/agents-cli",
-      "stars": 6575,
+      "stars": 6576,
       "forks": 1499,
-      "watchers": 6575,
+      "watchers": 6576,
       "language": "Python",
       "topics": [
         "agents",
@@ -1419,8 +1419,8 @@
         "url": "https://github.com/GoogleCloudPlatform"
       },
       "createdAt": "2025-01-31T16:03:06Z",
-      "updatedAt": "2026-10-29T01:06:20Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T06:07:24Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1432,9 +1432,9 @@
       "description": "A curated list of Artificial Intelligence Top Tools",
       "url": "https://github.com/mahseema/awesome-ai-tools",
       "homepage": null,
-      "stars": 6505,
-      "forks": 2475,
-      "watchers": 6505,
+      "stars": 6509,
+      "forks": 2479,
+      "watchers": 6509,
       "language": null,
       "topics": [
         "ai",
@@ -1464,8 +1464,8 @@
         "url": "https://github.com/mahseema"
       },
       "createdAt": "2023-08-25T21:51:55Z",
-      "updatedAt": "2026-10-29T07:56:52Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T10:38:35Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1502,7 +1502,7 @@
       },
       "createdAt": "2023-04-02T10:34:53Z",
       "updatedAt": "2026-10-29T09:43:15Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1543,7 +1543,7 @@
       },
       "createdAt": "2019-05-31T18:25:07Z",
       "updatedAt": "2026-10-29T14:14:37Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1555,9 +1555,9 @@
       "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
       "url": "https://github.com/higgsfield-ai/higgsfield",
       "homepage": null,
-      "stars": 6252,
-      "forks": 1146,
-      "watchers": 6252,
+      "stars": 6253,
+      "forks": 1149,
+      "watchers": 6253,
       "language": "Jupyter Notebook",
       "topics": [
         "cluster-management",
@@ -1576,8 +1576,8 @@
         "url": "https://github.com/higgsfield-ai"
       },
       "createdAt": "2018-05-26T22:47:43Z",
-      "updatedAt": "2026-10-28T23:51:50Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:47:19Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1589,9 +1589,9 @@
       "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes",
       "url": "https://github.com/kserve/kserve",
       "homepage": "https://kserve.github.io/website/",
-      "stars": 6169,
-      "forks": 1764,
-      "watchers": 6169,
+      "stars": 6174,
+      "forks": 1768,
+      "watchers": 6174,
       "language": "Go",
       "topics": [
         "artificial-intelligence",
@@ -1621,8 +1621,8 @@
         "url": "https://github.com/kserve"
       },
       "createdAt": "2019-03-27T21:14:14Z",
-      "updatedAt": "2026-10-29T13:52:19Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T13:39:23Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1635,7 +1635,7 @@
       "url": "https://github.com/tensorchord/Awesome-LLMOps",
       "homepage": null,
       "stars": 5967,
-      "forks": 1236,
+      "forks": 1244,
       "watchers": 5967,
       "language": "Shell",
       "topics": [
@@ -1650,8 +1650,8 @@
         "url": "https://github.com/tensorchord"
       },
       "createdAt": "2022-04-15T01:56:44Z",
-      "updatedAt": "2026-10-27T19:02:22Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-29T22:49:47Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1663,9 +1663,9 @@
       "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
       "url": "https://github.com/Giskard-AI/giskard-oss",
       "homepage": "https://docs.giskard.ai",
-      "stars": 5934,
+      "stars": 5935,
       "forks": 555,
-      "watchers": 5934,
+      "watchers": 5935,
       "language": "Python",
       "topics": [
         "agent-evaluation",
@@ -1692,8 +1692,8 @@
         "url": "https://github.com/Giskard-AI"
       },
       "createdAt": "2022-03-06T21:45:37Z",
-      "updatedAt": "2026-10-29T08:14:16Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T14:07:19Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1738,7 +1738,7 @@
       },
       "createdAt": "2020-11-19T09:25:46Z",
       "updatedAt": "2026-10-29T06:32:52Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1750,9 +1750,9 @@
       "description": "The LLM's practical guide: From the fundamentals to deploying advanced LLM and RAG apps to AWS using LLMOps best practices",
       "url": "https://github.com/PacktPublishing/LLM-Engineers-Handbook",
       "homepage": "https://www.amazon.com/LLM-Engineers-Handbook-engineering-production/dp/1836200072/",
-      "stars": 5404,
+      "stars": 5407,
       "forks": 1326,
-      "watchers": 5404,
+      "watchers": 5407,
       "language": "Python",
       "topics": [
         "aws",
@@ -1771,8 +1771,8 @@
         "url": "https://github.com/PacktPublishing"
       },
       "createdAt": "2024-04-09T10:56:03Z",
-      "updatedAt": "2026-10-29T04:58:13Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T08:04:04Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1807,7 +1807,7 @@
       },
       "createdAt": "2020-11-04T14:30:09Z",
       "updatedAt": "2026-10-28T09:03:13Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1852,7 +1852,7 @@
       },
       "createdAt": "2022-08-30T12:51:24Z",
       "updatedAt": "2026-10-29T00:08:39Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1885,7 +1885,7 @@
       },
       "createdAt": "2020-05-25T22:53:26Z",
       "updatedAt": "2026-10-29T14:49:40Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1897,9 +1897,9 @@
       "description": "Argilla is a collaboration tool for AI engineers and domain experts to build high-quality datasets",
       "url": "https://github.com/argilla-io/argilla",
       "homepage": "https://argilla-io.github.io/argilla/latest/",
-      "stars": 5186,
-      "forks": 511,
-      "watchers": 5186,
+      "stars": 5188,
+      "forks": 512,
+      "watchers": 5188,
       "language": "Python",
       "topics": [
         "active-learning",
@@ -1926,8 +1926,8 @@
         "url": "https://github.com/argilla-io"
       },
       "createdAt": "2021-04-28T14:37:42Z",
-      "updatedAt": "2026-10-29T14:50:59Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T09:09:54Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     },
@@ -1939,9 +1939,9 @@
       "description": "cube studio开源云原生一站式机器学习/深度学习/大模型AI平台，mlops算法链路全流程，算力租赁平台，notebook在线开发，拖拉拽任务流pipeline编排，多机多卡分布式训练，超参搜索，推理服务VGPU虚拟化，边缘计算，标注平台自动化标注，deepseek等大模型sft微调/奖励模型/强化学习训练，vllm/ollama/mindie大模型多机推理，私有知识库，AI模型市场，支持国产cpu/gpu/npu 昇腾生态，支持RDMA，支持pytorch/tf/mxnet/deepspeed/paddle/colossalai/horovod/ray/volcano等分布式",
       "url": "https://github.com/tencentmusic/cube-studio",
       "homepage": null,
-      "stars": 5087,
+      "stars": 5086,
       "forks": 878,
-      "watchers": 5087,
+      "watchers": 5086,
       "language": null,
       "topics": [
         "ai",
@@ -1968,8 +1968,8 @@
         "url": "https://github.com/tencentmusic"
       },
       "createdAt": "2021-08-17T08:54:14Z",
-      "updatedAt": "2026-10-29T00:47:35Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T06:41:08Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": true
     },
@@ -1981,9 +1981,9 @@
       "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure. Daily updated.",
       "url": "https://github.com/alvinreal/awesome-opensource-ai",
       "homepage": "https://awesomeosai.com",
-      "stars": 4950,
-      "forks": 737,
-      "watchers": 4950,
+      "stars": 4955,
+      "forks": 740,
+      "watchers": 4955,
       "language": "Python",
       "topics": [
         "agents",
@@ -2005,8 +2005,8 @@
         "url": "https://github.com/alvinreal"
       },
       "createdAt": "2026-03-24T15:58:22Z",
-      "updatedAt": "2026-10-29T14:53:59Z",
-      "firstSeenAt": "2026-10-29T14:56:02.311Z",
+      "updatedAt": "2026-10-30T13:00:23Z",
+      "firstSeenAt": "2026-10-30T14:48:43.555Z",
       "isNew": true,
       "existing": false
     }
