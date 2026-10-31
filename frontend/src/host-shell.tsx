@@ -15,6 +15,8 @@ import {
   TrendingUp,
   Hash,
   ChevronDown,
+  PanelLeftClose,
+  PanelLeftOpen,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -35,6 +37,16 @@ const GROUP_ICONS: Record<string, LucideIcon> = {
   GitHub: Github,
   "DeepSeek Harness": Puzzle,
 };
+
+const NAV_COLLAPSED_KEY = "innate-feeds:host-nav-collapsed";
+
+function readNavCollapsed(): boolean {
+  try {
+    return window.localStorage.getItem(NAV_COLLAPSED_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
 
 interface NavItem {
   label: string;
@@ -106,6 +118,27 @@ export function HostShell({
 
   const groups = useMemo(() => groupNavItems(navItemsOf(domains)), [domains]);
 
+  // 侧栏折叠（icon 轨）；状态持久化
+  const [navCollapsed, setNavCollapsed] = useState<boolean>(readNavCollapsed);
+  const toggleNav = () => {
+    setNavCollapsed((prev) => {
+      const next = !prev;
+      try {
+        window.localStorage.setItem(NAV_COLLAPSED_KEY, next ? "1" : "0");
+      } catch {
+        // localStorage unavailable — keep in-memory value only
+      }
+      return next;
+    });
+  };
+  const railItems = useMemo(
+    () =>
+      navItemsOf(domains)
+        .slice()
+        .sort((a, b) => (a.order ?? 100) - (b.order ?? 100)),
+    [domains],
+  );
+
   // 含当前路由的分组默认展开；其余保持收起状态
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const isGroupCollapsed = (name: string): boolean => {
@@ -123,65 +156,121 @@ export function HostShell({
   return (
     <div className="flex h-screen bg-background">
       {/* 紧凑左栏：独立态自有导航（插件态由 webshell 提供，此处不参与） */}
-      <nav className="flex w-48 shrink-0 flex-col gap-1 overflow-y-auto border-r bg-card py-2">
-        <div className="px-3 pb-2 pt-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-          Feeds
-        </div>
-        {groups.map((group) => {
-          const open = !isGroupCollapsed(group.name);
-          const GroupIcon = group.icon;
-          const hasActive = group.items.some((item) =>
-            isItemActive(pathname, item.path),
-          );
-          return (
-            <div key={group.name} className="px-1.5">
+      {/* 紧凑左栏：独立态自有导航（插件态由 webshell 提供，此处不参与）；可折叠为 icon 轨 */}
+      <nav
+        className={
+          navCollapsed
+            ? "flex w-12 shrink-0 flex-col items-center gap-1 overflow-y-auto border-r bg-card py-2"
+            : "flex w-48 shrink-0 flex-col gap-1 overflow-y-auto border-r bg-card py-2"
+        }
+      >
+        {navCollapsed ? (
+          <>
+            <button
+              type="button"
+              onClick={toggleNav}
+              title="展开侧栏"
+              className="text-muted-foreground hover:text-foreground mb-1 inline-flex h-8 w-8 items-center justify-center rounded-md"
+            >
+              <PanelLeftOpen className="h-4 w-4" />
+            </button>
+            {railItems.map((item) => {
+              const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
+              const active = isItemActive(pathname, item.path);
+              return (
+                <button
+                  key={item.path}
+                  type="button"
+                  onClick={() => void router.navigate({ to: item.path })}
+                  title={item.label}
+                  className={cn(
+                    "flex h-8 w-8 items-center justify-center rounded-md transition-colors",
+                    active
+                      ? "bg-accent text-accent-foreground"
+                      : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
+                  )}
+                >
+                  {Icon ? <Icon className="h-4 w-4" /> : null}
+                </button>
+              );
+            })}
+          </>
+        ) : (
+          <>
+            <div className="flex items-center justify-between px-3 pb-2 pt-1">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Feeds
+              </span>
               <button
                 type="button"
-                onClick={() => toggleGroup(group.name)}
-                aria-expanded={open}
-                className={cn(
-                  "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-semibold transition-colors",
-                  hasActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
+                onClick={toggleNav}
+                title="折叠侧栏"
+                className="text-muted-foreground hover:text-foreground inline-flex items-center"
               >
-                {GroupIcon ? <GroupIcon className="h-4 w-4" /> : null}
-                <span className="flex-1 text-left">{group.name}</span>
-                <ChevronDown
-                  className={cn(
-                    "h-3.5 w-3.5 transition-transform",
-                    open ? "" : "-rotate-90",
-                  )}
-                />
+                <PanelLeftClose className="h-3.5 w-3.5" />
               </button>
-              {open ? (
-                <div className="ml-3 flex flex-col gap-0.5 border-l pl-2">
-                  {group.items.map((item) => {
-                    const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
-                    const active = isItemActive(pathname, item.path);
-                    return (
-                      <button
-                        key={item.path}
-                        type="button"
-                        onClick={() => void router.navigate({ to: item.path })}
-                        className={cn(
-                          "flex items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-medium transition-colors",
-                          active
-                            ? "bg-accent text-accent-foreground"
-                            : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
-                        )}
-                      >
-                        {Icon ? <Icon className="h-3.5 w-3.5" /> : null}
-                        {item.label}
-                      </button>
-                    );
-                  })}
-                </div>
-              ) : null}
             </div>
-          );
-        })}
+            {groups.map((group) => {
+              const open = !isGroupCollapsed(group.name);
+              const GroupIcon = group.icon;
+              const hasActive = group.items.some((item) =>
+                isItemActive(pathname, item.path),
+              );
+              return (
+                <div key={group.name} className="px-1.5">
+                  <button
+                    type="button"
+                    onClick={() => toggleGroup(group.name)}
+                    aria-expanded={open}
+                    className={cn(
+                      "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-semibold transition-colors",
+                      hasActive
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    {GroupIcon ? <GroupIcon className="h-4 w-4" /> : null}
+                    <span className="flex-1 text-left">{group.name}</span>
+                    <ChevronDown
+                      className={cn(
+                        "h-3.5 w-3.5 transition-transform",
+                        open ? "" : "-rotate-90",
+                      )}
+                    />
+                  </button>
+                  {open ? (
+                    <div className="ml-3 flex flex-col gap-0.5 border-l pl-2">
+                      {group.items.map((item) => {
+                        const Icon = item.icon
+                          ? (ICONS[item.icon] ?? null)
+                          : null;
+                        const active = isItemActive(pathname, item.path);
+                        return (
+                          <button
+                            key={item.path}
+                            type="button"
+                            onClick={() =>
+                              void router.navigate({ to: item.path })
+                            }
+                            className={cn(
+                              "flex items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-medium transition-colors",
+                              active
+                                ? "bg-accent text-accent-foreground"
+                                : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
+                            )}
+                          >
+                            {Icon ? <Icon className="h-3.5 w-3.5" /> : null}
+                            {item.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
+          </>
+        )}
       </nav>
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         {children}
