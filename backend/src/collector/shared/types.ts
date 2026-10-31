@@ -5,7 +5,12 @@ export type FeedSource =
   | "a16z"
   | "github-topics"
   | "trendshift"
-  | "awesome-dsh";
+  | "awesome-dsh"
+  | "hackernews"
+  | "huggingface"
+  | "github-new"
+  | "devto"
+  | "lobsters";
 
 /** 统一外部 Feed Item 接口 */
 export interface ExternalFeedItem {
@@ -39,12 +44,16 @@ export interface ExternalFeedItem {
 
 /** 量化指标 — 各源按需填充 */
 export interface FeedItemMetrics {
-  /** Product Hunt 社区分数 */
+  /** Product Hunt 社区分数 / HN points / Dev.to reactions / Lobsters score / HF likes */
   score?: number;
-  /** Product Hunt 评论数 */
+  /** 评论数（PH / HN / Dev.to / Lobsters） */
   comments?: number;
   /** GitHub Stars */
   stars?: number;
+  /** Hugging Face 30d downloads */
+  downloads?: number;
+  /** GitHub forks */
+  forks?: number;
   /** 团队规模 */
   teamSize?: number;
   /** YC Batch (e.g. "P26") */

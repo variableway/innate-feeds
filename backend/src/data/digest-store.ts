@@ -15,6 +15,7 @@ import {
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import {
+  DIGEST_SOURCES,
   getDefaultDigestDir,
   type DigestFetchResult,
   type DigestItemLocal,
@@ -162,7 +163,10 @@ function coerceLocalItem(raw: unknown): DigestItemLocal | null {
   const row = raw as Record<string, unknown>;
   if (typeof row.id !== "string") return null;
   const source = row.source;
-  if (source !== "ruanyf-weekly" && source !== "github-daily") return null;
+  // Membership check against DIGEST_SOURCES keeps new sources (e.g.
+  // hellogithub, GH #31) valid here without touching this file.
+  const sourceConfig = DIGEST_SOURCES.find((s) => s.id === source);
+  if (!sourceConfig) return null;
   const excerpt =
     typeof row.bodyExcerpt === "string"
       ? row.bodyExcerpt
@@ -171,7 +175,7 @@ function coerceLocalItem(raw: unknown): DigestItemLocal | null {
         : "";
   return {
     id: row.id,
-    source,
+    source: sourceConfig.id,
     sourceRepo: typeof row.sourceRepo === "string" ? row.sourceRepo : "",
     issueNumber: typeof row.issueNumber === "number" ? row.issueNumber : 0,
     issueId: typeof row.issueId === "number" ? row.issueId : 0,

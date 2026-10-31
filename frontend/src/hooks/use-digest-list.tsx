@@ -18,7 +18,7 @@ interface DigestFiltersContextValue {
   filters: DigestFilters;
   categories: string[];
   sources: {
-    id: "ruanyf-weekly" | "github-daily";
+    id: "ruanyf-weekly" | "github-daily" | "hellogithub";
     repo: string;
     count: number;
   }[];

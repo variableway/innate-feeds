@@ -16,7 +16,7 @@ import { homedir } from "os";
 import { join } from "path";
 import { DEFAULT_SYNC_WINDOW_DAYS, dateDaysAgo } from "../data/date-window.js";
 
-export type DigestSourceId = "ruanyf-weekly" | "github-daily";
+export type DigestSourceId = "ruanyf-weekly" | "github-daily" | "hellogithub";
 
 export interface DigestSourceConfig {
   id: DigestSourceId;
@@ -26,6 +26,9 @@ export interface DigestSourceConfig {
 export const DIGEST_SOURCES: DigestSourceConfig[] = [
   { id: "ruanyf-weekly", repo: "ruanyf/weekly" },
   { id: "github-daily", repo: "GitHubDaily/GitHubDaily" },
+  // GH #31: HelloGitHub 每日多条「[开源推荐]」issue，正文结构化（项目地址/类别/描述），
+  // 走通用 issue 解析器即可，无需专属解析。
+  { id: "hellogithub", repo: "521xueweihan/HelloGitHub" },
 ];
 
 export interface DigestIssueRaw {

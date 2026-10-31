@@ -35,7 +35,12 @@ innate-feeds/
 │   │   │   ├── yc-companies.ts   # YC Companies API collector
 │   │   │   ├── a16z-portfolio.ts # a16z Portfolio collector
 │   │   │   ├── github-topics.ts  # GitHub Topics search collector (top N + skip rules)
-│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator
+│   │   │   ├── hackernews.ts     # Hacker News front-page collector (Algolia API, GH #31)
+│   │   │   ├── huggingface.ts    # Hugging Face trending collector (GH #31)
+│   │   │   ├── github-new.ts     # Fast-growing new GitHub repos collector (GH #31)
+│   │   │   ├── devto.ts          # Dev.to hot articles collector (GH #31)
+│   │   │   ├── lobsters.ts       # lobste.rs hottest collector (GH #31)
+│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator (all 8 JSON sources)
 │   │   ├── data/            # Static data export/import utilities
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
@@ -43,7 +48,9 @@ innate-feeds/
 │   │   │   ├── manifest-utils.ts      # Manifest read/write helpers
 │   │   │   ├── hidden-store.ts        # Hidden ("deleted") items store (~/.innate/hidden.json)
 │   │   │   ├── topics-store.ts        # GitHub Topics snapshots (~/.innate/github-topics/topics)
-│   │   │   └── export-topics.ts       # topics static export (frontend/public/data/topics)
+│   │   │   ├── export-topics.ts       # topics static export (frontend/public/data/topics)
+│   │   │   ├── external-store.ts      # external feed sources store (GH #31, /api/external)
+│   │   │   └── export-external.ts     # external sources static export (GH #31)
 │   │   ├── dsh/              # DSH plugin catalog datasource (issue #13 抽离)
 │   │   │   ├── catalog.ts    # YAML catalog loading + search/sort/pagination
 │   │   │   ├── routes.ts     # Hono sub-app: /api/plugins* (mounted by server.ts)
@@ -63,10 +70,10 @@ innate-feeds/
 │   │   ├── domain-layout.tsx # Business-area layout (DigestFiltersProvider)
 │   │   ├── host-shell.tsx    # Standalone-only compact left nav (host concern, not in domain)
 │   │   ├── main.tsx          # Standalone host entry: composes feeds + dsh domains (host-only)
-│   │   ├── pages/            # Business pages (trending, starred, digest, topics, settings, admin) — page.tsx only
+│   │   ├── pages/            # Business pages (trending, starred, digest, topics, feeds, settings, admin) — page.tsx only
 │   │   ├── components/       # Business components (FeedCard, FilterBar, TopicRepoCard, …) — no shell chrome
 │   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size, use-topics
-│   │   ├── services/         # API client (feeds.ts, topics.ts, admin-db.ts, hidden.ts) — API + static modes
+│   │   ├── services/         # API client (feeds.ts, topics.ts, external.ts, admin-db.ts, hidden.ts) — API + static modes
 │   │   ├── types/            # TypeScript domain types (feed.ts, topics.ts)
 │   │   ├── lib/              # utils.ts (cn, formatNumber, formatDate), feed-filters-storage.ts
 │   │   └── styles.css        # Tailwind CSS v4 theme + dark mode
@@ -192,7 +199,7 @@ bunx tsx src/app/cli.ts sync digest --days 90
 bunx tsx src/app/cli.ts sync window [--days 90] [--skip-readme] [--force]
 ```
 
-### Sync external sources (Product Hunt / YC / a16z / GitHub Topics)
+### Sync external sources (Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / GitHub Topics)
 
 These are independent JSON-based collectors (no SQLite, see `docs/arch-design/external-collectors.md`).
 
@@ -212,6 +219,23 @@ bun src/app/cli.ts sync yc --batch P26 --query "open source"
 # a16z Portfolio — static list + GitHub enrichment
 bun run sync:a16z
 
+# Hacker News — front page via Algolia API (GH #31)
+bun run sync:hackernews
+bun src/app/cli.ts sync hackernews                # --date 2026-10-31 for top-of-day
+
+# Hugging Face — trending models/datasets/spaces (GH #31; blocked on some networks)
+bun run sync:huggingface
+
+# GitHub New — repos created in the last N days, top by stars (GH #31)
+bun run sync:github-new                           # --days 30 --min-stars 20
+bun src/app/cli.ts sync github-new --days 7
+
+# Dev.to — hot articles (GH #31)
+bun run sync:devto
+
+# lobste.rs — hottest stories (GH #31)
+bun run sync:lobsters
+
 # GitHub Topics — search repos by topic (AI/LLM/Agent/EdTech etc.)
 bun run sync:topics                                                # all topics, top 50 each
 bun src/app/cli.ts sync github-topics --topic llm --topic agent    # specific topics
@@ -229,9 +253,12 @@ bun run sync:awesome-dsh
 # Legacy DSH YAML snapshot (GH #27, manual fallback only)
 bun src/app/cli.ts sync dsh-catalog --dry-run
 
-# Unified sync (all external sources)
-bun run sync:vc
-bun src/app/cli.ts sync vc --source producthunt --source yc
+# Unified sync (all 8 JSON-store external sources; per-source failures don't abort)
+bun run sync:vc                # = sync:external
+bun src/app/cli.ts sync vc --source producthunt --source hackernews
+
+# GH #31 local daily update (trending+starred recent + digest + topics + external)
+bun run data:update:local      # from repo root; wired to the Orca daily automation
 ```
 
 ### Other backend CLI commands
@@ -348,6 +375,8 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
 | GET | `/api/feeds/digest/:id` | Single digest item (with body). |
+| GET | `/api/external` | External feed sources index (GH #31): Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs with latest snapshot meta. |
+| GET | `/api/external/:source` | One external source's latest snapshot (`?label=` for a specific manifest entry). |
 | POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
 | POST | `/api/feeds/hide` | Hide an item so it is filtered out of all list/detail responses. Body: `{ kind: "digest" \| "repo", id }` (`id` = digest item id, or repo `fullName`). Persisted to `hidden.json` next to the DB; also applied at static-export time. |
 | POST | `/api/feeds/unhide` | Undo a hide. Same body as `/api/feeds/hide`. |
@@ -459,6 +488,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing the 90-day window / README prefetch | `backend/src/collector/sync-window.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
+| Changing external feed sources / the Feeds menu (GH #31) | `backend/src/collector/{hackernews,huggingface,github-new,devto,lobsters}.ts`, `backend/src/data/external-store.ts`, `backend/src/data/export-external.ts`, `frontend/src/types/external.ts`, `frontend/src/pages/feeds/`, `frontend/src/services/external.ts` |
 | Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
 | Changing the Awesome DSH catalog (GH #30) | `backend/src/collector/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `dsh/src/services/plugins.ts` |
 | Changing the legacy DSH YAML updater (GH #27) | `backend/src/collector/dsh-catalog.ts` |
