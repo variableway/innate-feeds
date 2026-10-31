@@ -34,7 +34,13 @@
     "stats": "bun src/app/cli.ts stats",
     "export:static": "bun src/data/export-static.ts",
     "export:incremental": "bun src/data/export-incremental.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync:hackernews": "bun src/app/cli.ts sync hackernews",
+    "sync:huggingface": "bun src/app/cli.ts sync huggingface",
+    "sync:github-new": "bun src/app/cli.ts sync github-new",
+    "sync:devto": "bun src/app/cli.ts sync devto",
+    "sync:lobsters": "bun src/app/cli.ts sync lobsters",
+    "sync:external": "bun src/app/cli.ts sync vc"
   },
   "dependencies": {
     "@hono/swagger-ui": "^0.6.1",

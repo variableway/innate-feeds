@@ -55,6 +55,9 @@ innate-feeds.config.json
 # Generated static README snapshots (rebuilt by `data:sync:window` / Pages CI)
 frontend/public/data/readmes/
 
+# External feed source snapshots (GH #31, rebuilt by `sync:vc` / Pages CI; data is local-only)
+frontend/public/data/external/
+
 # Large collected plugin catalog (rebuilt by `sync awesome-dsh` / Pages CI)
 frontend/public/data/plugins.json
 awesome/awesome-dsh-plugin/data/plugin-catalog.json

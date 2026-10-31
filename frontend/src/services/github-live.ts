@@ -17,6 +17,7 @@ export const DIGEST_SOURCES: {
 }[] = [
   { id: "ruanyf-weekly", repo: "ruanyf/weekly" },
   { id: "github-daily", repo: "GitHubDaily/GitHubDaily" },
+  { id: "hellogithub", repo: "521xueweihan/HelloGitHub" },
 ];
 
 const CATEGORY_RE = /^[\[【]([^\]】]+)[\]】]/;
@@ -271,7 +272,12 @@ export function normalizeDigestItem(
   const row = raw as Record<string, unknown>;
   if (typeof row.id !== "string") return null;
   const source = row.source;
-  if (source !== "ruanyf-weekly" && source !== "github-daily") return null;
+  if (
+    source !== "ruanyf-weekly" &&
+    source !== "github-daily" &&
+    source !== "hellogithub"
+  )
+    return null;
   const excerpt =
     typeof row.excerpt === "string"
       ? row.excerpt

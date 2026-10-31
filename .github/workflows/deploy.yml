@@ -142,6 +142,14 @@ jobs:
           cd backend
           bun src/app/cli.ts sync github-topics --limit 50
 
+      - name: Sync external feed sources (GH #31)
+        if: steps.sync.outputs.mode == 'window' || steps.sync.outputs.mode == 'daily'
+        run: |
+          set -euo pipefail
+          cd backend
+          # All JSON-store collectors; individual failures don't abort the run.
+          bun src/app/cli.ts sync vc
+
       - name: Sync feed window (90-day digest / trending / starred / READMEs)
         if: steps.sync.outputs.mode == 'window'
         run: |

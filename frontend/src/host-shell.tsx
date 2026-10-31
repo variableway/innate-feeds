@@ -15,6 +15,16 @@ import {
   TrendingUp,
   Hash,
   ChevronDown,
+  Rss,
+  Flame,
+  Boxes,
+  Sparkles,
+  FileText,
+  Link2,
+  Rocket,
+  Building2,
+  Briefcase,
+  Database,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,12 +38,23 @@ const ICONS: Record<string, LucideIcon> = {
   Settings,
   TrendingUp,
   Hash,
+  Rss,
+  Flame,
+  Boxes,
+  Sparkles,
+  FileText,
+  Link2,
+  Rocket,
+  Building2,
+  Briefcase,
+  Database,
 };
 
 /** 分组图标（与 navItems 的 group 名对应）。 */
 const GROUP_ICONS: Record<string, LucideIcon> = {
   GitHub: Github,
   "DeepSeek Harness": Puzzle,
+  Feeds: Rss,
 };
 
 interface NavItem {
