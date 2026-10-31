@@ -30,7 +30,7 @@ Browse GitHub **trending**, **starred**, and a community **issues digest** (ruan
 - **Repo README** — In-app Markdown. API: `./readmes` then background refresh. Static: live GitHub, then `/data/readmes`.
 - **Filters** — Language, topics, snapshot date, stars range, search; sort by stars / updated / created / starred.
 - **Themes** — DSH default, plus Linear, Notion, and the rest of innate-fe-base variants; persisted in localStorage.
-- **DSH plugins** — `/dsh` inside the same app shell (sidebar + theme). Data comes from `awesome-dsh-plugin` YAML via `/api/plugins`.
+- **DSH plugins** — `/dsh` inside the same app shell (sidebar + theme). Data comes from the local awesome-dsh-plugin market catalog via `/api/plugins`, ranked by fresh Stars by default.
 
 ## Quick start
 
@@ -154,8 +154,8 @@ innate-feeds/
 │   └── db/           # bun:sqlite schema + queries
 ├── frontend/src/     # @innate/domain-feeds: feeds pages + standalone host (feeds + dsh)
 ├── dsh/src/          # @innate/domain-dsh: plugin directory domain plugin (/dsh pages)
-├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json, plugins.json)
-├── awesome/          # curated awesome lists (`awesome-dsh-plugin` is the plugin data source)
+├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json; plugins.json is generated locally)
+├── awesome/          # curated awesome lists (legacy YAML fallback; fresh catalog is under ~/.innate)
 ├── .github/workflows/      # ci.yml, deploy.yml
 └── docs/arch-design/data-update-workflow.md
 ```

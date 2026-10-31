@@ -18,6 +18,7 @@ export interface DshPlugin {
   npmPackage: string | null;
   tarballUrl: string | null;
   publishedAt: string | null;
+  starsUpdatedAt: string;
 }
 
 export interface PluginSearchResult {

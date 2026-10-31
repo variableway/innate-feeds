@@ -9,8 +9,8 @@
 | 层 | 位置 | 说明 |
 |---|---|---|
 | dsh 域插件 | `dsh/`（`@innate/domain-dsh`，pluginOrder 30） | /dsh 四页自包含域包；`src/index.ts` 导出 `webDomain`；内部全相对导入（tsc paths 是 program 级全局，跨包别名会错解析） |
-| datasource | `backend/src/dsh/`（catalog / routes / export） | YAML 加载 + 搜索、`/api/plugins*` Hono 子应用（server.ts 挂载）、`plugins.json` 静态导出（export-incremental 调用）——域包不持有数据逻辑 |
-| 数据 | `awesome/awesome-dsh-plugin/data/`（不动） | `DSH_PLUGIN_DATA_DIR` 可覆盖 |
+| datasource | `backend/src/dsh/`（catalog / routes / export） | market catalog / YAML 兼容加载 + 搜索、`/api/plugins*` Hono 子应用（server.ts 挂载）、`plugins.json` 静态导出（export-incremental 调用）——域包不持有数据逻辑 |
+| 数据 | `~/.innate/awesome-dsh/plugin-catalog.json`（GH #30，本地不提交） | 上游 market index + GraphQL Stars 刷新；旧 YAML 仍为 fallback |
 | 分类常量 | `shared/plugin-categories.ts`（不动） | backend 与 dsh 域共用；dsh 以相对导入消费 |
 | feeds 域 | `frontend/`（瘦身） | 删 /dsh 路由与 navItem；`markdown-body` / `copy-install-button` 保留自用（dsh 侧为 vendor 副本） |
 | standalone 宿主 | `frontend/src/main.tsx` + `host-shell.tsx`（host-only） | `collectWebDomainRoutes` 把 feeds + dsh 双域挂同一根路由；`collectNavItems` 聚合导航——单站体验与 URL 不变 |

@@ -91,7 +91,7 @@ innate-feeds/
 │   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
 │   ├── package.json          # name: @innate/domain-dsh; self-contained (relative imports only)
 │   └── tsconfig.json
-├── awesome/                 # Vendored awesome-dsh-plugin catalog snapshot (`awesome-dsh-plugin/data`, YAML + stars/screenshots/dates)
+├── awesome/                 # Legacy awesome-dsh-plugin YAML/screenshots fallback; fresh catalog is local-only
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
 ├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh)
@@ -116,7 +116,7 @@ innate-feeds/
 | Data fetching | GitHub CLI (`gh`) and Firecrawl |
 | Validation | Zod (used in API input validation) |
 | Type checking | TypeScript 5.7+ |
-| Plugin directory | Own domain plugin `@innate/domain-dsh` (`dsh/`), routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin YAML, datasource in `backend/src/dsh/`) |
+| Plugin directory | Own domain plugin `@innate/domain-dsh` (`dsh/`), routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin market catalog, datasource in `backend/src/dsh/`) |
 
 ## Build and development commands
 
@@ -154,9 +154,9 @@ The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http:
 
 ### Plugin directory (`/dsh`)
 
-The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, top-level `dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend reads the vendored catalog at `awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`) via the extracted datasource in `backend/src/dsh/`. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. The old Next.js prototype (`dsh-plugin-directory/`) was deleted in sprint-2.
+The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, top-level `dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend prefers `~/.innate/awesome-dsh/plugin-catalog.json` (`INNATE_HOME` controls the root; `DSH_PLUGIN_DATA_DIR` can point at an alternate legacy data directory) via the extracted datasource in `backend/src/dsh/`; the legacy YAML files are still the fallback. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. This generated catalog is intentionally local-only and not committed.
 
-Refresh the vendored catalog from the upstream repo (https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) by copying its `data/` directory over `awesome/awesome-dsh-plugin/data/`, then re-running `bun run data:export` (regenerates `plugins.json`) — no other wiring needed.
+Refresh the Awesome DSH catalog with `bun run data:sync:awesome-dsh` from the root. It reads the upstream format-1 market index and enriches Stars through GitHub GraphQL; then run `bun run data:export` to regenerate `plugins.json`. Daily and window Pages syncs run this automatically in CI, but only the build artifact is uploaded—not the collected JSON.
 
 ### Sync data from GitHub
 
@@ -222,6 +222,9 @@ bun run topics:list                                                # list availa
 bun run sync:trendshift                                            # all timeframes, "all" language slice
 bun src/app/cli.ts sync trendshift --language python,rust          # specific language slices
 bun src/app/cli.ts sync trendshift --source scrape --timeframe daily  # fallback scraper
+
+# Awesome DSH — upstream market index + GitHub GraphQL stars (GH #30)
+bun run sync:awesome-dsh
 
 # Unified sync (all external sources)
 bun run sync:vc
@@ -352,7 +355,7 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/trendshift` | Trendshift slice index (timeframes, languages, synced files). |
 | GET | `/api/trendshift/:timeframe` | Ranking slice. Query: `language` (default `all`), `period` (optional). Local store first, live CDN fallback. |
 | GET | `/api/plugins/stats` | Plugin totals. |
-| GET | `/api/plugins/categories` | Fixed 20 awesome-dsh-plugin categories. |
+| GET | `/api/plugins/categories` | Fixed 23 awesome-dsh-plugin categories. |
 | GET | `/api/plugins/:slug` | Plugin detail. |
 | GET | `/api/plugins/:slug/related` | Related plugins. |
 | GET | `/api/topics` | GitHub Topics datasource index (GH #24): synced and user-added topics with `count` / `newCount` / `existingCount` / `fetchedAt`; unsynced user topics use `fetchedAt: ""`. |
@@ -415,6 +418,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/yc-companies.ts` — YC Companies public API collector. Stores JSON to `~/.innate/yc/`.
 - `collector/a16z-portfolio.ts` — a16z AI Portfolio static list + GitHub enrichment. Stores JSON to `~/.innate/a16z/`.
 - `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Keeps the top N (default 50) repos per topic and skips repos already in the feeds / already seen in that topic (GH #24). Stores JSON to `~/.innate/github-topics/`.
+- `collector/awesome-dsh.ts` — normalizes the Awesome DSH market index and refreshes Stars via GitHub GraphQL (GH #30). Writes the local plugin catalog under `~/.innate/awesome-dsh/`.
 - `collector/vc-portfolio.ts` — Unified orchestrator for all external collectors.
 - `collector/shared/types.ts` — Shared types (`ExternalFeedItem`, `FeedCollector`, `FeedSource`).
 - `collector/shared/storage.ts` — JSON storage abstraction (manifest + saveItems).
@@ -452,6 +456,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
 | Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
+| Changing the Awesome DSH catalog (GH #30) | `backend/src/collector/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `dsh/src/services/plugins.ts` |
 | Changing the GitHub Topics datasource (GH #24) | `backend/src/collector/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |
 | Changing external collector shared logic | `backend/src/collector/shared/types.ts`, `storage.ts`, `http.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |

@@ -6,7 +6,7 @@
  * 属 dsh 域的 datasource 层：被 `routes.ts`（API）与 `export.ts`（静态导出）
  * 消费，与 feeds 数据层（`data/`、`collector/`）边界隔离。
  */
-import { readdirSync, readFileSync } from "fs";
+import { existsSync, readdirSync, readFileSync } from "fs";
 import { join, resolve } from "path";
 import { load as yamlLoad } from "js-yaml";
 import { getProjectRoot } from "../data/app-config.js";
@@ -16,6 +16,8 @@ import {
   pluginCategoryById,
   type PluginCategoryId,
 } from "../../../shared/plugin-categories.js";
+import type { MarketCatalogFile } from "../collector/awesome-dsh.js";
+import { getAwesomeDshDir } from "../collector/awesome-dsh.js";
 
 export interface DshPlugin {
   slug: string;
@@ -47,8 +49,9 @@ interface YamlEntry {
 }
 
 type StarsMap = Record<string, { stars?: number }>;
-type ScreenshotsMap = Record<string, string[]>;
 type DatesMap = Record<string, string>;
+
+type MarketScreenshotsMap = Record<string, string[]>;
 
 let cache: DshPlugin[] | null = null;
 
@@ -94,6 +97,24 @@ function readJson<T>(path: string): T {
   }
 }
 
+function readMarketCatalog(root: string): MarketCatalogFile | null {
+  const path = join(root, "plugin-catalog.json");
+  if (!existsSync(path)) return null;
+  try {
+    const catalog = JSON.parse(readFileSync(path, "utf8")) as
+      MarketCatalogFile | undefined;
+    return catalog?.schemaVersion === 1 && Array.isArray(catalog.plugins)
+      ? catalog
+      : null;
+  } catch (err) {
+    console.warn(
+      `Invalid DSH plugin catalog at ${path}:`,
+      err instanceof Error ? err.message : err,
+    );
+    return null;
+  }
+}
+
 function buildContent(
   entry: YamlEntry & { url: string },
   installCommand: string,
@@ -131,9 +152,25 @@ function buildContent(
 
 function loadAll(): DshPlugin[] {
   const root = dataDir();
+  const market =
+    readMarketCatalog(getAwesomeDshDir()) ?? readMarketCatalog(root);
+  if (market) {
+    return market.plugins
+      .filter(
+        (plugin) =>
+          PLUGIN_CATEGORY_IDS.includes(
+            plugin.bundleCategory as PluginCategoryId,
+          ) && plugin.name.trim() !== "",
+      )
+      .map((plugin) => ({
+        ...plugin,
+        bundleCategory: plugin.bundleCategory as PluginCategoryId,
+      }));
+  }
+
   const yamlDir = join(root, "plugins");
   const stars = readJson<StarsMap>(join(root, "stars.json"));
-  const screenshotsMap = readJson<ScreenshotsMap>(
+  const screenshotsMap = readJson<MarketScreenshotsMap>(
     join(root, "screenshots.json"),
   );
   const dates = readJson<DatesMap>(join(root, "added-dates.json"));
@@ -286,7 +323,7 @@ export function searchPlugins(input: PluginSearchInput) {
   if (q) {
     items = items.filter((plugin) => {
       const hay =
-        `${plugin.name} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
+        `${plugin.name} ${plugin.npmPackage ?? ""} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
       return hay.includes(q);
     });
   }

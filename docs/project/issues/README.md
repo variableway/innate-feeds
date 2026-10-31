@@ -6,6 +6,7 @@
 | [refactor-plugin-mode](./refactor-plugin-mode.md) | datasource 分离分析 + domain 插件迁移方案（GH #2） | vertical | done | — | — | [tasks/issues/refactor-plugin-mode.md](../tasks/issues/refactor-plugin-mode.md) |
 | [trendshift-integration](./trendshift-integration.md) | trendshift + gitradar 集成（GH #23） | vertical | done | — | — | — |
 | [github-topics-datasource](./github-topics-datasource.md) | GitHub Topic 数据源（GH #24，edtech top 50） | vertical | done | — | — | [tasks/issues/github-topics-datasource.md](../tasks/issues/github-topics-datasource.md) |
+| [awesome-dsh-plugin-update](./awesome-dsh-plugin-update.md) | Awesome DSH 插件目录更新与 Stars 排名（GH #30） | vertical | done | codex | — | [tasks/issues/awesome-dsh-plugin-update.md](../tasks/issues/awesome-dsh-plugin-update.md) |
 | [sheet-display](./sheet-display.md) | Epic：后台数据表 | horizontal | open | human | [admin-data-sheet](../features/admin-data-sheet.md) | — |
 | [sheet-display-shell](./sheet-display-shell.md) | 路由 + Sidebar 入口 | horizontal | open | claude-code | admin-data-sheet | [tasks/issues/sheet-display-shell.md](../tasks/issues/sheet-display-shell.md) |
 | [sheet-display-api](./sheet-display-api.md) | Admin 只读 API | horizontal | open | code-buddy | admin-data-sheet | [tasks/issues/sheet-display-api.md](../tasks/issues/sheet-display-api.md) |

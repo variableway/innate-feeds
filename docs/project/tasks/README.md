@@ -49,6 +49,7 @@ Agent：独立分支 → 实现 → 追加 log → PR
 | [sheet-display-api](../issues/sheet-display-api.md) | [tasks/issues/sheet-display-api.md](./issues/sheet-display-api.md) |
 | [sheet-display-tables-panel](../issues/sheet-display-tables-panel.md) | [tasks/issues/sheet-display-tables-panel.md](./issues/sheet-display-tables-panel.md) |
 | [sheet-display-univer](../issues/sheet-display-univer.md) | [tasks/issues/sheet-display-univer.md](./issues/sheet-display-univer.md) |
+| [awesome-dsh-plugin-update](../issues/awesome-dsh-plugin-update.md) | [tasks/issues/awesome-dsh-plugin-update.md](./issues/awesome-dsh-plugin-update.md) |
 
 ## admin-data-sheet 推荐交接顺序
 
