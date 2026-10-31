@@ -21,6 +21,11 @@ import { ProductHuntCollector } from "../collector/producthunt.js";
 import { YCCompaniesCollector } from "../collector/yc-companies.js";
 import { A16zPortfolioCollector } from "../collector/a16z-portfolio.js";
 import { syncVCPortfolio } from "../collector/vc-portfolio.js";
+import { HackerNewsCollector } from "../collector/hackernews.js";
+import { HuggingFaceCollector } from "../collector/huggingface.js";
+import { GitHubNewCollector } from "../collector/github-new.js";
+import { DevToCollector } from "../collector/devto.js";
+import { LobstersCollector } from "../collector/lobsters.js";
 import {
   listTopics,
   syncTopics,
@@ -208,6 +213,46 @@ async function main() {
           JSON.stringify(
             {
               source: "a16z",
+              count: result.count,
+              outDir: result.outDir,
+              bytes: result.bytes,
+            },
+            null,
+            2,
+          ),
+        );
+      } else if (
+        type === "hackernews" ||
+        type === "huggingface" ||
+        type === "github-new" ||
+        type === "devto" ||
+        type === "lobsters"
+      ) {
+        // GH #31 community feed collectors
+        const args = process.argv.slice(4);
+        let days = 7;
+        for (let i = 0; i < args.length; i++) {
+          if (args[i] === "--days" && args[i + 1])
+            days = parseInt(args[++i], 10);
+        }
+        const result = await (async () => {
+          switch (type) {
+            case "hackernews":
+              return new HackerNewsCollector().save();
+            case "huggingface":
+              return new HuggingFaceCollector().save();
+            case "github-new":
+              return new GitHubNewCollector({ days }).save();
+            case "devto":
+              return new DevToCollector().save();
+            default:
+              return new LobstersCollector().save();
+          }
+        })();
+        console.log(
+          JSON.stringify(
+            {
+              source: type,
               count: result.count,
               outDir: result.outDir,
               bytes: result.bytes,

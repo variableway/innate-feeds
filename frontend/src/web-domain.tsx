@@ -8,8 +8,11 @@ import { TopicsPage } from "@/pages/topics/page";
 import { TopicPage } from "@/pages/topics/topic-page";
 import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
+import { FeedsPage } from "@/pages/feeds/page";
+import { FeedsSourcePage } from "@/pages/feeds/source-page";
 import { SettingsPage } from "@/pages/settings/page";
 import { AdminPage } from "@/pages/admin/page";
+import { EXTERNAL_SOURCE_META } from "@/types/external";
 
 /**
  * innate-feeds 的 domain 声明（轨道 A）。
@@ -78,6 +81,16 @@ export const webDomain = createWebDomain("feeds")
       }),
       createRoute({
         getParentRoute: () => layout,
+        path: "/feeds",
+        component: FeedsPage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/feeds/$source",
+        component: FeedsSourcePage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
         path: "/settings",
         component: SettingsPage,
       }),
@@ -126,6 +139,21 @@ export const webDomain = createWebDomain("feeds")
       order: 20,
       group: "GitHub",
     },
+    // GH #31: Feeds 组 — 外部数据源（总览 + 各源子菜单），顺序取 meta 定义。
+    {
+      label: "Feeds",
+      path: "/feeds",
+      icon: "Rss",
+      order: 21,
+      group: "Feeds",
+    },
+    ...EXTERNAL_SOURCE_META.map((meta, idx) => ({
+      label: meta.title,
+      path: `/feeds/${meta.source}`,
+      icon: meta.icon,
+      order: 22 + idx,
+      group: "Feeds",
+    })),
     {
       label: "SQLite",
       path: "/admin",

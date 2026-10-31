@@ -19,6 +19,7 @@ import { copyReadmesToPublic } from "./export-digest.js";
 import { exportPluginCatalog } from "../dsh/export.js";
 import { exportTrendshiftStatic } from "./export-trendshift.js";
 import { exportTopicsStatic } from "./export-topics.js";
+import { exportExternalStatic } from "./export-external.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -165,6 +166,14 @@ function main() {
   if (topics.exported) {
     console.log(
       `Exported github topics → ${topics.dest} (${topics.exported} topics)`,
+    );
+  }
+
+  // External feed sources for /feeds static mode (GH #31).
+  const external = exportExternalStatic(outDir);
+  if (external.exported) {
+    console.log(
+      `Exported external sources → ${external.dest} (${external.exported} sources)`,
     );
   }
 

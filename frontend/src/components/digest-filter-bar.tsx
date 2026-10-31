@@ -15,6 +15,7 @@ const SOURCE_OPTIONS: { value: DigestSourceId | ""; label: string }[] = [
   { value: "", label: "All sources" },
   { value: "ruanyf-weekly", label: "ruanyf/weekly" },
   { value: "github-daily", label: "GitHubDaily" },
+  { value: "hellogithub", label: "HelloGitHub" },
 ];
 
 const SORT_OPTIONS: {

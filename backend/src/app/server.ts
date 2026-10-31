@@ -40,6 +40,10 @@ import {
   buildTopicsIndex,
   readUserTopics,
 } from "../data/topics-store.js";
+import {
+  listExternalSources,
+  readExternalSource,
+} from "../data/external-store.js";
 
 const app = new Hono();
 
@@ -385,6 +389,36 @@ function knownRepoFullNames(): Set<string> {
     return new Set<string>();
   }
 }
+
+/** External feed sources (GH #31): index of every JSON-store collector. */
+app.get("/api/external", (c) => {
+  try {
+    return c.json({ sources: listExternalSources() });
+  } catch (err) {
+    console.error("Error in /api/external:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/** External feed sources (GH #31): latest snapshot of one source. */
+app.get("/api/external/:source", (c) => {
+  try {
+    const source = c.req.param("source");
+    const label = c.req.query("label");
+    const payload = readExternalSource(source, label);
+    if (!payload) {
+      return c.json({ error: "Source not found or not synced yet" }, 404);
+    }
+    return c.json(payload);
+  } catch (err) {
+    console.error("Error in /api/external/:source:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
 
 /** GitHub Topics datasource (GH #24): index of the synced topics. */
 app.get("/api/topics", (c) => {

@@ -263,6 +263,67 @@ export const openApiSpec = {
       },
     },
 
+    "/api/external": {
+      get: {
+        tags: ["External"],
+        summary: "外部数据源索引（GH #31）",
+        description:
+          "全部 JSON 存储采集器（Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs）的最新快照元信息。",
+        responses: {
+          "200": {
+            description: "数据源索引",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    sources: { type: "array", items: { type: "object" } },
+                  },
+                },
+              },
+            },
+          },
+          "500": jsonError("服务器错误"),
+        },
+      },
+    },
+
+    "/api/external/{source}": {
+      get: {
+        tags: ["External"],
+        summary: "单个外部数据源的最新快照（GH #31）",
+        parameters: [
+          {
+            name: "source",
+            in: "path",
+            required: true,
+            description:
+              "producthunt | yc | a16z | hackernews | huggingface | github-new | devto | lobsters",
+            schema: { type: "string" },
+          },
+          {
+            name: "label",
+            in: "query",
+            required: false,
+            description: "manifest 中的快照标签（默认最新）",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "该源的 items 快照",
+            content: {
+              "application/json": {
+                schema: { type: "object" },
+              },
+            },
+          },
+          "404": jsonError("源不存在或尚未同步"),
+          "500": jsonError("服务器错误"),
+        },
+      },
+    },
+
     "/api/topics": {
       get: {
         tags: ["Topics"],

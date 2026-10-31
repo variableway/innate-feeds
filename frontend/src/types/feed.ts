@@ -65,7 +65,7 @@ export interface FeedStats {
   topLanguages: { name: string; count: number }[];
 }
 
-export type DigestSourceId = "ruanyf-weekly" | "github-daily";
+export type DigestSourceId = "ruanyf-weekly" | "github-daily" | "hellogithub";
 
 export interface DigestFeedItem {
   id: string;
