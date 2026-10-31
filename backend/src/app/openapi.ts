@@ -631,7 +631,7 @@ export const openApiSpec = {
         summary: "插件分类",
         responses: {
           "200": {
-            description: "固定 20 个 awesome-dsh-plugin 分类",
+            description: "固定 23 个 awesome-dsh-plugin 分类",
             content: {
               "application/json": {
                 schema: {
@@ -1262,12 +1262,22 @@ export const openApiSpec = {
         properties: {
           slug: { type: "string" },
           name: { type: "string" },
-          description: { type: "string", nullable: true },
-          author: { type: "string", nullable: true },
-          repoUrl: { type: "string", nullable: true },
-          stars: { type: "integer", nullable: true },
-          category: { type: "string", nullable: true },
+          tagline: { type: "string" },
+          taglineZh: { type: "string", nullable: true },
+          description: { type: "string" },
+          content: { type: "string" },
+          stars: { type: "integer" },
+          screenshotUrl: { type: "string", nullable: true },
+          screenshots: { type: "array", items: { type: "string" } },
+          bundleCategory: { type: "string" },
+          bundleCategoryZh: { type: "string" },
+          repositoryUrl: { type: "string" },
+          websiteUrl: { type: "string" },
           installCommand: { type: "string", nullable: true },
+          npmPackage: { type: "string", nullable: true },
+          tarballUrl: { type: "string", nullable: true },
+          publishedAt: { type: "string", nullable: true },
+          starsUpdatedAt: { type: "string" },
         },
       },
 

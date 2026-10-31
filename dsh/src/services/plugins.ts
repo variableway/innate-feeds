@@ -50,7 +50,7 @@ function searchStaticPlugins(
   if (q) {
     items = items.filter((plugin) => {
       const hay =
-        `${plugin.name} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
+        `${plugin.name} ${plugin.npmPackage ?? ""} ${plugin.tagline} ${plugin.taglineZh ?? ""}`.toLowerCase();
       return hay.includes(q);
     });
   }

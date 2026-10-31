@@ -1,6 +1,11 @@
 /** 数据源标识 */
 export type FeedSource =
-  "producthunt" | "yc" | "a16z" | "github-topics" | "trendshift";
+  | "producthunt"
+  | "yc"
+  | "a16z"
+  | "github-topics"
+  | "trendshift"
+  | "awesome-dsh";
 
 /** 统一外部 Feed Item 接口 */
 export interface ExternalFeedItem {

@@ -1,5 +1,17 @@
-/** 20 fixed awesome-dsh-plugin categories. */
+/** 23 fixed awesome-dsh-plugin categories. */
 export const PLUGIN_CATEGORIES = [
+  {
+    id: "agi",
+    label: "AGI Architecture Exploration",
+    labelZh: "AGI 架构探索",
+    emoji: "🧬",
+  },
+  {
+    id: "identity",
+    label: "Identity & Communication",
+    labelZh: "身份与通信",
+    emoji: "🪪",
+  },
   { id: "ui", label: "UI Enhancements", labelZh: "UI 增强", emoji: "🎨" },
   { id: "usage", label: "Usage & Billing", labelZh: "用量与计费", emoji: "💰" },
   { id: "theme", label: "Themes & Appearance", labelZh: "主题与外观", emoji: "🎭" },
@@ -20,11 +32,19 @@ export const PLUGIN_CATEGORIES = [
   { id: "remote", label: "Remote & Mobile", labelZh: "远程与移动端", emoji: "📱" },
   { id: "market", label: "Plugin Markets & Managers", labelZh: "插件市场与管理", emoji: "🛒" },
   { id: "fun", label: "Just for Fun", labelZh: "娱乐", emoji: "🎮" },
+  {
+    id: "wsl",
+    label: "WSL & Windows Interop",
+    labelZh: "WSL 与 Windows 互操作",
+    emoji: "🪟",
+  },
 ] as const;
 
 export type PluginCategoryId = (typeof PLUGIN_CATEGORIES)[number]["id"];
 
-export const PLUGIN_CATEGORY_IDS = PLUGIN_CATEGORIES.map((c) => c.id) as PluginCategoryId[];
+export const PLUGIN_CATEGORY_IDS = PLUGIN_CATEGORIES.map(
+  (c) => c.id,
+) as PluginCategoryId[];
 
 export function pluginCategoryById(id: string) {
   return PLUGIN_CATEGORIES.find((c) => c.id === id);

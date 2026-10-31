@@ -11,6 +11,7 @@
 | **a16z Portfolio** | 静态列表 + GitHub API 补充 | `~/.innate/a16z/` | 月度手动更新 | `bun run sync:a16z` |
 | **GitHub Topics** | GitHub Search API（按 topic 搜索，取 top N） | `~/.innate/github-topics/` | 每日 | `bun run sync:topics` |
 | **Trendshift** | 静态 JSON API（主）/ trendshift.io RSC 抓取（备） | `~/.innate/trendshift/` | 每日 | `bun run sync:trendshift` |
+| **Awesome DSH** | 上游发布的 market index + GitHub GraphQL Stars 补充 | `~/.innate/awesome-dsh/plugin-catalog.json`（本地，不提交） | 每日 | `bun run sync:awesome-dsh` |
 | **统一同步** | 编排以上所有源 | 各自目录 | — | `bun run sync:vc` |
 
 ## Product Hunt
@@ -224,6 +225,41 @@ bun src/app/cli.ts sync trendshift --source auto    # CDN 失败时回退 scrape
 
 `GET /api/trendshift`（切片索引）、`GET /api/trendshift/:timeframe?language=all&period=…`（本地优先、公共 CDN 兜底）。`bun run data:export` 把本地切片导出到 `frontend/public/data/trendshift/`，前端 `/trending-shift` 页在静态模式下读该目录（缺片时同样兜底 CDN）。
 
+Trendshift 的增量机制是：每个 timeframe/language 切片按 `periodKey` 保留历史期次；
+一次采集只覆盖当前期次，保存时 `mergeSliceRows()` 以 `(periodKey, fullName)` 合并，
+incoming 覆盖同 key 旧行，历史期次不丢失。
+
+## Awesome DSH Plugins（GH #30）
+
+DeepSeek Harness 插件目录不需要 clone 整个上游 awesome-list。上游站点发布一个
+format-1 market index（`https://awesome-dsh-plugin.com/index.json`），包含双语文案、
+GitHub 仓库、npm 包、版本与发布时间。`backend/src/collector/awesome-dsh.ts` 把它归一化为
+`MarketCatalogPlugin[]`，再用 GitHub GraphQL 按 100 个仓库一批刷新 `stargazerCount`。
+
+### 命令与产物
+
+```bash
+cd backend
+bun run sync:awesome-dsh
+```
+
+产物：
+
+- `~/.innate/awesome-dsh/plugin-catalog.json` — API 模式加载的规范化目录，只保存在本机；
+- `frontend/public/data/plugins.json` — 由 `bun run data:export` 生成的静态目录，已 `.gitignore`，不在 CI 中提交。
+
+默认列表排序是 `stars.desc`，因此每次同步后 UI 自动按最新 Stars 排名。同步摘要会报告
+新增 / 移除 / Stars 变化数量；已删除仓库的 GraphQL lookup 会被跳过。
+
+### 更新机制
+
+1. 拉取上游 market index，校验 `format: 1`。
+2. 归一化字段并复用旧 `screenshots.json` 中可匹配的截图。
+3. 通过 GitHub GraphQL 刷新 Stars；无 token 时保留上次 Stars。
+4. 写入本机 plugin catalog；`data:export` / Pages deploy 再输出静态 JSON（不提交）。
+
+老的 `data/plugins/*.yml` 路径仍作为 `plugin-catalog.json` 缺失时的兼容源保留。
+
 ## 统一同步
 
 一次命令同步所有源：
@@ -266,6 +302,9 @@ bun run topics:list                                   # list all topics
 # Trendshift
 bun run sync:trendshift                               # all timeframes, "all" language slice
 bun src/app/cli.ts sync trendshift --language '*'     # every language slice
+
+# Awesome DSH
+bun run sync:awesome-dsh
 
 # Unified
 bun run sync:vc                                       # all sources
