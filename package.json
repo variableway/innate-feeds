@@ -20,6 +20,7 @@
     "data:sync:digest": "cd backend && bun run sync:digest",
     "data:sync:window": "cd backend && bun run sync:window",
     "data:sync:trendshift": "cd backend && bun run sync:trendshift",
+    "data:sync:dsh-catalog": "cd backend && bun run sync:dsh-catalog",
     "data:sync:topics": "cd backend && bun run sync:topics",
     "data:stats": "cd backend && bun run stats",
     "data:export": "cd backend && bun run export:incremental",

@@ -35,7 +35,8 @@ innate-feeds/
 │   │   │   ├── yc-companies.ts   # YC Companies API collector
 │   │   │   ├── a16z-portfolio.ts # a16z Portfolio collector
 │   │   │   ├── github-topics.ts  # GitHub Topics search collector (top N + skip rules)
-│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator
+│   │   │   ├── vc-portfolio.ts   # Unified external collector orchestrator
+│   │   └── dsh-catalog.ts    # awesome-dsh-plugin vendored snapshot refresh (GH #27)
 │   │   ├── data/            # Static data export/import utilities
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
@@ -156,7 +157,7 @@ The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http:
 
 The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, top-level `dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend reads the vendored catalog at `awesome/awesome-dsh-plugin/data` (override with `DSH_PLUGIN_DATA_DIR`) via the extracted datasource in `backend/src/dsh/`. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. The old Next.js prototype (`dsh-plugin-directory/`) was deleted in sprint-2.
 
-Refresh the vendored catalog from the upstream repo (https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) by copying its `data/` directory over `awesome/awesome-dsh-plugin/data/`, then re-running `bun run data:export` (regenerates `plugins.json`) — no other wiring needed.
+Refresh the vendored catalog with `bun run data:sync:dsh-catalog` (GH #27): downloads the upstream repo tarball (`awesome-dsh-plugin/awesome-dsh-plugin@main`, single request), keeps `plugins/*.yml` + `stars/screenshots/added-dates/downloads.json`, overlays fresh stars/dates from the daily-published npm package `dsh-plugin-catalog` (the git-committed maps are only a floor upstream), validates (≥500 plugin files, JSON maps parse), then atomically replaces the vendored `data/` (staging dir + mismatch check). Re-run `bun run data:export` to regenerate `plugins.json`. The daily Pages deploy runs this sync automatically and commits the result. Manual copy from a local upstream clone also still works — no other wiring needed.
 
 ### Sync data from GitHub
 
@@ -222,6 +223,11 @@ bun run topics:list                                                # list availa
 bun run sync:trendshift                                            # all timeframes, "all" language slice
 bun src/app/cli.ts sync trendshift --language python,rust          # specific language slices
 bun src/app/cli.ts sync trendshift --source scrape --timeframe daily  # fallback scraper
+
+# DSH plugin catalog — refresh vendored awesome/awesome-dsh-plugin/data (GH #27)
+bun run data:sync:dsh-catalog                                      # tarball + npm overlay, write + validate
+cd backend && bun src/app/cli.ts sync dsh-catalog --dry-run        # fetch + validate only
+cd backend && bun src/app/cli.ts sync dsh-catalog --ref some-branch # non-main upstream ref
 
 # Unified sync (all external sources)
 bun run sync:vc
@@ -416,6 +422,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/a16z-portfolio.ts` — a16z AI Portfolio static list + GitHub enrichment. Stores JSON to `~/.innate/a16z/`.
 - `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Keeps the top N (default 50) repos per topic and skips repos already in the feeds / already seen in that topic (GH #24). Stores JSON to `~/.innate/github-topics/`.
 - `collector/vc-portfolio.ts` — Unified orchestrator for all external collectors.
+- `collector/dsh-catalog.ts` — Vendored awesome-dsh-plugin snapshot refresh (GH #27): upstream tarball + npm `dsh-plugin-catalog` stars/dates overlay, validation + atomic replace of `awesome/awesome-dsh-plugin/data`.
 - `collector/shared/types.ts` — Shared types (`ExternalFeedItem`, `FeedCollector`, `FeedSource`).
 - `collector/shared/storage.ts` — JSON storage abstraction (manifest + saveItems).
 - `collector/shared/http.ts` — HTTP utilities (fetchJson, fetchHtml, retry).
@@ -471,6 +478,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
 | Changing the plugin directory site | `dsh/src/` (domain plugin @innate/domain-dsh) |
 | Changing plugin data loading | `backend/src/dsh/catalog.ts`, `backend/src/dsh/routes.ts` |
+| Changing the vendored catalog refresh | `backend/src/collector/dsh-catalog.ts` |
 
 ## Security considerations
 
