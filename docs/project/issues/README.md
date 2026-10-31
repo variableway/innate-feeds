@@ -9,6 +9,7 @@
 | [dsh-catalog-sync](./dsh-catalog-sync.md) | awesome-dsh-plugin 目录快照自动更新（GH #27） | vertical | done | — | — | — |
 | [awesome-dsh-plugin-update](./awesome-dsh-plugin-update.md) | Awesome DSH 插件目录更新与 Stars 排名（GH #30） | vertical | done | codex | — | [tasks/issues/awesome-dsh-plugin-update.md](../tasks/issues/awesome-dsh-plugin-update.md) |
 | [local-data-update](./local-data-update.md) | 本地数据更新 + Orca 定时 + 数据源 review（GH #31） | vertical | done | claude | — | [tasks/issues/local-data-update.md](../tasks/issues/local-data-update.md) |
+| [producthunt-zero-items](./producthunt-zero-items.md) | Product Hunt 0 条无报错（GH #33） | vertical | open | — | — | — |
 | [sheet-display](./sheet-display.md) | Epic：后台数据表 | horizontal | open | human | [admin-data-sheet](../features/admin-data-sheet.md) | — |
 | [sheet-display-shell](./sheet-display-shell.md) | 路由 + Sidebar 入口 | horizontal | open | claude-code | admin-data-sheet | [tasks/issues/sheet-display-shell.md](../tasks/issues/sheet-display-shell.md) |
 | [sheet-display-api](./sheet-display-api.md) | Admin 只读 API | horizontal | open | code-buddy | admin-data-sheet | [tasks/issues/sheet-display-api.md](../tasks/issues/sheet-display-api.md) |

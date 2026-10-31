@@ -22,3 +22,4 @@
 
 - **数据不提交 GitHub，只提交代码**：数据落 `~/.innate`（仓库外）；`frontend/public/data/external/` 已加入 `.gitignore`；Pages CI 在 runner 内生成数据产物、只上传不提交。
 - HuggingFace 采集器在部分网络（含本机）不可达会跳过，CI 正常。
+- **后续（GH #33）**：2026-10-31 首跑发现 Product Hunt 抓到 0 条且无报错，已把 producthunt 从 `data:sync:external`（每日编排）移除，修复后再恢复。
