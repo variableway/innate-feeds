@@ -254,7 +254,7 @@ bun run sync:awesome-dsh
 bun src/app/cli.ts sync dsh-catalog --dry-run
 
 # Unified sync (all 8 JSON-store external sources; per-source failures don't abort)
-bun run sync:vc                # = sync:external
+bun run sync:vc                # all 8 sources; root data:sync:external (daily) excludes producthunt pending GH #33
 bun src/app/cli.ts sync vc --source producthunt --source hackernews
 
 # GH #31 local daily update (trending+starred recent + digest + topics + external)

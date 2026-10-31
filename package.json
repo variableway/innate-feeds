@@ -43,7 +43,7 @@
     "dev:seed": "bun run data:seed && bun run dev",
     "predev": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
     "predev:seed": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
-    "data:sync:external": "cd backend && bun run sync:vc",
+    "data:sync:external": "cd backend && bun src/app/cli.ts sync vc --source yc --source a16z --source hackernews --source huggingface --source github-new --source devto --source lobsters",
     "data:sync:hackernews": "cd backend && bun run sync:hackernews",
     "data:sync:huggingface": "cd backend && bun run sync:huggingface",
     "data:sync:github-new": "cd backend && bun run sync:github-new",
