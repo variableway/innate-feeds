@@ -44,7 +44,7 @@ innate-feeds 的数据 = **GitHub 侧**（SQLite 为主）+ **外部 JSON 源**�
 | 5 | GitHub Topics（top N/主题） | `collector/github-topics.ts` | `~/.innate/github-topics/topics/` | `/api/topics(+/+(:topic))` | `/topics` | 每日 |
 | 6 | Trendshift 排名归档 | `collector/trendshift.ts` | `~/.innate/trendshift/` | `/api/trendshift(/:timeframe)` | `/trending-shift` | 每日 |
 | 7 | Awesome DSH 插件目录 | `collector/awesome-dsh.ts` + `dsh/catalog.ts` | `~/.innate/awesome-dsh/` | `/api/plugins*` | `/dsh`（独立域） | 每日 |
-| 8 | Product Hunt 榜单 | `collector/producthunt.ts` | `~/.innate/producthunt/` | `/api/external/producthunt` | `/feeds/producthunt` | 每日 |
+| 8 | Product Hunt 榜单 | `collector/producthunt.ts` | `~/.innate/producthunt/` | `/api/external/producthunt` | `/feeds/producthunt` | 手动（每日编排暂移出，GH #33） |
 | 9 | YC Companies | `collector/yc-companies.ts` | `~/.innate/yc/` | `/api/external/yc` | `/feeds/yc` | 每周 |
 | 10 | a16z Portfolio | `collector/a16z-portfolio.ts` | `~/.innate/a16z/` | `/api/external/a16z` | `/feeds/a16z` | 每月 |
 | 11 | **Hacker News**（GH #31 新增） | `collector/hackernews.ts` | `~/.innate/hackernews/` | `/api/external/hackernews` | `/feeds/hackernews` | 每日 |
@@ -82,9 +82,9 @@ innate-feeds 的数据 = **GitHub 侧**（SQLite 为主）+ **外部 JSON 源**�
 
 | 路径 | 命令 | 覆盖源 |
 |---|---|---|
-| 本地一键（GH #31，Orca 定时任务调用） | `bun run data:update:local` | trending daily + starred recent + digest(90d) + topics + 全部外部 JSON 源 |
+| 本地一键（GH #31，Orca 定时任务调用） | `bun run data:update:local` | trending daily + starred recent + digest(90d) + topics + 外部 JSON 源（Product Hunt 暂除外，GH #33） |
 | 本地全量窗口 | `bun run data:update:window` | 90 天窗（trending+starred+digest+README）+ 导出 |
-| 外部源统一 | `bun run sync:vc`（backend `sync:external`） | #8–#15 八源，单源失败不中断 |
+| 外部源统一 | `bun run sync:vc`（backend `sync:external`） | #8–#15 八源全量，单源失败不中断；root `data:sync:external`（每日编排）暂排除 #8 Product Hunt（GH #33） |
 | 单源 | `bun run data:sync:topics` / `data:sync:hackernews` / … | 见 `package.json` scripts |
 | Pages CI | `.github/workflows/deploy.yml`（cron 每日） | window + topics + 外部源（GH #31 新增步骤），产物只上传不提交 |
 
