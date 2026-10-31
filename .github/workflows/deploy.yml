@@ -135,6 +135,13 @@ jobs:
           echo "days=$DAYS" >> "$GITHUB_OUTPUT"
           echo "Sync mode=$MODE days=$DAYS skip_readme=${SKIP_README:-false} force_readme=${FORCE_README:-false}"
 
+      - name: Sync DSH plugin catalog (GH #27, refresh vendored awesome/ snapshot)
+        if: steps.sync.outputs.mode == 'window' || steps.sync.outputs.mode == 'daily'
+        run: |
+          set -euo pipefail
+          cd backend
+          bun src/app/cli.ts sync dsh-catalog
+
       - name: Sync GitHub Topics (top 50 per topic, GH #24)
         if: steps.sync.outputs.mode == 'window' || steps.sync.outputs.mode == 'daily'
         run: |
@@ -173,7 +180,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add frontend/public/data/
+          git add frontend/public/data/ awesome/awesome-dsh-plugin/data/
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else

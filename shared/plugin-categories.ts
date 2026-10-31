@@ -20,6 +20,11 @@ export const PLUGIN_CATEGORIES = [
   { id: "remote", label: "Remote & Mobile", labelZh: "远程与移动端", emoji: "📱" },
   { id: "market", label: "Plugin Markets & Managers", labelZh: "插件市场与管理", emoji: "🛒" },
   { id: "fun", label: "Just for Fun", labelZh: "娱乐", emoji: "🎮" },
+  // Upstream categories added after the initial 20 (refreshed vendored
+  // catalog, GH #27): keep ids verbatim from upstream data/plugins/*.yml.
+  { id: "wsl", label: "WSL & Windows", labelZh: "WSL 与 Windows", emoji: "🪟" },
+  { id: "identity", label: "Identity & Accounts", labelZh: "身份与账号", emoji: "🪪" },
+  { id: "agi", label: "AGI & Agent Frameworks", labelZh: "AGI 与智能体框架", emoji: "🧬" },
 ] as const;
 
 export type PluginCategoryId = (typeof PLUGIN_CATEGORIES)[number]["id"];
