@@ -1,6 +1,6 @@
 {
   "topic": "ai-coding",
-  "fetchedAt": "2026-10-30T14:48:48.508Z",
+  "fetchedAt": "2026-10-31T14:16:31.972Z",
   "count": 50,
   "newCount": 31,
   "existingCount": 19,
@@ -13,9 +13,9 @@
       "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
       "url": "https://github.com/rtk-ai/rtk",
       "homepage": "https://www.rtk-ai.app",
-      "stars": 85058,
-      "forks": 5427,
-      "watchers": 85058,
+      "stars": 85120,
+      "forks": 5437,
+      "watchers": 85120,
       "language": "Rust",
       "topics": [
         "agentic-coding",
@@ -38,8 +38,8 @@
         "url": "https://github.com/rtk-ai"
       },
       "createdAt": "2026-01-22T16:54:16Z",
-      "updatedAt": "2026-10-30T14:36:00Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:11:08Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -48,12 +48,12 @@
       "repoId": 1134426800,
       "fullName": "sickn33/agentic-awesome-skills",
       "name": "agentic-awesome-skills",
-      "description": "2,877+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. CLI, MCP and plugins.",
+      "description": "2,884+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. CLI, MCP and plugins.",
       "url": "https://github.com/sickn33/agentic-awesome-skills",
       "homepage": "https://aaskills.tech/",
-      "stars": 48809,
-      "forks": 7085,
-      "watchers": 48809,
+      "stars": 48888,
+      "forks": 7096,
+      "watchers": 48888,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -83,8 +83,8 @@
         "url": "https://github.com/sickn33"
       },
       "createdAt": "2026-01-14T17:48:09Z",
-      "updatedAt": "2026-10-30T14:41:43Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:13:12Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -96,9 +96,9 @@
       "description": "The world's most flexible commerce platform for agents and developers",
       "url": "https://github.com/medusajs/medusa",
       "homepage": "https://medusajs.com",
-      "stars": 37013,
-      "forks": 5473,
-      "watchers": 37013,
+      "stars": 37029,
+      "forks": 5481,
+      "watchers": 37029,
       "language": "TypeScript",
       "topics": [
         "ai-coding",
@@ -119,8 +119,8 @@
         "url": "https://github.com/medusajs"
       },
       "createdAt": "2020-01-18T13:39:04Z",
-      "updatedAt": "2026-10-30T14:48:32Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:56:21Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -132,9 +132,9 @@
       "description": "A reliable coding agent for complex software engineering tasks.",
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "homepage": "http://reasonix.io/",
-      "stars": 36007,
-      "forks": 2497,
-      "watchers": 36007,
+      "stars": 36017,
+      "forks": 2499,
+      "watchers": 36017,
       "language": "Go",
       "topics": [
         "agent",
@@ -162,8 +162,8 @@
         "url": "https://github.com/esengine"
       },
       "createdAt": "2026-04-21T08:27:02Z",
-      "updatedAt": "2026-10-30T14:26:59Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:16:15Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -175,9 +175,9 @@
       "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
       "url": "https://github.com/tirth8205/code-review-graph",
       "homepage": "https://code-review-graph.com",
-      "stars": 32502,
-      "forks": 2956,
-      "watchers": 32502,
+      "stars": 32518,
+      "forks": 2959,
+      "watchers": 32518,
       "language": "Python",
       "topics": [
         "ai-coding",
@@ -199,8 +199,8 @@
         "url": "https://github.com/tirth8205"
       },
       "createdAt": "2026-02-26T17:25:13Z",
-      "updatedAt": "2026-10-30T14:30:41Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:02:52Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -212,9 +212,9 @@
       "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
       "url": "https://github.com/oraios/serena",
       "homepage": "https://oraios.github.io/serena",
-      "stars": 30876,
-      "forks": 2105,
-      "watchers": 30876,
+      "stars": 30930,
+      "forks": 2112,
+      "watchers": 30930,
       "language": "Python",
       "topics": [
         "agent",
@@ -236,8 +236,8 @@
         "url": "https://github.com/oraios"
       },
       "createdAt": "2025-03-23T22:35:24Z",
-      "updatedAt": "2026-10-30T13:36:02Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:49:42Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -249,9 +249,9 @@
       "description": "An open-source AI coding agent that lives in your terminal.",
       "url": "https://github.com/QwenLM/qwen-code",
       "homepage": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
-      "stars": 28834,
-      "forks": 3288,
-      "watchers": 28834,
+      "stars": 28848,
+      "forks": 3294,
+      "watchers": 28848,
       "language": "TypeScript",
       "topics": [
         "agentic",
@@ -273,8 +273,8 @@
         "url": "https://github.com/QwenLM"
       },
       "createdAt": "2025-06-26T01:37:46Z",
-      "updatedAt": "2026-10-30T14:07:15Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:15:30Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -286,9 +286,9 @@
       "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
       "url": "https://github.com/Kilo-Org/kilocode",
       "homepage": "https://kilo.ai/",
-      "stars": 27798,
-      "forks": 3315,
-      "watchers": 27798,
+      "stars": 27817,
+      "forks": 3319,
+      "watchers": 27817,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -310,8 +310,8 @@
         "url": "https://github.com/Kilo-Org"
       },
       "createdAt": "2025-03-10T15:34:26Z",
-      "updatedAt": "2026-10-30T12:17:36Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:43:32Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -323,9 +323,9 @@
       "description": "Paradev (formerly Superset) is an agentic IDE to orchestrate 100+ coding agents in parallel. Run any agent with your own subscription.",
       "url": "https://github.com/ParadevAI/Paradev",
       "homepage": "https://paradev.com",
-      "stars": 15749,
-      "forks": 1407,
-      "watchers": 15749,
+      "stars": 15778,
+      "forks": 1409,
+      "watchers": 15778,
       "language": "TypeScript",
       "topics": [
         "ade",
@@ -355,8 +355,8 @@
         "url": "https://github.com/ParadevAI"
       },
       "createdAt": "2025-10-21T09:16:51Z",
-      "updatedAt": "2026-10-30T14:18:55Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:45:57Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -368,9 +368,9 @@
       "description": "Plan, run and supervise fleets of agents from task to merged PR. Desktop (macOS, Windows, Linux) + iPhone & Android apps.  Supports Claude Code, Codex & 35+ coding agents.",
       "url": "https://github.com/OrchestratorInc/agent-orchestrator",
       "homepage": "https://orchestrator.inc",
-      "stars": 13911,
-      "forks": 1893,
-      "watchers": 13911,
+      "stars": 13950,
+      "forks": 1898,
+      "watchers": 13950,
       "language": "Go",
       "topics": [
         "agent-fleet",
@@ -400,8 +400,8 @@
         "url": "https://github.com/OrchestratorInc"
       },
       "createdAt": "2026-02-13T09:52:36Z",
-      "updatedAt": "2026-10-30T14:35:47Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:06:12Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -413,9 +413,9 @@
       "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
       "url": "https://github.com/zilliztech/claude-context",
       "homepage": "https://github.com/zilliztech/claude-context/tree/master/docs",
-      "stars": 12660,
-      "forks": 938,
-      "watchers": 12660,
+      "stars": 12662,
+      "forks": 939,
+      "watchers": 12662,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -445,8 +445,8 @@
         "url": "https://github.com/zilliztech"
       },
       "createdAt": "2025-06-06T02:12:47Z",
-      "updatedAt": "2026-10-29T22:16:59Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:40:08Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -458,9 +458,9 @@
       "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
       "url": "https://github.com/cobusgreyling/loop-engineering",
       "homepage": "https://cobusgreyling.github.io/loop-engineering/",
-      "stars": 11669,
-      "forks": 1572,
-      "watchers": 11669,
+      "stars": 11672,
+      "forks": 1574,
+      "watchers": 11672,
       "language": "TypeScript",
       "topics": [
         "agentic-ai",
@@ -487,8 +487,8 @@
         "url": "https://github.com/cobusgreyling"
       },
       "createdAt": "2026-06-09T06:28:20Z",
-      "updatedAt": "2026-10-30T08:02:46Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T06:03:59Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -500,9 +500,9 @@
       "description": "Free, local tool to track AI coding token usage and cost across 37 tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model, project, and task. npx codeburn",
       "url": "https://github.com/getagentseal/codeburn",
       "homepage": "https://codeburn.app/",
-      "stars": 11621,
-      "forks": 898,
-      "watchers": 11621,
+      "stars": 11633,
+      "forks": 900,
+      "watchers": 11633,
       "language": "TypeScript",
       "topics": [
         "ai-coding",
@@ -524,8 +524,8 @@
         "url": "https://github.com/getagentseal"
       },
       "createdAt": "2026-04-13T22:11:53Z",
-      "updatedAt": "2026-10-30T13:06:08Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T10:51:13Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -537,9 +537,9 @@
       "description": "Open source factory for one-shot engineering",
       "url": "https://github.com/superplanehq/superplane",
       "homepage": "https://superplane.com",
-      "stars": 8456,
+      "stars": 8489,
       "forks": 685,
-      "watchers": 8456,
+      "watchers": 8489,
       "language": "Go",
       "topics": [
         "agent-orchestration",
@@ -560,8 +560,8 @@
         "url": "https://github.com/superplanehq"
       },
       "createdAt": "2025-05-07T17:48:39Z",
-      "updatedAt": "2026-10-30T14:31:28Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:03:36Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -573,9 +573,9 @@
       "description": "🦸 AI 编程超能力 · 中文增强版 — superpowers（250k+ ⭐）完整汉化 + 4 个中国原创 skills，让 Claude Code / Copilot CLI / Hermes Agent / Cursor / Windsurf / Kiro / Gemini CLI / Qoder 等 26 款 AI 编程工具真正会干活",
       "url": "https://github.com/jnMetaCode/superpowers-zh",
       "homepage": "https://sp.aiolaola.com",
-      "stars": 8431,
-      "forks": 778,
-      "watchers": 8431,
+      "stars": 8435,
+      "forks": 780,
+      "watchers": 8435,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -601,39 +601,8 @@
         "url": "https://github.com/jnMetaCode"
       },
       "createdAt": "2026-03-20T00:12:39Z",
-      "updatedAt": "2026-10-30T11:58:20Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
-      "isNew": true,
-      "existing": true
-    },
-    {
-      "id": "gh-topic-1040397982",
-      "repoId": 1040397982,
-      "fullName": "automazeio/ccpm",
-      "name": "ccpm",
-      "description": "Project management skill system for Agents that uses GitHub Issues and Git worktrees for parallel agent execution.",
-      "url": "https://github.com/automazeio/ccpm",
-      "homepage": "https://automaze.io",
-      "stars": 8423,
-      "forks": 843,
-      "watchers": 8423,
-      "language": "Shell",
-      "topics": [
-        "ai-agents",
-        "ai-coding",
-        "claude",
-        "claude-code",
-        "project-management",
-        "vibe-coding"
-      ],
-      "owner": {
-        "login": "automazeio",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/125381035?v=4",
-        "url": "https://github.com/automazeio"
-      },
-      "createdAt": "2025-08-18T23:20:08Z",
-      "updatedAt": "2026-10-30T04:36:15Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:38:16Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -645,9 +614,9 @@
       "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
       "url": "https://github.com/mvschwarz/openrig",
       "homepage": "https://openrig.dev",
-      "stars": 8329,
-      "forks": 687,
-      "watchers": 8329,
+      "stars": 8435,
+      "forks": 694,
+      "watchers": 8435,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -668,8 +637,39 @@
         "url": "https://github.com/mvschwarz"
       },
       "createdAt": "2026-04-01T06:22:40Z",
-      "updatedAt": "2026-10-30T14:33:33Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:05:19Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
+      "isNew": true,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-1040397982",
+      "repoId": 1040397982,
+      "fullName": "automazeio/ccpm",
+      "name": "ccpm",
+      "description": "Project management skill system for Agents that uses GitHub Issues and Git worktrees for parallel agent execution.",
+      "url": "https://github.com/automazeio/ccpm",
+      "homepage": "https://automaze.io",
+      "stars": 8424,
+      "forks": 843,
+      "watchers": 8424,
+      "language": "Shell",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "project-management",
+        "vibe-coding"
+      ],
+      "owner": {
+        "login": "automazeio",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/125381035?v=4",
+        "url": "https://github.com/automazeio"
+      },
+      "createdAt": "2025-08-18T23:20:08Z",
+      "updatedAt": "2026-10-31T02:00:45Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -681,9 +681,9 @@
       "description": "Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, personas, and optional bounded review. Open source, no agent lock-in.",
       "url": "https://github.com/Gentleman-Programming/gentle-ai",
       "homepage": "https://gentlemanprogramming.com/",
-      "stars": 8142,
-      "forks": 874,
-      "watchers": 8142,
+      "stars": 8155,
+      "forks": 877,
+      "watchers": 8155,
       "language": "Go",
       "topics": [
         "agent-skills",
@@ -710,8 +710,8 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-02-27T23:28:01Z",
-      "updatedAt": "2026-10-30T14:12:53Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T11:49:01Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -723,9 +723,9 @@
       "description": "Git as the control plane for AI-native software engineering | AI Native 软件工程的 Git 变更控制手册",
       "url": "https://github.com/xirong/my-git",
       "homepage": "https://github.com/xirong/my-git",
-      "stars": 7398,
+      "stars": 7401,
       "forks": 2471,
-      "watchers": 7398,
+      "watchers": 7401,
       "language": "HTML",
       "topics": [
         "ai-coding",
@@ -743,8 +743,8 @@
         "url": "https://github.com/xirong"
       },
       "createdAt": "2015-05-30T14:02:04Z",
-      "updatedAt": "2026-10-30T04:31:52Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T03:18:35Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -756,9 +756,9 @@
       "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
       "url": "https://github.com/JetBrains/thinkrail",
       "homepage": "https://thinkrail.ai/",
-      "stars": 6410,
-      "forks": 351,
-      "watchers": 6410,
+      "stars": 6769,
+      "forks": 368,
+      "watchers": 6769,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -781,8 +781,8 @@
         "url": "https://github.com/JetBrains"
       },
       "createdAt": "2026-07-08T07:40:43Z",
-      "updatedAt": "2026-10-30T14:47:03Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:15:19Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -794,9 +794,9 @@
       "description": "The most comprehensive Claude Code guide: agentic workflows, hooks, skills, MCP servers, quizzes, and production-ready templates. 430K+ lines.",
       "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
       "homepage": "https://cc.bruniaux.com/",
-      "stars": 6296,
-      "forks": 820,
-      "watchers": 6296,
+      "stars": 6304,
+      "forks": 821,
+      "watchers": 6304,
       "language": "Python",
       "topics": [
         "agentic-coding",
@@ -826,8 +826,8 @@
         "url": "https://github.com/FlorianBruniaux"
       },
       "createdAt": "2026-01-09T13:42:10Z",
-      "updatedAt": "2026-10-30T14:15:29Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:30:59Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -839,9 +839,9 @@
       "description": "A fast, good-looking, AI-friendly terminal for the Mac.",
       "url": "https://github.com/tw93/Kaku",
       "homepage": "https://kaku.fun",
-      "stars": 6174,
-      "forks": 326,
-      "watchers": 6174,
+      "stars": 6176,
+      "forks": 327,
+      "watchers": 6176,
       "language": "Rust",
       "topics": [
         "ai-coding",
@@ -859,8 +859,8 @@
         "url": "https://github.com/tw93"
       },
       "createdAt": "2026-02-07T13:00:49Z",
-      "updatedAt": "2026-10-30T10:27:23Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:57:37Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -872,9 +872,9 @@
       "description": "Run any process, on your machine or in an AI agent's environment, as if it were a pod in your Kubernetes cluster: real env vars, DNS, network, traffic.",
       "url": "https://github.com/metalbear-co/mirrord",
       "homepage": "https://metalbear.com/mirrord",
-      "stars": 5393,
-      "forks": 223,
-      "watchers": 5393,
+      "stars": 5396,
+      "forks": 225,
+      "watchers": 5396,
       "language": "Rust",
       "topics": [
         "agent-skills",
@@ -904,8 +904,8 @@
         "url": "https://github.com/metalbear-co"
       },
       "createdAt": "2022-02-01T16:42:30Z",
-      "updatedAt": "2026-10-30T09:35:29Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T10:52:35Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -917,9 +917,9 @@
       "description": "企业级 AI 办公工作台",
       "url": "https://github.com/chaitin/MonkeyCode",
       "homepage": "https://work.baizhi.cloud/",
-      "stars": 4910,
-      "forks": 748,
-      "watchers": 4910,
+      "stars": 4917,
+      "forks": 749,
+      "watchers": 4917,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -940,8 +940,8 @@
         "url": "https://github.com/chaitin"
       },
       "createdAt": "2025-06-25T06:35:32Z",
-      "updatedAt": "2026-10-30T13:54:40Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:52:49Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -953,9 +953,9 @@
       "description": "Multi-engine AI coding desktop client (Tauri). Claude Code, Codex, Gemini, OpenCode, DeepSeek Harness and more in one GUI.",
       "url": "https://github.com/zhukunpenglinyutong/desktop-cc-gui",
       "homepage": "https://www.mossx.ai/download",
-      "stars": 4550,
-      "forks": 423,
-      "watchers": 4550,
+      "stars": 4555,
+      "forks": 425,
+      "watchers": 4555,
       "language": "TypeScript",
       "topics": [
         "ai-coding",
@@ -973,8 +973,8 @@
         "url": "https://github.com/zhukunpenglinyutong"
       },
       "createdAt": "2026-02-03T15:08:25Z",
-      "updatedAt": "2026-10-30T11:26:53Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:30:31Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -986,9 +986,9 @@
       "description": "Open-source Python challenge courses — your AI coding agent teaches, verify.py decides when you're done.",
       "url": "https://github.com/flypythoncom/python",
       "homepage": "https://flypython.com",
-      "stars": 4170,
-      "forks": 1414,
-      "watchers": 4170,
+      "stars": 4173,
+      "forks": 1415,
+      "watchers": 4173,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -1008,8 +1008,8 @@
         "url": "https://github.com/flypythoncom"
       },
       "createdAt": "2012-09-06T07:00:59Z",
-      "updatedAt": "2026-10-30T00:47:32Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:39:07Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1021,9 +1021,9 @@
       "description": "Unofficial ChatGPT desktop app for Linux (formerly the Codex app), built locally from OpenAI’s official macOS app. Includes Chat, Work, and Codex. Packages for Debian/Ubuntu (.deb), Fedora/openSUSE (.rpm), Arch (pacman), Nix/NixOS, and AppImage, with Wayland and X11 support.",
       "url": "https://github.com/ilysenko/codex-desktop-linux",
       "homepage": null,
-      "stars": 3921,
-      "forks": 510,
-      "watchers": 3921,
+      "stars": 3924,
+      "forks": 509,
+      "watchers": 3924,
       "language": "JavaScript",
       "topics": [
         "ai-coding",
@@ -1053,8 +1053,8 @@
         "url": "https://github.com/ilysenko"
       },
       "createdAt": "2026-02-05T07:57:25Z",
-      "updatedAt": "2026-10-30T13:55:35Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T05:47:58Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1066,9 +1066,9 @@
       "description": "LeanCTX is the Context Gateway for AI Systems. Select task-relevant context, apply supported controls, connect local knowledge and inspect recorded evidence. Open-source Engine: CLI, MCP, hooks and supported proxy paths.",
       "url": "https://github.com/yvgude/lean-ctx",
       "homepage": "https://leanctx.com",
-      "stars": 3911,
+      "stars": 3912,
       "forks": 357,
-      "watchers": 3911,
+      "watchers": 3912,
       "language": "Rust",
       "topics": [
         "agentic-coding",
@@ -1097,8 +1097,8 @@
         "url": "https://github.com/yvgude"
       },
       "createdAt": "2026-03-23T19:48:59Z",
-      "updatedAt": "2026-10-30T02:23:26Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T11:17:23Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1110,9 +1110,9 @@
       "description": "Visible multi-agent CLI workspace for mixing Codex, Claude, Gemini, Kimi, Qwen, Cursor, Copilot, Pi, OpenCode, and other AI coding agents",
       "url": "https://github.com/SeemSeam/claude_codex_bridge",
       "homepage": null,
-      "stars": 3604,
+      "stars": 3605,
       "forks": 349,
-      "watchers": 3604,
+      "watchers": 3605,
       "language": "Python",
       "topics": [
         "ai-coding",
@@ -1142,8 +1142,8 @@
         "url": "https://github.com/SeemSeam"
       },
       "createdAt": "2025-10-25T13:23:08Z",
-      "updatedAt": "2026-10-30T11:28:57Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-30T15:19:33Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -1155,9 +1155,9 @@
       "description": "Stop That Shit（别再造史了）｜面向 Codex/GPT 场景的多平台 Hook + Skill Guard：拦截 AI coding agent 无需求的哈希、校验和与任务范围膨胀。 A multi-platform Hook + Skill Guard for AI coding agents in Codex/GPT workflows: stop unrequested hashes, checksums, and task-scope creep.",
       "url": "https://github.com/lennney/stop-that-shit",
       "homepage": "https://lennney.com/zh/stop-that-shit",
-      "stars": 3405,
+      "stars": 3433,
       "forks": 69,
-      "watchers": 3405,
+      "watchers": 3433,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1182,8 +1182,8 @@
         "url": "https://github.com/lennney"
       },
       "createdAt": "2026-08-11T15:31:45Z",
-      "updatedAt": "2026-10-30T13:45:26Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T14:15:02Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1195,9 +1195,9 @@
       "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
       "url": "https://github.com/GCWing/OpenBitFun",
       "homepage": "openbitfun.com",
-      "stars": 3397,
+      "stars": 3427,
       "forks": 285,
-      "watchers": 3397,
+      "watchers": 3427,
       "language": "Rust",
       "topics": [
         "agent-teams",
@@ -1220,8 +1220,8 @@
         "url": "https://github.com/GCWing"
       },
       "createdAt": "2026-02-02T09:52:10Z",
-      "updatedAt": "2026-10-30T10:38:59Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:41:40Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1233,9 +1233,9 @@
       "description": "Manage multiple Claude Code, OpenCode agents from either TUI or Web for easy access on mobile. Also supports Mistral Vibe, Codex CLI, Gemini CLI, Pi.dev, Copilot CLI, Factory Droid Coding.",
       "url": "https://github.com/agent-of-empires/agent-of-empires",
       "homepage": "http://www.agent-of-empires.com/",
-      "stars": 3396,
-      "forks": 392,
-      "watchers": 3396,
+      "stars": 3398,
+      "forks": 393,
+      "watchers": 3398,
       "language": "Rust",
       "topics": [
         "ai-coding",
@@ -1265,8 +1265,8 @@
         "url": "https://github.com/agent-of-empires"
       },
       "createdAt": "2026-01-09T17:23:31Z",
-      "updatedAt": "2026-10-30T14:08:48Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:14:23Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1278,9 +1278,9 @@
       "description": "FuXi is a fast, self-contained AI coding agent that lives in your terminal — edit code, run commands, and drive tools, with cost-aware routing across LLM providers.",
       "url": "https://github.com/fuxicodex/Fuxi",
       "homepage": "https://www.fuxicode.com",
-      "stars": 3200,
-      "forks": 220,
-      "watchers": 3200,
+      "stars": 3202,
+      "forks": 221,
+      "watchers": 3202,
       "language": "Python",
       "topics": [
         "agent",
@@ -1310,8 +1310,8 @@
         "url": "https://github.com/fuxicodex"
       },
       "createdAt": "2026-08-04T07:32:11Z",
-      "updatedAt": "2026-10-30T07:28:29Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:19:35Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1349,7 +1349,7 @@
       },
       "createdAt": "2025-06-05T23:54:39Z",
       "updatedAt": "2026-10-28T01:52:10Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1361,9 +1361,9 @@
       "description": "A realtime voice runtime that keeps Agents talking, working, and present.  Real-time Voice Runtime for AI Agents",
       "url": "https://github.com/QwenAudio/qwen-audio-agent",
       "homepage": "https://qwenaudio.github.io/qwen-audio-agent/",
-      "stars": 3081,
-      "forks": 319,
-      "watchers": 3081,
+      "stars": 3095,
+      "forks": 325,
+      "watchers": 3095,
       "language": "JavaScript",
       "topics": [
         "acp",
@@ -1386,8 +1386,8 @@
         "url": "https://github.com/QwenAudio"
       },
       "createdAt": "2026-07-27T05:04:26Z",
-      "updatedAt": "2026-10-30T14:06:08Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:50:29Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1399,9 +1399,9 @@
       "description": "Fetch source code for npm packages to give AI coding agents deeper context",
       "url": "https://github.com/vercel-labs/opensrc",
       "homepage": "https://opensrc.sh",
-      "stars": 3027,
+      "stars": 3028,
       "forks": 195,
-      "watchers": 3027,
+      "watchers": 3028,
       "language": "Rust",
       "topics": [
         "ai",
@@ -1421,8 +1421,8 @@
         "url": "https://github.com/vercel-labs"
       },
       "createdAt": "2026-01-06T17:54:03Z",
-      "updatedAt": "2026-10-29T05:49:05Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:46:35Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -1434,9 +1434,9 @@
       "description": "Claude Code learns from your corrections: self-correcting memory that compounds over 50+ sessions. Context engineering, parallel worktrees, agent teams, and 17 battle-tested skills.",
       "url": "https://github.com/rohitg00/pro-workflow",
       "homepage": "https://rohitg00.github.io/pro-workflow/infographic.html",
-      "stars": 2936,
+      "stars": 2939,
       "forks": 300,
-      "watchers": 2936,
+      "watchers": 2939,
       "language": "JavaScript",
       "topics": [
         "agent-orchestration",
@@ -1465,8 +1465,8 @@
         "url": "https://github.com/rohitg00"
       },
       "createdAt": "2026-02-01T19:47:29Z",
-      "updatedAt": "2026-10-30T10:05:10Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:06:32Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -1478,9 +1478,9 @@
       "description": "Symbol-level code retrieval for AI agents: fetch the function you need, not the whole file. Runs locally. 96.2% fewer tokens per lookup than grep-and-read on our 15-lookup benchmark. Works with Claude Code, Cursor, Codex and any MCP client.",
       "url": "https://github.com/jgravelle/jcodemunch-mcp",
       "homepage": "https://jcodemunch.com/",
-      "stars": 2822,
-      "forks": 372,
-      "watchers": 2822,
+      "stars": 2827,
+      "forks": 371,
+      "watchers": 2827,
       "language": "Python",
       "topics": [
         "ai-coding",
@@ -1510,8 +1510,8 @@
         "url": "https://github.com/jgravelle"
       },
       "createdAt": "2026-02-09T01:58:27Z",
-      "updatedAt": "2026-10-30T11:56:55Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:58:41Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1523,9 +1523,9 @@
       "description": "A model-driven harness for AI coding agents: semantic modeling, app generation, progressive API Assist and evidence-based verification.",
       "url": "https://github.com/teaql/teaql-agent-kit",
       "homepage": "https://teaql.io",
-      "stars": 2820,
-      "forks": 956,
-      "watchers": 2820,
+      "stars": 2819,
+      "forks": 955,
+      "watchers": 2819,
       "language": "TypeScript",
       "topics": [
         "agentic-coding",
@@ -1553,8 +1553,8 @@
         "url": "https://github.com/teaql"
       },
       "createdAt": "2018-12-17T18:07:12Z",
-      "updatedAt": "2026-10-29T14:44:14Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T08:32:20Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1566,9 +1566,9 @@
       "description": "AI coding workstation: Claude Code + web UI + 8 AI CLIs + headless browser + 50+ tools",
       "url": "https://github.com/CoderLuii/HolyClaude",
       "homepage": "https://holyclaude.coderluii.dev",
-      "stars": 2597,
+      "stars": 2601,
       "forks": 272,
-      "watchers": 2597,
+      "watchers": 2601,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -1593,8 +1593,40 @@
         "url": "https://github.com/CoderLuii"
       },
       "createdAt": "2026-03-22T01:03:18Z",
-      "updatedAt": "2026-10-30T02:55:26Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T00:48:07Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1117927632",
+      "repoId": 1117927632,
+      "fullName": "dsphper/lanhu-mcp",
+      "name": "lanhu-mcp",
+      "description": "⚡ 需求分析效率提升 200%！全球首个为 AI 编程时代设计的团队协作 MCP 服务器，自动分析需求自动编写前后端代码，下载切图",
+      "url": "https://github.com/dsphper/lanhu-mcp",
+      "homepage": null,
+      "stars": 2544,
+      "forks": 277,
+      "watchers": 2544,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-coding",
+        "ai-tools",
+        "mcp",
+        "mcp-service",
+        "mcp-tools"
+      ],
+      "owner": {
+        "login": "dsphper",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/10858759?v=4",
+        "url": "https://github.com/dsphper"
+      },
+      "createdAt": "2025-12-17T02:45:17Z",
+      "updatedAt": "2026-10-31T10:22:38Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1607,7 +1639,7 @@
       "url": "https://github.com/Nano-Collective/nanocoder",
       "homepage": "https://docs.nanocollective.org/nanocoder",
       "stars": 2541,
-      "forks": 371,
+      "forks": 372,
       "watchers": 2541,
       "language": "TypeScript",
       "topics": [
@@ -1627,42 +1659,10 @@
         "url": "https://github.com/Nano-Collective"
       },
       "createdAt": "2025-07-30T12:54:15Z",
-      "updatedAt": "2026-10-30T08:22:23Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T08:28:03Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
-    },
-    {
-      "id": "gh-topic-1117927632",
-      "repoId": 1117927632,
-      "fullName": "dsphper/lanhu-mcp",
-      "name": "lanhu-mcp",
-      "description": "⚡ 需求分析效率提升 200%！全球首个为 AI 编程时代设计的团队协作 MCP 服务器，自动分析需求自动编写前后端代码，下载切图",
-      "url": "https://github.com/dsphper/lanhu-mcp",
-      "homepage": null,
-      "stars": 2540,
-      "forks": 277,
-      "watchers": 2540,
-      "language": "Python",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "ai-coding",
-        "ai-tools",
-        "mcp",
-        "mcp-service",
-        "mcp-tools"
-      ],
-      "owner": {
-        "login": "dsphper",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/10858759?v=4",
-        "url": "https://github.com/dsphper"
-      },
-      "createdAt": "2025-12-17T02:45:17Z",
-      "updatedAt": "2026-10-30T09:36:15Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
-      "isNew": true,
-      "existing": false
     },
     {
       "id": "gh-topic-1247201816",
@@ -1672,9 +1672,9 @@
       "description": "🧭 Architecture-first system design: 26 bilingual tutorials, 25 architecture templates, and 6 end-to-end cases covering distributed systems, AI-native systems, RAG, coding Agents, and production trade-offs.",
       "url": "https://github.com/study8677/awesome-architecture",
       "homepage": "https://study8677.github.io/awesome-architecture/",
-      "stars": 2488,
+      "stars": 2490,
       "forks": 281,
-      "watchers": 2488,
+      "watchers": 2490,
       "language": "Vue",
       "topics": [
         "ai-agents",
@@ -1704,8 +1704,8 @@
         "url": "https://github.com/study8677"
       },
       "createdAt": "2026-05-23T02:44:43Z",
-      "updatedAt": "2026-10-30T12:38:56Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T13:43:47Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1717,9 +1717,9 @@
       "description": "List of agent orchestrators",
       "url": "https://github.com/andyrewlee/awesome-agent-orchestrators",
       "homepage": "https://agent-orchestrators.com",
-      "stars": 2312,
-      "forks": 316,
-      "watchers": 2312,
+      "stars": 2317,
+      "forks": 317,
+      "watchers": 2317,
       "language": null,
       "topics": [
         "agent-coordination",
@@ -1749,8 +1749,8 @@
         "url": "https://github.com/andyrewlee"
       },
       "createdAt": "2026-01-20T01:00:32Z",
-      "updatedAt": "2026-10-30T09:32:31Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T08:16:01Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1762,9 +1762,9 @@
       "description": "Open-source AI agent desktop app for Windows & macOS. One-click install Claude Code, MCP tools, and Skills — with sandbox isolation, multi-model support, and Feishu/Slack integration.",
       "url": "https://github.com/OpenCoworkAI/open-cowork",
       "homepage": "https://github.com/OpenCoworkAI/open-cowork",
-      "stars": 2241,
+      "stars": 2242,
       "forks": 323,
-      "watchers": 2241,
+      "watchers": 2242,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -1788,8 +1788,8 @@
         "url": "https://github.com/OpenCoworkAI"
       },
       "createdAt": "2026-01-13T16:43:05Z",
-      "updatedAt": "2026-10-30T10:04:05Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-30T19:01:37Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -1801,9 +1801,9 @@
       "description": "A curated list of AI-powered coding tools",
       "url": "https://github.com/ai-for-developers/awesome-ai-coding-tools",
       "homepage": "https://aifordevelopers.org",
-      "stars": 2210,
-      "forks": 1041,
-      "watchers": 2210,
+      "stars": 2237,
+      "forks": 1051,
+      "watchers": 2237,
       "language": null,
       "topics": [
         "ai-code-generation",
@@ -1833,8 +1833,8 @@
         "url": "https://github.com/ai-for-developers"
       },
       "createdAt": "2025-06-27T13:08:36Z",
-      "updatedAt": "2026-10-29T20:32:09Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:42:48Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1846,9 +1846,9 @@
       "description": "Use Claude and Antigravity with Pi, OpenCode and other coding clients. Local API bridge, usage dashboard and Mac app. Antigravity preview available in 1.74.0.",
       "url": "https://github.com/rynfar/meridian",
       "homepage": "https://www.npmjs.com/package/@rynfar/meridian",
-      "stars": 2170,
+      "stars": 2173,
       "forks": 253,
-      "watchers": 2170,
+      "watchers": 2173,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -1878,8 +1878,8 @@
         "url": "https://github.com/rynfar"
       },
       "createdAt": "2026-01-20T21:39:40Z",
-      "updatedAt": "2026-10-30T14:06:23Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T05:34:23Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": true
     },
@@ -1891,9 +1891,9 @@
       "description": "A curated, battle-tested AI-coding toolkit: Claude Code plugins, subagent orchestration, quality gates, and ready-to-copy prompts, extracted from real production use.",
       "url": "https://github.com/soumatheusgomes/vibe-coding-toolkit",
       "homepage": null,
-      "stars": 2142,
-      "forks": 363,
-      "watchers": 2142,
+      "stars": 2166,
+      "forks": 364,
+      "watchers": 2166,
       "language": "JavaScript",
       "topics": [
         "ai-agents",
@@ -1909,8 +1909,8 @@
         "url": "https://github.com/soumatheusgomes"
       },
       "createdAt": "2026-08-14T23:41:31Z",
-      "updatedAt": "2026-10-30T13:55:44Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T12:59:04Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1954,8 +1954,8 @@
         "url": "https://github.com/maxritter"
       },
       "createdAt": "2025-10-18T08:30:23Z",
-      "updatedAt": "2026-10-30T10:15:03Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T06:21:16Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     },
@@ -1967,9 +1967,9 @@
       "description": "「可能是全网最全的」📘 面向小白的 AI 编程 CLI 中文教程：Claude Code + Codex 92 篇精修",
       "url": "https://github.com/stormzhang/ai-coding-guide",
       "homepage": "https://coding.stormzhang.ai",
-      "stars": 2005,
-      "forks": 488,
-      "watchers": 2005,
+      "stars": 2006,
+      "forks": 489,
+      "watchers": 2006,
       "language": null,
       "topics": [
         "agent",
@@ -1989,8 +1989,8 @@
         "url": "https://github.com/stormzhang"
       },
       "createdAt": "2014-01-17T02:52:55Z",
-      "updatedAt": "2026-10-30T09:06:17Z",
-      "firstSeenAt": "2026-10-30T14:48:48.508Z",
+      "updatedAt": "2026-10-31T07:57:45Z",
+      "firstSeenAt": "2026-10-31T14:16:31.972Z",
       "isNew": true,
       "existing": false
     }

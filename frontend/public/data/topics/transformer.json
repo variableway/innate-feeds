@@ -1,6 +1,6 @@
 {
   "topic": "transformer",
-  "fetchedAt": "2026-10-30T14:48:35.238Z",
+  "fetchedAt": "2026-10-31T14:16:20.413Z",
   "count": 50,
   "newCount": 42,
   "existingCount": 8,
@@ -13,9 +13,9 @@
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
       "homepage": "https://huggingface.co/transformers",
-      "stars": 168351,
-      "forks": 35040,
-      "watchers": 168351,
+      "stars": 168389,
+      "forks": 35057,
+      "watchers": 168389,
       "language": "Python",
       "topics": [
         "audio",
@@ -44,8 +44,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2018-10-29T13:56:00Z",
-      "updatedAt": "2026-10-30T14:32:45Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:10:28Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -57,9 +57,9 @@
       "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
       "url": "https://github.com/vllm-project/vllm",
       "homepage": "https://vllm.ai",
-      "stars": 95914,
-      "forks": 24186,
-      "watchers": 95914,
+      "stars": 95970,
+      "forks": 24217,
+      "watchers": 95970,
       "language": "Python",
       "topics": [
         "amd",
@@ -89,8 +89,8 @@
         "url": "https://github.com/vllm-project"
       },
       "createdAt": "2023-02-09T11:23:20Z",
-      "updatedAt": "2026-10-30T14:41:59Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:55:30Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -102,9 +102,9 @@
       "description": "🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠",
       "url": "https://github.com/labmlai/annotated_deep_learning_paper_implementations",
       "homepage": "https://nn.labml.ai",
-      "stars": 67609,
-      "forks": 6778,
-      "watchers": 67609,
+      "stars": 67616,
+      "forks": 6779,
+      "watchers": 67616,
       "language": "Python",
       "topics": [
         "attention",
@@ -127,8 +127,8 @@
         "url": "https://github.com/labmlai"
       },
       "createdAt": "2020-08-25T02:29:34Z",
-      "updatedAt": "2026-10-30T13:47:53Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:51:10Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -140,9 +140,9 @@
       "description": "Port of OpenAI's Whisper model in C/C++",
       "url": "https://github.com/ggml-org/whisper.cpp",
       "homepage": null,
-      "stars": 54797,
-      "forks": 6258,
-      "watchers": 54797,
+      "stars": 54822,
+      "forks": 6263,
+      "watchers": 54822,
       "language": "C++",
       "topics": [
         "inference",
@@ -158,8 +158,8 @@
         "url": "https://github.com/ggml-org"
       },
       "createdAt": "2022-09-25T18:26:37Z",
-      "updatedAt": "2026-10-30T14:35:52Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:06:37Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -171,9 +171,9 @@
       "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
       "url": "https://github.com/sgl-project/sglang",
       "homepage": "https://sglang.io",
-      "stars": 38304,
-      "forks": 10028,
-      "watchers": 38304,
+      "stars": 38320,
+      "forks": 10043,
+      "watchers": 38320,
       "language": "Python",
       "topics": [
         "attention",
@@ -201,8 +201,8 @@
         "url": "https://github.com/sgl-project"
       },
       "createdAt": "2024-01-08T04:15:52Z",
-      "updatedAt": "2026-10-30T14:13:01Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:15:02Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -214,9 +214,9 @@
       "description": "Fully automatic censorship removal for language models",
       "url": "https://github.com/p-e-w/heretic",
       "homepage": "https://heretic-project.org",
-      "stars": 37181,
-      "forks": 4235,
-      "watchers": 37181,
+      "stars": 37272,
+      "forks": 4251,
+      "watchers": 37272,
       "language": "Python",
       "topics": [
         "abliteration",
@@ -229,8 +229,8 @@
         "url": "https://github.com/p-e-w"
       },
       "createdAt": "2025-09-21T05:46:16Z",
-      "updatedAt": "2026-10-30T14:47:25Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:59:55Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -242,9 +242,9 @@
       "description": "SOTA Open Source TTS",
       "url": "https://github.com/fishaudio/fish-speech",
       "homepage": "https://speech.fish.audio",
-      "stars": 33490,
+      "stars": 33508,
       "forks": 2913,
-      "watchers": 33490,
+      "watchers": 33508,
       "language": "Python",
       "topics": [
         "llama",
@@ -261,8 +261,8 @@
         "url": "https://github.com/fishaudio"
       },
       "createdAt": "2023-10-10T03:16:51Z",
-      "updatedAt": "2026-10-30T13:31:34Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:38:54Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -306,8 +306,8 @@
         "url": "https://github.com/open-mmlab"
       },
       "createdAt": "2018-08-22T07:06:06Z",
-      "updatedAt": "2026-10-30T08:27:19Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T11:36:58Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -319,9 +319,9 @@
       "description": "Faster Whisper transcription with CTranslate2",
       "url": "https://github.com/SYSTRAN/faster-whisper",
       "homepage": null,
-      "stars": 26322,
-      "forks": 2188,
-      "watchers": 26322,
+      "stars": 26347,
+      "forks": 2190,
+      "watchers": 26347,
       "language": "Python",
       "topics": [
         "deep-learning",
@@ -339,8 +339,8 @@
         "url": "https://github.com/SYSTRAN"
       },
       "createdAt": "2023-02-11T09:17:27Z",
-      "updatedAt": "2026-10-30T12:34:11Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:05:39Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -353,7 +353,7 @@
       "url": "https://github.com/lukasmasuch/best-of-ml-python",
       "homepage": "https://ml-python.best-of.org",
       "stars": 23849,
-      "forks": 3147,
+      "forks": 3146,
       "watchers": 23849,
       "language": null,
       "topics": [
@@ -383,8 +383,8 @@
         "url": "https://github.com/lukasmasuch"
       },
       "createdAt": "2020-11-29T19:41:36Z",
-      "updatedAt": "2026-10-30T12:10:13Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T11:45:27Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -429,7 +429,7 @@
       },
       "createdAt": "2020-02-26T06:04:25Z",
       "updatedAt": "2026-10-30T09:00:03Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -441,9 +441,9 @@
       "description": "邱锡鹏《神经网络与深度学习》第二版与通识版：电子书、章节目录、学习资源与勘误。",
       "url": "https://github.com/nndl/nndl",
       "homepage": "https://nndl.ai/",
-      "stars": 19530,
-      "forks": 3694,
-      "watchers": 19530,
+      "stars": 19535,
+      "forks": 3695,
+      "watchers": 19535,
       "language": null,
       "topics": [
         "attention-mechanism",
@@ -460,8 +460,8 @@
         "url": "https://github.com/nndl"
       },
       "createdAt": "2016-09-06T08:09:06Z",
-      "updatedAt": "2026-10-30T13:18:40Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T11:20:27Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -473,9 +473,9 @@
       "description": "《李宏毅深度学习教程》（李宏毅老师推荐👍，苹果书🍎），PDF下载地址：https://github.com/datawhalechina/leedl-tutorial/releases",
       "url": "https://github.com/datawhalechina/leedl-tutorial",
       "homepage": null,
-      "stars": 16841,
-      "forks": 3098,
-      "watchers": 16841,
+      "stars": 16844,
+      "forks": 3100,
+      "watchers": 16844,
       "language": "Jupyter Notebook",
       "topics": [
         "bert",
@@ -501,8 +501,8 @@
         "url": "https://github.com/datawhalechina"
       },
       "createdAt": "2019-07-02T01:05:11Z",
-      "updatedAt": "2026-10-30T11:26:28Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T10:47:23Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -514,9 +514,9 @@
       "description": "pix2tex: Using a ViT to convert images of equations into LaTeX code.",
       "url": "https://github.com/lukas-blecher/LaTeX-OCR",
       "homepage": "https://lukas-blecher.github.io/LaTeX-OCR/",
-      "stars": 16602,
-      "forks": 1303,
-      "watchers": 16602,
+      "stars": 16599,
+      "forks": 1305,
+      "watchers": 16599,
       "language": "Python",
       "topics": [
         "dataset",
@@ -543,8 +543,8 @@
         "url": "https://github.com/lukas-blecher"
       },
       "createdAt": "2020-12-11T16:35:13Z",
-      "updatedAt": "2026-10-30T09:17:42Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T08:05:09Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -556,9 +556,9 @@
       "description": "MNN: A blazing-fast, lightweight inference engine battle-tested by Alibaba, powering high-performance on-device LLMs and Edge AI.",
       "url": "https://github.com/alibaba/MNN",
       "homepage": null,
-      "stars": 16315,
+      "stars": 16323,
       "forks": 2495,
-      "watchers": 16315,
+      "watchers": 16323,
       "language": "C++",
       "topics": [
         "arm",
@@ -579,8 +579,8 @@
         "url": "https://github.com/alibaba"
       },
       "createdAt": "2019-04-15T07:40:18Z",
-      "updatedAt": "2026-10-30T11:54:15Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:57:30Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -592,9 +592,9 @@
       "description": "Nano vLLM",
       "url": "https://github.com/GeeeekExplorer/nano-vllm",
       "homepage": null,
-      "stars": 16231,
-      "forks": 2797,
-      "watchers": 16231,
+      "stars": 16241,
+      "forks": 2802,
+      "watchers": 16241,
       "language": "Python",
       "topics": [
         "deep-learning",
@@ -610,8 +610,8 @@
         "url": "https://github.com/GeeeekExplorer"
       },
       "createdAt": "2025-06-09T16:22:14Z",
-      "updatedAt": "2026-10-30T14:38:09Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:40:09Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -624,7 +624,7 @@
       "url": "https://github.com/graykode/nlp-tutorial",
       "homepage": "https://www.reddit.com/r/MachineLearning/comments/amfinl/project_nlptutoral_repository_who_is_studying/",
       "stars": 14937,
-      "forks": 3919,
+      "forks": 3920,
       "watchers": 14937,
       "language": "Jupyter Notebook",
       "topics": [
@@ -645,7 +645,7 @@
       },
       "createdAt": "2019-01-09T11:44:20Z",
       "updatedAt": "2026-10-30T13:06:55Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -657,9 +657,9 @@
       "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
       "url": "https://github.com/FlashML-org/FreeToken",
       "homepage": "flashml.ai",
-      "stars": 14831,
+      "stars": 14857,
       "forks": 1503,
-      "watchers": 14831,
+      "watchers": 14857,
       "language": "Python",
       "topics": [
         "deepseek-v4",
@@ -677,8 +677,8 @@
         "url": "https://github.com/FlashML-org"
       },
       "createdAt": "2026-07-20T20:44:11Z",
-      "updatedAt": "2026-10-30T13:38:11Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:12:53Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -690,9 +690,9 @@
       "description": "RWKV (pronounced RwaKuv) is an RNN with great LLM performance, which can also be directly trained like a GPT transformer (parallelizable). We are at RWKV-7 \"Goose\". So it's combining the best of RNN and transformer - great performance, linear time, constant space (no kv-cache), fast training, infinite ctx_len, and free sentence embedding.",
       "url": "https://github.com/BlinkDL/RWKV-LM",
       "homepage": null,
-      "stars": 14767,
-      "forks": 1024,
-      "watchers": 14767,
+      "stars": 14768,
+      "forks": 1025,
+      "watchers": 14768,
       "language": "Python",
       "topics": [
         "attention-mechanism",
@@ -716,8 +716,8 @@
         "url": "https://github.com/BlinkDL"
       },
       "createdAt": "2021-08-08T06:05:27Z",
-      "updatedAt": "2026-10-30T03:44:56Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T10:39:56Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -729,9 +729,9 @@
       "description": "A framework for few-shot evaluation of language models.",
       "url": "https://github.com/EleutherAI/lm-evaluation-harness",
       "homepage": "https://www.eleuther.ai",
-      "stars": 14348,
-      "forks": 3739,
-      "watchers": 14348,
+      "stars": 14350,
+      "forks": 3743,
+      "watchers": 14350,
       "language": "Python",
       "topics": [
         "evaluation-framework",
@@ -744,8 +744,8 @@
         "url": "https://github.com/EleutherAI"
       },
       "createdAt": "2020-08-28T00:09:15Z",
-      "updatedAt": "2026-10-30T06:32:31Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T13:36:21Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -757,9 +757,9 @@
       "description": "A powerful HTTP client for Dart and Flutter, which supports global settings, Interceptors, FormData, aborting and canceling a request, files uploading and downloading, requests timeout, custom adapters, etc.",
       "url": "https://github.com/cfug/dio",
       "homepage": "https://dio.pub",
-      "stars": 12842,
-      "forks": 1568,
-      "watchers": 12842,
+      "stars": 12841,
+      "forks": 1569,
+      "watchers": 12841,
       "language": "Dart",
       "topics": [
         "adapter",
@@ -780,8 +780,8 @@
         "url": "https://github.com/cfug"
       },
       "createdAt": "2018-04-20T04:33:43Z",
-      "updatedAt": "2026-10-30T04:35:28Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T03:31:56Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -794,7 +794,7 @@
       "url": "https://github.com/PaddlePaddle/PaddleSpeech",
       "homepage": "https://paddlespeech.readthedocs.io",
       "stars": 12701,
-      "forks": 1954,
+      "forks": 1953,
       "watchers": 12701,
       "language": "Python",
       "topics": [
@@ -826,7 +826,7 @@
       },
       "createdAt": "2017-11-14T12:36:30Z",
       "updatedAt": "2026-10-30T04:18:05Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -838,9 +838,9 @@
       "description": "Large Language Model Text Generation Inference",
       "url": "https://github.com/huggingface/text-generation-inference",
       "homepage": "http://hf.co/docs/text-generation-inference",
-      "stars": 10881,
+      "stars": 10883,
       "forks": 1288,
-      "watchers": 10881,
+      "watchers": 10883,
       "language": "Python",
       "topics": [
         "bloom",
@@ -859,8 +859,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2022-10-08T10:26:28Z",
-      "updatedAt": "2026-10-30T05:44:06Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-30T21:31:03Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -872,9 +872,9 @@
       "description": "🌸 Run LLMs at home, BitTorrent-style. Fine-tuning and inference up to 10x faster than offloading",
       "url": "https://github.com/bigscience-workshop/petals",
       "homepage": "https://petals.dev",
-      "stars": 10674,
-      "forks": 649,
-      "watchers": 10674,
+      "stars": 10676,
+      "forks": 650,
+      "watchers": 10676,
       "language": "Python",
       "topics": [
         "bloom",
@@ -904,8 +904,8 @@
         "url": "https://github.com/bigscience-workshop"
       },
       "createdAt": "2022-06-12T00:10:27Z",
-      "updatedAt": "2026-10-30T07:21:37Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T03:18:01Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -917,9 +917,9 @@
       "description": "Translate manga/image 一键翻译各类图片内文字 https://cotrans.touhou.ai/ (no longer working)",
       "url": "https://github.com/zyddnys/manga-image-translator",
       "homepage": "https://cotrans.touhou.ai/",
-      "stars": 10552,
-      "forks": 1081,
-      "watchers": 10552,
+      "stars": 10555,
+      "forks": 1082,
+      "watchers": 10555,
       "language": "Python",
       "topics": [
         "anime",
@@ -944,8 +944,8 @@
         "url": "https://github.com/zyddnys"
       },
       "createdAt": "2021-02-18T03:03:23Z",
-      "updatedAt": "2026-10-30T07:32:31Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T11:10:17Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -958,7 +958,7 @@
       "url": "https://github.com/open-mmlab/mmsegmentation",
       "homepage": "https://mmsegmentation.readthedocs.io/en/main/",
       "stars": 9985,
-      "forks": 2864,
+      "forks": 2863,
       "watchers": 9985,
       "language": "Python",
       "topics": [
@@ -981,7 +981,7 @@
       },
       "createdAt": "2020-06-14T04:32:33Z",
       "updatedAt": "2026-10-30T09:22:06Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -993,9 +993,9 @@
       "description": "Easy-to-use image segmentation library with awesome pre-trained model zoo, supporting wide-range of practical tasks in Semantic Segmentation, Interactive Segmentation, Panoptic Segmentation, Image Matting, 3D Segmentation, etc.",
       "url": "https://github.com/PaddlePaddle/PaddleSeg",
       "homepage": "https://arxiv.org/abs/2101.06175",
-      "stars": 9417,
+      "stars": 9415,
       "forks": 1706,
-      "watchers": 9417,
+      "watchers": 9415,
       "language": "Python",
       "topics": [
         "autonomous-driving",
@@ -1016,8 +1016,8 @@
         "url": "https://github.com/PaddlePaddle"
       },
       "createdAt": "2019-08-26T02:32:22Z",
-      "updatedAt": "2026-10-28T02:12:47Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T08:32:22Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1029,9 +1029,9 @@
       "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
       "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
       "homepage": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
-      "stars": 9246,
-      "forks": 1509,
-      "watchers": 9246,
+      "stars": 9259,
+      "forks": 1510,
+      "watchers": 9259,
       "language": "C",
       "topics": [
         "avx2",
@@ -1061,8 +1061,8 @@
         "url": "https://github.com/FareedKhan-dev"
       },
       "createdAt": "2026-08-01T09:29:38Z",
-      "updatedAt": "2026-10-30T10:55:03Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T12:49:33Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1093,8 +1093,8 @@
         "url": "https://github.com/OptimalScale"
       },
       "createdAt": "2023-03-27T13:56:29Z",
-      "updatedAt": "2026-10-29T09:06:50Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T03:38:22Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1107,7 +1107,7 @@
       "url": "https://github.com/google/trax",
       "homepage": null,
       "stars": 8299,
-      "forks": 817,
+      "forks": 816,
       "watchers": 8299,
       "language": "Python",
       "topics": [
@@ -1126,7 +1126,7 @@
       },
       "createdAt": "2019-10-05T15:09:14Z",
       "updatedAt": "2026-10-28T05:58:30Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1138,9 +1138,9 @@
       "description": "BertViz: Visualize Attention in Transformer Models",
       "url": "https://github.com/jessevig/bertviz",
       "homepage": null,
-      "stars": 8207,
+      "stars": 8209,
       "forks": 886,
-      "watchers": 8207,
+      "watchers": 8209,
       "language": "Python",
       "topics": [
         "bert",
@@ -1161,8 +1161,8 @@
         "url": "https://github.com/jessevig"
       },
       "createdAt": "2018-12-16T16:50:42Z",
-      "updatedAt": "2026-10-30T13:28:51Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T05:37:13Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1194,7 +1194,7 @@
       },
       "createdAt": "2020-04-29T17:16:12Z",
       "updatedAt": "2026-10-30T02:21:02Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1223,8 +1223,8 @@
         "url": "https://github.com/Morizeyao"
       },
       "createdAt": "2019-05-31T02:07:50Z",
-      "updatedAt": "2026-10-30T07:18:45Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T12:34:49Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1236,9 +1236,9 @@
       "description": "A framework for efficient model inference with omni-modality models",
       "url": "https://github.com/vllm-project/vllm-omni",
       "homepage": "https://docs.vllm.ai/projects/vllm-omni",
-      "stars": 7420,
-      "forks": 2014,
-      "watchers": 7420,
+      "stars": 7443,
+      "forks": 2018,
+      "watchers": 7443,
       "language": "Python",
       "topics": [
         "audio-generation",
@@ -1258,8 +1258,8 @@
         "url": "https://github.com/vllm-project"
       },
       "createdAt": "2025-09-11T00:34:43Z",
-      "updatedAt": "2026-10-30T12:49:15Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T12:51:25Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1294,7 +1294,7 @@
       },
       "createdAt": "2024-07-28T03:54:50Z",
       "updatedAt": "2026-10-30T13:59:34Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1306,9 +1306,9 @@
       "description": "The GitHub repository for the paper \"Informer\" accepted by AAAI 2021.",
       "url": "https://github.com/zhouhaoyi/Informer2020",
       "homepage": null,
-      "stars": 6540,
-      "forks": 1304,
-      "watchers": 6540,
+      "stars": 6541,
+      "forks": 1303,
+      "watchers": 6541,
       "language": "Python",
       "topics": [
         "deep-learning",
@@ -1324,8 +1324,8 @@
         "url": "https://github.com/zhouhaoyi"
       },
       "createdAt": "2020-12-07T09:18:24Z",
-      "updatedAt": "2026-10-29T16:02:20Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-30T23:11:40Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1355,7 +1355,7 @@
       },
       "createdAt": "2018-10-15T12:58:15Z",
       "updatedAt": "2026-10-21T14:15:43Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1368,7 +1368,7 @@
       "url": "https://github.com/NVIDIA/FasterTransformer",
       "homepage": null,
       "stars": 6458,
-      "forks": 934,
+      "forks": 933,
       "watchers": 6458,
       "language": "C++",
       "topics": [
@@ -1384,7 +1384,7 @@
       },
       "createdAt": "2021-04-02T21:36:33Z",
       "updatedAt": "2026-10-30T14:47:09Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1396,9 +1396,9 @@
       "description": "An open, programmable decision layer for models and compute.",
       "url": "https://github.com/vllm-project/semantic-router",
       "homepage": "https://vllm-sr.ai",
-      "stars": 6341,
-      "forks": 1094,
-      "watchers": 6341,
+      "stars": 6352,
+      "forks": 1095,
+      "watchers": 6352,
       "language": "Go",
       "topics": [
         "ai-gateway",
@@ -1419,8 +1419,8 @@
         "url": "https://github.com/vllm-project"
       },
       "createdAt": "2025-08-26T21:49:50Z",
-      "updatedAt": "2026-10-30T14:29:20Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T14:15:13Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -1432,9 +1432,9 @@
       "description": "Quantization, kernels, runtime and inference engine for mobiles, wearables, smart home and robots. ",
       "url": "https://github.com/cactus-compute/cactus",
       "homepage": "https://cactuscompute.com",
-      "stars": 6167,
+      "stars": 6170,
       "forks": 516,
-      "watchers": 6167,
+      "watchers": 6170,
       "language": "C++",
       "topics": [
         "ai",
@@ -1464,8 +1464,8 @@
         "url": "https://github.com/cactus-compute"
       },
       "createdAt": "2025-04-23T14:33:43Z",
-      "updatedAt": "2026-10-30T11:07:31Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-30T23:04:13Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1510,7 +1510,7 @@
       },
       "createdAt": "2019-09-30T09:18:31Z",
       "updatedAt": "2026-10-30T02:38:56Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1522,9 +1522,9 @@
       "description": "Tutorials on implementing a few sequence-to-sequence (seq2seq) models with PyTorch and TorchText.",
       "url": "https://github.com/bentrevett/pytorch-seq2seq",
       "homepage": null,
-      "stars": 5708,
+      "stars": 5709,
       "forks": 1350,
-      "watchers": 5708,
+      "watchers": 5709,
       "language": "Jupyter Notebook",
       "topics": [
         "attention",
@@ -1554,8 +1554,8 @@
         "url": "https://github.com/bentrevett"
       },
       "createdAt": "2018-07-17T12:26:59Z",
-      "updatedAt": "2026-10-28T19:39:06Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T07:17:05Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1596,7 +1596,7 @@
       },
       "createdAt": "2021-08-16T11:50:30Z",
       "updatedAt": "2026-10-27T17:37:11Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1608,9 +1608,9 @@
       "description": "Production First and Production Ready End-to-End Speech Recognition Toolkit",
       "url": "https://github.com/wenet-e2e/wenet",
       "homepage": "https://wenet-e2e.github.io/wenet/",
-      "stars": 5252,
-      "forks": 1193,
-      "watchers": 5252,
+      "stars": 5253,
+      "forks": 1194,
+      "watchers": 5253,
       "language": "Python",
       "topics": [
         "asr",
@@ -1629,8 +1629,8 @@
         "url": "https://github.com/wenet-e2e"
       },
       "createdAt": "2020-11-17T03:57:23Z",
-      "updatedAt": "2026-10-30T07:53:30Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T12:11:27Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     },
@@ -1642,9 +1642,9 @@
       "description": "【三年面试五年模拟】AIGC/LLM/AI Agent算法工程师面试资源平台。涵盖AIGC、LLM大模型、AI Agent、具身智能、传统深度学习、计算机视觉、自然语言处理、自动驾驶、机器学习、强化学习、大数据挖掘、世界模型、元宇宙、AGI等AI行业面试笔试干货经验与核心跨周期知识。",
       "url": "https://github.com/WeThinkIn/AIGC-Interview-Book",
       "homepage": "https://wethinkin.github.io/AIGC-Interview-Book/",
-      "stars": 5112,
-      "forks": 490,
-      "watchers": 5112,
+      "stars": 5117,
+      "forks": 491,
+      "watchers": 5117,
       "language": "Python",
       "topics": [
         "ai-agent",
@@ -1668,8 +1668,8 @@
         "url": "https://github.com/WeThinkIn"
       },
       "createdAt": "2023-10-14T16:15:40Z",
-      "updatedAt": "2026-10-30T13:45:40Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T12:11:33Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1703,7 +1703,7 @@
       },
       "createdAt": "2023-04-13T02:18:11Z",
       "updatedAt": "2026-10-30T06:09:44Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1715,9 +1715,9 @@
       "description": "An ultimately comprehensive paper list of Vision Transformer/Attention, including papers, codes, and related websites",
       "url": "https://github.com/cmhungsteve/Awesome-Transformer-Attention",
       "homepage": null,
-      "stars": 5046,
+      "stars": 5048,
       "forks": 496,
-      "watchers": 5046,
+      "watchers": 5048,
       "language": null,
       "topics": [
         "attention-mechanism",
@@ -1745,8 +1745,8 @@
         "url": "https://github.com/cmhungsteve"
       },
       "createdAt": "2021-09-15T07:16:24Z",
-      "updatedAt": "2026-10-26T08:20:10Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-30T23:07:18Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1758,9 +1758,9 @@
       "description": "An Open-Source Framework for Prompt-Learning.",
       "url": "https://github.com/thunlp/OpenPrompt",
       "homepage": "https://thunlp.github.io/OpenPrompt/",
-      "stars": 4904,
+      "stars": 4905,
       "forks": 477,
-      "watchers": 4904,
+      "watchers": 4905,
       "language": "Python",
       "topics": [
         "ai",
@@ -1786,8 +1786,8 @@
         "url": "https://github.com/thunlp"
       },
       "createdAt": "2021-09-30T09:38:45Z",
-      "updatedAt": "2026-10-29T19:11:03Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-30T17:46:31Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1818,7 +1818,7 @@
       },
       "createdAt": "2021-12-29T04:52:04Z",
       "updatedAt": "2026-10-30T12:04:42Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": false
     },
@@ -1830,9 +1830,9 @@
       "description": "Transformer: PyTorch Implementation of \"Attention Is All You Need\"",
       "url": "https://github.com/hyunwoongko/transformer",
       "homepage": null,
-      "stars": 4682,
-      "forks": 643,
-      "watchers": 4682,
+      "stars": 4683,
+      "forks": 644,
+      "watchers": 4683,
       "language": "Python",
       "topics": [
         "attention",
@@ -1846,8 +1846,8 @@
         "url": "https://github.com/hyunwoongko"
       },
       "createdAt": "2019-10-15T10:36:00Z",
-      "updatedAt": "2026-10-28T12:05:14Z",
-      "firstSeenAt": "2026-10-30T14:48:35.238Z",
+      "updatedAt": "2026-10-31T00:16:15Z",
+      "firstSeenAt": "2026-10-31T14:16:20.413Z",
       "isNew": true,
       "existing": true
     }

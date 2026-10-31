@@ -1,6 +1,6 @@
 {
   "topic": "prompt-engineering",
-  "fetchedAt": "2026-10-30T14:48:46.783Z",
+  "fetchedAt": "2026-10-31T14:16:30.790Z",
   "count": 50,
   "newCount": 26,
   "existingCount": 24,
@@ -13,9 +13,9 @@
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "url": "https://github.com/DietrichGebert/ponytail",
       "homepage": "https://ponytail.dev",
-      "stars": 180736,
-      "forks": 9926,
-      "watchers": 180736,
+      "stars": 181298,
+      "forks": 9965,
+      "watchers": 181298,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -35,8 +35,8 @@
         "url": "https://github.com/DietrichGebert"
       },
       "createdAt": "2026-06-12T00:52:37Z",
-      "updatedAt": "2026-10-30T14:48:14Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:47Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -48,9 +48,9 @@
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
-      "stars": 175207,
-      "forks": 22362,
-      "watchers": 175207,
+      "stars": 175390,
+      "forks": 22381,
+      "watchers": 175390,
       "language": "HTML",
       "topics": [
         "ai",
@@ -78,8 +78,8 @@
         "url": "https://github.com/f"
       },
       "createdAt": "2022-12-05T13:54:13Z",
-      "updatedAt": "2026-10-30T14:40:40Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:16:21Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -91,9 +91,9 @@
       "description": "21 Lessons, Get Started Building with Generative AI ",
       "url": "https://github.com/microsoft/generative-ai-for-beginners",
       "homepage": null,
-      "stars": 122471,
-      "forks": 65242,
-      "watchers": 122471,
+      "stars": 122595,
+      "forks": 65396,
+      "watchers": 122595,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -117,8 +117,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2023-06-19T16:28:59Z",
-      "updatedAt": "2026-10-30T14:46:17Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:02Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -130,9 +130,9 @@
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
       "url": "https://github.com/JuliusBrussee/caveman",
       "homepage": "https://docs.caveman.so/caveman",
-      "stars": 116254,
-      "forks": 6725,
-      "watchers": 116254,
+      "stars": 116456,
+      "forks": 6743,
+      "watchers": 116456,
       "language": "Go",
       "topics": [
         "ai",
@@ -152,8 +152,8 @@
         "url": "https://github.com/JuliusBrussee"
       },
       "createdAt": "2026-04-04T10:03:00Z",
-      "updatedAt": "2026-10-30T14:42:23Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:17Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -165,9 +165,9 @@
       "description": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
       "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
       "homepage": "https://www.promptingguide.ai/",
-      "stars": 79677,
-      "forks": 8743,
-      "watchers": 79677,
+      "stars": 79696,
+      "forks": 8748,
+      "watchers": 79696,
       "language": "MDX",
       "topics": [
         "agent",
@@ -188,8 +188,8 @@
         "url": "https://github.com/dair-ai"
       },
       "createdAt": "2022-12-16T16:04:50Z",
-      "updatedAt": "2026-10-30T14:26:11Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:52:16Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -201,9 +201,9 @@
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
       "url": "https://github.com/headroomlabs-ai/headroom",
       "homepage": "https://docs.headroomlabs.ai/docs",
-      "stars": 78345,
-      "forks": 6109,
-      "watchers": 78345,
+      "stars": 78443,
+      "forks": 6116,
+      "watchers": 78443,
       "language": "Python",
       "topics": [
         "agent",
@@ -233,8 +233,8 @@
         "url": "https://github.com/headroomlabs-ai"
       },
       "createdAt": "2026-01-07T19:58:51Z",
-      "updatedAt": "2026-10-30T14:38:01Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:55Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -246,9 +246,9 @@
       "description": "Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
       "url": "https://github.com/asgeirtj/system_prompts_leaks",
       "homepage": null,
-      "stars": 70469,
-      "forks": 11411,
-      "watchers": 70469,
+      "stars": 70515,
+      "forks": 11412,
+      "watchers": 70515,
       "language": "Python",
       "topics": [
         "ai",
@@ -278,8 +278,8 @@
         "url": "https://github.com/asgeirtj"
       },
       "createdAt": "2025-05-03T02:43:56Z",
-      "updatedAt": "2026-10-30T14:21:48Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:06:58Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -291,9 +291,9 @@
       "description": "Agent skill that removes signs of AI-generated writing from text",
       "url": "https://github.com/blader/humanizer",
       "homepage": "https://skills.sh/blader/humanizer",
-      "stars": 62608,
-      "forks": 4963,
-      "watchers": 62608,
+      "stars": 62884,
+      "forks": 4981,
+      "watchers": 62884,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -316,8 +316,8 @@
         "url": "https://github.com/blader"
       },
       "createdAt": "2026-01-18T05:30:15Z",
-      "updatedAt": "2026-10-30T14:47:49Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:11:41Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -329,9 +329,9 @@
       "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "homepage": "https://buymeacoffee.com/crucify020v",
-      "stars": 54650,
-      "forks": 4171,
-      "watchers": 54650,
+      "stars": 54728,
+      "forks": 4172,
+      "watchers": 54728,
       "language": "Python",
       "topics": [
         "academic-pipeline",
@@ -349,8 +349,8 @@
         "url": "https://github.com/Imbad0202"
       },
       "createdAt": "2026-02-26T06:31:01Z",
-      "updatedAt": "2026-10-30T14:38:51Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:04Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -362,9 +362,9 @@
       "description": "LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐",
       "url": "https://github.com/elder-plinius/CL4R1T4S",
       "homepage": null,
-      "stars": 51616,
-      "forks": 10542,
-      "watchers": 51616,
+      "stars": 51651,
+      "forks": 10541,
+      "watchers": 51651,
       "language": null,
       "topics": [
         "agents",
@@ -394,8 +394,8 @@
         "url": "https://github.com/elder-plinius"
       },
       "createdAt": "2025-03-04T20:03:16Z",
-      "updatedAt": "2026-10-30T13:38:37Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:53:16Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -407,9 +407,9 @@
       "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
       "url": "https://github.com/github/awesome-copilot",
       "homepage": "https://awesome-copilot.github.com/",
-      "stars": 40595,
-      "forks": 5241,
-      "watchers": 40595,
+      "stars": 40621,
+      "forks": 5250,
+      "watchers": 40621,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -427,8 +427,8 @@
         "url": "https://github.com/github"
       },
       "createdAt": "2025-06-11T16:57:39Z",
-      "updatedAt": "2026-10-30T14:29:38Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:55:39Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -440,9 +440,9 @@
       "description": "An AI prompt optimizer for writing better prompts and getting better AI results.",
       "url": "https://github.com/linshenkx/prompt-optimizer",
       "homepage": "https://prompt.always200.com",
-      "stars": 39937,
-      "forks": 4525,
-      "watchers": 39937,
+      "stars": 40081,
+      "forks": 4541,
+      "watchers": 40081,
       "language": "TypeScript",
       "topics": [
         "ai-prompts",
@@ -462,8 +462,8 @@
         "url": "https://github.com/linshenkx"
       },
       "createdAt": "2025-02-12T06:06:49Z",
-      "updatedAt": "2026-10-30T14:47:39Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:13:00Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -475,9 +475,9 @@
       "description": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
       "url": "https://github.com/langfuse/langfuse",
       "homepage": "https://langfuse.com",
-      "stars": 36758,
-      "forks": 4126,
-      "watchers": 36758,
+      "stars": 36793,
+      "forks": 4130,
+      "watchers": 36793,
       "language": "TypeScript",
       "topics": [
         "analytics",
@@ -506,8 +506,8 @@
         "url": "https://github.com/langfuse"
       },
       "createdAt": "2023-05-18T17:47:09Z",
-      "updatedAt": "2026-10-30T14:24:45Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:45:05Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -519,9 +519,9 @@
       "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "homepage": "https://gpt-image2.canghe.ai",
-      "stars": 35274,
-      "forks": 3343,
-      "watchers": 35274,
+      "stars": 35302,
+      "forks": 3346,
+      "watchers": 35302,
       "language": "JavaScript",
       "topics": [
         "agents",
@@ -541,8 +541,8 @@
         "url": "https://github.com/freestylefly"
       },
       "createdAt": "2026-04-25T09:19:13Z",
-      "updatedAt": "2026-10-30T14:44:21Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:12:16Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -554,9 +554,9 @@
       "description": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
       "url": "https://github.com/alirezarezvani/claude-skills",
       "homepage": "https://alirezarezvani.medium.com/",
-      "stars": 29017,
-      "forks": 4024,
-      "watchers": 29017,
+      "stars": 29050,
+      "forks": 4031,
+      "watchers": 29050,
       "language": "Python",
       "topics": [
         "agent-plugins",
@@ -586,8 +586,8 @@
         "url": "https://github.com/alirezarezvani"
       },
       "createdAt": "2025-10-19T04:04:05Z",
-      "updatedAt": "2026-10-30T14:41:13Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:48:54Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -599,9 +599,9 @@
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "url": "https://github.com/mlflow/mlflow",
       "homepage": "https://mlflow.org",
-      "stars": 28599,
-      "forks": 6550,
-      "watchers": 28599,
+      "stars": 28606,
+      "forks": 6559,
+      "watchers": 28606,
       "language": "Python",
       "topics": [
         "agentops",
@@ -629,8 +629,8 @@
         "url": "https://github.com/mlflow"
       },
       "createdAt": "2018-06-05T16:05:58Z",
-      "updatedAt": "2026-10-30T14:35:38Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:03:45Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -642,9 +642,9 @@
       "description": "What are the principles we can use to build LLM-powered software that is actually good enough to put in the hands of production customers?",
       "url": "https://github.com/humanlayer/12-factor-agents",
       "homepage": null,
-      "stars": 26926,
-      "forks": 2020,
-      "watchers": 26926,
+      "stars": 26932,
+      "forks": 2019,
+      "watchers": 26932,
       "language": "TypeScript",
       "topics": [
         "12-factor",
@@ -665,8 +665,8 @@
         "url": "https://github.com/humanlayer"
       },
       "createdAt": "2025-03-30T22:10:39Z",
-      "updatedAt": "2026-10-30T14:35:22Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:58:58Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -678,9 +678,9 @@
       "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
       "url": "https://github.com/promptfoo/promptfoo",
       "homepage": "https://promptfoo.dev",
-      "stars": 26634,
-      "forks": 2618,
-      "watchers": 26634,
+      "stars": 26668,
+      "forks": 2622,
+      "watchers": 26668,
       "language": "TypeScript",
       "topics": [
         "ci",
@@ -708,8 +708,8 @@
         "url": "https://github.com/promptfoo"
       },
       "createdAt": "2023-04-28T15:48:49Z",
-      "updatedAt": "2026-10-30T14:39:33Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:31:16Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -721,9 +721,9 @@
       "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
       "url": "https://github.com/comet-ml/opik",
       "homepage": "https://www.comet.com/docs/opik/",
-      "stars": 23038,
-      "forks": 1912,
-      "watchers": 23038,
+      "stars": 23064,
+      "forks": 1915,
+      "watchers": 23064,
       "language": "Python",
       "topics": [
         "evaluation",
@@ -746,8 +746,8 @@
         "url": "https://github.com/comet-ml"
       },
       "createdAt": "2023-05-10T12:57:13Z",
-      "updatedAt": "2026-10-30T14:29:01Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:35:46Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -759,9 +759,9 @@
       "description": "🚀 A curated collection of AI engineering resources, roadmaps, tools, and projects covering LLMs, RAG, AI Agents, MCP, fine-tuning, evaluations, and production AI systems.",
       "url": "https://github.com/dipakkr/awesome-ai-engineering",
       "homepage": null,
-      "stars": 22495,
+      "stars": 22499,
       "forks": 4850,
-      "watchers": 22495,
+      "watchers": 22499,
       "language": null,
       "topics": [
         "agentic-ai",
@@ -790,8 +790,8 @@
         "url": "https://github.com/dipakkr"
       },
       "createdAt": "2018-09-17T11:15:29Z",
-      "updatedAt": "2026-10-30T14:19:55Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T10:55:41Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -803,9 +803,9 @@
       "description": "🎭 277 个即插即用的 AI 专家角色 — 支持 Claude Code/Cursor/Copilot 等 20 种工具，覆盖工程/设计/营销/金融等 20 个部门。含 64 个中国市场原创智能体（小红书/抖音/微信/飞书/钉钉/Qt 上位机/机械设计）。搭配编排器 agency-orchestrator，一句话即可让多位专家按 DAG 自动协作。",
       "url": "https://github.com/jnMetaCode/agency-agents-zh",
       "homepage": "https://ao.aiolaola.com/experts",
-      "stars": 21721,
-      "forks": 3487,
-      "watchers": 21721,
+      "stars": 21737,
+      "forks": 3490,
+      "watchers": 21737,
       "language": "Shell",
       "topics": [
         "agency-orchestrator",
@@ -834,8 +834,8 @@
         "url": "https://github.com/jnMetaCode"
       },
       "createdAt": "2026-03-06T11:11:51Z",
-      "updatedAt": "2026-10-30T14:30:11Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:58:06Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -847,9 +847,9 @@
       "description": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.",
       "url": "https://github.com/AI4Finance-Foundation/FinGPT",
       "homepage": "https://fingpt.io",
-      "stars": 21491,
-      "forks": 3040,
-      "watchers": 21491,
+      "stars": 21499,
+      "forks": 3043,
+      "watchers": 21499,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -872,8 +872,8 @@
         "url": "https://github.com/AI4Finance-Foundation"
       },
       "createdAt": "2023-02-11T20:21:34Z",
-      "updatedAt": "2026-10-30T13:43:15Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:38:57Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -885,9 +885,9 @@
       "description": "GPT-Image-2 API and Prompts",
       "url": "https://github.com/Evolink-AI/awesome-gpt-image-2-API-Prompts",
       "homepage": "https://evolink.ai/gpt-image-2-prompts",
-      "stars": 17364,
+      "stars": 17366,
       "forks": 1742,
-      "watchers": 17364,
+      "watchers": 17366,
       "language": "Python",
       "topics": [
         "ai-art",
@@ -917,8 +917,8 @@
         "url": "https://github.com/Evolink-AI"
       },
       "createdAt": "2026-04-18T11:22:14Z",
-      "updatedAt": "2026-10-30T12:13:03Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:02:06Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -930,9 +930,9 @@
       "description": "Structured Outputs",
       "url": "https://github.com/dottxt-ai/outlines",
       "homepage": "https://dottxt-ai.github.io/outlines/",
-      "stars": 15988,
-      "forks": 908,
-      "watchers": 15988,
+      "stars": 15987,
+      "forks": 907,
+      "watchers": 15987,
       "language": "Python",
       "topics": [
         "cfg",
@@ -950,8 +950,8 @@
         "url": "https://github.com/dottxt-ai"
       },
       "createdAt": "2023-03-17T16:01:18Z",
-      "updatedAt": "2026-10-30T03:52:02Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T04:21:07Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -963,9 +963,9 @@
       "description": "A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention",
       "url": "https://github.com/nidhinjs/prompt-master",
       "homepage": null,
-      "stars": 15280,
-      "forks": 1769,
-      "watchers": 15280,
+      "stars": 15312,
+      "forks": 1773,
+      "watchers": 15312,
       "language": null,
       "topics": [
         "claude-ai",
@@ -979,8 +979,8 @@
         "url": "https://github.com/nidhinjs"
       },
       "createdAt": "2026-03-11T16:25:43Z",
-      "updatedAt": "2026-10-30T14:04:56Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:11:32Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -992,9 +992,9 @@
       "description": "Codex-native Academic Research Skills suite for human-in-the-loop academic research workflows",
       "url": "https://github.com/Imbad0202/academic-research-skills-codex",
       "homepage": "https://github.com/Imbad0202/academic-research-skills",
-      "stars": 13785,
-      "forks": 602,
-      "watchers": 13785,
+      "stars": 13821,
+      "forks": 603,
+      "watchers": 13821,
       "language": "Python",
       "topics": [
         "academic-pipeline",
@@ -1014,8 +1014,8 @@
         "url": "https://github.com/Imbad0202"
       },
       "createdAt": "2026-04-25T13:39:58Z",
-      "updatedAt": "2026-10-30T14:43:20Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:03Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1027,9 +1027,9 @@
       "description": "🍌 World's largest Nano Banana Pro prompt library — 10,000+ curated prompts with preview images, 16 languages. Google Gemini AI image generation. Free & open source.",
       "url": "https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts",
       "homepage": "https://youmind.com/nano-banana-pro-prompts",
-      "stars": 13713,
-      "forks": 1451,
-      "watchers": 13713,
+      "stars": 13716,
+      "forks": 1452,
+      "watchers": 13716,
       "language": "TypeScript",
       "topics": [
         "ai-image-generation",
@@ -1055,8 +1055,8 @@
         "url": "https://github.com/YouMind-OpenLab"
       },
       "createdAt": "2025-11-23T07:17:48Z",
-      "updatedAt": "2026-10-30T12:04:29Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:55:49Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1068,9 +1068,9 @@
       "description": "LangGPT: Empowering everyone to become a prompt expert! 🚀  📌 结构化提示词（Structured Prompt）提出者 📌 元提示词（Meta-Prompt）发起者   📌 最流行的提示词落地范式 | Language of GPT  The pioneering framework for structured & meta-prompt design 10,000+ ⭐ | Battle-tested by thousands of users worldwide  Created by 云中江树",
       "url": "https://github.com/langgptai/LangGPT",
       "homepage": "https://github.com/langgptai",
-      "stars": 12653,
+      "stars": 12658,
       "forks": 952,
-      "watchers": 12653,
+      "watchers": 12658,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -1094,8 +1094,8 @@
         "url": "https://github.com/langgptai"
       },
       "createdAt": "2023-05-06T13:49:43Z",
-      "updatedAt": "2026-10-30T09:18:33Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:52:13Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1107,9 +1107,9 @@
       "description": "AI Observability & Evaluation",
       "url": "https://github.com/Arize-ai/phoenix",
       "homepage": "https://arize.com/docs/phoenix",
-      "stars": 12075,
-      "forks": 1252,
-      "watchers": 12075,
+      "stars": 12081,
+      "forks": 1254,
+      "watchers": 12081,
       "language": "Python",
       "topics": [
         "agents",
@@ -1135,8 +1135,8 @@
         "url": "https://github.com/Arize-ai"
       },
       "createdAt": "2022-11-09T23:44:35Z",
-      "updatedAt": "2026-10-30T14:31:08Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:48:56Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1148,9 +1148,9 @@
       "description": "把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills（Distill high-value content from books, long-form videos, podcasts, and more into executable Agent Skills）",
       "url": "https://github.com/kangarooking/cangjie-skill",
       "homepage": null,
-      "stars": 11906,
-      "forks": 1399,
-      "watchers": 11906,
+      "stars": 11937,
+      "forks": 1405,
+      "watchers": 11937,
       "language": "Python",
       "topics": [
         "agent-workflows",
@@ -1168,8 +1168,8 @@
         "url": "https://github.com/kangarooking"
       },
       "createdAt": "2026-04-16T05:54:32Z",
-      "updatedAt": "2026-10-30T14:18:15Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:11:02Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1181,9 +1181,9 @@
       "description": "ChatGPT 中文指南🔥，ChatGPT 中文调教指南，指令指南，应用开发指南，精选资源清单，更好的使用 chatGPT 让你的生产力 up up up! 🚀",
       "url": "https://github.com/EmbraceAGI/awesome-chatgpt-zh",
       "homepage": null,
-      "stars": 11793,
-      "forks": 1003,
-      "watchers": 11793,
+      "stars": 11794,
+      "forks": 1004,
+      "watchers": 11794,
       "language": "Python",
       "topics": [
         "agi",
@@ -1212,8 +1212,8 @@
         "url": "https://github.com/EmbraceAGI"
       },
       "createdAt": "2023-03-21T02:16:34Z",
-      "updatedAt": "2026-10-30T08:47:36Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T09:21:28Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1225,9 +1225,9 @@
       "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
       "url": "https://github.com/cobusgreyling/loop-engineering",
       "homepage": "https://cobusgreyling.github.io/loop-engineering/",
-      "stars": 11669,
-      "forks": 1572,
-      "watchers": 11669,
+      "stars": 11672,
+      "forks": 1574,
+      "watchers": 11672,
       "language": "TypeScript",
       "topics": [
         "agentic-ai",
@@ -1254,8 +1254,8 @@
         "url": "https://github.com/cobusgreyling"
       },
       "createdAt": "2026-06-09T06:28:20Z",
-      "updatedAt": "2026-10-30T08:02:46Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T06:03:59Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1267,9 +1267,9 @@
       "description": "Build high-quality LLM apps - from prototyping, testing to production deployment and monitoring.",
       "url": "https://github.com/microsoft/promptflow",
       "homepage": "https://microsoft.github.io/promptflow/",
-      "stars": 11256,
+      "stars": 11258,
       "forks": 1125,
-      "watchers": 11256,
+      "watchers": 11258,
       "language": "Python",
       "topics": [
         "ai",
@@ -1287,8 +1287,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2023-06-30T06:03:06Z",
-      "updatedAt": "2026-10-30T07:28:45Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-30T18:28:02Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1300,9 +1300,9 @@
       "description": "A collection of GPT system prompts and various prompt injection/leaking knowledge.",
       "url": "https://github.com/LouisShark/chatgpt_system_prompt",
       "homepage": null,
-      "stars": 10830,
-      "forks": 1458,
-      "watchers": 10830,
+      "stars": 10831,
+      "forks": 1457,
+      "watchers": 10831,
       "language": "HTML",
       "topics": [
         "gpt",
@@ -1315,8 +1315,8 @@
         "url": "https://github.com/LouisShark"
       },
       "createdAt": "2023-11-01T12:35:05Z",
-      "updatedAt": "2026-10-30T13:05:51Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T09:03:31Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1328,9 +1328,9 @@
       "description": "🚀 An awesome list of curated Nano Banana pro prompts and examples. Your go-to resource for mastering prompt engineering and exploring the creative potential of the Nano banana pro(Nano banana 2) AI image model.",
       "url": "https://github.com/ZeroLu/awesome-nanobanana-pro",
       "homepage": "https://cyberbara.com/seedance2.0?utm_source=banana",
-      "stars": 10371,
-      "forks": 871,
-      "watchers": 10371,
+      "stars": 10374,
+      "forks": 872,
+      "watchers": 10374,
       "language": null,
       "topics": [
         "gemini",
@@ -1348,8 +1348,8 @@
         "url": "https://github.com/ZeroLu"
       },
       "createdAt": "2025-11-10T13:51:03Z",
-      "updatedAt": "2026-10-30T07:57:50Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:55:48Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1361,9 +1361,9 @@
       "description": "🚀 World's largest GPT Image 2 prompt library, updated daily — 2000+ curated prompts with preview images, 16 languages. OpenAI's next-gen image model with pixel-perfect text rendering, cross-image consistency, and commercial-grade illustration. Free & open source.",
       "url": "https://github.com/YouMind-OpenLab/awesome-gpt-image-2",
       "homepage": "https://youmind.com/gpt-image-2-prompts",
-      "stars": 10197,
-      "forks": 891,
-      "watchers": 10197,
+      "stars": 10207,
+      "forks": 892,
+      "watchers": 10207,
       "language": "TypeScript",
       "topics": [
         "ai-image-generation",
@@ -1389,8 +1389,8 @@
         "url": "https://github.com/YouMind-OpenLab"
       },
       "createdAt": "2026-04-16T13:57:42Z",
-      "updatedAt": "2026-10-30T12:15:04Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:05:07Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1402,9 +1402,9 @@
       "description": "Curated prompts, frameworks and papers for LLMs and agents, with an engineering bias. Prompt engineering, context engineering, agent harnesses, red teaming.",
       "url": "https://github.com/ai-boost/awesome-prompts",
       "homepage": "https://agentcraft.dev/en/prompts/agents/",
-      "stars": 9152,
-      "forks": 894,
-      "watchers": 9152,
+      "stars": 9160,
+      "forks": 893,
+      "watchers": 9160,
       "language": "Python",
       "topics": [
         "agents",
@@ -1423,8 +1423,8 @@
         "url": "https://github.com/ai-boost"
       },
       "createdAt": "2024-01-19T15:15:10Z",
-      "updatedAt": "2026-10-30T11:06:30Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:53:51Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1436,9 +1436,9 @@
       "description": "Stop writing prompts from scratch — a searchable prompt library for ChatGPT, Claude, Gemini and Cursor · Русский 한국어 العربية हिन्दी ไทย ｜ 别再从头写提示词：现成的拿来就用，好用的收进自己的库",
       "url": "https://github.com/rockbenben/ChatGPT-Shortcut",
       "homepage": "https://www.aishort.top/en",
-      "stars": 8887,
+      "stars": 8891,
       "forks": 973,
-      "watchers": 8887,
+      "watchers": 8891,
       "language": "TypeScript",
       "topics": [
         "ai-prompt",
@@ -1468,8 +1468,8 @@
         "url": "https://github.com/rockbenben"
       },
       "createdAt": "2023-02-24T12:53:49Z",
-      "updatedAt": "2026-10-30T04:27:16Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:53:56Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1481,9 +1481,9 @@
       "description": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai",
       "url": "https://github.com/EvoMap/evolver",
       "homepage": "https://evomap.ai",
-      "stars": 8712,
-      "forks": 846,
-      "watchers": 8712,
+      "stars": 8714,
+      "forks": 847,
+      "watchers": 8714,
       "language": "JavaScript",
       "topics": [
         "a2a",
@@ -1513,8 +1513,8 @@
         "url": "https://github.com/EvoMap"
       },
       "createdAt": "2026-02-01T05:59:24Z",
-      "updatedAt": "2026-10-30T11:10:06Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T10:39:38Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1526,9 +1526,9 @@
       "description": "🦸 AI 编程超能力 · 中文增强版 — superpowers（250k+ ⭐）完整汉化 + 4 个中国原创 skills，让 Claude Code / Copilot CLI / Hermes Agent / Cursor / Windsurf / Kiro / Gemini CLI / Qoder 等 26 款 AI 编程工具真正会干活",
       "url": "https://github.com/jnMetaCode/superpowers-zh",
       "homepage": "https://sp.aiolaola.com",
-      "stars": 8431,
-      "forks": 778,
-      "watchers": 8431,
+      "stars": 8435,
+      "forks": 780,
+      "watchers": 8435,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1554,8 +1554,8 @@
         "url": "https://github.com/jnMetaCode"
       },
       "createdAt": "2026-03-20T00:12:39Z",
-      "updatedAt": "2026-10-30T11:58:20Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:38:16Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1567,9 +1567,9 @@
       "description": "FinRobot: An Open-Source AI Agent Platform for Financial Applications using Large Language Models",
       "url": "https://github.com/AI4Finance-Foundation/FinRobot",
       "homepage": "https://finrobot.ai",
-      "stars": 8337,
+      "stars": 8342,
       "forks": 1405,
-      "watchers": 8337,
+      "watchers": 8342,
       "language": "Python",
       "topics": [
         "aiagent",
@@ -1587,8 +1587,8 @@
         "url": "https://github.com/AI4Finance-Foundation"
       },
       "createdAt": "2024-02-27T02:30:30Z",
-      "updatedAt": "2026-10-30T14:07:57Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:09:02Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1600,9 +1600,9 @@
       "description": "A trilingual (繁中 / English / 简中) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. 中文 AI agent 學習地圖。",
       "url": "https://github.com/WenyuChiou/awesome-agentic-ai-zh",
       "homepage": "https://wenyuchiou.github.io/awesome-agentic-ai-zh/",
-      "stars": 8287,
-      "forks": 1049,
-      "watchers": 8287,
+      "stars": 8315,
+      "forks": 1050,
+      "watchers": 8315,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -1631,8 +1631,8 @@
         "url": "https://github.com/WenyuChiou"
       },
       "createdAt": "2026-05-04T22:18:51Z",
-      "updatedAt": "2026-10-30T14:02:11Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T11:59:43Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1671,8 +1671,8 @@
         "url": "https://github.com/jamez-bondos"
       },
       "createdAt": "2025-04-13T15:34:48Z",
-      "updatedAt": "2026-10-30T09:33:57Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T13:36:35Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1684,9 +1684,9 @@
       "description": "22 prompt engineering techniques with hands-on Jupyter Notebook tutorials, from fundamental concepts to advanced strategies for leveraging LLMs.",
       "url": "https://github.com/NirDiamant/Prompt_Engineering",
       "homepage": "https://diamant-ai.com",
-      "stars": 7916,
+      "stars": 7917,
       "forks": 1033,
-      "watchers": 7916,
+      "watchers": 7917,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -1714,8 +1714,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-10-10T08:52:12Z",
-      "updatedAt": "2026-10-30T11:16:11Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T11:22:41Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1727,9 +1727,9 @@
       "description": "A CLI tool to convert your codebase into a single LLM prompt with source tree, prompt templating, and token counting.",
       "url": "https://github.com/mufeedvh/code2prompt",
       "homepage": "https://code2prompt.dev",
-      "stars": 7746,
+      "stars": 7747,
       "forks": 459,
-      "watchers": 7746,
+      "watchers": 7747,
       "language": "Rust",
       "topics": [
         "ai",
@@ -1752,8 +1752,8 @@
         "url": "https://github.com/mufeedvh"
       },
       "createdAt": "2024-03-09T12:42:06Z",
-      "updatedAt": "2026-10-30T04:37:11Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-30T22:42:12Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1765,9 +1765,9 @@
       "description": "LLM-Driven Extraction of Unstructured Data — Built for API Deployments & ETL Pipeline Workflows",
       "url": "https://github.com/Zipstack/unstract",
       "homepage": "https://unstract.com",
-      "stars": 7355,
-      "forks": 734,
-      "watchers": 7355,
+      "stars": 7375,
+      "forks": 738,
+      "watchers": 7375,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -1789,8 +1789,8 @@
         "url": "https://github.com/Zipstack"
       },
       "createdAt": "2024-02-21T10:34:33Z",
-      "updatedAt": "2026-10-30T14:29:39Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T11:40:20Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1802,9 +1802,9 @@
       "description": "The Enterprise-Grade Multi-Agent Orchestration Framework. Website: https://swarms.ai",
       "url": "https://github.com/kyegomez/swarms",
       "homepage": "https://docs.swarms.world",
-      "stars": 7332,
-      "forks": 1059,
-      "watchers": 7332,
+      "stars": 7336,
+      "forks": 1060,
+      "watchers": 7336,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -1832,8 +1832,8 @@
         "url": "https://github.com/kyegomez"
       },
       "createdAt": "2023-05-11T01:09:00Z",
-      "updatedAt": "2026-10-30T12:33:08Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:27:44Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1845,9 +1845,9 @@
       "description": "Open-source skills for designing and reviewing software with AI agents",
       "url": "https://github.com/google/elephant-goldfish-model",
       "homepage": "https://egm.dev",
-      "stars": 6458,
-      "forks": 392,
-      "watchers": 6458,
+      "stars": 6999,
+      "forks": 427,
+      "watchers": 6999,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1873,8 +1873,8 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2026-09-13T16:31:06Z",
-      "updatedAt": "2026-10-30T14:45:00Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T14:15:22Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     },
@@ -1887,7 +1887,7 @@
       "url": "https://github.com/NeoVertex1/SuperPrompt",
       "homepage": null,
       "stars": 6428,
-      "forks": 569,
+      "forks": 568,
       "watchers": 6428,
       "language": null,
       "topics": [
@@ -1904,7 +1904,7 @@
       },
       "createdAt": "2024-09-01T01:57:27Z",
       "updatedAt": "2026-10-30T03:54:21Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": true
     },
@@ -1947,8 +1947,8 @@
         "url": "https://github.com/promptslab"
       },
       "createdAt": "2023-02-09T18:22:52Z",
-      "updatedAt": "2026-10-30T13:26:06Z",
-      "firstSeenAt": "2026-10-30T14:48:46.783Z",
+      "updatedAt": "2026-10-31T12:03:57Z",
+      "firstSeenAt": "2026-10-31T14:16:30.790Z",
       "isNew": true,
       "existing": false
     }
