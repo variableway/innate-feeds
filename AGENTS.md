@@ -226,6 +226,9 @@ bun src/app/cli.ts sync trendshift --source scrape --timeframe daily  # fallback
 # Awesome DSH — upstream market index + GitHub GraphQL stars (GH #30)
 bun run sync:awesome-dsh
 
+# Legacy DSH YAML snapshot (GH #27, manual fallback only)
+bun src/app/cli.ts sync dsh-catalog --dry-run
+
 # Unified sync (all external sources)
 bun run sync:vc
 bun src/app/cli.ts sync vc --source producthunt --source yc
@@ -419,6 +422,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/a16z-portfolio.ts` — a16z AI Portfolio static list + GitHub enrichment. Stores JSON to `~/.innate/a16z/`.
 - `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Keeps the top N (default 50) repos per topic and skips repos already in the feeds / already seen in that topic (GH #24). Stores JSON to `~/.innate/github-topics/`.
 - `collector/awesome-dsh.ts` — normalizes the Awesome DSH market index and refreshes Stars via GitHub GraphQL (GH #30). Writes the local plugin catalog under `~/.innate/awesome-dsh/`.
+- `collector/dsh-catalog.ts` — legacy tarball updater for vendored YAML snapshots (GH #27). Manual fallback only; large generated data is not committed.
 - `collector/vc-portfolio.ts` — Unified orchestrator for all external collectors.
 - `collector/shared/types.ts` — Shared types (`ExternalFeedItem`, `FeedCollector`, `FeedSource`).
 - `collector/shared/storage.ts` — JSON storage abstraction (manifest + saveItems).
@@ -457,6 +461,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
 | Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
 | Changing the Awesome DSH catalog (GH #30) | `backend/src/collector/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `dsh/src/services/plugins.ts` |
+| Changing the legacy DSH YAML updater (GH #27) | `backend/src/collector/dsh-catalog.ts` |
 | Changing the GitHub Topics datasource (GH #24) | `backend/src/collector/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |
 | Changing external collector shared logic | `backend/src/collector/shared/types.ts`, `storage.ts`, `http.ts` |
 | Changing digest issues sync | `backend/src/collector/issues-digest.ts` |

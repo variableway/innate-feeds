@@ -27,6 +27,7 @@ import {
   TOPIC_LIMIT,
 } from "../collector/github-topics.js";
 import { saveItems } from "../collector/shared/storage.js";
+import { syncDshCatalog } from "../collector/dsh-catalog.js";
 import { syncAwesomeDsh } from "../collector/awesome-dsh.js";
 import {
   syncTrendshift,
@@ -55,6 +56,7 @@ Usage:
   tsx src/app/cli.ts sync a16z
   tsx src/app/cli.ts sync github-topics [--topic TOPIC] [--sort stars|updated] [--per-page N] [--limit N]
   tsx src/app/cli.ts sync trendshift [--timeframe all|daily|weekly|monthly|yearly] [--language slug[,slug]|*] [--source cdn|scrape|auto] [--no-save]
+  tsx src/app/cli.ts sync dsh-catalog [--ref BRANCH] [--dry-run]
   tsx src/app/cli.ts sync awesome-dsh
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
   tsx src/app/cli.ts list [trending|starred]
@@ -332,6 +334,13 @@ async function main() {
             2,
           ),
         );
+      } else if (type === "dsh-catalog") {
+        const args = process.argv.slice(4);
+        const dryRun = args.includes("--dry-run");
+        const refIdx = args.indexOf("--ref");
+        const ref = refIdx >= 0 ? args[refIdx + 1] : undefined;
+        const result = await syncDshCatalog({ ref, dryRun });
+        console.log(JSON.stringify(result, null, 2));
       } else if (type === "awesome-dsh") {
         const summary = await syncAwesomeDsh();
         console.log(

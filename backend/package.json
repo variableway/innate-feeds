@@ -22,6 +22,7 @@
     "sync:vc": "bun src/app/cli.ts sync vc",
     "sync:topics": "bun src/app/cli.ts sync github-topics",
     "sync:trendshift": "bun src/app/cli.ts sync trendshift",
+    "sync:dsh-catalog": "bun src/app/cli.ts sync dsh-catalog",
     "sync:awesome-dsh": "bun src/app/cli.ts sync awesome-dsh",
     "topics:list": "bun src/app/cli.ts topics --list",
     "export:digest-local": "bun src/app/cli.ts sync digest",
