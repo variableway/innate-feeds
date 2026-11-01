@@ -163,8 +163,8 @@
 
         <div class="metrics">
           <div class="metric"><b>14.5k</b><span>后端行数 · 62 文件</span></div>
-          <div class="metric"><b>8.4k</b><span>前端 + dsh 行数 · 67 文件</span></div>
-          <div class="metric"><b>22</b><span>HTTP API 端点</span></div>
+          <div class="metric"><b>9.6k</b><span>前端 + dsh 行数 · 74 文件</span></div>
+          <div class="metric"><b>37</b><span>HTTP API 端点</span></div>
           <div class="metric"><b>11</b><span>外部数据源 FeedSource</span></div>
         </div>
       </header>
@@ -221,7 +221,7 @@
             <text x="92" y="312" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">API 层 · backend/src/app</text>
             <rect x="92" y="322" width="212" height="36" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
             <text x="104" y="337" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">server.ts</text>
-            <text x="104" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">Hono · 22 端点 · Zod 校验</text>
+            <text x="104" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">Hono · 37 端点 · Zod 校验</text>
             <rect x="316" y="322" width="212" height="36" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
             <text x="328" y="337" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">cli.ts</text>
             <text x="328" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">sync / list / topics / stats</text>
@@ -248,7 +248,7 @@
             <!-- 采集层 -->
             <rect x="74" y="516" width="700" height="86" rx="10" fill="#ffffff" stroke="#e9e3d6" />
             <text x="92" y="540" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">采集层 · backend/src/collector</text>
-            <text x="92" y="558" font-family="Outfit, sans-serif" font-size="11" fill="#3a4256">12 个 collector，统一 FeedCollector 契约（fetchLatest / fetchByDate）</text>
+            <text x="92" y="558" font-family="Outfit, sans-serif" font-size="11" fill="#3a4256">9 个 collector，统一 FeedCollector 契约（fetchLatest / fetchByDate）</text>
             <text x="92" y="576" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#7c7a72">shared/types.ts · shared/storage.ts · shared/http.ts</text>
             <text x="92" y="592" font-family="Outfit, sans-serif" font-size="10.5" fill="#9a978e">外部源：gh CLI · Firecrawl · GitHub API · Algolia · 公开 JSON API</text>
 
@@ -465,6 +465,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
           <h2>五、模块清单</h2>
         </div>
+        <p class="sec-note">
+          规模口径：<code>.ts</code> + <code>.tsx</code> 全部计入（含测试文件与 <code>.d.ts</code>），排除 <code>node_modules</code> / <code>dist</code>。
+          行数 = 该目录内文件行数之和。本表按<strong>职责</strong>挑选主要模块，非穷举；
+          完整目录清点见页脚口径。
+        </p>
 
         <div class="card">
           <table>
@@ -650,6 +655,14 @@
           <code>docs/arch-design/datasource-frontend-separation.md</code> ·
           <code>docs/arch-design/external-collectors.md</code> ·
           <code>docs/backlogs/</code>
+        </p>
+        <p>
+          <strong>口径与复现：</strong>
+          后端 62 文件 / 14,520 行 = <code>backend/</code> 下 <code>.ts</code>+<code>.tsx</code>（含 <code>*.test.ts</code> 与 <code>sql-modules.d.ts</code>）；
+          前端 + dsh 74 文件 / 9,555 行 = <code>frontend/</code>（57 / 8,395）+ <code>dsh/</code>（17 / 1,160）；
+          37 个 HTTP API 端点 = <code>server.ts</code> 23 + <code>admin-db.ts</code> 9 + <code>dsh/routes.ts</code> 5（只计 <code>/api/*</code>，不含 SPA 兜底与 <code>/docs</code>）；
+          11 个 FeedSource = <code>backend/src/collector/shared/types.ts</code> 的联合类型成员数。
+          复现命令：<code>node ~/.claude/skills/arch-diagram/scripts/inventory.js . --summary</code>。
         </p>
       </footer>
     </div>
