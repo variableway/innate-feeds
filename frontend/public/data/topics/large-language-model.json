@@ -1,6 +1,6 @@
 {
   "topic": "large-language-model",
-  "fetchedAt": "2026-10-31T14:16:11.002Z",
+  "fetchedAt": "2026-11-01T14:42:48.511Z",
   "count": 50,
   "newCount": 45,
   "existingCount": 5,
@@ -13,9 +13,9 @@
       "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
       "url": "https://github.com/jingyaogong/minimind",
       "homepage": "https://jingyaogong.github.io/minimind",
-      "stars": 64682,
-      "forks": 8455,
-      "watchers": 64682,
+      "stars": 64728,
+      "forks": 8468,
+      "watchers": 64728,
       "language": "Python",
       "topics": [
         "artificial-intelligence",
@@ -27,8 +27,8 @@
         "url": "https://github.com/jingyaogong"
       },
       "createdAt": "2024-07-27T04:34:12Z",
-      "updatedAt": "2026-10-31T14:08:18Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T14:40:29Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": true
     },
@@ -40,9 +40,9 @@
       "description": "Python scraper based on AI",
       "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
       "homepage": "https://scrapegraphai.com",
-      "stars": 32395,
-      "forks": 3314,
-      "watchers": 32395,
+      "stars": 32414,
+      "forks": 3313,
+      "watchers": 32414,
       "language": "Python",
       "topics": [
         "ai-crawler",
@@ -72,8 +72,8 @@
         "url": "https://github.com/ScrapeGraphAI"
       },
       "createdAt": "2024-01-27T16:54:38Z",
-      "updatedAt": "2026-10-31T13:37:23Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T14:23:49Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -110,8 +110,8 @@
         "url": "https://github.com/The-Pocket"
       },
       "createdAt": "2025-04-02T20:56:33Z",
-      "updatedAt": "2026-10-31T11:19:05Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T09:54:41Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -123,9 +123,9 @@
       "description": "Pocket Flow: 100-line LLM framework. Let Agents build Agents!",
       "url": "https://github.com/The-Pocket/PocketFlow",
       "homepage": "https://the-pocket.github.io/PocketFlow/",
-      "stars": 11292,
+      "stars": 11294,
       "forks": 1211,
-      "watchers": 11292,
+      "watchers": 11294,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -155,8 +155,8 @@
         "url": "https://github.com/The-Pocket"
       },
       "createdAt": "2024-12-24T02:43:30Z",
-      "updatedAt": "2026-10-30T21:20:15Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T13:57:26Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": true
     },
@@ -168,9 +168,9 @@
       "description": "KAG is a logical form-guided reasoning and retrieval framework based on OpenSPG engine and LLMs.  It is used to build logical reasoning and factual Q&A solutions for professional domain knowledge bases. It can effectively overcome the shortcomings of the traditional RAG vector similarity calculation model.",
       "url": "https://github.com/OpenSPG/KAG",
       "homepage": "https://spg.openkg.cn/en-US",
-      "stars": 9141,
-      "forks": 719,
-      "watchers": 9141,
+      "stars": 9143,
+      "forks": 720,
+      "watchers": 9143,
       "language": "Python",
       "topics": [
         "knowledge-graph",
@@ -185,8 +185,8 @@
         "url": "https://github.com/OpenSPG"
       },
       "createdAt": "2024-09-21T13:56:44Z",
-      "updatedAt": "2026-10-31T10:08:59Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T09:41:11Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": true
     },
@@ -198,9 +198,9 @@
       "description": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
       "url": "https://github.com/0xPlaygrounds/rig",
       "homepage": "https://rig.rs",
-      "stars": 9029,
-      "forks": 1004,
-      "watchers": 9029,
+      "stars": 9035,
+      "forks": 1005,
+      "watchers": 9035,
       "language": "Rust",
       "topics": [
         "agent",
@@ -220,8 +220,8 @@
         "url": "https://github.com/0xPlaygrounds"
       },
       "createdAt": "2024-06-05T13:42:28Z",
-      "updatedAt": "2026-10-31T06:24:13Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T11:58:15Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -233,9 +233,9 @@
       "description": "OpenCompass is an LLM evaluation platform, supporting a wide range of models from OpenAI, Anthropic, Gemini, Qwen, GLM, DeepSeek, etc, across 100+ datasets covering knowledge, reasoning, coding, science, language, long-context, and safety.",
       "url": "https://github.com/open-compass/opencompass",
       "homepage": "https://opencompass.org.cn/",
-      "stars": 7559,
+      "stars": 7560,
       "forks": 898,
-      "watchers": 7559,
+      "watchers": 7560,
       "language": "Python",
       "topics": [
         "benchmark",
@@ -250,8 +250,8 @@
         "url": "https://github.com/open-compass"
       },
       "createdAt": "2023-06-15T12:42:58Z",
-      "updatedAt": "2026-10-30T17:56:39Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T06:21:31Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -286,7 +286,7 @@
       },
       "createdAt": "2023-07-06T04:52:06Z",
       "updatedAt": "2026-10-29T12:18:31Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -299,7 +299,7 @@
       "url": "https://github.com/Eigenwise/atomic-agents",
       "homepage": "https://eigenwise.github.io/atomic-agents/",
       "stars": 6315,
-      "forks": 559,
+      "forks": 558,
       "watchers": 6315,
       "language": "Python",
       "topics": [
@@ -318,7 +318,7 @@
       },
       "createdAt": "2024-06-03T08:24:07Z",
       "updatedAt": "2026-10-31T13:45:46Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -330,9 +330,9 @@
       "description": "Enchanted is iOS and macOS app for chatting with private self hosted language models such as Llama2, Mistral or Vicuna using Ollama.",
       "url": "https://github.com/gluonfield/enchanted",
       "homepage": null,
-      "stars": 6016,
+      "stars": 6017,
       "forks": 426,
-      "watchers": 6016,
+      "watchers": 6017,
       "language": "Swift",
       "topics": [
         "ios",
@@ -351,8 +351,8 @@
         "url": "https://github.com/gluonfield"
       },
       "createdAt": "2023-12-13T18:55:26Z",
-      "updatedAt": "2026-10-31T07:19:29Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T09:33:26Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -364,9 +364,9 @@
       "description": "learn LLM inference system on Apple Silicon for systems engineers: build a tiny vLLM + Qwen",
       "url": "https://github.com/skyzh/tiny-llm",
       "homepage": "https://skyzh.github.io/tiny-llm/",
-      "stars": 5467,
-      "forks": 490,
-      "watchers": 5467,
+      "stars": 5503,
+      "forks": 497,
+      "watchers": 5503,
       "language": "Python",
       "topics": [
         "course",
@@ -383,8 +383,8 @@
         "url": "https://github.com/skyzh"
       },
       "createdAt": "2025-04-19T20:01:33Z",
-      "updatedAt": "2026-10-31T14:05:58Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T14:08:27Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -396,9 +396,9 @@
       "description": "[CCS'24] A dataset consists of 15,140 ChatGPT prompts from Reddit, Discord, websites, and open-source datasets (including 1,405 jailbreak prompts).",
       "url": "https://github.com/verazuo/jailbreak_llms",
       "homepage": "https://jailbreak-llms.xinyueshen.me/",
-      "stars": 3864,
+      "stars": 3867,
       "forks": 340,
-      "watchers": 3864,
+      "watchers": 3867,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -415,8 +415,8 @@
         "url": "https://github.com/verazuo"
       },
       "createdAt": "2023-08-01T21:12:06Z",
-      "updatedAt": "2026-10-31T05:33:46Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T11:00:28Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -444,7 +444,7 @@
       },
       "createdAt": "2024-04-23T20:44:31Z",
       "updatedAt": "2026-10-31T05:38:26Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -485,7 +485,7 @@
       },
       "createdAt": "2023-09-26T02:42:20Z",
       "updatedAt": "2026-10-30T01:43:49Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -514,7 +514,7 @@
       },
       "createdAt": "2023-08-01T15:53:33Z",
       "updatedAt": "2026-10-30T06:42:33Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -526,9 +526,9 @@
       "description": "Comprehensive resources on Generative AI, including a detailed roadmap, projects, use cases, interview preparation, and coding preparation.",
       "url": "https://github.com/genieincodebottle/generative-ai",
       "homepage": "https://aimlcompanion.ai/",
-      "stars": 2658,
-      "forks": 644,
-      "watchers": 2658,
+      "stars": 2659,
+      "forks": 645,
+      "watchers": 2659,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-ai",
@@ -558,8 +558,8 @@
         "url": "https://github.com/genieincodebottle"
       },
       "createdAt": "2024-01-09T11:10:20Z",
-      "updatedAt": "2026-10-29T17:40:05Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T07:04:43Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": true
     },
@@ -571,9 +571,9 @@
       "description": "Awesome papers about unifying LLMs and KGs",
       "url": "https://github.com/RManLuo/Awesome-LLM-KG",
       "homepage": null,
-      "stars": 2620,
+      "stars": 2621,
       "forks": 179,
-      "watchers": 2620,
+      "watchers": 2621,
       "language": null,
       "topics": [
         "awsome",
@@ -592,8 +592,8 @@
         "url": "https://github.com/RManLuo"
       },
       "createdAt": "2023-06-07T23:30:03Z",
-      "updatedAt": "2026-10-28T17:06:24Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T14:25:01Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -605,9 +605,9 @@
       "description": "Awesome things about LLM-powered agents. Papers / Repos / Blogs / ...",
       "url": "https://github.com/hyp1231/awesome-llm-powered-agent",
       "homepage": null,
-      "stars": 2259,
+      "stars": 2260,
       "forks": 232,
-      "watchers": 2259,
+      "watchers": 2260,
       "language": null,
       "topics": [
         "awesome-list",
@@ -633,8 +633,8 @@
         "url": "https://github.com/hyp1231"
       },
       "createdAt": "2023-07-25T06:23:18Z",
-      "updatedAt": "2026-10-30T08:23:42Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T09:21:19Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -673,8 +673,8 @@
         "url": "https://github.com/EgoAlpha"
       },
       "createdAt": "2023-03-08T08:47:29Z",
-      "updatedAt": "2026-10-31T01:00:09Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T01:00:09Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -717,7 +717,7 @@
       },
       "createdAt": "2021-01-20T09:12:03Z",
       "updatedAt": "2026-10-29T12:15:14Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -729,9 +729,9 @@
       "description": "⚡ Build your chatbot within minutes on your favorite device; offer SOTA compression techniques for LLMs; run LLMs efficiently on Intel Platforms⚡",
       "url": "https://github.com/intel/intel-extension-for-transformers",
       "homepage": null,
-      "stars": 2173,
+      "stars": 2174,
       "forks": 214,
-      "watchers": 2173,
+      "watchers": 2174,
       "language": "Python",
       "topics": [
         "4-bits",
@@ -757,8 +757,8 @@
         "url": "https://github.com/intel"
       },
       "createdAt": "2022-11-11T05:32:27Z",
-      "updatedAt": "2026-10-30T10:33:39Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-10-31T17:00:39Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -770,9 +770,9 @@
       "description": "Minimal reproduction of OneRec",
       "url": "https://github.com/AkaliKong/MiniOneRec",
       "homepage": null,
-      "stars": 1943,
+      "stars": 1944,
       "forks": 289,
-      "watchers": 1943,
+      "watchers": 1944,
       "language": "Python",
       "topics": [
         "generative-ai",
@@ -792,8 +792,8 @@
         "url": "https://github.com/AkaliKong"
       },
       "createdAt": "2025-10-21T14:02:08Z",
-      "updatedAt": "2026-10-31T10:06:03Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T13:49:16Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -827,7 +827,7 @@
       },
       "createdAt": "2023-07-19T06:55:49Z",
       "updatedAt": "2026-10-30T10:54:06Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -865,7 +865,7 @@
       },
       "createdAt": "2025-06-09T12:42:36Z",
       "updatedAt": "2026-10-31T13:51:26Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -905,7 +905,7 @@
       },
       "createdAt": "2024-07-23T05:50:15Z",
       "updatedAt": "2026-10-31T01:17:10Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": true
     },
@@ -934,7 +934,7 @@
       },
       "createdAt": "2025-05-11T06:00:32Z",
       "updatedAt": "2026-10-30T12:57:54Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -946,9 +946,9 @@
       "description": "A Home Assistant integration & Model to control your smart home using a Local LLM",
       "url": "https://github.com/acon96/home-llm",
       "homepage": null,
-      "stars": 1481,
-      "forks": 157,
-      "watchers": 1481,
+      "stars": 1482,
+      "forks": 155,
+      "watchers": 1482,
       "language": "Python",
       "topics": [
         "homeassistant-custom-component",
@@ -960,8 +960,8 @@
         "url": "https://github.com/acon96"
       },
       "createdAt": "2023-12-23T04:50:06Z",
-      "updatedAt": "2026-10-30T19:48:00Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-10-31T14:44:22Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1005,7 +1005,7 @@
       },
       "createdAt": "2023-07-09T04:36:38Z",
       "updatedAt": "2026-10-30T13:32:51Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1045,7 +1045,7 @@
       },
       "createdAt": "2024-02-08T16:04:45Z",
       "updatedAt": "2026-10-21T06:15:49Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1076,7 +1076,7 @@
       },
       "createdAt": "2023-10-23T09:37:40Z",
       "updatedAt": "2026-10-30T03:27:57Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1088,9 +1088,9 @@
       "description": "An easy-to-use Python framework to generate adversarial jailbreak prompts.",
       "url": "https://github.com/EasyJailbreak/EasyJailbreak",
       "homepage": "http://easyjailbreak.org/",
-      "stars": 932,
+      "stars": 933,
       "forks": 94,
-      "watchers": 932,
+      "watchers": 933,
       "language": "Python",
       "topics": [
         "discrete-optimization",
@@ -1106,8 +1106,8 @@
         "url": "https://github.com/EasyJailbreak"
       },
       "createdAt": "2024-01-31T09:04:31Z",
-      "updatedAt": "2026-10-29T07:45:09Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T01:25:26Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1136,7 +1136,7 @@
       },
       "createdAt": "2026-04-27T22:30:47Z",
       "updatedAt": "2026-10-30T15:53:04Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1148,9 +1148,9 @@
       "description": "A Graph RAG System for Evidenced-based Medical Information Retrieval  [ACL 2025]",
       "url": "https://github.com/ImprintLab/Medical-Graph-RAG",
       "homepage": "https://arxiv.org/html/2408.04187v1",
-      "stars": 839,
+      "stars": 840,
       "forks": 144,
-      "watchers": 839,
+      "watchers": 840,
       "language": "Python",
       "topics": [
         "deep-learning",
@@ -1167,8 +1167,8 @@
         "url": "https://github.com/ImprintLab"
       },
       "createdAt": "2024-08-08T03:08:30Z",
-      "updatedAt": "2026-10-22T11:58:10Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T12:46:16Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1197,7 +1197,7 @@
       },
       "createdAt": "2024-03-16T05:16:40Z",
       "updatedAt": "2026-10-09T04:40:12Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1232,7 +1232,7 @@
       },
       "createdAt": "2023-06-19T14:15:09Z",
       "updatedAt": "2026-10-26T09:25:52Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1276,7 +1276,7 @@
       },
       "createdAt": "2023-04-26T10:10:06Z",
       "updatedAt": "2026-10-30T16:00:51Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1321,7 +1321,7 @@
       },
       "createdAt": "2024-03-27T15:44:23Z",
       "updatedAt": "2026-10-26T12:37:57Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1365,7 +1365,7 @@
       },
       "createdAt": "2024-08-07T12:58:24Z",
       "updatedAt": "2026-10-31T02:16:17Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1396,7 +1396,7 @@
       },
       "createdAt": "2023-04-20T13:43:25Z",
       "updatedAt": "2026-10-28T16:49:19Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1424,7 +1424,7 @@
       },
       "createdAt": "2024-04-11T23:42:27Z",
       "updatedAt": "2026-10-12T19:08:21Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1436,9 +1436,9 @@
       "description": "Universal LLM Gateway: One API, every LLM. OpenAI/Anthropic-compatible endpoints with multi-provider translation and intelligent load-balancing.",
       "url": "https://github.com/Mirrowel/LLM-API-Key-Proxy",
       "homepage": null,
-      "stars": 558,
-      "forks": 105,
-      "watchers": 558,
+      "stars": 559,
+      "forks": 106,
+      "watchers": 559,
       "language": "Python",
       "topics": [
         "api-key",
@@ -1453,8 +1453,8 @@
         "url": "https://github.com/Mirrowel"
       },
       "createdAt": "2025-06-10T17:07:26Z",
-      "updatedAt": "2026-10-30T15:07:01Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T06:31:52Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1466,9 +1466,9 @@
       "description": "Create knowledge graphs with LLMs",
       "url": "https://github.com/dylanhogg/llmgraph",
       "homepage": null,
-      "stars": 509,
+      "stars": 510,
       "forks": 33,
-      "watchers": 509,
+      "watchers": 510,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -1487,8 +1487,8 @@
         "url": "https://github.com/dylanhogg"
       },
       "createdAt": "2023-10-05T21:53:44Z",
-      "updatedAt": "2026-10-21T13:25:39Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "updatedAt": "2026-11-01T14:25:04Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1519,7 +1519,7 @@
       },
       "createdAt": "2023-09-22T06:10:39Z",
       "updatedAt": "2026-10-24T11:43:36Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1551,7 +1551,7 @@
       },
       "createdAt": "2025-02-21T01:05:45Z",
       "updatedAt": "2026-10-24T18:15:26Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1596,7 +1596,7 @@
       },
       "createdAt": "2023-04-01T10:06:32Z",
       "updatedAt": "2026-10-31T13:10:41Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1630,7 +1630,7 @@
       },
       "createdAt": "2025-02-16T10:36:08Z",
       "updatedAt": "2026-10-25T20:29:18Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1675,7 +1675,7 @@
       },
       "createdAt": "2020-12-22T08:27:59Z",
       "updatedAt": "2026-10-29T06:26:05Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1714,7 +1714,7 @@
       },
       "createdAt": "2018-03-03T13:12:14Z",
       "updatedAt": "2026-10-24T20:36:50Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1747,7 +1747,7 @@
       },
       "createdAt": "2024-06-12T21:50:58Z",
       "updatedAt": "2026-10-10T12:51:20Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     },
@@ -1777,7 +1777,7 @@
       },
       "createdAt": "2025-09-25T13:33:00Z",
       "updatedAt": "2026-10-26T09:24:59Z",
-      "firstSeenAt": "2026-10-31T14:16:11.002Z",
+      "firstSeenAt": "2026-11-01T14:42:48.511Z",
       "isNew": true,
       "existing": false
     }
