@@ -26,7 +26,9 @@ out/
 .vite/
 
 # Third-party reference clones (issue #23 analysis)
-reference/
+# Root-anchored on purpose: skills under .claude/skills/*/references/ are
+# part of the repo and must stay tracked.
+/reference/
 
 # SQLite (local default: ~/.innate/feeds.db)
 backend/feeds.db
@@ -63,7 +65,9 @@ frontend/public/data/plugins.json
 awesome/awesome-dsh-plugin/data/plugin-catalog.json
 
 # Local reference clones (nested git repos, not part of this project)
-references/
+# Root-anchored on purpose: skills under .claude/skills/*/references/ are
+# part of the repo and must stay tracked.
+/references/
 
 # IDE / editor
 .idea/

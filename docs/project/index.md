@@ -23,6 +23,17 @@
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
 | [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定） |
 | [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
+| [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
+
+## 仓库内 Skill
+
+放在 `.claude/skills/`，随仓库入库，Agent 直接可加载。
+
+| Skill | 用途 |
+|---|---|
+| [`feeds-sprint/`](../../.claude/skills/feeds-sprint/SKILL.md) | 按 `tasks/sprint-N/` 的文档驱动工作流认领与回写任务 |
+| [`arch-diagram/`](../../.claude/skills/arch-diagram/SKILL.md) | 产出有事实依据的仓库架构图：事实清点 → 选渲染器 → 截图验证 → 落库 |
+| [`skill-eval/`](../../.claude/skills/skill-eval/SKILL.md) | 用「有 skill / 无 skill」两组对照评测一个 skill 是否真的更好 |
 
 ## 当前焦点
 

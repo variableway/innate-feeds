@@ -512,6 +512,18 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing the plugin directory site | `dsh/src/` (domain plugin @innate/domain-dsh) |
 | Changing plugin data loading | `backend/src/dsh/catalog.ts`, `backend/src/dsh/routes.ts` |
 
+## Repository skills
+
+Repo-scoped skills live in `.claude/skills/` and are committed with the repo. Load one by reading its `SKILL.md` — do not re-derive its procedure from scratch.
+
+| Skill | Use it for |
+|---|---|
+| `.claude/skills/feeds-sprint/SKILL.md` | Working a Sprint task in `tasks/sprint-N/` (claim → implement → write back status) |
+| `.claude/skills/arch-diagram/SKILL.md` | Producing a code-grounded architecture diagram (inventory → render → screenshot-verify → commit into `docs/arch-design/`) |
+| `.claude/skills/skill-eval/SKILL.md` | Judging whether a skill actually helps, via a with-skill / no-skill A-B comparison |
+
+`arch-diagram` also ships `scripts/inventory.js` (pure Node, no deps) for deterministic repo inventory — run it, then cross-check the numbers with an independent `find` command before putting them in a diagram.
+
 ## Security considerations
 
 - The backend enables CORS for all origins (`app.use("/*", cors())`). If deployed publicly, restrict this to known origins.
