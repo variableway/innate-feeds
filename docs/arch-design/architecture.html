@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>innate-feeds · 总体框架与模块交互</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+      :root {
+        --bg: #f7f5f0;
+        --card: #ffffff;
+        --line: #e9e3d6;
+        --line-soft: #f0ebe0;
+        --ink: #14171e;
+        --ink-2: #3a4256;
+        --muted: #7c7a72;
+        --primary: #2f6f5e;
+        --primary-soft: rgba(47, 111, 94, 0.08);
+        --accent: #c97b3f;
+        --accent-soft: rgba(201, 123, 63, 0.09);
+        --mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Outfit", sans-serif;
+        font-size: 14.5px;
+        line-height: 1.58;
+        -webkit-font-smoothing: antialiased;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(680px 380px at 12% -6%, rgba(47, 111, 94, 0.055), transparent 70%),
+          radial-gradient(620px 340px at 96% 4%, rgba(201, 123, 63, 0.05), transparent 70%);
+      }
+      .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 72px; position: relative; }
+      @media (max-width: 640px) { .wrap { padding: 0 16px 48px; } }
+
+      /* ---------- hero ---------- */
+      header.hero { padding: 52px 0 34px; }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 22px;
+        height: 1px;
+        background: var(--primary);
+        opacity: 0.5;
+      }
+      h1 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.16;
+        letter-spacing: -0.005em;
+        margin: 14px 0 10px;
+      }
+      .lede { color: var(--ink-2); max-width: 68ch; margin: 0; font-size: 15px; }
+      .lede code { font-family: var(--mono); font-size: 12.5px; background: var(--primary-soft); padding: 1px 5px; border-radius: 4px; color: var(--primary); }
+
+      .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 30px; }
+      @media (max-width: 760px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+      .metric { background: var(--card); padding: 15px 17px; }
+      .metric b { display: block; font-size: 23px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+      .metric span { display: block; font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+
+      /* ---------- sections ---------- */
+      section { margin-top: 46px; }
+      .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+      .sec-head svg { width: 17px; height: 17px; color: var(--primary); flex: none; transform: translateY(2px); }
+      h2 { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 24px; margin: 0; letter-spacing: -0.004em; }
+      .sec-note { color: var(--muted); font-size: 12.5px; margin: -6px 0 16px; }
+
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035); }
+      .callout { border-left: 2px solid var(--primary); background: var(--primary-soft); border-radius: 0 12px 12px 0; padding: 14px 18px; margin-top: 18px; }
+      .callout strong { color: var(--primary); }
+
+      /* ---------- tables ---------- */
+      table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; padding: 0 10px 8px; border-bottom: 1px solid var(--line); }
+      td { padding: 9px 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+      tr:last-child td { border-bottom: 0; }
+      td.mono, .mono { font-family: var(--mono); font-size: 11.5px; }
+      td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .pill { display: inline-block; font-size: 10.5px; font-family: var(--mono); padding: 1px 7px; border-radius: 20px; background: var(--primary-soft); color: var(--primary); border: 1px solid rgba(47,111,94,0.18); }
+      .pill.warn { background: var(--accent-soft); color: var(--accent); border-color: rgba(201,123,63,0.22); }
+
+      /* ---------- svg frame ---------- */
+      .figure { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05); overflow-x: auto; }
+      .figure svg { display: block; width: 100%; height: auto; min-width: 760px; }
+      .caption { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+      /* ---------- mermaid ---------- */
+      .mermaid-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 18px; box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05); }
+      .mermaid { display: flex; justify-content: center; overflow-x: auto; }
+      .mermaid svg { max-width: 100%; height: auto; }
+
+      /* ---------- modes ---------- */
+      .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      @media (max-width: 820px) { .modes { grid-template-columns: 1fr; } }
+      .mode { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035); }
+      .mode h3 { margin: 0 0 4px; font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+      .mode h3 svg { width: 15px; height: 15px; color: var(--primary); }
+      .mode p { margin: 0 0 12px; color: var(--muted); font-size: 12.5px; }
+      .chain { list-style: none; margin: 0; padding: 0; }
+      .chain li { font-family: var(--mono); font-size: 11.5px; padding: 5px 0 5px 17px; position: relative; color: var(--ink-2); border-bottom: 1px dashed var(--line-soft); }
+      .chain li:last-child { border-bottom: 0; }
+      .chain li::before { content: "→"; position: absolute; left: 0; color: var(--primary); }
+
+      /* ---------- builder ---------- */
+      .builder { display: grid; grid-template-columns: 1fr; gap: 8px; }
+      .step { display: grid; grid-template-columns: 190px 1fr; gap: 16px; align-items: start; padding: 11px 0; border-bottom: 1px dashed var(--line); }
+      @media (max-width: 720px) { .step { grid-template-columns: 1fr; gap: 4px; } }
+      .step:last-child { border-bottom: 0; }
+      .step .api { font-family: var(--mono); font-size: 12px; color: var(--primary); background: var(--primary-soft); padding: 3px 8px; border-radius: 6px; justify-self: start; }
+      .step p { margin: 0; color: var(--ink-2); font-size: 13px; }
+
+      /* ---------- timeline ---------- */
+      .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
+      .timeline::before { content: ""; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: var(--primary); opacity: 0.28; }
+      .timeline li { position: relative; padding: 0 0 18px 32px; }
+      .timeline li:last-child { padding-bottom: 0; }
+      .timeline li::before { content: ""; position: absolute; left: 2px; top: 5px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--primary); }
+      .timeline b { display: block; font-size: 13.5px; font-weight: 600; }
+      .timeline b em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 6px; }
+      .timeline p { margin: 2px 0 0; color: var(--ink-2); font-size: 12.5px; }
+
+      footer { margin-top: 52px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+      footer code { font-family: var(--mono); font-size: 11px; }
+      a { color: var(--primary); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <div class="eyebrow">Architecture Overview · 2026-11-01</div>
+        <h1>innate-feeds 总体框架与模块交互</h1>
+        <p class="lede">
+          一个 GitHub 趋势聚合站，采用<strong>双部署模式</strong>与<strong>双域插件</strong>结构。
+          后端 <code>backend/</code> 负责采集与 API，前端拆成两个域包 <code>@innate/domain-feeds</code>（<code>frontend/</code>）与
+          <code>@innate/domain-dsh</code>（<code>dsh/</code>），由宿主 <code>frontend/src/main.tsx</code> 组合；
+          跨层常量与契约收敛在 <code>shared/</code>。
+        </p>
+
+        <div class="metrics">
+          <div class="metric"><b>14.5k</b><span>后端行数 · 62 文件</span></div>
+          <div class="metric"><b>8.4k</b><span>前端 + dsh 行数 · 67 文件</span></div>
+          <div class="metric"><b>22</b><span>HTTP API 端点</span></div>
+          <div class="metric"><b>11</b><span>外部数据源 FeedSource</span></div>
+        </div>
+      </header>
+
+      <div class="callout">
+        <strong>读图要点：</strong>纵向是<strong>依赖方向</strong>（上层依赖下层，反之不成立）；横向存在<strong>两条并列的数据出口</strong>——API 模式走后端 SQLite，静态模式走预导出的 JSON。
+        唯一的横向例外是 <code>shared/</code>，它被多层直接引用，本身不依赖任何一层。
+      </div>
+
+      <!-- ================= 1. 分层框架 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          <h2>一、五层框架</h2>
+        </div>
+        <p class="sec-note">每个方框是该层的真实目录；括号内为该层职责的一句话概括。层与层之间只允许向下依赖。</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 940 620" role="img" aria-label="innate-feeds 五层架构图">
+            <defs>
+              <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+                <path d="M0 0 L9 4.5 L0 9 z" fill="#2f6f5e" />
+              </marker>
+              <marker id="arm" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+                <path d="M0 0 L9 4.5 L0 9 z" fill="#c97b3f" />
+              </marker>
+            </defs>
+
+            <!-- 依赖方向轴 -->
+            <text x="14" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#7c7a72">依赖方向 ↓</text>
+            <line x1="52" y1="44" x2="52" y2="600" stroke="#2f6f5e" stroke-width="1.5" opacity="0.3" marker-end="url(#ar)" />
+
+            <!-- 宿主层 -->
+            <rect x="74" y="48" width="700" height="72" rx="10" fill="#ffffff" stroke="#e9e3d6" />
+            <text x="92" y="72" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">宿主层 · Host</text>
+            <text x="92" y="90" font-family="Outfit, sans-serif" font-size="11" fill="#7c7a72">frontend/src/main.tsx · host-shell.tsx · frontend/scripts/</text>
+            <rect x="92" y="98" width="660" height="1" fill="#f0ebe0" />
+            <text x="92" y="112" font-family="Outfit, sans-serif" font-size="11.5" fill="#3a4256">组合两个域、渲染侧栏与首页 tile；构建 = Tailwind v4 编译 + Bun.build 打包 + Pages 404</text>
+
+            <!-- 域层 -->
+            <rect x="74" y="146" width="700" height="116" rx="10" fill="#ffffff" stroke="#e9e3d6" />
+            <text x="92" y="170" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">域层 · Domains（域插件，共享同一 router）</text>
+            <rect x="92" y="182" width="322" height="64" rx="8" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="106" y="201" font-family="JetBrains Mono, monospace" font-size="11" fill="#14171e">@innate/domain-feeds</text>
+            <text x="106" y="219" font-family="Outfit, sans-serif" font-size="11" fill="#7c7a72">frontend/src · 7.3k 行 · /trending /starred</text>
+            <text x="106" y="235" font-family="Outfit, sans-serif" font-size="11" fill="#7c7a72">/topics /digest /feeds /trending-shift</text>
+            <rect x="428" y="182" width="324" height="64" rx="8" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="442" y="201" font-family="JetBrains Mono, monospace" font-size="11" fill="#14171e">@innate/domain-dsh</text>
+            <text x="442" y="219" font-family="Outfit, sans-serif" font-size="11" fill="#7c7a72">dsh/src · 1.2k 行 · /dsh 插件目录</text>
+            <text x="442" y="235" font-family="Outfit, sans-serif" font-size="11" fill="#7c7a72">/dsh/categories /dsh/plugins/$slug</text>
+
+            <!-- API 层 -->
+            <rect x="74" y="288" width="700" height="82" rx="10" fill="#ffffff" stroke="#e9e3d6" />
+            <text x="92" y="312" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">API 层 · backend/src/app</text>
+            <rect x="92" y="322" width="212" height="36" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="104" y="337" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">server.ts</text>
+            <text x="104" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">Hono · 22 端点 · Zod 校验</text>
+            <rect x="316" y="322" width="212" height="36" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="328" y="337" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">cli.ts</text>
+            <text x="328" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">sync / list / topics / stats</text>
+            <rect x="540" y="322" width="212" height="36" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="552" y="337" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">openapi.ts</text>
+            <text x="552" y="351" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">/docs Swagger · /api/openapi.json</text>
+
+            <!-- 数据层 -->
+            <rect x="74" y="396" width="700" height="94" rx="10" fill="#ffffff" stroke="#e9e3d6" />
+            <text x="92" y="420" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">数据层 · backend/src/{db,data}</text>
+            <rect x="92" y="430" width="212" height="46" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="104" y="446" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">db/ · bun:sqlite</text>
+            <text x="104" y="461" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">feeds.db · trending/starred/topics</text>
+            <text x="104" y="473" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">FTS5 + bm25 检索</text>
+            <rect x="316" y="430" width="212" height="46" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="328" y="446" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">data/ · JSON store</text>
+            <text x="328" y="461" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">~/.innate/&lt;source&gt;/ + manifest</text>
+            <text x="328" y="473" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">hidden · topics · external</text>
+            <rect x="540" y="430" width="212" height="46" rx="7" fill="#f7f5f0" stroke="#e9e3d6" />
+            <text x="552" y="446" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#14171e">data/export-*.ts</text>
+            <text x="552" y="461" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72">frontend/public/data/**</text>
+            <text x="552" y="473" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">静态模式数据出口</text>
+
+            <!-- 采集层 -->
+            <rect x="74" y="516" width="700" height="86" rx="10" fill="#ffffff" stroke="#e9e3d6" />
+            <text x="92" y="540" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#2f6f5e">采集层 · backend/src/collector</text>
+            <text x="92" y="558" font-family="Outfit, sans-serif" font-size="11" fill="#3a4256">12 个 collector，统一 FeedCollector 契约（fetchLatest / fetchByDate）</text>
+            <text x="92" y="576" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#7c7a72">shared/types.ts · shared/storage.ts · shared/http.ts</text>
+            <text x="92" y="592" font-family="Outfit, sans-serif" font-size="10.5" fill="#9a978e">外部源：gh CLI · Firecrawl · GitHub API · Algolia · 公开 JSON API</text>
+
+            <!-- shared 侧挂 -->
+            <rect x="792" y="146" width="128" height="456" rx="10" fill="#fdfaf4" stroke="#e0d3bc" stroke-dasharray="4 3" />
+            <text x="856" y="178" font-family="JetBrains Mono, monospace" font-size="11" fill="#c97b3f" text-anchor="middle">shared/</text>
+            <text x="856" y="196" font-family="Outfit, sans-serif" font-size="10.5" fill="#7c7a72" text-anchor="middle">跨层常量</text>
+            <text x="806" y="228" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#3a4256">plugin-</text>
+            <text x="806" y="242" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#3a4256">categories.ts</text>
+            <text x="806" y="268" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#3a4256">theme-</text>
+            <text x="806" y="282" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#3a4256">catalog.ts</text>
+            <text x="806" y="308" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#3a4256">themes/*.css</text>
+            <rect x="806" y="330" width="100" height="1" fill="#e0d3bc" />
+            <text x="806" y="352" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">被域层 / API 层 /</text>
+            <text x="806" y="367" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">采集层同时引用</text>
+            <text x="806" y="395" font-family="Outfit, sans-serif" font-size="10" fill="#c97b3f">计划扩展：</text>
+            <text x="806" y="412" font-family="Outfit, sans-serif" font-size="10" fill="#7c7a72">types / normalize</text>
+            <text x="806" y="427" font-family="Outfit, sans-serif" font-size="10" fill="#7c7a72">query / sources</text>
+            <text x="806" y="455" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">见 backlog</text>
+            <text x="806" y="470" font-family="Outfit, sans-serif" font-size="10" fill="#9a978e">数据分离计划</text>
+          </svg>
+          <p class="caption">图 1 · 五层框架。左侧箭头表示依赖方向；右侧虚线框 <code>shared/</code> 是唯一被多层引用的横向模块。</p>
+        </div>
+      </section>
+
+      <!-- ================= 2. 交互图 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg>
+          <h2>二、模块间交互</h2>
+        </div>
+        <p class="sec-note">采集 → 存储 → 双出口 → 服务层 → 页面。同一份前端服务在两种模式下走不同分支，这是整个架构最关键的分叉点。</p>
+
+        <div class="mermaid-wrap">
+          <div class="mermaid">
+            graph TB
+  subgraph EXT["外部数据源"]
+    GH["GitHub CLI / API"]
+    FC["Firecrawl"]
+    PUB["公开 JSON API"]
+  end
+
+  subgraph COL["采集层 backend/src/collector"]
+    SYNC["sync.ts<br/>trending / starred"]
+    VC["vc-portfolio.ts<br/>8 个外部源编排"]
+    TS["trendshift.ts"]
+    AD["awesome-dsh.ts"]
+    TOPIC["github-topics.ts"]
+    DIG["issues-digest.ts"]
+  end
+
+  subgraph STORE["存储层"]
+    DB["SQLite feeds.db<br/>db/index.ts"]
+    JSON["JSON store<br/>~/.innate/ 下按源分目录 + manifest"]
+  end
+
+  subgraph EXPORT["静态导出 data/export-*.ts"]
+    EXP["frontend/public/data/**"]
+  end
+
+  API["Hono API<br/>/api/feeds /external /topics"]
+  SVC["前端 services/<br/>isStaticMode() 分支"]
+  PAGE["页面 pages/*"]
+  DSH["dsh 域 /dsh/*"]
+
+  GH --> SYNC
+  GH --> TOPIC
+  FC --> SYNC
+  PUB --> VC
+  PUB --> TS
+  PUB --> AD
+
+  SYNC --> DB
+  TOPIC --> DB
+  DIG --> DB
+  VC --> JSON
+  TS --> JSON
+  AD --> JSON
+
+  DB --> API
+  JSON --> API
+  DB --> EXP
+  JSON --> EXP
+
+  API --> SVC
+  EXP --> SVC
+  SVC --> PAGE
+  SVC --> DSH
+
+  classDef ext fill:#fdfaf4,stroke:#e0d3bc,color:#3a4256
+  classDef col fill:#ffffff,stroke:#2f6f5e,color:#14171e
+  classDef sto fill:#f7f5f0,stroke:#e9e3d6,color:#14171e
+  classDef api fill:#2f6f5e,stroke:#2f6f5e,color:#ffffff
+  class GH,FC,PUB ext
+  class SYNC,VC,TS,AD,TOPIC,DIG col
+  class DB,JSON,EXP sto
+  class API api
+          </div>
+        </div>
+        <p class="caption">图 2 · 模块交互全貌。绿色块为 Hono API 边界；<code>export-*.ts</code> 是静态模式的唯一数据来源。</p>
+      </section>
+
+      <!-- ================= 3. 两种模式 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
+          <h2>三、两种部署模式</h2>
+        </div>
+        <p class="sec-note">同一套前端代码，两条数据链路。切换只由 <code>VITE_STATIC_MODE</code> 一个环境变量决定。</p>
+
+        <div class="modes">
+          <div class="mode">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              API 模式
+            </h3>
+            <p>本地开发 / 自托管后端，SQLite 为准</p>
+            <ul class="chain">
+              <li>bun run dev → 后端 :4000 + 前端 :3000</li>
+              <li>前端 /api/* → Hono → SQLite 查询</li>
+              <li>支持 FTS5 + bm25 相关度排序</li>
+              <li>POST /api/feeds/sync 触发实时采集</li>
+              <li>README 走磁盘缓存 + 后台刷新</li>
+            </ul>
+          </div>
+          <div class="mode">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 20V9"/></svg>
+              静态模式（GitHub Pages）
+            </h3>
+            <p>无后端，预导出 JSON 由 Pages 托管</p>
+            <ul class="chain">
+              <li>CI 采集 → export-incremental → public/data</li>
+              <li>前端 /data/*.json 直接 fetch</li>
+              <li>分片按 snapshot_date 组织，懒加载</li>
+              <li>Digest 合并 GitHub 实时 issue 拉取</li>
+              <li>README 浏览器直连 GitHub，失败回落 /data/readmes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 4. 域契约 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18 22 12 16 6"/><path d="M8 6 2 12l6 6"/></svg>
+          <h2>四、域插件契约</h2>
+        </div>
+        <p class="sec-note">两个域包实现同一套接口，由宿主组合；域只声明路由与能力，不携带宿主 UI。</p>
+
+        <div class="card">
+          <div class="builder">
+            <div class="step">
+              <span class="api">createWebDomain("feeds")</span>
+              <p>声明域标识。硬条件：包名 <code>@innate/domain-*</code> + 模块导出 <code>webDomain</code>。</p>
+            </div>
+            <div class="step">
+              <span class="api">.addRoute("app", …)</span>
+              <p>挂载路由树。每个域自带布局组件与子路由；<code>/dsh</code> 前缀天然完成命名空间隔离。</p>
+            </div>
+            <div class="step">
+              <span class="api">.addCapability("navItems", …)</span>
+              <p>向上游声明侧栏条目（label / path / icon / order / group）。宿主据此渲染，域不依赖宿主题库。</p>
+            </div>
+            <div class="step">
+              <span class="api">.addCapability("homeTile", …)</span>
+              <p>声明首页磁贴（title / description / path）。</p>
+            </div>
+            <div class="step">
+              <span class="api">.build()</span>
+              <p>产出域对象，由 <code>frontend/src/main.tsx</code> 汇入 <code>collectWebDomainRoutes(domains, …)</code> 生成最终 router。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 14px;">
+          <table>
+            <thead>
+              <tr><th>能力</th><th>feeds 域</th><th>dsh 域</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>路由前缀</td>
+                <td class="mono">/trending /starred /topics /digest /feeds /trending-shift /settings /admin</td>
+                <td class="mono">/dsh /dsh/categories /dsh/plugins/$slug</td>
+              </tr>
+              <tr>
+                <td>navItems</td>
+                <td>10 项，分 3 组（GitHub / Feeds / Admin），Feeds 组由 <code>EXTERNAL_SOURCE_META</code> 展开</td>
+                <td>1 项（Plugins）</td>
+              </tr>
+              <tr>
+                <td>homeTile</td>
+                <td>Feeds → /trending</td>
+                <td>DSH Plugins → /dsh</td>
+              </tr>
+              <tr>
+                <td>数据来源</td>
+                <td class="mono">frontend/src/services/*.ts</td>
+                <td class="mono">dsh/src/services/plugins.ts</td>
+              </tr>
+              <tr>
+                <td>datasource 归属</td>
+                <td colspan="2" class="mono">后端 backend/src/dsh/catalog.ts（不进域包）· 同构双模：/api/plugins 或 /data/plugins.json</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= 5. 模块清单 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <h2>五、模块清单</h2>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>模块</th><th>职责</th><th>关键文件</th><th class="num">规模</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>backend/app</strong></td>
+                <td>Hono HTTP 服务、CLI、OpenAPI 规格</td>
+                <td class="mono">server.ts · cli.ts · openapi.ts · admin-db.ts</td>
+                <td class="num">5 文件<br />2,981 行</td>
+              </tr>
+              <tr>
+                <td><strong>backend/collector</strong></td>
+                <td>各数据源采集器，统一 <code>FeedCollector</code> 契约</td>
+                <td class="mono">shared/{types,storage,http}.ts · vc-portfolio.ts · sync.ts</td>
+                <td class="num">29 文件<br />7,238 行</td>
+              </tr>
+              <tr>
+                <td><strong>backend/data</strong></td>
+                <td>JSON store、隐藏项、Topics、静态导出编排</td>
+                <td class="mono">export-incremental.ts · external-store.ts · hidden-store.ts</td>
+                <td class="num">18 文件<br />2,417 行</td>
+              </tr>
+              <tr>
+                <td><strong>backend/db</strong></td>
+                <td>SQLite schema、查询、DTO；FTS5 检索</td>
+                <td class="mono">index.ts · schema.sql · paths.ts</td>
+                <td class="num">3 文件<br />1,172 行</td>
+              </tr>
+              <tr>
+                <td><strong>backend/dsh</strong></td>
+                <td>DSH 插件目录 datasource + 静态导出</td>
+                <td class="mono">catalog.ts · routes.ts · export.ts</td>
+                <td class="num">3 文件<br />489 行</td>
+              </tr>
+              <tr>
+                <td><strong>frontend/pages</strong></td>
+                <td>feeds 域页面（10 个）</td>
+                <td class="mono">trending · starred · topics · digest · feeds · admin</td>
+                <td class="num">10 文件<br />1,922 行</td>
+              </tr>
+              <tr>
+                <td><strong>frontend/components</strong></td>
+                <td>业务组件（18 个），不含壳 chrome</td>
+                <td class="mono">feed-card · filter-bar · external-item-card · trendshift-list</td>
+                <td class="num">18 文件<br />2,270 行</td>
+              </tr>
+              <tr>
+                <td><strong>frontend/services</strong></td>
+                <td>API / 静态双模数据访问层</td>
+                <td class="mono">feeds.ts · external.ts · topics.ts · trendshift.ts</td>
+                <td class="num">7 文件<br />1,804 行</td>
+              </tr>
+              <tr>
+                <td><strong>frontend/hooks</strong></td>
+                <td>列表状态、筛选持久化、页大小</td>
+                <td class="mono">use-feed-list · use-persisted-feed-filters · use-topics</td>
+                <td class="num">7 文件<br />660 行</td>
+              </tr>
+              <tr>
+                <td><strong>dsh（域包）</strong></td>
+                <td>插件目录 UI、客户端搜索镜像</td>
+                <td class="mono">web-domain.tsx · services/plugins.ts · components/plugin-*</td>
+                <td class="num">17 文件<br />1,160 行</td>
+              </tr>
+              <tr>
+                <td><strong>shared</strong></td>
+                <td>跨层常量（分类表、主题目录、主题 CSS）</td>
+                <td class="mono">plugin-categories.ts · theme-catalog.ts</td>
+                <td class="num">2 文件<br />206 行</td>
+              </tr>
+              <tr>
+                <td><strong>frontend/scripts</strong></td>
+                <td>Bun 构建链：Tailwind 编译 + 打包 + Pages 404</td>
+                <td class="mono">build.ts · dev.ts · preview.ts</td>
+                <td class="num">3 文件<br />563 行</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= 6. 时序 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <h2>六、一次数据更新走过的路</h2>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <b>触发<em>Actions cron 08:00 UTC / 本地 data:update</em></b>
+            <p>push、schedule、workflow_dispatch 三种入口都落到 <code>backend/src/app/cli.ts</code> 的 <code>sync</code> 分支。</p>
+          </li>
+          <li>
+            <b>采集<em>collector/</em></b>
+            <p>每个 collector 实现 <code>fetchLatest()</code>，经 <code>shared/http.ts</code> 带重试拉取；<code>vc-portfolio.ts</code> 逐源编排，单源失败不中断其余。</p>
+          </li>
+          <li>
+            <b>落库 / 落文件<em>db/index.ts · data/*-store.ts</em></b>
+            <p>仓库类数据进 SQLite（事务 + 复合主键去重）；外部源进 <code>~/.innate/&lt;source&gt;/</code> 的 JSON + manifest。</p>
+          </li>
+          <li>
+            <b>导出<em>data/export-incremental.ts</em></b>
+            <p>按日期分片写 <code>frontend/public/data/chunks/</code>，同时导出 digest、plugins、topics、trendshift、external。</p>
+          </li>
+          <li>
+            <b>提交<em>workflow_dispatch / schedule 时</em></b>
+            <p>CI 提交数据 chunk 到 main —— 注意这是<strong>数据文件</strong>，与本仓「不提交数据文件」的手工约定不同。</p>
+          </li>
+          <li>
+            <b>构建与部署<em>frontend/scripts/build.ts</em></b>
+            <p>Tailwind v4 编译 → <code>Bun.build</code> 打包 → 注入 <code>VITE_BASE_PATH</code> → 写 <code>404.html</code> + <code>.nojekyll</code> → upload-pages-artifact → deploy-pages。</p>
+          </li>
+          <li>
+            <b>消费<em>services/ → pages/</em></b>
+            <p>前端按 <code>isStaticMode()</code> 选择 <code>/api/*</code> 或 <code>/data/*</code>；页面渲染列表，筛选状态存 localStorage。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ================= 7. 边界 ================= -->
+      <section>
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+          <h2>七、当前边界与已知问题</h2>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>问题</th><th>位置</th><th>影响</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>类型契约双份维护，且已漂移</td>
+                <td class="mono">backend/src/collector/shared/types.ts ↔ frontend/src/types/external.ts</td>
+                <td><span class="pill warn">已影响</span> <code>source</code> 联合类型后端 11 项、前端 8 项</td>
+              </tr>
+              <tr>
+                <td>检索语义两端不同</td>
+                <td class="mono">db/index.ts（FTS5+bm25）↔ services/feeds.ts（includes）</td>
+                <td><span class="pill warn">已影响</span> 同一关键词在两种模式结果集不同</td>
+              </tr>
+              <tr>
+                <td>插件搜索逻辑复制且漂移</td>
+                <td class="mono">backend/src/dsh/catalog.ts ↔ dsh/src/services/plugins.ts</td>
+                <td><span class="pill warn">已影响</span> <code>category</code> 后端支持数组、前端仅单值</td>
+              </tr>
+              <tr>
+                <td>CI 缺 <code>SYNC_GITHUB_TOKEN</code></td>
+                <td class="mono">.github/workflows/deploy.yml</td>
+                <td><span class="pill warn">已影响</span> GraphQL 403 → awesome-dsh 目录回退到 YAML 快照</td>
+              </tr>
+              <tr>
+                <td>starred 同步在 CI 无权限</td>
+                <td class="mono">gh api user/starred → 403</td>
+                <td>CI 产出 0 条 starred，不报错</td>
+              </tr>
+              <tr>
+                <td>本机直连 github.io 不稳定</td>
+                <td class="mono">网络层</td>
+                <td>大文件下载被截断，非站点问题</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout" style="border-left-color: var(--accent); background: var(--accent-soft);">
+          <strong style="color: var(--accent);">整改路径已归档：</strong>
+          类型 / 归一化 / 查询语义三件事收进 <code>shared/</code>，前端删除镜像实现 —— 详见
+          <code>docs/backlogs/frontend-backend-data-separation.md</code>（3.5–4.5 天，拆 S0–S5 五步）。
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          基于 commit <code>6fb3047</code> 实地清点生成 · 2026-11-01 ·
+          模块规模由 <code>find … -exec cat</code> 统计 · 路由与契约逐文件核对 ·
+          相关文档：<code>docs/arch-design/collector-design.md</code> ·
+          <code>docs/arch-design/datasource-frontend-separation.md</code> ·
+          <code>docs/arch-design/external-collectors.md</code> ·
+          <code>docs/backlogs/</code>
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: "base",
+          themeVariables: {
+            fontFamily: "Outfit, sans-serif",
+            fontSize: "13px",
+            primaryColor: "#ffffff",
+            primaryTextColor: "#14171e",
+            primaryBorderColor: "#e9e3d6",
+            lineColor: "#7c7a72",
+            clusterBkg: "#f7f5f0",
+            clusterBorder: "#e9e3d6",
+            edgeLabelBackground: "#f7f5f0",
+          },
+          flowchart: { curve: "basis", nodeSpacing: 32, rankSpacing: 46, useMaxWidth: true },
+        });
+      }
+    </script>
+  </body>
+</html>

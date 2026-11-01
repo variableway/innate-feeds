@@ -22,6 +22,7 @@
 | [issues/](./issues/README.md) | 任务契约 |
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
 | [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定） |
+| [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
 
 ## 当前焦点
 
