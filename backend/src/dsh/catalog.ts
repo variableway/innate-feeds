@@ -37,6 +37,8 @@ export interface DshPlugin {
   npmPackage: string | null;
   tarballUrl: string | null;
   publishedAt: string | null;
+  /** Per-plugin page on the upstream market site (market catalog only). */
+  upstreamUrl?: string | null;
 }
 
 interface YamlEntry {
@@ -248,6 +250,7 @@ function loadAll(): DshPlugin[] {
       installCommand,
       npmPackage: typeof parsed.npm === "string" ? parsed.npm : null,
       tarballUrl: typeof parsed.tarball === "string" ? parsed.tarball : null,
+      upstreamUrl: null,
       publishedAt:
         publishedAt && !Number.isNaN(publishedAt.getTime())
           ? publishedAt.toISOString()

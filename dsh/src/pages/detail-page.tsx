@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "@tanstack/react-router";
-import { Calendar, Package, Star } from "lucide-react";
+import { Calendar, Globe, Package, Star } from "lucide-react";
 import { pluginCategoryById } from "../../../shared/plugin-categories";
 import { fetchPlugin, fetchRelatedPlugins } from "../services/plugins";
 import { PluginCard } from "../components/plugin-card";
@@ -79,6 +79,11 @@ export function DshPluginDetailPage() {
           <h1 className="font-mono text-2xl font-bold tracking-tight break-all sm:text-3xl">
             {plugin.name}
           </h1>
+          {plugin.npmPackage ? (
+            <p className="mt-1 break-all font-mono text-sm text-muted-foreground">
+              {plugin.npmPackage}
+            </p>
+          ) : null}
           {plugin.tagline ? (
             <p className="mt-2 text-lg">{plugin.tagline}</p>
           ) : null}
@@ -147,6 +152,17 @@ export function DshPluginDetailPage() {
               >
                 <Package className="h-4 w-4" />
                 Tarball
+              </a>
+            ) : null}
+            {plugin.upstreamUrl ? (
+              <a
+                href={plugin.upstreamUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 text-sm hover:bg-accent"
+              >
+                <Globe className="h-4 w-4" />
+                Upstream
               </a>
             ) : null}
           </div>

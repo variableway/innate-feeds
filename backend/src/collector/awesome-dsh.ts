@@ -33,6 +33,14 @@ export function getAwesomeDshCatalogPath(): string {
 
 export interface AwesomeMarketPlugin {
   name?: unknown;
+  /**
+   * Upstream display identity. Unique across the whole market index and, for
+   * repositories that ship several plugins, carries a `#subpath` suffix that
+   * tells the plugins apart (`owner/repo#plugin-name`).
+   */
+  title?: unknown;
+  /** Per-plugin page on the upstream site (unique per plugin). */
+  homepage?: unknown;
   description?: { en?: unknown; zh?: unknown };
   repository?: { url?: unknown };
   metadata?: { category?: unknown };
@@ -46,6 +54,11 @@ export interface AwesomeMarketIndex {
 
 export interface MarketCatalogPlugin {
   slug: string;
+  /**
+   * Display identity of the plugin. Derived from the upstream `title` so that
+   * several plugins hosted in the same repository stay distinguishable
+   * (`owner/repo#subpath`); falls back to `owner/repo`.
+   */
   name: string;
   tagline: string;
   taglineZh: string | null;
@@ -63,6 +76,8 @@ export interface MarketCatalogPlugin {
   tarballUrl: string | null;
   publishedAt: string | null;
   starsUpdatedAt: string;
+  /** Per-plugin page on the upstream market site. */
+  upstreamUrl?: string | null;
 }
 
 export interface MarketCatalogFile {
@@ -109,6 +124,59 @@ export function slugFromRepoPath(path: string): string {
     .replace(/^-|-$/g, "");
 }
 
+/**
+ * Resolve the display identity of a plugin.
+ *
+ * The upstream market index gives every plugin a unique `title`. For
+ * repositories that ship several plugins the title carries a `#subpath`
+ * suffix (`owner/repo#plugin-name`) that tells them apart; for single-plugin
+ * repositories it is simply `owner/repo`. A minority of entries use a bare
+ * plugin name instead of the repository path — those carry no disambiguating
+ * information, so they fall back to `owner/repo` to keep the repository
+ * attribution visible.
+ */
+export function resolveDisplayName(title: string, repoPath: string): string {
+  const trimmed = title.trim();
+  if (!trimmed) return repoPath;
+  if (trimmed === repoPath) return trimmed;
+  if (trimmed.startsWith(`${repoPath}#`)) return trimmed;
+  return repoPath;
+}
+
+/**
+ * Guarantee every catalog entry owns a unique display name.
+ *
+ * Upstream titles are unique in practice, but a repository may host a plugin
+ * whose title is a bare plugin name. Such an entry falls back to `owner/repo`
+ * and can therefore collide with a sibling that carries exactly that title.
+ * Colliding entries are disambiguated with their npm package name, reusing
+ * the `#suffix` convention the upstream index already uses.
+ */
+export function disambiguateDisplayNames(plugins: MarketCatalogPlugin[]): void {
+  const counts = new Map<string, number>();
+  for (const plugin of plugins) {
+    counts.set(plugin.name, (counts.get(plugin.name) ?? 0) + 1);
+  }
+  // Reserve the already-unique names first so the rewrite below stays
+  // independent of the order the entries appear in.
+  const used = new Set<string>();
+  for (const plugin of plugins) {
+    if ((counts.get(plugin.name) ?? 0) === 1) used.add(plugin.name);
+  }
+  for (const plugin of plugins) {
+    if ((counts.get(plugin.name) ?? 0) <= 1) continue;
+    const base = plugin.name;
+    const suffix = plugin.npmPackage ?? plugin.slug;
+    let candidate = `${base}#${suffix}`;
+    let counter = 2;
+    while (used.has(candidate)) {
+      candidate = `${base}#${suffix}-${counter++}`;
+    }
+    plugin.name = candidate;
+    used.add(candidate);
+  }
+}
+
 function buildContent(plugin: MarketCatalogPlugin): string {
   const lines = ["## Install", "", "```sh", plugin.installCommand, "```", ""];
   if (plugin.npmPackage) {
@@ -139,7 +207,7 @@ export function normalizeMarketIndex(
   for (const raw of index.plugins ?? []) {
     const repositoryUrl = str(raw.repository?.url).replace(/\/+$/, "");
     if (!/^https:\/\/github\.com\/[^/]+\/[^/]+/i.test(repositoryUrl)) continue;
-    const { fullName, path } = parseGitHubUrl(repositoryUrl);
+    const { path } = parseGitHubUrl(repositoryUrl);
     if (!/^[\w.-]+\/[\w.-]+$/.test(path)) continue;
 
     const category = str(raw.metadata?.category);
@@ -181,9 +249,10 @@ export function normalizeMarketIndex(
       }
     }
     usedSlugs.add(slug);
+    const upstreamUrl = str(raw.homepage).trim() || null;
     const plugin: MarketCatalogPlugin = {
       slug,
-      name: fullName,
+      name: resolveDisplayName(str(raw.title), path),
       tagline,
       taglineZh,
       description: tagline,
@@ -200,10 +269,13 @@ export function normalizeMarketIndex(
       tarballUrl: null,
       publishedAt,
       starsUpdatedAt: fetchedAt,
+      upstreamUrl,
     };
     plugin.content = buildContent(plugin);
     plugins.push(plugin);
   }
+
+  disambiguateDisplayNames(plugins);
 
   return plugins;
 }

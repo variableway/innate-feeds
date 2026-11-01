@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import {
   normalizeMarketIndex,
+  resolveDisplayName,
   slugFromRepoPath,
   type AwesomeMarketIndex,
 } from "./awesome-dsh.js";
@@ -99,5 +100,105 @@ describe("awesome DSH market catalog", () => {
     expect(slugFromRepoPath("Example Org/dsh--example_v2")).toBe(
       "example-org-dsh-example-v2",
     );
+  });
+
+  test("uses the upstream title as display name so bundle repos stay distinct", () => {
+    const plugins = normalizeMarketIndex(
+      indexWith([
+        {
+          name: "dsh-file-activity",
+          title: "baosfeng/my-dsh-plugins#dsh-file-activity",
+          homepage:
+            "https://awesome-dsh-plugin.com/p/baosfeng/my-dsh-plugins--dsh-file-activity/",
+          description: { en: "Sidebar file activity" },
+          repository: { url: "https://github.com/baosfeng/my-dsh-plugins" },
+          metadata: { category: "dev" },
+        },
+        {
+          name: "dsh-my-memory",
+          title: "baosfeng/my-dsh-plugins#dsh-my-memory",
+          homepage:
+            "https://awesome-dsh-plugin.com/p/baosfeng/my-dsh-plugins--dsh-my-memory/",
+          description: { en: "Memory scopes" },
+          repository: { url: "https://github.com/baosfeng/my-dsh-plugins" },
+          metadata: { category: "memory" },
+        },
+      ]),
+      fetchedAt,
+    );
+
+    expect(plugins.map((plugin) => plugin.name)).toEqual([
+      "baosfeng/my-dsh-plugins#dsh-file-activity",
+      "baosfeng/my-dsh-plugins#dsh-my-memory",
+    ]);
+    // Display names no longer collide even though both live in one repository.
+    expect(new Set(plugins.map((plugin) => plugin.name)).size).toBe(2);
+    expect(plugins[0]!.upstreamUrl).toBe(
+      "https://awesome-dsh-plugin.com/p/baosfeng/my-dsh-plugins--dsh-file-activity/",
+    );
+  });
+
+  test("falls back to the repository path when the title carries no identity", () => {
+    const plugins = normalizeMarketIndex(
+      indexWith([
+        {
+          name: "dsh-undo-plugin",
+          title: "dsh-undo-plugin",
+          description: { en: "Undo support" },
+          repository: { url: "https://github.com/23swccp/dsh-undo" },
+          metadata: { category: "dev" },
+        },
+      ]),
+      fetchedAt,
+    );
+
+    expect(plugins[0]!.name).toBe("23swccp/dsh-undo");
+    expect(plugins[0]!.upstreamUrl).toBeNull();
+  });
+
+  test("resolveDisplayName keeps the repository prefix", () => {
+    expect(resolveDisplayName("owner/repo#sub", "owner/repo")).toBe(
+      "owner/repo#sub",
+    );
+    expect(resolveDisplayName("owner/repo", "owner/repo")).toBe("owner/repo");
+    expect(resolveDisplayName("bare-plugin", "owner/repo")).toBe("owner/repo");
+    expect(resolveDisplayName("", "owner/repo")).toBe("owner/repo");
+    expect(resolveDisplayName("other/repo#sub", "owner/repo")).toBe(
+      "owner/repo",
+    );
+  });
+
+  test("disambiguates display names that still collide after the fallback", () => {
+    const plugins = normalizeMarketIndex(
+      indexWith([
+        {
+          name: "dsh-extension-hub",
+          title: "Relistencode/dsh-extension-hub",
+          description: { en: "Extension center" },
+          repository: {
+            url: "https://github.com/Relistencode/dsh-extension-hub",
+          },
+          metadata: { category: "market" },
+        },
+        {
+          name: "dsh-myrules",
+          // A bare plugin name: falls back to owner/repo and collides.
+          title: "dsh-extension-hub",
+          description: { en: "Global rules editor" },
+          repository: {
+            url: "https://github.com/Relistencode/dsh-extension-hub",
+          },
+          metadata: { category: "dev" },
+        },
+      ]),
+      fetchedAt,
+    );
+
+    expect(plugins).toHaveLength(2);
+    expect(plugins.map((plugin) => plugin.name)).toEqual([
+      "Relistencode/dsh-extension-hub#dsh-extension-hub",
+      "Relistencode/dsh-extension-hub#dsh-myrules",
+    ]);
+    expect(new Set(plugins.map((plugin) => plugin.name)).size).toBe(2);
   });
 });

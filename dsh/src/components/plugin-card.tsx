@@ -39,6 +39,11 @@ export function PluginCard({ plugin }: { plugin: DshPlugin }) {
               {formatStars(plugin.stars)}
             </span>
           </div>
+          {plugin.npmPackage ? (
+            <p className="break-all font-mono text-xs text-muted-foreground/80">
+              {plugin.npmPackage}
+            </p>
+          ) : null}
           {plugin.tagline ? (
             <p className="line-clamp-2 text-sm text-muted-foreground">
               {plugin.tagline}

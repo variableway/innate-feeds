@@ -21,6 +21,11 @@ export function PluginListItem({ plugin }: { plugin: DshPlugin }) {
         <h3 className="truncate font-mono text-sm font-semibold">
           {plugin.name}
         </h3>
+        {plugin.npmPackage ? (
+          <p className="mt-0.5 truncate font-mono text-xs text-muted-foreground/80">
+            {plugin.npmPackage}
+          </p>
+        ) : null}
         {plugin.tagline ? (
           <p className="mt-1 line-clamp-1 text-sm text-muted-foreground">
             {plugin.tagline}

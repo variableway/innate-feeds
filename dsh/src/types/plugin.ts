@@ -19,6 +19,8 @@ export interface DshPlugin {
   tarballUrl: string | null;
   publishedAt: string | null;
   starsUpdatedAt: string;
+  /** Per-plugin page on the upstream market site (market catalog only). */
+  upstreamUrl?: string | null;
 }
 
 export interface PluginSearchResult {
