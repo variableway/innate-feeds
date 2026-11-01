@@ -21,6 +21,7 @@
 | [features/](./features/README.md) | 功能模块 |
 | [issues/](./issues/README.md) | 任务契约 |
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
+| [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定） |
 
 ## 当前焦点
 
