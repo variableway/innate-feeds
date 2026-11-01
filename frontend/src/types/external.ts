@@ -13,7 +13,9 @@ export type ExternalSourceId =
   | "huggingface"
   | "github-new"
   | "devto"
-  | "lobsters";
+  | "lobsters"
+  | "edu-skills"
+  | "edu-videos";
 
 export interface ExternalFeedItem {
   id: string;
@@ -191,5 +193,29 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
       { key: "status", label: "status" },
     ],
     emptyHint: "Run `bun run sync:a16z` to collect the portfolio.",
+  },
+  {
+    source: "edu-skills",
+    title: "Edu Skills",
+    description: "教育动画领域的 Agent Skill（skills.sh 索引）",
+    homepage: "https://www.skills.sh",
+    icon: "GraduationCap",
+    metrics: [
+      { key: "score", label: "installs" },
+      { key: "stars", label: "stars" },
+    ],
+    emptyHint: "Run `bun run sync:edu-skills` to collect the skill catalog.",
+  },
+  {
+    source: "edu-videos",
+    title: "Edu Videos",
+    description: "教育动画领域的教学视频（策展频道）",
+    homepage: "https://www.youtube.com",
+    icon: "Clapperboard",
+    metrics: [
+      { key: "score", label: "views" },
+      { key: "comments", label: "likes" },
+    ],
+    emptyHint: "Run `bun run sync:edu-videos` to collect the channel videos.",
   },
 ];

@@ -23,7 +23,9 @@
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
 | [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定） |
 | [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
+| [arch-design/edu-animate-domain.md](../arch-design/edu-animate-domain.md) | 教育动画垂直聚合域（edu-animate）的已采纳设计 |
 | [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
+| [research/edu-animation-sources.md](../research/edu-animation-sources.md) | 教育动画 SKILL / 视频的端点与配额实测 |
 
 ## 仓库内 Skill
 

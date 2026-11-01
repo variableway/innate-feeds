@@ -5,7 +5,8 @@
   "workspaces": [
     "backend",
     "frontend",
-    "dsh"
+    "dsh",
+    "edu-animate"
   ],
   "scripts": {
     "dev": "concurrently -k -n backend,frontend -c blue,magenta \"bun run dev:backend\" \"bun run dev:frontend\"",
@@ -29,26 +30,28 @@
     "data:update:window": "bun run data:sync:window && bun run data:export",
     "build": "cd backend && bun run build && cd ../frontend && bun run build",
     "start": "bun run build && cd backend && bun run start",
-    "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\" \"dsh/src/**/*.{ts,tsx}\"",
-    "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\" \"dsh/src/**/*.{ts,tsx}\"",
+    "format:ts": "prettier --write \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\" \"dsh/src/**/*.{ts,tsx}\" \"edu-animate/src/**/*.{ts,tsx}\"",
+    "format:ts:check": "prettier --check \"backend/src/**/*.{ts,tsx}\" \"frontend/src/**/*.{ts,tsx}\" \"frontend/scripts/**/*.ts\" \"dsh/src/**/*.{ts,tsx}\" \"edu-animate/src/**/*.{ts,tsx}\"",
     "export:static": "cd backend && bun run export:incremental",
     "build:static": "cd backend && bun run export:incremental && cd ../frontend && VITE_STATIC_MODE=true bun run build",
     "build:pages": "VITE_BASE_PATH=${VITE_BASE_PATH:-/} VITE_STATIC_MODE=true bun run build:static",
     "install:all": "pnpm install",
     "test": "bun test backend",
     "test:watch": "bun test backend --watch",
-    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck && cd ../dsh && bun run typecheck",
+    "typecheck": "cd backend && bun run typecheck && cd ../frontend && bun run typecheck && cd ../dsh && bun run typecheck && cd ../edu-animate && bun run typecheck",
     "setup:innate": "innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
     "data:seed": "cd backend && bun run import:static",
     "dev:seed": "bun run data:seed && bun run dev",
     "predev": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
     "predev:seed": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
-    "data:sync:external": "cd backend && bun src/app/cli.ts sync vc --source yc --source a16z --source hackernews --source huggingface --source github-new --source devto --source lobsters",
+    "data:sync:external": "cd backend && bun src/app/cli.ts sync vc --source yc --source a16z --source hackernews --source huggingface --source github-new --source devto --source lobsters --source edu-skills",
     "data:sync:hackernews": "cd backend && bun run sync:hackernews",
     "data:sync:huggingface": "cd backend && bun run sync:huggingface",
     "data:sync:github-new": "cd backend && bun run sync:github-new",
     "data:sync:devto": "cd backend && bun run sync:devto",
     "data:sync:lobsters": "cd backend && bun run sync:lobsters",
+    "data:sync:edu-skills": "cd backend && bun run sync:edu-skills",
+    "data:sync:edu-videos": "cd backend && bun run sync:edu-videos",
     "data:update:local": "bun run sync && bun run data:sync:digest && bun run data:sync:topics && bun run data:sync:external"
   },
   "devDependencies": {

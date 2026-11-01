@@ -10,7 +10,9 @@ export type FeedSource =
   | "huggingface"
   | "github-new"
   | "devto"
-  | "lobsters";
+  | "lobsters"
+  | "edu-skills"
+  | "edu-videos";
 
 /** 统一外部 Feed Item 接口 */
 export interface ExternalFeedItem {

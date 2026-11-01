@@ -28,8 +28,9 @@ const frontendRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const srcDir = join(frontendRoot, "src");
 const distDir = join(frontendRoot, "dist");
 const assetsDir = join(distDir, "assets");
-/** dsh 域包（@innate/domain-dsh）源码：宿主单站构建需扫描其 Tailwind 类 */
+/** 域包源码（@innate/domain-dsh / @innate/domain-edu-animate）：宿主单站构建需扫描其 Tailwind 类 */
 const dshSrcDir = join(frontendRoot, "..", "dsh", "src");
+const eduSrcDir = join(frontendRoot, "..", "edu-animate", "src");
 
 const staticMode = process.env.VITE_STATIC_MODE === "true";
 const basePath = normalizeBasePath(process.env.VITE_BASE_PATH || "/");
@@ -64,7 +65,10 @@ export async function compileStylesheet(minify: boolean): Promise<string> {
         : [{ ...compiler.root, negated: false }]
   )
     .concat(compiler.sources)
-    .concat([{ base: dshSrcDir, pattern: "**/*", negated: false }]);
+    .concat([
+      { base: dshSrcDir, pattern: "**/*", negated: false },
+      { base: eduSrcDir, pattern: "**/*", negated: false },
+    ]);
   const scanner = new Scanner({ sources });
   const candidates = new Set<string>();
   for (const candidate of scanner.scan()) candidates.add(candidate);

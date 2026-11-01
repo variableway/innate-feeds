@@ -12,6 +12,8 @@
 | **GitHub Topics** | GitHub Search API（按 topic 搜索，取 top N） | `~/.innate/github-topics/` | 每日 | `bun run sync:topics` |
 | **Trendshift** | 静态 JSON API（主）/ trendshift.io RSC 抓取（备） | `~/.innate/trendshift/` | 每日 | `bun run sync:trendshift` |
 | **Awesome DSH** | 上游发布的 market index + GitHub GraphQL Stars 补充 | `~/.innate/awesome-dsh/plugin-catalog.json`（本地，不提交） | 每日 | `bun run sync:awesome-dsh` |
+| **Edu Skills** | skills.sh sitemap + 详情页 JSON-LD + GitHub API 补充 | `~/.innate/edu-skills/` | 每日 | `bun run sync:edu-skills` |
+| **Edu Videos** | YouTube Data API（策展频道，只收元数据 + 链接） | `~/.innate/edu-videos/` | 每日 | `bun run sync:edu-videos` |
 | **统一同步** | 编排以上所有源 | 各自目录 | — | `bun run sync:vc` |
 
 ## Product Hunt
@@ -260,6 +262,49 @@ bun run sync:awesome-dsh
 
 老的 `data/plugins/*.yml` 路径仍作为 `plugin-catalog.json` 缺失时的兼容源保留。
 
+## Edu Skills / Edu Videos（教育动画域）
+
+面向「教育动画制作」垂直切面的两个源，由第三个域插件 `@innate/domain-edu-animate` 消费。
+完整设计与实测见 [edu-animate-domain.md](./edu-animate-domain.md)，端点与配额实测见
+[../research/edu-animation-sources.md](../research/edu-animation-sources.md)。
+
+```bash
+cd backend
+
+# 领域 SKILL（skills.sh 索引；实测 443 条 / 128 仓库）
+bun run sync:edu-skills
+
+# 限制领域候选数（默认 600）
+bun src/app/cli.ts sync edu-skills --max 200
+
+# 教学视频（需要 YOUTUBE_API_KEY；只收元数据 + 链接）
+bun run sync:edu-videos
+```
+
+两个源都写进 JSON store，走与其他 external source 完全相同的 API / 静态导出链路：
+
+- API 模式：`GET /api/external/edu-skills`、`GET /api/external/edu-videos`
+- 静态模式：`frontend/public/data/external/edu-skills.json`（导出时自动生成，无需改导出代码）
+
+**前置条件与失败模式：**
+
+| 源 | 前置条件 | 缺前置条件时 |
+|---|---|---|
+| `edu-skills` | 无（GitHub token 可选，只影响 stars/license/topics） | 正常采集，只是少了 GitHub 补充字段 |
+| `edu-videos` | `YOUTUBE_API_KEY` | handle 无法解析成 channel id → 该源跳过并打 warning，不影响其它源 |
+
+### 存储结构
+
+```
+~/.innate/edu-skills/
+├── manifest.json
+└── 2026-11-01.json          # 443 条 ExternalFeedItem
+
+~/.innate/edu-videos/
+├── manifest.json
+└── latest.json              # 策展频道的视频元数据
+```
+
 ## 统一同步
 
 一次命令同步所有源：
@@ -306,6 +351,11 @@ bun src/app/cli.ts sync trendshift --language '*'     # every language slice
 # Awesome DSH
 bun run sync:awesome-dsh
 
+# Edu Skills / Edu Videos
+bun run sync:edu-skills
+bun src/app/cli.ts sync edu-skills --max 200
+bun run sync:edu-videos                     # 需要 YOUTUBE_API_KEY
+
 # Unified
 bun run sync:vc                                       # all sources
 ```
@@ -323,6 +373,8 @@ backend/src/collector/
 ├── yc-companies.ts            # YC Companies API
 ├── a16z-portfolio.ts          # a16z Portfolio
 ├── github-topics.ts           # GitHub Topics Search（top N + 跳过规则）
+├── edu-skills.ts              # 教育动画 SKILL（skills.sh sitemap + JSON-LD）
+├── edu-videos.ts              # 教育动画教学视频（YouTube Data API，策展频道）
 ├── vc-portfolio.ts            # 统一编排器
 │
 ├── github.ts                  # 现有 - GitHub trending/starred

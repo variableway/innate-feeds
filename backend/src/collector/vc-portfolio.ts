@@ -19,6 +19,8 @@ import { HuggingFaceCollector } from "./huggingface.js";
 import { GitHubNewCollector } from "./github-new.js";
 import { DevToCollector } from "./devto.js";
 import { LobstersCollector } from "./lobsters.js";
+import { EduSkillsCollector } from "./edu-skills.js";
+import { EduVideosCollector } from "./edu-videos.js";
 import type { FeedSource } from "./shared/types.js";
 
 export type SyncTarget = FeedSource | "all";
@@ -59,6 +61,8 @@ export async function syncVCPortfolio(
         "github-new",
         "devto",
         "lobsters",
+        "edu-skills",
+        "edu-videos",
       ]
     : (sources as FeedSource[]);
 
@@ -142,6 +146,26 @@ export async function syncVCPortfolio(
       const result = await lobsters.save();
       console.log(
         `[vc-sync] lobste.rs: ${result.count} items -> ${result.outDir}`,
+      );
+    });
+  }
+
+  if (targets.includes("edu-skills")) {
+    await runStep("Edu Skills", async () => {
+      const collector = new EduSkillsCollector();
+      const result = await collector.save();
+      console.log(
+        `[vc-sync] edu-skills: ${result.count} items -> ${result.outDir}`,
+      );
+    });
+  }
+
+  if (targets.includes("edu-videos")) {
+    await runStep("Edu Videos", async () => {
+      const collector = new EduVideosCollector();
+      const result = await collector.save();
+      console.log(
+        `[vc-sync] edu-videos: ${result.count} items -> ${result.outDir}`,
       );
     });
   }

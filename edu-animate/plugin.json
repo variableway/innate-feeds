@@ -1,0 +1,12 @@
+{
+  "protocol": "innate.plugin.v1",
+  "kind": "domain",
+  "id": "edu-animate",
+  "name": "Edu Animate",
+  "description": "教育动画制作垂直聚合：领域 SKILL 目录 + 教学视频频道",
+  "version": "0.1.0",
+  "entry": "src/index.ts",
+  "outlet": "app",
+  "capabilities": ["navItems", "homeTile"],
+  "order": 40
+}

@@ -21,6 +21,8 @@ import { ProductHuntCollector } from "../collector/producthunt.js";
 import { YCCompaniesCollector } from "../collector/yc-companies.js";
 import { A16zPortfolioCollector } from "../collector/a16z-portfolio.js";
 import { syncVCPortfolio } from "../collector/vc-portfolio.js";
+import { EduSkillsCollector } from "../collector/edu-skills.js";
+import { EduVideosCollector } from "../collector/edu-videos.js";
 import { HackerNewsCollector } from "../collector/hackernews.js";
 import { HuggingFaceCollector } from "../collector/huggingface.js";
 import { GitHubNewCollector } from "../collector/github-new.js";
@@ -64,6 +66,8 @@ Usage:
   tsx src/app/cli.ts sync dsh-catalog [--ref BRANCH] [--dry-run]
   tsx src/app/cli.ts sync awesome-dsh
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
+  tsx src/app/cli.ts sync edu-skills [--max N]
+  tsx src/app/cli.ts sync edu-videos
   tsx src/app/cli.ts list [trending|starred]
   tsx src/app/cli.ts topics --list
   tsx src/app/cli.ts dates
@@ -279,6 +283,41 @@ async function main() {
           ycQuery,
           phDate,
         });
+      } else if (type === "edu-skills") {
+        const args = process.argv.slice(4);
+        let max = 600;
+        for (let i = 0; i < args.length; i++) {
+          if (args[i] === "--max" && args[i + 1]) max = Number(args[++i]);
+        }
+        const collector = new EduSkillsCollector(max);
+        const result = await collector.save();
+        console.log(
+          JSON.stringify(
+            {
+              source: "edu-skills",
+              count: result.count,
+              outDir: result.outDir,
+              bytes: result.bytes,
+            },
+            null,
+            2,
+          ),
+        );
+      } else if (type === "edu-videos") {
+        const collector = new EduVideosCollector();
+        const result = await collector.save();
+        console.log(
+          JSON.stringify(
+            {
+              source: "edu-videos",
+              count: result.count,
+              outDir: result.outDir,
+              bytes: result.bytes,
+            },
+            null,
+            2,
+          ),
+        );
       } else if (type === "github-topics") {
         const args = process.argv.slice(4);
         const topics: string[] = [];

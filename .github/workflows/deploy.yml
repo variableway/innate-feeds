@@ -54,6 +54,8 @@ jobs:
       DIGEST_DIR: ${{ github.workspace }}/innate-feeds/backend/.cache/digest
       GH_TOKEN: ${{ secrets.SYNC_GITHUB_TOKEN || github.token }}
       FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+      # edu-videos 专用：缺 key 时该源跳过（handle→channel id 解析依赖 channels.list）
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -148,6 +150,12 @@ jobs:
           set -euo pipefail
           cd backend
           # All JSON-store collectors; individual failures don't abort the run.
+          # Includes edu-skills (skills.sh 索引) + edu-videos (策展频道)。
+          if [ -n "${YOUTUBE_API_KEY:-}" ]; then
+            echo "YOUTUBE_API_KEY present — edu-videos will sync"
+          else
+            echo "::warning::YOUTUBE_API_KEY secret 未配置 — edu-videos 源将跳过（其余源不受影响）"
+          fi
           bun src/app/cli.ts sync vc
 
       - name: Sync feed window (90-day digest / trending / starred / READMEs)

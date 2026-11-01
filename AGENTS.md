@@ -40,7 +40,9 @@ innate-feeds/
 │   │   │   ├── github-new.ts     # Fast-growing new GitHub repos collector (GH #31)
 │   │   │   ├── devto.ts          # Dev.to hot articles collector (GH #31)
 │   │   │   ├── lobsters.ts       # lobste.rs hottest collector (GH #31)
-│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator (all 8 JSON sources)
+│   │   │   ├── edu-skills.ts     # 教育动画 SKILL collector（skills.sh sitemap + JSON-LD）
+│   │   │   ├── edu-videos.ts     # 教育动画教学视频 collector（YouTube Data API，策展 handle）
+│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator (all 10 JSON sources)
 │   │   ├── data/            # Static data export/import utilities
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
@@ -62,7 +64,7 @@ innate-feeds/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── feeds.db*            # Runtime SQLite database (WAL mode)
-├── shared/                   # Cross-layer constants (plugin-categories, theme-catalog) — NOT @innate scope
+├── shared/                   # Cross-layer constants (plugin-categories, edu-categories, theme-catalog) — NOT @innate scope
 ├── frontend/                # @innate/domain-feeds — TanStack domain (track A) + minimal standalone host
 │   ├── src/
 │   │   ├── index.ts          # export { webDomain } — domain plugin hard requirement
@@ -98,10 +100,23 @@ innate-feeds/
 │   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
 │   ├── package.json          # name: @innate/domain-dsh; self-contained (relative imports only)
 │   └── tsconfig.json
+├── edu-animate/              # @innate/domain-edu-animate — 教育动画制作垂直聚合域插件
+│   ├── src/
+│   │   ├── index.ts          # export { webDomain }
+│   │   ├── web-domain.tsx    # createWebDomain("edu-animate"): /edu* routes + navItems/homeTile
+│   │   ├── domain-layout.tsx # edu business-area layout (scroll container)
+│   │   ├── pages/            # page.tsx (skills), videos-page.tsx, categories-page.tsx
+│   │   ├── components/       # skill-card / video-card / edu-filter-bar / edu-pagination / copy-button
+│   │   ├── services/         # edu.ts — API client + static-mode client-side filter/sort/pagination
+│   │   ├── types/            # edu.ts
+│   │   └── lib/              # utils.ts (cn), format.ts
+│   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: edu-animate, order 40
+│   ├── package.json          # name: @innate/domain-edu-animate; self-contained (relative imports only)
+│   └── tsconfig.json
 ├── awesome/                 # Legacy awesome-dsh-plugin YAML/screenshots fallback; fresh catalog is local-only
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
-├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh)
+├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh, edu-animate)
 ├── dev.sh                   # Bash helper (legacy; `bun run dev` is cross-platform)
 └── CLAUDE.md
 ```
@@ -124,6 +139,7 @@ innate-feeds/
 | Validation | Zod (used in API input validation) |
 | Type checking | TypeScript 5.7+ |
 | Plugin directory | Own domain plugin `@innate/domain-dsh` (`dsh/`), routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin market catalog, datasource in `backend/src/dsh/`) |
+| Education-animation domain | Own domain plugin `@innate/domain-edu-animate` (`edu-animate/`), routes under `/edu`, data from the `edu-skills` / `edu-videos` external sources (`/api/external/*`) |
 
 ## Build and development commands
 
@@ -199,7 +215,7 @@ bunx tsx src/app/cli.ts sync digest --days 90
 bunx tsx src/app/cli.ts sync window [--days 90] [--skip-readme] [--force]
 ```
 
-### Sync external sources (Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / GitHub Topics)
+### Sync external sources (Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / GitHub Topics / Edu Skills / Edu Videos)
 
 These are independent JSON-based collectors (no SQLite, see `docs/arch-design/external-collectors.md`).
 
@@ -253,8 +269,15 @@ bun run sync:awesome-dsh
 # Legacy DSH YAML snapshot (GH #27, manual fallback only)
 bun src/app/cli.ts sync dsh-catalog --dry-run
 
-# Unified sync (all 8 JSON-store external sources; per-source failures don't abort)
-bun run sync:vc                # all 8 sources; root data:sync:external (daily) excludes producthunt pending GH #33
+# Edu Skills — 教育动画领域的 Agent Skill（skills.sh sitemap + JSON-LD + GitHub 补充）
+bun run sync:edu-skills                      # 实测 443 条 / 128 仓库
+bun src/app/cli.ts sync edu-skills --max 200 # 限制领域候选数（默认 600）
+
+# Edu Videos — 策展频道的教学视频（只收元数据 + 链接；需要 YOUTUBE_API_KEY）
+bun run sync:edu-videos
+
+# Unified sync (all 10 JSON-store external sources; per-source failures don't abort)
+bun run sync:vc                # all 10 sources; root data:sync:external (daily) excludes producthunt pending GH #33
 bun src/app/cli.ts sync vc --source producthunt --source hackernews
 
 # GH #31 local daily update (trending+starred recent + digest + topics + external)
@@ -375,7 +398,7 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
 | GET | `/api/feeds/digest/:id` | Single digest item (with body). |
-| GET | `/api/external` | External feed sources index (GH #31): Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs with latest snapshot meta. |
+| GET | `/api/external` | External feed sources index (GH #31): Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / edu-skills / edu-videos with latest snapshot meta. |
 | GET | `/api/external/:source` | One external source's latest snapshot (`?label=` for a specific manifest entry). |
 | POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
 | POST | `/api/feeds/hide` | Hide an item so it is filtered out of all list/detail responses. Body: `{ kind: "digest" \| "repo", id }` (`id` = digest item id, or repo `fullName`). Persisted to `hidden.json` next to the DB; also applied at static-export time. |
@@ -452,6 +475,8 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `collector/github-topics.ts` — GitHub Topics search via GitHub Search API. Keeps the top N (default 50) repos per topic and skips repos already in the feeds / already seen in that topic (GH #24). Stores JSON to `~/.innate/github-topics/`.
 - `collector/awesome-dsh.ts` — normalizes the Awesome DSH market index and refreshes Stars via GitHub GraphQL (GH #30). Writes the local plugin catalog under `~/.innate/awesome-dsh/`.
 - `collector/dsh-catalog.ts` — legacy tarball updater for vendored YAML snapshots (GH #27). Manual fallback only; large generated data is not committed.
+- `collector/edu-skills.ts` — 教育动画领域的 SKILL 采集器：skills.sh sitemap（2 分片 × 10,000 条）→ slug 级领域过滤 → 详情页 JSON-LD（安装量/描述）→ GitHub API 补 stars/license/topics（可选）。详情页抓取有 10 分钟总时限，到点用部分结果收工。存 `~/.innate/edu-skills/`。
+- `collector/edu-videos.ts` — 教育动画教学视频采集器：策展 **handle** 列表（不是 channel id）→ `channels.list?forHandle=` 解析 → uploads 播放列表 → `videos.list` 取详情。全程走 1 单位档（不用 `search.list` 的 100 单位）。只收元数据 + 链接。需要 `YOUTUBE_API_KEY`。存 `~/.innate/edu-videos/`。
 - `collector/vc-portfolio.ts` — Unified orchestrator for all external collectors.
 - `collector/shared/types.ts` — Shared types (`ExternalFeedItem`, `FeedCollector`, `FeedSource`).
 - `collector/shared/storage.ts` — JSON storage abstraction (manifest + saveItems).
@@ -506,11 +531,14 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing API client | `frontend/src/services/feeds.ts` |
 | Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types in `db/index.ts`) |
 | Changing shared constants (plugin categories, theme catalog) | `shared/plugin-categories.ts`, `shared/theme-catalog.ts` (non-`@innate` scope — keep it that way) |
+| Changing the education-animation domain (edu-animate) | `edu-animate/src/` (domain plugin @innate/domain-edu-animate), `shared/edu-categories.ts` |
+| Changing the education-animation collectors | `backend/src/collector/edu-skills.ts`, `edu-videos.ts` |
 | Changing styling / theme | `frontend/src/styles.css` |
 | Changing the frontend build / dev toolchain | `frontend/scripts/build.ts`, `dev.ts`, `preview.ts` |
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
 | Changing the plugin directory site | `dsh/src/` (domain plugin @innate/domain-dsh) |
 | Changing plugin data loading | `backend/src/dsh/catalog.ts`, `backend/src/dsh/routes.ts` |
+| Adding a new domain plugin | 新建顶层目录（如 `edu-animate/`）+ `package.json` 的 `workspaces` + `frontend/src/main.tsx` 的 `domains` 数组 + `frontend/scripts/{build,dev}.ts` 的 Tailwind 扫描目录 |
 
 ## Repository skills
 

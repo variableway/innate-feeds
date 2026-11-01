@@ -1,6 +1,6 @@
 /**
  * 独立宿主入口：domain 脱离 webshell 单独运行时的最小壳。
- * 组合本仓全部 domain（feeds + dsh，issue #13 拆分后双域单站）：
+ * 组合本仓全部 domain（feeds + dsh + edu-animate）：
  * 路由经 collectWebDomainRoutes 挂到根路由，导航经 HostShell 聚合 navItems。
  * 只提供紧凑左栏导航（host-shell）；sidebar 细节/主题由 innate-fe webshell
  * 在插件态承担。本文件属宿主（host-only），不进 domains/ 打包面。
@@ -17,9 +17,10 @@ import {
 import { collectWebDomainRoutes } from "@innate/web-domain";
 import { webDomain as feedsDomain } from "./web-domain";
 import { webDomain as dshDomain } from "../../dsh/src/index";
+import { webDomain as eduDomain } from "../../edu-animate/src/index";
 import { HostShell } from "./host-shell";
 
-const domains = [feedsDomain, dshDomain];
+const domains = [feedsDomain, dshDomain, eduDomain];
 
 const basepath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
 

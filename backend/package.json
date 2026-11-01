@@ -40,6 +40,8 @@
     "sync:github-new": "bun src/app/cli.ts sync github-new",
     "sync:devto": "bun src/app/cli.ts sync devto",
     "sync:lobsters": "bun src/app/cli.ts sync lobsters",
+    "sync:edu-skills": "bun src/app/cli.ts sync edu-skills",
+    "sync:edu-videos": "bun src/app/cli.ts sync edu-videos",
     "sync:external": "bun src/app/cli.ts sync vc"
   },
   "dependencies": {

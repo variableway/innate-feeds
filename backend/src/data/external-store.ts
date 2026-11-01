@@ -74,6 +74,18 @@ export const EXTERNAL_SOURCES: {
     description: "Lobsters 最热讨论",
     homepage: "https://lobste.rs",
   },
+  {
+    source: "edu-skills",
+    title: "Edu Skills",
+    description: "教育动画领域的 Agent Skill（skills.sh 索引）",
+    homepage: "https://www.skills.sh",
+  },
+  {
+    source: "edu-videos",
+    title: "Edu Videos",
+    description: "教育动画领域的教学视频（策展频道）",
+    homepage: "https://www.youtube.com",
+  },
 ];
 
 export interface ExternalSourceEntry {
