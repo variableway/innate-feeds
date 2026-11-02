@@ -1,6 +1,6 @@
 {
   "topic": "large-language-model",
-  "fetchedAt": "2026-11-01T14:42:48.511Z",
+  "fetchedAt": "2026-11-02T17:46:33.458Z",
   "count": 50,
   "newCount": 45,
   "existingCount": 5,
@@ -13,9 +13,9 @@
       "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
       "url": "https://github.com/jingyaogong/minimind",
       "homepage": "https://jingyaogong.github.io/minimind",
-      "stars": 64728,
-      "forks": 8468,
-      "watchers": 64728,
+      "stars": 64779,
+      "forks": 8473,
+      "watchers": 64779,
       "language": "Python",
       "topics": [
         "artificial-intelligence",
@@ -27,8 +27,8 @@
         "url": "https://github.com/jingyaogong"
       },
       "createdAt": "2024-07-27T04:34:12Z",
-      "updatedAt": "2026-11-01T14:40:29Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:44:49Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": true
     },
@@ -40,9 +40,9 @@
       "description": "Python scraper based on AI",
       "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
       "homepage": "https://scrapegraphai.com",
-      "stars": 32414,
+      "stars": 32435,
       "forks": 3313,
-      "watchers": 32414,
+      "watchers": 32435,
       "language": "Python",
       "topics": [
         "ai-crawler",
@@ -72,8 +72,8 @@
         "url": "https://github.com/ScrapeGraphAI"
       },
       "createdAt": "2024-01-27T16:54:38Z",
-      "updatedAt": "2026-11-01T14:23:49Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T14:04:07Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -85,9 +85,9 @@
       "description": "Pocket Flow: Codebase to Tutorial",
       "url": "https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
       "homepage": "https://code2tutorial.com/ ",
-      "stars": 12728,
+      "stars": 12731,
       "forks": 1437,
-      "watchers": 12728,
+      "watchers": 12731,
       "language": "Python",
       "topics": [
         "coding",
@@ -110,8 +110,8 @@
         "url": "https://github.com/The-Pocket"
       },
       "createdAt": "2025-04-02T20:56:33Z",
-      "updatedAt": "2026-11-01T09:54:41Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:18:17Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -155,8 +155,8 @@
         "url": "https://github.com/The-Pocket"
       },
       "createdAt": "2024-12-24T02:43:30Z",
-      "updatedAt": "2026-11-01T13:57:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T11:18:37Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": true
     },
@@ -168,9 +168,9 @@
       "description": "KAG is a logical form-guided reasoning and retrieval framework based on OpenSPG engine and LLMs.  It is used to build logical reasoning and factual Q&A solutions for professional domain knowledge bases. It can effectively overcome the shortcomings of the traditional RAG vector similarity calculation model.",
       "url": "https://github.com/OpenSPG/KAG",
       "homepage": "https://spg.openkg.cn/en-US",
-      "stars": 9143,
-      "forks": 720,
-      "watchers": 9143,
+      "stars": 9145,
+      "forks": 719,
+      "watchers": 9145,
       "language": "Python",
       "topics": [
         "knowledge-graph",
@@ -185,8 +185,8 @@
         "url": "https://github.com/OpenSPG"
       },
       "createdAt": "2024-09-21T13:56:44Z",
-      "updatedAt": "2026-11-01T09:41:11Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T06:59:16Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": true
     },
@@ -198,9 +198,9 @@
       "description": "⚙️🦀 Build modular and scalable LLM Applications in Rust",
       "url": "https://github.com/0xPlaygrounds/rig",
       "homepage": "https://rig.rs",
-      "stars": 9035,
-      "forks": 1005,
-      "watchers": 9035,
+      "stars": 9045,
+      "forks": 1006,
+      "watchers": 9045,
       "language": "Rust",
       "topics": [
         "agent",
@@ -220,8 +220,8 @@
         "url": "https://github.com/0xPlaygrounds"
       },
       "createdAt": "2024-06-05T13:42:28Z",
-      "updatedAt": "2026-11-01T11:58:15Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:31:21Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -233,9 +233,9 @@
       "description": "OpenCompass is an LLM evaluation platform, supporting a wide range of models from OpenAI, Anthropic, Gemini, Qwen, GLM, DeepSeek, etc, across 100+ datasets covering knowledge, reasoning, coding, science, language, long-context, and safety.",
       "url": "https://github.com/open-compass/opencompass",
       "homepage": "https://opencompass.org.cn/",
-      "stars": 7560,
-      "forks": 898,
-      "watchers": 7560,
+      "stars": 7561,
+      "forks": 899,
+      "watchers": 7561,
       "language": "Python",
       "topics": [
         "benchmark",
@@ -250,8 +250,8 @@
         "url": "https://github.com/open-compass"
       },
       "createdAt": "2023-06-15T12:42:58Z",
-      "updatedAt": "2026-11-01T06:21:31Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T14:45:44Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -286,7 +286,7 @@
       },
       "createdAt": "2023-07-06T04:52:06Z",
       "updatedAt": "2026-10-29T12:18:31Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -298,9 +298,9 @@
       "description": "Building AI agents, atomically",
       "url": "https://github.com/Eigenwise/atomic-agents",
       "homepage": "https://eigenwise.github.io/atomic-agents/",
-      "stars": 6315,
-      "forks": 558,
-      "watchers": 6315,
+      "stars": 6313,
+      "forks": 560,
+      "watchers": 6313,
       "language": "Python",
       "topics": [
         "ai",
@@ -317,8 +317,8 @@
         "url": "https://github.com/Eigenwise"
       },
       "createdAt": "2024-06-03T08:24:07Z",
-      "updatedAt": "2026-10-31T13:45:46Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T10:37:26Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -330,9 +330,9 @@
       "description": "Enchanted is iOS and macOS app for chatting with private self hosted language models such as Llama2, Mistral or Vicuna using Ollama.",
       "url": "https://github.com/gluonfield/enchanted",
       "homepage": null,
-      "stars": 6017,
-      "forks": 426,
-      "watchers": 6017,
+      "stars": 6018,
+      "forks": 425,
+      "watchers": 6018,
       "language": "Swift",
       "topics": [
         "ios",
@@ -351,8 +351,8 @@
         "url": "https://github.com/gluonfield"
       },
       "createdAt": "2023-12-13T18:55:26Z",
-      "updatedAt": "2026-11-01T09:33:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T08:58:13Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -364,9 +364,9 @@
       "description": "learn LLM inference system on Apple Silicon for systems engineers: build a tiny vLLM + Qwen",
       "url": "https://github.com/skyzh/tiny-llm",
       "homepage": "https://skyzh.github.io/tiny-llm/",
-      "stars": 5503,
-      "forks": 497,
-      "watchers": 5503,
+      "stars": 5522,
+      "forks": 502,
+      "watchers": 5522,
       "language": "Python",
       "topics": [
         "course",
@@ -383,8 +383,8 @@
         "url": "https://github.com/skyzh"
       },
       "createdAt": "2025-04-19T20:01:33Z",
-      "updatedAt": "2026-11-01T14:08:27Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:36:07Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -396,9 +396,9 @@
       "description": "[CCS'24] A dataset consists of 15,140 ChatGPT prompts from Reddit, Discord, websites, and open-source datasets (including 1,405 jailbreak prompts).",
       "url": "https://github.com/verazuo/jailbreak_llms",
       "homepage": "https://jailbreak-llms.xinyueshen.me/",
-      "stars": 3867,
+      "stars": 3871,
       "forks": 340,
-      "watchers": 3867,
+      "watchers": 3871,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -415,8 +415,8 @@
         "url": "https://github.com/verazuo"
       },
       "createdAt": "2023-08-01T21:12:06Z",
-      "updatedAt": "2026-11-01T11:00:28Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:38:21Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -444,7 +444,7 @@
       },
       "createdAt": "2024-04-23T20:44:31Z",
       "updatedAt": "2026-10-31T05:38:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -485,7 +485,7 @@
       },
       "createdAt": "2023-09-26T02:42:20Z",
       "updatedAt": "2026-10-30T01:43:49Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -497,9 +497,9 @@
       "description": "Project Page for \"LISA: Reasoning Segmentation via Large Language Model\"",
       "url": "https://github.com/JIA-Lab-research/LISA",
       "homepage": null,
-      "stars": 2690,
+      "stars": 2692,
       "forks": 205,
-      "watchers": 2690,
+      "watchers": 2692,
       "language": "Python",
       "topics": [
         "large-language-model",
@@ -513,8 +513,8 @@
         "url": "https://github.com/JIA-Lab-research"
       },
       "createdAt": "2023-08-01T15:53:33Z",
-      "updatedAt": "2026-10-30T06:42:33Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T12:18:36Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -559,7 +559,7 @@
       },
       "createdAt": "2024-01-09T11:10:20Z",
       "updatedAt": "2026-11-01T07:04:43Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": true
     },
@@ -571,9 +571,9 @@
       "description": "Awesome papers about unifying LLMs and KGs",
       "url": "https://github.com/RManLuo/Awesome-LLM-KG",
       "homepage": null,
-      "stars": 2621,
+      "stars": 2620,
       "forks": 179,
-      "watchers": 2621,
+      "watchers": 2620,
       "language": null,
       "topics": [
         "awsome",
@@ -592,8 +592,8 @@
         "url": "https://github.com/RManLuo"
       },
       "createdAt": "2023-06-07T23:30:03Z",
-      "updatedAt": "2026-11-01T14:25:01Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T15:53:24Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -606,7 +606,7 @@
       "url": "https://github.com/hyp1231/awesome-llm-powered-agent",
       "homepage": null,
       "stars": 2260,
-      "forks": 232,
+      "forks": 233,
       "watchers": 2260,
       "language": null,
       "topics": [
@@ -634,7 +634,7 @@
       },
       "createdAt": "2023-07-25T06:23:18Z",
       "updatedAt": "2026-11-01T09:21:19Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -673,8 +673,8 @@
         "url": "https://github.com/EgoAlpha"
       },
       "createdAt": "2023-03-08T08:47:29Z",
-      "updatedAt": "2026-11-01T01:00:09Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T01:00:10Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -686,9 +686,9 @@
       "description": "NestJS Helper + AI Chatbot Development",
       "url": "https://github.com/samchon/nestia",
       "homepage": "https://nestia.io/",
-      "stars": 2178,
+      "stars": 2179,
       "forks": 128,
-      "watchers": 2178,
+      "watchers": 2179,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -716,8 +716,8 @@
         "url": "https://github.com/samchon"
       },
       "createdAt": "2021-01-20T09:12:03Z",
-      "updatedAt": "2026-10-29T12:15:14Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T04:23:24Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -758,7 +758,7 @@
       },
       "createdAt": "2022-11-11T05:32:27Z",
       "updatedAt": "2026-10-31T17:00:39Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -770,9 +770,9 @@
       "description": "Minimal reproduction of OneRec",
       "url": "https://github.com/AkaliKong/MiniOneRec",
       "homepage": null,
-      "stars": 1944,
+      "stars": 1946,
       "forks": 289,
-      "watchers": 1944,
+      "watchers": 1946,
       "language": "Python",
       "topics": [
         "generative-ai",
@@ -792,8 +792,8 @@
         "url": "https://github.com/AkaliKong"
       },
       "createdAt": "2025-10-21T14:02:08Z",
-      "updatedAt": "2026-11-01T13:49:16Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T13:48:28Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -827,7 +827,7 @@
       },
       "createdAt": "2023-07-19T06:55:49Z",
       "updatedAt": "2026-10-30T10:54:06Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -865,7 +865,7 @@
       },
       "createdAt": "2025-06-09T12:42:36Z",
       "updatedAt": "2026-10-31T13:51:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -877,9 +877,9 @@
       "description": "DATAGEN: AI-driven multi-agent research assistant automating hypothesis generation, data analysis, and report writing. ",
       "url": "https://github.com/zi-yue-1129/DATAGEN",
       "homepage": null,
-      "stars": 1811,
+      "stars": 1812,
       "forks": 256,
-      "watchers": 1811,
+      "watchers": 1812,
       "language": "Python",
       "topics": [
         "agent",
@@ -904,8 +904,8 @@
         "url": "https://github.com/zi-yue-1129"
       },
       "createdAt": "2024-07-23T05:50:15Z",
-      "updatedAt": "2026-10-31T01:17:10Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T08:36:46Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": true
     },
@@ -917,9 +917,9 @@
       "description": "Seed1.5-VL, a vision-language foundation model designed to advance general-purpose multimodal understanding and reasoning, achieving state-of-the-art performance on 38 out of 60 public benchmarks.",
       "url": "https://github.com/ByteDance-Seed/Seed1.5-VL",
       "homepage": "https://seed.bytedance.com/en/tech/seed1_5_vl",
-      "stars": 1594,
+      "stars": 1592,
       "forks": 65,
-      "watchers": 1594,
+      "watchers": 1592,
       "language": "Jupyter Notebook",
       "topics": [
         "cookbook",
@@ -933,8 +933,8 @@
         "url": "https://github.com/ByteDance-Seed"
       },
       "createdAt": "2025-05-11T06:00:32Z",
-      "updatedAt": "2026-10-30T12:57:54Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T15:07:34Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -946,9 +946,9 @@
       "description": "A Home Assistant integration & Model to control your smart home using a Local LLM",
       "url": "https://github.com/acon96/home-llm",
       "homepage": null,
-      "stars": 1482,
+      "stars": 1485,
       "forks": 155,
-      "watchers": 1482,
+      "watchers": 1485,
       "language": "Python",
       "topics": [
         "homeassistant-custom-component",
@@ -960,8 +960,8 @@
         "url": "https://github.com/acon96"
       },
       "createdAt": "2023-12-23T04:50:06Z",
-      "updatedAt": "2026-10-31T14:44:22Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T13:35:10Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -973,9 +973,9 @@
       "description": "日本語LLMまとめ - Overview of Japanese LLMs",
       "url": "https://github.com/llm-jp/awesome-japanese-llm",
       "homepage": "https://llm-jp.github.io/awesome-japanese-llm",
-      "stars": 1442,
+      "stars": 1444,
       "forks": 49,
-      "watchers": 1442,
+      "watchers": 1444,
       "language": "TypeScript",
       "topics": [
         "foundation-models",
@@ -1004,8 +1004,8 @@
         "url": "https://github.com/llm-jp"
       },
       "createdAt": "2023-07-09T04:36:38Z",
-      "updatedAt": "2026-10-30T13:32:51Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:38:20Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1045,7 +1045,7 @@
       },
       "createdAt": "2024-02-08T16:04:45Z",
       "updatedAt": "2026-10-21T06:15:49Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1076,7 +1076,7 @@
       },
       "createdAt": "2023-10-23T09:37:40Z",
       "updatedAt": "2026-10-30T03:27:57Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1088,9 +1088,9 @@
       "description": "An easy-to-use Python framework to generate adversarial jailbreak prompts.",
       "url": "https://github.com/EasyJailbreak/EasyJailbreak",
       "homepage": "http://easyjailbreak.org/",
-      "stars": 933,
+      "stars": 936,
       "forks": 94,
-      "watchers": 933,
+      "watchers": 936,
       "language": "Python",
       "topics": [
         "discrete-optimization",
@@ -1106,8 +1106,8 @@
         "url": "https://github.com/EasyJailbreak"
       },
       "createdAt": "2024-01-31T09:04:31Z",
-      "updatedAt": "2026-11-01T01:25:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T11:33:44Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1136,7 +1136,7 @@
       },
       "createdAt": "2026-04-27T22:30:47Z",
       "updatedAt": "2026-10-30T15:53:04Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1149,7 +1149,7 @@
       "url": "https://github.com/ImprintLab/Medical-Graph-RAG",
       "homepage": "https://arxiv.org/html/2408.04187v1",
       "stars": 840,
-      "forks": 144,
+      "forks": 145,
       "watchers": 840,
       "language": "Python",
       "topics": [
@@ -1168,7 +1168,7 @@
       },
       "createdAt": "2024-08-08T03:08:30Z",
       "updatedAt": "2026-11-01T12:46:16Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1197,7 +1197,7 @@
       },
       "createdAt": "2024-03-16T05:16:40Z",
       "updatedAt": "2026-10-09T04:40:12Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1209,9 +1209,9 @@
       "description": "This repository collects an extensive list of awesome papers about Story Generation / Storytelling, exclusively focusing on the era of Large Language Models (LLMs).",
       "url": "https://github.com/yingpengma/Awesome-Story-Generation",
       "homepage": null,
-      "stars": 669,
+      "stars": 671,
       "forks": 36,
-      "watchers": 669,
+      "watchers": 671,
       "language": "Python",
       "topics": [
         "language-generation",
@@ -1231,8 +1231,8 @@
         "url": "https://github.com/yingpengma"
       },
       "createdAt": "2023-06-19T14:15:09Z",
-      "updatedAt": "2026-10-26T09:25:52Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T11:13:09Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1276,7 +1276,7 @@
       },
       "createdAt": "2023-04-26T10:10:06Z",
       "updatedAt": "2026-10-30T16:00:51Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1288,9 +1288,9 @@
       "description": "A resource repository for machine unlearning in large language models",
       "url": "https://github.com/chrisliu298/awesome-llm-unlearning",
       "homepage": null,
-      "stars": 637,
+      "stars": 638,
       "forks": 35,
-      "watchers": 637,
+      "watchers": 638,
       "language": null,
       "topics": [
         "ai-safety",
@@ -1320,8 +1320,8 @@
         "url": "https://github.com/chrisliu298"
       },
       "createdAt": "2024-03-27T15:44:23Z",
-      "updatedAt": "2026-10-26T12:37:57Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T17:11:40Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1334,7 +1334,7 @@
       "url": "https://github.com/microsoft/multilspy",
       "homepage": "https://www.microsoft.com/en-us/research/publication/guiding-language-models-of-code-with-global-context-using-monitors/",
       "stars": 613,
-      "forks": 113,
+      "forks": 112,
       "watchers": 613,
       "language": "Python",
       "topics": [
@@ -1365,7 +1365,7 @@
       },
       "createdAt": "2024-08-07T12:58:24Z",
       "updatedAt": "2026-10-31T02:16:17Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1396,7 +1396,7 @@
       },
       "createdAt": "2023-04-20T13:43:25Z",
       "updatedAt": "2026-10-28T16:49:19Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1424,7 +1424,7 @@
       },
       "createdAt": "2024-04-11T23:42:27Z",
       "updatedAt": "2026-10-12T19:08:21Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1453,8 +1453,8 @@
         "url": "https://github.com/Mirrowel"
       },
       "createdAt": "2025-06-10T17:07:26Z",
-      "updatedAt": "2026-11-01T06:31:52Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T02:23:45Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1488,7 +1488,7 @@
       },
       "createdAt": "2023-10-05T21:53:44Z",
       "updatedAt": "2026-11-01T14:25:04Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1519,7 +1519,7 @@
       },
       "createdAt": "2023-09-22T06:10:39Z",
       "updatedAt": "2026-10-24T11:43:36Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1551,7 +1551,7 @@
       },
       "createdAt": "2025-02-21T01:05:45Z",
       "updatedAt": "2026-10-24T18:15:26Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1563,9 +1563,9 @@
       "description": "A curated list of MLSecOps tools and resources for securing machine learning and AI systems - adversarial ML defense, LLM security, AI red teaming, model scanning, supply-chain protection, and MLOps pipeline security.",
       "url": "https://github.com/RiccardoBiosas/awesome-MLSecOps",
       "homepage": "https://awesomemlsecops.com/",
-      "stars": 484,
-      "forks": 126,
-      "watchers": 484,
+      "stars": 485,
+      "forks": 127,
+      "watchers": 485,
       "language": "Astro",
       "topics": [
         "adversarial-machine-learning",
@@ -1595,8 +1595,8 @@
         "url": "https://github.com/RiccardoBiosas"
       },
       "createdAt": "2023-04-01T10:06:32Z",
-      "updatedAt": "2026-10-31T13:10:41Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "updatedAt": "2026-11-02T14:01:59Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1630,7 +1630,7 @@
       },
       "createdAt": "2025-02-16T10:36:08Z",
       "updatedAt": "2026-10-25T20:29:18Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1675,7 +1675,7 @@
       },
       "createdAt": "2020-12-22T08:27:59Z",
       "updatedAt": "2026-10-29T06:26:05Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1714,7 +1714,7 @@
       },
       "createdAt": "2018-03-03T13:12:14Z",
       "updatedAt": "2026-10-24T20:36:50Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1747,7 +1747,7 @@
       },
       "createdAt": "2024-06-12T21:50:58Z",
       "updatedAt": "2026-10-10T12:51:20Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     },
@@ -1777,7 +1777,7 @@
       },
       "createdAt": "2025-09-25T13:33:00Z",
       "updatedAt": "2026-10-26T09:24:59Z",
-      "firstSeenAt": "2026-11-01T14:42:48.511Z",
+      "firstSeenAt": "2026-11-02T17:46:33.458Z",
       "isNew": true,
       "existing": false
     }

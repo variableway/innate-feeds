@@ -1,6 +1,6 @@
 {
   "topic": "rag",
-  "fetchedAt": "2026-11-01T14:42:54.714Z",
+  "fetchedAt": "2026-11-02T17:46:41.473Z",
   "count": 50,
   "newCount": 23,
   "existingCount": 27,
@@ -13,9 +13,9 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/open-webui/open-webui",
       "homepage": "https://openwebui.com",
-      "stars": 157456,
-      "forks": 22893,
-      "watchers": 157456,
+      "stars": 157566,
+      "forks": 22920,
+      "watchers": 157566,
       "language": "Python",
       "topics": [
         "ai",
@@ -40,8 +40,8 @@
         "url": "https://github.com/open-webui"
       },
       "createdAt": "2023-10-06T22:08:27Z",
-      "updatedAt": "2026-11-01T14:19:05Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:41:03Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -53,9 +53,9 @@
       "description": "The agent engineering platform.",
       "url": "https://github.com/langchain-ai/langchain",
       "homepage": "https://docs.langchain.com/langchain/",
-      "stars": 148813,
-      "forks": 25012,
-      "watchers": 148813,
+      "stars": 148883,
+      "forks": 25030,
+      "watchers": 148883,
       "language": "Python",
       "topics": [
         "agents",
@@ -85,8 +85,8 @@
         "url": "https://github.com/langchain-ai"
       },
       "createdAt": "2022-10-17T02:58:36Z",
-      "updatedAt": "2026-11-01T13:17:58Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:44:24Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -98,9 +98,9 @@
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "homepage": "https://www.theunwindai.com",
-      "stars": 143645,
-      "forks": 21135,
-      "watchers": 143645,
+      "stars": 143746,
+      "forks": 21148,
+      "watchers": 143746,
       "language": "Python",
       "topics": [
         "agents",
@@ -114,8 +114,8 @@
         "url": "https://github.com/Shubhamsaboo"
       },
       "createdAt": "2024-04-29T05:30:25Z",
-      "updatedAt": "2026-11-01T14:39:02Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:02:02Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -127,9 +127,9 @@
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
       "url": "https://github.com/Graphify-Labs/graphify",
       "homepage": "https://www.graphify.com",
-      "stars": 140346,
-      "forks": 13404,
-      "watchers": 140346,
+      "stars": 141006,
+      "forks": 13474,
+      "watchers": 141006,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -159,8 +159,8 @@
         "url": "https://github.com/Graphify-Labs"
       },
       "createdAt": "2026-04-03T15:49:07Z",
-      "updatedAt": "2026-11-01T14:42:46Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:46:36Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -172,9 +172,9 @@
       "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "url": "https://github.com/thedotmack/claude-mem",
       "homepage": "https://claude-mem.ai",
-      "stars": 108659,
-      "forks": 9522,
-      "watchers": 108659,
+      "stars": 110478,
+      "forks": 9640,
+      "watchers": 110478,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -204,8 +204,8 @@
         "url": "https://github.com/thedotmack"
       },
       "createdAt": "2025-08-31T20:50:03Z",
-      "updatedAt": "2026-11-01T14:42:52Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:43:40Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -214,17 +214,17 @@
       "repoId": 730534580,
       "fullName": "infiniflow/ragflow",
       "name": "ragflow",
-      "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "description": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
       "url": "https://github.com/infiniflow/ragflow",
       "homepage": "https://ragflow.io",
-      "stars": 93287,
-      "forks": 11197,
-      "watchers": 93287,
+      "stars": 93364,
+      "forks": 11207,
+      "watchers": 93364,
       "language": "Go",
       "topics": [
         "agent-harness",
+        "agent-native-database",
         "agentic-ai",
-        "agentic-nagive",
         "agentic-retrieval",
         "agentic-search",
         "ai",
@@ -244,8 +244,8 @@
         "url": "https://github.com/infiniflow"
       },
       "createdAt": "2023-12-12T06:13:13Z",
-      "updatedAt": "2026-11-01T14:40:37Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:15:12Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -257,9 +257,9 @@
       "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
       "url": "https://github.com/PaddlePaddle/PaddleOCR",
       "homepage": "https://www.paddleocr.com",
-      "stars": 92066,
-      "forks": 11601,
-      "watchers": 92066,
+      "stars": 92136,
+      "forks": 11611,
+      "watchers": 92136,
       "language": "Python",
       "topics": [
         "ai4science",
@@ -282,8 +282,8 @@
         "url": "https://github.com/PaddlePaddle"
       },
       "createdAt": "2020-05-08T10:38:16Z",
-      "updatedAt": "2026-11-01T14:41:44Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:36:44Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -295,9 +295,9 @@
       "description": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8mtf",
       "url": "https://github.com/unclecode/crawl4ai",
       "homepage": "https://crawl4ai.com",
-      "stars": 86699,
-      "forks": 9031,
-      "watchers": 86699,
+      "stars": 86775,
+      "forks": 9043,
+      "watchers": 86775,
       "language": "Python",
       "topics": [
         "ai",
@@ -322,8 +322,8 @@
         "url": "https://github.com/unclecode"
       },
       "createdAt": "2024-05-09T09:48:50Z",
-      "updatedAt": "2026-11-01T14:28:43Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:20:51Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -335,9 +335,9 @@
       "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
       "url": "https://github.com/datawhalechina/hello-agents",
       "homepage": "https://hello-agents.datawhale.cc",
-      "stars": 85599,
-      "forks": 10650,
-      "watchers": 85599,
+      "stars": 85781,
+      "forks": 10678,
+      "watchers": 85781,
       "language": "Python",
       "topics": [
         "agent",
@@ -351,8 +351,8 @@
         "url": "https://github.com/datawhalechina"
       },
       "createdAt": "2025-09-07T09:50:24Z",
-      "updatedAt": "2026-11-01T14:27:45Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:20:49Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -364,9 +364,9 @@
       "description": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
       "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
       "homepage": "https://www.promptingguide.ai/",
-      "stars": 79731,
-      "forks": 8759,
-      "watchers": 79731,
+      "stars": 79750,
+      "forks": 8760,
+      "watchers": 79750,
       "language": "MDX",
       "topics": [
         "agent",
@@ -387,8 +387,8 @@
         "url": "https://github.com/dair-ai"
       },
       "createdAt": "2022-12-16T16:04:50Z",
-      "updatedAt": "2026-11-01T14:32:12Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:18:16Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -400,9 +400,9 @@
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
       "url": "https://github.com/headroomlabs-ai/headroom",
       "homepage": "https://docs.headroomlabs.ai/docs",
-      "stars": 78521,
-      "forks": 6127,
-      "watchers": 78521,
+      "stars": 78648,
+      "forks": 6140,
+      "watchers": 78648,
       "language": "Python",
       "topics": [
         "agent",
@@ -432,8 +432,8 @@
         "url": "https://github.com/headroomlabs-ai"
       },
       "createdAt": "2026-01-07T19:58:51Z",
-      "updatedAt": "2026-11-01T14:38:07Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:41:12Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -445,9 +445,9 @@
       "description": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
       "url": "https://github.com/mem0ai/mem0",
       "homepage": "https://mem0.ai",
-      "stars": 68220,
-      "forks": 8093,
-      "watchers": 68220,
+      "stars": 68287,
+      "forks": 8103,
+      "watchers": 68287,
       "language": "Python",
       "topics": [
         "agentic-memory",
@@ -471,8 +471,8 @@
         "url": "https://github.com/mem0ai"
       },
       "createdAt": "2023-06-20T08:58:36Z",
-      "updatedAt": "2026-11-01T14:35:18Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:18:48Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -484,9 +484,9 @@
       "description": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience ",
       "url": "https://github.com/Mintplex-Labs/anything-llm",
       "homepage": "https://anythingllm.com",
-      "stars": 67815,
-      "forks": 7642,
-      "watchers": 67815,
+      "stars": 67859,
+      "forks": 7657,
+      "watchers": 67859,
       "language": "JavaScript",
       "topics": [
         "agent-computer",
@@ -511,8 +511,8 @@
         "url": "https://github.com/Mintplex-Labs"
       },
       "createdAt": "2023-06-04T02:29:14Z",
-      "updatedAt": "2026-11-01T14:35:31Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:32:21Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -524,9 +524,9 @@
       "description": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
       "url": "https://github.com/pathwaycom/serviette",
       "homepage": "https://github.com/pathwaycom/serviette/blob/main/docs/README.md",
-      "stars": 58737,
-      "forks": 1542,
-      "watchers": 58737,
+      "stars": 58732,
+      "forks": 1547,
+      "watchers": 58732,
       "language": "Python",
       "topics": [
         "chromadb",
@@ -556,8 +556,8 @@
         "url": "https://github.com/pathwaycom"
       },
       "createdAt": "2023-07-19T08:43:37Z",
-      "updatedAt": "2026-11-01T13:46:34Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T15:57:57Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -569,9 +569,9 @@
       "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
       "url": "https://github.com/bojieli/ai-agent-book",
       "homepage": null,
-      "stars": 56831,
-      "forks": 6555,
-      "watchers": 56831,
+      "stars": 56962,
+      "forks": 6569,
+      "watchers": 56962,
       "language": "Python",
       "topics": [
         "agent",
@@ -594,8 +594,8 @@
         "url": "https://github.com/bojieli"
       },
       "createdAt": "2025-09-09T02:41:44Z",
-      "updatedAt": "2026-11-01T14:41:23Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:32:09Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -607,9 +607,9 @@
       "description": "Build AI Agents, Visually",
       "url": "https://github.com/FlowiseAI/Flowise",
       "homepage": "https://flowiseai.com",
-      "stars": 55541,
-      "forks": 25092,
-      "watchers": 55541,
+      "stars": 55543,
+      "forks": 25090,
+      "watchers": 55543,
       "language": "TypeScript",
       "topics": [
         "agentic-ai",
@@ -636,8 +636,8 @@
         "url": "https://github.com/FlowiseAI"
       },
       "createdAt": "2023-03-31T12:23:09Z",
-      "updatedAt": "2026-11-01T11:51:03Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:28:41Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -649,9 +649,9 @@
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "url": "https://github.com/HKUDS/DeepTutor",
       "homepage": "http://arxiv.org/abs/2604.26962",
-      "stars": 53424,
-      "forks": 6533,
-      "watchers": 53424,
+      "stars": 54216,
+      "forks": 6634,
+      "watchers": 54216,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -670,8 +670,8 @@
         "url": "https://github.com/HKUDS"
       },
       "createdAt": "2025-12-28T15:35:54Z",
-      "updatedAt": "2026-11-01T14:39:09Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:44:31Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -683,9 +683,9 @@
       "description": "LlamaIndex is the document processing platform for AI",
       "url": "https://github.com/run-llama/llama_index",
       "homepage": "https://developers.llamaindex.ai",
-      "stars": 52768,
-      "forks": 8495,
-      "watchers": 52768,
+      "stars": 52778,
+      "forks": 8499,
+      "watchers": 52778,
       "language": "Python",
       "topics": [
         "agents",
@@ -705,8 +705,8 @@
         "url": "https://github.com/run-llama"
       },
       "createdAt": "2022-11-02T04:24:54Z",
-      "updatedAt": "2026-11-01T12:53:34Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:22:56Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -718,9 +718,9 @@
       "description": "【低代码v2.0，一句话即可生成整个系统】企业级AI低代码平台，一键生成前后端代码甚至整个系统。 AI Skills 一句话画流程、设计表单、生成报表、大屏。内置 AI应用平台涵盖：AI聊天、知识库、流程编排、MCP插件等，兼容主流大模型。引领AI低代码「Skills 生成 → 在线配置 → 代码生成 → 手工合并->AI修改」开发模式，解决 Java 项目 90% 重复工作，提高效率又不失灵活。",
       "url": "https://github.com/jeecgboot/JeecgBoot",
       "homepage": "https://jeecg.com",
-      "stars": 48362,
-      "forks": 16222,
-      "watchers": 48362,
+      "stars": 48363,
+      "forks": 16225,
+      "watchers": 48363,
       "language": "Java",
       "topics": [
         "activiti",
@@ -750,8 +750,8 @@
         "url": "https://github.com/jeecgboot"
       },
       "createdAt": "2018-11-26T10:40:00Z",
-      "updatedAt": "2026-11-01T13:49:44Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:24:38Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -763,9 +763,9 @@
       "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
       "url": "https://github.com/milvus-io/milvus",
       "homepage": "https://milvus.io",
-      "stars": 46550,
-      "forks": 4323,
-      "watchers": 46550,
+      "stars": 46561,
+      "forks": 4325,
+      "watchers": 46561,
       "language": "Go",
       "topics": [
         "anns",
@@ -793,8 +793,8 @@
         "url": "https://github.com/milvus-io"
       },
       "createdAt": "2019-09-16T06:43:43Z",
-      "updatedAt": "2026-11-01T13:36:19Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:36:35Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -806,9 +806,9 @@
       "description": "Build resilient agents.",
       "url": "https://github.com/langchain-ai/langgraph",
       "homepage": "https://docs.langchain.com/oss/python/langgraph/",
-      "stars": 44266,
-      "forks": 7617,
-      "watchers": 44266,
+      "stars": 44335,
+      "forks": 7622,
+      "watchers": 44335,
       "language": "Python",
       "topics": [
         "agents",
@@ -836,8 +836,39 @@
         "url": "https://github.com/langchain-ai"
       },
       "createdAt": "2023-08-09T18:33:12Z",
-      "updatedAt": "2026-11-01T14:30:50Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:41:21Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
+      "isNew": true,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-876064934",
+      "repoId": 876064934,
+      "fullName": "patchy631/ai-engineering-hub",
+      "name": "ai-engineering-hub",
+      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "homepage": "https://join.dailydoseofds.com",
+      "stars": 40907,
+      "forks": 6538,
+      "watchers": 40907,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "agents",
+        "ai",
+        "llms",
+        "machine-learning",
+        "mcp",
+        "rag"
+      ],
+      "owner": {
+        "login": "patchy631",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/38653995?v=4",
+        "url": "https://github.com/patchy631"
+      },
+      "createdAt": "2024-10-21T10:43:24Z",
+      "updatedAt": "2026-11-02T17:46:10Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -849,9 +880,9 @@
       "description": "[EMNLP2025] LightRAG: Simple and Fast Retrieval-Augmented Generation",
       "url": "https://github.com/HKUDS/LightRAG",
       "homepage": "https://arxiv.org/abs/2410.05779",
-      "stars": 40465,
-      "forks": 5749,
-      "watchers": 40465,
+      "stars": 40487,
+      "forks": 5752,
+      "watchers": 40487,
       "language": "Python",
       "topics": [
         "docling",
@@ -872,8 +903,8 @@
         "url": "https://github.com/HKUDS"
       },
       "createdAt": "2024-10-02T11:57:54Z",
-      "updatedAt": "2026-11-01T14:40:44Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:43:26Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -885,9 +916,9 @@
       "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
       "url": "https://github.com/VectifyAI/PageIndex",
       "homepage": "https://pageindex.ai",
-      "stars": 39937,
-      "forks": 3436,
-      "watchers": 39937,
+      "stars": 39956,
+      "forks": 3438,
+      "watchers": 39956,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -909,39 +940,8 @@
         "url": "https://github.com/VectifyAI"
       },
       "createdAt": "2025-04-01T10:53:54Z",
-      "updatedAt": "2026-11-01T13:21:10Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
-      "isNew": true,
-      "existing": true
-    },
-    {
-      "id": "gh-topic-876064934",
-      "repoId": 876064934,
-      "fullName": "patchy631/ai-engineering-hub",
-      "name": "ai-engineering-hub",
-      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
-      "url": "https://github.com/patchy631/ai-engineering-hub",
-      "homepage": "https://join.dailydoseofds.com",
-      "stars": 39912,
-      "forks": 6459,
-      "watchers": 39912,
-      "language": "Jupyter Notebook",
-      "topics": [
-        "agents",
-        "ai",
-        "llms",
-        "machine-learning",
-        "mcp",
-        "rag"
-      ],
-      "owner": {
-        "login": "patchy631",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/38653995?v=4",
-        "url": "https://github.com/patchy631"
-      },
-      "createdAt": "2024-10-21T10:43:24Z",
-      "updatedAt": "2026-11-01T14:40:41Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:01:28Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -954,7 +954,7 @@
       "url": "https://github.com/The-Vibe-Company/quivr",
       "homepage": "https://www.thevibecompany.co/en/portfolio/quivr",
       "stars": 39624,
-      "forks": 3730,
+      "forks": 3731,
       "watchers": 39624,
       "language": "Go",
       "topics": [
@@ -985,8 +985,8 @@
         "url": "https://github.com/The-Vibe-Company"
       },
       "createdAt": "2023-05-12T23:53:30Z",
-      "updatedAt": "2026-11-01T07:23:48Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:58:43Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -998,9 +998,9 @@
       "description": "Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 | Langchain-Chatchat (formerly langchain-ChatGLM), local knowledge based LLM (like ChatGLM, Qwen and Llama) RAG and Agent app with langchain ",
       "url": "https://github.com/chatchat-space/Langchain-Chatchat",
       "homepage": null,
-      "stars": 38711,
+      "stars": 38714,
       "forks": 6255,
-      "watchers": 38711,
+      "watchers": 38714,
       "language": "Python",
       "topics": [
         "chatbot",
@@ -1030,8 +1030,8 @@
         "url": "https://github.com/chatchat-space"
       },
       "createdAt": "2023-03-31T12:12:45Z",
-      "updatedAt": "2026-11-01T09:44:01Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T12:25:59Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1043,9 +1043,9 @@
       "description": "Vane is an AI-powered answering engine.",
       "url": "https://github.com/ItzCrazyKns/Vane",
       "homepage": null,
-      "stars": 37942,
-      "forks": 4223,
-      "watchers": 37942,
+      "stars": 37973,
+      "forks": 4226,
+      "watchers": 37973,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -1069,8 +1069,8 @@
         "url": "https://github.com/ItzCrazyKns"
       },
       "createdAt": "2024-04-09T10:51:32Z",
-      "updatedAt": "2026-11-01T14:36:14Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:33:13Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1082,9 +1082,9 @@
       "description": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.",
       "url": "https://github.com/khoj-ai/khoj",
       "homepage": "https://khoj.dev",
-      "stars": 37930,
+      "stars": 37946,
       "forks": 2529,
-      "watchers": 37930,
+      "watchers": 37946,
       "language": "Python",
       "topics": [
         "agent",
@@ -1114,8 +1114,8 @@
         "url": "https://github.com/khoj-ai"
       },
       "createdAt": "2021-08-16T01:48:44Z",
-      "updatedAt": "2026-11-01T14:17:11Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:06:23Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1127,9 +1127,9 @@
       "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "homepage": null,
-      "stars": 36689,
-      "forks": 3886,
-      "watchers": 36689,
+      "stars": 36773,
+      "forks": 3894,
+      "watchers": 36773,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1152,8 +1152,8 @@
         "url": "https://github.com/virgiliojr94"
       },
       "createdAt": "2026-05-01T02:09:39Z",
-      "updatedAt": "2026-11-01T14:21:18Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:43:47Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1165,9 +1165,9 @@
       "description": "A modular graph-based Retrieval-Augmented Generation (RAG) system",
       "url": "https://github.com/microsoft/graphrag",
       "homepage": "https://microsoft.github.io/graphrag/",
-      "stars": 36513,
-      "forks": 3866,
-      "watchers": 36513,
+      "stars": 36531,
+      "forks": 3867,
+      "watchers": 36531,
       "language": "Python",
       "topics": [
         "gpt",
@@ -1184,8 +1184,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2024-03-27T17:57:52Z",
-      "updatedAt": "2026-11-01T12:39:45Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:14:10Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1197,9 +1197,9 @@
       "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
       "url": "https://github.com/Tencent/WeKnora",
       "homepage": "https://weknora.weixin.qq.com",
-      "stars": 36164,
-      "forks": 4921,
-      "watchers": 36164,
+      "stars": 36266,
+      "forks": 4936,
+      "watchers": 36266,
       "language": "Go",
       "topics": [
         "agent",
@@ -1229,8 +1229,8 @@
         "url": "https://github.com/Tencent"
       },
       "createdAt": "2025-07-22T08:01:23Z",
-      "updatedAt": "2026-11-01T14:34:43Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:51:18Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1242,9 +1242,9 @@
       "description": "📚 从零开始构建大模型",
       "url": "https://github.com/datawhalechina/happy-llm",
       "homepage": "https://datawhalechina.github.io/happy-llm/",
-      "stars": 34685,
-      "forks": 3281,
-      "watchers": 34685,
+      "stars": 34717,
+      "forks": 3283,
+      "watchers": 34717,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -1257,8 +1257,8 @@
         "url": "https://github.com/datawhalechina"
       },
       "createdAt": "2024-05-28T03:22:50Z",
-      "updatedAt": "2026-11-01T13:24:01Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:10:02Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1270,9 +1270,9 @@
       "description": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
       "url": "https://github.com/onyx-dot-app/onyx",
       "homepage": "https://onyx.app",
-      "stars": 33142,
-      "forks": 4684,
-      "watchers": 33142,
+      "stars": 33169,
+      "forks": 4691,
+      "watchers": 33169,
       "language": "Python",
       "topics": [
         "ai",
@@ -1296,10 +1296,39 @@
         "url": "https://github.com/onyx-dot-app"
       },
       "createdAt": "2023-04-27T06:04:01Z",
-      "updatedAt": "2026-11-01T14:28:11Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:44:50Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
+    },
+    {
+      "id": "gh-topic-840056306",
+      "repoId": 840056306,
+      "fullName": "getzep/graphiti",
+      "name": "graphiti",
+      "description": "Build Real-Time Knowledge Graphs for AI Agents",
+      "url": "https://github.com/getzep/graphiti",
+      "homepage": "https://help.getzep.com/graphiti",
+      "stars": 32447,
+      "forks": 3330,
+      "watchers": 32447,
+      "language": "Python",
+      "topics": [
+        "agents",
+        "graph",
+        "llms",
+        "rag"
+      ],
+      "owner": {
+        "login": "getzep",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/132832125?v=4",
+        "url": "https://github.com/getzep"
+      },
+      "createdAt": "2024-08-08T22:08:30Z",
+      "updatedAt": "2026-11-02T17:36:02Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-749126547",
@@ -1309,9 +1338,9 @@
       "description": "Python scraper based on AI",
       "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
       "homepage": "https://scrapegraphai.com",
-      "stars": 32414,
+      "stars": 32435,
       "forks": 3313,
-      "watchers": 32414,
+      "watchers": 32435,
       "language": "Python",
       "topics": [
         "ai-crawler",
@@ -1341,39 +1370,10 @@
         "url": "https://github.com/ScrapeGraphAI"
       },
       "createdAt": "2024-01-27T16:54:38Z",
-      "updatedAt": "2026-11-01T14:23:49Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T14:04:07Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
-    },
-    {
-      "id": "gh-topic-840056306",
-      "repoId": 840056306,
-      "fullName": "getzep/graphiti",
-      "name": "graphiti",
-      "description": "Build Real-Time Knowledge Graphs for AI Agents",
-      "url": "https://github.com/getzep/graphiti",
-      "homepage": "https://help.getzep.com/graphiti",
-      "stars": 32409,
-      "forks": 3327,
-      "watchers": 32409,
-      "language": "Python",
-      "topics": [
-        "agents",
-        "graph",
-        "llms",
-        "rag"
-      ],
-      "owner": {
-        "login": "getzep",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/132832125?v=4",
-        "url": "https://github.com/getzep"
-      },
-      "createdAt": "2024-08-08T22:08:30Z",
-      "updatedAt": "2026-11-01T13:23:11Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
-      "isNew": true,
-      "existing": true
     },
     {
       "id": "gh-topic-828268839",
@@ -1383,9 +1383,9 @@
       "description": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. Each technique has a detailed notebook tutorial.",
       "url": "https://github.com/NirDiamant/RAG_Techniques",
       "homepage": "https://diamant-ai.com",
-      "stars": 30167,
-      "forks": 3696,
-      "watchers": 30167,
+      "stars": 30195,
+      "forks": 3698,
+      "watchers": 30195,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-rag",
@@ -1413,8 +1413,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-07-13T16:08:36Z",
-      "updatedAt": "2026-11-01T14:26:42Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:33:11Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1426,9 +1426,9 @@
       "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
       "url": "https://github.com/opendataloader-project/opendataloader-pdf",
       "homepage": "https://opendataloader.org",
-      "stars": 30133,
-      "forks": 2882,
-      "watchers": 30133,
+      "stars": 30156,
+      "forks": 2884,
+      "watchers": 30156,
       "language": "Java",
       "topics": [
         "a11y",
@@ -1458,8 +1458,8 @@
         "url": "https://github.com/opendataloader-project"
       },
       "createdAt": "2025-05-13T05:48:02Z",
-      "updatedAt": "2026-11-01T13:03:00Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T13:42:55Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1471,9 +1471,9 @@
       "description": "FastGPT is a knowledge-based platform built on the LLMs, offers a comprehensive suite of out-of-the-box capabilities such as data processing, RAG retrieval, and visual AI workflow orchestration, letting you easily develop and deploy complex question-answering systems without the need for extensive setup or configuration.",
       "url": "https://github.com/labring/FastGPT",
       "homepage": "https://fastgpt.io",
-      "stars": 29967,
-      "forks": 7360,
-      "watchers": 29967,
+      "stars": 29977,
+      "forks": 7362,
+      "watchers": 29977,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -1493,8 +1493,8 @@
         "url": "https://github.com/labring"
       },
       "createdAt": "2023-02-23T16:53:25Z",
-      "updatedAt": "2026-11-01T13:47:30Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:20:25Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1506,9 +1506,9 @@
       "description": "Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.",
       "url": "https://github.com/simstudioai/sim",
       "homepage": "https://www.sim.ai",
-      "stars": 29954,
-      "forks": 3872,
-      "watchers": 29954,
+      "stars": 29974,
+      "forks": 3879,
+      "watchers": 29974,
       "language": "TypeScript",
       "topics": [
         "agent-workflow",
@@ -1536,8 +1536,8 @@
         "url": "https://github.com/simstudioai"
       },
       "createdAt": "2025-01-05T22:47:49Z",
-      "updatedAt": "2026-11-01T13:32:29Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:21:28Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1549,9 +1549,9 @@
       "description": "What are the principles we can use to build LLM-powered software that is actually good enough to put in the hands of production customers?",
       "url": "https://github.com/humanlayer/12-factor-agents",
       "homepage": null,
-      "stars": 26941,
-      "forks": 2020,
-      "watchers": 26941,
+      "stars": 26953,
+      "forks": 2021,
+      "watchers": 26953,
       "language": "TypeScript",
       "topics": [
         "12-factor",
@@ -1572,8 +1572,8 @@
         "url": "https://github.com/humanlayer"
       },
       "createdAt": "2025-03-30T22:10:39Z",
-      "updatedAt": "2026-11-01T14:34:02Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:31:25Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1585,9 +1585,9 @@
       "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
       "url": "https://github.com/deepset-ai/haystack",
       "homepage": "https://haystack.deepset.ai",
-      "stars": 26898,
-      "forks": 3378,
-      "watchers": 26898,
+      "stars": 26913,
+      "forks": 3384,
+      "watchers": 26913,
       "language": "Python",
       "topics": [
         "agent-framework",
@@ -1617,8 +1617,8 @@
         "url": "https://github.com/deepset-ai"
       },
       "createdAt": "2019-11-14T09:05:28Z",
-      "updatedAt": "2026-11-01T14:11:19Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:24:41Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1630,9 +1630,9 @@
       "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
       "url": "https://github.com/promptfoo/promptfoo",
       "homepage": "https://promptfoo.dev",
-      "stars": 26688,
-      "forks": 2625,
-      "watchers": 26688,
+      "stars": 26748,
+      "forks": 2633,
+      "watchers": 26748,
       "language": "TypeScript",
       "topics": [
         "ci",
@@ -1660,8 +1660,8 @@
         "url": "https://github.com/promptfoo"
       },
       "createdAt": "2023-04-28T15:48:49Z",
-      "updatedAt": "2026-11-01T13:22:00Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:40:33Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1673,9 +1673,9 @@
       "description": "An open-source RAG-based tool for chatting with your documents.",
       "url": "https://github.com/Cinnamon/kotaemon",
       "homepage": "https://cinnamon.github.io/kotaemon/",
-      "stars": 25844,
+      "stars": 25849,
       "forks": 2164,
-      "watchers": 25844,
+      "watchers": 25849,
       "language": "Python",
       "topics": [
         "chatbot",
@@ -1689,8 +1689,8 @@
         "url": "https://github.com/Cinnamon"
       },
       "createdAt": "2024-03-25T08:16:42Z",
-      "updatedAt": "2026-11-01T12:43:19Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T14:04:24Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1702,9 +1702,9 @@
       "description": "50+ tutorials and implementations for Generative AI Agent techniques, from basic conversational bots to complex multi-agent systems.",
       "url": "https://github.com/NirDiamant/GenAI_Agents",
       "homepage": "https://diamant-ai.com",
-      "stars": 24771,
-      "forks": 4166,
-      "watchers": 24771,
+      "stars": 24802,
+      "forks": 4167,
+      "watchers": 24802,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-ai",
@@ -1733,8 +1733,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-09-09T20:10:19Z",
-      "updatedAt": "2026-11-01T14:24:43Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T15:30:03Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     },
@@ -1746,9 +1746,9 @@
       "description": "✅（已完结）超级全面的 深度学习 笔记【土堆 Pytorch】【李沐 动手学深度学习】【吴恩达 深度学习】【大飞 大模型Agent】",
       "url": "https://github.com/AccumulateMore/CV",
       "homepage": null,
-      "stars": 24180,
+      "stars": 24191,
       "forks": 2667,
-      "watchers": 24180,
+      "watchers": 24191,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -1774,8 +1774,8 @@
         "url": "https://github.com/AccumulateMore"
       },
       "createdAt": "2022-03-31T13:19:32Z",
-      "updatedAt": "2026-11-01T12:18:25Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T14:32:01Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1787,9 +1787,9 @@
       "description": "🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.",
       "url": "https://github.com/vanna-ai/vanna",
       "homepage": "https://vanna.ai/docs/",
-      "stars": 23802,
-      "forks": 2549,
-      "watchers": 23802,
+      "stars": 23804,
+      "forks": 2550,
+      "watchers": 23804,
       "language": "Python",
       "topics": [
         "agent",
@@ -1807,8 +1807,8 @@
         "url": "https://github.com/vanna-ai"
       },
       "createdAt": "2023-05-13T17:26:28Z",
-      "updatedAt": "2026-11-01T13:22:14Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T01:08:14Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1820,9 +1820,9 @@
       "description": "🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。",
       "url": "https://github.com/1Panel-dev/MaxKB",
       "homepage": "https://maxkb.cn",
-      "stars": 23086,
-      "forks": 3208,
-      "watchers": 23086,
+      "stars": 23095,
+      "forks": 3210,
+      "watchers": 23095,
       "language": "Python",
       "topics": [
         "agent",
@@ -1846,8 +1846,8 @@
         "url": "https://github.com/1Panel-dev"
       },
       "createdAt": "2023-09-14T02:05:12Z",
-      "updatedAt": "2026-11-01T09:46:03Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T16:48:20Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1859,9 +1859,9 @@
       "description": "🚀 A curated collection of AI engineering resources, roadmaps, tools, and projects covering LLMs, RAG, AI Agents, MCP, fine-tuning, evaluations, and production AI systems.",
       "url": "https://github.com/dipakkr/awesome-ai-engineering",
       "homepage": null,
-      "stars": 22506,
-      "forks": 4848,
-      "watchers": 22506,
+      "stars": 22515,
+      "forks": 4852,
+      "watchers": 22515,
       "language": null,
       "topics": [
         "agentic-ai",
@@ -1890,8 +1890,8 @@
         "url": "https://github.com/dipakkr"
       },
       "createdAt": "2018-09-17T11:15:29Z",
-      "updatedAt": "2026-11-01T10:40:59Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:10:42Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
@@ -1903,9 +1903,9 @@
       "description": "End-to-end, code-first tutorials for building production-grade GenAI agents. From prototype to enterprise deployment.",
       "url": "https://github.com/NirDiamant/agents-towards-production",
       "homepage": "https://diamant-ai.com",
-      "stars": 21804,
-      "forks": 2884,
-      "watchers": 21804,
+      "stars": 21811,
+      "forks": 2885,
+      "watchers": 21811,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -1934,50 +1934,53 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2025-06-16T17:33:44Z",
-      "updatedAt": "2026-11-01T14:01:25Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "updatedAt": "2026-11-02T17:02:13Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1008726722",
-      "repoId": 1008726722,
-      "fullName": "coze-dev/coze-studio",
-      "name": "coze-studio",
-      "description": "An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.",
-      "url": "https://github.com/coze-dev/coze-studio",
-      "homepage": null,
-      "stars": 21788,
-      "forks": 3135,
-      "watchers": 21788,
-      "language": "TypeScript",
+      "id": "gh-topic-931950959",
+      "repoId": 931950959,
+      "fullName": "liyupi/ai-guide",
+      "name": "ai-guide",
+      "description": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Engineering）、AI 工具用法（Cursor / Claude Code / TRAE / Codex / Copilot）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档 aiguide，已升级为鱼皮 AI 导航网站",
+      "url": "https://github.com/liyupi/ai-guide",
+      "homepage": "https://ai.codefather.cn",
+      "stars": 21807,
+      "forks": 2373,
+      "watchers": 21807,
+      "language": "JavaScript",
       "topics": [
-        "agent",
-        "agent-platform",
-        "ai-plugins",
-        "chatbot",
-        "chatbot-framework",
-        "coze",
-        "coze-platform",
+        "ai",
+        "ai-agent",
+        "artificial-intelligence",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "cursor",
+        "deep-learning",
+        "deepseek",
+        "gemini",
         "generative-ai",
-        "go",
-        "kouzi",
-        "low-code-ai",
-        "multimodel-ai",
-        "no-code",
+        "gpt",
+        "llm",
+        "mcp",
+        "openai",
         "rag",
-        "studio",
-        "typescript",
-        "workflow"
+        "vibe-coding",
+        "vibecoding",
+        "vuepress"
       ],
       "owner": {
-        "login": "coze-dev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/157483752?v=4",
-        "url": "https://github.com/coze-dev"
+        "login": "liyupi",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/26037703?v=4",
+        "url": "https://github.com/liyupi"
       },
-      "createdAt": "2025-06-26T02:19:21Z",
-      "updatedAt": "2026-11-01T12:57:33Z",
-      "firstSeenAt": "2026-11-01T14:42:54.714Z",
+      "createdAt": "2025-02-13T05:47:46Z",
+      "updatedAt": "2026-11-02T17:16:48Z",
+      "firstSeenAt": "2026-11-02T17:46:41.473Z",
       "isNew": true,
       "existing": true
     }
