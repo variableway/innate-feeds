@@ -15,7 +15,9 @@ import {
   getStats,
   getTrendingDates,
   listKnownRepoFullNames,
+  listNewStarredItems,
 } from "../db/index.js";
+import { writeFileSync } from "fs";
 import { getDefaultDbPath } from "../db/paths.js";
 import { ProductHuntCollector } from "../collector/producthunt.js";
 import { YCCompaniesCollector } from "../collector/yc-companies.js";
@@ -68,7 +70,7 @@ Usage:
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
   tsx src/app/cli.ts sync edu-skills [--max N]
   tsx src/app/cli.ts sync edu-videos
-  tsx src/app/cli.ts list [trending|starred]
+  tsx src/app/cli.ts list [trending|starred] [--days N | --since ISO] [--json] [--out FILE] [--limit N]
   tsx src/app/cli.ts topics --list
   tsx src/app/cli.ts dates
   tsx src/app/cli.ts stats
@@ -89,6 +91,15 @@ Window notes:
     bun run sync:window
     bun run sync:window -- --days 90 --skip-readme
     bun run sync:window -- --force
+
+List notes:
+  'list starred' accepts a time cutoff on starred_at (GH #39): --days N
+  (newest N days) or --since "2026-01-01T00:00:00Z". Output as one fullName
+  per line by default, full JSON with --json, or written to a file with --out
+  (implies --json). Example:
+    bun run list:new-starred
+    bun run list:starred -- --days 30 --json
+    bun run list:starred -- --since 2026-10-01T00:00:00Z --out new-starred.json
 `);
 }
 
@@ -445,7 +456,53 @@ async function main() {
     case "list": {
       const db = getDb(dbPath);
       const type = process.argv[3] || "trending";
-      const result = getFeedItems(db, type, {}, 1, 50);
+      const args = process.argv.slice(4);
+      const daysIdx = args.indexOf("--days");
+      const sinceIdx = args.indexOf("--since");
+      const limitIdx = args.indexOf("--limit");
+      const outIdx = args.indexOf("--out");
+      const json = args.includes("--json") || outIdx >= 0;
+      const days = daysIdx >= 0 ? parseInt(args[daysIdx + 1], 10) : undefined;
+      const since = sinceIdx >= 0 ? args[sinceIdx + 1] : undefined;
+      const limit = limitIdx >= 0 ? parseInt(args[limitIdx + 1], 10) : 50;
+      const outPath = outIdx >= 0 ? args[outIdx + 1] : undefined;
+
+      if (type === "starred" && (days != null || since)) {
+        // Time-filtered "new starred" view (GH #39).
+        if (days != null && (!Number.isFinite(days) || days <= 0)) {
+          console.error("--days must be a positive integer");
+          process.exit(1);
+        }
+        if (sinceIdx >= 0 && !since) {
+          console.error("--since requires an ISO timestamp value");
+          process.exit(1);
+        }
+        const items = listNewStarredItems(db, { days, since }, limit || 500);
+        if (json) {
+          const payload = JSON.stringify(
+            {
+              generatedAt: new Date().toISOString(),
+              since,
+              days: days ?? null,
+              count: items.length,
+              items,
+            },
+            null,
+            2,
+          );
+          if (outPath) {
+            writeFileSync(outPath, payload);
+            console.log(`Wrote ${items.length} new starred repos to ${outPath}`);
+          } else {
+            console.log(payload);
+          }
+        } else {
+          console.log(items.map((item) => item.repo.fullName).join("\n"));
+        }
+        break;
+      }
+
+      const result = getFeedItems(db, type, {}, 1, limit);
       console.log(result.items.map((item) => item.repo.fullName).join("\n"));
       break;
     }

@@ -30,6 +30,7 @@
     "list": "bun src/app/cli.ts list",
     "list:trending": "bun src/app/cli.ts list trending",
     "list:starred": "bun src/app/cli.ts list starred",
+    "list:new-starred": "bun src/app/cli.ts list starred --days 7 --json",
     "dates": "bun src/app/cli.ts dates",
     "stats": "bun src/app/cli.ts stats",
     "export:static": "bun src/data/export-static.ts",
