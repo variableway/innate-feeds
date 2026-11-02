@@ -3,9 +3,9 @@ schemaVersion: 1.0.0
 id: task-39-starred-repo
 title: 检查是否可以通过时间确认新starred的repo
 createdAt: 2026-11-02T04:03:41.439098Z
-updatedAt: 2026-11-02T04:12:13.714019Z
+updatedAt: 2026-11-02T04:20:52.280299Z
 status: in_review
-branch: 
+branch: feat/new-starred-by-time
 repository: 
 sourceKind: issue
 sourcePath: 
@@ -14,11 +14,11 @@ issueUrl: https://github.com/variableway/innate-feeds/issues/39
 issueState: OPEN
 issueTitle: 检查是否可以通过时间确认新starred的repo
 issueUpdatedAt: 2026-11-02T04:02:51Z
-prNumber: 
-prUrl: 
-prState: 
-prTitle: 
-prUpdatedAt: 
+prNumber: 40
+prUrl: https://github.com/variableway/innate-feeds/pull/40
+prState: OPEN
+prTitle: feat(db/cli): identify new starred repos by starred_at time (GH #39)
+prUpdatedAt: 2026-11-02T04:16:33Z
 ---
 
 ## 任务上下文
@@ -160,6 +160,7 @@ Spec：S1
 - 2026-11-02 分析完成：`starred_at` 在真实库 100% 覆盖（6159/6159），数据链路支持按时间识别新 starred；选型 CLI 扩展（不改 API/前端）。
 - 2026-11-02 实施完成：
 - 验证证据：bun test db 19 pass / 0 fail；真实库 `--days 30` count=50、`--days 7` 与等价 `--since` count 均为 2；`--out` 落盘成功。
+- 2026-11-02 交付：分支 `feat/new-starred-by-time`，PR #40（https://github.com/variableway/innate-feeds/pull/40）。依赖安装（`setup:innate` + 根 `.npmrc` + `pnpm install`）后全量 `bun test` 102 pass / 1 skip / 0 fail，backend `tsc --noEmit` 通过；`bun run dev` 启动 backend(:4000) + frontend(:3000)，`/api/health` ok，starred API 按 `starred_at` 排序返回正常。
 - 分析完成：starred_at 100% 覆盖，走 CLI 扩展方案
 - 已实现并验证，等待评审
 
@@ -169,6 +170,6 @@ Spec：S1
 
 > 检查是否可以通过时间确认新starred的repo，如果可以的化生成一份new starred文件，或者在sqlite 数据库中可以找到，给出方法
 
-### PR
+### PR #40
 
-> （未同步）
+> Closes #39 ## 功能摘要 Issue #39 问：能否通过时间确认新 starred 的 repo？结论：**可以**。`starred_repos.starred_at` 由 GitHub API `star+json` header 提供，实测真实库 6159 行 100% 覆盖。 ### 变更 - **db** (`backend/src/db/index.ts`)：新增 `listNewStarredItems(db, { since?, days? }, limit)` - SQL 层过滤 `starred_at >= ?`（`--days N` 相对现在 / `--since ISO` 绝对时间），新→旧排序 - 复用 hidden-repo 过滤与 topics 批量加载，返回完整 `FeedItemDTO` - **cli** (`backend/src/app/cli.ts`)：`list starred` 子命令支持时间过滤与导出 - `--days N | --since ISO | --json | --out FILE | --limit N` - **scripts** (`backend/package.json`)：新增 `list:new-starred`（近 7 天 JSON） ### Task 关联 - task 文件：`docs/sprints/task-39-starred-repo.md`（分析、SQLite 手动查询方法、验证证据） ## 测试 / 验证 - [x] `bun test src/db/index.test.ts`：19 pass / 0 fail（新增 5 用例：DTO 映射、since 边界包含、days 相对时间、NULL 排除、limit/缺参报错） - [x] 真实库 `list starred --days 30 --json`：count=50，每条含 `starredAt` - [x] `--days 7` 与等价 `--since` 结果一致（count=2） - [x] `--out` 落盘成功 - [x] `bun run list:new-starred` 输出 JSON 正常 ### SQLite 手动查询（Issue 答案） ```sql SELECT full_name, starred_at, stars, language FROM starred_repos WHERE starred_at >= datetime('now', '-7 days') ORDER BY starred_at DESC; ``` ## 设计 / Spec 无设计影响：纯本地 CLI/查询能力扩展，不改 API 契约、数据契约与模块边界；schema 未动（`starred_at` 列已存在）。
