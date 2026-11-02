@@ -28,6 +28,7 @@
 | [research/edu-animation-sources.md](../research/edu-animation-sources.md) | 教育动画 SKILL / 视频的端点与配额实测 |
 | [research/eduos-github-radar-analysis.md](../research/eduos-github-radar-analysis.md) | EduOS GitHub Radar 源码分析（元数据目录治理：ETag / provenance / 白名单发布闸） |
 | [research/aihot-analysis.md](../research/aihot-analysis.md) | AIHOT 源码分析（LLM 编辑部：双评分 / 聚簇热度 / MCP 出口范本） |
+| [research/open-apps-analysis.md](../research/open-apps-analysis.md) | Open Apps 源码分析（目录工业化：PR 化回写 / bot 预评审 / 常驻 issue / health 计算） |
 
 ## 仓库内 Skill
 
