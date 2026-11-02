@@ -3,6 +3,7 @@ import { Database } from "bun:sqlite";
 import schemaSql from "./schema.sql" with { type: "text" };
 import {
   atParams,
+  listNewStarredItems,
   listStarredFullNamesSince,
   listTrendingFullNamesSince,
 } from "./index.js";
@@ -289,6 +290,50 @@ describe("Starred queries", () => {
       "user/s2",
       "user/s1",
     ]);
+  });
+
+  it("lists new starred items since a cutoff with DTO fields", () => {
+    const items = listNewStarredItems(db, { since: "2024-06-02T00:00:00Z" });
+    expect(items).toHaveLength(1);
+    expect(items[0].id).toBe("starred-20");
+    expect(items[0].type).toBe("starred");
+    expect(items[0].starredAt).toBe("2024-06-02T00:00:00Z");
+    expect(items[0].repo.fullName).toBe("user/s2");
+    expect(items[0].repo.topics).toEqual([]);
+  });
+
+  it("includes the since boundary and orders newest first", () => {
+    const items = listNewStarredItems(db, { since: "2024-06-01T00:00:00Z" });
+    expect(items.map((i) => i.repo.fullName)).toEqual(["user/s2", "user/s1"]);
+
+    const strict = listNewStarredItems(db, {
+      since: "2024-06-01T00:00:01Z",
+    });
+    expect(strict.map((i) => i.repo.fullName)).toEqual(["user/s2"]);
+  });
+
+  it("supports the days shorthand relative to now", () => {
+    insertStarredRepo(db, {
+      id: 30,
+      full_name: "user/s3",
+      name: "s3",
+      starred_at: new Date().toISOString(),
+    });
+    const items = listNewStarredItems(db, { days: 1 });
+    expect(items.map((i) => i.repo.fullName)).toEqual(["user/s3"]);
+  });
+
+  it("excludes NULL starred_at rows", () => {
+    db.prepare(
+      "UPDATE starred_repos SET starred_at = NULL WHERE full_name = 'user/s1'",
+    ).run();
+    const items = listNewStarredItems(db, { since: "2020-01-01T00:00:00Z" });
+    expect(items.map((i) => i.repo.fullName)).toEqual(["user/s2"]);
+  });
+
+  it("respects the limit and requires days or since", () => {
+    expect(listNewStarredItems(db, { since: "2020-01-01T00:00:00Z" }, 1)).toHaveLength(1);
+    expect(() => listNewStarredItems(db, {})).toThrow();
   });
 
   it("enforces unique full_name", () => {

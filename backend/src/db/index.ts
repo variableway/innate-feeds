@@ -734,6 +734,94 @@ export function listStarredFullNamesSince(
   return rows.map((r) => r.full_name);
 }
 
+export interface NewStarredOptions {
+  /** ISO timestamp lower bound (inclusive) on `starred_at`. */
+  since?: string;
+  /** Shorthand for `since`: now minus N days. Ignored when `since` is set. */
+  days?: number;
+}
+
+/**
+ * Starred repos whose `starred_at` is on or after the cutoff, newest first.
+ *
+ * Backs the "new starred" export (GH #39). Unlike
+ * {@link listStarredFullNamesSince} this returns full feed DTOs so the CLI can
+ * emit a self-contained JSON file, and it applies the same hidden-repo filter
+ * as the API list endpoints.
+ */
+export function listNewStarredItems(
+  db: Database,
+  opts: NewStarredOptions = {},
+  limit = 500,
+): FeedItemDTO[] {
+  const since =
+    opts.since ||
+    (opts.days != null
+      ? new Date(Date.now() - opts.days * 24 * 60 * 60 * 1000)
+          .toISOString()
+          .replace(/\.\d{3}Z$/, "Z")
+      : undefined);
+  if (!since) {
+    throw new Error("listNewStarredItems requires --days or --since");
+  }
+
+  let where = "WHERE r.starred_at IS NOT NULL AND r.starred_at >= ?";
+  const params: SQLQueryBindings[] = [since];
+  where = appendHiddenRepoFilter(where, params);
+
+  const rows = db
+    .prepare(
+      `
+    SELECT
+      r.id as repo_id, r.name, r.full_name, r.description, r.url, r.homepage,
+      r.stars, r.forks, r.watchers, r.language,
+      r.owner_login, r.owner_avatar_url, r.owner_url,
+      r.created_at, r.updated_at, r.starred_at, r.fetched_at
+    FROM starred_repos r
+    ${where}
+    ORDER BY r.starred_at DESC
+    LIMIT ?
+  `,
+    )
+    .all(...params, limit) as StarredItemRow[];
+
+  const topicsMap = batchFetchTopics(
+    db,
+    rows.map((r) => r.repo_id),
+    "starred_repo_topics",
+  );
+
+  return rows.map((row) => {
+    const topics = topicsMap.get(row.repo_id) ?? [];
+    return {
+      id: `starred-${row.repo_id}`,
+      type: "starred" as const,
+      starredAt: row.starred_at,
+      fetchedAt: row.fetched_at,
+      repo: {
+        id: row.repo_id,
+        name: row.name,
+        fullName: row.full_name,
+        description: row.description,
+        url: row.url,
+        homepage: row.homepage,
+        stars: row.stars,
+        forks: row.forks,
+        watchers: row.watchers,
+        language: row.language,
+        topics,
+        owner: {
+          login: row.owner_login,
+          avatarUrl: row.owner_avatar_url,
+          url: row.owner_url,
+        },
+        createdAt: row.created_at,
+        updatedAt: row.updated_at,
+      },
+    };
+  });
+}
+
 /**
  * Distinct repo full names (lowercased) already known to the feed tables.
  *
