@@ -26,6 +26,8 @@
 | [arch-design/edu-animate-domain.md](../arch-design/edu-animate-domain.md) | 教育动画垂直聚合域（edu-animate）的已采纳设计 |
 | [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
 | [research/edu-animation-sources.md](../research/edu-animation-sources.md) | 教育动画 SKILL / 视频的端点与配额实测 |
+| [research/eduos-github-radar-analysis.md](../research/eduos-github-radar-analysis.md) | EduOS GitHub Radar 源码分析（元数据目录治理：ETag / provenance / 白名单发布闸） |
+| [research/aihot-analysis.md](../research/aihot-analysis.md) | AIHOT 源码分析（LLM 编辑部：双评分 / 聚簇热度 / MCP 出口范本） |
 
 ## 仓库内 Skill
 
