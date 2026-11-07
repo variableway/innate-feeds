@@ -32,6 +32,7 @@ import {
   Clapperboard,
   LayoutGrid,
   type LucideIcon,
+  Layers,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { collectNavItems, type WebDomain } from "@innate/web-domain";
@@ -64,6 +65,7 @@ const GROUP_ICONS: Record<string, LucideIcon> = {
   GitHub: Github,
   "DeepSeek Harness": Puzzle,
   Feeds: Rss,
+  主题: Layers,
   Education: GraduationCap,
 };
 

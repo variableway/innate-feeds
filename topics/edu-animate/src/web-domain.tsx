@@ -71,21 +71,21 @@ export const webDomain = createWebDomain("edu-animate")
       path: "/edu",
       icon: "GraduationCap",
       order: 50,
-      group: "Education",
+      group: "主题",
     },
     {
       label: "Edu Videos",
       path: "/edu/videos",
       icon: "Clapperboard",
       order: 51,
-      group: "Education",
+      group: "主题",
     },
     {
       label: "Edu Categories",
       path: "/edu/categories",
       icon: "LayoutGrid",
       order: 52,
-      group: "Education",
+      group: "主题",
     },
   ])
   .addCapability("homeTile", {
