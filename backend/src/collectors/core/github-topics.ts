@@ -99,8 +99,29 @@ export const AI_TOPICS = [
 /** Education / EdTech topics (GH #24). */
 export const EDTECH_TOPICS = ["edtech"];
 
+/**
+ * UI/UX Design 主题组（sprint-3 B10，lift 分析选出的业务层 topic，
+ * 见 docs/research/projects + .claude/skills/topic-discovery）。
+ */
+export const UX_DESIGN_TOPICS = [
+  "ui",
+  "ux",
+  "design",
+  "design-system",
+  "ui-components",
+  "component-library",
+  "figma",
+  "accessibility",
+  "tailwindcss",
+  "shadcn-ui",
+];
+
 /** Topics synced when no explicit `--topic` is given. */
-export const DEFAULT_TOPICS = [...AI_TOPICS, ...EDTECH_TOPICS];
+export const DEFAULT_TOPICS = [
+  ...AI_TOPICS,
+  ...EDTECH_TOPICS,
+  ...UX_DESIGN_TOPICS,
+];
 
 /** GitHub Topics: https://github.com/topics */
 export const TOPIC_CATEGORIES: Record<string, string[]> = {
@@ -159,6 +180,18 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "multimodal",
   ],
   EdTech: ["edtech"],
+  "UI/UX Design": [
+    "ui",
+    "ux",
+    "design",
+    "design-system",
+    "ui-components",
+    "component-library",
+    "figma",
+    "accessibility",
+    "tailwindcss",
+    "shadcn-ui",
+  ]
 };
 
 function ghApiSearch(apiPath: string): GitHubSearchResponse {

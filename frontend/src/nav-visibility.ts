@@ -16,7 +16,7 @@ const VISIBLE_PATHS = new Set([
 ]);
 
 /** 可见路径前缀（域包的子路由组，如 /edu、/starred/$id）。 */
-const VISIBLE_PREFIXES = ["/edu", "/starred"];
+const VISIBLE_PREFIXES = ["/edu", "/starred", "/ux"];
 
 /**
  * hidden 页面（路由保留，URL 直达可用，数据照常采集）：

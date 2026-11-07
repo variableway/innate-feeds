@@ -4,7 +4,6 @@ import { createWebDomain } from "@innate/web-domain";
 import { EduLayout } from "./domain-layout";
 import { EduSkillsPage } from "./pages/page";
 import { EduVideosPage } from "./pages/videos-page";
-import { EduCategoriesPage } from "./pages/categories-page";
 import type { EduSearch } from "./types/edu";
 
 type SearchRecord = Record<string, unknown>;
@@ -56,18 +55,13 @@ export const webDomain = createWebDomain("edu-animate")
         validateSearch: parseEduSearch,
         component: EduVideosPage,
       }),
-      createRoute({
-        getParentRoute: () => layout,
-        path: "/edu/categories",
-        component: EduCategoriesPage,
-      }),
     ];
 
     return layout.addChildren(routes as never) as unknown as AnyRoute;
   })
   .addCapability("navItems", [
     {
-      label: "Edu Animate",
+      label: "EDU",
       path: "/edu",
       icon: "GraduationCap",
       order: 50,

@@ -18,9 +18,10 @@ import { collectWebDomainRoutes } from "@innate/web-domain";
 import { webDomain as feedsDomain } from "./web-domain";
 import { webDomain as dshDomain } from "../../topics/dsh/src/index";
 import { webDomain as eduDomain } from "../../topics/edu-animate/src/index";
+import { webDomain as uxDesignDomain } from "../../topics/ux-design/src/index";
 import { HostShell } from "./host-shell";
 
-const domains = [feedsDomain, dshDomain, eduDomain];
+const domains = [feedsDomain, dshDomain, eduDomain, uxDesignDomain];
 
 const basepath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
 

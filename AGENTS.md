@@ -90,6 +90,7 @@ innate-feeds/
 │   │   ├── package.json          # name: @innate/domain-dsh; 跨包引用根 shared/（plugin-categories、types/plugins），由宿主 main.tsx 直接打进 bundle
 │   │   └── tsconfig.json
 │   ├── edu-animate/              # @innate/domain-edu-animate — 教育动画制作垂直聚合域插件
+│   ├── ux-design/           # @innate/domain-ux-design — UI/UX Design 主题域（B10：topics 快照消费，无自有采集器）
 │   │   ├── src/
 │   │   │   ├── index.ts          # export { webDomain }
 │   │   │   ├── web-domain.tsx    # createWebDomain("edu-animate"): /edu* routes + navItems/homeTile

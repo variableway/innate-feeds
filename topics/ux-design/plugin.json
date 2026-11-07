@@ -1,0 +1,12 @@
+{
+  "protocol": "innate.plugin.v1",
+  "kind": "domain",
+  "id": "ux-design",
+  "name": "UI/UX Design",
+  "description": "UI/UX 设计主题域：GitHub Topics 精选（design-system / ui / ux / figma / accessibility 等）",
+  "version": "0.1.0",
+  "entry": "src/index.ts",
+  "outlet": "app",
+  "capabilities": ["navItems"],
+  "order": 50
+}

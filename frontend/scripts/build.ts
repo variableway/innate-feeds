@@ -31,6 +31,7 @@ const assetsDir = join(distDir, "assets");
 /** 域包源码（@innate/domain-dsh / @innate/domain-edu-animate）：宿主单站构建需扫描其 Tailwind 类 */
 const dshSrcDir = join(frontendRoot, "..", "topics", "dsh", "src");
 const eduSrcDir = join(frontendRoot, "..", "topics", "edu-animate", "src");
+const uxCatalogSrcDir = join(frontendRoot, "..", "topics", "ux-design", "src");
 
 const staticMode = process.env.VITE_STATIC_MODE === "true";
 const basePath = normalizeBasePath(process.env.VITE_BASE_PATH || "/");
@@ -68,6 +69,7 @@ export async function compileStylesheet(minify: boolean): Promise<string> {
     .concat([
       { base: dshSrcDir, pattern: "**/*", negated: false },
       { base: eduSrcDir, pattern: "**/*", negated: false },
+      { base: uxCatalogSrcDir, pattern: "**/*", negated: false },
     ]);
   const scanner = new Scanner({ sources });
   const candidates = new Set<string>();

@@ -1,0 +1,16 @@
+{
+  "name": "@innate/domain-ux-design",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@innate/web-domain": "^0.1.0",
+    "@tanstack/react-router": "^1.132.0",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}
