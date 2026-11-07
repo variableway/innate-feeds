@@ -6,31 +6,31 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Default theme: shadcn neutral (ported from dsh-plugin-directory) */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  /* 主题：AIHot 调色板（sprint-3 B8，值取自 references/AIHOT app.css，锚 92e4a15；token 名保持 shadcn 语义 */
+  --background: #faf9f6;
+  --foreground: #202a30;
+  --card: #ffffff;
+  --card-foreground: #202a30;
+  --popover: #ffffff;
+  --popover-foreground: #202a30;
+  --primary: #176b75;
+  --primary-foreground: #ffffff;
+  --secondary: #e9ede9;
+  --secondary-foreground: #303c42;
+  --muted: #f3f3ef;
+  --muted-foreground: #59656b;
+  --accent: #e9ede9;
+  --accent-foreground: #202a30;
+  --destructive: #b3402a;
+  --border: #dfe4e1;
+  --input: #dfe4e1;
+  --ring: #176b75;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --spacing-page: 1.5rem;
   --spacing-section: 1.25rem;
   --spacing-block: 0.75rem;
@@ -38,14 +38,14 @@
   --content-min-width: 60rem;
   --content-max-width-wide: 100%;
   --content-min-width-wide: 0rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #fdfdfb;
+  --sidebar-foreground: #202a30;
+  --sidebar-primary: #176b75;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e9ede9;
+  --sidebar-accent-foreground: #202a30;
+  --sidebar-border: #dfe4e1;
+  --sidebar-ring: #176b75;
 
   /* AIHot 编辑风格扩展层（sprint-3 B1）：叠加于 shadcn token 之上，值取自
      references/AIHOT/apps/web/app/app.css（锚 92e4a15） */
@@ -63,37 +63,37 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --background: #13191c;
+  --foreground: #e7eceb;
+  --card: #1a2226;
+  --card-foreground: #e7eceb;
+  --popover: #1d272b;
+  --popover-foreground: #e7eceb;
+  --primary: #12ccd8;
+  --primary-foreground: #000000;
+  --secondary: #202a2f;
+  --secondary-foreground: #d2dada;
+  --muted: #182024;
+  --muted-foreground: #a5b0b3;
+  --accent: #202a2f;
+  --accent-foreground: #e7eceb;
+  --destructive: #d86a52;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #12ccd8;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #161e21;
+  --sidebar-foreground: #e7eceb;
+  --sidebar-primary: #12ccd8;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #202a2f;
+  --sidebar-accent-foreground: #e7eceb;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #12ccd8;
 
   /* AIHot 扩展层 — 暗色 */
   --ink: #e7eceb;

@@ -115,7 +115,7 @@ export const webDomain = createWebDomain("feeds")
     {
       label: "Trending",
       path: "/trending",
-      icon: "Github",
+      icon: "Flame",
       order: 10,
       group: "GitHub",
     },
