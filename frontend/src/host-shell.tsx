@@ -194,8 +194,8 @@ export function HostShell({
       <nav
         className={
           navCollapsed
-            ? "flex w-12 shrink-0 flex-col items-center gap-1 overflow-y-auto border-r bg-card py-2"
-            : "flex w-48 shrink-0 flex-col gap-1 overflow-y-auto border-r bg-card py-2"
+            ? "flex w-12 shrink-0 flex-col items-center gap-1 overflow-y-auto border-r bg-sidebar py-2"
+            : "flex w-48 shrink-0 flex-col gap-1 overflow-y-auto border-r bg-sidebar py-2"
         }
       >
         {navCollapsed ? (

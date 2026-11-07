@@ -38,7 +38,7 @@
   --content-min-width: 60rem;
   --content-max-width-wide: 100%;
   --content-min-width-wide: 0rem;
-  --sidebar: #fdfdfb;
+  --sidebar: #f3f3ef;
   --sidebar-foreground: #202a30;
   --sidebar-primary: #176b75;
   --sidebar-primary-foreground: #ffffff;
@@ -86,7 +86,7 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: #161e21;
+  --sidebar: #182024;
   --sidebar-foreground: #e7eceb;
   --sidebar-primary: #12ccd8;
   --sidebar-primary-foreground: #000000;
