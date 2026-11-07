@@ -42,14 +42,7 @@
 
 ## 当前焦点
 
-**Epic：** [sheet-display](./issues/sheet-display.md)（admin-data-sheet）
-
-| Issue | Assignee | 状态 | 依赖 |
-|---|---|---|---|
-| [sheet-display-shell](./issues/sheet-display-shell.md) | claude-code | open | — |
-| [sheet-display-api](./issues/sheet-display-api.md) | code-buddy | open | — |
-| [sheet-display-tables-panel](./issues/sheet-display-tables-panel.md) | kimi | open | shell, api |
-| [sheet-display-univer](./issues/sheet-display-univer.md) | trae | open | shell, api, tables-panel |
+**Epic sheet-display（admin-data-sheet）已于 2026-11-07 归档**（cancelled）：Univer 方案被已上线的 CodeMirror admin 工作台取代，5 份 issue 与任务日志移至 [archive/issues](../archive/issues/)、[archive/tasks](../archive/tasks/)。当前进行中的方向见 [backlogs/topic-platform-redesign](../backlogs/topic-platform-redesign.md)（M0 目录重构已执行）。
 
 - [ ] 确认 GitHub Pages 线上 URL，写入 [overview.md](./overview.md)
 

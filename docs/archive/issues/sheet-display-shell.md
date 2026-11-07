@@ -1,6 +1,6 @@
 # Issue: sheet-display-shell
 
-**Status:** open  
+**Status:** cancelled （2026-11-07 归档：Univer 方案被已上线的 CodeMirror admin 取代，见 AGENTS.md Admin workspace）
 **Mode:** horizontal  
 **Feature:** [admin-data-sheet](../features/admin-data-sheet.md)  
 **Assignee:** claude-code  

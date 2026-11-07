@@ -1,6 +1,6 @@
 # Epic: sheet-display（admin-data-sheet）
 
-**Status:** open  
+**Status:** cancelled （2026-11-07 归档：Univer 方案被已上线的 CodeMirror admin 取代，见 AGENTS.md Admin workspace）
 **Mode:** horizontal（父任务，跟踪子 issue）  
 **Feature:** [admin-data-sheet](../features/admin-data-sheet.md)  
 **Assignee:** human（协调）  

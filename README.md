@@ -148,14 +148,15 @@ Keep `feeds.db` and `./readmes` off the public web root. Restrict CORS in `backe
 innate-feeds/
 ├── backend/src/
 │   ├── app/          # server.ts (Hono + Bun.serve), cli.ts
-│   ├── collector/    # github, firecrawl, sync, sync-window, digest
+│   ├── collectors/   # core (github/sync/digest) · external (HN/PH/YC/…) · vertical (dsh/edu)
 │   ├── data/         # export/import JSON, digest snapshot, README cache
 │   ├── dsh/          # dsh plugin catalog datasource (catalog, API routes, export)
 │   └── db/           # bun:sqlite schema + queries
-├── frontend/src/     # @innate/domain-feeds: feeds pages + standalone host (feeds + dsh)
-├── dsh/src/          # @innate/domain-dsh: plugin directory domain plugin (/dsh pages)
+├── frontend/src/     # @innate/domain-feeds: feeds pages + standalone host (feeds + dsh + edu)
+├── topics/dsh/src/   # @innate/domain-dsh: plugin directory domain plugin (/dsh pages)
+├── topics/edu-animate/src/  # @innate/domain-edu-animate: education-animation domain (/edu pages)
+├── shared/           # cross-layer contract: types/ · sources/ · constants
 ├── frontend/public/data/   # static snapshot (manifest, chunks, digest.json; plugins.json is generated locally)
-├── awesome/          # curated awesome lists (legacy YAML fallback; fresh catalog is under ~/.innate)
 ├── .github/workflows/      # ci.yml, deploy.yml
 └── docs/arch-design/data-update-workflow.md
 ```

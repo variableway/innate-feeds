@@ -23,26 +23,14 @@ innate-feeds/
 │   │   ├── app/             # Application entry points
 │   │   │   ├── server.ts    # Hono HTTP server, API routes
 │   │   │   └── cli.ts       # Command-line interface for sync/list/stats
-│   │   ├── collector/       # Data collection layer
-│   │   │   ├── github.ts    # GitHub API / gh CLI wrappers (uses execFileSync)
-│   │   │   ├── firecrawl.ts # Firecrawl-based GitHub Trending scraper
-│   │   │   ├── sync.ts      # Trending and starred sync orchestration
-│   │   │   ├── shared/      # Shared collector utilities
-│   │   │   │   ├── types.ts # ExternalFeedItem, FeedCollector interfaces
-│   │   │   │   ├── storage.ts # JSON storage (manifest + saveItems)
-│   │   │   │   └── http.ts  # HTTP utilities (fetchJson, fetchHtml, retry)
-│   │   │   ├── producthunt.ts    # Product Hunt daily/weekly/monthly collector
-│   │   │   ├── yc-companies.ts   # YC Companies API collector
-│   │   │   ├── a16z-portfolio.ts # a16z Portfolio collector
-│   │   │   ├── github-topics.ts  # GitHub Topics search collector (top N + skip rules)
-│   │   │   ├── hackernews.ts     # Hacker News front-page collector (Algolia API, GH #31)
-│   │   │   ├── huggingface.ts    # Hugging Face trending collector (GH #31)
-│   │   │   ├── github-new.ts     # Fast-growing new GitHub repos collector (GH #31)
-│   │   │   ├── devto.ts          # Dev.to hot articles collector (GH #31)
-│   │   │   ├── lobsters.ts       # lobste.rs hottest collector (GH #31)
-│   │   │   ├── edu-skills.ts     # 教育动画 SKILL collector（skills.sh sitemap + JSON-LD）
-│   │   │   ├── edu-videos.ts     # 教育动画教学视频 collector（YouTube Data API，策展 handle）
-│   │   │   └── vc-portfolio.ts   # Unified external collector orchestrator (all 10 JSON sources)
+│   │   ├── collectors/      # Data collection layer（M0 分组：core/external/vertical）
+│   │   │   ├── core/        # GitHub 系：github / firecrawl / sync / sync-window / issues-digest / prefetch-readmes / github-topics
+│   │   │   ├── external/    # 外部 JSON 源：producthunt / yc / a16z / hackernews / huggingface / github-new / devto / lobsters / trendshift / vc-portfolio
+│   │   │   ├── vertical/    # 垂直 topic 源：awesome-dsh / dsh-catalog / edu-skills / edu-videos
+│   │   │   └── shared/      # Shared collector utilities
+│   │   │       ├── types.ts # ExternalFeedItem, FeedCollector interfaces（re-export 根 shared/types）
+│   │   │       ├── storage.ts # JSON storage (manifest + saveItems)
+│   │   │       └── http.ts  # HTTP utilities (fetchJson, fetchHtml, retry)
 │   │   ├── data/            # Static data export/import utilities
 │   │   │   ├── export-incremental.ts  # Incremental JSON chunk exporter
 │   │   │   ├── export-static.ts       # Full static exporter
@@ -64,7 +52,7 @@ innate-feeds/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── feeds.db*            # Runtime SQLite database (WAL mode)
-├── shared/                   # Cross-layer constants (plugin-categories, edu-categories, theme-catalog) — NOT @innate scope
+├── shared/                   # 跨层唯一真相（NOT @innate scope）：types/（feeds/external/topics/plugins wire 契约，S0）· sources/（external 源注册表，S4）· plugin-categories/edu-categories/theme-catalog 常量。边界：纯函数/类型/常量，无 IO/React/Bun 专有 API，不 import backend/frontend/topics
 ├── frontend/                # @innate/domain-feeds — TanStack domain (track A) + minimal standalone host
 │   ├── src/
 │   │   ├── index.ts          # export { webDomain } — domain plugin hard requirement
@@ -87,37 +75,36 @@ innate-feeds/
 │   │   └── preview.ts        # Static server for dist/ (replaces `vite preview`)
 │   ├── package.json          # name: @innate/domain-feeds; @innate/ui + @innate/web-domain via innate-fe-cli install
 │   └── tsconfig.json
-├── dsh/                      # @innate/domain-dsh — DSH plugin directory domain plugin (issue #13 拆分)
-│   ├── src/
-│   │   ├── index.ts          # export { webDomain }
-│   │   ├── web-domain.tsx    # createWebDomain("dsh"): /dsh* routes + navItems/homeTile
-│   │   ├── domain-layout.tsx # dsh business-area layout (scroll container)
-│   │   ├── pages/            # page.tsx, categories-page.tsx, category-page.tsx, detail-page.tsx
-│   │   ├── components/       # plugin-card / plugin-listing / plugin-list-item (+ vendored markdown-body, copy-install-button)
-│   │   ├── services/         # plugins.ts — API client + static-mode client-side search mirror
-│   │   ├── types/            # plugin.ts, dsh.ts
-│   │   └── lib/              # utils.ts (cn)
-│   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
-│   ├── package.json          # name: @innate/domain-dsh; self-contained (relative imports only)
-│   └── tsconfig.json
-├── edu-animate/              # @innate/domain-edu-animate — 教育动画制作垂直聚合域插件
-│   ├── src/
-│   │   ├── index.ts          # export { webDomain }
-│   │   ├── web-domain.tsx    # createWebDomain("edu-animate"): /edu* routes + navItems/homeTile
-│   │   ├── domain-layout.tsx # edu business-area layout (scroll container)
-│   │   ├── pages/            # page.tsx (skills), videos-page.tsx, categories-page.tsx
-│   │   ├── components/       # skill-card / video-card / edu-filter-bar / edu-pagination / copy-button
-│   │   ├── services/         # edu.ts — API client + static-mode client-side filter/sort/pagination
-│   │   ├── types/            # edu.ts
-│   │   └── lib/              # utils.ts (cn), format.ts
-│   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: edu-animate, order 40
-│   ├── package.json          # name: @innate/domain-edu-animate; self-contained (relative imports only)
-│   └── tsconfig.json
-├── awesome/                 # Legacy awesome-dsh-plugin YAML/screenshots fallback; fresh catalog is local-only
+├── topics/                   # 域插件包（M0 收编 dsh + edu-animate；每个一级 topic 一个包，见 backlogs/topic-platform-redesign.md）
+│   ├── dsh/                      # @innate/domain-dsh — DSH plugin directory domain plugin (issue #13 拆分)
+│   │   ├── src/
+│   │   │   ├── index.ts          # export { webDomain }
+│   │   │   ├── web-domain.tsx    # createWebDomain("dsh"): /dsh* routes + navItems/homeTile
+│   │   │   ├── domain-layout.tsx # dsh business-area layout (scroll container)
+│   │   │   ├── pages/            # page.tsx, categories-page.tsx, category-page.tsx, detail-page.tsx
+│   │   │   ├── components/       # plugin-card / plugin-listing / plugin-list-item (+ vendored markdown-body, copy-install-button)
+│   │   │   ├── services/         # plugins.ts — API client + static-mode client-side search mirror
+│   │   │   ├── types/            # plugin.ts, dsh.ts
+│   │   │   └── lib/              # utils.ts (cn)
+│   │   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
+│   │   ├── package.json          # name: @innate/domain-dsh; 跨包引用根 shared/（plugin-categories、types/plugins），由宿主 main.tsx 直接打进 bundle
+│   │   └── tsconfig.json
+│   ├── edu-animate/              # @innate/domain-edu-animate — 教育动画制作垂直聚合域插件
+│   │   ├── src/
+│   │   │   ├── index.ts          # export { webDomain }
+│   │   │   ├── web-domain.tsx    # createWebDomain("edu-animate"): /edu* routes + navItems/homeTile
+│   │   │   ├── domain-layout.tsx # edu business-area layout (scroll container)
+│   │   │   ├── pages/            # page.tsx (skills), videos-page.tsx, categories-page.tsx
+│   │   │   ├── components/       # skill-card / video-card / edu-filter-bar / edu-pagination / copy-button
+│   │   │   ├── services/         # edu.ts — API client + static-mode client-side filter/sort/pagination
+│   │   │   ├── types/            # edu.ts
+│   │   │   └── lib/              # utils.ts (cn), format.ts
+│   │   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: edu-animate, order 40
+│   │   ├── package.json          # name: @innate/domain-edu-animate; self-contained (relative imports only)
+│   │   └── tsconfig.json
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
 ├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh, edu-animate)
-├── dev.sh                   # Bash helper (legacy; `bun run dev` is cross-platform)
 └── CLAUDE.md
 ```
 
@@ -147,7 +134,7 @@ All commands assume you are in the project root unless noted.
 
 ### Install dependencies
 
-The repo is a workspace (`workspaces: backend, frontend`, `pnpm-workspace.yaml`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)). Installs are **pnpm**-based (fresh @innate/* tarballs never match `bun.lock` integrity hashes, so don't use `bun install` at the root):
+The repo is a workspace (`workspaces: backend, frontend, topics/*`, `pnpm-workspace.yaml`). `@innate/ui` / `@innate/web-domain` come from the innate-fe base repo via a private registry — run `innate-fe-cli install` first (see [docs/arch-design/innate-fe-plugin-migration.md](docs/arch-design/innate-fe-plugin-migration.md)). Installs are **pnpm**-based (fresh @innate/* tarballs never match `bun.lock` integrity hashes, so don't use `bun install` at the root):
 
 ```bash
 export INNATE_FE_ROOT=/path/to/innate-fe
@@ -168,16 +155,13 @@ bun run dev:seed
 # Individually
 bun run dev:backend   # cd backend && bun run dev
 bun run dev:frontend  # cd frontend && bun run dev
-
-# Legacy bash helper
-./dev.sh
 ```
 
 The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http://localhost:4000`, rebuilds the bundle on file change, and live-reloads the page (JS changes reload; CSS-only changes hot-swap the stylesheet). Plugin directory is `http://localhost:3000/dsh`.
 
 ### Plugin directory (`/dsh`)
 
-The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, top-level `dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend prefers `~/.innate/awesome-dsh/plugin-catalog.json` (`INNATE_HOME` controls the root; `DSH_PLUGIN_DATA_DIR` can point at an alternate legacy data directory) via the extracted datasource in `backend/src/dsh/`; the legacy YAML files are still the fallback. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. This generated catalog is intentionally local-only and not committed.
+The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, `topics/dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend prefers `~/.innate/awesome-dsh/plugin-catalog.json` (`INNATE_HOME` controls the root; `DSH_PLUGIN_DATA_DIR` can point at an alternate legacy data directory) via the extracted datasource in `backend/src/dsh/`; the legacy YAML files are still the fallback. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `topics/dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. This generated catalog is intentionally local-only and not committed.
 
 Refresh the Awesome DSH catalog with `bun run data:sync:awesome-dsh` from the root. It reads the upstream format-1 market index and enriches Stars through GitHub GraphQL; then run `bun run data:export` to regenerate `plugins.json`. Daily and window Pages syncs run this automatically in CI, but only the build artifact is uploaded—not the collected JSON.
 
@@ -463,6 +447,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 
 ### Backend
 
+- `collectors/` 按 core（GitHub 系）/ external（外部 JSON 源）/ vertical（垂直 topic 源）分组（M0）。
 - `app/server.ts` — Hono HTTP server with Zod input validation, global error handler, and try/catch on all routes.
 - `app/cli.ts` — mirrors the sync/list/stats functionality for command-line use.
 - `collector/github.ts` — wraps the `gh` CLI with `execFileSync` (not `execSync`) to prevent shell injection. Validates `username` against a whitelist regex.
@@ -508,18 +493,18 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Adding or changing API endpoints | `backend/src/app/server.ts` |
 | Changing the admin DB workspace API | `backend/src/app/admin-db.ts`, `backend/src/data/admin-saved-queries.ts` |
 | Changing the admin workspace UI | `frontend/src/pages/admin/page.tsx`, `frontend/src/services/admin-db.ts` |
-| Changing how repos are fetched from GitHub | `backend/src/collector/github.ts` |
-| Changing trending/starred/window sync | `backend/src/collector/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
-| Changing the 90-day window / README prefetch | `backend/src/collector/sync-window.ts` |
-| Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
-| Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collector/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`, `github-topics.ts` |
-| Changing external feed sources / the Feeds menu (GH #31) | `backend/src/collector/{hackernews,huggingface,github-new,devto,lobsters}.ts`, `backend/src/data/external-store.ts`, `backend/src/data/export-external.ts`, `frontend/src/types/external.ts`, `frontend/src/pages/feeds/`, `frontend/src/services/external.ts` |
-| Changing Trendshift archives (GH #23) | `backend/src/collector/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
-| Changing the Awesome DSH catalog (GH #30) | `backend/src/collector/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `dsh/src/services/plugins.ts` |
-| Changing the legacy DSH YAML updater (GH #27) | `backend/src/collector/dsh-catalog.ts` |
-| Changing the GitHub Topics datasource (GH #24) | `backend/src/collector/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |
-| Changing external collector shared logic | `backend/src/collector/shared/types.ts`, `storage.ts`, `http.ts` |
-| Changing digest issues sync | `backend/src/collector/issues-digest.ts` |
+| Changing how repos are fetched from GitHub | `backend/src/collectors/core/github.ts` |
+| Changing trending/starred/window sync | `backend/src/collectors/core/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
+| Changing the 90-day window / README prefetch | `backend/src/collectors/core/sync-window.ts` |
+| Changing digest issues sync | `backend/src/collectors/core/issues-digest.ts` |
+| Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collectors/external/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`、`backend/src/collectors/core/github-topics.ts` |
+| Changing external feed sources / the Feeds menu (GH #31) | `backend/src/collectors/external/{hackernews,huggingface,github-new,devto,lobsters}.ts`, `backend/src/data/external-store.ts`, `backend/src/data/export-external.ts`, `frontend/src/types/external.ts`, `frontend/src/pages/feeds/`, `frontend/src/services/external.ts` |
+| Changing Trendshift archives (GH #23) | `backend/src/collectors/external/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
+| Changing the Awesome DSH catalog (GH #30) | `backend/src/collectors/vertical/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `topics/dsh/src/services/plugins.ts` |
+| Changing the legacy DSH YAML updater (GH #27) | `backend/src/collectors/vertical/dsh-catalog.ts` |
+| Changing the GitHub Topics datasource (GH #24) | `backend/src/collectors/core/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |
+| Changing external collector shared logic | `backend/src/collectors/shared/types.ts`, `storage.ts`, `http.ts`（wire 契约在根 `shared/types/`） |
+| Changing digest issues sync | `backend/src/collectors/core/issues-digest.ts` |
 | Changing the database schema or queries | `backend/src/db/schema.sql` and `backend/src/db/index.ts` |
 | Changing database path resolution | `backend/src/db/paths.ts` |
 | Adding new CLI commands | `backend/src/app/cli.ts` and `backend/package.json` scripts |
@@ -531,14 +516,14 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing API client | `frontend/src/services/feeds.ts` |
 | Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types in `db/index.ts`) |
 | Changing shared constants (plugin categories, theme catalog) | `shared/plugin-categories.ts`, `shared/theme-catalog.ts` (non-`@innate` scope — keep it that way) |
-| Changing the education-animation domain (edu-animate) | `edu-animate/src/` (domain plugin @innate/domain-edu-animate), `shared/edu-categories.ts` |
-| Changing the education-animation collectors | `backend/src/collector/edu-skills.ts`, `edu-videos.ts` |
+| Changing the education-animation domain (edu-animate) | `topics/edu-animate/src/` (domain plugin @innate/domain-edu-animate), `shared/edu-categories.ts` |
+| Changing the education-animation collectors | `backend/src/collectors/vertical/edu-skills.ts`, `edu-videos.ts` |
 | Changing styling / theme | `frontend/src/styles.css` |
 | Changing the frontend build / dev toolchain | `frontend/scripts/build.ts`, `dev.ts`, `preview.ts` |
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
-| Changing the plugin directory site | `dsh/src/` (domain plugin @innate/domain-dsh) |
+| Changing the plugin directory site | `topics/dsh/src/` (domain plugin @innate/domain-dsh) |
 | Changing plugin data loading | `backend/src/dsh/catalog.ts`, `backend/src/dsh/routes.ts` |
-| Adding a new domain plugin | 新建顶层目录（如 `edu-animate/`）+ `package.json` 的 `workspaces` + `frontend/src/main.tsx` 的 `domains` 数组 + `frontend/scripts/{build,dev}.ts` 的 Tailwind 扫描目录 |
+| Adding a new domain plugin | 新建 `topics/<id>/` 目录 + 根 `package.json` workspaces `topics/*` 自动纳入 + `frontend/src/main.tsx` 的 `domains` 数组 + `frontend/scripts/{build,dev}.ts` 的 Tailwind 扫描目录 |
 
 ## Repository skills
 

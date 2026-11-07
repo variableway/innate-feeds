@@ -1,6 +1,6 @@
 # Feature: admin-data-sheet
 
-**Status:** planned  
+**Status:** superseded （2026-11-07：已按 CodeMirror 方案交付，见 frontend/src/pages/admin/page.tsx；原 Univer 路线随 Epic 归档至 docs/archive/issues/）  
 **Epic:** [sheet-display](../issues/sheet-display.md)  
 **Issues:** shell → api ∥ tables-panel → univer
 

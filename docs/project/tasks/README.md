@@ -44,11 +44,11 @@ Agent：独立分支 → 实现 → 追加 log → PR
 | Issue | 过程记录 |
 |---|---|
 | [ui-layout](../issues/ui-layout.md) | [tasks/issues/ui-layout.md](./issues/ui-layout.md) |
-| [sheet-display](../issues/sheet-display.md) | [tasks/issues/sheet-display.md](./issues/sheet-display.md)（epic） |
-| [sheet-display-shell](../issues/sheet-display-shell.md) | [tasks/issues/sheet-display-shell.md](./issues/sheet-display-shell.md) |
-| [sheet-display-api](../issues/sheet-display-api.md) | [tasks/issues/sheet-display-api.md](./issues/sheet-display-api.md) |
-| [sheet-display-tables-panel](../issues/sheet-display-tables-panel.md) | [tasks/issues/sheet-display-tables-panel.md](./issues/sheet-display-tables-panel.md) |
-| [sheet-display-univer](../issues/sheet-display-univer.md) | [tasks/issues/sheet-display-univer.md](./issues/sheet-display-univer.md) |
+| [sheet-display](../archive/issues/sheet-display.md) | [tasks/issues/sheet-display.md](../archive/tasks/sheet-display.md)（epic） |
+| [sheet-display-shell](../archive/issues/sheet-display-shell.md) | [tasks/issues/sheet-display-shell.md](../archive/tasks/sheet-display-shell.md) |
+| [sheet-display-api](../archive/issues/sheet-display-api.md) | [tasks/issues/sheet-display-api.md](../archive/tasks/sheet-display-api.md) |
+| [sheet-display-tables-panel](../archive/issues/sheet-display-tables-panel.md) | [tasks/issues/sheet-display-tables-panel.md](../archive/tasks/sheet-display-tables-panel.md) |
+| [sheet-display-univer](../archive/issues/sheet-display-univer.md) | [tasks/issues/sheet-display-univer.md](../archive/tasks/sheet-display-univer.md) |
 | [awesome-dsh-plugin-update](../issues/awesome-dsh-plugin-update.md) | [tasks/issues/awesome-dsh-plugin-update.md](./issues/awesome-dsh-plugin-update.md) |
 
 ## admin-data-sheet 推荐交接顺序

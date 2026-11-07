@@ -9,4 +9,4 @@
 | data-pipeline | 采集、SQLite、静态 JSON 导出 | done | [data-pipeline.md](./data-pipeline.md) |
 | static-deployment | GitHub Pages + 日调度 | done | [static-deployment.md](./static-deployment.md) |
 | ui-shell | 三栏布局、Sidebar、主题 | done | [ui-shell.md](./ui-shell.md) |
-| admin-data-sheet | Univer 后台数据表 | planned | [admin-data-sheet.md](./admin-data-sheet.md) |
+| admin-data-sheet | 后台数据表（已按 CodeMirror 方案交付，superseded 2026-11-07） | superseded | [admin-data-sheet.md](./admin-data-sheet.md) |
