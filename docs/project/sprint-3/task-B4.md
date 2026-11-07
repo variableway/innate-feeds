@@ -8,6 +8,6 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：新建 `components/hot-board.tsx`（NO.1 大卡含走势占位 / NO.2-3 中卡 / NO.4-10 行榜 / 「热度怎么算」details 折叠）；`feed-list-page.tsx` 增 `hotBoard` prop（前 10 进榜、余量 listItems 进原网格，空态判定同步，master-detail 与普通两渲染路径都插 board）；`trending/page.tsx` 开启 hotBoard。
+- 完成的功能：①三层信息层级 + rank-1/2/3/rest 色阶 ②走势位与公式折叠为 M1 预留结构（占位文案明示）③FilterBar 筛选、分页、master-detail 点击、隐藏管道全部保留 ④FeedCard 未删除（网格余量与 starred 页继续用）。
+- 验证证明：`/__dev_main.js` 含「热点榜/热度怎么算/NO.」×3；/trending 200；`curl :4000/api/feeds?type=trending&language=TypeScript` 全量命中 TypeScript（筛选回归）；VITE_STATIC_MODE 构建 + typecheck 绿。提交见下一行 docs 提交引用：**代码 commit 为本次 docs 提交的父提交**。
