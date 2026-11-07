@@ -8,6 +8,6 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：新建 `frontend/src/pages/home/page.tsx`（HomePage）；`web-domain.tsx` 的 `/` 路由由 `<Navigate to="/trending"/>` 换为真实主页；移除不再使用的 Navigate import。日分组逻辑 groupByDate（snapshotDate 倒序，含 unknown 兜底）、今天/昨天人性化标题。
+- 完成的功能：①/ 直接渲染精选流（PillTabs 排序：高星/最近更新/新创建，联动既有 persisted filters）②日分组 sticky 日期头 + 仓库计数 ③FeedCard 双列网格复用（含隐藏/话题点击管道）④EmptyState 空态含采集命令指引 ⑤双模式可用。
+- 验证证明：dev server 热重建后 `/` 200；`/__dev_main.js` bundle 含 `时间轨`×1、`PillTabs/groupByDate`×4（SPA 无法 curl 渲染文本，以 bundle 代码为准）；`curl :4000/api/feeds?type=trending&sort=updated` 排序语义正常；`VITE_STATIC_MODE=true bun run build` 通过；typecheck 绿。提交 **642754d**。
