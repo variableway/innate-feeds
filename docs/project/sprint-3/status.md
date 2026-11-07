@@ -15,8 +15,11 @@
 | task-B10 | UI/UX Design 主题域（数据收集+域包） | done | 5ed0739 |
 | task-B11 | edu categories 并入主页，菜单改 EDU | done | 5ed0739 |
 | task-B12 | /ux SKILL 加权视图 + edu 微调 + 全局 404 | done | cff33d2 |
+| task-B13 | EDU 打分 + /ux 过滤器与 Tags | done | b103311 |
 
 ## 执行日志
+
+- 2026-11-07 task-B13 done（b103311）：EDU/ux 打分与筛选形态对称化。sprint-3 计 14 任务。
 
 - 2026-11-07 task-B12 done（cff33d2）：/ux 以 SKILL 为本体（×5 加权），edu 筛选一行化，全局 404。sprint-3 计 13 任务。
 
