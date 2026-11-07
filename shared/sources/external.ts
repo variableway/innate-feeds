@@ -75,4 +75,10 @@ export const EXTERNAL_SOURCES: ExternalSourceDefinition[] = [
     description: "教育动画领域的教学视频（策展频道）",
     homepage: "https://www.youtube.com",
   },
+  {
+    source: "edu-videos-bilibili",
+    title: "Edu Videos (bilibili)",
+    description: "B 站教育动画教学视频（策展 UP 主）",
+    homepage: "https://space.bilibili.com",
+  },
 ];

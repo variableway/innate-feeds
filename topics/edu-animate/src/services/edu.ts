@@ -108,6 +108,7 @@ function toVideo(item: RawExternalItem): EduVideo {
     categories: strArray(item.categories),
     publishedAt: item.publishedAt,
     note: str(meta.note) || null,
+    platform: "youtube",
   };
 }
 
@@ -177,6 +178,54 @@ export function loadEduVideos(): Promise<EduVideo[]> {
       });
   }
   return videosPromise;
+}
+
+/** B14：B 站教学视频（edu-videos-bilibili 源，「源未采过」视为空）。 */
+function toBilibiliVideo(item: RawExternalItem): EduVideo {
+  const meta = item.metadata ?? {};
+  const duration = str(meta.duration);
+  const parts = duration.split(":").map((p) => Number.parseInt(p, 10));
+  const durationSeconds =
+    parts.length > 0 && parts.every((p) => Number.isFinite(p))
+      ? parts.reduce((acc, p) => acc * 60 + p, 0)
+      : null;
+  return {
+    id: item.id,
+    title: item.title,
+    description: item.description,
+    url: item.url,
+    thumbnail: item.imageUrl,
+    channelTitle: str(meta.up) ? `@${str(meta.up)}` : item.tagline,
+    feedId: "edu-videos-bilibili",
+    feedTitle: "Edu Videos (bilibili)",
+    durationSeconds,
+    views: num(item.metrics.score),
+    likes: null,
+    categories: strArray(item.categories),
+    publishedAt: item.publishedAt,
+    platform: "bilibili",
+    note: str(meta.note) || null,
+  };
+}
+
+let bilibiliVideosPromise: Promise<EduVideo[]> | null = null;
+
+export function loadEduVideosBilibili(): Promise<EduVideo[]> {
+  if (!bilibiliVideosPromise) {
+    bilibiliVideosPromise = fetchPayload("edu-videos-bilibili")
+      .then((payload) => (payload.items ?? []).map(toBilibiliVideo))
+      .catch(() => []);
+  }
+  return bilibiliVideosPromise;
+}
+
+/** 视频池：YouTube + B 站合流（B 站在前，便于看到新源效果）。 */
+export async function loadEduVideoPool(): Promise<EduVideo[]> {
+  const [bili, yt] = await Promise.all([
+    loadEduVideosBilibili(),
+    loadEduVideos().catch(() => [] as EduVideo[]),
+  ]);
+  return [...bili, ...yt];
 }
 
 // --- 筛选 / 排序 / 分页 ---
@@ -313,7 +362,7 @@ export async function fetchEduSkills(
 export async function fetchEduVideos(
   query: EduQuery,
 ): Promise<EduPage<EduVideo>> {
-  return filterVideos(await loadEduVideos(), query);
+  return filterVideos(await loadEduVideoPool(), query);
 }
 
 /** 分类计数：skills 与 videos 合并统计。 */

@@ -94,6 +94,8 @@ export interface EduVideo {
   likes: number | null;
   categories: string[];
   publishedAt: string | null;
+  /** 来源平台（B14：bilibili 合流） */
+  platform?: "youtube" | "bilibili";
   /** 策展者对这个来源的说明 */
   note: string | null;
 }

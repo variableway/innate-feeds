@@ -25,6 +25,7 @@ import { A16zPortfolioCollector } from "../collectors/external/a16z-portfolio.js
 import { syncVCPortfolio } from "../collectors/external/vc-portfolio.js";
 import { EduSkillsCollector } from "../collectors/vertical/edu-skills.js";
 import { EduVideosCollector } from "../collectors/vertical/edu-videos.js";
+import { syncEduVideosBilibili } from "../collectors/vertical/edu-videos-bilibili.js";
 import { HackerNewsCollector } from "../collectors/external/hackernews.js";
 import { HuggingFaceCollector } from "../collectors/external/huggingface.js";
 import { GitHubNewCollector } from "../collectors/external/github-new.js";
@@ -73,6 +74,7 @@ Usage:
   tsx src/app/cli.ts sync vc [--source yc|a16z|producthunt|github-topics] [--batch BATCH] [--date YYYY-MM-DD]
   tsx src/app/cli.ts sync edu-skills [--max N]
   tsx src/app/cli.ts sync edu-videos
+  tsx src/app/cli.ts sync edu-videos-bilibili
   tsx src/app/cli.ts list [trending|starred] [--days N | --since ISO] [--json] [--out FILE] [--limit N]
   tsx src/app/cli.ts topics --list
   tsx src/app/cli.ts dates
@@ -331,6 +333,15 @@ async function runSync(syncArgs: string[]) {
           outDir: result.outDir,
           bytes: result.bytes,
         },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "edu-videos-bilibili") {
+    const summary = await syncEduVideosBilibili();
+    console.log(
+      JSON.stringify(
+        { ups: summary.ups, total: summary.total, ...summary.save },
         null,
         2,
       ),

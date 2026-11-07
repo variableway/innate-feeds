@@ -34,6 +34,7 @@ import {
   type LucideIcon,
   Layers,
   Palette,
+  Tv,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { collectNavItems, type WebDomain } from "@innate/web-domain";
@@ -60,6 +61,7 @@ const ICONS: Record<string, LucideIcon> = {
   Clapperboard,
   LayoutGrid,
   Palette,
+  Tv,
 };
 
 /** 分组图标（与 navItems 的 group 名对应）。 */

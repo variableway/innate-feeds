@@ -142,6 +142,13 @@ export const SYNC_JOBS: SyncJob[] = [
     args: ["edu-videos"],
     outputs: "~/.innate/edu-videos",
   },
+  {
+    id: "edu-videos-bilibili",
+    group: "vertical",
+    summary: "B 站教育动画教学视频（策展 UP 主，Firecrawl/HTML）",
+    args: ["edu-videos-bilibili"],
+    outputs: "~/.innate/edu-videos-bilibili",
+  },
   // ---- pipeline：编排（组合上述 job）----
   {
     id: "window",

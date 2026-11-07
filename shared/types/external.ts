@@ -18,7 +18,8 @@ export type FeedSource =
   | "devto"
   | "lobsters"
   | "edu-skills"
-  | "edu-videos";
+  | "edu-videos"
+  | "edu-videos-bilibili";
 
 /** 统一外部 Feed Item 接口 */
 export interface ExternalFeedItem {

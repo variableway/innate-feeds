@@ -136,6 +136,12 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
     ],
     emptyHint: "Run `bun run sync:edu-videos` to collect the channel videos.",
   },
+  {
+    source: "edu-videos-bilibili",
+    icon: "Tv",
+    metrics: [{ key: "score", label: "播放" }],
+    emptyHint: "Run `bun run sync:edu-videos-bilibili` to collect bilibili videos.",
+  },
 ];
 
 /** joined 视图（S4）：shared 数据 + UI 覆盖层，顺序跟随 UI 覆盖层。 */

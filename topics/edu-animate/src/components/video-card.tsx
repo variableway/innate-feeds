@@ -12,6 +12,11 @@ export function VideoCard({ video }: { video: EduVideo }) {
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg border bg-card transition-colors hover:border-foreground/20">
+      {video.platform === "bilibili" ? (
+        <span className="w-fit rounded-mark bg-[#fb7299] px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+          bilibili
+        </span>
+      ) : null}
       <a
         href={video.url}
         target="_blank"
