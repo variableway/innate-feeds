@@ -448,6 +448,12 @@ Schema is defined in `backend/src/db/schema.sql`:
 ### Backend
 
 - `collectors/` 按 core（GitHub 系）/ external（外部 JSON 源）/ vertical（垂直 topic 源）分组（M0）。
+- `collectors/jobs.ts` **M-Sync 任务注册表**（单一事实源）：每个采集小模块一条记录
+  （id/组/命令/产出）；`cli sync jobs` 列出全部、`cli sync job <id>` 执行单个；
+  新增采集器 = 实现模块 + 登记 job。
+- **M-API / M-Sync 边界**：`app/server.ts` 禁止调用 collectors 的写路径/采集编排，
+  唯一例外 `POST /api/feeds/sync`（手动触发，已注释）；只读白名单例外：
+  README 回源（`fetchRepoReadme`）、trendshift 本地切片（后续迁 `data/`）。
 - `app/server.ts` — Hono HTTP server with Zod input validation, global error handler, and try/catch on all routes.
 - `app/cli.ts` — mirrors the sync/list/stats functionality for command-line use.
 - `collector/github.ts` — wraps the `gh` CLI with `execFileSync` (not `execSync`) to prevent shell injection. Validates `username` against a whitelist regex.

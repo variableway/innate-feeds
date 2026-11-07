@@ -36,6 +36,7 @@ import {
   TOPIC_LIMIT,
 } from "../collectors/core/github-topics.js";
 import { saveItems } from "../collectors/shared/storage.js";
+import { SYNC_JOBS, findSyncJob } from "../collectors/jobs.js";
 import { syncDshCatalog } from "../collectors/vertical/dsh-catalog.js";
 import { syncAwesomeDsh } from "../collectors/vertical/awesome-dsh.js";
 import {
@@ -63,6 +64,8 @@ Usage:
   tsx src/app/cli.ts sync producthunt [--date YYYY-MM-DD] [--period daily|weekly|monthly|all]
   tsx src/app/cli.ts sync yc [--batch BATCH] [--query QUERY]
   tsx src/app/cli.ts sync a16z
+  tsx src/app/cli.ts sync jobs                # 列出全部采集 job（M-Sync 注册表）
+  tsx src/app/cli.ts sync job <id>             # 执行单个 job（如 sync job hackernews）
   tsx src/app/cli.ts sync github-topics [--topic TOPIC] [--sort stars|updated] [--per-page N] [--limit N]
   tsx src/app/cli.ts sync trendshift [--timeframe all|daily|weekly|monthly|yearly] [--language slug[,slug]|*] [--source cdn|scrape|auto] [--no-save]
   tsx src/app/cli.ts sync dsh-catalog [--ref BRANCH] [--dry-run]
@@ -103,354 +106,378 @@ List notes:
 `);
 }
 
+async function runSync(syncArgs: string[]) {
+  const type = syncArgs[0];
+  if (type === "jobs") {
+    // M-Sync job 注册表：列出全部采集小模块（task-A1）
+    for (const j of SYNC_JOBS) {
+      console.log(`${j.id.padEnd(16)} [${j.group}] ${j.summary} → ${j.outputs}`);
+    }
+    console.log(`
+共 ${SYNC_JOBS.length} 个 job；执行单个：bun src/app/cli.ts sync job <id>`);
+    return;
+  }
+  if (type === "job") {
+    const id = syncArgs[1];
+    const job = findSyncJob(id ?? "");
+    if (!job) {
+      console.error(`Unknown job: ${id}（bun src/app/cli.ts sync jobs 查看全部）`);
+      process.exit(1);
+    }
+    console.log(`[job] ${job.id} (${job.group}) → cli sync ${job.args.join(" ")}`);
+    await runSync(job.args);
+    return;
+  }
+  if (type === "trending") {
+    const period = (syncArgs[1] || "daily") as
+      "daily" | "weekly" | "monthly";
+    const count = await syncTrending(period, dbPath);
+    console.log(`Synced ${count} ${period} trending repositories`);
+  } else if (type === "all-trending") {
+    const result = await syncAllTrending(dbPath);
+    console.log(result);
+  } else if (type === "starred") {
+    const args = syncArgs.slice(1);
+    const force = args.includes("--force");
+    const daysIdx = args.indexOf("--days");
+    const days = daysIdx >= 0 ? parseInt(args[daysIdx + 1], 10) : undefined;
+    const username = args.find(
+      (arg) => !arg.startsWith("--") && arg !== args[daysIdx + 1],
+    );
+    const count = syncStarred(username, dbPath, force, days);
+    console.log(`Synced ${count} starred repositories`);
+  } else if (type === "digest") {
+    const args = parseDigestArgs(syncArgs.slice(1));
+    const { result, saved } = await runDigestExport({
+      ...args,
+      save: true,
+      outDir: args.outDir || getDefaultDigestDir(),
+    });
+    console.log(
+      JSON.stringify(
+        {
+          synced: result.items.length,
+          transport: result.transport,
+          since: result.since ?? null,
+          until: result.until ?? null,
+          createdOnly: result.createdOnly,
+          bySource: result.bySource,
+          outDir: saved?.outDir,
+          files: saved?.files,
+          bytes: saved?.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "window") {
+    const summary = await syncWindow(
+      parseWindowArgs(syncArgs.slice(1)),
+    );
+    console.log(JSON.stringify(summary, null, 2));
+  } else if (type === "producthunt") {
+    const args = syncArgs.slice(1);
+    let date = new Date().toISOString().split("T")[0];
+    let period: "daily" | "weekly" | "monthly" | "all" = "all";
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--date" && args[i + 1]) date = args[++i];
+      if (args[i] === "--period" && args[i + 1]) {
+        period = args[++i] as any;
+      }
+    }
+    const ph = new ProductHuntCollector();
+    if (period === "all") {
+      const results = await ph.saveAll(date);
+      console.log(
+        JSON.stringify(
+          results.map((r) => ({
+            source: "producthunt",
+            count: r.count,
+            label: r.source,
+            outDir: r.outDir,
+            bytes: r.bytes,
+          })),
+          null,
+          2,
+        ),
+      );
+    } else {
+      const result = await ph.savePeriod(period, date);
+      console.log(
+        JSON.stringify(
+          {
+            source: "producthunt",
+            period,
+            count: result.count,
+            outDir: result.outDir,
+            bytes: result.bytes,
+          },
+          null,
+          2,
+        ),
+      );
+    }
+  } else if (type === "yc") {
+    const args = syncArgs.slice(1);
+    const batches: string[] = [];
+    let query = "ai";
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--batch" && args[i + 1]) batches.push(args[++i]);
+      if (args[i] === "--query" && args[i + 1]) query = args[++i];
+    }
+    const yc = new YCCompaniesCollector({
+      batches: batches.length ? batches : undefined,
+      query,
+    });
+    const results = await yc.save();
+    console.log(
+      JSON.stringify(
+        results.map((r) => ({
+          source: "yc",
+          count: r.count,
+          outDir: r.outDir,
+          bytes: r.bytes,
+        })),
+        null,
+        2,
+      ),
+    );
+  } else if (type === "a16z") {
+    const a16z = new A16zPortfolioCollector();
+    const result = await a16z.save();
+    console.log(
+      JSON.stringify(
+        {
+          source: "a16z",
+          count: result.count,
+          outDir: result.outDir,
+          bytes: result.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (
+    type === "hackernews" ||
+    type === "huggingface" ||
+    type === "github-new" ||
+    type === "devto" ||
+    type === "lobsters"
+  ) {
+    // GH #31 community feed collectors
+    const args = syncArgs.slice(1);
+    let days = 7;
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--days" && args[i + 1])
+        days = parseInt(args[++i], 10);
+    }
+    const result = await (async () => {
+      switch (type) {
+        case "hackernews":
+          return new HackerNewsCollector().save();
+        case "huggingface":
+          return new HuggingFaceCollector().save();
+        case "github-new":
+          return new GitHubNewCollector({ days }).save();
+        case "devto":
+          return new DevToCollector().save();
+        default:
+          return new LobstersCollector().save();
+      }
+    })();
+    console.log(
+      JSON.stringify(
+        {
+          source: type,
+          count: result.count,
+          outDir: result.outDir,
+          bytes: result.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "vc") {
+    const args = syncArgs.slice(1);
+    const sources: string[] = [];
+    const ycBatches: string[] = [];
+    let ycQuery: string | undefined;
+    let phDate: string | undefined;
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--source" && args[i + 1]) sources.push(args[++i]);
+      if (args[i] === "--batch" && args[i + 1]) ycBatches.push(args[++i]);
+      if (args[i] === "--query" && args[i + 1]) ycQuery = args[++i];
+      if (args[i] === "--date" && args[i + 1]) phDate = args[++i];
+    }
+    await syncVCPortfolio({
+      sources: sources.length ? (sources as any) : ["all"],
+      ycBatches: ycBatches.length ? ycBatches : undefined,
+      ycQuery,
+      phDate,
+    });
+  } else if (type === "edu-skills") {
+    const args = syncArgs.slice(1);
+    let max = 600;
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--max" && args[i + 1]) max = Number(args[++i]);
+    }
+    const collector = new EduSkillsCollector(max);
+    const result = await collector.save();
+    console.log(
+      JSON.stringify(
+        {
+          source: "edu-skills",
+          count: result.count,
+          outDir: result.outDir,
+          bytes: result.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "edu-videos") {
+    const collector = new EduVideosCollector();
+    const result = await collector.save();
+    console.log(
+      JSON.stringify(
+        {
+          source: "edu-videos",
+          count: result.count,
+          outDir: result.outDir,
+          bytes: result.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "github-topics") {
+    const args = syncArgs.slice(1);
+    const topics: string[] = [];
+    let sort: "stars" | "updated" = "stars";
+    let perPage: number | undefined;
+    let limit = TOPIC_LIMIT;
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
+      if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as any;
+      if (args[i] === "--per-page" && args[i + 1])
+        perPage = Number(args[++i]);
+      if (args[i] === "--limit" && args[i + 1]) limit = Number(args[++i]);
+    }
+
+    // Repos already known to the trending/starred feeds count as
+    // "existing" (GH #24): they are not reported as new discoveries.
+    let existingFullNames: string[] = [];
+    try {
+      existingFullNames = [...listKnownRepoFullNames(getDb(dbPath))];
+    } catch {
+      /* no database yet — treat every repo as new */
+    }
+
+    const results = await syncTopics({
+      topics: topics.length ? topics : undefined,
+      sort,
+      perPage,
+      limit,
+      existingFullNames,
+    });
+
+    // Keep the merged daily snapshot for the admin JSON workspace.
+    const merged = [
+      ...new Map(
+        results.flatMap((r) => r.items).map((i) => [i.url, i]),
+      ).values(),
+    ];
+    const today = new Date().toISOString().split("T")[0];
+    const saved = saveItems("github-topics", merged, `topics-${today}`);
+
+    console.log(
+      JSON.stringify(
+        {
+          source: "github-topics",
+          topics: results.map((r) => ({
+            topic: r.topic,
+            count: r.count,
+            new: r.newCount,
+            skippedExisting: r.skippedExisting,
+            skippedSeen: r.skippedSeen,
+          })),
+          merged: saved.count,
+          outDir: saved.outDir,
+          bytes: saved.bytes,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "trendshift") {
+    const args = syncArgs.slice(1);
+    const opts: {
+      timeframes?: TrendshiftTimeframe[];
+      languages?: TrendshiftLanguageFilter[];
+      source?: TrendshiftSource | "auto";
+      save?: boolean;
+    } = {};
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--timeframe" && args[i + 1]) {
+        const vals = args[++i].split(",").map((s) => s.trim());
+        opts.timeframes = vals.includes("all")
+          ? [...TRENDSHIFT_TIMEFRAMES]
+          : (vals as TrendshiftTimeframe[]);
+      } else if (args[i] === "--language" && args[i + 1]) {
+        const vals = args[++i]
+          .split(",")
+          .map((s) => s.trim().toLowerCase());
+        opts.languages = vals.includes("*")
+          ? [...TRENDSHIFT_LANGUAGES]
+          : (vals as TrendshiftLanguageFilter[]);
+      } else if (args[i] === "--source" && args[i + 1]) {
+        opts.source = args[++i] as TrendshiftSource | "auto";
+      } else if (args[i] === "--no-save") {
+        opts.save = false;
+      }
+    }
+    const summary = await syncTrendshift(opts);
+    console.log(
+      JSON.stringify(
+        {
+          origin: summary.origin,
+          files: summary.files.map((f) => `${f.path} (${f.count})`),
+          totalRows: summary.totalRows,
+          bytes: summary.bytes,
+          outDir: summary.outDir,
+        },
+        null,
+        2,
+      ),
+    );
+  } else if (type === "dsh-catalog") {
+    const args = syncArgs.slice(1);
+    const dryRun = args.includes("--dry-run");
+    const refIdx = args.indexOf("--ref");
+    const ref = refIdx >= 0 ? args[refIdx + 1] : undefined;
+    const result = await syncDshCatalog({ ref, dryRun });
+    console.log(JSON.stringify(result, null, 2));
+  } else if (type === "awesome-dsh") {
+    const summary = await syncAwesomeDsh();
+    console.log(
+      JSON.stringify(
+        {
+          source: "awesome-dsh",
+          ...summary,
+        },
+        null,
+        2,
+      ),
+    );
+  } else {
+    process.exit(1);
+  }
+}
+
 async function main() {
   switch (command) {
     case "sync": {
-      const type = process.argv[3];
-      if (type === "trending") {
-        const period = (process.argv[4] || "daily") as
-          "daily" | "weekly" | "monthly";
-        const count = await syncTrending(period, dbPath);
-        console.log(`Synced ${count} ${period} trending repositories`);
-      } else if (type === "all-trending") {
-        const result = await syncAllTrending(dbPath);
-        console.log(result);
-      } else if (type === "starred") {
-        const args = process.argv.slice(4);
-        const force = args.includes("--force");
-        const daysIdx = args.indexOf("--days");
-        const days = daysIdx >= 0 ? parseInt(args[daysIdx + 1], 10) : undefined;
-        const username = args.find(
-          (arg) => !arg.startsWith("--") && arg !== args[daysIdx + 1],
-        );
-        const count = syncStarred(username, dbPath, force, days);
-        console.log(`Synced ${count} starred repositories`);
-      } else if (type === "digest") {
-        const args = parseDigestArgs(process.argv.slice(4));
-        const { result, saved } = await runDigestExport({
-          ...args,
-          save: true,
-          outDir: args.outDir || getDefaultDigestDir(),
-        });
-        console.log(
-          JSON.stringify(
-            {
-              synced: result.items.length,
-              transport: result.transport,
-              since: result.since ?? null,
-              until: result.until ?? null,
-              createdOnly: result.createdOnly,
-              bySource: result.bySource,
-              outDir: saved?.outDir,
-              files: saved?.files,
-              bytes: saved?.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "window") {
-        const summary = await syncWindow(
-          parseWindowArgs(process.argv.slice(4)),
-        );
-        console.log(JSON.stringify(summary, null, 2));
-      } else if (type === "producthunt") {
-        const args = process.argv.slice(4);
-        let date = new Date().toISOString().split("T")[0];
-        let period: "daily" | "weekly" | "monthly" | "all" = "all";
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--date" && args[i + 1]) date = args[++i];
-          if (args[i] === "--period" && args[i + 1]) {
-            period = args[++i] as any;
-          }
-        }
-        const ph = new ProductHuntCollector();
-        if (period === "all") {
-          const results = await ph.saveAll(date);
-          console.log(
-            JSON.stringify(
-              results.map((r) => ({
-                source: "producthunt",
-                count: r.count,
-                label: r.source,
-                outDir: r.outDir,
-                bytes: r.bytes,
-              })),
-              null,
-              2,
-            ),
-          );
-        } else {
-          const result = await ph.savePeriod(period, date);
-          console.log(
-            JSON.stringify(
-              {
-                source: "producthunt",
-                period,
-                count: result.count,
-                outDir: result.outDir,
-                bytes: result.bytes,
-              },
-              null,
-              2,
-            ),
-          );
-        }
-      } else if (type === "yc") {
-        const args = process.argv.slice(4);
-        const batches: string[] = [];
-        let query = "ai";
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--batch" && args[i + 1]) batches.push(args[++i]);
-          if (args[i] === "--query" && args[i + 1]) query = args[++i];
-        }
-        const yc = new YCCompaniesCollector({
-          batches: batches.length ? batches : undefined,
-          query,
-        });
-        const results = await yc.save();
-        console.log(
-          JSON.stringify(
-            results.map((r) => ({
-              source: "yc",
-              count: r.count,
-              outDir: r.outDir,
-              bytes: r.bytes,
-            })),
-            null,
-            2,
-          ),
-        );
-      } else if (type === "a16z") {
-        const a16z = new A16zPortfolioCollector();
-        const result = await a16z.save();
-        console.log(
-          JSON.stringify(
-            {
-              source: "a16z",
-              count: result.count,
-              outDir: result.outDir,
-              bytes: result.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (
-        type === "hackernews" ||
-        type === "huggingface" ||
-        type === "github-new" ||
-        type === "devto" ||
-        type === "lobsters"
-      ) {
-        // GH #31 community feed collectors
-        const args = process.argv.slice(4);
-        let days = 7;
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--days" && args[i + 1])
-            days = parseInt(args[++i], 10);
-        }
-        const result = await (async () => {
-          switch (type) {
-            case "hackernews":
-              return new HackerNewsCollector().save();
-            case "huggingface":
-              return new HuggingFaceCollector().save();
-            case "github-new":
-              return new GitHubNewCollector({ days }).save();
-            case "devto":
-              return new DevToCollector().save();
-            default:
-              return new LobstersCollector().save();
-          }
-        })();
-        console.log(
-          JSON.stringify(
-            {
-              source: type,
-              count: result.count,
-              outDir: result.outDir,
-              bytes: result.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "vc") {
-        const args = process.argv.slice(4);
-        const sources: string[] = [];
-        const ycBatches: string[] = [];
-        let ycQuery: string | undefined;
-        let phDate: string | undefined;
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--source" && args[i + 1]) sources.push(args[++i]);
-          if (args[i] === "--batch" && args[i + 1]) ycBatches.push(args[++i]);
-          if (args[i] === "--query" && args[i + 1]) ycQuery = args[++i];
-          if (args[i] === "--date" && args[i + 1]) phDate = args[++i];
-        }
-        await syncVCPortfolio({
-          sources: sources.length ? (sources as any) : ["all"],
-          ycBatches: ycBatches.length ? ycBatches : undefined,
-          ycQuery,
-          phDate,
-        });
-      } else if (type === "edu-skills") {
-        const args = process.argv.slice(4);
-        let max = 600;
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--max" && args[i + 1]) max = Number(args[++i]);
-        }
-        const collector = new EduSkillsCollector(max);
-        const result = await collector.save();
-        console.log(
-          JSON.stringify(
-            {
-              source: "edu-skills",
-              count: result.count,
-              outDir: result.outDir,
-              bytes: result.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "edu-videos") {
-        const collector = new EduVideosCollector();
-        const result = await collector.save();
-        console.log(
-          JSON.stringify(
-            {
-              source: "edu-videos",
-              count: result.count,
-              outDir: result.outDir,
-              bytes: result.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "github-topics") {
-        const args = process.argv.slice(4);
-        const topics: string[] = [];
-        let sort: "stars" | "updated" = "stars";
-        let perPage: number | undefined;
-        let limit = TOPIC_LIMIT;
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
-          if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as any;
-          if (args[i] === "--per-page" && args[i + 1])
-            perPage = Number(args[++i]);
-          if (args[i] === "--limit" && args[i + 1]) limit = Number(args[++i]);
-        }
-
-        // Repos already known to the trending/starred feeds count as
-        // "existing" (GH #24): they are not reported as new discoveries.
-        let existingFullNames: string[] = [];
-        try {
-          existingFullNames = [...listKnownRepoFullNames(getDb(dbPath))];
-        } catch {
-          /* no database yet — treat every repo as new */
-        }
-
-        const results = await syncTopics({
-          topics: topics.length ? topics : undefined,
-          sort,
-          perPage,
-          limit,
-          existingFullNames,
-        });
-
-        // Keep the merged daily snapshot for the admin JSON workspace.
-        const merged = [
-          ...new Map(
-            results.flatMap((r) => r.items).map((i) => [i.url, i]),
-          ).values(),
-        ];
-        const today = new Date().toISOString().split("T")[0];
-        const saved = saveItems("github-topics", merged, `topics-${today}`);
-
-        console.log(
-          JSON.stringify(
-            {
-              source: "github-topics",
-              topics: results.map((r) => ({
-                topic: r.topic,
-                count: r.count,
-                new: r.newCount,
-                skippedExisting: r.skippedExisting,
-                skippedSeen: r.skippedSeen,
-              })),
-              merged: saved.count,
-              outDir: saved.outDir,
-              bytes: saved.bytes,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "trendshift") {
-        const args = process.argv.slice(4);
-        const opts: {
-          timeframes?: TrendshiftTimeframe[];
-          languages?: TrendshiftLanguageFilter[];
-          source?: TrendshiftSource | "auto";
-          save?: boolean;
-        } = {};
-        for (let i = 0; i < args.length; i++) {
-          if (args[i] === "--timeframe" && args[i + 1]) {
-            const vals = args[++i].split(",").map((s) => s.trim());
-            opts.timeframes = vals.includes("all")
-              ? [...TRENDSHIFT_TIMEFRAMES]
-              : (vals as TrendshiftTimeframe[]);
-          } else if (args[i] === "--language" && args[i + 1]) {
-            const vals = args[++i]
-              .split(",")
-              .map((s) => s.trim().toLowerCase());
-            opts.languages = vals.includes("*")
-              ? [...TRENDSHIFT_LANGUAGES]
-              : (vals as TrendshiftLanguageFilter[]);
-          } else if (args[i] === "--source" && args[i + 1]) {
-            opts.source = args[++i] as TrendshiftSource | "auto";
-          } else if (args[i] === "--no-save") {
-            opts.save = false;
-          }
-        }
-        const summary = await syncTrendshift(opts);
-        console.log(
-          JSON.stringify(
-            {
-              origin: summary.origin,
-              files: summary.files.map((f) => `${f.path} (${f.count})`),
-              totalRows: summary.totalRows,
-              bytes: summary.bytes,
-              outDir: summary.outDir,
-            },
-            null,
-            2,
-          ),
-        );
-      } else if (type === "dsh-catalog") {
-        const args = process.argv.slice(4);
-        const dryRun = args.includes("--dry-run");
-        const refIdx = args.indexOf("--ref");
-        const ref = refIdx >= 0 ? args[refIdx + 1] : undefined;
-        const result = await syncDshCatalog({ ref, dryRun });
-        console.log(JSON.stringify(result, null, 2));
-      } else if (type === "awesome-dsh") {
-        const summary = await syncAwesomeDsh();
-        console.log(
-          JSON.stringify(
-            {
-              source: "awesome-dsh",
-              ...summary,
-            },
-            null,
-            2,
-          ),
-        );
-      } else {
-        process.exit(1);
-      }
+      await runSync(process.argv.slice(3));
       break;
     }
     case "list": {

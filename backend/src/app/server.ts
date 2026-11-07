@@ -14,12 +14,15 @@ import {
   getTrendingDates,
   listKnownRepoFullNames,
 } from "../db/index.js";
+// M-API / M-Sync 边界（sprint-3 task-A1）：
+// 禁止：调用 collectors 的写路径/采集编排 —— 唯一例外是 POST /api/feeds/sync 手动触发（见文末 sync 端点）。
+// 白名单只读例外（后续 S 系列迁 data/）：README 回源读取、trendshift 本地切片读取。
 import {
   syncTrending,
   syncAllTrending,
   syncStarred,
-} from "../collectors/core/sync.js";
-import { fetchRepoReadme, type TrendingPeriod } from "../collectors/core/github.js";
+} from "../collectors/core/sync.js"; // 仅供 POST /api/feeds/sync 手动触发
+import { fetchRepoReadme, type TrendingPeriod } from "../collectors/core/github.js"; // 只读例外：README cache-first + 回源
 import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
 import { hideItem, unhideItem } from "../data/hidden-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";
@@ -33,7 +36,7 @@ import {
   TRENDSHIFT_TIMEFRAMES,
   type TrendshiftLanguageFilter,
   type TrendshiftTimeframe,
-} from "../collectors/external/trendshift.js";
+} from "../collectors/external/trendshift.js"; // 只读例外：本地切片读取 + CDN 兜底
 import {
   addUserTopic,
   buildTopicResponse,
