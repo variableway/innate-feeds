@@ -11,6 +11,13 @@
 | [research/aihot-analysis.md](./research/aihot-analysis.md) | AIHOT（LLM 编辑部日报框架）源码分析：六类信源、双评分分级门槛、事件聚簇与热度公式、回执熔断、MCP/Agent 出口注入围栏；与 innate-feeds 的 P1–P3 借鉴清单（MCP server 工程范本服务 GH #35、付费回执、热度公式） |
 | [research/open-apps-analysis.md](./research/open-apps-analysis.md) | Open Apps / Open App Scout（tortuvshin/open-apps，fork harry0703 已本地合并）源码分析：目录工业化——字段所有权二分、自动化即 PR + bot 预评审、常驻 issue、health 计算、collection 查询化、SEO 机检；P1 借鉴「数据回写 PR 化 + bot 预评审 + 常驻 issue」治理三件套 |
 
+## Arch Design（现行机制）
+
+| 文档 | 内容 |
+|---|---|
+| [arch-design/scoring-and-filters.md](./arch-design/scoring-and-filters.md) | EDU / UI-UX 主题域的打分公式、SKILL 识别启发式、过滤链与 M1 演进路线 |
+| [arch-design/edu-videos-bilibili.md](./arch-design/edu-videos-bilibili.md) | B 站视频采集链路（search→mid→渲染抓取）与策展方法 |
+
 ## Projects（调研与后续计划）
 
 「后续要做」的方案与计划归入调研目录，见 [research/projects/README.md](./research/projects/README.md)：重构总案 M0-M4（M0 已执行）、前后端数据分离 S1-S3、中文热榜源接入等待决策项。
