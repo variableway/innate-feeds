@@ -1,8 +1,9 @@
-import { createRoute, Navigate } from "@tanstack/react-router";
+import { createRoute } from "@tanstack/react-router";
 import type { AnyRoute } from "@tanstack/react-router";
 import { createWebDomain } from "@innate/web-domain";
 import { DomainLayout } from "./domain-layout";
 import { TrendingPage } from "@/pages/trending/page";
+import { HomePage } from "@/pages/home/page";
 import { TrendingShiftPage } from "@/pages/trending-shift/page";
 import { TopicsPage } from "@/pages/topics/page";
 import { TopicPage } from "@/pages/topics/topic-page";
@@ -32,7 +33,7 @@ export const webDomain = createWebDomain("feeds")
       createRoute({
         getParentRoute: () => layout,
         path: "/",
-        component: () => <Navigate to="/trending" />,
+        component: HomePage,
       }),
       createRoute({
         getParentRoute: () => layout,
