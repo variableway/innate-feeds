@@ -13,14 +13,14 @@
 
 | Task | 内容 | 状态 | 提交 |
 |---|---|---|---|
-| [task-A1](./task-A1.md) | collectors 任务注册表 + 单任务 CLI + 边界固化 | todo | — |
-| [task-B1](./task-B1.md) | AIHot token 叠加（ink/hot/rank/radius 六档） | todo | — |
-| [task-B2](./task-B2.md) | 布局原语（ReadingLayout / EmptyState / PillTabs） | todo | — |
-| [task-B3](./task-B3.md) | 主页改版：日分组时间轨精选流 | todo | — |
-| [task-B4](./task-B4.md) | /trending 热点榜三层结构 | todo | — |
-| [task-B5](./task-B5.md) | /trending-shift 行榜换装 | todo | — |
-| [task-B6](./task-B6.md) | /edu 域 AIHot 卡片网格化 | todo | — |
-| [task-B7](./task-B7.md) | nav-visibility 收敛 + 全量验收 | todo | — |
+| [A1](./task-A1.md) | collectors 任务注册表 + 单任务 CLI + 边界固化 | done |
+| [B1](./task-B1.md) | AIHot token 叠加（ink/hot/rank/radius 六档） | done |
+| [B2](./task-B2.md) | 布局原语（ReadingLayout / EmptyState / PillTabs） | done |
+| [B3](./task-B3.md) | 主页改版：日分组时间轨精选流 | done |
+| [B4](./task-B4.md) | /trending 热点榜三层结构 | done |
+| [B5](./task-B5.md) | /trending-shift 行榜换装 | done |
+| [B6](./task-B6.md) | /edu 域 AIHot 卡片网格化 | done |
+| [B7](./task-B7.md) | nav-visibility 收敛 + 全量验收 | done |
 
 依赖：A1 独立；B1 → B2 → (B3/B4/B5/B6 并行序贯) → B7。
 

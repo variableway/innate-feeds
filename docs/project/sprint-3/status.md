@@ -9,9 +9,11 @@
 | task-B4 | /trending 热点榜三层结构 | done | 836acc2 |
 | task-B5 | /trending-shift 行榜换装 | done | 68e43c2 |
 | task-B6 | /edu 域 AIHot 卡片网格化 | done | 13aaf2d |
-| task-B7 | nav-visibility 收敛 + 全量验收 | todo | — |
+| task-B7 | nav-visibility 收敛 + 全量验收 | done | 89391b8 |
 
 ## 执行日志
+
+- 2026-11-07 task-B7 done（89391b8）：nav-visibility 上线，sprint-3 全部 8 任务完成。全量验收：可见 6 页 + hidden 4 页直达 200、typecheck 四处、bun test 102/0、build:static 绿。
 
 - 2026-11-07 task-B6 done（13aaf2d）。
 - 2026-11-07 task-B5 done（68e43c2）。

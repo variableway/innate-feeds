@@ -8,6 +8,6 @@
 
 ## 完成回填（完成后）
 
-- 做了什么： 三文件——（rounded-card、title text-ink、路径/tagline/元信息 ink-3/4 层次、Core 徽章改 bg-hot）；（分类 select 移除，改为全部分类+各分类的药丸芯片行，active bg-ink；搜索/相关度/排序保留）；（网格 grid-cols-1/sm:2/lg:3/xl:4，计数 text-ink-4 tabular-nums）。
+- 做了什么：`topics/edu-animate/src` 三文件——`components/skill-card.tsx`（rounded-card、title text-ink、路径/tagline/元信息 ink-3/4 层次、Core 徽章改 bg-hot）；`components/edu-filter-bar.tsx`（分类 select 移除，改为「全部分类 + 各分类」的药丸芯片行，active bg-ink；搜索/相关度/排序保留）；`pages/page.tsx`（网格 grid-cols-1/sm:2/lg:3/xl:4，计数 text-ink-4 tabular-nums）。
 - 完成的功能：①AIHot 索引网格 + 药丸分类筛选 ②域包自包含边界不破（药丸为域内自绘，只消费宿主全局 CSS token，未 import frontend 内部组件）③videos/categories 页未动、照常可用。
-- 验证证明：/__dev_main.js 含「全部分类/rounded-card/text-ink-3」×19；/edu、/edu/videos 均 200；bun run typecheck（含 edu-animate 包）绿；VITE_STATIC_MODE 构建通过。提交 **13aaf2d**。
+- 验证证明：`/__dev_main.js` 含「全部分类/rounded-card/text-ink-3」×19；/edu、/edu/videos 均 200；`bun run typecheck`（含 edu-animate 包）绿；VITE_STATIC_MODE 构建通过。提交 **13aaf2d**。
