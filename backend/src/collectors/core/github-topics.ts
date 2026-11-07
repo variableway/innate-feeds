@@ -114,6 +114,10 @@ export const UX_DESIGN_TOPICS = [
   "accessibility",
   "tailwindcss",
   "shadcn-ui",
+  "anti-slop",
+  "slop",
+  "ai-slop",
+  "humanizer",
 ];
 
 /** Topics synced when no explicit `--topic` is given. */

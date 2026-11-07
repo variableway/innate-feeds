@@ -21,6 +21,10 @@ const FETCH_TOPICS = [
   "accessibility",
   "tailwindcss",
   "shadcn-ui",
+  "anti-slop",
+  "slop",
+  "ai-slop",
+  "humanizer",
 ];
 
 /** 页面类目：策展的业务层 topic（技术栈类不在此列）。 */
@@ -33,6 +37,8 @@ const CATEGORY_TOPICS: { id: string; label: string }[] = [
   { id: "component-library", label: "组件框架" },
   { id: "figma", label: "Figma" },
   { id: "accessibility", label: "无障碍" },
+  { id: "anti-slop", label: "反 AI 味" },
+  { id: "humanizer", label: "Humanizer" },
 ];
 
 /** SKILL 特征 topic（Agent Skills 生态标签） */

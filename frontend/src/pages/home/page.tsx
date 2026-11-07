@@ -325,7 +325,7 @@ export function HomePage() {
   }, [pool, page]);
 
   return (
-    <div className="mx-auto max-w-[var(--page-max-reading)] px-1 pb-14">
+    <div className="mx-auto max-w-[var(--page-max-reading)] px-8 pb-14 sm:px-10 lg:px-12">
       <header className="pb-5 pt-5 lg:pt-0">
         <p className="text-[13px] text-hot">精选流</p>
         <h1 className="text-lg font-semibold text-ink">Innate Feeds</h1>
