@@ -1,5 +1,7 @@
 # Sprint 3 状态总表（单一事实来源）
 
+> GitHub 归档：16 个任务对应 issues #43–#58（已关闭，标签 sprint-3）。
+
 | Task | 内容 | 状态 | 提交 SHA |
 |---|---|---|---|
 | task-A1 | collectors 任务注册表 + 单任务 CLI + M-Sync 边界固化 | todo | — |

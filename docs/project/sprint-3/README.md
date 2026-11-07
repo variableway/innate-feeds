@@ -1,5 +1,7 @@
 # Sprint 3 — 数据收集模块化 + AIHot 风格首波
 
+> GitHub 归档：16 个任务对应 issues #43–#58（已关闭，标签 sprint-3）。
+
 > 2026-11-07 立项 · 依据：[module-partition-design](../../research/projects/module-partition-design.md) +
 > [aihot-ui-adoption](../../research/projects/aihot-ui-adoption.md)（用户目标驱动的 delta 见 [00-architecture.md](./00-architecture.md)）
 
