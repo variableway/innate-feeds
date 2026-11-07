@@ -1,5 +1,6 @@
 import type { FeedItem, FeedFilters } from "@/types/feed";
 import { FeedCard } from "@/components/feed-card";
+import { HotBoard } from "@/components/hot-board";
 import { FilterBar } from "@/components/filter-bar";
 import { GitHubProductTabs } from "@/components/github-product-tabs";
 import { MasterDetailLayout } from "@/components/master-detail-layout";
@@ -25,6 +26,8 @@ interface FeedListPageProps {
   onSelectItem?: (item: FeedItem) => void;
   onHideItem?: (item: FeedItem) => void;
   onCloseDetail?: () => void;
+  /** sprint-3 B4：前 10 项渲染为 AIHot 热点榜三层结构，其余进网格 */
+  hotBoard?: boolean;
 }
 
 export function FeedListPage({
@@ -46,6 +49,7 @@ export function FeedListPage({
   onSelectItem,
   onHideItem,
   onCloseDetail,
+  hotBoard = false,
 }: FeedListPageProps) {
   const totalPages = Math.ceil(total / pageSize);
   const selectedItem =
@@ -76,6 +80,11 @@ export function FeedListPage({
 
   const isDetail = Boolean(selectedRepoId);
 
+  const listItems = hotBoard && !loading ? items.slice(10) : items;
+  const board = hotBoard && !loading && items.length > 0 ? (
+    <HotBoard items={items.slice(0, 10)} selectedRepoId={selectedRepoId} onSelectItem={onSelectItem} />
+  ) : null;
+
   const listBody = (() => {
     if (loading) {
       return Array.from({ length: isDetail ? 5 : 6 }).map((_, i) => (
@@ -89,7 +98,7 @@ export function FeedListPage({
         />
       ));
     }
-    if (items.length === 0) {
+    if (listItems.length === 0 && !board) {
       return (
         <div
           className={
@@ -102,7 +111,7 @@ export function FeedListPage({
         </div>
       );
     }
-    return items.map((item) => (
+    return listItems.map((item) => (
       <FeedCard
         key={item.id}
         item={item}
@@ -160,6 +169,7 @@ export function FeedListPage({
           <div className="space-y-2 p-3">
             {productTabs}
             {filterBar}
+            {board}
             <div className="space-y-2">{listBody}</div>
             {pagination}
           </div>
@@ -190,6 +200,7 @@ export function FeedListPage({
     <div className="p-6">
       {productTabs}
       {filterBar}
+      {board}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {listBody}
       </div>

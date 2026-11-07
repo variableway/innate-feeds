@@ -54,6 +54,7 @@ export function TrendingPage() {
       onSelectItem={openDetail}
       onHideItem={handleHideItem}
       onCloseDetail={closeDetail}
+      hotBoard
     />
   );
 }
