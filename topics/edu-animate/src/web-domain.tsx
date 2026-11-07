@@ -74,13 +74,6 @@ export const webDomain = createWebDomain("edu-animate")
       order: 51,
       group: "主题",
     },
-    {
-      label: "Edu Categories",
-      path: "/edu/categories",
-      icon: "LayoutGrid",
-      order: 52,
-      group: "主题",
-    },
   ])
   .addCapability("homeTile", {
     title: "Edu Animate",

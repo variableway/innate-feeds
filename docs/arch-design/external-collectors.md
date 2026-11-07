@@ -9,6 +9,9 @@
 
 ## 数据源概览
 
+> 2026-11-07 新增 `edu-videos-bilibili`（B 站策展 UP 投稿，Firecrawl 链路）——
+> 详见 [edu-videos-bilibili.md](./edu-videos-bilibili.md)。
+
 | 数据源 | 采集方式 | 存储 | 更新频率 | CLI 命令 |
 |--------|---------|------|---------|---------|
 | **Product Hunt** | Firecrawl 抓取 Leaderboard 页面 | `~/.innate/producthunt/` | 每日/周/月 | `bun run sync:producthunt` |

@@ -26,7 +26,7 @@ innate-feeds/
 │   │   ├── collectors/      # Data collection layer（M0 分组：core/external/vertical）
 │   │   │   ├── core/        # GitHub 系：github / firecrawl / sync / sync-window / issues-digest / prefetch-readmes / github-topics
 │   │   │   ├── external/    # 外部 JSON 源：producthunt / yc / a16z / hackernews / huggingface / github-new / devto / lobsters / trendshift / vc-portfolio
-│   │   │   ├── vertical/    # 垂直 topic 源：awesome-dsh / dsh-catalog / edu-skills / edu-videos
+│   │   │   ├── vertical/    # 垂直 topic 源：awesome-dsh / dsh-catalog / edu-skills / edu-videos / edu-videos-bilibili
 │   │   │   └── shared/      # Shared collector utilities
 │   │   │       ├── types.ts # ExternalFeedItem, FeedCollector interfaces（re-export 根 shared/types）
 │   │   │       ├── storage.ts # JSON storage (manifest + saveItems)
@@ -89,13 +89,13 @@ innate-feeds/
 │   │   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: dsh, order 30
 │   │   ├── package.json          # name: @innate/domain-dsh; 跨包引用根 shared/（plugin-categories、types/plugins），由宿主 main.tsx 直接打进 bundle
 │   │   └── tsconfig.json
-│   ├── edu-animate/              # @innate/domain-edu-animate — 教育动画制作垂直聚合域插件
+│   ├── edu-animate/              # @innate/domain-edu-animate — 教育动画垂直域（skills + 双源教学视频：YouTube / B 站）
 │   ├── ux-design/           # @innate/domain-ux-design — UI/UX Design 主题域（B10：topics 快照消费，无自有采集器）
 │   │   ├── src/
 │   │   │   ├── index.ts          # export { webDomain }
 │   │   │   ├── web-domain.tsx    # createWebDomain("edu-animate"): /edu* routes + navItems/homeTile
 │   │   │   ├── domain-layout.tsx # edu business-area layout (scroll container)
-│   │   │   ├── pages/            # page.tsx (skills), videos-page.tsx, categories-page.tsx
+│   │   │   ├── pages/            # page.tsx (skills), videos-page.tsx
 │   │   │   ├── components/       # skill-card / video-card / edu-filter-bar / edu-pagination / copy-button
 │   │   │   ├── services/         # edu.ts — API client + static-mode client-side filter/sort/pagination
 │   │   │   ├── types/            # edu.ts
@@ -127,7 +127,7 @@ innate-feeds/
 | Validation | Zod (used in API input validation) |
 | Type checking | TypeScript 5.7+ |
 | Plugin directory | Own domain plugin `@innate/domain-dsh` (`dsh/`), routes under `/dsh`, data from Hono `/api/plugins` (awesome-dsh-plugin market catalog, datasource in `backend/src/dsh/`) |
-| Education-animation domain | Own domain plugin `@innate/domain-edu-animate` (`edu-animate/`), routes under `/edu`, data from the `edu-skills` / `edu-videos` external sources (`/api/external/*`) |
+| Education-animation domain | Own domain plugin `@innate/domain-edu-animate` (`topics/edu-animate/`), routes under `/edu`, data from `edu-skills` / `edu-videos`（YouTube）/ `edu-videos-bilibili`（B 站）external sources (`/api/external/*`) |
 
 ## Build and development commands
 
@@ -200,7 +200,7 @@ bunx tsx src/app/cli.ts sync digest --days 90
 bunx tsx src/app/cli.ts sync window [--days 90] [--skip-readme] [--force]
 ```
 
-### Sync external sources (Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / GitHub Topics / Edu Skills / Edu Videos)
+### Sync external sources (Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / GitHub Topics / Edu Skills / Edu Videos / Edu Videos bilibili)
 
 These are independent JSON-based collectors (no SQLite, see `docs/arch-design/external-collectors.md`).
 
@@ -260,6 +260,9 @@ bun src/app/cli.ts sync edu-skills --max 200 # 限制领域候选数（默认 60
 
 # Edu Videos — 策展频道的教学视频（只收元数据 + 链接；需要 YOUTUBE_API_KEY）
 bun run sync:edu-videos
+
+# Edu Videos (bilibili) — B 站策展 UP 主投稿（Firecrawl：search 解析 mid → 渲染抓取；见 docs/arch-design/edu-videos-bilibili.md）
+cd backend && bun src/app/cli.ts sync edu-videos-bilibili
 
 # Unified sync (all 10 JSON-store external sources; per-source failures don't abort)
 bun run sync:vc                # all 10 sources; root data:sync:external (daily) excludes producthunt pending GH #33
@@ -383,7 +386,7 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/feeds/languages` | All distinct repository languages. |
 | GET | `/api/feeds/dates` | Available trending snapshot dates. |
 | GET | `/api/feeds/digest/:id` | Single digest item (with body). |
-| GET | `/api/external` | External feed sources index (GH #31): Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / edu-skills / edu-videos with latest snapshot meta. |
+| GET | `/api/external` | External feed sources index (GH #31): Product Hunt / YC / a16z / Hacker News / Hugging Face / GitHub New / Dev.to / lobste.rs / edu-skills / edu-videos / edu-videos-bilibili with latest snapshot meta. |
 | GET | `/api/external/:source` | One external source's latest snapshot (`?label=` for a specific manifest entry). |
 | POST | `/api/feeds/sync` | Trigger sync. Body validated with Zod: `{ type: "trending" \| "starred" \| "all-trending", period?, username?, force?, days? }`. |
 | POST | `/api/feeds/hide` | Hide an item so it is filtered out of all list/detail responses. Body: `{ kind: "digest" \| "repo", id }` (`id` = digest item id, or repo `fullName`). Persisted to `hidden.json` next to the DB; also applied at static-export time. |
@@ -491,7 +494,9 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `services/topics.ts` — GitHub Topics datasource client (GH #24): `/api/topics*` in API mode, `/data/topics/*.json` in static mode; POST `/api/topics` is API-only (GH #26).
 - `pages/topics/` — topic index + topic detail view (GH #24): badges `New` / `In feeds`, topic chips navigate to the clicked topic.
 - `services/hidden.ts` tracks user-hidden items (localStorage + `/api/feeds/hide`; static mode also merges the exported `hidden.json`). `feeds.ts` filters them out of every list/detail response.
-- `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. Additional themes available via `themes/linear.css` and `themes/notion.css`.
+- `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. **sprint-3 起基色为 AIHot 调色板**（纸感底/teal accent，`--sidebar` 用 sunk 档），叠加 ink/hot/rank 色阶与 radius 六档扩展层；shadcn token 名不变。Additional themes available via `themes/linear.css` and `themes/notion.css`.
+- **AIHot 布局原语**在 `frontend/src/components/layout/`（ReadingLayout / EmptyState / PillTabs）；热点榜组件 `components/hot-board.tsx`（trending 页三层结构）。
+- **导航可见性**（host 裁量）：`frontend/src/nav-visibility.ts` 决定侧栏露出——主页 / Trending / Trending Shift / Starred / 主题组（EDU、UI/UX Design）/ SQLite(admin)；digest/topics/feeds/dsh 为 hidden（路由保留 URL 直达）。「主题」组按域包 navItems `group: "主题"` 约定挂入，新增 `topics/<id>/` 域包即自动出现。
 
 ## Where to make changes
 
@@ -524,7 +529,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing types shared between frontend and backend concepts | `frontend/src/types/feed.ts` (backend has its own internal types in `db/index.ts`) |
 | Changing shared constants (plugin categories, theme catalog) | `shared/plugin-categories.ts`, `shared/theme-catalog.ts` (non-`@innate` scope — keep it that way) |
 | Changing the education-animation domain (edu-animate) | `topics/edu-animate/src/` (domain plugin @innate/domain-edu-animate), `shared/edu-categories.ts` |
-| Changing the education-animation collectors | `backend/src/collectors/vertical/edu-skills.ts`, `edu-videos.ts` |
+| Changing the education-animation collectors | `backend/src/collectors/vertical/edu-skills.ts`, `edu-videos.ts`, `edu-videos-bilibili.ts` |
 | Changing styling / theme | `frontend/src/styles.css` |
 | Changing the frontend build / dev toolchain | `frontend/scripts/build.ts`, `dev.ts`, `preview.ts` |
 | Bundling the backend for production | `backend/package.json` (`build` → `bun build --target=bun` into `backend/dist/`) |
