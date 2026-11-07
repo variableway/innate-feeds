@@ -9,14 +9,14 @@
 import { execFileSync } from "child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import { fetchJson } from "./shared/http.js";
-import { getSourceDir } from "./shared/storage.js";
-import { readStoredPat } from "../auth/token-store.js";
-import { getProjectRoot } from "../data/app-config.js";
+import { fetchJson } from "../shared/http.js";
+import { getSourceDir } from "../shared/storage.js";
+import { readStoredPat } from "../../auth/token-store.js";
+import { getProjectRoot } from "../../data/app-config.js";
 import {
   PLUGIN_CATEGORY_IDS,
   pluginCategoryById,
-} from "../../../shared/plugin-categories.js";
+} from "../../../../shared/plugin-categories.js";
 
 export const AWESOME_DSH_REPO = "awesome-dsh-plugin/awesome-dsh-plugin";
 export const AWESOME_DSH_INDEX_URL =

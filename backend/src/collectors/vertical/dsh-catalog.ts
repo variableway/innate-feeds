@@ -27,7 +27,7 @@ import {
 } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { tmpdir } from "node:os";
-import { getProjectRoot } from "../data/app-config.js";
+import { getProjectRoot } from "../../data/app-config.js";
 
 export const DSH_CATALOG_REPO = "awesome-dsh-plugin/awesome-dsh-plugin";
 export const DSH_CATALOG_REF = "main";

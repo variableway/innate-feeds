@@ -21,7 +21,7 @@ import {
   TRENDSHIFT_TIMEFRAMES,
   type TrendshiftTimeframe,
   type TrendshiftLanguageFilter,
-} from "../collector/trendshift.js";
+} from "../collectors/external/trendshift.js";
 
 export interface TrendshiftExportResult {
   copied: number;

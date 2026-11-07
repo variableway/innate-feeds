@@ -14,7 +14,7 @@ import { execFileSync } from "child_process";
 import { mkdirSync, writeFileSync } from "fs";
 import { homedir } from "os";
 import { join } from "path";
-import { DEFAULT_SYNC_WINDOW_DAYS, dateDaysAgo } from "../data/date-window.js";
+import { DEFAULT_SYNC_WINDOW_DAYS, dateDaysAgo } from "../../data/date-window.js";
 
 export type DigestSourceId = "ruanyf-weekly" | "github-daily" | "hellogithub";
 

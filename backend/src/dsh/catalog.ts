@@ -16,8 +16,8 @@ import {
   pluginCategoryById,
   type PluginCategoryId,
 } from "../../../shared/plugin-categories.js";
-import type { MarketCatalogFile } from "../collector/awesome-dsh.js";
-import { getAwesomeDshDir } from "../collector/awesome-dsh.js";
+import type { MarketCatalogFile } from "../collectors/vertical/awesome-dsh.js";
+import { getAwesomeDshDir } from "../collectors/vertical/awesome-dsh.js";
 
 export interface DshPlugin {
   slug: string;

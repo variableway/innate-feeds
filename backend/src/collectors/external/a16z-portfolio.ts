@@ -9,13 +9,13 @@
  *   bunx tsx src/collector/a16z-portfolio.ts --save
  */
 
-import { fetchJson } from "./shared/http.js";
-import { saveItems } from "./shared/storage.js";
+import { fetchJson } from "../shared/http.js";
+import { saveItems } from "../shared/storage.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 interface CompanyEntry {
   name: string;

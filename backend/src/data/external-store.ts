@@ -13,11 +13,11 @@ import {
   getSourceDir,
   readManifest,
   type ManifestEntry,
-} from "../collector/shared/storage.js";
+} from "../collectors/shared/storage.js";
 import type {
   ExternalFeedItem,
   FeedSource,
-} from "../collector/shared/types.js";
+} from "../collectors/shared/types.js";
 
 /** Sources served by /api/external* (trendshift/topics/awesome-dsh have their own APIs). */
 export const EXTERNAL_SOURCES: {

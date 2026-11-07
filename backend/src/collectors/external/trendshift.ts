@@ -20,7 +20,7 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import { getSourceDir } from "./shared/storage.js";
+import { getSourceDir } from "../shared/storage.js";
 
 export const TRENDSHIFT_TIMEFRAMES = [
   "daily",

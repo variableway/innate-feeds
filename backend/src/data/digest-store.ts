@@ -20,7 +20,7 @@ import {
   type DigestFetchResult,
   type DigestItemLocal,
   type DigestSourceId,
-} from "../collector/issues-digest.js";
+} from "../collectors/core/issues-digest.js";
 import { getFrontendPublicDataDir } from "./app-config.js";
 import { getHiddenDigestIds, getHiddenFilePath } from "./hidden-store.js";
 

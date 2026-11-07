@@ -29,14 +29,14 @@
  *    该采集器需在 CI（ubuntu-latest）里跑；本机只能验证解析逻辑（见 edu-videos.test.ts）。
  */
 
-import { fetchJson, fetchHtml } from "./shared/http.js";
-import { saveItems } from "./shared/storage.js";
-import { matchEduCategories } from "../../../shared/edu-categories.js";
+import { fetchJson, fetchHtml } from "../shared/http.js";
+import { saveItems } from "../shared/storage.js";
+import { matchEduCategories } from "../../../../shared/edu-categories.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 /** 策展的频道。分类由策展者指定，不靠关键词猜。 */
 export interface EduVideoFeed {

@@ -16,8 +16,8 @@ import {
   addUserTopic,
   readUserTopics,
   type TopicSnapshotItem,
-} from "../data/topics-store.js";
-import type { ExternalFeedItem } from "./shared/types.js";
+} from "../../data/topics-store.js";
+import type { ExternalFeedItem } from "../shared/types.js";
 
 function repo(id: number, fullName: string, stars = 10): ExternalFeedItem {
   const [owner, name] = fullName.split("/");

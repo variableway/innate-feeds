@@ -3,24 +3,24 @@ import {
   getDb,
   listStarredFullNamesSince,
   listTrendingFullNamesSince,
-} from "../db/index.js";
-import { getDefaultDbPath } from "../db/paths.js";
+} from "../../db/index.js";
+import { getDefaultDbPath } from "../../db/paths.js";
 import { getDefaultDigestDir, runDigestExport } from "./issues-digest.js";
 import { prefetchReadmes } from "./prefetch-readmes.js";
 import { syncAllTrending, syncStarred } from "./sync.js";
 import {
   getFrontendPublicDataDir,
   getStaticReadmesDir,
-} from "../data/app-config.js";
+} from "../../data/app-config.js";
 import {
   DEFAULT_SYNC_WINDOW_DAYS,
   dateDaysAgo,
   isoDaysAgo,
-} from "../data/date-window.js";
+} from "../../data/date-window.js";
 import {
   getDigestGithubRepoFullNames,
   writeStaticDigestJson,
-} from "../data/digest-store.js";
+} from "../../data/digest-store.js";
 
 export { DEFAULT_SYNC_WINDOW_DAYS, dateDaysAgo };
 

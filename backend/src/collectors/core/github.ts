@@ -1,11 +1,11 @@
 import { createHash } from "crypto";
 import { execFileSync } from "child_process";
-import { ghProcessEnv, readStoredPat } from "../auth/token-store.js";
+import { ghProcessEnv, readStoredPat } from "../../auth/token-store.js";
 import {
   getReadmeCachePath,
   readCachedReadme,
   tryWriteCachedReadme,
-} from "../data/readme-cache.js";
+} from "../../data/readme-cache.js";
 
 export interface GitHubRepo {
   id: number;

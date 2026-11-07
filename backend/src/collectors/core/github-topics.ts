@@ -24,18 +24,18 @@
  */
 
 import { execFileSync } from "child_process";
-import { saveItems } from "./shared/storage.js";
+import { saveItems } from "../shared/storage.js";
 import {
   readTopicSnapshot,
   saveTopicSnapshot,
   readUserTopics,
   type TopicSnapshotItem,
-} from "../data/topics-store.js";
+} from "../../data/topics-store.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 export type TopicSort = "stars" | "updated" | "best-match";
 

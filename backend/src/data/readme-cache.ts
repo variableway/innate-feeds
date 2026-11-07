@@ -8,7 +8,7 @@ import {
 } from "fs";
 import { join } from "path";
 import { resolveReadmesRoot } from "./app-config.js";
-import type { RepoReadmeDTO } from "../collector/github.js";
+import type { RepoReadmeDTO } from "../collectors/core/github.js";
 
 const REPO_NAME_RE = /^[\w.-]+$/;
 

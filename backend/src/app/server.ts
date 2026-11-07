@@ -18,8 +18,8 @@ import {
   syncTrending,
   syncAllTrending,
   syncStarred,
-} from "../collector/sync.js";
-import { fetchRepoReadme, type TrendingPeriod } from "../collector/github.js";
+} from "../collectors/core/sync.js";
+import { fetchRepoReadme, type TrendingPeriod } from "../collectors/core/github.js";
 import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
 import { hideItem, unhideItem } from "../data/hidden-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";
@@ -33,7 +33,7 @@ import {
   TRENDSHIFT_TIMEFRAMES,
   type TrendshiftLanguageFilter,
   type TrendshiftTimeframe,
-} from "../collector/trendshift.js";
+} from "../collectors/external/trendshift.js";
 import {
   addUserTopic,
   buildTopicResponse,

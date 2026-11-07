@@ -8,7 +8,7 @@ import {
 import {
   matchEduCategories,
   isEduDomain,
-} from "../../../shared/edu-categories.js";
+} from "../../../../shared/edu-categories.js";
 
 const feed: EduVideoFeed = {
   id: "3b1b",

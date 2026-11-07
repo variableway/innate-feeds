@@ -15,8 +15,8 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import { getSourceDir } from "../collector/shared/storage.js";
-import type { ExternalFeedItem } from "../collector/shared/types.js";
+import { getSourceDir } from "../collectors/shared/storage.js";
+import type { ExternalFeedItem } from "../collectors/shared/types.js";
 
 /** One repo inside a topic snapshot. */
 export interface TopicSnapshotItem extends ExternalFeedItem {

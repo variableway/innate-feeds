@@ -14,18 +14,18 @@
  */
 
 import { execFileSync } from "child_process";
-import { fetchHtml, fetchJson } from "./shared/http.js";
-import { saveItems } from "./shared/storage.js";
+import { fetchHtml, fetchJson } from "../shared/http.js";
+import { saveItems } from "../shared/storage.js";
 import {
   EDU_DOMAIN_KEYWORDS,
   isEduDomain,
   matchEduCategories,
-} from "../../../shared/edu-categories.js";
+} from "../../../../shared/edu-categories.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 const SITE = "https://www.skills.sh";
 const SITEMAPS = ["sitemap-skills-1.xml", "sitemap-skills-2.xml"];

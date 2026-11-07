@@ -17,13 +17,13 @@
  *   bunx tsx src/collector/producthunt.ts --save                   # today, all periods
  */
 
-import { saveItems } from "./shared/storage.js";
-import { fetchHtml } from "./shared/http.js";
+import { saveItems } from "../shared/storage.js";
+import { fetchHtml } from "../shared/http.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 export type PHPeriod = "daily" | "weekly" | "monthly";
 

@@ -15,12 +15,12 @@
  */
 
 import { execFileSync } from "child_process";
-import { saveItems } from "./shared/storage.js";
+import { saveItems } from "../shared/storage.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 interface GHSearchRepo {
   id: number;

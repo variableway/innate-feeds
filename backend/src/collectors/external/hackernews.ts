@@ -10,13 +10,13 @@
  *   bun src/collector/hackernews.ts --date 2026-10-31 --save
  */
 
-import { saveItems } from "./shared/storage.js";
-import { fetchJson } from "./shared/http.js";
+import { saveItems } from "../shared/storage.js";
+import { fetchJson } from "../shared/http.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 const API_BASE = "https://hn.algolia.com/api/v1";
 

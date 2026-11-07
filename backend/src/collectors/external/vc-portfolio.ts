@@ -19,9 +19,9 @@ import { HuggingFaceCollector } from "./huggingface.js";
 import { GitHubNewCollector } from "./github-new.js";
 import { DevToCollector } from "./devto.js";
 import { LobstersCollector } from "./lobsters.js";
-import { EduSkillsCollector } from "./edu-skills.js";
-import { EduVideosCollector } from "./edu-videos.js";
-import type { FeedSource } from "./shared/types.js";
+import { EduSkillsCollector } from "../vertical/edu-skills.js";
+import { EduVideosCollector } from "../vertical/edu-videos.js";
+import type { FeedSource } from "../shared/types.js";
 
 export type SyncTarget = FeedSource | "all";
 

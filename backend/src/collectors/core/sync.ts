@@ -6,7 +6,7 @@ import {
   insertStarredTopics,
   getLatestStarredAt,
   deleteTrendingSnapshot,
-} from "../db/index.js";
+} from "../../db/index.js";
 import {
   fetchTrendingRepos,
   fetchStarredReposWithDate,

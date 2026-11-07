@@ -13,13 +13,13 @@
  *   bun src/collector/huggingface.ts --save
  */
 
-import { saveItems } from "./shared/storage.js";
-import { fetchJson } from "./shared/http.js";
+import { saveItems } from "../shared/storage.js";
+import { fetchJson } from "../shared/http.js";
 import type {
   ExternalFeedItem,
   FeedCollector,
   SaveResult,
-} from "./shared/types.js";
+} from "../shared/types.js";
 
 const API_BASE = "https://huggingface.co/api";
 

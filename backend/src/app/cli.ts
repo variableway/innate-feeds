@@ -2,13 +2,13 @@ import {
   syncTrending,
   syncAllTrending,
   syncStarred,
-} from "../collector/sync.js";
-import { parseWindowArgs, syncWindow } from "../collector/sync-window.js";
+} from "../collectors/core/sync.js";
+import { parseWindowArgs, syncWindow } from "../collectors/core/sync-window.js";
 import {
   getDefaultDigestDir,
   parseDigestArgs,
   runDigestExport,
-} from "../collector/issues-digest.js";
+} from "../collectors/core/issues-digest.js";
 import {
   getDb,
   getFeedItems,
@@ -19,25 +19,25 @@ import {
 } from "../db/index.js";
 import { writeFileSync } from "fs";
 import { getDefaultDbPath } from "../db/paths.js";
-import { ProductHuntCollector } from "../collector/producthunt.js";
-import { YCCompaniesCollector } from "../collector/yc-companies.js";
-import { A16zPortfolioCollector } from "../collector/a16z-portfolio.js";
-import { syncVCPortfolio } from "../collector/vc-portfolio.js";
-import { EduSkillsCollector } from "../collector/edu-skills.js";
-import { EduVideosCollector } from "../collector/edu-videos.js";
-import { HackerNewsCollector } from "../collector/hackernews.js";
-import { HuggingFaceCollector } from "../collector/huggingface.js";
-import { GitHubNewCollector } from "../collector/github-new.js";
-import { DevToCollector } from "../collector/devto.js";
-import { LobstersCollector } from "../collector/lobsters.js";
+import { ProductHuntCollector } from "../collectors/external/producthunt.js";
+import { YCCompaniesCollector } from "../collectors/external/yc-companies.js";
+import { A16zPortfolioCollector } from "../collectors/external/a16z-portfolio.js";
+import { syncVCPortfolio } from "../collectors/external/vc-portfolio.js";
+import { EduSkillsCollector } from "../collectors/vertical/edu-skills.js";
+import { EduVideosCollector } from "../collectors/vertical/edu-videos.js";
+import { HackerNewsCollector } from "../collectors/external/hackernews.js";
+import { HuggingFaceCollector } from "../collectors/external/huggingface.js";
+import { GitHubNewCollector } from "../collectors/external/github-new.js";
+import { DevToCollector } from "../collectors/external/devto.js";
+import { LobstersCollector } from "../collectors/external/lobsters.js";
 import {
   listTopics,
   syncTopics,
   TOPIC_LIMIT,
-} from "../collector/github-topics.js";
-import { saveItems } from "../collector/shared/storage.js";
-import { syncDshCatalog } from "../collector/dsh-catalog.js";
-import { syncAwesomeDsh } from "../collector/awesome-dsh.js";
+} from "../collectors/core/github-topics.js";
+import { saveItems } from "../collectors/shared/storage.js";
+import { syncDshCatalog } from "../collectors/vertical/dsh-catalog.js";
+import { syncAwesomeDsh } from "../collectors/vertical/awesome-dsh.js";
 import {
   syncTrendshift,
   TRENDSHIFT_LANGUAGES,
@@ -45,7 +45,7 @@ import {
   type TrendshiftLanguageFilter,
   type TrendshiftSource,
   type TrendshiftTimeframe,
-} from "../collector/trendshift.js";
+} from "../collectors/external/trendshift.js";
 
 const command = process.argv[2];
 const dbPath = getDefaultDbPath();

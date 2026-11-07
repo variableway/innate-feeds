@@ -3,7 +3,7 @@ import { join } from "path";
 import type {
   DigestFetchResult,
   DigestItemLocal,
-} from "../collector/issues-digest.js";
+} from "../collectors/core/issues-digest.js";
 import {
   getFrontendPublicDataDir,
   getStaticReadmesDir,
