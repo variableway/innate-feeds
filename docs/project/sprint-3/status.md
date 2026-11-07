@@ -12,8 +12,12 @@
 | task-B7 | nav-visibility 收敛 + 全量验收 | done | 89391b8 |
 | task-B8 | AIHot 配色整体迁移 + 图标语言对齐 | done | b585d2c |
 | task-B9 | 「主题」主导航组（Education 入驻） | done | 043228b |
+| task-B10 | UI/UX Design 主题域（数据收集+域包） | done | 5ed0739 |
+| task-B11 | edu categories 并入主页，菜单改 EDU | done | 5ed0739 |
 
 ## 执行日志
+
+- 2026-11-07 task-B10 + B11 done（5ed0739）：UI/UX Design 主题上线（10 topic 数据 + Hub 域包），edu 精简为 EDU。sprint-3 计 12 任务。
 
 - 2026-11-07 task-B8 done（b585d2c）+ task-B9 done（043228b）：sprint-3 计 10/10 任务收官。
 
