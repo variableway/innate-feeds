@@ -28,6 +28,8 @@ export function VideoCard({ video }: { video: EduVideo }) {
             src={video.thumbnail}
             alt={video.title}
             loading="lazy"
+            /* B14 修复：B 站图床 Referer 防盗链（带外站 Referer 403），封面图不发送 Referer */
+            referrerPolicy="no-referrer"
             className="h-full w-full object-cover transition-transform group-hover:scale-[1.02]"
           />
         ) : null}
