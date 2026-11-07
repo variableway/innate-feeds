@@ -10,8 +10,14 @@
 | task-B5 | /trending-shift 行榜换装 | done | 68e43c2 |
 | task-B6 | /edu 域 AIHot 卡片网格化 | done | 13aaf2d |
 | task-B7 | nav-visibility 收敛 + 全量验收 | done | 89391b8 |
+| task-B8 | AIHot 配色整体迁移 + 图标语言对齐 | done | b585d2c |
+| task-B9 | 「主题」主导航组（Education 入驻） | done | 043228b |
 
 ## 执行日志
+
+- 2026-11-07 task-B8 done（b585d2c）+ task-B9 done（043228b）：sprint-3 计 10/10 任务收官。
+
+- 2026-11-07 追加 task-B8（AIHot 配色+图标）/ task-B9（「主题」主导航组）——用户看效果后提出。
 
 - 2026-11-07 task-B7 done（89391b8）：nav-visibility 上线，sprint-3 全部 8 任务完成。全量验收：可见 6 页 + hidden 4 页直达 200、typecheck 四处、bun test 102/0、build:static 绿。
 
