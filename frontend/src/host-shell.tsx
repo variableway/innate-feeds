@@ -5,6 +5,7 @@
  * 两个可折叠分组菜单（GitHub / DeepSeek Harness），子项按 `group` 归类。
  * 不属于 domain：插件态下 webshell 自己画侧栏，本文件不被打包进 domains/。
  */
+import { isNavPathVisible } from "./nav-visibility";
 import { useEffect, useMemo, useState } from "react";
 import {
   Github,
@@ -92,7 +93,10 @@ interface NavGroup {
 }
 
 function navItemsOf(domains: WebDomain[]): NavItem[] {
-  return collectNavItems(domains) as NavItem[];
+  // sprint-3 B7：host 可见性裁量——hidden 项不进侧栏（路由保留，URL 直达）
+  return (collectNavItems(domains) as NavItem[]).filter((item) =>
+    isNavPathVisible(item.path),
+  );
 }
 
 /** 按 `group` 归类；组序取组内最小 order，无 group 的项归入默认组。 */

@@ -106,6 +106,13 @@ export const webDomain = createWebDomain("feeds")
   })
   .addCapability("navItems", [
     {
+      label: "主页",
+      path: "/",
+      icon: "Home",
+      order: 5,
+      group: "GitHub",
+    },
+    {
       label: "Trending",
       path: "/trending",
       icon: "Github",
