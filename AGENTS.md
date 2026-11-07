@@ -549,6 +549,7 @@ Repo-scoped skills live in `.claude/skills/` and are committed with the repo. Lo
 | `.claude/skills/feeds-sprint/SKILL.md` | Working a Sprint task in `tasks/sprint-N/` (claim → implement → write back status) |
 | `.claude/skills/arch-diagram/SKILL.md` | Producing a code-grounded architecture diagram (inventory → render → screenshot-verify → commit into `docs/arch-design/`) |
 | `.claude/skills/skill-eval/SKILL.md` | Judging whether a skill actually helps, via a with-skill / no-skill A-B comparison |
+| `.claude/skills/topic-discovery/SKILL.md` | 从 starred 种子仓库发现 GitHub Topics：lift 分层（业务层/技术层）→ 相关性搜索（T1 共现 / T2 Jaccard / T3 GraphQL）→ × trendshift 势头交叉的 topic 精选 → CLI 同步与落盘验证 |
 
 `arch-diagram` also ships `scripts/inventory.js` (pure Node, no deps) for deterministic repo inventory — run it, then cross-check the numbers with an independent `find` command before putting them in a diagram.
 
