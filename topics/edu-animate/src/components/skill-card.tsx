@@ -1,6 +1,7 @@
 import { Download, ExternalLink, Star } from "lucide-react";
 import { EDU_CATEGORY_BY_ID } from "../../../../shared/edu-categories";
 import { formatNumber } from "../lib/format";
+import { eduScore } from "../services/edu";
 import type { EduSkill } from "../types/edu";
 import { CopyButton } from "./copy-button";
 
@@ -36,6 +37,12 @@ export function SkillCard({ skill }: { skill: EduSkill }) {
       ) : null}
 
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-4">
+        <span
+          className="inline-flex items-center rounded-mark bg-hot px-1.5 py-0.5 text-[11px] font-semibold tabular-nums text-background"
+          title="加权分 = 安装量（回退 stars）× (core ? 5 : 1)"
+        >
+          分 {formatNumber(eduScore(skill))}
+        </span>
         <span
           className="inline-flex items-center gap-1"
           title="skills.sh 安装量"

@@ -98,13 +98,6 @@ export function EduVideosPage() {
       {videos.length === 0 ? (
         <div className="flex flex-col items-center gap-4 rounded-lg border border-dashed py-16 text-center">
           <p className="text-muted-foreground">没有匹配的视频。</p>
-          {total === 0 && !state.q && !state.category ? (
-            <p className="max-w-md text-sm text-muted-foreground/80">
-              该源还没有采集过快照 —— 视频采集依赖 YouTube Data API（需要
-              YOUTUBE_API_KEY），在 CI 里跑 <code>sync edu-videos</code>{" "}
-              后即可看到内容。
-            </p>
-          ) : null}
           <button
             type="button"
             onClick={() =>

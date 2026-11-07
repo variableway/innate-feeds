@@ -14,6 +14,7 @@ import {
 import type { EduSearch, EduSkill } from "../types/edu";
 
 const SORT_OPTIONS = [
+  { value: "weighted.desc", label: "加权分（core×5）↓" },
   { value: "installs.desc", label: "安装量 ↓" },
   { value: "stars.desc", label: "Stars ↓" },
   { value: "updated.desc", label: "最近更新 ↓" },
@@ -45,7 +46,7 @@ export function EduSkillsPage() {
         search.relevance === "core" || search.relevance === "related"
           ? search.relevance
           : undefined,
-      sort: search.sort ?? "installs.desc",
+      sort: search.sort ?? "weighted.desc",
       page: search.page ?? 1,
     })
       .then((result) => {
@@ -70,7 +71,7 @@ export function EduSkillsPage() {
       search.relevance === "core" || search.relevance === "related"
         ? search.relevance
         : "",
-    sort: search.sort ?? "installs.desc",
+    sort: search.sort ?? "weighted.desc",
     page: search.page ?? 1,
   };
 
@@ -122,7 +123,7 @@ export function EduSkillsPage() {
                 q: "",
                 category: "",
                 relevance: "",
-                sort: "installs.desc",
+                sort: "weighted.desc",
                 page: 1,
               })
             }

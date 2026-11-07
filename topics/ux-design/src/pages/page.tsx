@@ -67,6 +67,9 @@ function formatStars(n: number): string {
 export function UxDesignPage() {
   const [mode, setMode] = useState<"skill" | "stars">("skill");
   const [topicFilter, setTopicFilter] = useState<string>("all");
+  const [query, setQuery] = useState("");
+  const [lang, setLang] = useState("");
+  const [skillOnly, setSkillOnly] = useState(false);
   const [merged, setMerged] = useState<MergedRepo[] | null>(null);
   const [skillCount, setSkillCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -111,16 +114,28 @@ export function UxDesignPage() {
     };
   }, []);
 
+  const languages = useMemo(() => {
+    if (!merged) return [] as string[];
+    return [...new Set(merged.map((m) => m.repo.language).filter((x): x is string => Boolean(x)))].sort();
+  }, [merged]);
+
   const visible = useMemo(() => {
     if (!merged) return [];
-    const filtered =
-      topicFilter === "all"
-        ? merged
-        : merged.filter((m) => (m.repo.topics ?? []).includes(topicFilter));
+    const q = query.trim().toLowerCase();
+    const filtered = merged.filter((m) => {
+      if (topicFilter !== "all" && !(m.repo.topics ?? []).includes(topicFilter)) return false;
+      if (skillOnly && !m.isSkill) return false;
+      if (lang && m.repo.language !== lang) return false;
+      if (q) {
+        const hay = `${m.repo.fullName} ${m.repo.description ?? ""}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
     return [...filtered].sort((a, b) =>
       mode === "skill" ? b.score - a.score : b.repo.stars - a.repo.stars,
     );
-  }, [merged, mode, topicFilter]);
+  }, [merged, mode, topicFilter, skillOnly, lang, query]);
 
   return (
     <div className="mx-auto w-full max-w-[var(--page-max-reading)] px-4 py-8 sm:px-6 lg:px-8">
@@ -144,6 +159,42 @@ export function UxDesignPage() {
           </p>
         ) : null}
       </header>
+
+      {/* 过滤器（B13：对齐 EDU 页的筛选形态） */}
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="搜索 SKILL、仓库或描述"
+          aria-label="搜索"
+          className="h-9 w-full rounded-md border bg-background px-3 text-sm text-ink-2 sm:max-w-xs"
+        />
+        <select
+          value={lang}
+          onChange={(e) => setLang(e.target.value)}
+          aria-label="语言"
+          className="h-9 rounded-md border bg-background px-2 text-sm text-ink-3"
+        >
+          <option value="">全部语言</option>
+          {languages.map((l) => (
+            <option key={l} value={l}>
+              {l}
+            </option>
+          ))}
+        </select>
+        <button
+          type="button"
+          onClick={() => setSkillOnly((v) => !v)}
+          aria-pressed={skillOnly}
+          className={
+            skillOnly
+              ? "h-9 rounded-full border border-transparent bg-hot px-3 text-[13px] leading-9 text-background"
+              : "h-9 rounded-full border border-border px-3 text-[13px] leading-9 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
+          }
+        >
+          仅 SKILL
+        </button>
+      </div>
 
       {/* 排序 + 主题筛选 */}
       <div className="mb-6 flex flex-col gap-3">
@@ -232,6 +283,18 @@ export function UxDesignPage() {
                 <p className="line-clamp-2 text-[13px] leading-relaxed text-ink-3">
                   {repo.description}
                 </p>
+              ) : null}
+              {(repo.topics ?? []).length > 0 ? (
+                <div className="flex flex-wrap gap-1">
+                  {(repo.topics ?? []).slice(0, 3).map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-mark border border-border px-1.5 py-0.5 text-[11px] text-ink-4"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               ) : null}
               <div className="mt-auto flex items-center gap-3 text-[12px] text-ink-4">
                 <span className="tabular-nums text-ink-3">★ {formatStars(repo.stars)}</span>

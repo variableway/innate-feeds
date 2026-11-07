@@ -185,6 +185,17 @@ function matchesText(hay: string, needle: string): boolean {
   return hay.toLowerCase().includes(needle.toLowerCase());
 }
 
+
+/** B13 加权分：安装量（缺省回退 stars）× (core ? 5 : 1)。 */
+export function eduScore(skill: {
+  installs: number;
+  stars: number | null;
+  relevance: string;
+}): number {
+  const base = skill.installs > 0 ? skill.installs : (skill.stars ?? 0);
+  return base * (skill.relevance === "core" ? 5 : 1);
+}
+
 function paginate<T>(items: T[], query: EduQuery): EduPage<T> {
   const perPage = Math.min(100, Math.max(1, query.perPage ?? DEFAULT_PER_PAGE));
   const page = Math.max(1, query.page ?? 1);
@@ -221,9 +232,16 @@ export function filterSkills(
     out = out.filter((s) => s.relevance === query.relevance);
   }
 
-  const sort = query.sort ?? "installs.desc";
+  const sort = query.sort ?? "weighted.desc";
   const sorted = [...out].sort((a, b) => {
     switch (sort) {
+      case "weighted.desc":
+        // B13 打分：安装量（缺省回退 stars）× core 相关度 ×5 —— 与 /ux SKILL 加权同构
+        return (
+          eduScore(b) - eduScore(a) ||
+          b.installs - a.installs ||
+          a.title.localeCompare(b.title)
+        );
       case "stars.desc":
         return (b.stars ?? -1) - (a.stars ?? -1) || b.installs - a.installs;
       case "updated.desc":
