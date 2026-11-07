@@ -63,4 +63,6 @@ bun src/app/cli.ts sync job edu-videos-bilibili  # 等价（jobs 注册表）
 
 - `/edu/videos`：YouTube + bilibili 合流（bilibili 在前），卡片左上角
   bilibili 徽章；筛选/排序/分页对两源统一生效。
+- 封面图必须 `referrerPolicy="no-referrer"`（video-card 已内置）：
+  B 站图床 hdslb.com 有 Referer 防盗链，带外站 Referer 一律 403。
 - Feeds 菜单内该源为 hidden（nav-visibility），数据照常落盘。
