@@ -8,6 +8,6 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：新建 `frontend/src/components/layout/`：`reading-layout.tsx`（AIHot Page.tsx:12 的单栏+右侧栏 grid，side: 断点对应 lg:）、`empty-state.tsx`（标题+text-ink-4 说明+action）、`pill-tabs.tsx`（泛型受控药丸组件，激活态 bg-ink，可选 count 徽标）+ `index.ts` barrel。
+- 完成的功能：三个纯展示原语可直接被 B3-B6 消费；TS 严格类型（PillTabs 泛型约束 T extends string）；零业务依赖、零 @innate/ui 耦合。
+- 验证证明：typecheck 绿（修复一处 ReactNode 缺 import 后过）；实际消费验证由 B3（主页）承接——见 task-B3 回填。提交 **f34cae9**。
