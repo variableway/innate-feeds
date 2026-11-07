@@ -9,18 +9,18 @@
    serve 服务照旧提供同样的数据（零行为变化）。
 2. **AIHot 风格首波**：主页、GitHub Trending、Trending Shift、Education（/edu）四块。
 
-## 任务索引
+## 任务索引（8/8 完成，2026-11-07 收官）
 
 | Task | 内容 | 状态 | 提交 |
 |---|---|---|---|
-| [A1](./task-A1.md) | collectors 任务注册表 + 单任务 CLI + 边界固化 | done |
-| [B1](./task-B1.md) | AIHot token 叠加（ink/hot/rank/radius 六档） | done |
-| [B2](./task-B2.md) | 布局原语（ReadingLayout / EmptyState / PillTabs） | done |
-| [B3](./task-B3.md) | 主页改版：日分组时间轨精选流 | done |
-| [B4](./task-B4.md) | /trending 热点榜三层结构 | done |
-| [B5](./task-B5.md) | /trending-shift 行榜换装 | done |
-| [B6](./task-B6.md) | /edu 域 AIHot 卡片网格化 | done |
-| [B7](./task-B7.md) | nav-visibility 收敛 + 全量验收 | done |
+| [task-A1](./task-A1.md) | collectors 任务注册表 + 单任务 CLI + 边界固化 | done | 793e6ea |
+| [task-B1](./task-B1.md) | AIHot token 叠加（ink/hot/rank/radius 六档） | done | eea452e |
+| [task-B2](./task-B2.md) | 布局原语（ReadingLayout / EmptyState / PillTabs） | done | f34cae9 |
+| [task-B3](./task-B3.md) | 主页改版：日分组时间轨精选流 | done | 642754d |
+| [task-B4](./task-B4.md) | /trending 热点榜三层结构 | done | 836acc2 |
+| [task-B5](./task-B5.md) | /trending-shift 行榜换装 | done | 68e43c2 |
+| [task-B6](./task-B6.md) | /edu 域 AIHot 卡片网格化 | done | 13aaf2d |
+| [task-B7](./task-B7.md) | nav-visibility 收敛 + 全量验收 | done | 89391b8 |
 
 依赖：A1 独立；B1 → B2 → (B3/B4/B5/B6 并行序贯) → B7。
 
