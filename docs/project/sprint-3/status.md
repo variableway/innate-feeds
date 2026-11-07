@@ -22,8 +22,11 @@
 | task-B15 | trending 去重 + 配色加深 + edu/ux 修整 + 静态验证 | done | b3d153f |
 | task-B16 | 主页双区块（3 天热榜合并 + 主题卡片） | done | 15dccb8 |
 | task-B17 | 主页间距修复 + 反AI味主题接入 | done | 89a49ee |
+| task-B18 | 主页 Topic 索引 + 热榜查看更多 + 类目多源匹配 | done | 53eef74 |
 
 ## 执行日志
+
+- 2026-11-07 task-B18 done（53eef74）。sprint-3 计 19 任务。
 
 - 2026-11-07 task-B17 done（89a49ee）。sprint-3 计 18 任务。
 
