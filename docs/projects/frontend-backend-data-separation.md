@@ -1,5 +1,7 @@
 # 前后端数据分离：代码结构调整计划
 
+> 状态更新 2026-11-07：S0（类型收敛）+ S4（源注册表）已随 M0 落地（commit 7fb1ab0）；S1-S3 留独立 track 待排期。
+
 **Status:** backlog —— 方案已成型，**尚未决定是否实施**
 **Issue:** [variableway/innate-feeds#36](https://github.com/variableway/innate-feeds/issues/36)（与中文热榜调研同开，便于合并排期）
 **调研日期:** 2026-11-01

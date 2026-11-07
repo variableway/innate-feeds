@@ -39,7 +39,7 @@ sources:
       源实现为纯函数 TS + cheerio/ofetch，无浏览器依赖，便于移植。
       本轮仅调研：评估「自建 collector 调其公开 API」的接入路线。
     docs:
-      - docs/backlogs/newsnow-trendradar-integration.md
+      - docs/projects/newsnow-trendradar-integration.md
 
   - id: trendradar
     name: TrendRadar
@@ -55,7 +55,7 @@ sources:
       GPL-3.0 红线：复制其源码进本仓会使整个 innate-feeds 被迫同许可开源。
       本轮仅调研「借鉴设计自己实现」与「仅网络交互」两条合规路线。
     docs:
-      - docs/backlogs/newsnow-trendradar-integration.md
+      - docs/projects/newsnow-trendradar-integration.md
 
   - id: newsnext
     name: NewsNext
@@ -71,7 +71,7 @@ sources:
       仅 source/* 子路径为纯 Node 可用。值得借鉴的是架构模式：
       声明式 Provider、typed action 表 + 生成的 JSON Schema、Observation 增量 diff。
     docs:
-      - docs/backlogs/newsnow-trendradar-integration.md
+      - docs/projects/newsnow-trendradar-integration.md
 
   - id: newsnext-registry
     name: NewsNext Registry
@@ -85,7 +85,7 @@ sources:
       与 @newsnext/sdk —— 不能直接消费，需实现完整 loader 解释器。
       本轮结论：本期不纳入范围。
     docs:
-      - docs/backlogs/newsnow-trendradar-integration.md
+      - docs/projects/newsnow-trendradar-integration.md
 
   - id: aihot
     name: AIHOT (aihot.news)
@@ -102,4 +102,4 @@ sources:
       检出路径 references/AIHOT（gitignored，不入库）。
     docs:
       - docs/research/aihot-analysis.md
-      - docs/backlogs/topic-curation-refactor.md
+      - docs/projects/topic-curation-refactor.md

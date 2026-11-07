@@ -21,7 +21,7 @@
 | [features/](./features/README.md) | 功能模块 |
 | [issues/](./issues/README.md) | 任务契约 |
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
-| [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定）——含 [topic-curation-refactor](../backlogs/topic-curation-refactor.md)（分 Topic 精选重构方向）与 [topic-platform-redesign](../backlogs/topic-platform-redesign.md)（重构总案：架构/目录/UI/任务） |
+| [backlogs/](../projects/README.md) | 后续要做的方案与计划（原 backlogs/）——含 [topic-curation-refactor](../projects/topic-curation-refactor.md)（分 Topic 精选重构方向）与 [topic-platform-redesign](../projects/topic-platform-redesign.md)（重构总案：架构/目录/UI/任务） |
 | [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
 | [arch-design/edu-animate-domain.md](../arch-design/edu-animate-domain.md) | 教育动画垂直聚合域（edu-animate）的已采纳设计 |
 | [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
@@ -42,7 +42,7 @@
 
 ## 当前焦点
 
-**Epic sheet-display（admin-data-sheet）已于 2026-11-07 归档**（cancelled）：Univer 方案被已上线的 CodeMirror admin 工作台取代，5 份 issue 与任务日志移至 [archive/issues](../archive/issues/)、[archive/tasks](../archive/tasks/)。当前进行中的方向见 [backlogs/topic-platform-redesign](../backlogs/topic-platform-redesign.md)（M0 目录重构已执行）。
+**Epic sheet-display（admin-data-sheet）已于 2026-11-07 归档**（cancelled）：Univer 方案被已上线的 CodeMirror admin 工作台取代，5 份 issue 与任务日志移至 [archive/issues](../archive/issues/)、[archive/tasks](../archive/tasks/)。当前进行中的方向见 [backlogs/topic-platform-redesign](../projects/topic-platform-redesign.md)（M0 目录重构已执行）。
 
 - [ ] 确认 GitHub Pages 线上 URL，写入 [overview.md](./overview.md)
 
