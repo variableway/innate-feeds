@@ -72,11 +72,11 @@ jobs:
 
       - name: Type check dsh domain
         working-directory: innate-feeds
-        run: cd dsh && bun run typecheck
+        run: cd topics/dsh && bun run typecheck
 
       - name: Type check edu-animate domain
         working-directory: innate-feeds
-        run: cd edu-animate && bun run typecheck
+        run: cd topics/edu-animate && bun run typecheck
 
       - name: Check formatting
         working-directory: innate-feeds

@@ -29,8 +29,8 @@ const srcDir = join(frontendRoot, "src");
 const distDir = join(frontendRoot, "dist");
 const assetsDir = join(distDir, "assets");
 /** 域包源码（@innate/domain-dsh / @innate/domain-edu-animate）：宿主单站构建需扫描其 Tailwind 类 */
-const dshSrcDir = join(frontendRoot, "..", "dsh", "src");
-const eduSrcDir = join(frontendRoot, "..", "edu-animate", "src");
+const dshSrcDir = join(frontendRoot, "..", "topics", "dsh", "src");
+const eduSrcDir = join(frontendRoot, "..", "topics", "edu-animate", "src");
 
 const staticMode = process.env.VITE_STATIC_MODE === "true";
 const basePath = normalizeBasePath(process.env.VITE_BASE_PATH || "/");

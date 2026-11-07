@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Star } from "lucide-react";
-import { pluginCategoryById } from "../../../shared/plugin-categories";
+import { pluginCategoryById } from "../../../../shared/plugin-categories";
 import type { DshPlugin } from "../types/plugin";
 
 function formatStars(stars: number) {

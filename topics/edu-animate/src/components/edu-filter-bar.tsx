@@ -1,4 +1,4 @@
-import { EDU_CATEGORIES } from "../../../shared/edu-categories";
+import { EDU_CATEGORIES } from "../../../../shared/edu-categories";
 import type { EduRelevance } from "../types/edu";
 
 export interface EduFilterState {

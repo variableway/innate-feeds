@@ -1,5 +1,5 @@
 import { Clock, Eye, Play, Calendar } from "lucide-react";
-import { EDU_CATEGORY_BY_ID } from "../../../shared/edu-categories";
+import { EDU_CATEGORY_BY_ID } from "../../../../shared/edu-categories";
 import { formatDate, formatDuration, formatNumber } from "../lib/format";
 import type { EduVideo } from "../types/edu";
 

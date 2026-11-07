@@ -11,7 +11,7 @@
  * 所以筛选 / 排序 / 分页统一在客户端做 —— 数据量在百级，比后端再开一套查询接口更划算。
  */
 
-import { EDU_CATEGORIES } from "../../../shared/edu-categories";
+import { EDU_CATEGORIES } from "../../../../shared/edu-categories";
 import type {
   EduCategoryCount,
   EduPage,

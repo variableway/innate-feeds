@@ -5,7 +5,7 @@ import {
   useParams,
   useSearch,
 } from "@tanstack/react-router";
-import { pluginCategoryById } from "../../../shared/plugin-categories";
+import { pluginCategoryById } from "../../../../shared/plugin-categories";
 import { fetchPlugins } from "../services/plugins";
 import {
   PluginListing,

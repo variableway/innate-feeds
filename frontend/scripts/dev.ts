@@ -25,8 +25,8 @@ const stylesPath = join(srcDir, "styles.css");
 const sharedDir = resolve(frontendRoot, "../shared");
 const publicDir = join(frontendRoot, "public");
 /** 域包源码（@innate/domain-dsh / @innate/domain-edu-animate）：宿主单站构建需扫描其 Tailwind 类 */
-const dshSrcDir = resolve(frontendRoot, "../dsh/src");
-const eduSrcDir = resolve(frontendRoot, "../edu-animate/src");
+const dshSrcDir = resolve(frontendRoot, "../topics/dsh/src");
+const eduSrcDir = resolve(frontendRoot, "../topics/edu-animate/src");
 
 const PORT = Number(process.env.PORT || 3000);
 const API_ORIGIN = process.env.API_ORIGIN || "http://localhost:4000";

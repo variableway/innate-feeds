@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "@tanstack/react-router";
 import { Calendar, Globe, Package, Star } from "lucide-react";
-import { pluginCategoryById } from "../../../shared/plugin-categories";
+import { pluginCategoryById } from "../../../../shared/plugin-categories";
 import { fetchPlugin, fetchRelatedPlugins } from "../services/plugins";
 import { PluginCard } from "../components/plugin-card";
 import { CopyInstallButton } from "../components/copy-install-button";

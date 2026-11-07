@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { PLUGIN_CATEGORIES } from "../../../shared/plugin-categories";
+import { PLUGIN_CATEGORIES } from "../../../../shared/plugin-categories";
 import type { DshPlugin } from "../types/plugin";
 import { PluginCard } from "./plugin-card";
 import { PluginListItem } from "./plugin-list-item";

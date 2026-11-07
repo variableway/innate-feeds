@@ -1,5 +1,5 @@
 import { Download, ExternalLink, Star } from "lucide-react";
-import { EDU_CATEGORY_BY_ID } from "../../../shared/edu-categories";
+import { EDU_CATEGORY_BY_ID } from "../../../../shared/edu-categories";
 import { formatNumber } from "../lib/format";
 import type { EduSkill } from "../types/edu";
 import { CopyButton } from "./copy-button";
