@@ -16,8 +16,11 @@
 | task-B11 | edu categories 并入主页，菜单改 EDU | done | 5ed0739 |
 | task-B12 | /ux SKILL 加权视图 + edu 微调 + 全局 404 | done | cff33d2 |
 | task-B13 | EDU 打分 + /ux 过滤器与 Tags | done | b103311 |
+| task-B14 | B 站视频采集 + 域页合流 + 说明文档 | done | 472d0f4 |
 
 ## 执行日志
+
+- 2026-11-07 task-B14 done（472d0f4）：B 站采集链路打通（search→mid→渲染抓取→正则），42 条真实视频上线 /edu/videos。sprint-3 计 15 任务。
 
 - 2026-11-07 task-B13 done（b103311）：EDU/ux 打分与筛选形态对称化。sprint-3 计 14 任务。
 
