@@ -1,73 +1,23 @@
 /**
  * External feed source types (GH #31).
- * Mirrors backend `collector/shared/types.ts` ExternalFeedItem + the
- * `/api/external*` payloads (static mode reads the same shape from
- * `/data/external/*.json`).
+ * S0：wire 契约（ExternalFeedItem / FeedSource / …）收敛至根 shared/，此处 re-export；
+ * 本文件只保留 UI 覆盖层（icon / metrics / emptyHint，S4）与 joined 视图。
  */
 
-export type ExternalSourceId =
-  | "producthunt"
-  | "yc"
-  | "a16z"
-  | "hackernews"
-  | "huggingface"
-  | "github-new"
-  | "devto"
-  | "lobsters"
-  | "edu-skills"
-  | "edu-videos";
+import type { FeedSource } from "../../../shared/types/external";
+import { EXTERNAL_SOURCES } from "../../../shared/sources/external";
 
-export interface ExternalFeedItem {
-  id: string;
-  source: ExternalSourceId;
-  title: string;
-  tagline: string;
-  description: string;
-  url: string;
-  externalUrl: string | null;
-  imageUrl: string | null;
-  categories: string[];
-  metrics: {
-    score?: number;
-    comments?: number;
-    stars?: number;
-    downloads?: number;
-    forks?: number;
-    teamSize?: number;
-    batch?: string;
-    status?: string;
-  };
-  metadata: Record<string, unknown>;
-  fetchedAt: string;
-  publishedAt: string | null;
-}
+export type {
+  FeedSource,
+  ExternalFeedItem,
+  FeedItemMetrics,
+  ExternalSourceEntry,
+  ExternalIndex,
+  ExternalSourcePayload,
+} from "../../../shared/types/external";
 
-export interface ExternalSourceEntry {
-  source: ExternalSourceId;
-  title: string;
-  description: string;
-  homepage: string;
-  count: number;
-  label: string | null;
-  fetchedAt: string | null;
-  snapshots?: number;
-  synced?: boolean;
-}
-
-export interface ExternalIndex {
-  updatedAt: string | null;
-  sources: ExternalSourceEntry[];
-}
-
-export interface ExternalSourcePayload {
-  source: ExternalSourceId;
-  title: string;
-  description: string;
-  label: string;
-  fetchedAt: string;
-  count: number;
-  items: ExternalFeedItem[];
-}
+/** 漂移修复 #1（S0）：ExternalSourceId 不再独立维护，从 shared FeedSource 派生。 */
+export type ExternalSourceId = FeedSource;
 
 /** Which metric chips to render per source (label + item field). */
 export interface SourceMetricConfig {
@@ -83,11 +33,9 @@ export interface SourceMetricConfig {
   label: string;
 }
 
+/** UI 覆盖层（S4）：只放表现层关注点，数据字段（title/description/homepage）在 shared。 */
 export interface ExternalSourceMeta {
   source: ExternalSourceId;
-  title: string;
-  description: string;
-  homepage: string;
   icon: string;
   /** lucide icon name used by the sidebar; page header falls back to this too */
   metrics: SourceMetricConfig[];
@@ -95,13 +43,10 @@ export interface ExternalSourceMeta {
   emptyHint: string;
 }
 
-/** Sidebar/page metadata for the Feeds group. Order = display order. */
+/** UI 覆盖层，顺序 = 展示顺序。 */
 export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   {
     source: "hackernews",
-    title: "Hacker News",
-    description: "HN 首页热帖（Algolia API）",
-    homepage: "https://news.ycombinator.com",
     icon: "Flame",
     metrics: [
       { key: "score", label: "points" },
@@ -111,9 +56,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "huggingface",
-    title: "Hugging Face",
-    description: "HF Trending 模型/数据集/Spaces",
-    homepage: "https://huggingface.co",
     icon: "Boxes",
     metrics: [
       { key: "score", label: "likes" },
@@ -123,9 +65,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "github-new",
-    title: "GitHub New",
-    description: "近 7 天新建且快速增长的开源仓库",
-    homepage: "https://github.com/search",
     icon: "Sparkles",
     metrics: [
       { key: "stars", label: "stars" },
@@ -136,9 +75,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "devto",
-    title: "Dev.to",
-    description: "Dev.to 热门技术文章",
-    homepage: "https://dev.to",
     icon: "FileText",
     metrics: [
       { key: "score", label: "reactions" },
@@ -148,9 +84,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "lobsters",
-    title: "lobste.rs",
-    description: "Lobsters 最热讨论",
-    homepage: "https://lobste.rs",
     icon: "Link2",
     metrics: [
       { key: "score", label: "score" },
@@ -160,9 +93,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "producthunt",
-    title: "Product Hunt",
-    description: "每日/周/月新品榜",
-    homepage: "https://www.producthunt.com/leaderboard",
     icon: "Rocket",
     metrics: [
       { key: "score", label: "votes" },
@@ -172,9 +102,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "yc",
-    title: "YC Companies",
-    description: "Y Combinator 公司库（按 batch）",
-    homepage: "https://www.ycombinator.com/companies",
     icon: "Building2",
     metrics: [
       { key: "batch", label: "batch" },
@@ -184,9 +111,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "a16z",
-    title: "a16z Portfolio",
-    description: "a16z AI 投资组合 + GitHub 补充",
-    homepage: "https://a16z.com/ai/",
     icon: "Briefcase",
     metrics: [
       { key: "stars", label: "stars" },
@@ -196,9 +120,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "edu-skills",
-    title: "Edu Skills",
-    description: "教育动画领域的 Agent Skill（skills.sh 索引）",
-    homepage: "https://www.skills.sh",
     icon: "GraduationCap",
     metrics: [
       { key: "score", label: "installs" },
@@ -208,9 +129,6 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
   },
   {
     source: "edu-videos",
-    title: "Edu Videos",
-    description: "教育动画领域的教学视频（策展频道）",
-    homepage: "https://www.youtube.com",
     icon: "Clapperboard",
     metrics: [
       { key: "score", label: "views" },
@@ -219,3 +137,28 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
     emptyHint: "Run `bun run sync:edu-videos` to collect the channel videos.",
   },
 ];
+
+/** joined 视图（S4）：shared 数据 + UI 覆盖层，顺序跟随 UI 覆盖层。 */
+export interface ExternalSourceView {
+  source: ExternalSourceId;
+  title: string;
+  description: string;
+  homepage: string;
+  icon: string;
+  metrics: SourceMetricConfig[];
+  emptyHint: string;
+}
+
+export const EXTERNAL_SOURCE_VIEWS: ExternalSourceView[] =
+  EXTERNAL_SOURCE_META.map((ui) => {
+    const def = EXTERNAL_SOURCES.find((s) => s.source === ui.source);
+    return {
+      source: ui.source,
+      title: def?.title ?? ui.source,
+      description: def?.description ?? "",
+      homepage: def?.homepage ?? "",
+      icon: ui.icon,
+      metrics: ui.metrics,
+      emptyHint: ui.emptyHint,
+    };
+  });

@@ -48,57 +48,25 @@ export interface TopicIndex {
   topics: TopicIndexEntry[];
 }
 
-/** Repo shape served to the frontend (mirrors `GitHubRepo` + topic flags). */
-export interface TopicRepo {
-  id: string;
-  repoId: number;
-  fullName: string;
-  name: string;
-  description: string;
-  url: string;
-  homepage: string | null;
-  stars: number;
-  forks: number;
-  watchers: number;
-  language: string | null;
-  topics: string[];
-  owner: { login: string; avatarUrl: string; url: string };
-  createdAt: string;
-  updatedAt: string;
-  /** First time the repo showed up in this topic. */
-  firstSeenAt: string;
-  /** New in the latest sync of this topic. */
-  isNew: boolean;
-  /** Already present in the trending/starred feeds. */
-  existing: boolean;
-}
+/** S0：Topic wire 契约收敛至 shared/types/topics，此处 re-export。 */
+import type {
+  TopicRepo,
+  TopicSummary,
+  TopicsIndexResponse,
+  TopicResponse,
+} from "../../../shared/types/topics.js";
 
-export interface TopicSummary {
-  topic: string;
-  count: number;
-  newCount: number;
-  existingCount: number;
-  fetchedAt: string;
-}
-
-export interface TopicsIndexResponse {
-  topics: TopicSummary[];
-  updatedAt: string | null;
-}
+export type {
+  TopicRepo,
+  TopicSummary,
+  TopicsIndexResponse,
+  TopicResponse,
+};
 
 export interface UserTopicsFile {
   source: "github-topics";
   updatedAt: string;
   topics: string[];
-}
-
-export interface TopicResponse {
-  topic: string;
-  fetchedAt: string;
-  count: number;
-  newCount: number;
-  existingCount: number;
-  items: TopicRepo[];
 }
 
 export function getTopicsDir(): string {

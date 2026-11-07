@@ -3,7 +3,7 @@ import { ChevronLeft, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { fetchExternalSource } from "@/services/external";
 import type { ExternalSourcePayload } from "@/types/external";
-import { EXTERNAL_SOURCE_META } from "@/types/external";
+import { EXTERNAL_SOURCE_VIEWS } from "@/types/external";
 import { ExternalItemCard } from "@/components/external-item-card";
 import { formatDate } from "@/lib/utils";
 
@@ -21,7 +21,7 @@ export function FeedsSourcePage() {
 
   const meta = useMemo(
     () =>
-      EXTERNAL_SOURCE_META.find((m) => m.source === source) ?? {
+      EXTERNAL_SOURCE_VIEWS.find((m) => m.source === source) ?? {
         source: source as never,
         title: source,
         description: "",

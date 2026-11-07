@@ -1,30 +1,12 @@
-import type { PluginCategoryId } from "../../../../shared/plugin-categories";
+/**
+ * DSH plugin types.
+ * S0：DshPlugin 契约收敛至根 shared/types/plugins，此处 re-export。
+ */
 
-export interface DshPlugin {
-  slug: string;
-  name: string;
-  tagline: string;
-  taglineZh: string | null;
-  description: string;
-  content: string;
-  stars: number;
-  screenshotUrl: string | null;
-  screenshots: string[];
-  bundleCategory: PluginCategoryId;
-  bundleCategoryZh: string;
-  repositoryUrl: string;
-  websiteUrl: string;
-  installCommand: string;
-  npmPackage: string | null;
-  tarballUrl: string | null;
-  publishedAt: string | null;
-  starsUpdatedAt: string;
-  /** Per-plugin page on the upstream market site (market catalog only). */
-  upstreamUrl?: string | null;
-}
+export type { DshPlugin } from "../../../../shared/types/plugins";
 
 export interface PluginSearchResult {
-  items: DshPlugin[];
+  items: import("../../../../shared/types/plugins").DshPlugin[];
   total: number;
   page: number;
   perPage: number;

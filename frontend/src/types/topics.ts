@@ -1,56 +1,21 @@
-/** GitHub Topics datasource (GH #24). */
+/**
+ * GitHub Topics datasource types (GH #24).
+ * S0：wire 契约（TopicRepo / TopicSummary / TopicsIndexResponse / TopicResponse）
+ * 收敛至根 shared/types/topics，此处 re-export；TopicDetail / TopicsIndex
+ * 保留旧名作为别名，前端调用点零改动。
+ */
 
-export interface TopicRepo {
-  id: string;
-  repoId: number;
-  fullName: string;
-  name: string;
-  description: string;
-  url: string;
-  homepage: string | null;
-  stars: number;
-  forks: number;
-  watchers: number;
-  language: string | null;
-  topics: string[];
-  owner: {
-    login: string;
-    avatarUrl: string;
-    url: string;
-  };
-  createdAt: string;
-  updatedAt: string;
-  /** First time the repo showed up in this topic. */
-  firstSeenAt: string;
-  /** New in the latest sync of this topic. */
-  isNew: boolean;
-  /** Already present in the trending/starred feeds. */
-  existing: boolean;
-}
+export type {
+  TopicRepo,
+  TopicSummary,
+  TopicsIndexResponse,
+  TopicResponse,
+} from "../../../shared/types/topics";
 
-export interface TopicSummary {
-  topic: string;
-  /** Repos in the topic snapshot. */
-  count: number;
-  /** New discoveries (first seen in the latest sync, not in the feeds). */
-  newCount: number;
-  /** Repos that already exist in the trending/starred feeds. */
-  existingCount: number;
-  fetchedAt: string;
-}
+/** 旧名别名：详情响应。 */
+export type TopicDetail = import("../../../shared/types/topics").TopicResponse;
 
-export interface TopicsIndex {
-  topics: TopicSummary[];
-  updatedAt: string | null;
-}
-
-export interface TopicDetail {
-  topic: string;
-  fetchedAt: string;
-  count: number;
-  newCount: number;
-  existingCount: number;
-  items: TopicRepo[];
-}
+/** 旧名别名：索引响应。 */
+export type TopicsIndex = import("../../../shared/types/topics").TopicsIndexResponse;
 
 export type TopicSort = "stars" | "updated" | "new";

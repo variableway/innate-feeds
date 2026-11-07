@@ -288,40 +288,12 @@ export interface StarredItemRow {
   fetched_at: string;
 }
 
-export interface FeedItemDTO {
-  id: string;
-  type: "trending" | "starred";
-  snapshotDate?: string;
-  starredAt?: string | null;
-  fetchedAt?: string;
-  repo: {
-    id: number;
-    name: string;
-    fullName: string;
-    description: string | null;
-    url: string;
-    homepage: string | null;
-    stars: number;
-    forks: number;
-    watchers: number;
-    language: string | null;
-    topics: string[];
-    owner: {
-      login: string;
-      avatarUrl: string;
-      url: string;
-    };
-    createdAt: string;
-    updatedAt: string;
-  };
-}
+/** S0：跨层 wire 契约收敛至 shared/types/feeds，DTO 名保留为别名（后端内部沿用）。 */
+export type { GitHubRepo, FeedItem, FeedResponse, FeedFilters } from "../../../shared/types/feeds.js";
+import type { FeedItem, FeedStats } from "../../../shared/types/feeds.js";
 
-export interface FeedStatsDTO {
-  totalRepos: number;
-  trendingCount: number;
-  starredCount: number;
-  topLanguages: { name: string; count: number }[];
-}
+export type FeedItemDTO = FeedItem;
+export type FeedStatsDTO = FeedStats;
 
 function batchFetchTopics(
   db: Database,

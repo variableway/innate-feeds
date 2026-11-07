@@ -95,7 +95,7 @@ function mergeFeedItems(chunks: FeedResponse[]): FeedResponse {
   for (const chunk of chunks) {
     for (const item of chunk.items) {
       const existing = byId.get(item.id);
-      if (!existing || existing.fetchedAt < item.fetchedAt) {
+      if (!existing || (existing.fetchedAt ?? "") < (item.fetchedAt ?? "")) {
         byId.set(item.id, item);
       }
     }

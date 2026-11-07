@@ -12,7 +12,7 @@ import { FeedsPage } from "@/pages/feeds/page";
 import { FeedsSourcePage } from "@/pages/feeds/source-page";
 import { SettingsPage } from "@/pages/settings/page";
 import { AdminPage } from "@/pages/admin/page";
-import { EXTERNAL_SOURCE_META } from "@/types/external";
+import { EXTERNAL_SOURCE_VIEWS } from "@/types/external";
 
 /**
  * innate-feeds 的 domain 声明（轨道 A）。
@@ -147,7 +147,7 @@ export const webDomain = createWebDomain("feeds")
       order: 21,
       group: "Feeds",
     },
-    ...EXTERNAL_SOURCE_META.map((meta, idx) => ({
+    ...EXTERNAL_SOURCE_VIEWS.map((meta, idx) => ({
       label: meta.title,
       path: `/feeds/${meta.source}`,
       icon: meta.icon,

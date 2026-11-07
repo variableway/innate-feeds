@@ -92,7 +92,7 @@ function normalizeEntry(raw: Record<string, unknown>): ExternalSourceEntry {
     count: num(raw.count) ?? 0,
     label: raw.label ? str(raw.label) : null,
     fetchedAt: raw.fetchedAt ? str(raw.fetchedAt) : null,
-    snapshots: num(raw.snapshots),
+    snapshots: num(raw.snapshots) ?? 0,
     synced: raw.synced === true,
   };
 }

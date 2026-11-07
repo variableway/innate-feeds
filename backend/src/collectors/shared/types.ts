@@ -1,68 +1,21 @@
-/** 数据源标识 */
-export type FeedSource =
-  | "producthunt"
-  | "yc"
-  | "a16z"
-  | "github-topics"
-  | "trendshift"
-  | "awesome-dsh"
-  | "hackernews"
-  | "huggingface"
-  | "github-new"
-  | "devto"
-  | "lobsters"
-  | "edu-skills"
-  | "edu-videos";
+/**
+ * Collector-shared types.
+ * 跨层契约已收敛至根 shared/（S0）：本文件只保留采集层自有接口，
+ * ExternalFeedItem / FeedSource / FeedItemMetrics re-export 自 shared/types/external。
+ */
+import type {
+  ExternalFeedItem,
+  FeedSource,
+} from "../../../../shared/types/external.js";
 
-/** 统一外部 Feed Item 接口 */
-export interface ExternalFeedItem {
-  /** 唯一 ID，格式: `{source}-{slug|id}` */
-  id: string;
-  /** 数据源 */
-  source: FeedSource;
-  /** 产品/公司名称 */
-  title: string;
-  /** 一句话描述 */
-  tagline: string;
-  /** 详细描述 */
-  description: string;
-  /** 原始链接（PH 产品页 / YC 公司页） */
-  url: string;
-  /** 产品官网 */
-  externalUrl: string | null;
-  /** 图标/logo URL */
-  imageUrl: string | null;
-  /** 分类标签 */
-  categories: string[];
-  /** 量化指标 */
-  metrics: FeedItemMetrics;
-  /** 源特定扩展数据 */
-  metadata: Record<string, unknown>;
-  /** 数据采集时间 */
-  fetchedAt: string;
-  /** 发布/上线日期 */
-  publishedAt: string | null;
-}
-
-/** 量化指标 — 各源按需填充 */
-export interface FeedItemMetrics {
-  /** Product Hunt 社区分数 / HN points / Dev.to reactions / Lobsters score / HF likes */
-  score?: number;
-  /** 评论数（PH / HN / Dev.to / Lobsters） */
-  comments?: number;
-  /** GitHub Stars */
-  stars?: number;
-  /** Hugging Face 30d downloads */
-  downloads?: number;
-  /** GitHub forks */
-  forks?: number;
-  /** 团队规模 */
-  teamSize?: number;
-  /** YC Batch (e.g. "P26") */
-  batch?: string;
-  /** 公司状态 */
-  status?: string;
-}
+export type {
+  FeedSource,
+  ExternalFeedItem,
+  FeedItemMetrics,
+  ExternalSourceEntry,
+  ExternalIndex,
+  ExternalSourcePayload,
+} from "../../../../shared/types/external.js";
 
 /** 采集器接口 */
 export interface FeedCollector {

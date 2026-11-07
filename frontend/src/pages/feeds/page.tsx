@@ -3,7 +3,7 @@ import { ArrowUpRight, Search } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { fetchExternalIndex } from "@/services/external";
 import type { ExternalIndex } from "@/types/external";
-import { EXTERNAL_SOURCE_META } from "@/types/external";
+import { EXTERNAL_SOURCE_VIEWS } from "@/types/external";
 import { formatDate } from "@/lib/utils";
 
 /**
@@ -48,8 +48,8 @@ export function FeedsPage() {
 
   const metas = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return EXTERNAL_SOURCE_META;
-    return EXTERNAL_SOURCE_META.filter((meta) =>
+    if (!q) return EXTERNAL_SOURCE_VIEWS;
+    return EXTERNAL_SOURCE_VIEWS.filter((meta) =>
       [meta.title, meta.description, meta.source]
         .join(" ")
         .toLowerCase()

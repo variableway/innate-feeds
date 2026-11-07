@@ -19,27 +19,9 @@ import {
 import type { MarketCatalogFile } from "../collectors/vertical/awesome-dsh.js";
 import { getAwesomeDshDir } from "../collectors/vertical/awesome-dsh.js";
 
-export interface DshPlugin {
-  slug: string;
-  name: string;
-  tagline: string;
-  taglineZh: string | null;
-  description: string;
-  content: string;
-  stars: number;
-  screenshotUrl: string | null;
-  screenshots: string[];
-  bundleCategory: PluginCategoryId;
-  bundleCategoryZh: string;
-  repositoryUrl: string;
-  websiteUrl: string;
-  installCommand: string;
-  npmPackage: string | null;
-  tarballUrl: string | null;
-  publishedAt: string | null;
-  /** Per-plugin page on the upstream market site (market catalog only). */
-  upstreamUrl?: string | null;
-}
+/** S0：DshPlugin 契约收敛至 shared/types/plugins（含 starsUpdatedAt）。 */
+export type { DshPlugin } from "../../../shared/types/plugins.js";
+import type { DshPlugin } from "../../../shared/types/plugins.js";
 
 interface YamlEntry {
   url?: unknown;
@@ -251,6 +233,7 @@ function loadAll(): DshPlugin[] {
       npmPackage: typeof parsed.npm === "string" ? parsed.npm : null,
       tarballUrl: typeof parsed.tarball === "string" ? parsed.tarball : null,
       upstreamUrl: null,
+      starsUpdatedAt: "",
       publishedAt:
         publishedAt && !Number.isNaN(publishedAt.getTime())
           ? publishedAt.toISOString()
