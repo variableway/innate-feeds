@@ -12,30 +12,30 @@ export function SkillCard({ skill }: { skill: EduSkill }) {
     : undefined;
 
   return (
-    <article className="flex h-full flex-col gap-3 rounded-lg border bg-card p-4 transition-colors hover:border-foreground/20">
+    <article className="flex h-full flex-col gap-3 rounded-card border bg-card p-4 transition-colors hover:border-ink-4/40">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <h3 className="text-sm font-semibold leading-tight break-words">
+          <h3 className="text-sm font-semibold leading-tight break-words text-ink">
             {skill.title}
           </h3>
-          <p className="mt-0.5 font-mono text-xs text-muted-foreground break-all">
+          <p className="mt-0.5 font-mono text-xs text-ink-4 break-all">
             {skill.owner}/{skill.repo} · {skill.skill}
           </p>
         </div>
         {skill.relevance === "core" ? (
-          <span className="shrink-0 rounded-md bg-primary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary-foreground">
+          <span className="shrink-0 rounded-mark bg-hot px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-background">
             Core
           </span>
         ) : null}
       </div>
 
       {skill.tagline ? (
-        <p className="line-clamp-3 text-sm text-muted-foreground">
+        <p className="line-clamp-3 text-sm text-ink-3">
           {skill.tagline}
         </p>
       ) : null}
 
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-4">
         <span
           className="inline-flex items-center gap-1"
           title="skills.sh 安装量"

@@ -28,7 +28,7 @@ export function EduFilterBar({
   searchPlaceholder,
 }: EduFilterBarProps) {
   return (
-    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="mb-6 flex flex-col gap-3">
       <div className="flex flex-1 flex-col gap-3 sm:flex-row sm:items-center">
         <input
           value={state.q}
@@ -37,21 +37,6 @@ export function EduFilterBar({
           aria-label={searchPlaceholder}
           className="h-9 w-full rounded-md border bg-background px-3 text-sm sm:max-w-xs"
         />
-        <select
-          value={state.category}
-          onChange={(event) =>
-            onChange({ category: event.target.value, page: 1 })
-          }
-          className="h-9 rounded-md border bg-background px-2 text-sm"
-          aria-label="Category"
-        >
-          <option value="">全部分类</option>
-          {EDU_CATEGORIES.map((category) => (
-            <option key={category.id} value={category.id}>
-              {category.emoji} {category.labelZh}
-            </option>
-          ))}
-        </select>
         {showRelevance ? (
           <select
             value={state.relevance}
@@ -77,7 +62,7 @@ export function EduFilterBar({
         <select
           value={state.sort}
           onChange={(event) => onChange({ sort: event.target.value, page: 1 })}
-          className="h-9 rounded-md border bg-background px-2 text-sm"
+          className="h-9 rounded-md border bg-background px-2 text-sm text-ink-3"
           aria-label="Sort"
         >
           {sortOptions.map((option) => (
@@ -86,6 +71,29 @@ export function EduFilterBar({
             </option>
           ))}
         </select>
+      </div>
+
+      {/* AIHot 风格分类药丸（sprint-3 B6）：域内自绘，不引 host 组件 */}
+      <div className="flex flex-wrap items-center gap-1.5 sm:col-span-2" role="tablist" aria-label="Category">
+        {[{ id: "", emoji: "🗂", labelZh: "全部分类" }, ...EDU_CATEGORIES].map((category) => {
+          const active = state.category === category.id;
+          return (
+            <button
+              key={category.id || "all"}
+              type="button"
+              role="tab"
+              aria-selected={active}
+              onClick={() => onChange({ category: category.id, page: 1 })}
+              className={
+                active
+                  ? "rounded-full border border-transparent bg-ink px-3 py-1 text-[13px] leading-5 text-background"
+                  : "rounded-full border border-border px-3 py-1 text-[13px] leading-5 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
+              }
+            >
+              {category.emoji} {category.labelZh}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
