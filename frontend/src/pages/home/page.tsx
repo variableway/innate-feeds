@@ -236,6 +236,53 @@ async function loadUxTop5(): Promise<TopicRow[]> {
     .map((x) => x.row);
 }
 
+/** AI Slop 主题 Top5：anti-slop/slop/ai-slop 三源合并（B19）。 */
+async function loadSlopTop5(): Promise<TopicRow[]> {
+  const IS_STATIC = import.meta.env.VITE_STATIC_MODE === "true";
+  const topics = ["anti-slop", "slop", "ai-slop"];
+  const lists = await Promise.all(
+    topics.map(async (t) => {
+      const res = await fetch(
+        IS_STATIC ? `/data/topics/${t}.json` : `/api/topics/${t}`,
+      );
+      if (!res.ok) return [];
+      const payload = (await res.json()) as {
+        items?: { fullName: string; url: string; stars: number; description: string; topics?: string[] }[];
+      };
+      return payload.items ?? [];
+    }),
+  );
+  const byName = new Map<(typeof lists)[0][number], boolean>();
+  for (const list of lists) {
+    for (const repo of list) {
+      const isSkill =
+        /\bskill(s)?\b/i.test(repo.fullName) ||
+        /\bskill(s)?\b/i.test(repo.description ?? "") ||
+        (repo.topics ?? []).some((t) => UX_SKILL_TOPICS.has(t));
+      const prev = [...byName.entries()].find(([r]) => r.fullName === repo.fullName);
+      if (!prev || repo.stars > prev[0].stars) {
+        if (prev) byName.delete(prev[0]);
+        byName.set(repo, isSkill || prev?.[1] === true);
+      } else if (isSkill && prev) {
+        byName.set(prev[0], true);
+      }
+    }
+  }
+  return [...byName.entries()]
+    .map(([repo, isSkill]) => ({
+      row: {
+        title: repo.fullName,
+        url: repo.url,
+        detail: `★ ${formatStars(repo.stars)}`,
+        hot: isSkill,
+      } as TopicRow,
+      score: repo.stars * (isSkill ? 5 : 1),
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5)
+    .map((x) => x.row);
+}
+
 function TopicCard({
   kicker,
   title,
@@ -306,6 +353,7 @@ export function HomePage() {
   const [page, setPage] = useState(1);
   const [eduRows, setEduRows] = useState<TopicRow[] | null>(null);
   const [uxRows, setUxRows] = useState<TopicRow[] | null>(null);
+  const [slopRows, setSlopRows] = useState<TopicRow[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -315,6 +363,9 @@ export function HomePage() {
     loadUxTop5()
       .then((r) => !cancelled && setUxRows(r))
       .catch(() => !cancelled && setUxRows([]));
+    loadSlopTop5()
+      .then((r) => !cancelled && setSlopRows(r))
+      .catch(() => !cancelled && setSlopRows([]));
     return () => {
       cancelled = true;
     };
@@ -327,10 +378,12 @@ export function HomePage() {
   }, [pool, page]);
 
   return (
-    <div className="mx-auto max-w-[var(--page-max-reading)] px-8 pb-14 sm:px-10 lg:px-12">
-      <header className="pb-5 pt-5 lg:pt-0">
-        <p className="text-[13px] text-hot">精选流</p>
-        <h1 className="text-lg font-semibold text-ink">Innate Feeds</h1>
+    <div className="mx-auto max-w-[var(--page-max-reading)] px-8 pb-14 pt-8 sm:px-10 lg:px-12 lg:pt-10">
+      <header className="pb-6">
+        <h1 className="flex items-baseline gap-2.5 text-lg font-semibold text-ink">
+          <span className="text-[13px] font-medium text-hot">精选流</span>
+          <span>Innate Feeds</span>
+        </h1>
       </header>
 
       {/* ============ 第一部分：3 天 GitHub 热榜 ============ */}
@@ -439,7 +492,7 @@ export function HomePage() {
           <h2 className="text-[15px] font-semibold text-ink">主题</h2>
           <span className="text-[12px] text-ink-4">Top 5 · 按域内打分</span>
         </div>
-        <div className="mt-3 grid gap-4 md:grid-cols-2">
+        <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <TopicCard
             kicker="主题 · Education"
             title="EDU 教育动画 SKILL"
@@ -452,6 +505,13 @@ export function HomePage() {
             title="UI/UX Design SKILL"
             rows={uxRows ?? []}
             loading={uxRows === null}
+            to="/ux"
+          />
+          <TopicCard
+            kicker="主题 · Anti AI"
+            title="AI Slop 反AI味 SKILL"
+            rows={slopRows ?? []}
+            loading={slopRows === null}
             to="/ux"
           />
         </div>

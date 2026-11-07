@@ -39,7 +39,7 @@ export const CATEGORY_TOPICS: { id: string; label: string; topics: string[] }[] 
   { id: "component-library", label: "组件框架", topics: ["component-library"] },
   { id: "figma", label: "Figma", topics: ["figma"] },
   { id: "accessibility", label: "无障碍", topics: ["accessibility"] },
-  { id: "anti-slop", label: "反 AI 味", topics: ["anti-slop", "slop", "ai-slop"] },
+  { id: "anti-slop", label: "AI Slop", topics: ["anti-slop", "slop", "ai-slop"] },
   { id: "humanizer", label: "Humanizer", topics: ["humanizer"] },
 ];
 
