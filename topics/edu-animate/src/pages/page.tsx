@@ -98,14 +98,6 @@ export function EduSkillsPage() {
             {overview.videos} 个教学视频 · {overview.channels} 个频道
           </p>
         ) : null}
-        <nav className="mt-4 flex gap-4 text-sm">
-          <Link to="/edu/videos" className="text-primary hover:underline">
-            教学视频
-          </Link>
-          <Link to="/edu/categories" className="text-primary hover:underline">
-            分类总览
-          </Link>
-        </nav>
       </section>
 
       {error ? <p className="mb-4 text-sm text-destructive">{error}</p> : null}

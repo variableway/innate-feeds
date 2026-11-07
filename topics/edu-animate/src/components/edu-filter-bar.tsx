@@ -57,8 +57,6 @@ export function EduFilterBar({
             <option value="related">Related（泛动效周边）</option>
           </select>
         ) : null}
-      </div>
-      <div className="flex items-center gap-3">
         <select
           value={state.sort}
           onChange={(event) => onChange({ sort: event.target.value, page: 1 })}

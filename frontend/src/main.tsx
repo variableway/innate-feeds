@@ -25,7 +25,17 @@ const domains = [feedsDomain, dshDomain, eduDomain, uxDesignDomain];
 
 const basepath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
 
-const rootRoute = createRootRoute();
+const rootRoute = createRootRoute({
+  // 已删除路由（如 /edu/categories）与任意未知路径：明确 404，不再渲染空白壳
+  notFoundComponent: () => (
+    <div className="flex flex-col items-center justify-center py-24 text-center">
+      <p className="text-sm font-medium text-ink-2">404 · 页面不存在</p>
+      <p className="mt-1.5 max-w-sm text-[13px] leading-relaxed text-ink-4">
+        该页面已移除或从未存在。<a href="/" className="text-primary underline-offset-2 hover:underline">回主页</a>
+      </p>
+    </div>
+  ),
+});
 const attachments = collectWebDomainRoutes(domains, {
   app: rootRoute as unknown as AnyRoute,
 });

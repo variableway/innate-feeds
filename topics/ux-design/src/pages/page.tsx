@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
-import type { TopicResponse } from "../../../../shared/types/topics";
+import { useEffect, useMemo, useState } from "react";
+import type { TopicRepo, TopicResponse } from "../../../../shared/types/topics";
 
 /**
- * UI/UX Design 主题 Hub v1（sprint-3 B10，AIHot 富头部 + 索引网格）。
- * 数据：/api/topics/:topic（API 模式）或 /data/topics/:topic.json（静态模式）。
+ * UI/UX Design 主题 Hub v1.5（sprint-3 B12）。
+ * 本体是 UI/UX Design 的 **AI SKILL**（ui-ux-pro-max / taste-skill / hallmark 一类），
+ * 不是组件基础库——SKILL 权重放大（×5），默认按加权分排序，可切纯星数。
+ * 数据：合并 10 个 topic 快照（/api/topics/:topic 或 /data/topics/:topic.json），
+ * 去重后客户端加权排序；M1 热度引擎落地后由后端 ruleVersion 排名接管。
  */
 
 const TOPICS: { id: string; label: string }[] = [
@@ -19,15 +22,42 @@ const TOPICS: { id: string; label: string }[] = [
   { id: "shadcn-ui", label: "shadcn/ui" },
 ];
 
+/** SKILL 特征 topic（Agent Skills 生态标签） */
+const SKILL_TOPICS = new Set([
+  "skills",
+  "agent-skills",
+  "claude-code",
+  "claude",
+  "claude-skills",
+  "cursor",
+  "cursor-skills",
+  "ai-agents",
+  "agents",
+  "agent",
+  "skill",
+]);
+
+const SKILL_BOOST = 5;
+
+interface MergedRepo {
+  repo: TopicRepo;
+  isSkill: boolean;
+  score: number;
+}
+
 const IS_STATIC = import.meta.env.VITE_STATIC_MODE === "true";
 
 async function fetchTopic(topic: string): Promise<TopicResponse> {
-  const url = IS_STATIC
-    ? `/data/topics/${topic}.json`
-    : `/api/topics/${topic}`;
+  const url = IS_STATIC ? `/data/topics/${topic}.json` : `/api/topics/${topic}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to load topic ${topic}: ${res.status}`);
   return (await res.json()) as TopicResponse;
+}
+
+function detectSkill(repo: TopicRepo): boolean {
+  if (/\bskill(s)?\b/i.test(repo.fullName) || /\bskill(s)?\b/i.test(repo.description ?? ""))
+    return true;
+  return (repo.topics ?? []).some((t) => SKILL_TOPICS.has(t));
 }
 
 function formatStars(n: number): string {
@@ -35,8 +65,10 @@ function formatStars(n: number): string {
 }
 
 export function UxDesignPage() {
-  const [topic, setTopic] = useState("design-system");
-  const [data, setData] = useState<TopicResponse | null>(null);
+  const [mode, setMode] = useState<"skill" | "stars">("skill");
+  const [topicFilter, setTopicFilter] = useState<string>("all");
+  const [merged, setMerged] = useState<MergedRepo[] | null>(null);
+  const [skillCount, setSkillCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -44,9 +76,29 @@ export function UxDesignPage() {
     let cancelled = false;
     setLoading(true);
     setError(null);
-    fetchTopic(topic)
-      .then((res) => {
-        if (!cancelled) setData(res);
+    Promise.all(TOPICS.map((t) => fetchTopic(t.id)))
+      .then((responses) => {
+        if (cancelled) return;
+        const byName = new Map<string, MergedRepo>();
+        for (const res of responses) {
+          for (const repo of res.items) {
+            const isSkill = detectSkill(repo);
+            const existing = byName.get(repo.fullName);
+            if (!existing || repo.stars > existing.repo.stars) {
+              byName.set(repo.fullName, {
+                repo,
+                isSkill,
+                score: repo.stars * (isSkill ? SKILL_BOOST : 1),
+              });
+            } else if (isSkill && !existing.isSkill) {
+              existing.isSkill = true;
+              existing.score = existing.repo.stars * SKILL_BOOST;
+            }
+          }
+        }
+        const list = [...byName.values()];
+        setMerged(list);
+        setSkillCount(list.filter((m) => m.isSkill).length);
       })
       .catch((err: unknown) => {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
@@ -57,59 +109,94 @@ export function UxDesignPage() {
     return () => {
       cancelled = true;
     };
-  }, [topic]);
+  }, []);
+
+  const visible = useMemo(() => {
+    if (!merged) return [];
+    const filtered =
+      topicFilter === "all"
+        ? merged
+        : merged.filter((m) => (m.repo.topics ?? []).includes(topicFilter));
+    return [...filtered].sort((a, b) =>
+      mode === "skill" ? b.score - a.score : b.repo.stars - a.repo.stars,
+    );
+  }, [merged, mode, topicFilter]);
 
   return (
     <div className="mx-auto w-full max-w-[var(--page-max-reading)] px-4 py-8 sm:px-6 lg:px-8">
       {/* AIHot 富头部 */}
       <header className="mb-8">
         <p className="text-[13px] text-hot">主题 · Topic</p>
-        <h1 className="mt-1 text-2xl font-semibold text-ink">UI/UX Design</h1>
+        <h1 className="mt-1 text-2xl font-semibold text-ink">UI/UX Design SKILL</h1>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-3">
-          设计系统、组件库、Figma 生态与无障碍——GitHub Topics 每日 top 快照，
-          由 <code className="text-ink-4">sync github-topics</code> 采集。
+          UI/UX 设计的 Agent SKILL 优先（加权 ×{SKILL_BOOST}），基础库靠后——
+          合并 {TOPICS.length} 个 GitHub Topic 快照去重排序，M1 热度引擎落地后由
+          ruleVersion 排名接管。
         </p>
-        {data ? (
-          <p className="mt-3 flex gap-4 text-[13px] tabular-nums text-ink-4">
+        {merged ? (
+          <p className="mt-3 flex flex-wrap gap-4 text-[13px] tabular-nums text-ink-4">
             <span>
-              快照 <span className="text-ink-2">{data.count}</span> 仓库
+              去重后 <span className="text-ink-2">{merged.length}</span> 仓库
             </span>
             <span>
-              新发现 <span className="text-hot">{data.newCount}</span>
+              其中 SKILL <span className="text-hot">{skillCount}</span>
             </span>
-            <span>
-              已在 feeds <span className="text-ink-2">{data.existingCount}</span>
-            </span>
-            <span>fetched {data.fetchedAt.slice(0, 10)}</span>
           </p>
         ) : null}
       </header>
 
-      {/* 主题切换药丸（域内自绘，AIHot 风格） */}
-      <div className="mb-6 flex flex-wrap items-center gap-1.5" role="tablist" aria-label="Topic">
-        {TOPICS.map((t) => {
-          const active = t.id === topic;
-          return (
+      {/* 排序 + 主题筛选 */}
+      <div className="mb-6 flex flex-col gap-3">
+        <div className="flex flex-wrap items-center gap-1.5" role="tablist" aria-label="排序">
+          {(
+            [
+              { value: "skill", label: `SKILL 加权（×${SKILL_BOOST}）` },
+              { value: "stars", label: "纯星数" },
+            ] as const
+          ).map((opt) => (
             <button
-              key={t.id}
+              key={opt.value}
               type="button"
               role="tab"
-              aria-selected={active}
-              onClick={() => setTopic(t.id)}
+              aria-selected={mode === opt.value}
+              onClick={() => setMode(opt.value)}
               className={
-                active
+                mode === opt.value
                   ? "rounded-full border border-transparent bg-ink px-3 py-1 text-[13px] leading-5 text-background"
                   : "rounded-full border border-border px-3 py-1 text-[13px] leading-5 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
               }
             >
-              {t.label}
+              {opt.label}
             </button>
-          );
-        })}
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center gap-1.5" role="tablist" aria-label="Topic 筛选">
+          {[{ id: "all", label: "全部" }, ...TOPICS].map((t) => {
+            const active = t.id === topicFilter;
+            return (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => setTopicFilter(t.id)}
+                className={
+                  active
+                    ? "rounded-full border border-transparent bg-hot px-3 py-0.5 text-[12px] leading-5 text-background"
+                    : "rounded-full border border-border px-3 py-0.5 text-[12px] leading-5 text-ink-4 transition-colors hover:border-ink-4/40 hover:text-ink-2"
+                }
+              >
+                {t.label}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {loading ? (
-        <p className="py-20 text-center text-sm text-ink-4">加载中…</p>
+        <p className="py-20 text-center text-sm text-ink-4">
+          合并 {TOPICS.length} 个 topic 快照中…
+        </p>
       ) : error ? (
         <div className="flex flex-col items-center gap-2 py-20 text-center">
           <p className="text-sm font-medium text-ink-2">{error}</p>
@@ -119,21 +206,25 @@ export function UxDesignPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {(data?.items ?? []).map((repo) => (
+          {visible.map(({ repo, isSkill, score }) => (
             <a
               key={repo.id}
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-full flex-col gap-2 rounded-card border bg-card p-4 transition-colors hover:border-ink-4/40"
+              className={
+                isSkill
+                  ? "flex h-full flex-col gap-2 rounded-card border border-hot/40 bg-hot-soft p-4 transition-colors hover:border-hot/70"
+                  : "flex h-full flex-col gap-2 rounded-card border bg-card p-4 transition-colors hover:border-ink-4/40"
+              }
             >
               <div className="flex items-start justify-between gap-2">
                 <h3 className="min-w-0 break-words text-sm font-semibold text-ink">
                   {repo.fullName}
                 </h3>
-                {repo.isNew ? (
-                  <span className="shrink-0 rounded-mark bg-hot px-1.5 py-0.5 text-[10px] font-semibold uppercase text-background">
-                    New
+                {isSkill ? (
+                  <span className="shrink-0 rounded-mark bg-hot px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-background">
+                    SKILL
                   </span>
                 ) : null}
               </div>
@@ -145,7 +236,11 @@ export function UxDesignPage() {
               <div className="mt-auto flex items-center gap-3 text-[12px] text-ink-4">
                 <span className="tabular-nums text-ink-3">★ {formatStars(repo.stars)}</span>
                 {repo.language ? <span>{repo.language}</span> : null}
-                {repo.existing ? <span className="text-ink-4">in feeds</span> : null}
+                {mode === "skill" && isSkill ? (
+                  <span className="tabular-nums text-hot" title="stars × 5 加权分">
+                    分 {formatStars(score)}
+                  </span>
+                ) : null}
               </div>
             </a>
           ))}
