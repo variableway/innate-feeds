@@ -73,7 +73,7 @@ export function EduFilterBar({
 
       {/* AIHot 风格分类药丸（sprint-3 B6）：域内自绘，不引 host 组件 */}
       <div className="flex flex-wrap items-center gap-1.5 sm:col-span-2" role="tablist" aria-label="Category">
-        {[{ id: "", emoji: "🗂", labelZh: "全部分类" }, ...EDU_CATEGORIES].map((category) => {
+        {[{ id: "", labelZh: "全部分类" }, ...EDU_CATEGORIES].map((category) => {
           const active = state.category === category.id;
           return (
             <button
@@ -88,7 +88,7 @@ export function EduFilterBar({
                   : "rounded-full border border-border px-3 py-1 text-[13px] leading-5 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
               }
             >
-              {category.emoji} {category.labelZh}
+              {category.labelZh}
             </button>
           );
         })}

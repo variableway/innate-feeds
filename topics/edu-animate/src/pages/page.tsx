@@ -87,12 +87,8 @@ export function EduSkillsPage() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
       <section className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          教育动画制作
-        </h1>
-        <p className="mt-3 text-lg text-muted-foreground">
-          面向教育动画的 Agent Skill 目录与教学视频参考
-        </p>
+        <p className="text-[13px] text-hot">主题 · Topic</p>
+        <h1 className="mt-1 text-2xl font-semibold text-ink">EDU</h1>
         {overview ? (
           <p className="mt-2 text-sm text-muted-foreground">
             {overview.skills} 个 SKILL（其中 {overview.coreSkills} 个强相关） ·{" "}

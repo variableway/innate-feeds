@@ -23,7 +23,6 @@ export interface BilibiliEduUp {
 
 export const BILIBILI_EDU_UPS: BilibiliEduUp[] = [
   { handle: "老鹰讲AE", note: "AE 特效教程（种子候选，待策展确认）" },
-  { handle: "946974", note: "影视飓风——管道验证样例（非教育，可删）" },
   // 策展位：添加帧动画 / 手绘 / motion graphics 教学 UP，见说明文档
 ];
 

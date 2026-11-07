@@ -36,8 +36,27 @@ export function useFeedList(
       const results = await Promise.all(requests);
       const feedRes = results[0] as { items: FeedItem[]; total: number };
       const langsRes = results[1] as string[];
-      setItems(feedRes.items);
-      setTotal(feedRes.total);
+      // sprint-3 B15 修复：trending 无 date 筛选时，同一仓库会以多个快照日
+      // 重复出现（如 11/05 与 11/06 同时在榜）。按 repo 去重，保留最新快照。
+      let listItems = feedRes.items;
+      if (feedType === "trending" && !filters.date) {
+        const byRepo = new Map<string, FeedItem>();
+        for (const item of listItems) {
+          const key = item.repo.fullName;
+          const prev = byRepo.get(key);
+          const newer =
+            !prev ||
+            (item.snapshotDate ?? "") > (prev.snapshotDate ?? "");
+          if (newer) byRepo.set(key, item);
+        }
+        listItems = [...byRepo.values()];
+      }
+      setItems(listItems);
+      setTotal(
+        listItems.length === feedRes.items.length
+          ? feedRes.total
+          : feedRes.total - (feedRes.items.length - listItems.length),
+      );
       setLanguages(langsRes);
       if (feedType === "trending") {
         setDates(results[2] as string[]);

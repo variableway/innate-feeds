@@ -68,12 +68,8 @@ export function EduVideosPage() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
       <section className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          教学视频
-        </h1>
-        <p className="mt-3 text-lg text-muted-foreground">
-          策展频道的教育动画参考片 —— 只收录元数据与链接
-        </p>
+        <p className="text-[13px] text-hot">EDU · Videos</p>
+        <h1 className="mt-1 text-2xl font-semibold text-ink">教学视频</h1>
         <nav className="mt-4 flex gap-4 text-sm">
           <Link to="/edu" className="text-primary hover:underline">
             SKILL 目录

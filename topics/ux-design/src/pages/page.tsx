@@ -9,7 +9,22 @@ import type { TopicRepo, TopicResponse } from "../../../../shared/types/topics";
  * 去重后客户端加权排序；M1 热度引擎落地后由后端 ruleVersion 排名接管。
  */
 
-const TOPICS: { id: string; label: string }[] = [
+/** 数据池：合并这些 topic 快照（含技术栈源，丰富候选；不进页面类目）。 */
+const FETCH_TOPICS = [
+  "design-system",
+  "ui",
+  "ux",
+  "design",
+  "ui-components",
+  "component-library",
+  "figma",
+  "accessibility",
+  "tailwindcss",
+  "shadcn-ui",
+];
+
+/** 页面类目：策展的业务层 topic（技术栈类不在此列）。 */
+const CATEGORY_TOPICS: { id: string; label: string }[] = [
   { id: "design-system", label: "设计系统" },
   { id: "ui", label: "UI" },
   { id: "ux", label: "UX" },
@@ -18,8 +33,6 @@ const TOPICS: { id: string; label: string }[] = [
   { id: "component-library", label: "组件框架" },
   { id: "figma", label: "Figma" },
   { id: "accessibility", label: "无障碍" },
-  { id: "tailwindcss", label: "Tailwind" },
-  { id: "shadcn-ui", label: "shadcn/ui" },
 ];
 
 /** SKILL 特征 topic（Agent Skills 生态标签） */
@@ -66,7 +79,7 @@ function formatStars(n: number): string {
 
 export function UxDesignPage() {
   const [mode, setMode] = useState<"skill" | "stars">("skill");
-  const [topicFilter, setTopicFilter] = useState<string>("all");
+  const [activeTag, setActiveTag] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [lang, setLang] = useState("");
   const [skillOnly, setSkillOnly] = useState(false);
@@ -79,7 +92,7 @@ export function UxDesignPage() {
     let cancelled = false;
     setLoading(true);
     setError(null);
-    Promise.all(TOPICS.map((t) => fetchTopic(t.id)))
+    Promise.all(FETCH_TOPICS.map((t) => fetchTopic(t)))
       .then((responses) => {
         if (cancelled) return;
         const byName = new Map<string, MergedRepo>();
@@ -123,7 +136,7 @@ export function UxDesignPage() {
     if (!merged) return [];
     const q = query.trim().toLowerCase();
     const filtered = merged.filter((m) => {
-      if (topicFilter !== "all" && !(m.repo.topics ?? []).includes(topicFilter)) return false;
+      if (activeTag && !(m.repo.topics ?? []).includes(activeTag)) return false;
       if (skillOnly && !m.isSkill) return false;
       if (lang && m.repo.language !== lang) return false;
       if (q) {
@@ -135,7 +148,7 @@ export function UxDesignPage() {
     return [...filtered].sort((a, b) =>
       mode === "skill" ? b.score - a.score : b.repo.stars - a.repo.stars,
     );
-  }, [merged, mode, topicFilter, skillOnly, lang, query]);
+  }, [merged, mode, activeTag, skillOnly, lang, query]);
 
   return (
     <div className="mx-auto w-full max-w-[var(--page-max-reading)] px-4 py-8 sm:px-6 lg:px-8">
@@ -145,7 +158,7 @@ export function UxDesignPage() {
         <h1 className="mt-1 text-2xl font-semibold text-ink">UI/UX Design SKILL</h1>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-3">
           UI/UX 设计的 Agent SKILL 优先（加权 ×{SKILL_BOOST}），基础库靠后——
-          合并 {TOPICS.length} 个 GitHub Topic 快照去重排序，M1 热度引擎落地后由
+          合并 {FETCH_TOPICS.length} 个 GitHub Topic 快照去重排序，M1 热度引擎落地后由
           ruleVersion 排名接管。
         </p>
         {merged ? (
@@ -222,15 +235,28 @@ export function UxDesignPage() {
           ))}
         </div>
         <div className="flex flex-wrap items-center gap-1.5" role="tablist" aria-label="Topic 筛选">
-          {[{ id: "all", label: "全部" }, ...TOPICS].map((t) => {
-            const active = t.id === topicFilter;
+          <button
+            type="button"
+            role="tab"
+            aria-selected={activeTag === null}
+            onClick={() => setActiveTag(null)}
+            className={
+              activeTag === null
+                ? "rounded-full border border-transparent bg-hot px-3 py-0.5 text-[12px] leading-5 text-background"
+                : "rounded-full border border-border px-3 py-0.5 text-[12px] leading-5 text-ink-4 transition-colors hover:border-ink-4/40 hover:text-ink-2"
+            }
+          >
+            全部
+          </button>
+          {CATEGORY_TOPICS.map((t) => {
+            const active = t.id === activeTag;
             return (
               <button
                 key={t.id}
                 type="button"
                 role="tab"
                 aria-selected={active}
-                onClick={() => setTopicFilter(t.id)}
+                onClick={() => setActiveTag(active ? null : t.id)}
                 className={
                   active
                     ? "rounded-full border border-transparent bg-hot px-3 py-0.5 text-[12px] leading-5 text-background"
@@ -241,12 +267,22 @@ export function UxDesignPage() {
               </button>
             );
           })}
+          {activeTag && !CATEGORY_TOPICS.some((c) => c.id === activeTag) ? (
+            <button
+              type="button"
+              onClick={() => setActiveTag(null)}
+              title="点击取消该 tag 筛选（来自卡片）"
+              className="rounded-full border border-transparent bg-ink px-3 py-0.5 text-[12px] leading-5 text-background"
+            >
+              #{activeTag} ✕
+            </button>
+          ) : null}
         </div>
       </div>
 
       {loading ? (
         <p className="py-20 text-center text-sm text-ink-4">
-          合并 {TOPICS.length} 个 topic 快照中…
+          合并 {FETCH_TOPICS.length} 个 topic 快照中…
         </p>
       ) : error ? (
         <div className="flex flex-col items-center gap-2 py-20 text-center">
@@ -286,13 +322,23 @@ export function UxDesignPage() {
               ) : null}
               {(repo.topics ?? []).length > 0 ? (
                 <div className="flex flex-wrap gap-1">
-                  {(repo.topics ?? []).slice(0, 3).map((t) => (
-                    <span
+                  {(repo.topics ?? []).slice(0, 4).map((t) => (
+                    <button
                       key={t}
-                      className="rounded-mark border border-border px-1.5 py-0.5 text-[11px] text-ink-4"
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setActiveTag((cur) => (cur === t ? null : t));
+                      }}
+                      className={
+                        t === activeTag
+                          ? "rounded-mark border border-transparent bg-hot px-1.5 py-0.5 text-[11px] text-background"
+                          : "rounded-mark border border-border px-1.5 py-0.5 text-[11px] text-ink-4 transition-colors hover:border-ink-4/40 hover:text-ink-2"
+                      }
                     >
                       {t}
-                    </span>
+                    </button>
                   ))}
                 </div>
               ) : null}

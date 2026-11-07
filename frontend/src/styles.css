@@ -22,8 +22,8 @@
   --accent: #e9ede9;
   --accent-foreground: #202a30;
   --destructive: #b3402a;
-  --border: #dfe4e1;
-  --input: #dfe4e1;
+  --border: #d3dad5;
+  --input: #d3dad5;
   --ring: #176b75;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -51,14 +51,14 @@
      references/AIHOT/apps/web/app/app.css（锚 92e4a15） */
   --ink: #202a30;
   --ink-2: #303c42;
-  --ink-3: #59656b;
-  --ink-4: #657176;
+  --ink-3: #465158;
+  --ink-4: #545f68;
   --hot: #b3402a;
   --hot-soft: rgba(179, 64, 42, 0.08);
   --rank-1: #b3402a;
   --rank-2: #a3642f;
   --rank-3: #96702e;
-  --rank-rest: #6b7684;
+  --rank-rest: #5c6774;
   --page-max-reading: max(1100px, calc(200dvh - 236px));
 }
 
