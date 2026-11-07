@@ -8,11 +8,12 @@
 | task-B3 | 主页改版：日分组时间轨精选流 | done | 642754d |
 | task-B4 | /trending 热点榜三层结构 | done | 836acc2 |
 | task-B5 | /trending-shift 行榜换装 | done | 68e43c2 |
-| task-B6 | /edu 域 AIHot 卡片网格化 | todo | — |
+| task-B6 | /edu 域 AIHot 卡片网格化 | done | 13aaf2d |
 | task-B7 | nav-visibility 收敛 + 全量验收 | todo | — |
 
 ## 执行日志
 
+- 2026-11-07 task-B6 done（13aaf2d）。
 - 2026-11-07 task-B5 done（68e43c2）。
 - 2026-11-07 task-B4 done（hot-board.tsx + FeedListPage hotBoard 模式；SHA 于本 docs 提交前一个 feat 提交）。
 - 2026-11-07 task-B3 done（642754d）：主页时间轨上线，/ 不再重定向。
