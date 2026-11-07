@@ -60,7 +60,7 @@ export function UxDesignPage() {
   }, [topic]);
 
   return (
-    <div>
+    <div className="mx-auto w-full max-w-[var(--page-max-reading)] px-4 py-8 sm:px-6 lg:px-8">
       {/* AIHot 富头部 */}
       <header className="mb-8">
         <p className="text-[13px] text-hot">主题 · Topic</p>
