@@ -9,7 +9,7 @@
    serve 服务照旧提供同样的数据（零行为变化）。
 2. **AIHot 风格首波**：主页、GitHub Trending、Trending Shift、Education（/edu）四块。
 
-## 任务索引（12 任务，2026-11-07）
+## 任务索引（13 任务，2026-11-07）
 
 | Task | 内容 | 状态 | 提交 |
 |---|---|---|---|
@@ -25,6 +25,7 @@
 | [task-B9](./task-B9.md) | 「主题」主导航组（Education 入驻） | done | 043228b |
 | [task-B10](./task-B10.md) | UI/UX Design 主题域（数据收集+域包） | done | 5ed0739 |
 | [task-B11](./task-B11.md) | edu categories 并入主页，菜单改 EDU | done | 5ed0739 |
+| [task-B12](./task-B12.md) | /ux SKILL 加权视图 + edu 微调 + 全局 404 | done | cff33d2 |
 
 依赖：A1 独立；B1 → B2 → (B3/B4/B5/B6 并行序贯) → B7。
 
