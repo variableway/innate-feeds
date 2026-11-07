@@ -86,3 +86,20 @@ sources:
       本轮结论：本期不纳入范围。
     docs:
       - docs/backlogs/newsnow-trendradar-integration.md
+
+  - id: aihot
+    name: AIHOT (aihot.news)
+    repo: https://github.com/KKKKhazix/AIHOT
+    commit: 92e4a15dde652613858cc3ff33376a8d1fd38207
+    kind: research
+    checked: 2026-11-02
+    notes: >-
+      LLM 编辑部式热点日报站（MIT，名字/Logo 除外；末次提交「同步引擎」，线上原站同引擎导出）。
+      约 42K 行 TS monorepo：六类信源 → 预筛/双评分 → 事件聚簇 → 热度（48h 半衰、独立来源计一次、
+      rule_version 化）→ 日报（零模型、反幻觉硬校验）→ 七类出口（网页/RSS/API/MCP/llms.txt）。
+      本仓借鉴：热度公式与独立来源去重、精选席位、公开读取层唯一化、MCP agent 围栏范本；
+      不借鉴：全量 LLM 管线（成本）、向量聚簇（fullName 天然主键）、Postgres 三进程部署。
+      检出路径 references/AIHOT（gitignored，不入库）。
+    docs:
+      - docs/research/aihot-analysis.md
+      - docs/backlogs/topic-curation-refactor.md

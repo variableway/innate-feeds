@@ -21,7 +21,7 @@
 | [features/](./features/README.md) | 功能模块 |
 | [issues/](./issues/README.md) | 任务契约 |
 | [tasks/](./tasks/README.md) | 多 Agent 工作流 |
-| [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定） |
+| [backlogs/](../backlogs/README.md) | 未立项的调研方案（可考虑，尚未决定）——含 [topic-curation-refactor](../backlogs/topic-curation-refactor.md)（分 Topic 精选重构方向）与 [topic-platform-redesign](../backlogs/topic-platform-redesign.md)（重构总案：架构/目录/UI/任务） |
 | [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
 | [arch-design/edu-animate-domain.md](../arch-design/edu-animate-domain.md) | 教育动画垂直聚合域（edu-animate）的已采纳设计 |
 | [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
