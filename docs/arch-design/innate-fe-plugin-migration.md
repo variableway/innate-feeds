@@ -2,7 +2,7 @@
 
 > Issue: [variableway/innate-feeds#2](https://github.com/variableway/innate-feeds/issues/2) 步骤 2
 > 日期：2026-10-22 · 状态：**P0–P2、P4 已实施**；P3（innate-fe 侧联调）待该仓配合
-> 前置分析：[datasource-frontend-separation.md](./datasource-frontend-separation.md)（结论：分离已满足）
+> 前置分析（2026-10-22，原 datasource-frontend-separation.md 已并入本节并删除）：**分离已满足**——前端只经 services/ 取数、静态模式可独立运行；当时存在 3 处结构性耦合，处置见文末「耦合点处置」。
 
 ## 实施状态（2026-10-22）
 
@@ -58,7 +58,7 @@ innate-fe/（独立仓，消费方）
 
 ## 2. 去壳清单（基础 UI → 不进 domain）
 
-按 [分离分析](./datasource-frontend-separation.md) 耦合点 3，以下**移出 domain**：
+按前置分析的耦合点 3（基础 UI 内嵌前端），以下**移出 domain**：
 
 | 现有物 | 处置 | 去向 |
 |---|---|---|
@@ -155,3 +155,12 @@ bun innate-fe-cli/src/index.ts dev --profile feeds   # 壳 + feeds domain
 - **去壳后独立态 UX 下降**：本仓用户直觉是「一个完整站点」。§6-1 需在实施前定稿。
 - **`@innate/ui` 版本漂移**：独立仓按版本号依赖，innate-fe 发版节奏影响本仓；锁定 minor + peer `web-domain`。
 - **`gen` 的 copy 语义**：`from: ../innate-feeds/frontend` 会把源码拷进 innate-fe `domains/` 打包面——**双向不回写**，改 domain 仍回本仓改，再 `gen`。
+
+
+## 耦合点处置（2026-11-07 更新，原分离分析的三处耦合）
+
+| # | 当时的耦合 | 现状 |
+|---|---|---|
+| 1 | DTO 类型两处各写一份（`types/feed.ts` ↔ `db/index.ts`） | **已解决**：S0 类型收敛至 `shared/types/`，两侧 re-export（M0 commit 7fb1ab0） |
+| 2 | `shared/` 非真包、无边界 | **部分解决**：S0+S4 落地 `shared/types`、`shared/sources` 并写入三条边界禁令；是否升格独立 package 待定 |
+| 3 | 基础 UI 内嵌前端（60 个 shadcn 原语 + 壳组件） | **已解决**：@innate/ui 抽离 + 域内 vendored shadcn（本迁移交付） |

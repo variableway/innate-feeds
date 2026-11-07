@@ -1,60 +1,28 @@
-# Innate Feeds
+# Project — 事实来源索引
 
-**Status:** active  
-**Updated:** 2026-07-06
+> 项目「现在是什么」的入口。历史调研见 [../research/](../research/README.md)（含
+> [projects/](../research/projects/README.md) 后续计划），已完结 issue 只留 GitHub 记录。
 
-## Agent 入口（每次会话先读）
+## 目录
 
-1. 本文件 → 当前焦点与链接  
-2. [`issues/`](./issues/README.md) 中 **Assignee** 或状态为 open/in_progress 的条目  
-3. 对应 [`tasks/issues/`](./tasks/issues/) 日志**最后一条**
-
-## 快速导航
-
-| 文档 | 说明 |
+| 路径 | 内容 |
 |---|---|
-| [overview.md](./overview.md) | 全景、约束、Agent 分工 |
-| [spec/README.md](./spec/README.md) | PRD、双模式、验收 |
-| [spec/conventions.md](./spec/conventions.md) | 代码规范 |
-| [spec/architecture.md](./spec/architecture.md) | 架构要点 |
-| [spec/contracts/](./spec/contracts/README.md) | 跨模块接口约定 |
-| [features/](./features/README.md) | 功能模块 |
-| [issues/](./issues/README.md) | 任务契约 |
-| [tasks/](./tasks/README.md) | 多 Agent 工作流 |
-| [backlogs/](../projects/README.md) | 后续要做的方案与计划（原 backlogs/）——含 [topic-curation-refactor](../projects/topic-curation-refactor.md)（分 Topic 精选重构方向）与 [topic-platform-redesign](../projects/topic-platform-redesign.md)（重构总案：架构/目录/UI/任务） |
-| [arch-design/architecture.html](../arch-design/architecture.html) | 总体框架与模块交互图 |
-| [arch-design/edu-animate-domain.md](../arch-design/edu-animate-domain.md) | 教育动画垂直聚合域（edu-animate）的已采纳设计 |
-| [research/arch-diagram-skill-eval.md](../research/arch-diagram-skill-eval.md) | arch-diagram skill 的对照评测结论 |
-| [research/edu-animation-sources.md](../research/edu-animation-sources.md) | 教育动画 SKILL / 视频的端点与配额实测 |
-| [research/eduos-github-radar-analysis.md](../research/eduos-github-radar-analysis.md) | EduOS GitHub Radar 源码分析（元数据目录治理：ETag / provenance / 白名单发布闸） |
-| [research/aihot-analysis.md](../research/aihot-analysis.md) | AIHOT 源码分析（LLM 编辑部：双评分 / 聚簇热度 / MCP 出口范本） |
-| [research/open-apps-analysis.md](../research/open-apps-analysis.md) | Open Apps 源码分析（目录工业化：PR 化回写 / bot 预评审 / 常驻 issue / health 计算） |
+| [overview.md](./overview.md) | 项目现状一页纸（定位 / 架构 / 目录 / 里程碑） |
+| [spec/](./spec/README.md) | 契约与约定：contracts/（feeds-api-v1、admin-tables-api-v1）+ conventions。*README 与 architecture.md 为 MVP 时代版本，v2 待随 M2 重写* |
+| [features/](./features/README.md) | v2 待写（M2）；现状权威 = [AGENTS.md](../../../AGENTS.md) |
+| [issues/](./issues/README.md) | 未完结任务契约（当前仅 GH #33 producthunt）；完结项以 GitHub Issues 为准 |
 
-## 仓库内 Skill
+## 当前焦点（2026-11-07）
 
-放在 `.claude/skills/`，随仓库入库，Agent 直接可加载。
+- **Topic 平台重构**（[research/projects/topic-platform-redesign](../research/projects/topic-platform-redesign.md)）：M0 目录重构已执行并合入 main；下一步 **M1 热度引擎**（curation/ + 三新表 + `sync hot` + `/api/hot`，≈2 天，零 LLM），观察两周后定 M2。
+- 数据分离 S1-S3（归一化/查询语义/hidden）待排期。
+- GH #33 Product Hunt 0 条采集问题待修。
 
-| Skill | 用途 |
+## 仓库级技能（.claude/skills/）
+
+| 技能 | 用途 |
 |---|---|
-| [`feeds-sprint/`](../../.claude/skills/feeds-sprint/SKILL.md) | 按 `tasks/sprint-N/` 的文档驱动工作流认领与回写任务 |
-| [`arch-diagram/`](../../.claude/skills/arch-diagram/SKILL.md) | 产出有事实依据的仓库架构图：事实清点 → 选渲染器 → 截图验证 → 落库 |
-| [`skill-eval/`](../../.claude/skills/skill-eval/SKILL.md) | 用「有 skill / 无 skill」两组对照评测一个 skill 是否真的更好 |
-
-## 当前焦点
-
-**Epic sheet-display（admin-data-sheet）已于 2026-11-07 归档**（cancelled）：Univer 方案被已上线的 CodeMirror admin 工作台取代，5 份 issue 与任务日志移至 [archive/issues](../archive/issues/)、[archive/tasks](../archive/tasks/)。当前进行中的方向见 [backlogs/topic-platform-redesign](../projects/topic-platform-redesign.md)（M0 目录重构已执行）。
-
-- [ ] 确认 GitHub Pages 线上 URL，写入 [overview.md](./overview.md)
-
-## 代码
-
-| | 链接 |
-|---|---|
-| 仓库根目录 | [`/`](../)（本仓库） |
-| GitHub | https://github.com/variableway/innate-feeds |
-
-`innate-works` registry：`projects/innate-feeds/index.md`
-
-## 仓库根配置
-
-薄层 [`AGENTS.md`](../../AGENTS.md) / `CLAUDE.md` 指向本目录；项目事实不在根配置重复。
+| [`feeds-sprint/`](../../../.claude/skills/feeds-sprint/SKILL.md) | Sprint 任务工作流（tasks/sprint-N 按需重建） |
+| [`arch-diagram/`](../../../.claude/skills/arch-diagram/SKILL.md) | 产出有事实依据的仓库架构图 |
+| [`skill-eval/`](../../../.claude/skills/skill-eval/SKILL.md) | 有/无 skill 对照评测 |
+| [`topic-discovery/`](../../../.claude/skills/topic-discovery/SKILL.md) | topic 发现 / 相关性搜索 / trendshift 精选 |

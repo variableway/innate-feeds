@@ -1,5 +1,10 @@
 # External Collectors (VC Portfolio, Product Hunt, GitHub Topics)
 
+> 设计沿革：本篇取代 2026-09-20 的 collector-design.md（VC/PH 采集器设计提案，
+> 其模块化目录、统一数据模型 ExternalFeedItem、JSON 存储抽象（manifest+saveItems）、
+> HTTP 工具（fetchJson/fetchHtml/retry）均已按提案实现并由本文档维护现状；
+> 原文件 2026-11-07 删除）。M0 起 collector/ 已分组为 collectors/{core,external,vertical}。
+
 除 GitHub Trending/Starred 外，innate-feeds 支持以下外部数据源。
 
 ## 数据源概览

@@ -1,12 +1,7 @@
-# Features: Innate Feeds
+# Features（v2 待写）
 
-| ID | 功能 | 状态 | 文档 |
-|---|---|---|---|
-| feeds-trending | GitHub Trending 浏览与快照 | done | [feeds-trending.md](./feeds-trending.md) |
-| feeds-starred | Starred 列表与增量同步 | done | [feeds-starred.md](./feeds-starred.md) |
-| feeds-issues-digest | 社区 Issues 板投稿流：专用 DigestSidebar + 卡片/Master-detail + Markdown（ruanyf + GitHubDaily）；静态 `digest.json` + live GitHub | done | [feeds-issues-digest.md](./feeds-issues-digest.md) |
-| repo-detail-panel | Trending/Starred 仓库详情：master-detail；README 缓存 + live 刷新 | done | [repo-detail-panel.md](./repo-detail-panel.md) |
-| data-pipeline | 采集、SQLite、静态 JSON 导出 | done | [data-pipeline.md](./data-pipeline.md) |
-| static-deployment | GitHub Pages + 日调度 | done | [static-deployment.md](./static-deployment.md) |
-| ui-shell | 三栏布局、Sidebar、主题 | done | [ui-shell.md](./ui-shell.md) |
-| admin-data-sheet | 后台数据表（已按 CodeMirror 方案交付，superseded 2026-11-07） | superseded | [admin-data-sheet.md](./admin-data-sheet.md) |
+AGENTS.md 与代码本身覆盖。**当前特性的权威描述 = [AGENTS.md](../../../../AGENTS.md)**
+（Project overview / Runtime architecture / API endpoints 三节）。
+
+v2 特性清单将在 topic 平台重构 M2（前台定版）后重写，见
+[research/projects/topic-platform-redesign.md](../../research/projects/topic-platform-redesign.md) §5.2。

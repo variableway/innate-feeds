@@ -75,7 +75,7 @@ innate-feeds/
 │   │   └── preview.ts        # Static server for dist/ (replaces `vite preview`)
 │   ├── package.json          # name: @innate/domain-feeds; @innate/ui + @innate/web-domain via innate-fe-cli install
 │   └── tsconfig.json
-├── topics/                   # 域插件包（M0 收编 dsh + edu-animate；每个一级 topic 一个包，见 docs/projects/topic-platform-redesign.md）
+├── topics/                   # 域插件包（M0 收编 dsh + edu-animate；每个一级 topic 一个包，见 docs/research/projects/topic-platform-redesign.md）
 │   ├── dsh/                      # @innate/domain-dsh — DSH plugin directory domain plugin (issue #13 拆分)
 │   │   ├── src/
 │   │   │   ├── index.ts          # export { webDomain }
