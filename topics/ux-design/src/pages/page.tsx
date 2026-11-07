@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearch } from "@tanstack/react-router";
 import type { TopicRepo, TopicResponse } from "../../../../shared/types/topics";
 
 /**
@@ -27,18 +28,19 @@ const FETCH_TOPICS = [
   "humanizer",
 ];
 
-/** 页面类目：策展的业务层 topic（技术栈类不在此列）。 */
-const CATEGORY_TOPICS: { id: string; label: string }[] = [
-  { id: "design-system", label: "设计系统" },
-  { id: "ui", label: "UI" },
-  { id: "ux", label: "UX" },
-  { id: "design", label: "Design" },
-  { id: "ui-components", label: "组件库" },
-  { id: "component-library", label: "组件框架" },
-  { id: "figma", label: "Figma" },
-  { id: "accessibility", label: "无障碍" },
-  { id: "anti-slop", label: "反 AI 味" },
-  { id: "humanizer", label: "Humanizer" },
+/** 页面类目：策展的业务层 topic（技术栈类不在此列）。
+ * topics 支持一类多源：仓库命中任一即属该类目。 */
+export const CATEGORY_TOPICS: { id: string; label: string; topics: string[] }[] = [
+  { id: "design-system", label: "设计系统", topics: ["design-system"] },
+  { id: "ui", label: "UI", topics: ["ui"] },
+  { id: "ux", label: "UX", topics: ["ux"] },
+  { id: "design", label: "Design", topics: ["design"] },
+  { id: "ui-components", label: "组件库", topics: ["ui-components"] },
+  { id: "component-library", label: "组件框架", topics: ["component-library"] },
+  { id: "figma", label: "Figma", topics: ["figma"] },
+  { id: "accessibility", label: "无障碍", topics: ["accessibility"] },
+  { id: "anti-slop", label: "反 AI 味", topics: ["anti-slop", "slop", "ai-slop"] },
+  { id: "humanizer", label: "Humanizer", topics: ["humanizer"] },
 ];
 
 /** SKILL 特征 topic（Agent Skills 生态标签） */
@@ -85,7 +87,8 @@ function formatStars(n: number): string {
 
 export function UxDesignPage() {
   const [mode, setMode] = useState<"skill" | "stars">("skill");
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const search = useSearch({ strict: false }) as { tag?: string };
+  const [activeTag, setActiveTag] = useState<string | null>(search.tag ?? null);
   const [query, setQuery] = useState("");
   const [lang, setLang] = useState("");
   const [skillOnly, setSkillOnly] = useState(false);
@@ -142,7 +145,11 @@ export function UxDesignPage() {
     if (!merged) return [];
     const q = query.trim().toLowerCase();
     const filtered = merged.filter((m) => {
-      if (activeTag && !(m.repo.topics ?? []).includes(activeTag)) return false;
+      if (activeTag) {
+        const cat = CATEGORY_TOPICS.find((c) => c.id === activeTag);
+        const tags = cat ? cat.topics : [activeTag];
+        if (!(m.repo.topics ?? []).some((t) => tags.includes(t))) return false;
+      }
       if (skillOnly && !m.isSkill) return false;
       if (lang && m.repo.language !== lang) return false;
       if (q) {

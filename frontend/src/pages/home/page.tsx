@@ -3,6 +3,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { fetchDates, fetchFeeds } from "@/services/feeds";
 import { fetchTrendshiftSlice } from "@/services/trendshift";
 import { EmptyState } from "@/components/layout";
+import { CATEGORY_TOPICS } from "../../../../topics/ux-design/src/pages/page";
 import type { FeedItem } from "@/types/feed";
 
 /**
@@ -300,6 +301,7 @@ function TopicCard({
 }
 
 export function HomePage() {
+  const navigate = useNavigate();
   const { pool, error } = useHotPool();
   const [page, setPage] = useState(1);
   const [eduRows, setEduRows] = useState<TopicRow[] | null>(null);
@@ -340,11 +342,20 @@ export function HomePage() {
               trending × trendshift 合并去重
             </span>
           </h2>
-          {pool ? (
-            <span className="text-[12px] tabular-nums text-ink-4">
-              {pool.length} 仓库
-            </span>
-          ) : null}
+          <div className="flex items-center gap-3">
+            {pool ? (
+              <span className="text-[12px] tabular-nums text-ink-4">
+                {pool.length} 仓库
+              </span>
+            ) : null}
+            <button
+              type="button"
+              onClick={() => void navigate({ to: "/trending" })}
+              className="text-[13px] text-primary hover:underline"
+            >
+              查看更多 →
+            </button>
+          </div>
         </div>
 
         {error ? (
@@ -443,6 +454,20 @@ export function HomePage() {
             loading={uxRows === null}
             to="/ux"
           />
+        </div>
+        {/* Topic 索引：点击深链 /ux?tag=（B18） */}
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-[12px] text-ink-4">Topic 索引</span>
+          {CATEGORY_TOPICS.map((c) => (
+            <button
+              key={c.id}
+              type="button"
+              onClick={() => void navigate({ to: "/ux", search: { tag: c.id } })}
+              className="rounded-full border border-border px-3 py-0.5 text-[12px] leading-5 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
+            >
+              {c.label}
+            </button>
+          ))}
         </div>
       </section>
     </div>

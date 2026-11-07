@@ -32,6 +32,9 @@ export const webDomain = createWebDomain("ux-design")
         getParentRoute: () => layout,
         path: "/ux",
         component: UxDesignPage,
+        validateSearch: (search: Record<string, unknown>) => ({
+          tag: typeof search.tag === "string" && search.tag ? search.tag : undefined,
+        }),
       }),
     ];
 
