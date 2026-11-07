@@ -18,17 +18,36 @@ interface TrendshiftRowProps {
 function TrendshiftRow({ row, maxGained }: TrendshiftRowProps) {
   const gained = row.starsGained ?? 0;
   const barWidth = maxGained > 0 ? Math.max(2, (gained / maxGained) * 100) : 0;
+  // sprint-3 B5：AIHot rank 色阶（前 3 彩色，其余灰）+ NO.1 头卡
+  const rankColor =
+    row.rank === 1
+      ? "text-rank-1"
+      : row.rank === 2
+        ? "text-rank-2"
+        : row.rank === 3
+          ? "text-rank-3"
+          : "text-rank-rest";
 
   return (
-    <div className="group relative overflow-hidden rounded-md border bg-card px-3 py-2 transition-colors hover:border-primary/40">
+    <div
+      className={
+        row.rank === 1
+          ? "group relative overflow-hidden rounded-card border border-hot/30 bg-hot-soft px-4 py-3 transition-colors hover:border-hot/50"
+          : "group relative overflow-hidden rounded-md border bg-card px-3 py-2 transition-colors hover:border-primary/40"
+      }
+    >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 bg-primary/10"
+        className={
+          row.rank === 1
+            ? "pointer-events-none absolute inset-y-0 left-0 bg-hot/15"
+            : "pointer-events-none absolute inset-y-0 left-0 bg-primary/10"
+        }
         style={{ width: `${barWidth}%` }}
       />
       <div className="relative flex items-start gap-3">
         <div
-          className="w-8 shrink-0 pt-0.5 text-right text-sm font-semibold tabular-nums text-muted-foreground"
+          className={`w-8 shrink-0 pt-0.5 text-right text-sm font-semibold tabular-nums ${rankColor}`}
           title="Rank"
         >
           {row.rank}
@@ -40,9 +59,13 @@ function TrendshiftRow({ row, maxGained }: TrendshiftRowProps) {
               href={row.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm font-medium text-foreground hover:underline"
+              className={
+                row.rank === 1
+                  ? "inline-flex items-center gap-1 text-[15px] font-semibold text-ink hover:underline"
+                  : "inline-flex items-center gap-1 text-sm font-medium text-ink-2 hover:underline"
+              }
             >
-              {row.fullName}
+              {row.rank === 1 ? `NO.1 · ${row.fullName}` : row.fullName}
               <ExternalLink className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-60" />
             </a>
             {row.language && (
