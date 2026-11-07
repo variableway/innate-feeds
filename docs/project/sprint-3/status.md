@@ -23,8 +23,11 @@
 | task-B16 | 主页双区块（3 天热榜合并 + 主题卡片） | done | 15dccb8 |
 | task-B17 | 主页间距修复 + 反AI味主题接入 | done | 89a49ee |
 | task-B18 | 主页 Topic 索引 + 热榜查看更多 + 类目多源匹配 | done | 53eef74 |
+| task-B19 | 首页标题一行化 + AI Slop 主题呈现 + trending 满屏 | done | 9ba470d |
 
 ## 执行日志
+
+- 2026-11-07 task-B19 done（9ba470d）。sprint-3 计 20 任务。
 
 - 2026-11-07 task-B18 done（53eef74）。sprint-3 计 19 任务。
 

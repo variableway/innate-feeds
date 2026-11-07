@@ -34,6 +34,7 @@
 | [task-B16](./task-B16.md) | 主页双区块（3 天热榜合并 + 主题卡片） | done | 15dccb8 |
 | [task-B17](./task-B17.md) | 主页间距修复 + 反AI味主题接入 | done | 89a49ee |
 | [task-B18](./task-B18.md) | 主页 Topic 索引 + 热榜查看更多 + 类目多源匹配 | done | 53eef74 |
+| [task-B19](./task-B19.md) | 首页标题一行化 + AI Slop 主题呈现 + trending 满屏 | done | 9ba470d |
 
 依赖：A1 独立；B1 → B2 → (B3/B4/B5/B6 并行序贯) → B7。
 
