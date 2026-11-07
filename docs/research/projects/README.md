@@ -7,6 +7,7 @@ issues/ 是已立项的执行契约（验收标准 + assignee + 日志）。
 
 | ID | 标题 | 状态 | GitHub Issue | 日期 |
 |---|---|---|---|---|
+| [aihot-ui-adoption](./aihot-ui-adoption.md) | AIHot UI 风格采纳计划：token 叠加 / 布局原语 / trending+starred 两页换装，两波（第二波依赖 M1） | **计划 · 未执行**（第一波 ≈2-2.5 天） | — | 2026-11-07 |
 | [module-partition-design](./module-partition-design.md) | 模块划分设计：可见面收缩至 trending+starred，前台/API/同步任务/Topics 四向分离（M2 T2-5 提前版） | **已决策待执行**（S1-S5，≈1.25 天） | — | 2026-11-07 |
 | [topic-platform-redesign](./topic-platform-redesign.md) | 重构总案：五层架构 / 模块设计 / 目录终态与迁移映射 / AIHot UI 参考 / M0-M4 分解 / docs 治理 | **已决策 · M0 已执行（2026-11-07）**，下一步 M1 热度引擎 | — | 2026-11-07 |
 | [frontend-backend-data-separation](./frontend-backend-data-separation.md) | 前后端数据分离：S0-S5 迁移计划 | **进行中** · S0+S4 已落地，S1-S3 待排期 | [#36](https://github.com/variableway/innate-feeds/issues/36) | 2026-11-01 |
