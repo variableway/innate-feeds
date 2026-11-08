@@ -93,3 +93,48 @@ export async function buildHotSnapshot(db, opts?: { windowHours?: number; topN?:
 - [x] fixture 单测：窗口边界 / 独立源去重 / 半衰数学 / tie-break 确定性（7 用例全绿，含 idempotent 落库与 30 天清理）
 - [x] 真实数据冒烟：50 条，digest 信号主导（trending 11-06 快照经 52h 衰减权重自然下沉），starred fallback 补齐 22/50 元数据；top 详见提交记录
 - [x] `bun test`（110 过 0 失败）+ typecheck 绿；静态导出 `frontend/public/data/hot/{manifest,hot-2026-11-08}.json`；`/api/hot` 与 `/api/hot/dates` 实测 200
+
+## 8. 效果评估方法（两周观察期，2026-11-08 起）
+
+### 8.1 每日看什么（5 分钟清单）
+
+1. **对比基线**：`GET /api/hot` top 10 vs 当日 GitHub Trending top 10——重合度 30-70% 为健康：
+   - 重合 >80%：热度榜只是 trending 复读，跨源融合没产生增量（降 trending 权重或查 digest 信号是否参与）。
+   - 重合 <10%：榜被单一源噪声主导（当前为 digest 最新精选），需调权重。
+2. **信号多样性**：top 10 中多信号条目（≥2 源命中）占比——这是本引擎的核心价值，目标逐步上升；第一周预计偏低（trendshift/trending 快照刚进窗口）。
+3. **衰减合理性**：昨日热榜 top 是否今天仍在但 heat 下降（半衰生效），而非骤然消失。
+4. **假阳性抽查**：top 20 里挑 5 个人工看——「这值得我关注吗？」；记录 Yes/No 到 task 日志。
+5. **假阴性抽查**：当天 GitHub Trending #1 若不在 hot top 50 → 查信号抽取（多半是窗口/字段问题而非算法问题）。
+
+### 8.2 记录方式
+
+每日 `sync hot` 后在快照 JSON 上手工记 3 个数（重合度 / 多信号占比 / 假阳性数），
+两周后汇总决定 M2。无感记录优先，不为此建新表。
+
+### 8.3 判定标准（两周后 M2 go/no-go）
+
+| 维度 | 达标（→ M2 继续） | 不达标（→ 调参或降级） |
+|---|---|---|
+| 跨源增量 | 多信号条目稳定出现且排序高于单源复读 | 榜 ≈ 单一源换皮 |
+| 相关性 | 假阳性抽查 ≥3/5 值得关注 | <2/5（调权重或加预筛） |
+| 稳定性 | 无空刊；失败有 warning 可见 | 空刊/静默失败 |
+| 成本 | 零 LLM、日增 <1 分钟任务时长 | — |
+
+### 8.4 已知环境差异与评估边界（2026-11-08 用户拍板）
+
+- **评估只针对本地全四源快照**；CI/Pages 快照仅 digest+trending 两源，内容域互不
+  相关（人肉精选 vs 原始热度），**不参与评估**——§8.1 的指标在两源快照上没有意义。
+  Pages 展示保留两源快照（有内容总比空好），是否补全 CI 源跟随 M2 决策。
+- github-new 本地 store 内容冻结在 11-03（疑似 GH #33 同族），修复前该源少信号。
+
+### 8.5 自动化评估（2026-11-08 交付）
+
+`bun src/app/cli.ts eval hot [--date YYYY-MM-DD]`（挂 `data:update:local` 尾部，
+即本地每日链自动产出报告）：
+
+- 自动计算 §8.1 的 1/2/3/5 项：baselineOverlap（30-70% 健康带）、multiSignalRatio
+  （top10 ≥20% 达标）、decay 存活数、falseNegative（trending 缺席条目）、sourceHealth
+  分布；每项按 §8.3 阈值给 ok/warn/bad verdict。
+- 报告 JSON 落 `~/.innate/github-hot/eval-{date}.json`；控制台逐条打印 + 人工抽查提醒。
+- 假阳性抽查（§8.1-4）无法自动判定，脚本只负责提醒，仍需人工。
+- 单测：`eval-hot.test.ts`（overlap 比例 / 多信号占比 / decay 存活 / source health）。

@@ -45,6 +45,7 @@
     "predev:seed": "node --eval \"process.exit(require('fs').existsSync('frontend/node_modules/@innate/ui')?0:1)\" || innate-fe-cli install --dir frontend && cp frontend/.npmrc .npmrc",
     "data:sync:external": "cd backend && bun src/app/cli.ts sync vc --source producthunt --source yc --source a16z --source hackernews --source huggingface --source github-new --source devto --source lobsters --source edu-skills",
     "data:sync:hot": "cd backend && bun run sync:hot",
+    "data:eval:hot": "cd backend && bun run eval:hot",
     "data:sync:hackernews": "cd backend && bun run sync:hackernews",
     "data:sync:huggingface": "cd backend && bun run sync:huggingface",
     "data:sync:github-new": "cd backend && bun run sync:github-new",
@@ -52,7 +53,7 @@
     "data:sync:lobsters": "cd backend && bun run sync:lobsters",
     "data:sync:edu-skills": "cd backend && bun run sync:edu-skills",
     "data:sync:edu-videos": "cd backend && bun run sync:edu-videos",
-    "data:update:local": "bun run sync && bun run data:sync:digest && bun run data:sync:topics && bun run data:sync:external && bun run data:sync:hot"
+    "data:update:local": "bun run sync && bun run data:sync:digest && bun run data:sync:topics && bun run data:sync:external && bun run data:sync:hot && bun run data:eval:hot"
   },
   "devDependencies": {
     "@vitest/expect": "^5.0.5",

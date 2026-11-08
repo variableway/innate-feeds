@@ -79,6 +79,7 @@ Usage:
   tsx src/app/cli.ts topics --list
   tsx src/app/cli.ts dates
   tsx src/app/cli.ts stats
+  tsx src/app/cli.ts eval hot [--date YYYY-MM-DD]
 
 Digest notes:
   Writes JSON under ~/.innate/digest/ by default (override with --out).
@@ -591,6 +592,16 @@ async function main() {
     case "stats": {
       const db = getDb(dbPath);
       console.log(getStats(db));
+      break;
+    }
+    case "eval": {
+      if (process.argv[3] !== "hot") {
+        console.error("Usage: bun src/app/cli.ts eval hot [--date YYYY-MM-DD]");
+        process.exit(1);
+      }
+      const dateArg = process.argv[4] === "--date" ? process.argv[5] : undefined;
+      const { evalHot } = await import("../curation/eval-hot.js");
+      evalHot(getDb(dbPath), dateArg);
       break;
     }
     default:

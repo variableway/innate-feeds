@@ -16,6 +16,7 @@
     "sync:starred:recent": "bun src/app/cli.ts sync starred --days 1",
     "sync:digest": "bun src/app/cli.ts sync digest --days 90",
     "sync:hot": "bun src/app/cli.ts sync hot",
+    "eval:hot": "bun src/app/cli.ts eval hot",
     "sync:window": "bun src/app/cli.ts sync window",
     "sync:producthunt": "bun src/app/cli.ts sync producthunt",
     "sync:yc": "bun src/app/cli.ts sync yc",
