@@ -2,7 +2,8 @@
 
 > 状态更新 2026-11-07：S0（类型收敛）+ S4（源注册表）已随 M0 落地（commit 7fb1ab0）；S1-S3 留独立 track 待排期。
 
-**Status:** backlog —— 方案已成型，**尚未决定是否实施**
+**Status:** 部分落地——S0/S4（2026-11-07）、S1-external 与 S3（2026-11-08）已实施；
+**S2（查询语义收敛）与 S1 余项（feeds/topics/plugins 归一化）待排期**
 **Issue:** [variableway/innate-feeds#36](https://github.com/variableway/innate-feeds/issues/36)（与中文热榜调研同开，便于合并排期）
 **调研日期:** 2026-11-01
 
@@ -83,7 +84,7 @@ shared/                          ← 跨层：类型 + 纯函数 + 常量（不�
 
 ### S1 — 归一化收敛（1 天）
 
-1. 新建 `shared/normalize/external.ts`：`normalizeExternalItem(raw): ExternalFeedItem`。
+1. 新建 `shared/normalize/external.ts`：`normalizeExternalItem(raw): ExternalFeedItem`。✅ 2026-11-08（external 管线完成：storage.saveItems 写盘前归一化 + 前端删除防御性 normalizeItem；feeds/topics/plugins 归一化收敛待排期）
 2. **后端**在 `backend/src/data/external-store.ts` 写出前调用它 → 落盘 JSON 即终态。
 3. **前端** `frontend/src/services/external.ts:52-82` 的 `normalizeItem` 删除，直接信任 payload。
 4. 同样处理 feeds / topics / plugins 的 payload 归一化。
@@ -112,7 +113,7 @@ shared/query/feeds.ts
 **能消除的漂移：** 参数名（`pageSize` vs `perPage`）、默认值（35/100）、排序枚举、topics 的 AND 语义、date 回退规则 —— 这些全部由 `parseFeedQuery` 定义一次。
 **不能消除的：** 检索算法本身的差异（全文 vs 子串）。若要彻底一致，得让静态模式也用同一套匹配逻辑 —— 可选做法：后端静态导出时**额外产出 FTS 结果**不可行（组合爆炸），改为**前端改用同款分词/匹配**（成本高）。→ 见 §6 待决策。
 
-### S3 — 消除 hidden 双重过滤（0.5 天）
+### S3 — 消除 hidden 双重过滤（0.5 天）✅ 2026-11-08 已实施
 
 明确单一归属：**后端负责过滤，前端只负责记录**。
 

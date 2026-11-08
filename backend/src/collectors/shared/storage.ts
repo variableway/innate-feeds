@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
 import { join } from "path";
 import { homedir } from "os";
 import type { ExternalFeedItem, FeedSource, SaveResult } from "./types.js";
+import { normalizeExternalItem } from "../../../../shared/normalize/external.js";
 
 export interface ManifestEntry {
   filename: string;
@@ -44,12 +45,15 @@ export function saveItems(
   mkdirSync(dir, { recursive: true });
 
   const fname = filename || `${label}.json`;
+  // S1 (数据分离方案): normalize at the single write choke point so on-disk
+  // JSON is the final contract shape — consumers trust the payload as-is.
+  const normalized = items.map((item) => normalizeExternalItem(item));
   const payload = {
     source,
     label,
     fetchedAt: new Date().toISOString(),
-    count: items.length,
-    items,
+    count: normalized.length,
+    items: normalized,
   };
   const json = JSON.stringify(payload, null, 2);
   const filePath = join(dir, fname);

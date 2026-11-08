@@ -49,38 +49,6 @@ function num(value: unknown): number | undefined {
   return undefined;
 }
 
-function normalizeItem(raw: Record<string, unknown>): ExternalFeedItem {
-  const metricsRaw = (raw.metrics ?? {}) as Record<string, unknown>;
-  return {
-    id: str(raw.id),
-    source: (SOURCE_IDS as string[]).includes(str(raw.source))
-      ? (raw.source as ExternalSourceId)
-      : "producthunt",
-    title: str(raw.title),
-    tagline: str(raw.tagline),
-    description: str(raw.description),
-    url: str(raw.url),
-    externalUrl: raw.externalUrl ? str(raw.externalUrl) : null,
-    imageUrl: raw.imageUrl ? str(raw.imageUrl) : null,
-    categories: Array.isArray(raw.categories)
-      ? raw.categories.map((t) => str(t))
-      : [],
-    metrics: {
-      score: num(metricsRaw.score),
-      comments: num(metricsRaw.comments),
-      stars: num(metricsRaw.stars),
-      downloads: num(metricsRaw.downloads),
-      forks: num(metricsRaw.forks),
-      teamSize: num(metricsRaw.teamSize),
-      batch: metricsRaw.batch ? str(metricsRaw.batch) : undefined,
-      status: metricsRaw.status ? str(metricsRaw.status) : undefined,
-    },
-    metadata: (raw.metadata ?? {}) as Record<string, unknown>,
-    fetchedAt: str(raw.fetchedAt),
-    publishedAt: raw.publishedAt ? str(raw.publishedAt) : null,
-  };
-}
-
 function normalizeEntry(raw: Record<string, unknown>): ExternalSourceEntry {
   return {
     source: (SOURCE_IDS as string[]).includes(str(raw.source))
@@ -128,16 +96,7 @@ export async function fetchExternalSource(
         `${API_BASE}/external/${encodeURIComponent(source)}`,
       );
 
-  const items = Array.isArray(raw.items) ? raw.items : [];
-  return {
-    source,
-    title: str(raw.title) || source,
-    description: str(raw.description),
-    label: str(raw.label),
-    fetchedAt: str(raw.fetchedAt),
-    count: (num(raw.count) ?? 0) || items.length,
-    items: items.map((item) => normalizeItem(item as Record<string, unknown>)),
-  };
+  // S1: backend normalizes at the write choke point — payload is final.
+  const payload = raw as unknown as ExternalSourcePayload;
+  return { ...payload, source };
 }
-
-export { normalizeItem };

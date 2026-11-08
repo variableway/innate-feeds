@@ -66,21 +66,6 @@ function loadExportedHidden(): Promise<HiddenData> {
   return exportedHiddenPromise;
 }
 
-export async function getHiddenSets(): Promise<{
-  digest: Set<string>;
-  repos: Set<string>;
-}> {
-  const local = loadLocalHidden();
-  const digest = new Set(local.digest);
-  const repos = new Set(local.repos);
-  if (IS_STATIC) {
-    const exported = await loadExportedHidden();
-    for (const id of exported.digest) digest.add(id);
-    for (const name of exported.repos) repos.add(name);
-  }
-  return { digest, repos };
-}
-
 async function postHidden(
   endpoint: "hide" | "unhide",
   kind: HiddenKind,
