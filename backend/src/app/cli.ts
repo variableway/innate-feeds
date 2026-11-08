@@ -301,6 +301,35 @@ async function runSync(syncArgs: string[]) {
         2,
       ),
     );
+  } else if (type === "hot") {
+    // GH #63 M1 heat engine: build → persist → prune → export.
+    const { archiveTrendshiftDaily, buildHotSnapshot, saveHotSnapshot, innateHome } =
+      await import("../curation/heat.js");
+    const { exportHotStatic } = await import("../data/export-hot.js");
+    archiveTrendshiftDaily(innateHome());
+    const db = getDb();
+    const snapshot = buildHotSnapshot(db);
+    const pruned = saveHotSnapshot(db, snapshot);
+    const exported = exportHotStatic();
+    console.log(
+      JSON.stringify(
+        {
+          source: "github-hot",
+          ruleVersion: snapshot.ruleVersion,
+          snapshotDate: snapshot.snapshotDate,
+          count: snapshot.items.length,
+          prunedRows: pruned,
+          outDir: exported.dest,
+          top3: snapshot.items.slice(0, 3).map((i) => ({
+            fullName: i.fullName,
+            heat: i.heat,
+            signals: i.signals.map((s) => s.source),
+          })),
+        },
+        null,
+        2,
+      ),
+    );
   } else if (type === "vc") {
     const args = syncArgs.slice(1);
     const sources: string[] = [];

@@ -68,6 +68,28 @@ CREATE TABLE IF NOT EXISTS trending_snapshots (
   UNIQUE(snapshot_date, period, repo_id)
 );
 
+-- GitHub Hot (GH #63, M1 heat engine): one ranked snapshot per day.
+-- heat = Σ per independent source weight × 2^(-hours since first_seen / 24),
+-- rule version travels with every row (see backend/src/curation/heat.ts).
+CREATE TABLE IF NOT EXISTS hot_snapshots (
+  id TEXT PRIMARY KEY,
+  snapshot_date TEXT NOT NULL,
+  rule_version TEXT NOT NULL,
+  full_name TEXT NOT NULL,
+  rank INTEGER NOT NULL,
+  heat REAL NOT NULL,
+  signals_json TEXT NOT NULL,
+  stars INTEGER,
+  stars_gained INTEGER,
+  description TEXT,
+  language TEXT,
+  owner_login TEXT,
+  owner_avatar_url TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_hot_snapshots_date ON hot_snapshots(snapshot_date, rank);
+
 CREATE INDEX IF NOT EXISTS idx_trending_repos_language ON trending_repos(language);
 CREATE INDEX IF NOT EXISTS idx_trending_repos_stars ON trending_repos(stars);
 CREATE INDEX IF NOT EXISTS idx_trending_repos_snapshot_date ON trending_repos(snapshot_date);

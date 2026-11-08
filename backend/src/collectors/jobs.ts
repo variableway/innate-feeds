@@ -152,6 +152,13 @@ export const SYNC_JOBS: SyncJob[] = [
   },
   // ---- pipeline：编排（组合上述 job）----
   {
+    id: "hot",
+    group: "pipeline",
+    summary: "GitHub Hot 热度快照（跨源信号 × 24h 半衰，GH #63）",
+    args: ["hot"],
+    outputs: "SQLite hot_snapshots + frontend/public/data/hot",
+  },
+  {
     id: "window",
     group: "pipeline",
     summary: "90 天全量窗口（trending+starred+digest+README 预取）",

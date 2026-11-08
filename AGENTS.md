@@ -248,6 +248,9 @@ bun run sync:trendshift                                            # all timefra
 bun src/app/cli.ts sync trendshift --language python,rust          # specific language slices
 bun src/app/cli.ts sync trendshift --source scrape --timeframe daily  # fallback scraper
 
+# GitHub Hot — 跨源热度榜（GH #63，digest/trending/trendshift/github-new × 24h 半衰）
+bun run sync:hot                                                   # 构建今日快照 + 导出 frontend/public/data/hot
+
 # Awesome DSH — upstream market index + GitHub GraphQL stars (GH #30)
 bun run sync:awesome-dsh
 
@@ -397,6 +400,8 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/plugins` | DSH plugin search. Query: `q`, `category` (csv), `sort`, `page`, `perPage`. |
 | GET | `/api/trendshift` | Trendshift slice index (timeframes, languages, synced files). |
 | GET | `/api/trendshift/:timeframe` | Ranking slice. Query: `language` (default `all`), `period` (optional). Local store first, live CDN fallback. |
+| GET | `/api/hot` | GitHub Hot ranked snapshot (GH #63). Query: `date` (default latest), `limit` (default 50). Hidden repos filtered at read time. |
+| GET | `/api/hot/dates` | Available hot snapshot dates, newest first. |
 | GET | `/api/plugins/stats` | Plugin totals. |
 | GET | `/api/plugins/categories` | Fixed 23 awesome-dsh-plugin categories. |
 | GET | `/api/plugins/:slug` | Plugin detail. |
@@ -439,6 +444,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `starred_repos` — starred repository metadata (integer PK = GitHub repo ID, includes `starred_at`).
 - `starred_repo_topics` — many-to-many topics for starred repos.
 - `trending_snapshots` — historical snapshot analytics table (defined but not yet written to by sync code).
+- `hot_snapshots` — GitHub Hot ranked snapshots (GH #63, M1): one ranked list per day, `rule_version` travels with every row; kept ≤30 days by `saveHotSnapshot`. Built by `backend/src/curation/heat.ts` (`cli sync hot`).
 
 ## Code organization and conventions
 
@@ -481,6 +487,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `data/topics-store.ts` — GitHub Topics snapshots (`~/.innate/github-topics/topics/{topic}.json` + `index.json`), user-added topic persistence (`user-topics.json`, GH #26), and the DTO mapping used by the API/static export.
 - `data/export-topics.ts` — exports the topic snapshots to `frontend/public/data/topics/` (static mode), resolving the "existing" flag from SQLite.
 - `db/index.ts` — all SQL lives here. Uses prepared statements from `bun:sqlite`. Batch-fetches topics to avoid N+1 queries. Exports typed interfaces (`FeedItemDTO`, `FeedStatsDTO`, `TrendingItemRow`, `StarredItemRow`).
+- `curation/heat.ts` — GitHub Hot heat engine (GH #63): per-source signal extraction (digest / trending / trendshift / github-new), independent-source dedupe, 24h half-life decay, deterministic ranking; `data/export-hot.ts` exports snapshots to `frontend/public/data/hot/`.
 - `db/paths.ts` — resolves database path via `DB_PATH` env var or `INNATE_HOME` (defaults to `~/.innate`).
 
 ### Frontend
@@ -512,6 +519,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Adding/changing external collectors (PH/YC/a16z/Topics) | `backend/src/collectors/external/producthunt.ts`, `yc-companies.ts`, `a16z-portfolio.ts`、`backend/src/collectors/core/github-topics.ts` |
 | Changing external feed sources / the Feeds menu (GH #31) | `backend/src/collectors/external/{hackernews,huggingface,github-new,devto,lobsters}.ts`, `backend/src/data/external-store.ts`, `backend/src/data/export-external.ts`, `frontend/src/types/external.ts`, `frontend/src/pages/feeds/`, `frontend/src/services/external.ts` |
 | Changing Trendshift archives (GH #23) | `backend/src/collectors/external/trendshift.ts`, `backend/src/data/export-trendshift.ts`, `frontend/src/pages/trending-shift/`, `frontend/src/services/trendshift.ts` |
+| Changing the GitHub Hot heat engine (GH #63) | `backend/src/curation/heat.ts`, `backend/src/db/index.ts` (hot helpers), `backend/src/data/export-hot.ts`, `backend/src/app/cli.ts` (`sync hot`) |
 | Changing the Awesome DSH catalog (GH #30) | `backend/src/collectors/vertical/awesome-dsh.ts`, `backend/src/dsh/catalog.ts`, `shared/plugin-categories.ts`, `topics/dsh/src/services/plugins.ts` |
 | Changing the legacy DSH YAML updater (GH #27) | `backend/src/collectors/vertical/dsh-catalog.ts` |
 | Changing the GitHub Topics datasource (GH #24) | `backend/src/collectors/core/github-topics.ts`, `backend/src/data/topics-store.ts`, `backend/src/data/export-topics.ts`, `frontend/src/pages/topics/`, `frontend/src/services/topics.ts` |

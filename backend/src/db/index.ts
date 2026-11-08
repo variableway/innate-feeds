@@ -836,3 +836,166 @@ export function listTrendingFullNamesSince(
     .all(sinceDate) as { full_name: string }[];
   return rows.map((r) => r.full_name);
 }
+
+// ---- GitHub Hot (GH #63) ----------------------------------------------------
+
+export interface HotSignalRow {
+  source: string;
+  label?: string;
+  rank?: number;
+  seenAt: string;
+  weight: number;
+}
+
+export interface HotSnapshotItemRow {
+  fullName: string;
+  heat: number;
+  rank: number;
+  stars: number | null;
+  starsGained: number | null;
+  description: string | null;
+  language: string | null;
+  ownerLogin: string | null;
+  ownerAvatarUrl: string | null;
+  signals: HotSignalRow[];
+}
+
+/** Replace the whole snapshot for one date in a single transaction. */
+export function upsertHotSnapshot(
+  db: Database,
+  args: {
+    snapshotDate: string;
+    ruleVersion: string;
+    items: HotSnapshotItemRow[];
+  },
+): void {
+  const insert = db.prepare(`
+    INSERT INTO hot_snapshots (
+      id, snapshot_date, rule_version, full_name, rank, heat, signals_json,
+      stars, stars_gained, description, language, owner_login, owner_avatar_url
+    ) VALUES (
+      $id, $snapshotDate, $ruleVersion, $fullName, $rank, $heat, $signalsJson,
+      $stars, $starsGained, $description, $language, $ownerLogin, $ownerAvatarUrl
+    )
+  `);
+  const del = db.prepare(`DELETE FROM hot_snapshots WHERE snapshot_date = ?`);
+  const tx = db.transaction(() => {
+    del.run(args.snapshotDate);
+    for (const item of args.items) {
+      insert.run({
+        id: `${args.snapshotDate}#${item.rank}`,
+        snapshotDate: args.snapshotDate,
+        ruleVersion: args.ruleVersion,
+        fullName: item.fullName,
+        rank: item.rank,
+        heat: item.heat,
+        signalsJson: JSON.stringify(item.signals),
+        stars: item.stars,
+        starsGained: item.starsGained,
+        description: item.description,
+        language: item.language,
+        ownerLogin: item.ownerLogin,
+        ownerAvatarUrl: item.ownerAvatarUrl,
+      });
+    }
+  });
+  tx();
+}
+
+interface HotDbRow {
+  snapshot_date: string;
+  rule_version: string;
+  full_name: string;
+  rank: number;
+  heat: number;
+  signals_json: string;
+  stars: number | null;
+  stars_gained: number | null;
+  description: string | null;
+  language: string | null;
+  owner_login: string | null;
+  owner_avatar_url: string | null;
+  created_at: string;
+}
+
+function rowToItem(row: HotDbRow): HotSnapshotItemRow {
+  let signals: HotSignalRow[] = [];
+  try {
+    const parsed = JSON.parse(row.signals_json) as HotSignalRow[];
+    if (Array.isArray(parsed)) signals = parsed;
+  } catch {
+    signals = [];
+  }
+  return {
+    fullName: row.full_name,
+    heat: row.heat,
+    rank: row.rank,
+    stars: row.stars,
+    starsGained: row.stars_gained,
+    description: row.description,
+    language: row.language,
+    ownerLogin: row.owner_login,
+    ownerAvatarUrl: row.owner_avatar_url,
+    signals,
+  };
+}
+
+/** Latest snapshot (by snapshot_date), or one specific date. */
+export function getHotSnapshot(
+  db: Database,
+  date?: string,
+  limit?: number,
+): { snapshotDate: string; ruleVersion: string; generatedAt: string; items: HotSnapshotItemRow[] } | null {
+  const row = (
+    date
+      ? db
+          .prepare(
+            `SELECT snapshot_date, rule_version, created_at FROM hot_snapshots
+             WHERE snapshot_date = ? LIMIT 1`,
+          )
+          .get(date)
+      : db
+          .prepare(
+            `SELECT snapshot_date, rule_version, created_at FROM hot_snapshots
+             ORDER BY snapshot_date DESC LIMIT 1`,
+          )
+          .get()
+  ) as HotDbRow | undefined;
+  if (!row) return null;
+  const cap = limit ?? 50;
+  const items = db
+    .prepare(
+      `SELECT * FROM hot_snapshots WHERE snapshot_date = ? ORDER BY rank ASC LIMIT ${Math.max(1, Math.min(cap, 200))}`,
+    )
+    .all(row.snapshot_date) as HotDbRow[];
+  return {
+    snapshotDate: row.snapshot_date,
+    ruleVersion: row.rule_version,
+    generatedAt: row.created_at,
+    items: items.map(rowToItem),
+  };
+}
+
+/** Distinct snapshot dates, newest first. */
+export function getHotSnapshotDates(db: Database): string[] {
+  const rows = db
+    .prepare(
+      `SELECT DISTINCT snapshot_date FROM hot_snapshots ORDER BY snapshot_date DESC`,
+    )
+    .all() as { snapshot_date: string }[];
+  return rows.map((r) => r.snapshot_date);
+}
+
+/** Delete snapshots older than keepDays; returns removed row count. */
+export function cleanupHotSnapshots(
+  db: Database,
+  keepDays = 30,
+): number {
+  const cutoff = new Date(Date.now() - keepDays * 86_400_000)
+    .toISOString()
+    .slice(0, 10);
+  const info = db
+    .prepare(`DELETE FROM hot_snapshots WHERE snapshot_date < ?`)
+    .run(cutoff);
+  return info.changes;
+}

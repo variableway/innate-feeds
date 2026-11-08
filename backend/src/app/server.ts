@@ -9,11 +9,14 @@ import { adminDbRouter } from "./admin-db.js";
 import {
   getDb,
   getFeedItems,
+  getHotSnapshot,
+  getHotSnapshotDates,
   getStats,
   getLanguages,
   getTrendingDates,
   listKnownRepoFullNames,
 } from "../db/index.js";
+import { getHiddenRepoFullNames } from "../data/hidden-store.js";
 // M-API / M-Sync 边界（sprint-3 task-A1）：
 // 禁止：调用 collectors 的写路径/采集编排 —— 唯一例外是 POST /api/feeds/sync 手动触发（见文末 sync 端点）。
 // 白名单只读例外（后续 S 系列迁 data/）：README 回源读取、trendshift 本地切片读取。
@@ -324,6 +327,50 @@ app.get("/api/feeds/dates", (c) => {
     return c.json(getTrendingDates(db));
   } catch (err) {
     console.error("Error in /api/feeds/dates:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/**
+ * GitHub Hot (GH #63): ranked snapshot by cross-source heat. Query:
+ * date=YYYY-MM-DD (default latest), limit (default 50, max 200).
+ * Hidden repos filtered at read time (list may grow after build).
+ */
+app.get("/api/hot", (c) => {
+  try {
+    const db = getDb();
+    const date = c.req.query("date") || undefined;
+    const limit = Math.max(
+      1,
+      Math.min(Number(c.req.query("limit") || 50) || 50, 200),
+    );
+    const snapshot = getHotSnapshot(db, date, limit);
+    if (!snapshot) {
+      return c.json({ error: "No hot snapshot available" }, 404);
+    }
+    const hidden = getHiddenRepoFullNames();
+    return c.json({
+      ...snapshot,
+      items: snapshot.items
+        .filter((i) => !hidden.has(i.fullName.toLowerCase()))
+        .map((i) => ({ ...i, signals: i.signals })),
+    });
+  } catch (err) {
+    console.error("Error in /api/hot:", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+    return c.json({ error: message }, 500);
+  }
+});
+
+/** GitHub Hot snapshot dates (GH #63), newest first. */
+app.get("/api/hot/dates", (c) => {
+  try {
+    return c.json(getHotSnapshotDates(getDb()));
+  } catch (err) {
+    console.error("Error in /api/hot/dates:", err);
     const message =
       err instanceof Error ? err.message : "Internal server error";
     return c.json({ error: message }, 500);
