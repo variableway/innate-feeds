@@ -36,11 +36,13 @@ import {
   Palette,
   Tv,
   BotOff,
+  ChevronUp,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { collectNavItems, type WebDomain } from "@innate/web-domain";
 
 const ICONS: Record<string, LucideIcon> = {
+  BotOff,
   Github,
   Star,
   Newspaper,
@@ -91,6 +93,12 @@ interface NavItem {
   order?: number;
   group?: string;
 }
+
+/** 底部 Settings 菜单项（B20：Admin 从导航组移入 Settings 弹出菜单）。 */
+const SETTINGS_ITEMS: NavItem[] = [
+  { label: "Admin", path: "/admin", icon: "Database" },
+];
+const SETTINGS_PATHS = new Set(SETTINGS_ITEMS.map((i) => i.path));
 
 interface NavGroup {
   name: string;
@@ -155,7 +163,15 @@ export function HostShell({
     return unsub;
   }, [router]);
 
-  const groups = useMemo(() => groupNavItems(navItemsOf(domains)), [domains]);
+  // B20：settings 项不进导航组——展开态由底部 Settings 弹出菜单承载，
+  // 折叠轨（railItems 未过滤）保留直达图标。
+  const groups = useMemo(
+    () =>
+      groupNavItems(
+        navItemsOf(domains).filter((item) => !SETTINGS_PATHS.has(item.path)),
+      ),
+    [domains],
+  );
 
   // 侧栏折叠（icon 轨）；状态持久化
   const [navCollapsed, setNavCollapsed] = useState<boolean>(readNavCollapsed);
@@ -180,6 +196,8 @@ export function HostShell({
 
   // 含当前路由的分组默认展开；其余保持收起状态
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  // 底部 Settings 弹出菜单（B20）
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const isGroupCollapsed = (name: string): boolean => {
     if (name in collapsed) return collapsed[name]!;
     return !groups.some(
@@ -313,6 +331,57 @@ export function HostShell({
                 </div>
               );
             })}
+            {/* B20：底部 Settings——点击展开菜单，Admin 在其中 */}
+            <div className="mt-auto px-1.5">
+              {settingsOpen ? (
+                <div className="mb-1 flex flex-col gap-0.5 rounded-md border bg-card p-1 shadow-sm">
+                  {SETTINGS_ITEMS.map((item) => {
+                    const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
+                    const active = isItemActive(pathname, item.path);
+                    return (
+                      <button
+                        key={item.path}
+                        type="button"
+                        onClick={() => {
+                          setSettingsOpen(false);
+                          void router.navigate({ to: item.path });
+                        }}
+                        className={cn(
+                          "flex items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-medium transition-colors",
+                          active
+                            ? "bg-accent text-accent-foreground"
+                            : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
+                        )}
+                      >
+                        {Icon ? <Icon className="h-3.5 w-3.5" /> : null}
+                        {item.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : null}
+              <button
+                type="button"
+                onClick={() => setSettingsOpen((v) => !v)}
+                aria-expanded={settingsOpen}
+                className={cn(
+                  "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-semibold transition-colors",
+                  settingsOpen ||
+                    SETTINGS_ITEMS.some((i) => isItemActive(pathname, i.path))
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                <Settings className="h-4 w-4" />
+                <span className="flex-1 text-left">Settings</span>
+                <ChevronUp
+                  className={cn(
+                    "h-3.5 w-3.5 transition-transform",
+                    settingsOpen ? "" : "rotate-180",
+                  )}
+                />
+              </button>
+            </div>
           </>
         )}
       </nav>
