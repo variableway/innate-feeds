@@ -56,6 +56,10 @@ export interface BuildHotOptions {
   windowHours?: number;
   topN?: number;
   now?: Date;
+  /** 显式指定 ~/.innate 根（测试注入 fixture，避免依赖共享的 process.env） */
+  innateHome?: string;
+  /** 显式注入 digest dump（测试密闭性；缺省读最新本地 dump） */
+  digestDump?: DigestDump | null;
 }
 
 // ---------------------------------------------------------------------------
@@ -336,9 +340,13 @@ export function buildHotSnapshot(
   const topN = opts.topN ?? 50;
   const windowStart = new Date(now.getTime() - windowHours * 3_600_000);
 
-  const trendshift = extractTrendshiftSignals(windowStart, innateHome());
-  const githubNew = extractGithubNewSignals(innateHome(), windowStart);
-  const digest = extractDigestSignals(loadNewestDigestDump(), windowStart);
+  const home = opts.innateHome ?? innateHome();
+  const trendshift = extractTrendshiftSignals(windowStart, home);
+  const githubNew = extractGithubNewSignals(home, windowStart);
+  const digest = extractDigestSignals(
+    opts.digestDump !== undefined ? opts.digestDump : loadNewestDigestDump(),
+    windowStart,
+  );
   const trending = extractTrendingSignals(db, windowStart);
 
   const hidden = getHiddenRepoFullNames();

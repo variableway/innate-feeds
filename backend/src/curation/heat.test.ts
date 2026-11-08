@@ -171,7 +171,12 @@ describe("heat engine", () => {
     // through buildHotSnapshot with fixture stores only (trendshift + new +
     // trending) and verify ordering determinism.
     const now = new Date("2026-11-08T12:00:00.000Z");
-    const snapshot = buildHotSnapshot(db, { now, topN: 10 });
+    const snapshot = buildHotSnapshot(db, {
+      now,
+      topN: 10,
+      innateHome: fixtureHome,
+      digestDump: { items: [] },
+    });
 
     expect(snapshot.ruleVersion).toBe(HOT_RULE_VERSION);
     expect(snapshot.snapshotDate).toBe("2026-11-08");
@@ -198,7 +203,12 @@ describe("heat engine", () => {
 
   test("tie-break: equal heat → stars desc → fullName asc", () => {
     const now = new Date("2026-11-08T12:00:00.000Z");
-    const snap = buildHotSnapshot(db, { now, topN: 50 });
+    const snap = buildHotSnapshot(db, {
+      now,
+      topN: 50,
+      innateHome: fixtureHome,
+      digestDump: { items: [] },
+    });
     for (let i = 1; i < snap.items.length; i++) {
       const prev = snap.items[i - 1];
       const cur = snap.items[i];
@@ -213,7 +223,11 @@ describe("heat engine", () => {
 
   test("saveHotSnapshot replaces same-date rows and prunes old dates", () => {
     const now = new Date("2026-11-08T12:00:00.000Z");
-    const snap = buildHotSnapshot(db, { now });
+    const snap = buildHotSnapshot(db, {
+      now,
+      innateHome: fixtureHome,
+      digestDump: { items: [] },
+    });
     saveHotSnapshot(db, snap);
     saveHotSnapshot(db, snap); // idempotent replace
     const count = db
