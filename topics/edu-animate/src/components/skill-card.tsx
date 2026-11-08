@@ -31,9 +31,7 @@ export function SkillCard({ skill }: { skill: EduSkill }) {
       </div>
 
       {skill.tagline ? (
-        <p className="line-clamp-3 text-sm text-ink-3">
-          {skill.tagline}
-        </p>
+        <p className="line-clamp-3 text-sm text-ink-3">{skill.tagline}</p>
       ) : null}
 
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-4">

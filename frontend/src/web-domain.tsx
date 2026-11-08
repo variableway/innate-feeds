@@ -110,7 +110,7 @@ export const webDomain = createWebDomain("feeds")
       path: "/",
       icon: "Home",
       order: 5,
-      group: "GitHub",
+      // B20：主页独立菜单（无 group）——host 对无组项做平铺渲染
     },
     {
       label: "Trending",

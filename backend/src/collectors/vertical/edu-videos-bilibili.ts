@@ -9,10 +9,7 @@
  * 配置与运行说明见 docs/arch-design/edu-videos-bilibili.md。
  */
 
-import type {
-  ExternalFeedItem,
-  FeedItemMetrics,
-} from "../shared/types.js";
+import type { ExternalFeedItem, FeedItemMetrics } from "../shared/types.js";
 import { saveItems } from "../shared/storage.js";
 
 /** 策展 UP 主清单。handle 为昵称（经 search 解析 mid）或纯数字 mid。 */
@@ -41,11 +38,20 @@ function parseViews(text: string | undefined): number | null {
   if (!m) return null;
   const n = Number.parseFloat(m[1]);
   if (!Number.isFinite(n)) return null;
-  const mult = m[2].toUpperCase() === "M" ? 1_000_000 : m[2].toUpperCase() === "K" ? 1_000 : 1;
+  const mult =
+    m[2].toUpperCase() === "M"
+      ? 1_000_000
+      : m[2].toUpperCase() === "K"
+        ? 1_000
+        : 1;
   return Math.round(n * mult);
 }
 
-function buildItem(up: BilibiliEduUp, raw: BiliVideoRaw, fetchedAt: string): ExternalFeedItem | null {
+function buildItem(
+  up: BilibiliEduUp,
+  raw: BiliVideoRaw,
+  fetchedAt: string,
+): ExternalFeedItem | null {
   if (!raw.bvid || !raw.title) return null;
   const metrics: FeedItemMetrics = {};
   if (raw.play != null && raw.play > 0) metrics.score = raw.play;
@@ -60,7 +66,12 @@ function buildItem(up: BilibiliEduUp, raw: BiliVideoRaw, fetchedAt: string): Ext
     imageUrl: raw.cover,
     categories: ["edu-animation"],
     metrics,
-    metadata: { platform: "bilibili", up: up.handle, bvid: raw.bvid, duration: raw.duration },
+    metadata: {
+      platform: "bilibili",
+      up: up.handle,
+      bvid: raw.bvid,
+      duration: raw.duration,
+    },
     fetchedAt,
     publishedAt: null,
   };
@@ -98,7 +109,9 @@ async function resolveMid(handle: string): Promise<string> {
     const mid = item.url?.match(/space\.bilibili\.com\/(\d+)/)?.[1];
     if (mid) return mid;
   }
-  throw new Error(`无法解析 UP「${handle}」的 mid（search 无 space.bilibili.com/{mid} 结果）`);
+  throw new Error(
+    `无法解析 UP「${handle}」的 mid（search 无 space.bilibili.com/{mid} 结果）`,
+  );
 }
 
 /** Firecrawl：渲染抓取 + markdown 解析（已实测：视频块在渲染后 DOM 中）。 */

@@ -289,7 +289,12 @@ export interface StarredItemRow {
 }
 
 /** S0：跨层 wire 契约收敛至 shared/types/feeds，DTO 名保留为别名（后端内部沿用）。 */
-export type { GitHubRepo, FeedItem, FeedResponse, FeedFilters } from "../../../shared/types/feeds.js";
+export type {
+  GitHubRepo,
+  FeedItem,
+  FeedResponse,
+  FeedFilters,
+} from "../../../shared/types/feeds.js";
 import type { FeedItem, FeedStats } from "../../../shared/types/feeds.js";
 
 export type FeedItemDTO = FeedItem;

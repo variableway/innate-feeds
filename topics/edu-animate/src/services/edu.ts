@@ -234,7 +234,6 @@ function matchesText(hay: string, needle: string): boolean {
   return hay.toLowerCase().includes(needle.toLowerCase());
 }
 
-
 /** B13 加权分：安装量（缺省回退 stars）× (core ? 5 : 1)。 */
 export function eduScore(skill: {
   installs: number;

@@ -22,7 +22,10 @@ import {
   syncAllTrending,
   syncStarred,
 } from "../collectors/core/sync.js"; // 仅供 POST /api/feeds/sync 手动触发
-import { fetchRepoReadme, type TrendingPeriod } from "../collectors/core/github.js"; // 只读例外：README cache-first + 回源
+import {
+  fetchRepoReadme,
+  type TrendingPeriod,
+} from "../collectors/core/github.js"; // 只读例外：README cache-first + 回源
 import { getDigestFeedItems, getDigestItemById } from "../data/digest-store.js";
 import { hideItem, unhideItem } from "../data/hidden-store.js";
 import { getAppSettings, getProjectRoot } from "../data/app-config.js";

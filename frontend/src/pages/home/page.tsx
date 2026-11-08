@@ -57,7 +57,16 @@ function useHotPool() {
           .sort()
           .reverse()
           .slice(0, 3);
-        const tsMap = new Map<string, { stars: number; gained: number | null; url: string; description: string; language: string | null }>();
+        const tsMap = new Map<
+          string,
+          {
+            stars: number;
+            gained: number | null;
+            url: string;
+            description: string;
+            language: string | null;
+          }
+        >();
         for (const r of trendshiftRaw) {
           if (!periods.includes(r.periodKey)) continue;
           if (!tsMap.has(r.fullName)) {
@@ -114,9 +123,7 @@ function useHotPool() {
             });
           }
         }
-        setPool(
-          [...merged.values()].sort((a, b) => b.stars - a.stars),
-        );
+        setPool([...merged.values()].sort((a, b) => b.stars - a.stars));
       } catch (err) {
         if (!cancelled)
           setError(err instanceof Error ? err.message : String(err));
@@ -155,10 +162,7 @@ async function loadEduTop5(): Promise<TopicRow[]> {
   return (payload.items ?? [])
     .map((i) => {
       const base =
-        i.metadata?.installs ??
-        i.metrics?.score ??
-        i.metrics?.stars ??
-        0;
+        i.metadata?.installs ?? i.metrics?.score ?? i.metrics?.stars ?? 0;
       return {
         row: {
           title: i.title,
@@ -206,7 +210,10 @@ async function loadUxTop5(): Promise<TopicRow[]> {
       return payload.items ?? [];
     }),
   );
-  const byName = new Map<string, { repo: (typeof lists)[0][number]; isSkill: boolean }>();
+  const byName = new Map<
+    string,
+    { repo: (typeof lists)[0][number]; isSkill: boolean }
+  >();
   for (const list of lists) {
     for (const repo of list) {
       const isSkill =
@@ -215,7 +222,10 @@ async function loadUxTop5(): Promise<TopicRow[]> {
         (repo.topics ?? []).some((t) => UX_SKILL_TOPICS.has(t));
       const prev = byName.get(repo.fullName);
       if (!prev || repo.stars > prev.repo.stars) {
-        byName.set(repo.fullName, { repo, isSkill: isSkill || prev?.isSkill === true });
+        byName.set(repo.fullName, {
+          repo,
+          isSkill: isSkill || prev?.isSkill === true,
+        });
       } else if (isSkill && prev) {
         prev.isSkill = true;
       }
@@ -247,7 +257,13 @@ async function loadSlopTop5(): Promise<TopicRow[]> {
       );
       if (!res.ok) return [];
       const payload = (await res.json()) as {
-        items?: { fullName: string; url: string; stars: number; description: string; topics?: string[] }[];
+        items?: {
+          fullName: string;
+          url: string;
+          stars: number;
+          description: string;
+          topics?: string[];
+        }[];
       };
       return payload.items ?? [];
     }),
@@ -259,7 +275,9 @@ async function loadSlopTop5(): Promise<TopicRow[]> {
         /\bskill(s)?\b/i.test(repo.fullName) ||
         /\bskill(s)?\b/i.test(repo.description ?? "") ||
         (repo.topics ?? []).some((t) => UX_SKILL_TOPICS.has(t));
-      const prev = [...byName.entries()].find(([r]) => r.fullName === repo.fullName);
+      const prev = [...byName.entries()].find(
+        ([r]) => r.fullName === repo.fullName,
+      );
       if (!prev || repo.stars > prev[0].stars) {
         if (prev) byName.delete(prev[0]);
         byName.set(repo, isSkill || prev?.[1] === true);
@@ -371,7 +389,9 @@ export function HomePage() {
     };
   }, []);
 
-  const totalPages = pool ? Math.max(1, Math.ceil(pool.length / HOT_PAGE_SIZE)) : 1;
+  const totalPages = pool
+    ? Math.max(1, Math.ceil(pool.length / HOT_PAGE_SIZE))
+    : 1;
   const pageItems = useMemo(() => {
     if (!pool) return [];
     return pool.slice((page - 1) * HOT_PAGE_SIZE, page * HOT_PAGE_SIZE);
@@ -416,12 +436,16 @@ export function HomePage() {
         ) : !pool ? (
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
             {Array.from({ length: HOT_PAGE_SIZE }).map((_, i) => (
-              <div key={i} className="h-28 animate-pulse rounded-card border bg-card" />
+              <div
+                key={i}
+                className="h-28 animate-pulse rounded-card border bg-card"
+              />
             ))}
           </div>
         ) : pageItems.length === 0 ? (
           <EmptyState title="暂无数据">
-            先跑一次采集：<code className="text-ink-3">cli sync job trending-daily</code>
+            先跑一次采集：
+            <code className="text-ink-3">cli sync job trending-daily</code>
           </EmptyState>
         ) : (
           <>
@@ -440,10 +464,17 @@ export function HomePage() {
                     </h3>
                     {repo.fromTrendshift ? (
                       <span
-                        title={repo.gained != null ? `trendshift 日增 +${repo.gained}` : "trendshift 在榜"}
+                        title={
+                          repo.gained != null
+                            ? `trendshift 日增 +${repo.gained}`
+                            : "trendshift 在榜"
+                        }
                         className="shrink-0 rounded-mark bg-hot-soft px-1.5 py-0.5 text-[10px] font-semibold text-hot"
                       >
-                        TS{repo.gained != null ? `+${formatStars(repo.gained)}` : ""}
+                        TS
+                        {repo.gained != null
+                          ? `+${formatStars(repo.gained)}`
+                          : ""}
                       </span>
                     ) : null}
                   </div>
@@ -453,8 +484,12 @@ export function HomePage() {
                     </p>
                   ) : null}
                   <div className="mt-auto flex items-center gap-2 text-[12px] text-ink-4">
-                    <span className="tabular-nums text-ink-3">★ {formatStars(repo.stars)}</span>
-                    {repo.language ? <span className="truncate">{repo.language}</span> : null}
+                    <span className="tabular-nums text-ink-3">
+                      ★ {formatStars(repo.stars)}
+                    </span>
+                    {repo.language ? (
+                      <span className="truncate">{repo.language}</span>
+                    ) : null}
                   </div>
                 </a>
               ))}
@@ -512,7 +547,7 @@ export function HomePage() {
             title="AI Slop 反AI味 SKILL"
             rows={slopRows ?? []}
             loading={slopRows === null}
-            to="/ux"
+            to="/anti-ai"
           />
         </div>
         {/* Topic 索引：点击深链 /ux?tag=（B18） */}
@@ -522,7 +557,9 @@ export function HomePage() {
             <button
               key={c.id}
               type="button"
-              onClick={() => void navigate({ to: "/ux", search: { tag: c.id } })}
+              onClick={() =>
+                void navigate({ to: "/ux", search: { tag: c.id } })
+              }
               className="rounded-full border border-border px-3 py-0.5 text-[12px] leading-5 text-ink-3 transition-colors hover:border-ink-4/40 hover:text-ink"
             >
               {c.label}

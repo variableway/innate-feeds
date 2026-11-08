@@ -113,7 +113,9 @@ async function runSync(syncArgs: string[]) {
   if (type === "jobs") {
     // M-Sync job 注册表：列出全部采集小模块（task-A1）
     for (const j of SYNC_JOBS) {
-      console.log(`${j.id.padEnd(16)} [${j.group}] ${j.summary} → ${j.outputs}`);
+      console.log(
+        `${j.id.padEnd(16)} [${j.group}] ${j.summary} → ${j.outputs}`,
+      );
     }
     console.log(`
 共 ${SYNC_JOBS.length} 个 job；执行单个：bun src/app/cli.ts sync job <id>`);
@@ -123,16 +125,19 @@ async function runSync(syncArgs: string[]) {
     const id = syncArgs[1];
     const job = findSyncJob(id ?? "");
     if (!job) {
-      console.error(`Unknown job: ${id}（bun src/app/cli.ts sync jobs 查看全部）`);
+      console.error(
+        `Unknown job: ${id}（bun src/app/cli.ts sync jobs 查看全部）`,
+      );
       process.exit(1);
     }
-    console.log(`[job] ${job.id} (${job.group}) → cli sync ${job.args.join(" ")}`);
+    console.log(
+      `[job] ${job.id} (${job.group}) → cli sync ${job.args.join(" ")}`,
+    );
     await runSync(job.args);
     return;
   }
   if (type === "trending") {
-    const period = (syncArgs[1] || "daily") as
-      "daily" | "weekly" | "monthly";
+    const period = (syncArgs[1] || "daily") as "daily" | "weekly" | "monthly";
     const count = await syncTrending(period, dbPath);
     console.log(`Synced ${count} ${period} trending repositories`);
   } else if (type === "all-trending") {
@@ -173,9 +178,7 @@ async function runSync(syncArgs: string[]) {
       ),
     );
   } else if (type === "window") {
-    const summary = await syncWindow(
-      parseWindowArgs(syncArgs.slice(1)),
-    );
+    const summary = await syncWindow(parseWindowArgs(syncArgs.slice(1)));
     console.log(JSON.stringify(summary, null, 2));
   } else if (type === "producthunt") {
     const args = syncArgs.slice(1);
@@ -270,8 +273,7 @@ async function runSync(syncArgs: string[]) {
     const args = syncArgs.slice(1);
     let days = 7;
     for (let i = 0; i < args.length; i++) {
-      if (args[i] === "--days" && args[i + 1])
-        days = parseInt(args[++i], 10);
+      if (args[i] === "--days" && args[i + 1]) days = parseInt(args[++i], 10);
     }
     const result = await (async () => {
       switch (type) {
@@ -370,8 +372,7 @@ async function runSync(syncArgs: string[]) {
     for (let i = 0; i < args.length; i++) {
       if (args[i] === "--topic" && args[i + 1]) topics.push(args[++i]);
       if (args[i] === "--sort" && args[i + 1]) sort = args[++i] as any;
-      if (args[i] === "--per-page" && args[i + 1])
-        perPage = Number(args[++i]);
+      if (args[i] === "--per-page" && args[i + 1]) perPage = Number(args[++i]);
       if (args[i] === "--limit" && args[i + 1]) limit = Number(args[++i]);
     }
 
@@ -435,9 +436,7 @@ async function runSync(syncArgs: string[]) {
           ? [...TRENDSHIFT_TIMEFRAMES]
           : (vals as TrendshiftTimeframe[]);
       } else if (args[i] === "--language" && args[i + 1]) {
-        const vals = args[++i]
-          .split(",")
-          .map((s) => s.trim().toLowerCase());
+        const vals = args[++i].split(",").map((s) => s.trim().toLowerCase());
         opts.languages = vals.includes("*")
           ? [...TRENDSHIFT_LANGUAGES]
           : (vals as TrendshiftLanguageFilter[]);
@@ -530,7 +529,9 @@ async function main() {
           );
           if (outPath) {
             writeFileSync(outPath, payload);
-            console.log(`Wrote ${items.length} new starred repos to ${outPath}`);
+            console.log(
+              `Wrote ${items.length} new starred repos to ${outPath}`,
+            );
           } else {
             console.log(payload);
           }

@@ -85,10 +85,12 @@ function formatStars(n: number): string {
   return n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 }
 
-export function UxDesignPage() {
+export function UxDesignPage({ presetTag }: { presetTag?: string }) {
   const [mode, setMode] = useState<"skill" | "stars">("skill");
   const search = useSearch({ strict: false }) as { tag?: string };
-  const [activeTag, setActiveTag] = useState<string | null>(search.tag ?? null);
+  const [activeTag, setActiveTag] = useState<string | null>(
+    search.tag ?? presetTag ?? null,
+  );
   const [query, setQuery] = useState("");
   const [lang, setLang] = useState("");
   const [skillOnly, setSkillOnly] = useState(false);

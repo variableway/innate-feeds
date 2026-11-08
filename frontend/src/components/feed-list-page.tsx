@@ -81,9 +81,14 @@ export function FeedListPage({
   const isDetail = Boolean(selectedRepoId);
 
   const listItems = hotBoard && !loading ? items.slice(10) : items;
-  const board = hotBoard && !loading && items.length > 0 ? (
-    <HotBoard items={items.slice(0, 10)} selectedRepoId={selectedRepoId} onSelectItem={onSelectItem} />
-  ) : null;
+  const board =
+    hotBoard && !loading && items.length > 0 ? (
+      <HotBoard
+        items={items.slice(0, 10)}
+        selectedRepoId={selectedRepoId}
+        onSelectItem={onSelectItem}
+      />
+    ) : null;
 
   const listBody = (() => {
     if (loading) {

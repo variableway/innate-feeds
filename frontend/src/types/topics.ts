@@ -16,6 +16,7 @@ export type {
 export type TopicDetail = import("../../../shared/types/topics").TopicResponse;
 
 /** 旧名别名：索引响应。 */
-export type TopicsIndex = import("../../../shared/types/topics").TopicsIndexResponse;
+export type TopicsIndex =
+  import("../../../shared/types/topics").TopicsIndexResponse;
 
 export type TopicSort = "stars" | "updated" | "new";

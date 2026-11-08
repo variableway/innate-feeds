@@ -31,7 +31,10 @@ const rootRoute = createRootRoute({
     <div className="flex flex-col items-center justify-center py-24 text-center">
       <p className="text-sm font-medium text-ink-2">404 · 页面不存在</p>
       <p className="mt-1.5 max-w-sm text-[13px] leading-relaxed text-ink-4">
-        该页面已移除或从未存在。<a href="/" className="text-primary underline-offset-2 hover:underline">回主页</a>
+        该页面已移除或从未存在。
+        <a href="/" className="text-primary underline-offset-2 hover:underline">
+          回主页
+        </a>
       </p>
     </div>
   ),

@@ -107,7 +107,9 @@ export function EduSkillsPage() {
         searchPlaceholder="搜索 SKILL、仓库或描述"
       />
 
-      <p className="mb-4 text-[13px] tabular-nums text-ink-4">{total} 个 SKILL</p>
+      <p className="mb-4 text-[13px] tabular-nums text-ink-4">
+        {total} 个 SKILL
+      </p>
 
       {skills.length === 0 ? (
         <div className="flex flex-col items-center gap-4 rounded-lg border border-dashed py-16 text-center">

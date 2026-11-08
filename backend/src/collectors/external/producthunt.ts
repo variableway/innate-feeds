@@ -97,16 +97,28 @@ export class ProductHuntCollector implements FeedCollector {
     period: PHPeriod,
     date: string,
   ): Promise<ExternalFeedItem[]> {
-    const url = buildLeaderboardUrl(period, date);
-    const label = periodLabel(period, date);
-    console.error(`[producthunt] Fetching ${period} → ${url}`);
+    const attempt = async (d: string): Promise<ExternalFeedItem[]> => {
+      const url = buildLeaderboardUrl(period, d);
+      const label = periodLabel(period, d);
+      console.error(`[producthunt] Fetching ${period} → ${url}`);
+      try {
+        return await this.fetchWithFirecrawl(url, label, period);
+      } catch (err) {
+        console.warn("[producthunt] Firecrawl failed, using HTML:", err);
+        return this.fetchWithHtml(url, label, period);
+      }
+    };
 
-    try {
-      return await this.fetchWithFirecrawl(url, label, period);
-    } catch (err) {
-      console.warn("[producthunt] Firecrawl failed, using HTML:", err);
-      return this.fetchWithHtml(url, label, period);
-    }
+    const items = await attempt(date);
+    if (items.length || period !== "daily") return items;
+
+    // 当日榜单可能尚未生成（PH 按 PT 日切，本地清晨常为空）：回退昨日。
+    // 文件名/manifest 用请求日，条目 id/publishedAt 带实际榜单日。
+    const prev = new Date(`${date}T00:00:00Z`);
+    prev.setUTCDate(prev.getUTCDate() - 1);
+    const prevDate = prev.toISOString().split("T")[0];
+    console.warn(`[producthunt] ${date} 榜单为空，回退 ${prevDate}`);
+    return attempt(prevDate);
   }
 
   /** Fetch daily leaderboard for a date (backward compat). */
@@ -152,6 +164,10 @@ export class ProductHuntCollector implements FeedCollector {
     return results;
   }
 
+  /**
+   * GH #33：PH 榜单页已改为客户端渲染，JSON 提取（无 waitFor）稳定返回 0 条。
+   * 改为 markdown + waitFor 渲染后解析。解析仍为 0 时抛错走 HTML 回退。
+   */
   private async fetchWithFirecrawl(
     url: string,
     label: string,
@@ -160,46 +176,104 @@ export class ProductHuntCollector implements FeedCollector {
     const Firecrawl = (await import("firecrawl")).default;
     const firecrawl = new Firecrawl();
     const result = await firecrawl.scrape(url, {
-      formats: [
-        {
-          type: "json",
-          schema: {
-            type: "object",
-            properties: {
-              products: {
-                type: "array",
-                items: {
-                  type: "object",
-                  properties: {
-                    rank: { type: "number" },
-                    name: { type: "string" },
-                    tagline: { type: "string" },
-                    description: { type: "string" },
-                    score: { type: "number" },
-                    comments: { type: "number" },
-                    topics: {
-                      type: "array",
-                      items: { type: "string" },
-                    },
-                    url: { type: "string" },
-                    externalUrl: { type: "string" },
-                    imageUrl: { type: "string" },
-                  },
-                  required: ["name"],
-                },
-              },
-            },
-          },
-        },
-      ],
-      timeout: 60000,
+      formats: ["markdown"],
+      waitFor: 8000,
+      timeout: 90000,
     });
 
     // @ts-ignore Firecrawl SDK typing gap.
-    const data = result.json as { products?: ProductHuntRaw[] };
-    if (!data?.products?.length) return [];
+    const md = (result.markdown as string | undefined) ?? "";
+    const items = this.parseMarkdown(md, label, period);
+    if (!items.length) {
+      throw new Error(
+        `markdown parsed 0 products (md ${md.length} chars) — page layout may have changed`,
+      );
+    }
+    return items;
+  }
 
-    return data.products.map((p) => this.normalize(p, label, period));
+  /**
+   * 解析渲染后的 leaderboard markdown（2026-11 结构）：
+   *   ![Name](thumb) 前置缩略图
+   *   [N\. Name](https://www.producthunt.com/products/slug)Tagline
+   *   [Topic](https://www.producthunt.com/topics/…)• …
+   *   upvotes / comments 两个独立数字行
+   */
+  private parseMarkdown(
+    md: string,
+    label: string,
+    period: PHPeriod,
+  ): ExternalFeedItem[] {
+    const productRe =
+      /\[(\d+)\\?\.\s*([^\]]+)\]\(https:\/\/www\.producthunt\.com\/products\/([^)/?#]+)[^)]*\)([^\n]*)/g;
+    const matches: {
+      rank: number;
+      name: string;
+      slug: string;
+      tagline: string;
+      start: number;
+      end: number;
+    }[] = [];
+    let m: RegExpExecArray | null;
+    while ((m = productRe.exec(md)) !== null) {
+      matches.push({
+        rank: Number(m[1]),
+        name: m[2].trim(),
+        slug: m[3],
+        tagline: m[4].trim(),
+        start: m.index,
+        end: m.index + m[0].length,
+      });
+    }
+
+    const items: ExternalFeedItem[] = [];
+    for (let i = 0; i < matches.length; i++) {
+      const cur = matches[i];
+      if (cur.rank > 25) break; // 榜单语义只取 top 25
+      // 当前条目到下一条目之间的区段：topics / promoted 徽章 / 票数
+      const next = matches[i + 1];
+      const prevEnd = matches[i - 1]?.end ?? 0;
+      const segment = md.slice(cur.end, next?.start ?? md.length);
+      const before = md.slice(prevEnd, cur.start);
+
+      const topics = [
+        ...segment.matchAll(
+          /\[([^\]]+)\]\(https:\/\/www\.producthunt\.com\/topics\//g,
+        ),
+      ].map((t) => t[1]);
+
+      const nums = [...segment.matchAll(/(?:^|\n)(\d+)(?=\n|$)/gm)].map((n) =>
+        Number(n[1]),
+      );
+      // 榜单按票数降序 → 末位数字是 upvotes，其前是 comments（实测验证）。
+      const upvotes = nums.length >= 2 ? nums[nums.length - 1] : undefined;
+      const comments = nums.length >= 2 ? nums[nums.length - 2] : undefined;
+
+      const thumb = before.match(
+        /!\[[^\]]*\]\((https:\/\/ph-files\.imgix\.net\/[^)]+)\)/,
+      );
+
+      items.push(
+        this.normalize(
+          {
+            rank: cur.rank,
+            name: cur.name,
+            tagline: cur.tagline,
+            topics,
+            score: upvotes,
+            comments,
+            url: `https://www.producthunt.com/products/${cur.slug}`,
+            imageUrl: thumb?.[1],
+          },
+          label,
+          period,
+        ),
+      );
+    }
+    console.error(
+      `[producthunt] Parsed ${items.length} products from markdown (${matches.length} links)`,
+    );
+    return items;
   }
 
   private async fetchWithHtml(
@@ -207,7 +281,15 @@ export class ProductHuntCollector implements FeedCollector {
     label: string,
     period: PHPeriod,
   ): Promise<ExternalFeedItem[]> {
-    const html = await fetchHtml(url);
+    // PH 直连被 Cloudflare 拦（403 challenge），HTML 回退仅为兜底——失败返回 []，
+    // 让调用方（fetchByPeriod 的昨日回退 / vc 编排的 continue-on-error）接手。
+    let html: string;
+    try {
+      html = await fetchHtml(url);
+    } catch (err) {
+      console.warn("[producthunt] HTML fallback failed:", err);
+      return [];
+    }
     const items: ExternalFeedItem[] = [];
 
     const namePattern = /href="\/products\/([^"]+)"[^>]*>([^<]+)<\/a>/g;

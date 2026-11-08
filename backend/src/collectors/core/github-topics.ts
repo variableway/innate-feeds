@@ -195,7 +195,7 @@ export const TOPIC_CATEGORIES: Record<string, string[]> = {
     "accessibility",
     "tailwindcss",
     "shadcn-ui",
-  ]
+  ],
 };
 
 function ghApiSearch(apiPath: string): GitHubSearchResponse {

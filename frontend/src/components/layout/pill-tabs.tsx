@@ -49,7 +49,12 @@ export function PillTabs<T extends string>({
           >
             {opt.label}
             {opt.count != null ? (
-              <span className={cn("tabular-nums", active ? "opacity-70" : "text-ink-4")}>
+              <span
+                className={cn(
+                  "tabular-nums",
+                  active ? "opacity-70" : "text-ink-4",
+                )}
+              >
                 {opt.count}
               </span>
             ) : null}

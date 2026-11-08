@@ -13,9 +13,17 @@ function starsText(n: number): string {
 
 function RankBadge({ rank }: { rank: number }) {
   const color =
-    rank === 1 ? "text-rank-1" : rank === 2 ? "text-rank-2" : rank === 3 ? "text-rank-3" : "text-rank-rest";
+    rank === 1
+      ? "text-rank-1"
+      : rank === 2
+        ? "text-rank-2"
+        : rank === 3
+          ? "text-rank-3"
+          : "text-rank-rest";
   return (
-    <span className={cn("text-[13px] font-semibold tabular-nums", color)}>NO.{rank}</span>
+    <span className={cn("text-[13px] font-semibold tabular-nums", color)}>
+      NO.{rank}
+    </span>
   );
 }
 
@@ -63,7 +71,9 @@ export function HotBoard({
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <RankBadge rank={1} />
-              <span className="truncate text-lg font-semibold text-ink">{first.repo.fullName}</span>
+              <span className="truncate text-lg font-semibold text-ink">
+                {first.repo.fullName}
+              </span>
             </div>
             <p className="mt-1.5 line-clamp-2 text-[13px] leading-relaxed text-ink-3">
               {first.repo.description || "（无描述）"}
@@ -94,9 +104,13 @@ export function HotBoard({
           >
             <div className="flex items-center gap-2">
               <RankBadge rank={i + 2} />
-              <span className="truncate text-[15px] font-medium text-ink">{item.repo.fullName}</span>
+              <span className="truncate text-[15px] font-medium text-ink">
+                {item.repo.fullName}
+              </span>
             </div>
-            <p className="mt-1 line-clamp-1 text-[13px] text-ink-3">{item.repo.description || "（无描述）"}</p>
+            <p className="mt-1 line-clamp-1 text-[13px] text-ink-3">
+              {item.repo.description || "（无描述）"}
+            </p>
             <div className="mt-2">
               <MetaRow item={item} />
             </div>
@@ -120,7 +134,9 @@ export function HotBoard({
               <span className="w-8 shrink-0 text-[13px] font-medium tabular-nums text-rank-rest">
                 {i + 4}
               </span>
-              <span className="min-w-0 flex-1 truncate text-[14px] text-ink-2">{item.repo.fullName}</span>
+              <span className="min-w-0 flex-1 truncate text-[14px] text-ink-2">
+                {item.repo.fullName}
+              </span>
               <span className="hidden shrink-0 text-[13px] text-ink-4 sm:block">
                 {item.repo.language ?? ""}
               </span>
@@ -134,10 +150,13 @@ export function HotBoard({
 
       {/* 热度怎么算（ruleVersion 透明化，公式等 M1） */}
       <details className="rounded-card border bg-card px-4 py-2 text-[13px] text-ink-4">
-        <summary className="cursor-pointer select-none text-ink-3">热度怎么算</summary>
+        <summary className="cursor-pointer select-none text-ink-3">
+          热度怎么算
+        </summary>
         <p className="mt-2 leading-relaxed">
-          当前（v1）：按 star 数排序的快照榜，无跨源加权。规划中：M1 热度引擎将引入
-          ruleVersion 化公式（跨源信号 + 独立源去重 + 半衰），届时此处展示可解释的计算口径。
+          当前（v1）：按 star 数排序的快照榜，无跨源加权。规划中：M1
+          热度引擎将引入 ruleVersion 化公式（跨源信号 + 独立源去重 +
+          半衰），届时此处展示可解释的计算口径。
         </p>
       </details>
     </section>

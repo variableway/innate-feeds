@@ -6,7 +6,8 @@
  * 新增采集器 = 实现模块 + 在此登记一条 job；`cli sync jobs` 自动可见。
  */
 
-export type SyncJobGroup = "core" | "external" | "topics" | "vertical" | "pipeline";
+export type SyncJobGroup =
+  "core" | "external" | "topics" | "vertical" | "pipeline";
 
 export interface SyncJob {
   id: string;

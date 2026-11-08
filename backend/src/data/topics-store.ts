@@ -56,12 +56,7 @@ import type {
   TopicResponse,
 } from "../../../shared/types/topics.js";
 
-export type {
-  TopicRepo,
-  TopicSummary,
-  TopicsIndexResponse,
-  TopicResponse,
-};
+export type { TopicRepo, TopicSummary, TopicsIndexResponse, TopicResponse };
 
 export interface UserTopicsFile {
   source: "github-topics";

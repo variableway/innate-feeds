@@ -16,7 +16,7 @@ const VISIBLE_PATHS = new Set([
 ]);
 
 /** 可见路径前缀（域包的子路由组，如 /edu、/starred/$id）。 */
-const VISIBLE_PREFIXES = ["/edu", "/starred", "/ux"];
+const VISIBLE_PREFIXES = ["/edu", "/starred", "/ux", "/anti-ai"];
 
 /**
  * hidden 页面（路由保留，URL 直达可用，数据照常采集）：
@@ -24,5 +24,7 @@ const VISIBLE_PREFIXES = ["/edu", "/starred", "/ux"];
  */
 export function isNavPathVisible(path: string): boolean {
   if (VISIBLE_PATHS.has(path)) return true;
-  return VISIBLE_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`));
+  return VISIBLE_PREFIXES.some(
+    (prefix) => path === prefix || path.startsWith(`${prefix}/`),
+  );
 }

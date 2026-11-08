@@ -140,7 +140,8 @@ export const EXTERNAL_SOURCE_META: ExternalSourceMeta[] = [
     source: "edu-videos-bilibili",
     icon: "Tv",
     metrics: [{ key: "score", label: "播放" }],
-    emptyHint: "Run `bun run sync:edu-videos-bilibili` to collect bilibili videos.",
+    emptyHint:
+      "Run `bun run sync:edu-videos-bilibili` to collect bilibili videos.",
   },
 ];
 

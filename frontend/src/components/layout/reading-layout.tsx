@@ -19,7 +19,8 @@ export function ReadingLayout({
     <div
       className={cn(
         "mx-auto grid max-w-[var(--page-max-reading)] gap-8 pb-14 pt-5 lg:pt-0",
-        aside && "lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-10 2xl:grid-cols-[minmax(0,1fr)_340px]",
+        aside &&
+          "lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-10 2xl:grid-cols-[minmax(0,1fr)_340px]",
         className,
       )}
     >

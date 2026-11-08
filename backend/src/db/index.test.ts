@@ -332,7 +332,9 @@ describe("Starred queries", () => {
   });
 
   it("respects the limit and requires days or since", () => {
-    expect(listNewStarredItems(db, { since: "2020-01-01T00:00:00Z" }, 1)).toHaveLength(1);
+    expect(
+      listNewStarredItems(db, { since: "2020-01-01T00:00:00Z" }, 1),
+    ).toHaveLength(1);
     expect(() => listNewStarredItems(db, {})).toThrow();
   });
 

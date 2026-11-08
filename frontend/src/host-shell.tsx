@@ -35,6 +35,7 @@ import {
   Layers,
   Palette,
   Tv,
+  BotOff,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { collectNavItems, type WebDomain } from "@innate/web-domain";
@@ -254,6 +255,34 @@ export function HostShell({
               const hasActive = group.items.some((item) =>
                 isItemActive(pathname, item.path),
               );
+              const renderItem = (item: NavItem) => {
+                const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
+                const active = isItemActive(pathname, item.path);
+                return (
+                  <button
+                    key={item.path}
+                    type="button"
+                    onClick={() => void router.navigate({ to: item.path })}
+                    className={cn(
+                      "flex items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-medium transition-colors",
+                      active
+                        ? "bg-accent text-accent-foreground"
+                        : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
+                    )}
+                  >
+                    {Icon ? <Icon className="h-3.5 w-3.5" /> : null}
+                    {item.label}
+                  </button>
+                );
+              };
+              // B20：无组名（navItem 未声明 group）→ 平铺菜单，不渲染折叠组头
+              if (group.name === "") {
+                return (
+                  <div key={group.name} className="px-1.5">
+                    {group.items.map(renderItem)}
+                  </div>
+                );
+              }
               return (
                 <div key={group.name} className="px-1.5">
                   <button
@@ -278,30 +307,7 @@ export function HostShell({
                   </button>
                   {open ? (
                     <div className="ml-3 flex flex-col gap-0.5 border-l pl-2">
-                      {group.items.map((item) => {
-                        const Icon = item.icon
-                          ? (ICONS[item.icon] ?? null)
-                          : null;
-                        const active = isItemActive(pathname, item.path);
-                        return (
-                          <button
-                            key={item.path}
-                            type="button"
-                            onClick={() =>
-                              void router.navigate({ to: item.path })
-                            }
-                            className={cn(
-                              "flex items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-medium transition-colors",
-                              active
-                                ? "bg-accent text-accent-foreground"
-                                : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground",
-                            )}
-                          >
-                            {Icon ? <Icon className="h-3.5 w-3.5" /> : null}
-                            {item.label}
-                          </button>
-                        );
-                      })}
+                      {group.items.map(renderItem)}
                     </div>
                   ) : null}
                 </div>

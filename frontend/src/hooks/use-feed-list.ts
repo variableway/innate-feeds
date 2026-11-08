@@ -45,8 +45,7 @@ export function useFeedList(
           const key = item.repo.fullName;
           const prev = byRepo.get(key);
           const newer =
-            !prev ||
-            (item.snapshotDate ?? "") > (prev.snapshotDate ?? "");
+            !prev || (item.snapshotDate ?? "") > (prev.snapshotDate ?? "");
           if (newer) byRepo.set(key, item);
         }
         listItems = [...byRepo.values()];

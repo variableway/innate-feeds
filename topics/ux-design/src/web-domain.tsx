@@ -36,6 +36,15 @@ export const webDomain = createWebDomain("ux-design")
           tag: typeof search.tag === "string" && search.tag ? search.tag : undefined,
         }),
       }),
+      // B20：Anti-AI 菜单入口 —— 同一页面，预置 AI Slop 类目筛选
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/anti-ai",
+        component: () => <UxDesignPage presetTag="anti-slop" />,
+        validateSearch: (search: Record<string, unknown>) => ({
+          tag: typeof search.tag === "string" && search.tag ? search.tag : undefined,
+        }),
+      }),
     ];
 
     return layout.addChildren(routes as never) as unknown as AnyRoute;
@@ -46,6 +55,13 @@ export const webDomain = createWebDomain("ux-design")
       path: "/ux",
       icon: "Palette",
       order: 41,
+      group: "主题",
+    },
+    {
+      label: "Anti-AI",
+      path: "/anti-ai",
+      icon: "BotOff",
+      order: 42,
       group: "主题",
     },
   ]);
