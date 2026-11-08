@@ -175,6 +175,7 @@ jobs:
           cd backend
           bun src/app/cli.ts sync window "${FLAGS[@]}"
           bun src/app/cli.ts sync awesome-dsh
+          bun src/app/cli.ts sync hot
           bun run export:incremental
 
       - name: Sync daily snapshot

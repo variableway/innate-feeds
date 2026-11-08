@@ -20,6 +20,7 @@ import { exportPluginCatalog } from "../dsh/export.js";
 import { exportTrendshiftStatic } from "./export-trendshift.js";
 import { exportTopicsStatic } from "./export-topics.js";
 import { exportExternalStatic } from "./export-external.js";
+import { exportHotStatic } from "./export-hot.js";
 
 interface FeedChunk {
   items: unknown[];
@@ -175,6 +176,12 @@ function main() {
     console.log(
       `Exported external sources → ${external.dest} (${external.exported} sources)`,
     );
+  }
+
+  // GitHub Hot snapshots for /hot static mode (GH #63, M1).
+  const hot = exportHotStatic(outDir);
+  if (hot.exported) {
+    console.log(`Exported hot snapshots → ${hot.dest} (${hot.exported} dates)`);
   }
 
   const readmes = copyReadmesToPublic();
