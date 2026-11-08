@@ -40,7 +40,7 @@ export function exportHotStatic(parentOutDir?: string): {
     JSON.stringify(
       {
         ruleVersion: entries.length
-          ? getHotSnapshot(db, entries[0].date)?.ruleVersion ?? null
+          ? (getHotSnapshot(db, entries[0].date)?.ruleVersion ?? null)
           : null,
         updatedAt: new Date().toISOString(),
         snapshots: entries,
@@ -60,5 +60,7 @@ const isDirectRun =
 
 if (isDirectRun) {
   const result = exportHotStatic();
-  console.log(`Exported hot snapshots → ${result.dest} (${result.exported} dates)`);
+  console.log(
+    `Exported hot snapshots → ${result.dest} (${result.exported} dates)`,
+  );
 }

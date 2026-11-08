@@ -24,7 +24,11 @@ export interface HotEvalReport {
   baselineOverlap10: { overlap: number; hotOnly: number; ratio: number } | null;
   multiSignalRatio: { top10: number; top50: number };
   decayCheck: { prevDate: string | null; survived: number; ofPrevTop: number };
-  falseNegative: { trendingInHot: number; trendingTotal: number; missing: string[] };
+  falseNegative: {
+    trendingInHot: number;
+    trendingTotal: number;
+    missing: string[];
+  };
   sourceHealth: Record<string, number>;
   verdicts: { check: string; status: "ok" | "warn" | "bad"; detail: string }[];
 }
@@ -62,15 +66,24 @@ export function computeEval(args: {
 
   // 2. multi-signal ratio
   const multi = (n: number) =>
-    items.slice(0, n).filter((i) => new Set(i.signals.map((s) => s.source)).size >= 2).length;
-  const multiSignalRatio = { top10: pct(multi(10), Math.min(10, items.length)), top50: pct(multi(50), items.length) };
+    items
+      .slice(0, n)
+      .filter((i) => new Set(i.signals.map((s) => s.source)).size >= 2).length;
+  const multiSignalRatio = {
+    top10: pct(multi(10), Math.min(10, items.length)),
+    top50: pct(multi(50), items.length),
+  };
 
   // 3. decay: prev top10 survivors in today's top50
   const prevTop = (prevItems ?? []).slice(0, 10);
-  const survived = prevTop.filter((p) => hot50Set.has(p.fullName.toLowerCase())).length;
+  const survived = prevTop.filter((p) =>
+    hot50Set.has(p.fullName.toLowerCase()),
+  ).length;
 
   // 4. false-negative proxy: trending repos absent from hot top50
-  const missing = trendingFullNames.filter((n) => !hot50Set.has(n.toLowerCase()));
+  const missing = trendingFullNames.filter(
+    (n) => !hot50Set.has(n.toLowerCase()),
+  );
 
   // 5. source health across top50
   const sourceHealth: Record<string, number> = {};
@@ -90,7 +103,11 @@ export function computeEval(args: {
       detail: `hot top10 ∩ trending(${trendingDate}) = ${r}%（健康带 30-70%；>80% 复读 / <10% 单源主导）`,
     });
   } else {
-    verdicts.push({ check: "baselineOverlap", status: "warn", detail: "当日无 trending 快照可比对" });
+    verdicts.push({
+      check: "baselineOverlap",
+      status: "warn",
+      detail: "当日无 trending 快照可比对",
+    });
   }
   verdicts.push({
     check: "multiSignal",
@@ -99,17 +116,28 @@ export function computeEval(args: {
   });
   verdicts.push({
     check: "decay",
-    status: !prevItems ? "warn" : survived >= Math.min(3, prevTop.length) ? "ok" : "warn",
+    status: !prevItems
+      ? "warn"
+      : survived >= Math.min(3, prevTop.length)
+        ? "ok"
+        : "warn",
     detail: prevItems
       ? `昨日 top10 今日仍在前 50：${survived}/${prevTop.length}（骤失 = 半衰配置或窗口问题）`
       : "无前一日快照可比",
   });
   verdicts.push({
     check: "falseNegative",
-    status: trendingFullNames.length === 0 ? "warn" : missing.length <= Math.ceil(trendingFullNames.length / 2) ? "ok" : "warn",
+    status:
+      trendingFullNames.length === 0
+        ? "warn"
+        : missing.length <= Math.ceil(trendingFullNames.length / 2)
+          ? "ok"
+          : "warn",
     detail: `trending ${trendingFullNames.length} 条中 ${missing.length} 条缺席 hot top50${missing.length ? `：${missing.slice(0, 3).join(", ")}${missing.length > 3 ? " …" : ""}` : ""}`,
   });
-  const health = Object.entries(sourceHealth).map(([k, v]) => `${k}:${v}`).join(" ");
+  const health = Object.entries(sourceHealth)
+    .map(([k, v]) => `${k}:${v}`)
+    .join(" ");
   verdicts.push({
     check: "sourceHealth",
     status: Object.keys(sourceHealth).length >= 2 ? "ok" : "warn",
@@ -127,7 +155,11 @@ export function computeEval(args: {
       survived,
       ofPrevTop: prevTop.length,
     },
-    falseNegative: { trendingInHot: trendingFullNames.length - missing.length, trendingTotal: trendingFullNames.length, missing },
+    falseNegative: {
+      trendingInHot: trendingFullNames.length - missing.length,
+      trendingTotal: trendingFullNames.length,
+      missing,
+    },
     sourceHealth,
     verdicts,
   };
@@ -165,7 +197,11 @@ export function evalHot(db: Database, dateArg?: string): HotEvalReport {
 
   const report = computeEval({
     date,
-    items: snapshot.items.map((i) => ({ fullName: i.fullName, heat: i.heat, signals: i.signals })),
+    items: snapshot.items.map((i) => ({
+      fullName: i.fullName,
+      heat: i.heat,
+      signals: i.signals,
+    })),
     prevItems: prev ? prev.items : null,
     trendingFullNames,
     trendingDate: trendingRow?.snapshot_date ?? null,
@@ -176,7 +212,10 @@ export function evalHot(db: Database, dateArg?: string): HotEvalReport {
   // persist to ~/.innate/github-hot/eval-{date}.json
   const dir = join(INNATE_HOME(), "github-hot");
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, `eval-${date}.json`), JSON.stringify(report, null, 2));
+  writeFileSync(
+    join(dir, `eval-${date}.json`),
+    JSON.stringify(report, null, 2),
+  );
 
   // console summary
   const line = (v: HotEvalReport["verdicts"][number]) =>

@@ -41,8 +41,12 @@ describe("eval-hot metrics", () => {
     });
     // 1 of 4 items has ≥2 sources
     expect(r.multiSignalRatio.top10).toBe(25);
-    expect(r.verdicts.find((v) => v.check === "multiSignal")?.status).toBe("ok");
-    expect(r.verdicts.find((v) => v.check === "baselineOverlap")?.status).toBe("warn");
+    expect(r.verdicts.find((v) => v.check === "multiSignal")?.status).toBe(
+      "ok",
+    );
+    expect(r.verdicts.find((v) => v.check === "baselineOverlap")?.status).toBe(
+      "warn",
+    );
   });
 
   test("decay survivors from previous top10", () => {

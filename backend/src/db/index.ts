@@ -945,7 +945,12 @@ export function getHotSnapshot(
   db: Database,
   date?: string,
   limit?: number,
-): { snapshotDate: string; ruleVersion: string; generatedAt: string; items: HotSnapshotItemRow[] } | null {
+): {
+  snapshotDate: string;
+  ruleVersion: string;
+  generatedAt: string;
+  items: HotSnapshotItemRow[];
+} | null {
   const row = (
     date
       ? db
@@ -987,10 +992,7 @@ export function getHotSnapshotDates(db: Database): string[] {
 }
 
 /** Delete snapshots older than keepDays; returns removed row count. */
-export function cleanupHotSnapshots(
-  db: Database,
-  keepDays = 30,
-): number {
+export function cleanupHotSnapshots(db: Database, keepDays = 30): number {
   const cutoff = new Date(Date.now() - keepDays * 86_400_000)
     .toISOString()
     .slice(0, 10);

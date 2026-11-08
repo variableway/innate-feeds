@@ -25,15 +25,30 @@ function setupFixtureStores(): string {
   writeFileSync(
     join(dailyDir, "daily-all.json"),
     JSON.stringify([
-      { fullName: "a/lead", rank: 1, starsGained: 5000, periodKey: "2026-11-08" },
-      { fullName: "b/runner", rank: 2, starsGained: 900, periodKey: "2026-11-08" },
+      {
+        fullName: "a/lead",
+        rank: 1,
+        starsGained: 5000,
+        periodKey: "2026-11-08",
+      },
+      {
+        fullName: "b/runner",
+        rank: 2,
+        starsGained: 900,
+        periodKey: "2026-11-08",
+      },
       { fullName: "c/old", rank: 3, starsGained: 10, periodKey: "2026-11-01" },
     ]),
   );
   writeFileSync(
     join(dailyDir, "daily-typescript.json"),
     JSON.stringify([
-      { fullName: "a/lead", rank: 4, starsGained: 300, periodKey: "2026-11-08" },
+      {
+        fullName: "a/lead",
+        rank: 4,
+        starsGained: 300,
+        periodKey: "2026-11-08",
+      },
     ]),
   );
 
@@ -62,8 +77,23 @@ function seedTrending(db: Database): void {
        owner_login, owner_avatar_url, owner_url, created_at, updated_at,
        period, snapshot_date
      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-  ).run("t1", 1, "lead", "a/lead", "u", 42000, 1, 1, "a", "", "u",
-        "2026-01-01T00:00:00Z", "2026-11-08T00:00:00Z", "daily", "2026-11-08");
+  ).run(
+    "t1",
+    1,
+    "lead",
+    "a/lead",
+    "u",
+    42000,
+    1,
+    1,
+    "a",
+    "",
+    "u",
+    "2026-01-01T00:00:00Z",
+    "2026-11-08T00:00:00Z",
+    "daily",
+    "2026-11-08",
+  );
 }
 
 describe("heat engine", () => {
@@ -104,11 +134,22 @@ describe("heat engine", () => {
     const now = new Date("2026-11-08T12:00:00.000Z");
     const dump = {
       items: [
-        { githubRepoFullName: "e/pick", issueCreatedAt: "2026-11-08T09:00:00Z", source: "github-daily" },
-        { githubRepoFullName: "f/stale", issueCreatedAt: "2026-11-05T09:00:00Z", source: "github-daily" },
+        {
+          githubRepoFullName: "e/pick",
+          issueCreatedAt: "2026-11-08T09:00:00Z",
+          source: "github-daily",
+        },
+        {
+          githubRepoFullName: "f/stale",
+          issueCreatedAt: "2026-11-05T09:00:00Z",
+          source: "github-daily",
+        },
       ],
     };
-    const map = extractDigestSignals(dump, new Date(now.getTime() - 48 * 3_600_000));
+    const map = extractDigestSignals(
+      dump,
+      new Date(now.getTime() - 48 * 3_600_000),
+    );
     expect(map.has("e/pick")).toBe(true);
     expect(map.has("f/stale")).toBe(false);
   });
@@ -118,7 +159,11 @@ describe("heat engine", () => {
     // digest signal for a/lead 24h ago → combined heat with trending.
     const dump = {
       items: [
-        { githubRepoFullName: "a/lead", issueCreatedAt: "2026-11-07T12:00:00Z", source: "github-daily" },
+        {
+          githubRepoFullName: "a/lead",
+          issueCreatedAt: "2026-11-07T12:00:00Z",
+          source: "github-daily",
+        },
       ],
     };
     // Monkey-patch the digest loader by writing a dump file it can find? —

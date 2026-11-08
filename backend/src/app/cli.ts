@@ -304,8 +304,12 @@ async function runSync(syncArgs: string[]) {
     );
   } else if (type === "hot") {
     // GH #63 M1 heat engine: build → persist → prune → export.
-    const { archiveTrendshiftDaily, buildHotSnapshot, saveHotSnapshot, innateHome } =
-      await import("../curation/heat.js");
+    const {
+      archiveTrendshiftDaily,
+      buildHotSnapshot,
+      saveHotSnapshot,
+      innateHome,
+    } = await import("../curation/heat.js");
     const { exportHotStatic } = await import("../data/export-hot.js");
     archiveTrendshiftDaily(innateHome());
     const db = getDb();
@@ -599,7 +603,8 @@ async function main() {
         console.error("Usage: bun src/app/cli.ts eval hot [--date YYYY-MM-DD]");
         process.exit(1);
       }
-      const dateArg = process.argv[4] === "--date" ? process.argv[5] : undefined;
+      const dateArg =
+        process.argv[4] === "--date" ? process.argv[5] : undefined;
       const { evalHot } = await import("../curation/eval-hot.js");
       evalHot(getDb(dbPath), dateArg);
       break;

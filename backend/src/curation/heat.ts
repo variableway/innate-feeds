@@ -89,7 +89,8 @@ function mergeFacts(map: SignalMap, fullName: string, next: SourceFacts): void {
   }
   prev.seenAt = prev.seenAt < next.seenAt ? prev.seenAt : next.seenAt;
   if (next.rank !== undefined) {
-    prev.rank = prev.rank === undefined ? next.rank : Math.min(prev.rank, next.rank);
+    prev.rank =
+      prev.rank === undefined ? next.rank : Math.min(prev.rank, next.rank);
   }
   if (next.starsGained !== undefined) {
     prev.starsGained =
@@ -338,7 +339,10 @@ export function buildHotSnapshot(
   const trending = extractTrendingSignals(db, windowStart);
 
   const hidden = getHiddenRepoFullNames();
-  const perRepo = new Map<string, { facts: SourceFacts; source: HotSource }[]>();
+  const perRepo = new Map<
+    string,
+    { facts: SourceFacts; source: HotSource }[]
+  >();
   const register = (source: HotSource, map: SignalMap) => {
     for (const [fullName, facts] of map) {
       if (hidden.has(fullName.toLowerCase())) continue;
@@ -359,7 +363,10 @@ export function buildHotSnapshot(
   const items: HotItem[] = [];
   for (const [fullName, sourceList] of perRepo) {
     // Independent sources count once each; collapse per source first.
-    const bySource = new Map<HotSource, SourceFacts & { digestLabel?: string }>();
+    const bySource = new Map<
+      HotSource,
+      SourceFacts & { digestLabel?: string }
+    >();
     let firstSeen = nowIso;
     for (const { facts, source } of sourceList) {
       const prev = bySource.get(source);
@@ -369,7 +376,9 @@ export function buildHotSnapshot(
         prev.seenAt = prev.seenAt < facts.seenAt ? prev.seenAt : facts.seenAt;
         if (facts.rank !== undefined) {
           prev.rank =
-            prev.rank === undefined ? facts.rank : Math.min(prev.rank, facts.rank);
+            prev.rank === undefined
+              ? facts.rank
+              : Math.min(prev.rank, facts.rank);
         }
         if (facts.starsGained !== undefined) {
           prev.starsGained =
@@ -377,7 +386,10 @@ export function buildHotSnapshot(
               ? facts.starsGained
               : Math.max(prev.starsGained, facts.starsGained);
         }
-        if (facts.meta && (!prev.meta || rankMeta(facts.meta) > rankMeta(prev.meta))) {
+        if (
+          facts.meta &&
+          (!prev.meta || rankMeta(facts.meta) > rankMeta(prev.meta))
+        ) {
           prev.meta = facts.meta;
         }
       }
@@ -393,9 +405,7 @@ export function buildHotSnapshot(
       signals.push({
         source,
         label:
-          source === "digest"
-            ? (facts.digestLabel ?? "digest")
-            : undefined,
+          source === "digest" ? (facts.digestLabel ?? "digest") : undefined,
         rank: facts.rank,
         seenAt: facts.seenAt,
         weight,
@@ -445,7 +455,8 @@ export function buildHotSnapshot(
       starsGained:
         [...bySource.values()].reduce<number | undefined>(
           (acc, f) =>
-            f.starsGained !== undefined && (acc === undefined || f.starsGained > acc)
+            f.starsGained !== undefined &&
+            (acc === undefined || f.starsGained > acc)
               ? f.starsGained
               : acc,
           undefined,
