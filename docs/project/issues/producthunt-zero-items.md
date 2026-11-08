@@ -1,6 +1,6 @@
 # Product Hunt 采集器返回 0 条且无报错
 
-> [GH #33](https://github.com/variableway/innate-feeds/issues/33) · 2026-10-31 · status: open
+> [GH #33](https://github.com/variableway/innate-feeds/issues/33) · 2026-10-31 · status: **done**（2026-11-08 验证关闭）
 
 ## 现象
 
@@ -15,3 +15,15 @@
 1. 排查 Firecrawl / HTML fallback 哪条路径失效并修复解析
 2. 0 条结果至少输出 warning（区分「榜单未生成」与「抓取失败」）
 3. 修复后在 `data:sync:external` 恢复 `--source producthunt`
+
+## 验证记录（2026-11-08）
+
+- 修复方向 1（解析路径）：sprint-3 `1142d92` 落地——Firecrawl JSON 提取稳定 0 条
+  （页面客户端渲染），改 markdown+waitFor 解析。
+- 修复方向 2（空榜告警与回退）：当日榜单未生成时打 warn 并自动回退昨日
+  （实测 11-08 空榜 → 回退 11-07 → 解析 24 条入库）；HTML fallback 对 PH 为
+  HTTP 403（Cloudflare），属预期被回退路径覆盖。
+- 修复方向 3（恢复编排）：`data:sync:external` 已含 `--source producthunt`
+  （sprint-3 恢复）。
+- 端到端：`cli sync producthunt --period daily` 全链路成功，`~/.innate/producthunt`
+  快照 24 条 / 19.8KB。

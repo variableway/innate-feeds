@@ -125,7 +125,10 @@ export async function buildHotSnapshot(db, opts?: { windowHours?: number; topN?:
 - **评估只针对本地全四源快照**；CI/Pages 快照仅 digest+trending 两源，内容域互不
   相关（人肉精选 vs 原始热度），**不参与评估**——§8.1 的指标在两源快照上没有意义。
   Pages 展示保留两源快照（有内容总比空好），是否补全 CI 源跟随 M2 决策。
-- github-new 本地 store 内容冻结在 11-03（疑似 GH #33 同族），修复前该源少信号。
+- **github-new "冻结" 已澄清（2026-11-08）**：文件名 = 查询窗口起始日（today-7，UTC）
+  属设计而非 bug；此前滞后是当日任务未跑。真正的 bug 是热引擎把 item 的
+  `publishedAt`（= 仓库 GitHub 创建日期，天然 3-7 天前）当信号时间戳——已改用
+  文件级 `fetchedAt`（进榜时间），github-new 信号恢复正常（实测 32 条进 top50）。
 
 ### 8.5 自动化评估（2026-11-08 交付）
 

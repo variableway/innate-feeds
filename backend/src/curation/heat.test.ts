@@ -58,10 +58,10 @@ function setupFixtureStores(): string {
   writeFileSync(
     join(gnDir, "new-2026-11-08.json"),
     JSON.stringify({
+      fetchedAt: "2026-11-08T06:00:00.000Z",
       items: [
         {
           metadata: { fullName: "d/fresh", createdAt: "2026-11-01T00:00:00Z" },
-          publishedAt: "2026-11-08T06:00:00.000Z",
         },
       ],
     }),

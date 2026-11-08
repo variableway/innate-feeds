@@ -268,7 +268,6 @@ export function extractDigestSignals(
 
 interface GithubNewEntry {
   metadata?: { fullName?: string; createdAt?: string };
-  publishedAt?: string;
 }
 
 /** GitHub new repos: latest two new-{date}.json files. */
@@ -285,16 +284,20 @@ export function extractGithubNewSignals(
   const cutoff = windowStart.toISOString();
   const map: SignalMap = new Map();
   for (const name of files) {
-    let payload: { items?: GithubNewEntry[] };
+    let payload: { items?: GithubNewEntry[]; fetchedAt?: string };
     try {
       payload = JSON.parse(readFileSync(join(dir, name), "utf-8"));
     } catch {
       continue;
     }
+    // Signal timestamp = when the repo entered this fast-growth list (fetch
+    // time), NOT repo.created_at — repos may be up to `days` old when they
+    // first cross the stars threshold, and their signal is "seen today".
+    const seenAt = payload.fetchedAt;
+    if (!seenAt || seenAt < cutoff) continue;
     for (const item of payload.items ?? []) {
       const fullName = item.metadata?.fullName;
-      const seenAt = item.publishedAt;
-      if (!fullName || !seenAt || seenAt < cutoff) continue;
+      if (!fullName) continue;
       mergeFacts(map, fullName, {
         seenAt,
         meta: {
