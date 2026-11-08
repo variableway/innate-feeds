@@ -7,6 +7,7 @@ import { HomePage } from "@/pages/home/page";
 import { TrendingShiftPage } from "@/pages/trending-shift/page";
 import { TopicsPage } from "@/pages/topics/page";
 import { TopicPage } from "@/pages/topics/topic-page";
+import { HotPage } from "@/pages/hot/page";
 import { StarredPage } from "@/pages/starred/page";
 import { DigestPage } from "@/pages/digest/page";
 import { FeedsPage } from "@/pages/feeds/page";
@@ -49,6 +50,11 @@ export const webDomain = createWebDomain("feeds")
         getParentRoute: () => layout,
         path: "/trending-shift",
         component: TrendingShiftPage,
+      }),
+      createRoute({
+        getParentRoute: () => layout,
+        path: "/hot",
+        component: HotPage,
       }),
       createRoute({
         getParentRoute: () => layout,
@@ -138,6 +144,13 @@ export const webDomain = createWebDomain("feeds")
       path: "/topics",
       icon: "Hash",
       order: 13,
+      group: "GitHub",
+    },
+    {
+      label: "Hot",
+      path: "/hot",
+      icon: "Fire",
+      order: 14,
       group: "GitHub",
     },
     {
