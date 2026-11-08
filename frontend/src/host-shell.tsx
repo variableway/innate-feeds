@@ -141,8 +141,24 @@ interface HostRouter {
   subscribe: (fn: () => void) => unknown;
 }
 
-function isItemActive(pathname: string, itemPath: string): boolean {
-  return pathname === itemPath || pathname.startsWith(`${itemPath}/`);
+/**
+ * 激活判定（B21）：最长前缀胜出——精确命中或 pathname 以 `path/` 开头，
+ * 且不存在更长命中的其它可见项。避免父路径项（如 /edu）吞掉兄弟页
+ * （/edu/videos）导致多项同时高亮、切换后旧项保持常亮。
+ */
+function isItemActive(
+  pathname: string,
+  itemPath: string,
+  items: NavItem[],
+): boolean {
+  const matches = (p: string) => pathname === p || pathname.startsWith(`${p}/`);
+  if (!matches(itemPath)) return false;
+  return !items.some(
+    (other) =>
+      other.path !== itemPath &&
+      matches(other.path) &&
+      other.path.length > itemPath.length,
+  );
 }
 
 export function HostShell({
@@ -163,14 +179,14 @@ export function HostShell({
     return unsub;
   }, [router]);
 
+  const navItems = useMemo(() => navItemsOf(domains), [domains]);
+
   // B20：settings 项不进导航组——展开态由底部 Settings 弹出菜单承载，
   // 折叠轨（railItems 未过滤）保留直达图标。
   const groups = useMemo(
     () =>
-      groupNavItems(
-        navItemsOf(domains).filter((item) => !SETTINGS_PATHS.has(item.path)),
-      ),
-    [domains],
+      groupNavItems(navItems.filter((item) => !SETTINGS_PATHS.has(item.path))),
+    [navItems],
   );
 
   // 侧栏折叠（icon 轨）；状态持久化
@@ -187,11 +203,8 @@ export function HostShell({
     });
   };
   const railItems = useMemo(
-    () =>
-      navItemsOf(domains)
-        .slice()
-        .sort((a, b) => (a.order ?? 100) - (b.order ?? 100)),
-    [domains],
+    () => [...navItems].sort((a, b) => (a.order ?? 100) - (b.order ?? 100)),
+    [navItems],
   );
 
   // 含当前路由的分组默认展开；其余保持收起状态
@@ -203,7 +216,7 @@ export function HostShell({
     return !groups.some(
       (g) =>
         g.name === name &&
-        g.items.some((item) => isItemActive(pathname, item.path)),
+        g.items.some((item) => isItemActive(pathname, item.path, navItems)),
     );
   };
   const toggleGroup = (name: string) => {
@@ -233,7 +246,7 @@ export function HostShell({
             </button>
             {railItems.map((item) => {
               const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
-              const active = isItemActive(pathname, item.path);
+              const active = isItemActive(pathname, item.path, navItems);
               return (
                 <button
                   key={item.path}
@@ -271,11 +284,11 @@ export function HostShell({
               const open = !isGroupCollapsed(group.name);
               const GroupIcon = group.icon;
               const hasActive = group.items.some((item) =>
-                isItemActive(pathname, item.path),
+                isItemActive(pathname, item.path, navItems),
               );
               const renderItem = (item: NavItem) => {
                 const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
-                const active = isItemActive(pathname, item.path);
+                const active = isItemActive(pathname, item.path, navItems);
                 return (
                   <button
                     key={item.path}
@@ -337,7 +350,7 @@ export function HostShell({
                 <div className="mb-1 flex flex-col gap-0.5 rounded-md border bg-card p-1 shadow-sm">
                   {SETTINGS_ITEMS.map((item) => {
                     const Icon = item.icon ? (ICONS[item.icon] ?? null) : null;
-                    const active = isItemActive(pathname, item.path);
+                    const active = isItemActive(pathname, item.path, navItems);
                     return (
                       <button
                         key={item.path}
@@ -367,7 +380,9 @@ export function HostShell({
                 className={cn(
                   "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-[13px] font-semibold transition-colors",
                   settingsOpen ||
-                    SETTINGS_ITEMS.some((i) => isItemActive(pathname, i.path))
+                    SETTINGS_ITEMS.some((i) =>
+                      isItemActive(pathname, i.path, navItems),
+                    )
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground",
                 )}
