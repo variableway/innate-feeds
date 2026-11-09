@@ -166,7 +166,7 @@ AIHot（React Router SSR + Tailwind v4 `@theme` token）的要点：**每个场�
 - **公式 v1**：`heat = Σ_source w × 0.5^(h/24)`，w = digest 4 / trending 3 / trendshift 3 / github-new 2；`rule_version = hot-v1-48h-halflife24h`；trendshift `starsGained` 作展示字段不进公式；信号明细 `signals[{source,rank,seenAt,weight}]` 全量入快照供前端徽章。
 - **落点**：`~/.innate/github-hot/{manifest.json, hot-{date}.json}`（external-store 惯例）→ 导出 `frontend/public/data/hot/` → `GET /api/hot?date=`。总量由 2 天降到 **≈1.5 天**。
 
-### M2 Topic Hub（≈3-4 天）
+### M2 Topic Hub（≈3-4 天）→ [GH #64](https://github.com/variableway/innate-feeds/issues/64)
 
 | 任务 | 内容 | 量级 |
 |---|---|---|
@@ -178,6 +178,7 @@ AIHot（React Router SSR + Tailwind v4 `@theme` token）的要点：**每个场�
 
 ### M3 LLM 摘要层（可选，1-2 天）：top-N 中文摘要 + 反幻觉硬校验 + 每日熔断；前置供应商/预算决策。
 ### M4 出口（按需，各 0.5-1 天）：日报（报纸版面）→ RSS → MCP（AIHot 围栏范本，GH #35）。
+→ M3/M4 合并为 [GH #65](https://github.com/variableway/innate-feeds/issues/65)
 
 ## 7. 验收标准（v2 spec 骨架，重写 spec/ 时接管）
 
@@ -193,6 +194,8 @@ AIHot（React Router SSR + Tailwind v4 `@theme` token）的要点：**每个场�
 3. M2 一级 topic：先跑候选再拍板（推荐）还是直接指定？
 4. 前台语言（中文标题/摘要与否）——阻塞 M3 提示词设计。
 5. 本总案批准后：M0 立即立项走 sprint？M1 顺延还是并行？
+
+> **未完成项已全部立 issue 归档（2026-11-08）**：M2 → [#64](https://github.com/variableway/innate-feeds/issues/64) · M3/M4 → [#65](https://github.com/variableway/innate-feeds/issues/65) · S2/S1 余项 → [#66](https://github.com/variableway/innate-feeds/issues/66) · 文档 v2 与 CI 补源 → [#67](https://github.com/variableway/innate-feeds/issues/67)。M0（已完成）/ M1（[#63](https://github.com/variableway/innate-feeds/issues/63) 已交付关闭）。
 
 ## 9. 证据锚点
 
