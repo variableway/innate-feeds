@@ -19,8 +19,9 @@ Bun.serve({
   port: PORT,
   fetch(req) {
     const path = decodeURIComponent(new URL(req.url).pathname);
-    const root = resolve(distDir);
-    const abs = resolve(root, `.${path}`);
+    // Windows: resolve() 返回反斜杠路径，统一为 posix 后再做前缀命中判断
+    const root = resolve(distDir).replaceAll("\\", "/");
+    const abs = resolve(root, `.${path}`).replaceAll("\\", "/");
     if (
       abs.startsWith(`${root}/`) &&
       existsSync(abs) &&

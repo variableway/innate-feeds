@@ -60,6 +60,17 @@ export const webDomain = createWebDomain("feeds")
         getParentRoute: () => layout,
         path: "/topics",
         component: TopicsPage,
+        // issue #68：?group= / ?step= 深链聚焦分类分组（值为分组 id）
+        validateSearch: (search: Record<string, unknown>) => ({
+          group:
+            typeof search.group === "string" && search.group
+              ? search.group
+              : undefined,
+          step:
+            typeof search.step === "string" && search.step
+              ? search.step
+              : undefined,
+        }),
       }),
       createRoute({
         getParentRoute: () => layout,

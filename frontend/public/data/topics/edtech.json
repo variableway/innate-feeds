@@ -1,9 +1,9 @@
 {
   "topic": "edtech",
-  "fetchedAt": "2026-11-10T16:03:29.106Z",
+  "fetchedAt": "2026-11-10T10:56:04.236Z",
   "count": 50,
-  "newCount": 45,
-  "existingCount": 5,
+  "newCount": 2,
+  "existingCount": 7,
   "items": [
     {
       "id": "gh-topic-1226123343",
@@ -13,9 +13,9 @@
       "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "homepage": null,
-      "stars": 37534,
-      "forks": 3977,
-      "watchers": 37534,
+      "stars": 37520,
+      "forks": 3973,
+      "watchers": 37520,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -38,9 +38,9 @@
         "url": "https://github.com/virgiliojr94"
       },
       "createdAt": "2026-05-01T02:09:39Z",
-      "updatedAt": "2026-11-10T15:42:34Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:42:58Z",
+      "firstSeenAt": "2026-10-28T14:19:44.920Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -51,9 +51,9 @@
       "description": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
       "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
       "homepage": "https://math.pansgo.com/",
-      "stars": 7429,
-      "forks": 1958,
-      "watchers": 7429,
+      "stars": 7350,
+      "forks": 1939,
+      "watchers": 7350,
       "language": "Python",
       "topics": [
         "chinese",
@@ -79,9 +79,9 @@
         "url": "https://github.com/xiaoyang111222"
       },
       "createdAt": "2026-10-18T09:04:43Z",
-      "updatedAt": "2026-11-10T15:58:26Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:54:49Z",
+      "firstSeenAt": "2026-10-28T14:19:44.920Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -122,9 +122,9 @@
       },
       "createdAt": "2021-09-18T11:23:02Z",
       "updatedAt": "2026-11-09T20:39:13Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-10-28T14:19:44.920Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1047965761",
@@ -167,8 +167,8 @@
       },
       "createdAt": "2025-08-31T16:17:31Z",
       "updatedAt": "2026-11-08T21:05:03Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:19:44.920Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -179,9 +179,9 @@
       "description": "ClassroomIO is an  Intelligent Customer Training Platform that helps SaaS companies use education to grow their business.",
       "url": "https://github.com/classroomio/classroomio",
       "homepage": "https://classroomio.com",
-      "stars": 1739,
+      "stars": 1738,
       "forks": 411,
-      "watchers": 1739,
+      "watchers": 1738,
       "language": "TypeScript",
       "topics": [
         "assignments",
@@ -210,9 +210,9 @@
         "url": "https://github.com/classroomio"
       },
       "createdAt": "2023-11-01T17:55:01Z",
-      "updatedAt": "2026-11-10T15:52:31Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T19:49:46Z",
+      "firstSeenAt": "2026-10-28T14:19:44.920Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -223,9 +223,9 @@
       "description": "An AI skill that turns books into animated, narrated, interactive web experiences",
       "url": "https://github.com/DozenTwelve/Papermorph",
       "homepage": "https://papermorph.diamonddoge.org/",
-      "stars": 1511,
-      "forks": 197,
-      "watchers": 1511,
+      "stars": 1504,
+      "forks": 195,
+      "watchers": 1504,
       "language": "JavaScript",
       "topics": [
         "ai-agents",
@@ -246,9 +246,9 @@
         "url": "https://github.com/DozenTwelve"
       },
       "createdAt": "2026-10-03T01:38:22Z",
-      "updatedAt": "2026-11-10T14:50:59Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:51:57Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -259,9 +259,9 @@
       "description": "StudyOnTV (Tiledaoti TV) — open-source Android TV app where kids unlock screen time by answering questions. Runs fully on the TV: no server, no account. Parents scan a QR code and manage questions from the LAN. Learn first. Watch later.",
       "url": "https://github.com/chadyi/StudyOnTV",
       "homepage": null,
-      "stars": 1316,
-      "forks": 291,
-      "watchers": 1316,
+      "stars": 1277,
+      "forks": 286,
+      "watchers": 1277,
       "language": "JavaScript",
       "topics": [
         "android",
@@ -291,8 +291,8 @@
         "url": "https://github.com/chadyi"
       },
       "createdAt": "2026-11-01T15:31:22Z",
-      "updatedAt": "2026-11-10T15:53:58Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
+      "updatedAt": "2026-11-10T10:52:46Z",
+      "firstSeenAt": "2026-11-10T10:56:04.236Z",
       "isNew": true,
       "existing": false
     },
@@ -304,9 +304,9 @@
       "description": "Kolibri Learning Platform: the offline app for universal education",
       "url": "https://github.com/learningequality/kolibri",
       "homepage": "https://learningequality.org/kolibri/",
-      "stars": 1175,
-      "forks": 1032,
-      "watchers": 1175,
+      "stars": 1174,
+      "forks": 1030,
+      "watchers": 1174,
       "language": "Python",
       "topics": [
         "edtech",
@@ -322,9 +322,9 @@
         "url": "https://github.com/learningequality"
       },
       "createdAt": "2016-01-19T19:22:07Z",
-      "updatedAt": "2026-11-10T14:40:48Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T14:16:09Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -368,8 +368,8 @@
       },
       "createdAt": "2026-05-09T18:10:11Z",
       "updatedAt": "2026-11-09T21:23:56Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -413,9 +413,9 @@
       },
       "createdAt": "2026-03-01T19:34:44Z",
       "updatedAt": "2026-11-10T09:59:05Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1418226869",
@@ -425,9 +425,9 @@
       "description": "Claudemy: an open-source alternative to Udemy and Coursera. Give Claude a topic, it researches the web and builds a course of 2-minute audio lessons with cited sources. A free Claude Code skill.",
       "url": "https://github.com/assafkip/claudemy",
       "homepage": "https://askconsulting.io",
-      "stars": 669,
+      "stars": 667,
       "forks": 78,
-      "watchers": 669,
+      "watchers": 667,
       "language": "Python",
       "topics": [
         "ai-course-generator",
@@ -457,9 +457,9 @@
         "url": "https://github.com/assafkip"
       },
       "createdAt": "2026-10-14T01:49:12Z",
-      "updatedAt": "2026-11-10T12:35:45Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:44:14Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -470,9 +470,9 @@
       "description": "Plataforma gratuita e open-source de ensino de programação",
       "url": "https://github.com/menthorlabs/menthor",
       "homepage": "https://menthor.io/",
-      "stars": 581,
+      "stars": 582,
       "forks": 35,
-      "watchers": 581,
+      "watchers": 582,
       "language": "Vue",
       "topics": [
         "clerk",
@@ -487,9 +487,9 @@
         "url": "https://github.com/menthorlabs"
       },
       "createdAt": "2023-04-16T15:09:12Z",
-      "updatedAt": "2026-11-10T14:03:28Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-08T17:33:20Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -500,9 +500,9 @@
       "description": "501(c)(3) nonprofit delivering ethical, inclusive, multilingual AI tutoring for underserved learners — low-income, rural, multilingual & neurodiverse students. 1,500+ students reached across 7 languages. Source code for aiethos.org.",
       "url": "https://github.com/aaryansamanta/ai-ethos",
       "homepage": "https://www.aiethos.org",
-      "stars": 497,
+      "stars": 496,
       "forks": 0,
-      "watchers": 497,
+      "watchers": 496,
       "language": "PHP",
       "topics": [
         "501c3",
@@ -528,9 +528,9 @@
         "url": "https://github.com/aaryansamanta"
       },
       "createdAt": "2025-12-01T21:01:48Z",
-      "updatedAt": "2026-11-10T13:20:09Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-03T18:17:16Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -566,8 +566,8 @@
       },
       "createdAt": "2026-10-10T10:02:14Z",
       "updatedAt": "2026-11-10T04:25:36Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -578,9 +578,9 @@
       "description": "本地化高中数学题库管理系统，支持 LaTeX 实时渲染、智能大模型 AI 解析与 OCR 公式识别。Localized High School Math Question Bank Management System, supporting real-time LaTeX rendering, smart LLM AI parsing & solving, and formula OCR recognition.",
       "url": "https://github.com/JudgePeach/math-question-bank",
       "homepage": null,
-      "stars": 395,
+      "stars": 393,
       "forks": 102,
-      "watchers": 395,
+      "watchers": 393,
       "language": "Python",
       "topics": [
         "edtech",
@@ -596,9 +596,9 @@
         "url": "https://github.com/JudgePeach"
       },
       "createdAt": "2026-06-05T07:03:21Z",
-      "updatedAt": "2026-11-10T15:06:30Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:10:31Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -626,9 +626,9 @@
         "url": "https://github.com/tsugiproject"
       },
       "createdAt": "2013-11-28T19:08:56Z",
-      "updatedAt": "2026-11-10T13:15:23Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T22:41:27Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -639,9 +639,9 @@
       "description": "A modern SCORM JavaScript runtime library.",
       "url": "https://github.com/jcputney/scorm-again",
       "homepage": "https://jcputney.github.io/scorm-again/",
-      "stars": 366,
+      "stars": 365,
       "forks": 85,
-      "watchers": 366,
+      "watchers": 365,
       "language": "TypeScript",
       "topics": [
         "browser",
@@ -666,9 +666,9 @@
         "url": "https://github.com/jcputney"
       },
       "createdAt": "2019-11-10T17:22:34Z",
-      "updatedAt": "2026-11-10T14:23:41Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T08:58:41Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -700,8 +700,8 @@
       },
       "createdAt": "2023-02-18T22:50:17Z",
       "updatedAt": "2026-11-07T01:05:32Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -731,8 +731,8 @@
       },
       "createdAt": "2022-01-31T11:29:31Z",
       "updatedAt": "2026-10-13T15:31:53Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -774,8 +774,8 @@
       },
       "createdAt": "2026-03-10T14:59:27Z",
       "updatedAt": "2026-11-10T02:31:12Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -813,8 +813,8 @@
       },
       "createdAt": "2025-08-14T05:44:02Z",
       "updatedAt": "2026-10-31T12:48:01Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -842,8 +842,8 @@
       },
       "createdAt": "2014-01-06T16:22:19Z",
       "updatedAt": "2026-11-04T19:10:40Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -854,9 +854,9 @@
       "description": "Open-source, self-hosted AI language learning platform with local or cloud LLMs, CEFR study plans, an AI tutor, voice conversations, flashcards, and spaced repetition.",
       "url": "https://github.com/artcc/freelingo",
       "homepage": "https://www.arturocarreterocalvo.com/freelingo",
-      "stars": 253,
+      "stars": 252,
       "forks": 67,
-      "watchers": 253,
+      "watchers": 252,
       "language": "JavaScript",
       "topics": [
         "ai-tutor",
@@ -884,9 +884,9 @@
         "url": "https://github.com/artcc"
       },
       "createdAt": "2026-04-30T11:43:41Z",
-      "updatedAt": "2026-11-10T14:08:40Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T06:20:44Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -917,8 +917,8 @@
       },
       "createdAt": "2014-07-16T23:28:55Z",
       "updatedAt": "2026-11-09T03:22:37Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -929,9 +929,9 @@
       "description": "Open-source phoneme-level English pronunciation assessment (Wav2Vec2 + DTW). Self-hosted alternative to Azure Pronunciation Assessment.",
       "url": "https://github.com/Halleck45/OpenPronounce",
       "homepage": null,
-      "stars": 204,
+      "stars": 203,
       "forks": 38,
-      "watchers": 204,
+      "watchers": 203,
       "language": "Python",
       "topics": [
         "ai",
@@ -954,9 +954,9 @@
         "url": "https://github.com/Halleck45"
       },
       "createdAt": "2025-08-26T06:58:18Z",
-      "updatedAt": "2026-11-10T15:07:15Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:25:36Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -996,8 +996,8 @@
       },
       "createdAt": "2026-02-26T14:51:15Z",
       "updatedAt": "2026-11-09T19:08:19Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1029,8 +1029,8 @@
       },
       "createdAt": "2025-09-17T18:05:25Z",
       "updatedAt": "2026-11-09T10:16:08Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1056,8 +1056,8 @@
       },
       "createdAt": "2023-05-01T13:46:46Z",
       "updatedAt": "2026-10-25T08:56:53Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1101,8 +1101,8 @@
       },
       "createdAt": "2026-02-24T12:58:46Z",
       "updatedAt": "2026-11-09T08:26:04Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1134,8 +1134,8 @@
       },
       "createdAt": "2016-02-08T20:15:35Z",
       "updatedAt": "2026-11-02T21:34:39Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1170,8 +1170,8 @@
       },
       "createdAt": "2018-07-19T13:41:35Z",
       "updatedAt": "2026-11-10T00:53:02Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1201,8 +1201,8 @@
       },
       "createdAt": "2026-07-17T06:42:34Z",
       "updatedAt": "2026-11-10T07:37:48Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1244,8 +1244,8 @@
       },
       "createdAt": "2025-07-30T18:30:59Z",
       "updatedAt": "2026-11-10T02:32:13Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1276,8 +1276,8 @@
       },
       "createdAt": "2022-06-26T18:24:44Z",
       "updatedAt": "2026-09-01T10:08:40Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1315,8 +1315,8 @@
       },
       "createdAt": "2013-04-22T16:25:42Z",
       "updatedAt": "2026-09-21T00:54:42Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1351,8 +1351,8 @@
       },
       "createdAt": "2024-02-08T18:21:03Z",
       "updatedAt": "2026-11-04T04:19:18Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1389,8 +1389,8 @@
       },
       "createdAt": "2015-06-10T15:32:50Z",
       "updatedAt": "2026-11-05T20:59:24Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1419,8 +1419,8 @@
       },
       "createdAt": "2023-08-31T19:24:56Z",
       "updatedAt": "2026-10-30T21:22:48Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1451,8 +1451,8 @@
       },
       "createdAt": "2015-07-14T12:10:11Z",
       "updatedAt": "2026-07-06T11:09:01Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1495,9 +1495,9 @@
         "url": "https://github.com/kirill-markin"
       },
       "createdAt": "2026-03-02T07:17:34Z",
-      "updatedAt": "2026-11-10T14:08:13Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:33:43Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1531,8 +1531,8 @@
       },
       "createdAt": "2020-07-03T18:52:11Z",
       "updatedAt": "2026-10-08T17:59:12Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1573,8 +1573,8 @@
       },
       "createdAt": "2023-07-27T18:02:21Z",
       "updatedAt": "2026-11-09T15:06:00Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1618,8 +1618,8 @@
       },
       "createdAt": "2024-08-01T10:17:21Z",
       "updatedAt": "2026-11-10T10:36:02Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1663,8 +1663,8 @@
       },
       "createdAt": "2026-03-04T19:03:29Z",
       "updatedAt": "2026-11-08T18:59:29Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1699,8 +1699,8 @@
         "url": "https://github.com/pacewisdomhq"
       },
       "createdAt": "2026-10-07T11:21:56Z",
-      "updatedAt": "2026-11-10T13:53:06Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
+      "updatedAt": "2026-11-10T10:49:32Z",
+      "firstSeenAt": "2026-11-10T10:56:04.236Z",
       "isNew": true,
       "existing": false
     },
@@ -1711,7 +1711,7 @@
       "name": "AI_Tutor_Release",
       "description": "EduAgent: Open-Source RAG AI Tutor for K-9 Education. 国内首个专为1-9年级量身定制的开源 RAG AI 教辅智能体",
       "url": "https://github.com/Zenglian990/AI_Tutor_Release",
-      "homepage": "https://ai-tutor-79709693345.asia-east1.run.app",
+      "homepage": null,
       "stars": 89,
       "forks": 28,
       "watchers": 89,
@@ -1738,9 +1738,9 @@
         "url": "https://github.com/Zenglian990"
       },
       "createdAt": "2026-06-29T09:04:10Z",
-      "updatedAt": "2026-11-10T11:40:47Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:00:07Z",
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1773,8 +1773,8 @@
       },
       "createdAt": "2025-09-22T19:23:54Z",
       "updatedAt": "2026-11-06T21:07:05Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1806,8 +1806,8 @@
       },
       "createdAt": "2015-03-13T05:17:08Z",
       "updatedAt": "2026-10-01T02:57:12Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1838,8 +1838,8 @@
       },
       "createdAt": "2020-12-22T11:27:42Z",
       "updatedAt": "2026-11-01T22:51:18Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1871,8 +1871,8 @@
       },
       "createdAt": "2020-10-22T14:30:33Z",
       "updatedAt": "2026-07-06T07:03:49Z",
-      "firstSeenAt": "2026-11-10T16:03:29.106Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:21.507Z",
+      "isNew": false,
       "existing": false
     }
   ]

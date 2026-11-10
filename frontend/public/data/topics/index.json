@@ -1,251 +1,636 @@
 {
   "source": "github-topics",
-  "updatedAt": "2026-11-10T16:03:58.912Z",
+  "updatedAt": "2026-11-10T11:03:22.952Z",
   "topics": [
+    {
+      "topic": "e-learning",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:57:53.941Z"
+    },
+    {
+      "topic": "flashcard",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:58:08.572Z"
+    },
+    {
+      "topic": "issue-tracking",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:01:27.447Z"
+    },
+    {
+      "topic": "mooc",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:58:53.476Z"
+    },
+    {
+      "topic": "online-course",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:58:59.456Z"
+    },
+    {
+      "topic": "requirements-management",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:00:55.195Z"
+    },
+    {
+      "topic": "syllabus",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:59:06.840Z"
+    },
+    {
+      "topic": "teachable-machine",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:58:14.716Z"
+    },
+    {
+      "topic": "usability",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:03:04.825Z"
+    },
+    {
+      "topic": "use-case",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:01:04.681Z"
+    },
+    {
+      "topic": "user-experience",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:03:22.952Z"
+    },
+    {
+      "topic": "user-research",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:02:59.083Z"
+    },
+    {
+      "topic": "user-stories",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:00:45.905Z"
+    },
+    {
+      "topic": "ux-audit",
+      "count": 50,
+      "newCount": 50,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T11:03:16.152Z"
+    },
+    {
+      "topic": "agile",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:01:43.878Z"
+    },
     {
       "topic": "ai-slop",
       "count": 50,
-      "newCount": 50,
-      "existingCount": 0,
-      "fetchedAt": "2026-11-10T16:03:56.824Z"
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:57:23.517Z"
     },
     {
-      "topic": "diffusion-model",
+      "topic": "brainstorm",
       "count": 50,
-      "newCount": 50,
-      "existingCount": 0,
-      "fetchedAt": "2026-11-10T16:03:10.312Z"
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:59:50.312Z"
+    },
+    {
+      "topic": "curriculum",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:58:27.189Z"
+    },
+    {
+      "topic": "design-thinking",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:00:34.110Z"
+    },
+    {
+      "topic": "explainer",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:59:22.608Z"
+    },
+    {
+      "topic": "handoff",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:02:46.705Z"
+    },
+    {
+      "topic": "ideation",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:00:17.904Z"
+    },
+    {
+      "topic": "interactive-tutorial",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:57:43.327Z"
+    },
+    {
+      "topic": "mindmap",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:00:10.853Z"
+    },
+    {
+      "topic": "quiz",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T10:58:01.368Z"
     },
     {
       "topic": "slop",
       "count": 50,
       "newCount": 49,
       "existingCount": 1,
-      "fetchedAt": "2026-11-10T16:03:54.844Z"
+      "fetchedAt": "2026-11-10T10:57:17.762Z"
     },
     {
-      "topic": "ux",
+      "topic": "teaching",
       "count": 50,
       "newCount": 49,
       "existingCount": 1,
-      "fetchedAt": "2026-11-10T16:03:33.710Z"
+      "fetchedAt": "2026-11-10T10:58:39.688Z"
     },
     {
-      "topic": "anti-slop",
+      "topic": "ux-research",
+      "count": 50,
+      "newCount": 49,
+      "existingCount": 1,
+      "fetchedAt": "2026-11-10T11:02:53.233Z"
+    },
+    {
+      "topic": "bdd",
       "count": 50,
       "newCount": 48,
       "existingCount": 2,
-      "fetchedAt": "2026-11-10T16:03:51.904Z"
+      "fetchedAt": "2026-11-10T11:02:09.885Z"
+    },
+    {
+      "topic": "brainstorming",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T10:59:59.016Z"
+    },
+    {
+      "topic": "courseware",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T10:58:47.288Z"
+    },
+    {
+      "topic": "explainer-video",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T10:59:16.668Z"
     },
     {
       "topic": "humanizer",
       "count": 50,
       "newCount": 48,
       "existingCount": 2,
-      "fetchedAt": "2026-11-10T16:03:58.912Z"
+      "fetchedAt": "2026-11-10T10:57:30.181Z"
     },
     {
-      "topic": "natural-language-processing",
+      "topic": "mind-map",
       "count": 50,
       "newCount": 48,
       "existingCount": 2,
-      "fetchedAt": "2026-11-10T16:03:14.766Z"
+      "fetchedAt": "2026-11-10T11:00:05.067Z"
+    },
+    {
+      "topic": "roadmap",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T11:01:32.941Z"
+    },
+    {
+      "topic": "tdd",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T11:02:03.695Z"
+    },
+    {
+      "topic": "ux",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T10:56:17.794Z"
+    },
+    {
+      "topic": "whiteboard",
+      "count": 50,
+      "newCount": 48,
+      "existingCount": 2,
+      "fetchedAt": "2026-11-10T11:00:26.698Z"
+    },
+    {
+      "topic": "learning-platform",
+      "count": 50,
+      "newCount": 47,
+      "existingCount": 3,
+      "fetchedAt": "2026-11-10T10:58:20.690Z"
+    },
+    {
+      "topic": "todo-list",
+      "count": 50,
+      "newCount": 47,
+      "existingCount": 3,
+      "fetchedAt": "2026-11-10T11:01:50.852Z"
+    },
+    {
+      "topic": "anti-slop",
+      "count": 50,
+      "newCount": 46,
+      "existingCount": 4,
+      "fetchedAt": "2026-11-10T10:57:10.002Z"
     },
     {
       "topic": "figma",
       "count": 50,
       "newCount": 46,
       "existingCount": 4,
-      "fetchedAt": "2026-11-10T16:03:44.365Z"
+      "fetchedAt": "2026-11-10T10:56:46.544Z"
     },
     {
-      "topic": "edtech",
+      "topic": "lesson-plan",
+      "count": 45,
+      "newCount": 45,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:59:12.321Z"
+    },
+    {
+      "topic": "motion-graphics",
       "count": 50,
       "newCount": 45,
       "existingCount": 5,
-      "fetchedAt": "2026-11-10T16:03:29.106Z"
+      "fetchedAt": "2026-11-10T10:59:32.853Z"
     },
     {
-      "topic": "fine-tuning",
+      "topic": "qa",
       "count": 50,
       "newCount": 45,
       "existingCount": 5,
-      "fetchedAt": "2026-11-10T16:03:06.199Z"
+      "fetchedAt": "2026-11-10T11:02:34.410Z"
     },
     {
-      "topic": "large-language-model",
+      "topic": "remotion",
       "count": 50,
       "newCount": 45,
       "existingCount": 5,
-      "fetchedAt": "2026-11-10T16:02:53.459Z"
+      "fetchedAt": "2026-11-10T10:59:42.986Z"
     },
     {
-      "topic": "nlp",
+      "topic": "e2e-testing",
       "count": 50,
-      "newCount": 45,
-      "existingCount": 5,
-      "fetchedAt": "2026-11-10T16:03:16.755Z"
+      "newCount": 44,
+      "existingCount": 6,
+      "fetchedAt": "2026-11-10T11:02:21.737Z"
+    },
+    {
+      "topic": "course",
+      "count": 50,
+      "newCount": 43,
+      "existingCount": 7,
+      "fetchedAt": "2026-11-10T10:58:32.744Z"
+    },
+    {
+      "topic": "software-testing",
+      "count": 50,
+      "newCount": 43,
+      "existingCount": 7,
+      "fetchedAt": "2026-11-10T11:02:27.864Z"
     },
     {
       "topic": "accessibility",
       "count": 50,
-      "newCount": 43,
-      "existingCount": 7,
-      "fetchedAt": "2026-11-10T16:03:46.309Z"
+      "newCount": 42,
+      "existingCount": 8,
+      "fetchedAt": "2026-11-10T10:56:53.406Z"
     },
     {
       "topic": "ui-components",
       "count": 50,
-      "newCount": 43,
-      "existingCount": 7,
-      "fetchedAt": "2026-11-10T16:03:40.512Z"
-    },
-    {
-      "topic": "computer-vision",
-      "count": 50,
       "newCount": 42,
       "existingCount": 8,
-      "fetchedAt": "2026-11-10T16:03:12.314Z"
+      "fetchedAt": "2026-11-10T10:56:34.904Z"
     },
     {
       "topic": "design-system",
       "count": 50,
-      "newCount": 42,
-      "existingCount": 8,
-      "fetchedAt": "2026-11-10T16:03:38.662Z"
+      "newCount": 41,
+      "existingCount": 9,
+      "fetchedAt": "2026-11-10T10:56:28.744Z"
     },
     {
-      "topic": "transformer",
+      "topic": "education",
       "count": 50,
       "newCount": 41,
       "existingCount": 9,
-      "fetchedAt": "2026-11-10T16:03:08.109Z"
+      "fetchedAt": "2026-11-10T10:57:48.498Z"
     },
     {
-      "topic": "component-library",
+      "topic": "test-automation",
+      "count": 50,
+      "newCount": 41,
+      "existingCount": 9,
+      "fetchedAt": "2026-11-10T11:02:15.982Z"
+    },
+    {
+      "topic": "code-review",
       "count": 50,
       "newCount": 40,
       "existingCount": 10,
-      "fetchedAt": "2026-11-10T16:03:42.280Z"
+      "fetchedAt": "2026-11-10T11:02:41.314Z"
     },
     {
-      "topic": "deep-learning",
+      "topic": "kanban",
       "count": 50,
       "newCount": 40,
       "existingCount": 10,
-      "fetchedAt": "2026-11-10T16:02:50.798Z"
-    },
-    {
-      "topic": "mlops",
-      "count": 50,
-      "newCount": 40,
-      "existingCount": 10,
-      "fetchedAt": "2026-11-10T16:03:18.756Z"
+      "fetchedAt": "2026-11-10T11:01:38.703Z"
     },
     {
       "topic": "ui",
       "count": 50,
+      "newCount": 40,
+      "existingCount": 10,
+      "fetchedAt": "2026-11-10T10:56:12.687Z"
+    },
+    {
+      "topic": "spec-driven-development",
+      "count": 50,
       "newCount": 39,
       "existingCount": 11,
-      "fetchedAt": "2026-11-10T16:03:31.612Z"
+      "fetchedAt": "2026-11-10T11:01:55.897Z"
     },
     {
-      "topic": "design",
-      "count": 50,
-      "newCount": 37,
-      "existingCount": 13,
-      "fetchedAt": "2026-11-10T16:03:36.291Z"
+      "topic": "whiteboard-animation",
+      "count": 39,
+      "newCount": 39,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:59:27.419Z"
     },
     {
-      "topic": "machine-learning",
+      "topic": "component-library",
       "count": 50,
-      "newCount": 37,
-      "existingCount": 13,
-      "fetchedAt": "2026-11-10T16:02:49.057Z"
+      "newCount": 38,
+      "existingCount": 12,
+      "fetchedAt": "2026-11-10T10:56:41.083Z"
+    },
+    {
+      "topic": "project-management",
+      "count": 50,
+      "newCount": 38,
+      "existingCount": 12,
+      "fetchedAt": "2026-11-10T11:01:21.887Z"
+    },
+    {
+      "topic": "task-management",
+      "count": 50,
+      "newCount": 38,
+      "existingCount": 12,
+      "fetchedAt": "2026-11-10T11:01:16.020Z"
     },
     {
       "topic": "tailwindcss",
       "count": 50,
       "newCount": 37,
       "existingCount": 13,
-      "fetchedAt": "2026-11-10T16:03:48.083Z"
+      "fetchedAt": "2026-11-10T10:56:58.940Z"
     },
     {
-      "topic": "vector-database",
+      "topic": "manim",
       "count": 50,
-      "newCount": 36,
-      "existingCount": 14,
-      "fetchedAt": "2026-11-10T16:03:20.600Z"
+      "newCount": 35,
+      "existingCount": 15,
+      "fetchedAt": "2026-11-10T10:59:38.281Z"
     },
     {
-      "topic": "ai-assistant",
+      "topic": "design",
+      "count": 50,
+      "newCount": 34,
+      "existingCount": 16,
+      "fetchedAt": "2026-11-10T10:56:23.890Z"
+    },
+    {
+      "topic": "interactive-learning",
+      "count": 50,
+      "newCount": 34,
+      "existingCount": 16,
+      "fetchedAt": "2026-11-10T10:57:36.254Z"
+    },
+    {
+      "topic": "prd",
       "count": 50,
       "newCount": 33,
       "existingCount": 17,
-      "fetchedAt": "2026-11-10T16:03:26.704Z"
+      "fetchedAt": "2026-11-10T11:00:39.598Z"
     },
     {
-      "topic": "artificial-intelligence",
+      "topic": "product-management",
       "count": 50,
       "newCount": 33,
       "existingCount": 17,
-      "fetchedAt": "2026-11-10T16:02:46.605Z"
-    },
-    {
-      "topic": "ai-coding",
-      "count": 50,
-      "newCount": 32,
-      "existingCount": 18,
-      "fetchedAt": "2026-11-10T16:03:24.414Z"
+      "fetchedAt": "2026-11-10T11:01:10.083Z"
     },
     {
       "topic": "shadcn-ui",
       "count": 50,
       "newCount": 30,
       "existingCount": 20,
-      "fetchedAt": "2026-11-10T16:03:49.946Z"
+      "fetchedAt": "2026-11-10T10:57:03.750Z"
     },
     {
-      "topic": "generative-ai",
+      "topic": "ai-assistant",
       "count": 50,
-      "newCount": 27,
-      "existingCount": 23,
-      "fetchedAt": "2026-11-10T16:03:02.151Z"
+      "newCount": 4,
+      "existingCount": 17,
+      "fetchedAt": "2026-11-10T10:55:58.326Z"
+    },
+    {
+      "topic": "ai-coding",
+      "count": 50,
+      "newCount": 3,
+      "existingCount": 20,
+      "fetchedAt": "2026-11-10T10:55:53.084Z"
     },
     {
       "topic": "prompt-engineering",
       "count": 50,
-      "newCount": 27,
+      "newCount": 3,
       "existingCount": 23,
-      "fetchedAt": "2026-11-10T16:03:22.377Z"
+      "fetchedAt": "2026-11-10T10:55:46.676Z"
     },
     {
-      "topic": "rag",
+      "topic": "edtech",
       "count": 50,
-      "newCount": 23,
-      "existingCount": 27,
-      "fetchedAt": "2026-11-10T16:03:04.023Z"
+      "newCount": 2,
+      "existingCount": 7,
+      "fetchedAt": "2026-11-10T10:56:04.236Z"
     },
     {
       "topic": "ai-agent",
       "count": 50,
-      "newCount": 19,
-      "existingCount": 31,
-      "fetchedAt": "2026-11-10T16:02:58.019Z"
+      "newCount": 1,
+      "existingCount": 34,
+      "fetchedAt": "2026-11-10T10:54:30.578Z"
     },
     {
-      "topic": "llm",
+      "topic": "diffusion-model",
       "count": 50,
-      "newCount": 14,
-      "existingCount": 36,
-      "fetchedAt": "2026-11-10T16:02:55.827Z"
+      "newCount": 1,
+      "existingCount": 0,
+      "fetchedAt": "2026-11-10T10:55:07.844Z"
+    },
+    {
+      "topic": "vector-database",
+      "count": 50,
+      "newCount": 1,
+      "existingCount": 15,
+      "fetchedAt": "2026-11-10T10:55:41.340Z"
     },
     {
       "topic": "ai-agents",
       "count": 50,
-      "newCount": 12,
-      "existingCount": 38,
-      "fetchedAt": "2026-11-10T16:02:59.953Z"
+      "newCount": 0,
+      "existingCount": 39,
+      "fetchedAt": "2026-11-10T10:54:36.863Z"
+    },
+    {
+      "topic": "artificial-intelligence",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 17,
+      "fetchedAt": "2026-11-10T10:54:03.734Z"
+    },
+    {
+      "topic": "computer-vision",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 8,
+      "fetchedAt": "2026-11-10T10:55:15.452Z"
+    },
+    {
+      "topic": "deep-learning",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 10,
+      "fetchedAt": "2026-11-10T10:54:15.435Z"
+    },
+    {
+      "topic": "fine-tuning",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 8,
+      "fetchedAt": "2026-11-10T10:54:54.944Z"
+    },
+    {
+      "topic": "generative-ai",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 24,
+      "fetchedAt": "2026-11-10T10:54:42.512Z"
+    },
+    {
+      "topic": "large-language-model",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 7,
+      "fetchedAt": "2026-11-10T10:54:20.474Z"
+    },
+    {
+      "topic": "llm",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 36,
+      "fetchedAt": "2026-11-10T10:54:25.610Z"
+    },
+    {
+      "topic": "machine-learning",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 13,
+      "fetchedAt": "2026-11-10T10:54:09.731Z"
+    },
+    {
+      "topic": "mlops",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 10,
+      "fetchedAt": "2026-11-10T10:55:35.444Z"
+    },
+    {
+      "topic": "natural-language-processing",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 3,
+      "fetchedAt": "2026-11-10T10:55:21.070Z"
+    },
+    {
+      "topic": "nlp",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 6,
+      "fetchedAt": "2026-11-10T10:55:27.497Z"
+    },
+    {
+      "topic": "rag",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 27,
+      "fetchedAt": "2026-11-10T10:54:48.558Z"
+    },
+    {
+      "topic": "transformer",
+      "count": 50,
+      "newCount": 0,
+      "existingCount": 8,
+      "fetchedAt": "2026-11-10T10:55:00.787Z"
     }
   ]
 }

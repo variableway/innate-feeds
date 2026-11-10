@@ -874,29 +874,31 @@ export function upsertHotSnapshot(
       id, snapshot_date, rule_version, full_name, rank, heat, signals_json,
       stars, stars_gained, description, language, owner_login, owner_avatar_url
     ) VALUES (
-      $id, $snapshotDate, $ruleVersion, $fullName, $rank, $heat, $signalsJson,
-      $stars, $starsGained, $description, $language, $ownerLogin, $ownerAvatarUrl
+      @id, @snapshotDate, @ruleVersion, @fullName, @rank, @heat, @signalsJson,
+      @stars, @starsGained, @description, @language, @ownerLogin, @ownerAvatarUrl
     )
   `);
   const del = db.prepare(`DELETE FROM hot_snapshots WHERE snapshot_date = ?`);
   const tx = db.transaction(() => {
     del.run(args.snapshotDate);
     for (const item of args.items) {
-      insert.run({
-        id: `${args.snapshotDate}#${item.rank}`,
-        snapshotDate: args.snapshotDate,
-        ruleVersion: args.ruleVersion,
-        fullName: item.fullName,
-        rank: item.rank,
-        heat: item.heat,
-        signalsJson: JSON.stringify(item.signals),
-        stars: item.stars,
-        starsGained: item.starsGained,
-        description: item.description,
-        language: item.language,
-        ownerLogin: item.ownerLogin,
-        ownerAvatarUrl: item.ownerAvatarUrl,
-      });
+      insert.run(
+        atParams({
+          id: `${args.snapshotDate}#${item.rank}`,
+          snapshotDate: args.snapshotDate,
+          ruleVersion: args.ruleVersion,
+          fullName: item.fullName,
+          rank: item.rank,
+          heat: item.heat,
+          signalsJson: JSON.stringify(item.signals),
+          stars: item.stars,
+          starsGained: item.starsGained,
+          description: item.description,
+          language: item.language,
+          ownerLogin: item.ownerLogin,
+          ownerAvatarUrl: item.ownerAvatarUrl,
+        }),
+      );
     }
   });
   tx();
