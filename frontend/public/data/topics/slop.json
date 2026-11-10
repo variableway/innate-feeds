@@ -1,6 +1,6 @@
 {
   "topic": "slop",
-  "fetchedAt": "2026-11-08T14:45:05.161Z",
+  "fetchedAt": "2026-11-10T16:03:54.844Z",
   "count": 50,
   "newCount": 49,
   "existingCount": 1,
@@ -13,9 +13,9 @@
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "url": "https://github.com/pbakaus/impeccable",
       "homepage": "https://impeccable.style",
-      "stars": 105944,
-      "forks": 6298,
-      "watchers": 105944,
+      "stars": 107354,
+      "forks": 6377,
+      "watchers": 107354,
       "language": "Rust",
       "topics": [
         "agent-skills",
@@ -30,8 +30,8 @@
         "url": "https://github.com/pbakaus"
       },
       "createdAt": "2025-11-16T01:52:04Z",
-      "updatedAt": "2026-11-08T14:44:55Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "updatedAt": "2026-11-10T16:02:04Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": true
     },
@@ -73,7 +73,7 @@
       },
       "createdAt": "2020-04-06T15:44:30Z",
       "updatedAt": "2026-11-05T22:53:23Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -106,7 +106,7 @@
       },
       "createdAt": "2013-09-08T20:33:25Z",
       "updatedAt": "2026-10-14T08:46:00Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -118,9 +118,9 @@
       "description": "Catch and fix the code-quality issues AI coding agents leave behind - dead code, unsafe casts, swallowed errors, duplication, security risks, and more. 50+ deterministic rules across 10 language targets, with CLI, CI, and GitHub Actions. No LLM at runtime. MIT.",
       "url": "https://github.com/scanaislop/aislop",
       "homepage": "https://scanaislop.com",
-      "stars": 732,
+      "stars": 737,
       "forks": 42,
-      "watchers": 732,
+      "watchers": 737,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -150,8 +150,8 @@
         "url": "https://github.com/scanaislop"
       },
       "createdAt": "2026-03-06T13:05:19Z",
-      "updatedAt": "2026-11-08T10:54:44Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "updatedAt": "2026-11-10T15:54:11Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -179,7 +179,7 @@
       },
       "createdAt": "2024-12-29T00:42:04Z",
       "updatedAt": "2026-11-06T14:35:58Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -205,7 +205,47 @@
       },
       "createdAt": "2026-04-20T21:37:33Z",
       "updatedAt": "2026-11-06T12:08:13Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1240996286",
+      "repoId": 1240996286,
+      "fullName": "berelevant-ai/slopless",
+      "name": "slopless",
+      "description": "Deterministic textlint rules and CLI for catching prose slop in English Markdown.",
+      "url": "https://github.com/berelevant-ai/slopless",
+      "homepage": "https://www.npmjs.com/package/slopless",
+      "stars": 340,
+      "forks": 22,
+      "watchers": 340,
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "cli",
+        "lint",
+        "linter",
+        "llm",
+        "markdown",
+        "nodejs",
+        "prose",
+        "quality",
+        "slop",
+        "static-analysis",
+        "style-guide",
+        "textlint",
+        "typescript",
+        "writing"
+      ],
+      "owner": {
+        "login": "berelevant-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/286630368?v=4",
+        "url": "https://github.com/berelevant-ai"
+      },
+      "createdAt": "2026-05-16T20:44:14Z",
+      "updatedAt": "2026-11-10T09:52:43Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -231,47 +271,7 @@
       },
       "createdAt": "2026-04-04T21:32:45Z",
       "updatedAt": "2026-10-27T20:06:47Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1240996286",
-      "repoId": 1240996286,
-      "fullName": "berelevant-ai/slopless",
-      "name": "slopless",
-      "description": "Deterministic textlint rules and CLI for catching prose slop in English Markdown.",
-      "url": "https://github.com/berelevant-ai/slopless",
-      "homepage": "https://www.npmjs.com/package/slopless",
-      "stars": 339,
-      "forks": 22,
-      "watchers": 339,
-      "language": "TypeScript",
-      "topics": [
-        "ai",
-        "cli",
-        "lint",
-        "linter",
-        "llm",
-        "markdown",
-        "nodejs",
-        "prose",
-        "quality",
-        "slop",
-        "static-analysis",
-        "style-guide",
-        "textlint",
-        "typescript",
-        "writing"
-      ],
-      "owner": {
-        "login": "berelevant-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/286630368?v=4",
-        "url": "https://github.com/berelevant-ai"
-      },
-      "createdAt": "2026-05-16T20:44:14Z",
-      "updatedAt": "2026-11-08T01:33:44Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -304,7 +304,7 @@
       },
       "createdAt": "2019-04-13T13:41:49Z",
       "updatedAt": "2026-09-17T21:17:52Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -333,7 +333,43 @@
       },
       "createdAt": "2026-05-22T20:57:35Z",
       "updatedAt": "2026-11-07T16:35:28Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1437305249",
+      "repoId": 1437305249,
+      "fullName": "pedrojaques99/visant-skills-public",
+      "name": "visant-skills-public",
+      "description": "Skills de Claude Code da Visant: auditoria de UI anti-slop, motion, frontend, copy. Com detectores executáveis.",
+      "url": "https://github.com/pedrojaques99/visant-skills-public",
+      "homepage": "https://ui.visantlabs.com/skills",
+      "stars": 86,
+      "forks": 2,
+      "watchers": 86,
+      "language": "JavaScript",
+      "topics": [
+        "copywriting",
+        "design",
+        "design-system",
+        "frontend",
+        "ia",
+        "interface",
+        "motion",
+        "skills",
+        "slop",
+        "ui-audit",
+        "uiux"
+      ],
+      "owner": {
+        "login": "pedrojaques99",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/56006181?v=4",
+        "url": "https://github.com/pedrojaques99"
+      },
+      "createdAt": "2026-10-28T15:55:04Z",
+      "updatedAt": "2026-11-09T23:06:16Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -360,7 +396,7 @@
       },
       "createdAt": "2026-10-26T15:39:12Z",
       "updatedAt": "2026-11-07T14:13:36Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -394,7 +430,7 @@
       },
       "createdAt": "2026-06-01T08:03:32Z",
       "updatedAt": "2026-11-06T09:37:27Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -428,7 +464,7 @@
       },
       "createdAt": "2026-05-22T01:59:34Z",
       "updatedAt": "2026-10-21T15:37:31Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -464,7 +500,7 @@
       },
       "createdAt": "2020-08-01T06:46:30Z",
       "updatedAt": "2026-09-30T14:59:07Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -495,7 +531,7 @@
       },
       "createdAt": "2016-10-13T22:01:43Z",
       "updatedAt": "2025-07-02T18:50:52Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -532,7 +568,7 @@
       },
       "createdAt": "2026-04-11T00:16:24Z",
       "updatedAt": "2026-11-04T04:41:22Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -559,7 +595,7 @@
       },
       "createdAt": "2026-03-07T01:09:16Z",
       "updatedAt": "2026-05-28T15:17:36Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -598,7 +634,7 @@
       },
       "createdAt": "2025-11-29T19:13:32Z",
       "updatedAt": "2026-10-26T16:03:03Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -642,7 +678,7 @@
       },
       "createdAt": "2020-09-10T10:07:03Z",
       "updatedAt": "2026-03-03T19:33:20Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -676,7 +712,7 @@
       },
       "createdAt": "2017-02-23T12:31:03Z",
       "updatedAt": "2023-10-11T16:27:06Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -688,9 +724,9 @@
       "description": "unslop: audit plugin for Claude Code and Codex",
       "url": "https://github.com/0design/unslop-skill",
       "homepage": "https://oleg.design/unslop",
-      "stars": 31,
+      "stars": 32,
       "forks": 2,
-      "watchers": 31,
+      "watchers": 32,
       "language": "JavaScript",
       "topics": [
         "design",
@@ -718,8 +754,8 @@
         "url": "https://github.com/0design"
       },
       "createdAt": "2026-10-06T07:35:46Z",
-      "updatedAt": "2026-11-07T03:52:35Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "updatedAt": "2026-11-10T14:37:19Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -755,7 +791,7 @@
       },
       "createdAt": "2026-05-20T01:26:22Z",
       "updatedAt": "2026-10-21T15:29:38Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -789,7 +825,7 @@
       },
       "createdAt": "2020-06-05T21:20:31Z",
       "updatedAt": "2025-02-15T03:37:27Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -821,7 +857,7 @@
       },
       "createdAt": "2017-09-04T07:20:49Z",
       "updatedAt": "2026-06-21T20:29:40Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -854,7 +890,7 @@
       },
       "createdAt": "2026-08-25T12:48:28Z",
       "updatedAt": "2026-10-21T23:41:17Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -887,8 +923,8 @@
         "url": "https://github.com/NikoboiNFTB"
       },
       "createdAt": "2026-01-07T09:28:10Z",
-      "updatedAt": "2026-10-20T13:07:58Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "updatedAt": "2026-11-08T18:14:40Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -916,7 +952,7 @@
       },
       "createdAt": "2025-03-27T22:08:04Z",
       "updatedAt": "2026-04-26T21:53:11Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -954,7 +990,7 @@
       },
       "createdAt": "2026-08-21T08:14:24Z",
       "updatedAt": "2026-09-25T20:12:30Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -985,7 +1021,7 @@
       },
       "createdAt": "2026-03-20T21:44:01Z",
       "updatedAt": "2026-09-27T02:14:05Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1017,7 +1053,7 @@
       },
       "createdAt": "2026-11-01T10:03:21Z",
       "updatedAt": "2026-11-05T09:40:57Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1058,7 +1094,7 @@
       },
       "createdAt": "2026-10-10T18:07:57Z",
       "updatedAt": "2026-11-03T09:43:44Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1087,7 +1123,7 @@
       },
       "createdAt": "2026-05-03T15:29:30Z",
       "updatedAt": "2026-07-01T11:49:10Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1119,8 +1155,8 @@
         "url": "https://github.com/hitSlop"
       },
       "createdAt": "2026-08-30T16:52:04Z",
-      "updatedAt": "2026-11-08T03:48:34Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "updatedAt": "2026-11-09T14:37:31Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1146,7 +1182,7 @@
       },
       "createdAt": "2026-05-20T08:19:26Z",
       "updatedAt": "2026-10-16T22:34:42Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1174,7 +1210,7 @@
       },
       "createdAt": "2024-09-18T07:35:47Z",
       "updatedAt": "2025-12-29T11:11:36Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1207,7 +1243,7 @@
       },
       "createdAt": "2017-08-26T08:26:19Z",
       "updatedAt": "2023-08-21T02:19:03Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1236,7 +1272,7 @@
       },
       "createdAt": "2026-05-12T20:20:08Z",
       "updatedAt": "2026-10-02T17:52:37Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1281,7 +1317,7 @@
       },
       "createdAt": "2025-12-27T17:00:30Z",
       "updatedAt": "2026-09-04T19:54:58Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1315,7 +1351,7 @@
       },
       "createdAt": "2026-06-07T16:22:26Z",
       "updatedAt": "2026-10-07T06:50:45Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1341,7 +1377,7 @@
       },
       "createdAt": "2026-07-07T18:22:56Z",
       "updatedAt": "2026-09-17T20:25:23Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1370,7 +1406,7 @@
       },
       "createdAt": "2026-03-06T00:43:03Z",
       "updatedAt": "2026-10-07T06:52:45Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1401,7 +1437,7 @@
       },
       "createdAt": "2026-08-05T18:58:33Z",
       "updatedAt": "2026-10-30T14:44:01Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1436,7 +1472,7 @@
       },
       "createdAt": "2026-10-04T22:17:54Z",
       "updatedAt": "2026-11-03T11:40:51Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1466,7 +1502,33 @@
       },
       "createdAt": "2026-06-23T07:20:56Z",
       "updatedAt": "2026-08-21T04:18:46Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1291442578",
+      "repoId": 1291442578,
+      "fullName": "psychoticbeef/libairmini",
+      "name": "libairmini",
+      "description": "Reverse-engineered C library for the ResMed AirMini CPAP: pair and pull settings, 25 Hz flow/pressure waveforms, respiratory events, and therapy history.",
+      "url": "https://github.com/psychoticbeef/libairmini",
+      "homepage": null,
+      "stars": 5,
+      "forks": 3,
+      "watchers": 5,
+      "language": "C",
+      "topics": [
+        "slop"
+      ],
+      "owner": {
+        "login": "psychoticbeef",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6671234?v=4",
+        "url": "https://github.com/psychoticbeef"
+      },
+      "createdAt": "2026-07-06T20:04:12Z",
+      "updatedAt": "2026-10-15T23:57:37Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1499,33 +1561,7 @@
       },
       "createdAt": "2019-10-01T18:49:14Z",
       "updatedAt": "2023-07-26T21:56:16Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1291442578",
-      "repoId": 1291442578,
-      "fullName": "psychoticbeef/libairmini",
-      "name": "libairmini",
-      "description": "Reverse-engineered C library for the ResMed AirMini CPAP: pair and pull settings, 25 Hz flow/pressure waveforms, respiratory events, and therapy history.",
-      "url": "https://github.com/psychoticbeef/libairmini",
-      "homepage": null,
-      "stars": 5,
-      "forks": 3,
-      "watchers": 5,
-      "language": "C",
-      "topics": [
-        "slop"
-      ],
-      "owner": {
-        "login": "psychoticbeef",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6671234?v=4",
-        "url": "https://github.com/psychoticbeef"
-      },
-      "createdAt": "2026-07-06T20:04:12Z",
-      "updatedAt": "2026-10-15T23:57:37Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1557,7 +1593,48 @@
       },
       "createdAt": "2026-03-19T01:50:07Z",
       "updatedAt": "2026-08-28T19:16:11Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1253203305",
+      "repoId": 1253203305,
+      "fullName": "hwajongpark/slop-gate",
+      "name": "slop-gate",
+      "description": "Catch AI writing-tells before they reach your readers. Zero-dependency npx CLI: em-dash + ~40 vocabulary tells, path allowlist, runs locally or in CI.",
+      "url": "https://github.com/hwajongpark/slop-gate",
+      "homepage": null,
+      "stars": 5,
+      "forks": 3,
+      "watchers": 5,
+      "language": "JavaScript",
+      "topics": [
+        "ai",
+        "ai-detection",
+        "ai-slop",
+        "ai-writing",
+        "ci",
+        "cli",
+        "content",
+        "editorial",
+        "em-dash",
+        "linter",
+        "llm",
+        "multilingual",
+        "prose",
+        "slop",
+        "translationese",
+        "writing"
+      ],
+      "owner": {
+        "login": "hwajongpark",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/107298953?v=4",
+        "url": "https://github.com/hwajongpark"
+      },
+      "createdAt": "2026-05-29T08:37:02Z",
+      "updatedAt": "2026-11-09T13:14:49Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     },
@@ -1587,78 +1664,7 @@
       },
       "createdAt": "2025-12-03T10:05:32Z",
       "updatedAt": "2026-11-03T02:03:53Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-453407538",
-      "repoId": 453407538,
-      "fullName": "revelaction/pixelchanged",
-      "name": "pixelchanged",
-      "description": "pixelchanged is a simple bash script to detect changes in a region of your screen and execute commands when the change happens.",
-      "url": "https://github.com/revelaction/pixelchanged",
-      "homepage": null,
-      "stars": 4,
-      "forks": 1,
-      "watchers": 4,
-      "language": "Shell",
-      "topics": [
-        "bash",
-        "change",
-        "grim",
-        "screenshot",
-        "slop",
-        "slurp",
-        "swaywm",
-        "wayland",
-        "x11"
-      ],
-      "owner": {
-        "login": "revelaction",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/96388231?v=4",
-        "url": "https://github.com/revelaction"
-      },
-      "createdAt": "2022-01-29T13:35:54Z",
-      "updatedAt": "2025-07-24T13:22:27Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1215633289",
-      "repoId": 1215633289,
-      "fullName": "ostiosmosisperosisjones/SlopCAD",
-      "name": "SlopCAD",
-      "description": "A vibe-coded parametric 3D CAD program.",
-      "url": "https://github.com/ostiosmosisperosisjones/SlopCAD",
-      "homepage": null,
-      "stars": 4,
-      "forks": 0,
-      "watchers": 4,
-      "language": "Python",
-      "topics": [
-        "build123d",
-        "cad",
-        "occt",
-        "opencascade",
-        "parametric",
-        "parametric-cad",
-        "parametric-design",
-        "parametric-modeling",
-        "parametric-modelling",
-        "python",
-        "slop",
-        "vibe-coded"
-      ],
-      "owner": {
-        "login": "ostiosmosisperosisjones",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/274376070?v=4",
-        "url": "https://github.com/ostiosmosisperosisjones"
-      },
-      "createdAt": "2026-04-20T05:30:24Z",
-      "updatedAt": "2026-11-08T07:14:46Z",
-      "firstSeenAt": "2026-11-08T14:45:05.161Z",
+      "firstSeenAt": "2026-11-10T16:03:54.844Z",
       "isNew": true,
       "existing": false
     }
