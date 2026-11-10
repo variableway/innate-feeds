@@ -66,9 +66,8 @@ describe("topic query taxonomy (issue #68)", () => {
     const steps = dev!.groups.map((g) => g.step);
     expect(steps).toEqual([1, 2, 3, 4, 5]);
     for (const g of dev!.groups) expect(g.kind).toBe("step");
-    for (const g of TOPIC_QUERY_CATEGORIES.find(
-      (c) => c.id === "edu",
-    )!.groups) {
+    for (const g of TOPIC_QUERY_CATEGORIES.find((c) => c.id === "edu")!
+      .groups) {
       expect(g.kind).toBe("category");
       expect(g.step).toBeUndefined();
     }

@@ -23,6 +23,23 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：`frontend/src/pages/topics/page.tsx` 重写为两级分组视图（消费
+  `@/types/topics` 的 shared 契约，无硬编码分组）：EDU / 产品开发两个分类区，
+  步骤组带序号徽章 + 流程字幕；组内 topic chips 带 new/count 徽章直链
+  `/topics/:topic`；`?group=` / `?step=` 深链聚焦（validateSearch 归一到分组 id），
+  聚焦 pill 可退出；未分组 topic（AI 等）平铺「其他 Topics」；保留 search /
+  Add topic / pending 提示 / 空态。`web-domain.tsx` 路由加 validateSearch。
+  另修 `scripts/preview.ts` Windows 路径 bug（resolve 反斜杠 vs `/` 前缀比对，
+  静态文件永远回落 index.html——阻塞静态验证，一并修复）。
+- 完成的功能：① `/topics` 按分类+步骤两级组织（2 分类 × 8 组 + 其他区）
+  ② 步骤 ①-⑤ 序号呈现流程感 ③ `?group=edu-interactive` / `?step=dev-requirements`
+  深链直达并聚焦 ④ API/静态双模式同一视图 ⑤ `/topics/:topic` 详情不回归。
+- 验证证明：headless Chrome dump-dom 三轮——**API 模式** `:3000/topics` 11 个
+  分组/分类标题全 FOUND（教育·EDU / 产品开发 / 交互式教育 / 授课型教育 /
+  教学动画教程 / 头脑风暴 / 需求分析和编写 / 需求任务分解和开发任务编写 /
+  实现计划·Spec / UI/UX 设计·分析·优化·Anti-Slop / 其他 Topics）、步骤徽章 ×5、
+  chips 含 prd / spec-driven-development；`?step=dev-requirements` 聚焦正确
+  （需求分析和编写 ×2、头脑风暴/交互式教育不出现）。**静态模式**
+  `build:static` 后 `:4173` 同 11 标题全 FOUND、深链聚焦同上、chips 带
+  count/new 徽章、`dist/data/topics` 91 文件。typecheck：backend/frontend/
+  dsh/edu-animate 四处绿；`bun test` 123 pass / 0 fail；`/api/topics` 90 项。
