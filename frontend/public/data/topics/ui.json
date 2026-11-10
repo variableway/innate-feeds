@@ -1,9 +1,9 @@
 {
   "topic": "ui",
-  "fetchedAt": "2026-11-08T14:44:51.491Z",
+  "fetchedAt": "2026-11-10T10:56:12.687Z",
   "count": 50,
-  "newCount": 39,
-  "existingCount": 11,
+  "newCount": 40,
+  "existingCount": 10,
   "items": [
     {
       "id": "gh-topic-10270250",
@@ -13,9 +13,9 @@
       "description": "The library for web and native user interfaces.",
       "url": "https://github.com/react/react",
       "homepage": "https://react.dev",
-      "stars": 252408,
-      "forks": 51964,
-      "watchers": 252408,
+      "stars": 252471,
+      "forks": 52139,
+      "watchers": 252471,
       "language": "JavaScript",
       "topics": [
         "declarative",
@@ -31,10 +31,10 @@
         "url": "https://github.com/react"
       },
       "createdAt": "2013-05-24T16:15:54Z",
-      "updatedAt": "2026-11-08T13:35:20Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:52:46Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
-      "existing": true
+      "existing": false
     },
     {
       "id": "gh-topic-701547123",
@@ -44,9 +44,9 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/open-webui/open-webui",
       "homepage": "https://openwebui.com",
-      "stars": 158095,
-      "forks": 22983,
-      "watchers": 158095,
+      "stars": 158284,
+      "forks": 23007,
+      "watchers": 158284,
       "language": "Svelte",
       "topics": [
         "ai",
@@ -71,8 +71,8 @@
         "url": "https://github.com/open-webui"
       },
       "createdAt": "2023-10-06T22:08:27Z",
-      "updatedAt": "2026-11-08T14:31:55Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:54:53Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -84,9 +84,9 @@
       "description": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
       "url": "https://github.com/shadcn-ui/ui",
       "homepage": "https://ui.shadcn.com",
-      "stars": 127626,
-      "forks": 12004,
-      "watchers": 127626,
+      "stars": 127797,
+      "forks": 11332,
+      "watchers": 127797,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -113,8 +113,8 @@
         "url": "https://github.com/shadcn-ui"
       },
       "createdAt": "2023-01-04T12:43:27Z",
-      "updatedAt": "2026-11-08T14:37:32Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:52:37Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -126,9 +126,9 @@
       "description": "Storybook is the industry standard workshop for building, documenting, and testing UI components in isolation",
       "url": "https://github.com/storybookjs/storybook",
       "homepage": "https://storybook.js.org",
-      "stars": 91487,
-      "forks": 10505,
-      "watchers": 91487,
+      "stars": 91512,
+      "forks": 10510,
+      "watchers": 91512,
       "language": "TypeScript",
       "topics": [
         "angular",
@@ -158,8 +158,8 @@
         "url": "https://github.com/storybookjs"
       },
       "createdAt": "2016-03-18T04:23:44Z",
-      "updatedAt": "2026-11-08T13:07:26Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:40:28Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -171,9 +171,9 @@
       "description": "web development for the rest of us",
       "url": "https://github.com/sveltejs/svelte",
       "homepage": "https://svelte.dev",
-      "stars": 88668,
-      "forks": 6796,
-      "watchers": 88668,
+      "stars": 88688,
+      "forks": 6032,
+      "watchers": 88688,
       "language": "JavaScript",
       "topics": [
         "compiler",
@@ -186,8 +186,8 @@
         "url": "https://github.com/sveltejs"
       },
       "createdAt": "2016-11-20T18:13:05Z",
-      "updatedAt": "2026-11-08T11:59:04Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:51:52Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -199,9 +199,9 @@
       "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
       "url": "https://github.com/unslothai/unsloth",
       "homepage": "https://unsloth.ai/docs",
-      "stars": 79187,
-      "forks": 7371,
-      "watchers": 79187,
+      "stars": 79276,
+      "forks": 7382,
+      "watchers": 79276,
       "language": "Python",
       "topics": [
         "agent",
@@ -231,8 +231,8 @@
         "url": "https://github.com/unslothai"
       },
       "createdAt": "2023-11-29T16:50:09Z",
-      "updatedAt": "2026-11-08T14:25:03Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:55:08Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -244,9 +244,9 @@
       "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
       "url": "https://github.com/ocornut/imgui",
       "homepage": null,
-      "stars": 77021,
-      "forks": 12105,
-      "watchers": 77021,
+      "stars": 77043,
+      "forks": 12106,
+      "watchers": 77043,
       "language": "C++",
       "topics": [
         "api",
@@ -271,8 +271,8 @@
         "url": "https://github.com/ocornut"
       },
       "createdAt": "2014-07-21T14:29:47Z",
-      "updatedAt": "2026-11-08T14:36:51Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:44:32Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -284,9 +284,9 @@
       "description": "Penpot: The open-source design platform for Product teams that need scalable collaboration.",
       "url": "https://github.com/penpot/penpot",
       "homepage": "https://penpot.app",
-      "stars": 62180,
-      "forks": 4384,
-      "watchers": 62180,
+      "stars": 62246,
+      "forks": 4393,
+      "watchers": 62246,
       "language": "Clojure",
       "topics": [
         "clojure",
@@ -303,8 +303,8 @@
         "url": "https://github.com/penpot"
       },
       "createdAt": "2015-12-29T22:09:07Z",
-      "updatedAt": "2026-11-08T14:21:30Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:51:23Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -316,9 +316,9 @@
       "description": "A curated list of awesome Android UI/UX libraries",
       "url": "https://github.com/wasabeef/awesome-android-ui",
       "homepage": null,
-      "stars": 58354,
-      "forks": 10241,
-      "watchers": 58354,
+      "stars": 58381,
+      "forks": 10240,
+      "watchers": 58381,
       "language": null,
       "topics": [
         "android",
@@ -331,8 +331,8 @@
         "url": "https://github.com/wasabeef"
       },
       "createdAt": "2014-12-24T01:45:03Z",
-      "updatedAt": "2026-11-08T14:22:35Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:12:25Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -344,9 +344,9 @@
       "description": "Semantic is a UI component framework based around useful principles from natural language.",
       "url": "https://github.com/Semantic-Org/Semantic-UI",
       "homepage": "http://www.semantic-ui.com",
-      "stars": 50997,
+      "stars": 50996,
       "forks": 4833,
-      "watchers": 50997,
+      "watchers": 50996,
       "language": "JavaScript",
       "topics": [
         "button",
@@ -366,8 +366,8 @@
         "url": "https://github.com/Semantic-Org"
       },
       "createdAt": "2013-04-08T23:32:04Z",
-      "updatedAt": "2026-11-08T00:43:04Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T08:05:44Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -379,9 +379,9 @@
       "description": "Build and share delightful machine learning apps, all in Python. 🌟 Star to support our work!",
       "url": "https://github.com/gradio-app/gradio",
       "homepage": "http://www.gradio.app",
-      "stars": 44002,
-      "forks": 3661,
-      "watchers": 44002,
+      "stars": 44015,
+      "forks": 3662,
+      "watchers": 44015,
       "language": "Python",
       "topics": [
         "data-analysis",
@@ -405,8 +405,8 @@
         "url": "https://github.com/gradio-app"
       },
       "createdAt": "2018-12-19T08:24:04Z",
-      "updatedAt": "2026-11-08T14:11:04Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:14:25Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -419,7 +419,7 @@
       "url": "https://github.com/vuetifyjs/vuetify",
       "homepage": "https://vuetifyjs.com",
       "stars": 41034,
-      "forks": 7103,
+      "forks": 7101,
       "watchers": 41034,
       "language": "TypeScript",
       "topics": [
@@ -449,8 +449,8 @@
         "url": "https://github.com/vuetifyjs"
       },
       "createdAt": "2016-09-12T00:39:35Z",
-      "updatedAt": "2026-11-08T06:45:42Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:11:04Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -462,9 +462,9 @@
       "description": "Fullstack app framework for web, desktop, and mobile.",
       "url": "https://github.com/DioxusLabs/dioxus",
       "homepage": "https://dioxuslabs.com",
-      "stars": 39679,
-      "forks": 1959,
-      "watchers": 39679,
+      "stars": 39710,
+      "forks": 1961,
+      "watchers": 39710,
       "language": "Rust",
       "topics": [
         "android",
@@ -487,8 +487,8 @@
         "url": "https://github.com/DioxusLabs"
       },
       "createdAt": "2021-01-15T01:57:26Z",
-      "updatedAt": "2026-11-08T13:39:11Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:52:30Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -500,9 +500,9 @@
       "description": "Making Docker and Kubernetes management easy.",
       "url": "https://github.com/portainer/portainer",
       "homepage": "https://www.portainer.io",
-      "stars": 38792,
-      "forks": 2934,
-      "watchers": 38792,
+      "stars": 38807,
+      "forks": 2936,
+      "watchers": 38807,
       "language": "TypeScript",
       "topics": [
         "docker",
@@ -525,8 +525,8 @@
         "url": "https://github.com/portainer"
       },
       "createdAt": "2016-05-19T20:15:28Z",
-      "updatedAt": "2026-11-08T14:43:40Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:37:56Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -539,7 +539,7 @@
       "url": "https://github.com/codex-team/editor.js",
       "homepage": "https://editorjs.io",
       "stars": 32000,
-      "forks": 2245,
+      "forks": 2243,
       "watchers": 32000,
       "language": "TypeScript",
       "topics": [
@@ -558,8 +558,8 @@
         "url": "https://github.com/codex-team"
       },
       "createdAt": "2015-11-28T20:56:35Z",
-      "updatedAt": "2026-11-07T22:56:06Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:24:04Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -571,9 +571,9 @@
       "description": "Reorderable drag-and-drop lists for modern browsers and touch devices. No jQuery or framework required.",
       "url": "https://github.com/SortableJS/Sortable",
       "homepage": "https://sortablejs.github.io/Sortable/",
-      "stars": 31205,
-      "forks": 3714,
-      "watchers": 31205,
+      "stars": 31207,
+      "forks": 3715,
+      "watchers": 31207,
       "language": "JavaScript",
       "topics": [
         "drag",
@@ -593,8 +593,8 @@
         "url": "https://github.com/SortableJS"
       },
       "createdAt": "2013-12-19T10:10:13Z",
-      "updatedAt": "2026-11-07T20:25:27Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T20:45:11Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -606,9 +606,9 @@
       "description": "Redefined chart library built with React and D3",
       "url": "https://github.com/recharts/recharts",
       "homepage": "https://recharts.github.io",
-      "stars": 27690,
-      "forks": 2040,
-      "watchers": 27690,
+      "stars": 27694,
+      "forks": 2045,
+      "watchers": 27694,
       "language": "TypeScript",
       "topics": [
         "chart",
@@ -628,8 +628,8 @@
         "url": "https://github.com/recharts"
       },
       "createdAt": "2015-08-07T06:50:27Z",
-      "updatedAt": "2026-11-08T12:42:19Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T08:48:51Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -641,9 +641,9 @@
       "description": "The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Designers and Visual Engineers to design with Real Code.",
       "url": "https://github.com/onlook-dev/onlook",
       "homepage": "https://onlook.com",
-      "stars": 27138,
-      "forks": 2138,
-      "watchers": 27138,
+      "stars": 27158,
+      "forks": 2140,
+      "watchers": 27158,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -673,8 +673,8 @@
         "url": "https://github.com/onlook-dev"
       },
       "createdAt": "2024-06-25T19:16:02Z",
-      "updatedAt": "2026-11-08T14:26:14Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:55:52Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -686,9 +686,9 @@
       "description": "Cross-Platform React Native UI Toolkit",
       "url": "https://github.com/react-native-elements/react-native-elements",
       "homepage": "https://reactnativeelements.com",
-      "stars": 25873,
-      "forks": 4657,
-      "watchers": 25873,
+      "stars": 25875,
+      "forks": 4655,
+      "watchers": 25875,
       "language": "MDX",
       "topics": [
         "android",
@@ -707,8 +707,8 @@
         "url": "https://github.com/react-native-elements"
       },
       "createdAt": "2016-09-08T14:21:41Z",
-      "updatedAt": "2026-11-08T13:06:05Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T09:01:17Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -720,9 +720,9 @@
       "description": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
       "url": "https://github.com/lvgl/lvgl",
       "homepage": "https://lvgl.io",
-      "stars": 25112,
-      "forks": 4434,
-      "watchers": 25112,
+      "stars": 25138,
+      "forks": 4440,
+      "watchers": 25138,
       "language": "C",
       "topics": [
         "arduino",
@@ -752,8 +752,8 @@
         "url": "https://github.com/lvgl"
       },
       "createdAt": "2016-06-08T04:14:34Z",
-      "updatedAt": "2026-11-08T00:47:13Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:08:57Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -765,9 +765,9 @@
       "description": "Slint is an open-source declarative GUI toolkit to build native user interfaces for Rust, C++, JavaScript, or Python apps.",
       "url": "https://github.com/slint-ui/slint",
       "homepage": "https://slint.dev",
-      "stars": 24474,
-      "forks": 1059,
-      "watchers": 24474,
+      "stars": 24517,
+      "forks": 1062,
+      "watchers": 24517,
       "language": "Rust",
       "topics": [
         "cpp",
@@ -794,8 +794,8 @@
         "url": "https://github.com/slint-ui"
       },
       "createdAt": "2020-05-04T08:53:03Z",
-      "updatedAt": "2026-11-08T14:02:15Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:53:28Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -807,9 +807,9 @@
       "description": "✍ It has never been so easy to document your things!",
       "url": "https://github.com/pedronauck/docz",
       "homepage": null,
-      "stars": 23559,
+      "stars": 23556,
       "forks": 1396,
-      "watchers": 23559,
+      "watchers": 23556,
       "language": "TypeScript",
       "topics": [
         "design-system",
@@ -830,8 +830,8 @@
         "url": "https://github.com/pedronauck"
       },
       "createdAt": "2018-03-17T04:24:10Z",
-      "updatedAt": "2026-11-08T07:30:10Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T12:03:38Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -844,7 +844,7 @@
       "url": "https://github.com/t4t5/sweetalert",
       "homepage": "https://sweetalert.js.org",
       "stars": 22238,
-      "forks": 2738,
+      "forks": 2739,
       "watchers": 22238,
       "language": "TypeScript",
       "topics": [
@@ -862,8 +862,8 @@
         "url": "https://github.com/t4t5"
       },
       "createdAt": "2014-09-30T11:12:48Z",
-      "updatedAt": "2026-11-04T10:50:17Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T09:12:23Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -875,9 +875,9 @@
       "description": "A React-based UI toolkit for the web",
       "url": "https://github.com/palantir/blueprint",
       "homepage": "https://blueprintjs.com/",
-      "stars": 22191,
-      "forks": 2371,
-      "watchers": 22191,
+      "stars": 22198,
+      "forks": 2372,
+      "watchers": 22198,
       "language": "TypeScript",
       "topics": [
         "blueprint",
@@ -899,8 +899,8 @@
         "url": "https://github.com/palantir"
       },
       "createdAt": "2016-10-25T21:17:50Z",
-      "updatedAt": "2026-11-08T07:56:29Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:46:24Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -912,9 +912,9 @@
       "description": "🌈  An enterprise-class UI components based on Ant Design and Vue. 🐜",
       "url": "https://github.com/vueComponent/ant-design-vue",
       "homepage": "https://antdv.com/",
-      "stars": 21705,
-      "forks": 3886,
-      "watchers": 21705,
+      "stars": 21711,
+      "forks": 3885,
+      "watchers": 21711,
       "language": "Vue",
       "topics": [
         "ant",
@@ -939,8 +939,8 @@
         "url": "https://github.com/vueComponent"
       },
       "createdAt": "2017-09-20T06:04:01Z",
-      "updatedAt": "2026-11-08T12:01:41Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:17:03Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -952,9 +952,9 @@
       "description": "A Swift Autolayout DSL for iOS & OS X",
       "url": "https://github.com/SnapKit/SnapKit",
       "homepage": "https://snapkit.github.io/SnapKit/",
-      "stars": 20339,
+      "stars": 20342,
       "forks": 2042,
-      "watchers": 20339,
+      "watchers": 20342,
       "language": "Swift",
       "topics": [
         "auto",
@@ -974,8 +974,8 @@
         "url": "https://github.com/SnapKit"
       },
       "createdAt": "2014-06-05T21:13:40Z",
-      "updatedAt": "2026-11-06T07:21:04Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T19:44:55Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -987,9 +987,9 @@
       "description": "Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.",
       "url": "https://github.com/radix-ui/primitives",
       "homepage": "https://radix-ui.com/primitives",
-      "stars": 19479,
-      "forks": 1308,
-      "watchers": 19479,
+      "stars": 19489,
+      "forks": 1312,
+      "watchers": 19489,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -1008,8 +1008,8 @@
         "url": "https://github.com/radix-ui"
       },
       "createdAt": "2020-06-19T13:23:22Z",
-      "updatedAt": "2026-11-08T13:37:58Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:23:01Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1021,9 +1021,9 @@
       "description": "Compose Multiplatform, a modern UI framework for Kotlin that makes building performant and beautiful user interfaces easy and enjoyable.",
       "url": "https://github.com/JetBrains/compose-multiplatform",
       "homepage": "https://jetbrains.com/lp/compose-multiplatform",
-      "stars": 19473,
-      "forks": 1433,
-      "watchers": 19473,
+      "stars": 19480,
+      "forks": 1434,
+      "watchers": 19480,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1049,8 +1049,8 @@
         "url": "https://github.com/JetBrains"
       },
       "createdAt": "2020-09-07T10:40:49Z",
-      "updatedAt": "2026-11-08T14:09:48Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T04:53:26Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1063,7 +1063,7 @@
       "url": "https://github.com/kivy/kivy",
       "homepage": "https://kivy.org",
       "stars": 19025,
-      "forks": 3144,
+      "forks": 3145,
       "watchers": 19025,
       "language": "Python",
       "topics": [
@@ -1083,8 +1083,8 @@
         "url": "https://github.com/kivy"
       },
       "createdAt": "2010-11-03T20:27:32Z",
-      "updatedAt": "2026-11-07T18:45:09Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T07:51:21Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1096,9 +1096,9 @@
       "description": "轻量、可靠的小程序 UI 组件库",
       "url": "https://github.com/youzan/vant-weapp",
       "homepage": "https://vant.pro/vant-weapp/",
-      "stars": 18471,
-      "forks": 3453,
-      "watchers": 18471,
+      "stars": 18474,
+      "forks": 3452,
+      "watchers": 18474,
       "language": "JavaScript",
       "topics": [
         "miniprogram",
@@ -1113,8 +1113,8 @@
         "url": "https://github.com/youzan"
       },
       "createdAt": "2017-01-23T07:05:54Z",
-      "updatedAt": "2026-11-08T08:03:40Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T08:25:34Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1126,9 +1126,9 @@
       "description": "High performance UI layout library in C.",
       "url": "https://github.com/nicbarker/clay",
       "homepage": "https://nicbarker.com/clay",
-      "stars": 18391,
-      "forks": 745,
-      "watchers": 18391,
+      "stars": 18401,
+      "forks": 746,
+      "watchers": 18401,
       "language": "C",
       "topics": [
         "layout",
@@ -1140,8 +1140,8 @@
         "url": "https://github.com/nicbarker"
       },
       "createdAt": "2024-07-21T01:40:27Z",
-      "updatedAt": "2026-11-08T11:07:44Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:49:56Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1153,9 +1153,9 @@
       "description": "Customizable Icons for React Native with support for image source and full styling.",
       "url": "https://github.com/oblador/react-native-vector-icons",
       "homepage": "https://oblador.github.io/react-native-vector-icons/",
-      "stars": 17926,
+      "stars": 17930,
       "forks": 2096,
-      "watchers": 17926,
+      "watchers": 17930,
       "language": "TypeScript",
       "topics": [
         "icon",
@@ -1169,8 +1169,8 @@
         "url": "https://github.com/oblador"
       },
       "createdAt": "2015-05-15T16:38:57Z",
-      "updatedAt": "2026-11-05T22:33:37Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:02:49Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1182,9 +1182,9 @@
       "description": "🌟 Curated design resources from all over the world.",
       "url": "https://github.com/gztchan/awesome-design",
       "homepage": null,
-      "stars": 17751,
-      "forks": 1254,
-      "watchers": 17751,
+      "stars": 17756,
+      "forks": 1255,
+      "watchers": 17756,
       "language": null,
       "topics": [
         "adobe",
@@ -1208,8 +1208,8 @@
         "url": "https://github.com/gztchan"
       },
       "createdAt": "2016-07-22T08:06:02Z",
-      "updatedAt": "2026-11-08T13:54:32Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:39:52Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1221,9 +1221,9 @@
       "description": "A React component for building Web forms from JSON Schema.",
       "url": "https://github.com/rjsf-team/react-jsonschema-form",
       "homepage": "https://rjsf-team.github.io/react-jsonschema-form/",
-      "stars": 15936,
-      "forks": 2349,
-      "watchers": 15936,
+      "stars": 15938,
+      "forks": 2350,
+      "watchers": 15938,
       "language": "TypeScript",
       "topics": [
         "data-validation",
@@ -1240,8 +1240,8 @@
         "url": "https://github.com/rjsf-team"
       },
       "createdAt": "2015-12-16T15:14:05Z",
-      "updatedAt": "2026-11-08T14:24:31Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T00:24:12Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1253,9 +1253,9 @@
       "description": "Dear PyGui: A fast and powerful Graphical User Interface Toolkit for Python with minimal dependencies",
       "url": "https://github.com/hoffstadt/DearPyGui",
       "homepage": "https://dearpygui.readthedocs.io/en/latest/",
-      "stars": 15654,
+      "stars": 15653,
       "forks": 790,
-      "watchers": 15654,
+      "watchers": 15653,
       "language": "C++",
       "topics": [
         "cpp",
@@ -1280,8 +1280,8 @@
         "url": "https://github.com/hoffstadt"
       },
       "createdAt": "2020-05-28T17:12:57Z",
-      "updatedAt": "2026-11-07T11:59:09Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T09:24:00Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1293,9 +1293,9 @@
       "description": "The largest Open-Source UI Library! Community-made and free to use. Made with either CSS or Tailwind.",
       "url": "https://github.com/uiverse-io/galaxy",
       "homepage": "https://Uiverse.io",
-      "stars": 14935,
-      "forks": 1034,
-      "watchers": 14935,
+      "stars": 14952,
+      "forks": 1039,
+      "watchers": 14952,
       "language": "HTML",
       "topics": [
         "community",
@@ -1309,8 +1309,8 @@
         "url": "https://github.com/uiverse-io"
       },
       "createdAt": "2023-10-01T17:22:04Z",
-      "updatedAt": "2026-11-08T14:26:48Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T08:55:22Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1322,9 +1322,9 @@
       "description": "The monorepo home to all of the FormatJS related libraries, most notably react-intl.",
       "url": "https://github.com/formatjs/formatjs",
       "homepage": "https://formatjs.github.io/",
-      "stars": 14753,
+      "stars": 14752,
       "forks": 1389,
-      "watchers": 14753,
+      "watchers": 14752,
       "language": "TypeScript",
       "topics": [
         "formatjs",
@@ -1345,8 +1345,8 @@
         "url": "https://github.com/formatjs"
       },
       "createdAt": "2014-04-24T17:28:36Z",
-      "updatedAt": "2026-11-08T14:09:38Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T07:08:11Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -1358,9 +1358,9 @@
       "description": "Use Claude Code, OpenCode, Cursor CLI, and Codex on mobile and web with CloudCLI (aka Claude Code UI). CloudCLI is a free open source webui/GUI that helps you manage your Claude Code session and projects remotely.",
       "url": "https://github.com/siteboon/claudecodeui",
       "homepage": "https://cloudcli.ai",
-      "stars": 14502,
-      "forks": 2111,
-      "watchers": 14502,
+      "stars": 14545,
+      "forks": 2117,
+      "watchers": 14545,
       "language": "TypeScript",
       "topics": [
         "anthropic",
@@ -1382,8 +1382,8 @@
         "url": "https://github.com/siteboon"
       },
       "createdAt": "2025-06-25T12:51:12Z",
-      "updatedAt": "2026-11-08T13:49:20Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:53:50Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -1395,9 +1395,9 @@
       "description": "Style React fast with 100% parity on React Native, an optional UI kit, and optimizing compiler.",
       "url": "https://github.com/tamagui/tamagui",
       "homepage": "https://tamagui.dev",
-      "stars": 14302,
-      "forks": 628,
-      "watchers": 14302,
+      "stars": 14304,
+      "forks": 629,
+      "watchers": 14304,
       "language": "TypeScript",
       "topics": [
         "atomic-css",
@@ -1419,8 +1419,8 @@
         "url": "https://github.com/tamagui"
       },
       "createdAt": "2020-10-16T21:19:51Z",
-      "updatedAt": "2026-11-08T12:26:45Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T08:46:27Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1432,9 +1432,9 @@
       "description": "A zero-config, drop-in animation utility that adds smooth transitions to your web app. You can use it with React, Vue, or any other JavaScript application.",
       "url": "https://github.com/formkit/auto-animate",
       "homepage": "https://auto-animate.formkit.com",
-      "stars": 13962,
-      "forks": 266,
-      "watchers": 13962,
+      "stars": 13966,
+      "forks": 267,
+      "watchers": 13966,
       "language": "TypeScript",
       "topics": [
         "animation",
@@ -1449,8 +1449,8 @@
         "url": "https://github.com/formkit"
       },
       "createdAt": "2022-05-11T18:50:01Z",
-      "updatedAt": "2026-11-07T18:31:09Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T05:56:04Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1462,9 +1462,9 @@
       "description": "Shoelace is now Web Awesome. Come see what’s new!",
       "url": "https://github.com/shoelace-style/shoelace",
       "homepage": "https://webawesome.com",
-      "stars": 13817,
-      "forks": 909,
-      "watchers": 13817,
+      "stars": 13819,
+      "forks": 908,
+      "watchers": 13819,
       "language": "TypeScript",
       "topics": [
         "css",
@@ -1481,8 +1481,8 @@
         "url": "https://github.com/shoelace-style"
       },
       "createdAt": "2017-07-25T18:49:44Z",
-      "updatedAt": "2026-11-07T16:55:33Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T09:09:09Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1494,9 +1494,9 @@
       "description": "A modern and customizable python UI-library based on Tkinter",
       "url": "https://github.com/TomSchimansky/CustomTkinter",
       "homepage": null,
-      "stars": 13599,
-      "forks": 1166,
-      "watchers": 13599,
+      "stars": 13601,
+      "forks": 1165,
+      "watchers": 13601,
       "language": "Python",
       "topics": [
         "custom",
@@ -1526,8 +1526,8 @@
         "url": "https://github.com/TomSchimansky"
       },
       "createdAt": "2021-03-04T17:24:00Z",
-      "updatedAt": "2026-11-08T02:06:02Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T19:38:02Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1539,9 +1539,9 @@
       "description": "最接近原生APP体验的高性能框架",
       "url": "https://github.com/dcloudio/mui",
       "homepage": "https://dev.dcloud.net.cn/mui/",
-      "stars": 13463,
-      "forks": 6449,
-      "watchers": 13463,
+      "stars": 13462,
+      "forks": 6448,
+      "watchers": 13462,
       "language": "JavaScript",
       "topics": [
         "android",
@@ -1559,8 +1559,8 @@
         "url": "https://github.com/dcloudio"
       },
       "createdAt": "2014-08-18T07:14:41Z",
-      "updatedAt": "2026-11-08T02:15:00Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T15:53:13Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1572,9 +1572,9 @@
       "description": "AriaNg, a modern web frontend making aria2 easier to use.",
       "url": "https://github.com/mayswind/AriaNg",
       "homepage": "http://ariang.mayswind.net",
-      "stars": 13269,
-      "forks": 1362,
-      "watchers": 13269,
+      "stars": 13273,
+      "forks": 1360,
+      "watchers": 13273,
       "language": "JavaScript",
       "topics": [
         "aria2",
@@ -1594,8 +1594,8 @@
         "url": "https://github.com/mayswind"
       },
       "createdAt": "2016-05-13T15:57:42Z",
-      "updatedAt": "2026-11-08T14:02:22Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:33:30Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1625,8 +1625,8 @@
         "url": "https://github.com/filp"
       },
       "createdAt": "2013-03-11T16:58:27Z",
-      "updatedAt": "2026-11-05T01:12:46Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T23:30:24Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1638,9 +1638,9 @@
       "description": "A highly customizable macOS status bar replacement",
       "url": "https://github.com/FelixKratz/SketchyBar",
       "homepage": "https://felixkratz.github.io/SketchyBar/",
-      "stars": 12581,
+      "stars": 12590,
       "forks": 196,
-      "watchers": 12581,
+      "watchers": 12590,
       "language": "C",
       "topics": [
         "bar",
@@ -1662,8 +1662,8 @@
         "url": "https://github.com/FelixKratz"
       },
       "createdAt": "2021-08-13T14:28:04Z",
-      "updatedAt": "2026-11-08T12:56:56Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T07:59:09Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -1694,8 +1694,8 @@
         "url": "https://github.com/Chainlit"
       },
       "createdAt": "2023-03-14T16:54:04Z",
-      "updatedAt": "2026-11-07T12:16:48Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-09T11:23:42Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1707,9 +1707,9 @@
       "description": "The Most Complete Angular UI Component Library",
       "url": "https://github.com/primefaces/primeng",
       "homepage": "https://primeng.org",
-      "stars": 12480,
+      "stars": 12479,
       "forks": 5055,
-      "watchers": 12480,
+      "watchers": 12479,
       "language": "TypeScript",
       "topics": [
         "angular",
@@ -1727,8 +1727,8 @@
         "url": "https://github.com/primefaces"
       },
       "createdAt": "2016-01-16T09:23:28Z",
-      "updatedAt": "2026-11-05T22:25:59Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:32:33Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     },
@@ -1759,8 +1759,8 @@
         "url": "https://github.com/segmentio"
       },
       "createdAt": "2017-07-30T10:03:14Z",
-      "updatedAt": "2026-11-07T14:42:51Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:24:07Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": true
     },
@@ -1772,9 +1772,9 @@
       "description": "Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀",
       "url": "https://github.com/markmead/hyperui",
       "homepage": "https://hyperui.dev",
-      "stars": 12280,
+      "stars": 12279,
       "forks": 524,
-      "watchers": 12280,
+      "watchers": 12279,
       "language": "Astro",
       "topics": [
         "accessibility",
@@ -1795,8 +1795,8 @@
         "url": "https://github.com/markmead"
       },
       "createdAt": "2021-11-12T17:14:11Z",
-      "updatedAt": "2026-11-07T05:49:06Z",
-      "firstSeenAt": "2026-11-08T14:44:51.491Z",
+      "updatedAt": "2026-11-10T10:24:33Z",
+      "firstSeenAt": "2026-11-10T10:56:12.687Z",
       "isNew": true,
       "existing": false
     }

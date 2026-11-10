@@ -25,6 +25,20 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：`shared/topic-query-groups.ts` 落契约（`TOPIC_QUERY_CATEGORIES` 8 组 /
+  70 topic + `ALL_QUERY_TOPICS` / `QUERY_GROUP_BY_ID` / `QUERY_GROUP_OF_TOPIC` 索引）；
+  `github-topics.ts` 的 `DEFAULT_TOPICS` 并入查询清单 Set 去重（90 个），并补 Search
+  API 限速护栏（topic 间 2.2s 节流 + 失败退避 5s/15s 重试 2 轮——清单扩容后必需，
+  认证 Search API 30 req/min）；`frontend/src/types/topics.ts` re-export 契约；
+  实跑 `sync github-topics` 全量 90 topic 落盘；`exportTopicsStatic` 导出静态快照。
+- 完成的功能：① 分类表契约跨层就绪（backend 同步清单 + 前端查询 UI 共用一份）
+  ② 55 个新 topic 实跑入库（90 配置 = 20 AI + 1 edtech + 14 UX + 55 新；去重后
+  DEFAULT_TOPICS 90 项无重复）③ 快照各 top 50（小生态全量：lesson-plan 45、
+  whiteboard-animation 39）④ 静态导出 `frontend/public/data/topics/` 90 个
+  topic json + index.json，existing 标记按 feeds.db 实解（如 prd 33 new / 17 in
+  feeds、e2e-testing 44/6）⑤ 限速护栏让 90 topic 全量同步一次跑通（约 8 分钟，
+  0 个限速失败）。
+- 验证证明：`bun test` 123 pass / 0 fail（含新不变量测试 6 例：分组无跨组重复、
+  DEFAULT_TOPICS 覆盖并集、EDU 映射全覆盖、步骤序 1-5）；backend/前端 typecheck 绿；
+  导出目录 91 文件、index 90 项，抽查 prd/brainstorm/spec-driven-development/handoff/
+  ux-audit/lesson-plan/manim 数据齐全。提交 **（见 status.md）**。

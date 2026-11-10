@@ -6,9 +6,9 @@
 | Task | 内容 | 状态 | 提交 SHA |
 |---|---|---|---|
 | task-01 | 分类表设计 + topic 种子实证（research） | done | (docs commit) |
-| task-02 | shared 分类表契约 + 采集清单扩充 + 实跑同步 | todo | — |
-| task-03 | EDU 三分组归类与查询支持 | todo | — |
-| task-04 | /topics 分类+步骤两级查询 UI + 静态验证 | todo | — |
+| task-02 | shared 分类表契约 + 采集清单扩充 + 实跑同步 | in_progress (claude) | — |
+| task-03 | EDU 三分组归类与查询支持 | in_progress (claude) | — |
+| task-04 | /topics 分类+步骤两级查询 UI + 静态验证 | in_progress (claude) | — |
 
 ## 执行日志
 

@@ -36,6 +36,7 @@ import type {
   FeedCollector,
   SaveResult,
 } from "../shared/types.js";
+import { ALL_QUERY_TOPICS } from "../../../../shared/topic-query-groups.js";
 
 export type TopicSort = "stars" | "updated" | "best-match";
 
@@ -120,11 +121,18 @@ export const UX_DESIGN_TOPICS = [
   "humanizer",
 ];
 
-/** Topics synced when no explicit `--topic` is given. */
+/**
+ * Topics synced when no explicit `--topic` is given.
+ * issue #68：并入 Topic 查询分类表（shared 单一真相），Set 去重
+ * （edtech / UX_DESIGN_TOPICS 与查询分组有交集）。
+ */
 export const DEFAULT_TOPICS = [
-  ...AI_TOPICS,
-  ...EDTECH_TOPICS,
-  ...UX_DESIGN_TOPICS,
+  ...new Set([
+    ...AI_TOPICS,
+    ...EDTECH_TOPICS,
+    ...UX_DESIGN_TOPICS,
+    ...ALL_QUERY_TOPICS,
+  ]),
 ];
 
 /** GitHub Topics: https://github.com/topics */
@@ -206,6 +214,17 @@ function ghApiSearch(apiPath: string): GitHubSearchResponse {
   });
   return JSON.parse(raw);
 }
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Search API 限速护栏（issue #68 清单扩容到 ~90 topic 后必需）：
+ * 认证 Search API 30 req/min，topic 之间强制间隔；单次失败退避重试 2 轮。
+ */
+const SEARCH_INTERVAL_MS = 2200;
+const SEARCH_RETRY_DELAYS_MS = [5000, 15000];
 
 async function fetchSearchViaHttp(
   query: string,
@@ -293,11 +312,25 @@ export class GitHubTopicsCollector implements FeedCollector {
     for (let page = 1; page <= pages; page++) {
       const apiPath = `search/repositories?q=${query}&sort=${this.sort}&per_page=${perPage}&page=${page}`;
 
+      await sleep(SEARCH_INTERVAL_MS);
       let data: GitHubSearchResponse;
-      try {
-        data = ghApiSearch(apiPath);
-      } catch {
-        data = await fetchSearchViaHttp(query, this.sort, perPage, page);
+      for (let attempt = 0; ; attempt++) {
+        try {
+          data = ghApiSearch(apiPath);
+          break;
+        } catch (ghErr) {
+          try {
+            data = await fetchSearchViaHttp(query, this.sort, perPage, page);
+            break;
+          } catch (httpErr) {
+            const wait = SEARCH_RETRY_DELAYS_MS[attempt];
+            if (wait === undefined) throw httpErr;
+            console.error(
+              `[github-topics] ${query} page ${page} failed (${String(ghErr)}), retry in ${wait}ms`,
+            );
+            await sleep(wait);
+          }
+        }
       }
 
       if (data.items.length === 0) break;

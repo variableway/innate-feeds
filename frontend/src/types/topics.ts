@@ -20,3 +20,18 @@ export type TopicsIndex =
   import("../../../shared/types/topics").TopicsIndexResponse;
 
 export type TopicSort = "stars" | "updated" | "new";
+
+/**
+ * issue #68：Topic 查询分类表（分类 → 步骤/子类 两级），shared 单一真相。
+ * `/topics` 分组查询 UI 消费（task-04）。
+ */
+export {
+  TOPIC_QUERY_CATEGORIES,
+  ALL_QUERY_TOPICS,
+  QUERY_GROUP_BY_ID,
+  QUERY_GROUP_OF_TOPIC,
+} from "../../../shared/topic-query-groups";
+export type {
+  TopicQueryCategory,
+  TopicQueryGroup,
+} from "../../../shared/topic-query-groups";

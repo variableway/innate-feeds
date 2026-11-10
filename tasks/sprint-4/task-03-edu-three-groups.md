@@ -24,6 +24,20 @@
 
 ## 完成回填（完成后）
 
-- 做了什么：
-- 完成的功能：
-- 验证证明：
+- 做了什么：`shared/topic-query-groups.ts` 落 EDU 三分组（edu-interactive /
+  edu-teachable / edu-animation-tutorial，含各自实证 topic 池）+ `EDU_CATEGORY_QUERY_GROUP`
+  映射（8 类全覆盖）+ `eduQueryGroupOf()` / `EDU_CATEGORIES_BY_QUERY_GROUP`（互逆索引，
+  UI 展示用）；不变量测试 `backend/src/collectors/core/topic-query-groups.test.ts`。
+  与 /edu 域对齐检查见下。
+- 完成的功能：① 三分组语义定稿：interactive = 交互式学习工具/平台/自测（9 topic）、
+  teachable = 课程/教案/授课材料（8 topic）、animation tutorial = 讲解/白板/数学动画
+  教程（6 topic）② 归属规则：EDU 查询 topic 按三分组归属（分组 topics），
+  `EDU_CATEGORIES` 8 类 → 3 组映射落地（classroom → edu-teachable，其余 7 类 →
+  edu-animation-tutorial；interactive/teachable 的新 topic 超出原 8 类覆盖面，由
+  分组 topics 直接承载）③ 与 `topics/edu-animate` 对齐检查：/edu 的筛选/归类走
+  `matchEduCategories` 8 类（skills/videos 快照分类），本轮**不改 /edu 域**——
+  8 类→3 组映射即对齐桥，/edu 后续可零成本挂三分组 tab ④ 查询支持：task-04 经
+  `@/types/topics` re-export 直接消费 `TOPIC_QUERY_CATEGORIES`（edu 分类）+
+  映射索引。
+- 验证证明：`bun test` 6/6 新用例绿（映射恰好覆盖 EDU_CATEGORIES 8 类、互逆索引
+  roundtrip、分组无跨组重复、步骤序 1-5）；backend/前端 typecheck 绿。

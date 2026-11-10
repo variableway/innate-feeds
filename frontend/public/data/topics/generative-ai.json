@@ -1,9 +1,9 @@
 {
   "topic": "generative-ai",
-  "fetchedAt": "2026-11-08T14:44:33.808Z",
+  "fetchedAt": "2026-11-10T10:54:42.512Z",
   "count": 50,
-  "newCount": 27,
-  "existingCount": 23,
+  "newCount": 0,
+  "existingCount": 24,
   "items": [
     {
       "id": "gh-topic-599320067",
@@ -13,9 +13,9 @@
       "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
       "url": "https://github.com/langflow-ai/langflow",
       "homepage": "http://www.langflow.org",
-      "stars": 156440,
-      "forks": 10360,
-      "watchers": 156440,
+      "stars": 156499,
+      "forks": 10377,
+      "watchers": 156499,
       "language": "Python",
       "topics": [
         "agents",
@@ -31,9 +31,9 @@
         "url": "https://github.com/langflow-ai"
       },
       "createdAt": "2023-02-08T22:28:03Z",
-      "updatedAt": "2026-11-08T14:33:36Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:15:27Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -44,9 +44,9 @@
       "description": "The agent engineering platform.",
       "url": "https://github.com/langchain-ai/langchain",
       "homepage": "https://docs.langchain.com/langchain/",
-      "stars": 149195,
-      "forks": 25092,
-      "watchers": 149195,
+      "stars": 149299,
+      "forks": 25104,
+      "watchers": 149299,
       "language": "Python",
       "topics": [
         "agents",
@@ -76,9 +76,9 @@
         "url": "https://github.com/langchain-ai"
       },
       "createdAt": "2022-10-17T02:58:36Z",
-      "updatedAt": "2026-11-08T14:38:32Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:51:35Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -89,9 +89,9 @@
       "description": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
       "url": "https://github.com/shadcn-ui/ui",
       "homepage": "https://ui.shadcn.com",
-      "stars": 127626,
-      "forks": 12004,
-      "watchers": 127626,
+      "stars": 127797,
+      "forks": 11332,
+      "watchers": 127797,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -118,9 +118,9 @@
         "url": "https://github.com/shadcn-ui"
       },
       "createdAt": "2023-01-04T12:43:27Z",
-      "updatedAt": "2026-11-08T14:37:32Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:52:37Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -131,9 +131,9 @@
       "description": "21 Lessons, Get Started Building with Generative AI ",
       "url": "https://github.com/microsoft/generative-ai-for-beginners",
       "homepage": null,
-      "stars": 123127,
-      "forks": 66089,
-      "watchers": 123127,
+      "stars": 123282,
+      "forks": 66222,
+      "watchers": 123282,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -157,9 +157,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2023-06-19T16:28:59Z",
-      "updatedAt": "2026-11-08T13:52:36Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:51:45Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -170,9 +170,9 @@
       "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
       "url": "https://github.com/rasbt/LLMs-from-scratch",
       "homepage": "https://amzn.to/4fqvn0D",
-      "stars": 108012,
-      "forks": 16689,
-      "watchers": 108012,
+      "stars": 108151,
+      "forks": 16724,
+      "watchers": 108151,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -201,9 +201,9 @@
         "url": "https://github.com/rasbt"
       },
       "createdAt": "2023-07-23T18:15:57Z",
-      "updatedAt": "2026-11-08T14:03:15Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:52:36Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -214,9 +214,9 @@
       "description": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
       "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
       "homepage": "https://www.promptingguide.ai/",
-      "stars": 79907,
-      "forks": 8768,
-      "watchers": 79907,
+      "stars": 79958,
+      "forks": 8772,
+      "watchers": 79958,
       "language": "MDX",
       "topics": [
         "agent",
@@ -237,9 +237,9 @@
         "url": "https://github.com/dair-ai"
       },
       "createdAt": "2022-12-16T16:04:50Z",
-      "updatedAt": "2026-11-08T14:39:42Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:51:26Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -250,9 +250,9 @@
       "description": "18 Lessons to Get Started Building AI Agents",
       "url": "https://github.com/microsoft/ai-agents-for-beginners",
       "homepage": "https://aka.ms/ai-agents-beginners",
-      "stars": 79179,
-      "forks": 25926,
-      "watchers": 79179,
+      "stars": 79336,
+      "forks": 25983,
+      "watchers": 79336,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-ai",
@@ -273,9 +273,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2024-11-28T10:42:52Z",
-      "updatedAt": "2026-11-08T14:40:33Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:44:34Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -286,9 +286,9 @@
       "description": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "homepage": "https://aiengineeringfromscratch.com",
-      "stars": 77728,
-      "forks": 13790,
-      "watchers": 77728,
+      "stars": 78208,
+      "forks": 13907,
+      "watchers": 78208,
       "language": "Python",
       "topics": [
         "agents",
@@ -318,9 +318,9 @@
         "url": "https://github.com/rohitg00"
       },
       "createdAt": "2026-03-18T18:38:02Z",
-      "updatedAt": "2026-11-08T14:37:27Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:46:33Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -331,9 +331,9 @@
       "description": "Leaked system prompts of ChatGPT, Claude, Gemini and more. The hidden system prompt of every popular chatbot, in full, every version since May 2025. Also Anthropic Claude Code, OpenAI Codex, Google Antigravity, xAI Grok, Meta Muse, Moonshot Kimi, Alibaba Qwen, Z.ai GLM ZCode, MiniMax, Cursor, Perplexity, DeepSeek and 30+ others. Updated daily.",
       "url": "https://github.com/asgeirtj/system_prompts_leaks",
       "homepage": null,
-      "stars": 71024,
-      "forks": 11464,
-      "watchers": 71024,
+      "stars": 71114,
+      "forks": 11472,
+      "watchers": 71114,
       "language": "Python",
       "topics": [
         "ai",
@@ -363,9 +363,9 @@
         "url": "https://github.com/asgeirtj"
       },
       "createdAt": "2025-05-03T02:43:56Z",
-      "updatedAt": "2026-11-08T14:27:49Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:34:24Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -376,9 +376,9 @@
       "description": "Build resilient agents.",
       "url": "https://github.com/langchain-ai/langgraph",
       "homepage": "https://docs.langchain.com/oss/python/langgraph/",
-      "stars": 44644,
-      "forks": 7694,
-      "watchers": 44644,
+      "stars": 44741,
+      "forks": 7710,
+      "watchers": 44741,
       "language": "Python",
       "topics": [
         "agents",
@@ -406,9 +406,9 @@
         "url": "https://github.com/langchain-ai"
       },
       "createdAt": "2023-08-09T18:33:12Z",
-      "updatedAt": "2026-11-08T12:53:01Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:32:25Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -419,9 +419,9 @@
       "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
       "url": "https://github.com/lyogavin/airllm",
       "homepage": null,
-      "stars": 41974,
-      "forks": 4319,
-      "watchers": 41974,
+      "stars": 42086,
+      "forks": 4337,
+      "watchers": 42086,
       "language": "Jupyter Notebook",
       "topics": [
         "chinese-llm",
@@ -444,9 +444,9 @@
         "url": "https://github.com/lyogavin"
       },
       "createdAt": "2023-06-12T16:28:41Z",
-      "updatedAt": "2026-11-08T14:43:12Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:46:28Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -457,9 +457,9 @@
       "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
       "url": "https://github.com/Tencent/WeKnora",
       "homepage": "https://weknora.weixin.qq.com",
-      "stars": 36807,
-      "forks": 5054,
-      "watchers": 36807,
+      "stars": 37090,
+      "forks": 5117,
+      "watchers": 37090,
       "language": "Go",
       "topics": [
         "agent",
@@ -489,9 +489,9 @@
         "url": "https://github.com/Tencent"
       },
       "createdAt": "2025-07-22T08:01:23Z",
-      "updatedAt": "2026-11-08T14:35:29Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:22:10Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -502,9 +502,9 @@
       "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
       "url": "https://github.com/ahujasid/mcp-for-blender",
       "homepage": "https://www.mcp-for-blender.com/",
-      "stars": 33631,
-      "forks": 3061,
-      "watchers": 33631,
+      "stars": 33846,
+      "forks": 3082,
+      "watchers": 33846,
       "language": "Python",
       "topics": [
         "3d-modeling",
@@ -525,9 +525,9 @@
         "url": "https://github.com/ahujasid"
       },
       "createdAt": "2025-03-07T09:58:58Z",
-      "updatedAt": "2026-11-08T14:38:44Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:44:26Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -535,12 +535,12 @@
       "repoId": 638513786,
       "fullName": "Anil-matcha/Open-Generative-AI",
       "name": "Open-Generative-AI",
-      "description": "Unrestricted Open-source alternative to AI video platforms — Free AI image & video generation studio with 600+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
+      "description": "Uncensored Open-source alternative to AI video platforms — Free AI image & video generation studio with 600+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
       "url": "https://github.com/Anil-matcha/Open-Generative-AI",
       "homepage": "https://muapi.ai/open-generative-ai?utm_source=github&utm_medium=about&utm_campaign=open-generative-ai",
-      "stars": 33260,
-      "forks": 6298,
-      "watchers": 33260,
+      "stars": 33756,
+      "forks": 6417,
+      "watchers": 33756,
       "language": "JavaScript",
       "topics": [
         "ai-art-generator",
@@ -570,9 +570,9 @@
         "url": "https://github.com/Anil-matcha"
       },
       "createdAt": "2023-05-09T14:12:37Z",
-      "updatedAt": "2026-11-08T14:43:57Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:44:24Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -583,9 +583,9 @@
       "description": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. Each technique has a detailed notebook tutorial.",
       "url": "https://github.com/NirDiamant/RAG_Techniques",
       "homepage": "https://diamant-ai.com",
-      "stars": 30271,
+      "stars": 30289,
       "forks": 3701,
-      "watchers": 30271,
+      "watchers": 30289,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-rag",
@@ -613,9 +613,9 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-07-13T16:08:36Z",
-      "updatedAt": "2026-11-08T14:33:33Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:23:53Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -626,9 +626,9 @@
       "description": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!",
       "url": "https://github.com/aishwaryanr/awesome-generative-ai-guide",
       "homepage": "https://www.linkedin.com/in/areganti/",
-      "stars": 30186,
-      "forks": 6062,
-      "watchers": 30186,
+      "stars": 30209,
+      "forks": 6067,
+      "watchers": 30209,
       "language": "HTML",
       "topics": [
         "awesome",
@@ -646,9 +646,9 @@
         "url": "https://github.com/aishwaryanr"
       },
       "createdAt": "2024-02-06T18:14:14Z",
-      "updatedAt": "2026-11-08T14:40:35Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T08:19:47Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -659,9 +659,9 @@
       "description": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
       "url": "https://github.com/yamadashy/repomix",
       "homepage": "https://repomix.com",
-      "stars": 29187,
-      "forks": 1632,
-      "watchers": 29187,
+      "stars": 29208,
+      "forks": 1630,
+      "watchers": 29208,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -691,9 +691,9 @@
         "url": "https://github.com/yamadashy"
       },
       "createdAt": "2024-07-13T07:11:32Z",
-      "updatedAt": "2026-11-08T13:55:24Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:15:28Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -704,9 +704,9 @@
       "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "url": "https://github.com/hypit-ai/hypit",
       "homepage": "https://hypit.ai",
-      "stars": 28566,
-      "forks": 3315,
-      "watchers": 28566,
+      "stars": 28943,
+      "forks": 3356,
+      "watchers": 28943,
       "language": "TypeScript",
       "topics": [
         "agentic-ai",
@@ -736,9 +736,9 @@
         "url": "https://github.com/hypit-ai"
       },
       "createdAt": "2026-07-29T18:49:19Z",
-      "updatedAt": "2026-11-08T14:40:36Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:45:24Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -749,9 +749,9 @@
       "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents ",
       "url": "https://github.com/vercel/ai",
       "homepage": "https://ai-sdk.dev",
-      "stars": 27813,
-      "forks": 5553,
-      "watchers": 27813,
+      "stars": 27856,
+      "forks": 5568,
+      "watchers": 27856,
       "language": "TypeScript",
       "topics": [
         "anthropic",
@@ -776,9 +776,9 @@
         "url": "https://github.com/vercel"
       },
       "createdAt": "2023-05-23T15:04:08Z",
-      "updatedAt": "2026-11-08T13:55:42Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:15:11Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -789,9 +789,9 @@
       "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
       "url": "https://github.com/deepset-ai/haystack",
       "homepage": "https://haystack.deepset.ai",
-      "stars": 26944,
-      "forks": 3409,
-      "watchers": 26944,
+      "stars": 26976,
+      "forks": 3436,
+      "watchers": 26976,
       "language": "Python",
       "topics": [
         "agent-framework",
@@ -821,9 +821,9 @@
         "url": "https://github.com/deepset-ai"
       },
       "createdAt": "2019-11-14T09:05:28Z",
-      "updatedAt": "2026-11-08T13:44:18Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:13:56Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -834,9 +834,9 @@
       "description": "Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications.",
       "url": "https://github.com/a2aproject/A2A",
       "homepage": "https://a2a-protocol.org/",
-      "stars": 26452,
-      "forks": 2692,
-      "watchers": 26452,
+      "stars": 26475,
+      "forks": 2693,
+      "watchers": 26475,
       "language": "Shell",
       "topics": [
         "a2a",
@@ -853,9 +853,9 @@
         "url": "https://github.com/a2aproject"
       },
       "createdAt": "2025-03-25T18:44:21Z",
-      "updatedAt": "2026-11-08T12:29:32Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:32:48Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -866,9 +866,9 @@
       "description": "50+ tutorials and implementations for Generative AI Agent techniques, from basic conversational bots to complex multi-agent systems.",
       "url": "https://github.com/NirDiamant/GenAI_Agents",
       "homepage": "https://diamant-ai.com",
-      "stars": 24875,
-      "forks": 4179,
-      "watchers": 24875,
+      "stars": 24908,
+      "forks": 4192,
+      "watchers": 24908,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-ai",
@@ -897,9 +897,9 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-09-09T20:10:19Z",
-      "updatedAt": "2026-11-08T14:40:33Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:38:07Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -910,9 +910,9 @@
       "description": "OpenUI let's you describe UI using your imagination, then see it rendered live.",
       "url": "https://github.com/wandb/openui",
       "homepage": "https://openui.fly.dev",
-      "stars": 22746,
-      "forks": 2066,
-      "watchers": 22746,
+      "stars": 22748,
+      "forks": 2065,
+      "watchers": 22748,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -926,9 +926,9 @@
         "url": "https://github.com/wandb"
       },
       "createdAt": "2024-03-17T23:46:16Z",
-      "updatedAt": "2026-11-08T10:07:57Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:23:09Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -939,9 +939,9 @@
       "description": "🚀 A curated collection of AI engineering resources, roadmaps, tools, and projects covering LLMs, RAG, AI Agents, MCP, fine-tuning, evaluations, and production AI systems.",
       "url": "https://github.com/dipakkr/awesome-ai-engineering",
       "homepage": null,
-      "stars": 22542,
-      "forks": 4856,
-      "watchers": 22542,
+      "stars": 22548,
+      "forks": 4857,
+      "watchers": 22548,
       "language": null,
       "topics": [
         "agentic-ai",
@@ -970,9 +970,9 @@
         "url": "https://github.com/dipakkr"
       },
       "createdAt": "2018-09-17T11:15:29Z",
-      "updatedAt": "2026-11-08T12:00:11Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:31:10Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -983,9 +983,9 @@
       "description": "Local, open-source AI app builder for power users ✨ v0 / Lovable / Replit / Bolt alternative 🌟 Star if you like it!",
       "url": "https://github.com/dyad-sh/dyad",
       "homepage": "https://dyad.sh",
-      "stars": 22231,
-      "forks": 2804,
-      "watchers": 22231,
+      "stars": 22252,
+      "forks": 2809,
+      "watchers": 22252,
       "language": "TypeScript",
       "topics": [
         "ai-app-builder",
@@ -1014,9 +1014,9 @@
         "url": "https://github.com/dyad-sh"
       },
       "createdAt": "2025-04-11T06:33:48Z",
-      "updatedAt": "2026-11-08T13:14:49Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:48:45Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1027,9 +1027,9 @@
       "description": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Engineering）、AI 工具用法（Cursor / Claude Code / TRAE / Codex / Copilot）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档 aiguide，已升级为鱼皮 AI 导航网站",
       "url": "https://github.com/liyupi/ai-guide",
       "homepage": "https://ai.codefather.cn",
-      "stars": 21950,
-      "forks": 2390,
-      "watchers": 21950,
+      "stars": 21991,
+      "forks": 2392,
+      "watchers": 21991,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -1059,9 +1059,9 @@
         "url": "https://github.com/liyupi"
       },
       "createdAt": "2025-02-13T05:47:46Z",
-      "updatedAt": "2026-11-08T14:13:47Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:07:53Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1072,9 +1072,9 @@
       "description": "End-to-end, code-first tutorials for building production-grade GenAI agents. From prototype to enterprise deployment.",
       "url": "https://github.com/NirDiamant/agents-towards-production",
       "homepage": "https://diamant-ai.com",
-      "stars": 21851,
-      "forks": 2891,
-      "watchers": 21851,
+      "stars": 21864,
+      "forks": 2895,
+      "watchers": 21864,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -1103,9 +1103,9 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2025-06-16T17:33:44Z",
-      "updatedAt": "2026-11-08T12:05:56Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:01:48Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1116,9 +1116,9 @@
       "description": "☁️ Build multimodal AI applications with cloud-native stack",
       "url": "https://github.com/jina-ai/serve",
       "homepage": "https://jina.ai/serve",
-      "stars": 21848,
+      "stars": 21850,
       "forks": 2237,
-      "watchers": 21848,
+      "watchers": 21850,
       "language": "Python",
       "topics": [
         "cloud-native",
@@ -1148,9 +1148,9 @@
         "url": "https://github.com/jina-ai"
       },
       "createdAt": "2020-02-13T17:04:44Z",
-      "updatedAt": "2026-11-08T12:35:01Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T07:30:01Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1161,9 +1161,9 @@
       "description": "An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.",
       "url": "https://github.com/coze-dev/coze-studio",
       "homepage": null,
-      "stars": 21806,
+      "stars": 21813,
       "forks": 3135,
-      "watchers": 21806,
+      "watchers": 21813,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -1190,9 +1190,9 @@
         "url": "https://github.com/coze-dev"
       },
       "createdAt": "2025-06-26T02:19:21Z",
-      "updatedAt": "2026-11-08T09:00:56Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T07:37:14Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1203,9 +1203,9 @@
       "description": "短剧、漫剧制作工具 Toonflow：开源 AI 视频创作平台，集成剧本创作、智能分镜、角色与场景资产管理、图像生成和视频生成。融合无限画布、AI Agent 与可视化工作流，支持本地部署、自选模型、跨平台客户端、MCP 与插件扩展。Open-source AI short drama and motion comic creation tool with an infinite canvas, AI agents, storyboarding, image and video generation. Self-hosted and extensible, with a canvas-based approach similar to LibTV and TapNow.",
       "url": "https://github.com/HBAI-Ltd/Toonflow-app",
       "homepage": "https://toonflow.net",
-      "stars": 21076,
-      "forks": 3792,
-      "watchers": 21076,
+      "stars": 21332,
+      "forks": 3833,
+      "watchers": 21332,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -1235,9 +1235,9 @@
         "url": "https://github.com/HBAI-Ltd"
       },
       "createdAt": "2026-01-29T10:25:45Z",
-      "updatedAt": "2026-11-08T14:29:28Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:51:27Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1248,9 +1248,9 @@
       "description": "A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (Automatic Speech Recognition and Text-to-Speech)",
       "url": "https://github.com/NVIDIA-NeMo/Speech",
       "homepage": "https://docs.nvidia.com/nemo/speech/nightly/index.html",
-      "stars": 18718,
-      "forks": 3682,
-      "watchers": 18718,
+      "stars": 18723,
+      "forks": 3686,
+      "watchers": 18723,
       "language": "Python",
       "topics": [
         "asr",
@@ -1270,9 +1270,9 @@
         "url": "https://github.com/NVIDIA-NeMo"
       },
       "createdAt": "2019-08-05T20:16:42Z",
-      "updatedAt": "2026-11-08T13:17:37Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:33:50Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1283,9 +1283,9 @@
       "description": "AI coworker with memory and collaboration",
       "url": "https://github.com/rowboatlabs/rowboat",
       "homepage": "https://www.rowboatlabs.com",
-      "stars": 18146,
-      "forks": 1819,
-      "watchers": 18146,
+      "stars": 18150,
+      "forks": 1820,
+      "watchers": 18150,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -1310,9 +1310,9 @@
         "url": "https://github.com/rowboatlabs"
       },
       "createdAt": "2025-01-13T09:30:40Z",
-      "updatedAt": "2026-11-08T14:11:36Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T08:50:42Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1323,9 +1323,9 @@
       "description": "GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.",
       "url": "https://github.com/Canner/WrenAI",
       "homepage": "https://www.getwren.ai/en/open-core",
-      "stars": 18108,
-      "forks": 2083,
-      "watchers": 18108,
+      "stars": 18125,
+      "forks": 2089,
+      "watchers": 18125,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -1355,9 +1355,9 @@
         "url": "https://github.com/Canner"
       },
       "createdAt": "2024-03-13T06:18:20Z",
-      "updatedAt": "2026-11-08T14:26:46Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:43:27Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1368,9 +1368,9 @@
       "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini platform",
       "url": "https://github.com/GoogleCloudPlatform/generative-ai",
       "homepage": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/",
-      "stars": 17850,
-      "forks": 4508,
-      "watchers": 17850,
+      "stars": 17862,
+      "forks": 4507,
+      "watchers": 17862,
       "language": "Jupyter Notebook",
       "topics": [
         "agents",
@@ -1396,9 +1396,9 @@
         "url": "https://github.com/GoogleCloudPlatform"
       },
       "createdAt": "2023-05-05T12:31:07Z",
-      "updatedAt": "2026-11-08T10:54:39Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T08:08:05Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1409,9 +1409,9 @@
       "description": "GPT-Image-2 API and Prompts",
       "url": "https://github.com/Evolink-AI/awesome-gpt-image-2-API-Prompts",
       "homepage": "https://evolink.ai/gpt-image-2-prompts",
-      "stars": 17392,
-      "forks": 1746,
-      "watchers": 17392,
+      "stars": 17395,
+      "forks": 1747,
+      "watchers": 17395,
       "language": "Python",
       "topics": [
         "ai-art",
@@ -1441,9 +1441,9 @@
         "url": "https://github.com/Evolink-AI"
       },
       "createdAt": "2026-04-18T11:22:14Z",
-      "updatedAt": "2026-11-08T13:00:34Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:00:29Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1454,9 +1454,9 @@
       "description": " Concurrently chat with ChatGPT, Bing Chat, Bard, Alpaca, Vicuna, Claude, ChatGLM, MOSS, 讯飞星火, 文心一言 and more, discover the best answers",
       "url": "https://github.com/ai-shifu/ChatALL",
       "homepage": "https://chatall.ai",
-      "stars": 16510,
+      "stars": 16511,
       "forks": 1724,
-      "watchers": 16510,
+      "watchers": 16511,
       "language": "JavaScript",
       "topics": [
         "bingchat",
@@ -1480,9 +1480,9 @@
         "url": "https://github.com/ai-shifu"
       },
       "createdAt": "2023-04-08T10:34:30Z",
-      "updatedAt": "2026-11-08T09:34:45Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T10:52:59Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1493,9 +1493,9 @@
       "description": "Structured Outputs",
       "url": "https://github.com/dottxt-ai/outlines",
       "homepage": "https://dottxt-ai.github.io/outlines/",
-      "stars": 16007,
-      "forks": 911,
-      "watchers": 16007,
+      "stars": 16006,
+      "forks": 915,
+      "watchers": 16006,
       "language": "Python",
       "topics": [
         "cfg",
@@ -1513,9 +1513,9 @@
         "url": "https://github.com/dottxt-ai"
       },
       "createdAt": "2023-03-17T16:01:18Z",
-      "updatedAt": "2026-11-08T00:07:08Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T17:21:17Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1526,9 +1526,9 @@
       "description": "首家工业级全流程 AI 影视生产平台。Industry-first professional AI Agent platform for controllable film & video production. From shorts to live-action with Hollywood-standard workflows.",
       "url": "https://github.com/waooAI/waoowaoo",
       "homepage": null,
-      "stars": 14812,
-      "forks": 3205,
-      "watchers": 14812,
+      "stars": 14823,
+      "forks": 3206,
+      "watchers": 14823,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -1546,9 +1546,9 @@
         "url": "https://github.com/waooAI"
       },
       "createdAt": "2026-01-22T12:09:36Z",
-      "updatedAt": "2026-11-08T14:05:55Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:06:18Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1559,9 +1559,9 @@
       "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
       "url": "https://github.com/semantica-agi/semantica",
       "homepage": "https://getsemantica.ai",
-      "stars": 14473,
-      "forks": 1706,
-      "watchers": 14473,
+      "stars": 14513,
+      "forks": 1711,
+      "watchers": 14513,
       "language": "Python",
       "topics": [
         "agent-memory",
@@ -1591,9 +1591,9 @@
         "url": "https://github.com/semantica-agi"
       },
       "createdAt": "2025-06-25T10:41:00Z",
-      "updatedAt": "2026-11-08T14:40:58Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:41:13Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1604,9 +1604,9 @@
       "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
       "url": "https://github.com/0x4m4/hexstrike-ai",
       "homepage": "https://www.hexstrike.com/",
-      "stars": 13440,
-      "forks": 2728,
-      "watchers": 13440,
+      "stars": 13488,
+      "forks": 2737,
+      "watchers": 13488,
       "language": "Python",
       "topics": [
         "0x4m4",
@@ -1636,9 +1636,9 @@
         "url": "https://github.com/0x4m4"
       },
       "createdAt": "2025-07-10T17:53:18Z",
-      "updatedAt": "2026-11-08T14:33:51Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:08:20Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1649,9 +1649,9 @@
       "description": "A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.",
       "url": "https://github.com/Portkey-AI/gateway",
       "homepage": "https://portkey.ai/features/ai-gateway",
-      "stars": 13343,
-      "forks": 1375,
-      "watchers": 13343,
+      "stars": 13359,
+      "forks": 1377,
+      "watchers": 13359,
       "language": "TypeScript",
       "topics": [
         "ai-gateway",
@@ -1676,9 +1676,9 @@
         "url": "https://github.com/Portkey-AI"
       },
       "createdAt": "2023-08-23T11:52:47Z",
-      "updatedAt": "2026-11-08T14:43:35Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:33:47Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1689,9 +1689,9 @@
       "description": "A curated list of modern Generative Artificial Intelligence projects and services",
       "url": "https://github.com/steven2358/awesome-generative-ai",
       "homepage": null,
-      "stars": 12817,
-      "forks": 2705,
-      "watchers": 12817,
+      "stars": 12818,
+      "forks": 2724,
+      "watchers": 12818,
       "language": null,
       "topics": [
         "ai",
@@ -1709,9 +1709,9 @@
         "url": "https://github.com/steven2358"
       },
       "createdAt": "2022-10-20T11:18:17Z",
-      "updatedAt": "2026-11-08T12:31:39Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T06:14:14Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1755,8 +1755,8 @@
       },
       "createdAt": "2024-07-16T21:00:53Z",
       "updatedAt": "2026-11-07T16:09:05Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1767,9 +1767,9 @@
       "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
       "url": "https://github.com/openvinotoolkit/openvino",
       "homepage": "https://docs.openvino.ai",
-      "stars": 11130,
-      "forks": 3542,
-      "watchers": 11130,
+      "stars": 11142,
+      "forks": 3546,
+      "watchers": 11142,
       "language": "C++",
       "topics": [
         "ai",
@@ -1798,9 +1798,9 @@
         "url": "https://github.com/openvinotoolkit"
       },
       "createdAt": "2018-10-15T10:54:40Z",
-      "updatedAt": "2026-11-08T08:30:56Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T10:20:22Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1811,9 +1811,9 @@
       "description": "Story Creation AI Agent for novel, scripts, translation, interactive games, and IP content",
       "url": "https://github.com/Narcooo/inkos",
       "homepage": null,
-      "stars": 11055,
-      "forks": 2015,
-      "watchers": 11055,
+      "stars": 11103,
+      "forks": 2018,
+      "watchers": 11103,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1834,10 +1834,10 @@
         "url": "https://github.com/Narcooo"
       },
       "createdAt": "2026-03-12T02:12:54Z",
-      "updatedAt": "2026-11-08T13:58:43Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-10T10:33:08Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-945411078",
@@ -1847,9 +1847,9 @@
       "description": "A curated list of  120+ LLM libraries category wise. ",
       "url": "https://github.com/KalyanKS-NLP/llm-engineer-toolkit",
       "homepage": "https://www.linkedin.com/in/kalyanksnlp/",
-      "stars": 11044,
-      "forks": 1745,
-      "watchers": 11044,
+      "stars": 11063,
+      "forks": 1747,
+      "watchers": 11063,
       "language": null,
       "topics": [
         "ai-engineer",
@@ -1864,9 +1864,9 @@
         "url": "https://github.com/KalyanKS-NLP"
       },
       "createdAt": "2025-03-09T11:07:31Z",
-      "updatedAt": "2026-11-08T13:29:52Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T07:55:20Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1877,9 +1877,9 @@
       "description": "Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.",
       "url": "https://github.com/Acly/krita-ai-diffusion",
       "homepage": "https://www.interstice.cloud",
-      "stars": 10857,
+      "stars": 10863,
       "forks": 657,
-      "watchers": 10857,
+      "watchers": 10863,
       "language": "Python",
       "topics": [
         "generative-ai",
@@ -1892,9 +1892,9 @@
         "url": "https://github.com/Acly"
       },
       "createdAt": "2023-09-01T22:52:13Z",
-      "updatedAt": "2026-11-08T13:35:01Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:56:33Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1906,7 +1906,7 @@
       "url": "https://github.com/Netflix/metaflow",
       "homepage": "https://metaflow.org",
       "stars": 10341,
-      "forks": 1392,
+      "forks": 1394,
       "watchers": 10341,
       "language": "Python",
       "topics": [
@@ -1937,9 +1937,9 @@
         "url": "https://github.com/Netflix"
       },
       "createdAt": "2019-09-17T17:48:25Z",
-      "updatedAt": "2026-11-08T12:39:16Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-09T07:56:07Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1950,9 +1950,9 @@
       "description": "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
       "url": "https://github.com/Lightricks/LTX-2",
       "homepage": "https://ltx.io",
-      "stars": 10145,
-      "forks": 1611,
-      "watchers": 10145,
+      "stars": 10174,
+      "forks": 1617,
+      "watchers": 10174,
       "language": "Python",
       "topics": [
         "generative-ai",
@@ -1965,9 +1965,9 @@
         "url": "https://github.com/Lightricks"
       },
       "createdAt": "2026-01-03T13:16:29Z",
-      "updatedAt": "2026-11-08T14:06:40Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
-      "isNew": true,
+      "updatedAt": "2026-11-10T09:31:06Z",
+      "firstSeenAt": "2026-10-28T14:45:08.812Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1978,9 +1978,9 @@
       "description": "Cybersecurity AI (CAI), the framework for AI Security",
       "url": "https://github.com/aliasrobotics/cai",
       "homepage": "https://aliasrobotics.com/cybersecuritysuperintelligence.php",
-      "stars": 9853,
+      "stars": 9854,
       "forks": 1543,
-      "watchers": 9853,
+      "watchers": 9854,
       "language": "Python",
       "topics": [
         "artificial-intelligence",
@@ -1996,8 +1996,8 @@
         "url": "https://github.com/aliasrobotics"
       },
       "createdAt": "2025-03-31T08:56:05Z",
-      "updatedAt": "2026-11-08T13:57:23Z",
-      "firstSeenAt": "2026-11-08T14:44:33.808Z",
+      "updatedAt": "2026-11-10T07:21:58Z",
+      "firstSeenAt": "2026-11-10T10:54:42.512Z",
       "isNew": true,
       "existing": true
     }
