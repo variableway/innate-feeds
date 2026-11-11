@@ -181,7 +181,8 @@ export function TopicsPage() {
               {cat.id === "dev" && !activeGroupId && (
                 <p className="text-xs text-muted-foreground">
                   ① brainstorm → ② 需求分析和编写 → ③ 需求任务分解和开发任务编写
-                  → ④ 实现计划·Spec·验证测试·handoff → ⑤ UI/UX 设计·分析·优化·Anti-Slop
+                  → ④ 实现计划·Spec·验证测试·handoff → ⑤ UI/UX
+                  设计·分析·优化·Anti-Slop
                 </p>
               )}
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -192,7 +193,10 @@ export function TopicsPage() {
                     byTopic={byTopic}
                     focused={activeGroupId === group.id}
                     onFocus={() =>
-                      void navigate({ to: "/topics", search: { group: group.id } })
+                      void navigate({
+                        to: "/topics",
+                        search: { group: group.id },
+                      })
                     }
                   />
                 ))}
@@ -202,7 +206,9 @@ export function TopicsPage() {
 
           {showUngrouped && (
             <section className="space-y-3">
-              <h2 className="text-sm font-semibold text-foreground">其他 Topics</h2>
+              <h2 className="text-sm font-semibold text-foreground">
+                其他 Topics
+              </h2>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {ungrouped.map((topic) => (
                   <TopicCard key={topic.topic} topic={topic} />

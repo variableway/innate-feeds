@@ -94,9 +94,10 @@ interface NavItem {
   group?: string;
 }
 
-/** 底部 Settings 菜单项（B20：Admin 从导航组移入 Settings 弹出菜单）。 */
+/** 底部 Settings 菜单项（B20：Settings 页从导航组移入底部弹出菜单；
+ *  SQLite / 任务后台已迁往独立 admin 项目，issue #70）。 */
 const SETTINGS_ITEMS: NavItem[] = [
-  { label: "Admin", path: "/admin", icon: "Database" },
+  { label: "Settings", path: "/settings", icon: "Settings" },
 ];
 const SETTINGS_PATHS = new Set(SETTINGS_ITEMS.map((i) => i.path));
 
