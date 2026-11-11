@@ -1,9 +1,9 @@
 {
   "topic": "e2e-testing",
-  "fetchedAt": "2026-11-10T11:02:21.737Z",
+  "fetchedAt": "2026-11-11T15:55:22.013Z",
   "count": 50,
-  "newCount": 44,
-  "existingCount": 6,
+  "newCount": 45,
+  "existingCount": 5,
   "items": [
     {
       "id": "gh-topic-221981891",
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 99734,
-      "forks": 6834,
-      "watchers": 99734,
+      "stars": 99864,
+      "forks": 6849,
+      "watchers": 99864,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,8 +40,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-10T10:20:18Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T15:31:44Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -53,9 +53,9 @@
       "description": "See interfaces like a human. E2E testing in natural language.",
       "url": "https://github.com/web-infra-dev/midscene",
       "homepage": "https://midscenejs.com",
-      "stars": 15569,
+      "stars": 15585,
       "forks": 1219,
-      "watchers": 15569,
+      "watchers": 15585,
       "language": "TypeScript",
       "topics": [
         "browser-use",
@@ -73,22 +73,22 @@
         "url": "https://github.com/web-infra-dev"
       },
       "createdAt": "2024-07-23T04:03:50Z",
-      "updatedAt": "2026-11-10T09:28:39Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:03:59Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": true
     },
     {
       "id": "gh-topic-1308631234",
       "repoId": 1308631234,
-      "fullName": "tester-army/e2e",
+      "fullName": "e2e-inc/e2e",
       "name": "e2e",
       "description": "Next generation e2e testing framework for web and mobile apps.",
-      "url": "https://github.com/tester-army/e2e",
+      "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13574,
-      "forks": 708,
-      "watchers": 13574,
+      "stars": 13676,
+      "forks": 718,
+      "watchers": 13676,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -109,15 +109,15 @@
         "web"
       ],
       "owner": {
-        "login": "tester-army",
+        "login": "e2e-inc",
         "avatarUrl": "https://avatars.githubusercontent.com/u/252887899?v=4",
-        "url": "https://github.com/tester-army"
+        "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-10T10:50:29Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T15:39:10Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
-      "existing": true
+      "existing": false
     },
     {
       "id": "gh-topic-17420614",
@@ -127,9 +127,9 @@
       "description": "Python APIs for web automation, testing, and bypassing bot-detection.",
       "url": "https://github.com/seleniumbase/SeleniumBase",
       "homepage": "https://seleniumbase.io",
-      "stars": 13238,
-      "forks": 1614,
-      "watchers": 13238,
+      "stars": 13247,
+      "forks": 1617,
+      "watchers": 13247,
       "language": "Python",
       "topics": [
         "bot-detection",
@@ -155,8 +155,8 @@
         "url": "https://github.com/seleniumbase"
       },
       "createdAt": "2014-03-04T23:07:33Z",
-      "updatedAt": "2026-11-10T10:20:23Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:15:45Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -168,9 +168,9 @@
       "description": "Go microservice template for Kubernetes",
       "url": "https://github.com/stefanprodan/podinfo",
       "homepage": null,
-      "stars": 6040,
+      "stars": 6042,
       "forks": 1904,
-      "watchers": 6040,
+      "watchers": 6042,
       "language": "Go",
       "topics": [
         "cuelang",
@@ -188,8 +188,8 @@
         "url": "https://github.com/stefanprodan"
       },
       "createdAt": "2018-01-05T14:19:59Z",
-      "updatedAt": "2026-11-10T05:36:03Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T05:43:04Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -227,7 +227,7 @@
       },
       "createdAt": "2024-09-18T20:44:05Z",
       "updatedAt": "2026-11-08T23:57:36Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": true
     },
@@ -239,9 +239,9 @@
       "description": "Open source device layer for AI coding agents: a CLI, MCP server, and typed Node.js API to control mobile, web, TV, and desktop apps on devices and simulators, locally or in the cloud.",
       "url": "https://github.com/callstack/agent-device",
       "homepage": "https://agent-device.dev",
-      "stars": 5320,
-      "forks": 389,
-      "watchers": 5320,
+      "stars": 5332,
+      "forks": 393,
+      "watchers": 5332,
       "language": "TypeScript",
       "topics": [
         "adb",
@@ -268,8 +268,8 @@
         "url": "https://github.com/callstack"
       },
       "createdAt": "2026-01-30T18:41:54Z",
-      "updatedAt": "2026-11-10T09:56:39Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T15:15:14Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -281,9 +281,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5167,
-      "forks": 293,
-      "watchers": 5167,
+      "stars": 5172,
+      "forks": 295,
+      "watchers": 5172,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -300,8 +300,8 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-10T06:49:44Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T15:23:50Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": true
     },
@@ -335,8 +335,8 @@
         "url": "https://github.com/hardkoded"
       },
       "createdAt": "2017-09-30T20:32:25Z",
-      "updatedAt": "2026-11-10T10:00:49Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:04:59Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -348,9 +348,9 @@
       "description": "A browser testing and web crawling library for PHP and Symfony",
       "url": "https://github.com/symfony/panther",
       "homepage": "https://symfony.com/packages/Panther",
-      "stars": 3070,
+      "stars": 3071,
       "forks": 236,
-      "watchers": 3070,
+      "watchers": 3071,
       "language": "PHP",
       "topics": [
         "chromedriver",
@@ -369,8 +369,8 @@
         "url": "https://github.com/symfony"
       },
       "createdAt": "2018-03-16T20:54:41Z",
-      "updatedAt": "2026-11-09T12:58:00Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T13:22:35Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -406,7 +406,7 @@
       },
       "createdAt": "2018-02-11T14:53:01Z",
       "updatedAt": "2026-11-07T08:16:01Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -418,9 +418,9 @@
       "description": "The largest UI testing best practices list (last update: March 2025)",
       "url": "https://github.com/NoriSte/ui-testing-best-practices",
       "homepage": null,
-      "stars": 1737,
+      "stars": 1738,
       "forks": 164,
-      "watchers": 1737,
+      "watchers": 1738,
       "language": null,
       "topics": [
         "best-practices",
@@ -435,8 +435,8 @@
         "url": "https://github.com/NoriSte"
       },
       "createdAt": "2019-03-15T18:05:12Z",
-      "updatedAt": "2026-11-06T12:42:43Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:27:29Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -470,7 +470,7 @@
       },
       "createdAt": "2020-07-07T17:19:36Z",
       "updatedAt": "2026-11-10T09:23:12Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -482,9 +482,9 @@
       "description": "An integration test framework for React Native.",
       "url": "https://github.com/pixielabs/cavy",
       "homepage": "https://cavy.app",
-      "stars": 1368,
+      "stars": 1367,
       "forks": 111,
-      "watchers": 1368,
+      "watchers": 1367,
       "language": "JavaScript",
       "topics": [
         "android",
@@ -505,8 +505,8 @@
         "url": "https://github.com/pixielabs"
       },
       "createdAt": "2017-01-30T15:45:30Z",
-      "updatedAt": "2026-10-13T20:52:02Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T13:36:06Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -518,9 +518,9 @@
       "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
       "url": "https://github.com/bug0inc/qa-agent",
       "homepage": "https://ai.bug0.com",
-      "stars": 1318,
-      "forks": 191,
-      "watchers": 1318,
+      "stars": 1319,
+      "forks": 190,
+      "watchers": 1319,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -545,8 +545,8 @@
         "url": "https://github.com/bug0inc"
       },
       "createdAt": "2026-03-29T18:22:06Z",
-      "updatedAt": "2026-11-09T10:14:09Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T16:51:39Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -591,7 +591,7 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-08T12:16:09Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -603,9 +603,9 @@
       "description": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
       "url": "https://github.com/open-wxa/wxa-runner",
       "homepage": "https://open-wxa.github.io/wxa-runner/",
-      "stars": 1195,
-      "forks": 136,
-      "watchers": 1195,
+      "stars": 1220,
+      "forks": 140,
+      "watchers": 1220,
       "language": "TypeScript",
       "topics": [
         "e2e-testing",
@@ -625,8 +625,8 @@
         "url": "https://github.com/open-wxa"
       },
       "createdAt": "2026-10-13T17:06:51Z",
-      "updatedAt": "2026-11-10T09:57:08Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T13:02:00Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -671,7 +671,7 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -683,9 +683,9 @@
       "description": "Apache Geb: Very Groovy Browser Automation",
       "url": "https://github.com/apache/groovy-geb",
       "homepage": "https://groovy.apache.org/geb",
-      "stars": 1173,
+      "stars": 1174,
       "forks": 236,
-      "watchers": 1173,
+      "watchers": 1174,
       "language": "Groovy",
       "topics": [
         "apache",
@@ -711,8 +711,8 @@
         "url": "https://github.com/apache"
       },
       "createdAt": "2010-08-03T03:58:46Z",
-      "updatedAt": "2026-11-06T22:51:05Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T13:34:14Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -724,9 +724,9 @@
       "description": "AI Agent Evaluator & Red Team Platform",
       "url": "https://github.com/rogue-security/rogue",
       "homepage": "https://qualifire.ai",
-      "stars": 1075,
+      "stars": 1076,
       "forks": 163,
-      "watchers": 1075,
+      "watchers": 1076,
       "language": "Python",
       "topics": [
         "agents",
@@ -743,8 +743,8 @@
         "url": "https://github.com/rogue-security"
       },
       "createdAt": "2025-06-05T21:16:31Z",
-      "updatedAt": "2026-11-07T15:14:38Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T10:20:51Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -785,7 +785,7 @@
       },
       "createdAt": "2022-04-28T09:18:16Z",
       "updatedAt": "2026-11-09T22:09:48Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -797,9 +797,9 @@
       "description": "Web testing solution for non-developers on top of Puppeteer and Jest",
       "url": "https://github.com/dsheiko/puppetry",
       "homepage": "https://puppetry.app",
-      "stars": 888,
+      "stars": 889,
       "forks": 127,
-      "watchers": 888,
+      "watchers": 889,
       "language": "JavaScript",
       "topics": [
         "browser-automation",
@@ -822,8 +822,8 @@
         "url": "https://github.com/dsheiko"
       },
       "createdAt": "2018-11-01T15:11:47Z",
-      "updatedAt": "2026-09-11T03:25:56Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T12:03:11Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -864,8 +864,8 @@
         "url": "https://github.com/gemini-testing"
       },
       "createdAt": "2016-02-17T11:26:05Z",
-      "updatedAt": "2026-11-10T08:09:41Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T13:33:03Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -898,8 +898,8 @@
         "url": "https://github.com/yashaka"
       },
       "createdAt": "2015-04-17T08:52:14Z",
-      "updatedAt": "2026-11-10T05:53:54Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T11:09:59Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -936,7 +936,7 @@
       },
       "createdAt": "2019-06-03T08:54:58Z",
       "updatedAt": "2026-11-10T09:32:02Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -979,7 +979,7 @@
       },
       "createdAt": "2016-06-16T16:20:06Z",
       "updatedAt": "2026-11-10T09:35:05Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1018,7 +1018,7 @@
       },
       "createdAt": "2019-12-25T11:53:42Z",
       "updatedAt": "2026-11-10T08:25:57Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1030,9 +1030,9 @@
       "description": "Go + Postgres + Chi Router + sqlx + ent + authentication + testing + opentelemetry Starter Kit for API Development",
       "url": "https://github.com/gmhafiz/go8",
       "homepage": null,
-      "stars": 498,
+      "stars": 499,
       "forks": 51,
-      "watchers": 498,
+      "watchers": 499,
       "language": "Go",
       "topics": [
         "api",
@@ -1052,8 +1052,8 @@
         "url": "https://github.com/gmhafiz"
       },
       "createdAt": "2020-07-26T13:46:10Z",
-      "updatedAt": "2026-10-16T08:54:43Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T11:45:18Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1088,8 +1088,8 @@
         "url": "https://github.com/mobile-next"
       },
       "createdAt": "2026-03-24T10:22:09Z",
-      "updatedAt": "2026-11-10T03:21:02Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T12:53:31Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1123,8 +1123,8 @@
         "url": "https://github.com/ShaftHQ"
       },
       "createdAt": "2018-07-15T07:02:02Z",
-      "updatedAt": "2026-11-10T10:27:24Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:39:46Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1136,9 +1136,9 @@
       "description": "AI-powered E2E testing for 10 platforms. 253 MCP tools. Zero config. Works with Claude, Cursor, Windsurf, Copilot. Test Flutter, React Native, iOS, Android, Web, Electron, Tauri, KMP, .NET MAUI — all from natural language.",
       "url": "https://github.com/ai-dashboad/flutter-skill",
       "homepage": "https://ai-dashboad.github.io/flutter-skill/",
-      "stars": 403,
+      "stars": 405,
       "forks": 61,
-      "watchers": 403,
+      "watchers": 405,
       "language": "Dart",
       "topics": [
         "ai",
@@ -1168,8 +1168,8 @@
         "url": "https://github.com/ai-dashboad"
       },
       "createdAt": "2026-01-29T20:55:29Z",
-      "updatedAt": "2026-11-07T07:13:39Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-10T15:55:49Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1181,9 +1181,9 @@
       "description": "Fast and Reliable E2E Web Testing with only Javascript",
       "url": "https://github.com/Nike-Inc/burnside",
       "homepage": null,
-      "stars": 378,
+      "stars": 377,
       "forks": 21,
-      "watchers": 378,
+      "watchers": 377,
       "language": "JavaScript",
       "topics": [
         "burnside",
@@ -1202,8 +1202,8 @@
         "url": "https://github.com/Nike-Inc"
       },
       "createdAt": "2017-05-03T03:45:27Z",
-      "updatedAt": "2026-11-10T08:56:08Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T13:33:05Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1238,7 +1238,7 @@
       },
       "createdAt": "2023-07-23T20:55:17Z",
       "updatedAt": "2026-10-09T15:23:11Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1271,7 +1271,7 @@
       },
       "createdAt": "2019-03-09T00:23:37Z",
       "updatedAt": "2026-11-10T09:04:41Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1310,7 +1310,7 @@
       },
       "createdAt": "2024-01-25T20:11:22Z",
       "updatedAt": "2026-11-10T07:13:04Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1347,8 +1347,8 @@
         "url": "https://github.com/Trendyol"
       },
       "createdAt": "2023-01-18T13:03:34Z",
-      "updatedAt": "2026-11-10T10:42:15Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T15:20:43Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1389,7 +1389,7 @@
       },
       "createdAt": "2026-03-12T01:47:17Z",
       "updatedAt": "2026-11-04T08:35:27Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1434,7 +1434,7 @@
       },
       "createdAt": "2017-12-29T15:58:24Z",
       "updatedAt": "2026-11-10T09:13:35Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1465,7 +1465,7 @@
       },
       "createdAt": "2021-11-19T16:14:05Z",
       "updatedAt": "2026-11-06T10:15:13Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1477,9 +1477,9 @@
       "description": "Drive a real, stock iPhone (and any macOS app) from any MCP client via iPhone Mirroring — no Developer Mode, no Xcode, no WebDriverAgent. Tap, swipe, type, OCR, plus replayable AI-authored test skills.",
       "url": "https://github.com/jfarcand/mirroir-mcp",
       "homepage": "https://mirroir.dev",
-      "stars": 288,
+      "stars": 289,
       "forks": 39,
-      "watchers": 288,
+      "watchers": 289,
       "language": "Swift",
       "topics": [
         "agent-skills",
@@ -1509,48 +1509,8 @@
         "url": "https://github.com/jfarcand"
       },
       "createdAt": "2026-02-06T21:20:07Z",
-      "updatedAt": "2026-11-09T21:22:05Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1210382787",
-      "repoId": 1210382787,
-      "fullName": "LambdaTest/kane-cli",
-      "name": "kane-cli",
-      "description": "Kane CLI by TestMu AI (Formerly LambdaTest)",
-      "url": "https://github.com/LambdaTest/kane-cli",
-      "homepage": "https://www.testmuai.com/kane-cli",
-      "stars": 263,
-      "forks": 33,
-      "watchers": 263,
-      "language": "JavaScript",
-      "topics": [
-        "agentic-ai",
-        "ai-agents",
-        "ai-testing",
-        "browser-automation",
-        "claude-code",
-        "cli",
-        "coding-agent",
-        "copilot",
-        "cursor",
-        "e2e-testing",
-        "kaneai",
-        "mcp",
-        "natural-language",
-        "qa",
-        "test-automation"
-      ],
-      "owner": {
-        "login": "LambdaTest",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/27130435?v=4",
-        "url": "https://github.com/LambdaTest"
-      },
-      "createdAt": "2026-04-14T11:10:09Z",
-      "updatedAt": "2026-11-08T08:12:46Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T04:33:44Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1562,9 +1522,9 @@
       "description": "50 QA and test-automation skills for Claude Code, Codex, Cursor, and any Agent Skills Standard runtime.",
       "url": "https://github.com/petrkindlmann/qa-skills",
       "homepage": "https://qa-skills.com",
-      "stars": 261,
+      "stars": 263,
       "forks": 41,
-      "watchers": 261,
+      "watchers": 263,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1594,10 +1554,50 @@
         "url": "https://github.com/petrkindlmann"
       },
       "createdAt": "2026-03-23T16:11:04Z",
-      "updatedAt": "2026-11-10T09:23:55Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "updatedAt": "2026-11-11T14:53:22Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": true
+    },
+    {
+      "id": "gh-topic-1210382787",
+      "repoId": 1210382787,
+      "fullName": "LambdaTest/kane-cli",
+      "name": "kane-cli",
+      "description": "Kane CLI by TestMu AI (Formerly LambdaTest)",
+      "url": "https://github.com/LambdaTest/kane-cli",
+      "homepage": "https://www.testmuai.com/kane-cli",
+      "stars": 263,
+      "forks": 35,
+      "watchers": 263,
+      "language": "JavaScript",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "ai-testing",
+        "browser-automation",
+        "claude-code",
+        "cli",
+        "coding-agent",
+        "copilot",
+        "cursor",
+        "e2e-testing",
+        "kaneai",
+        "mcp",
+        "natural-language",
+        "qa",
+        "test-automation"
+      ],
+      "owner": {
+        "login": "LambdaTest",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/27130435?v=4",
+        "url": "https://github.com/LambdaTest"
+      },
+      "createdAt": "2026-04-14T11:10:09Z",
+      "updatedAt": "2026-11-11T15:21:42Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-602739740",
@@ -1632,7 +1632,7 @@
       },
       "createdAt": "2023-02-16T20:59:01Z",
       "updatedAt": "2026-10-13T15:32:17Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1677,7 +1677,7 @@
       },
       "createdAt": "2026-01-12T09:20:28Z",
       "updatedAt": "2026-11-05T18:33:24Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1720,7 +1720,7 @@
       },
       "createdAt": "2020-05-01T11:05:44Z",
       "updatedAt": "2026-11-03T10:00:15Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": true
     },
@@ -1749,7 +1749,7 @@
       },
       "createdAt": "2020-02-26T19:01:26Z",
       "updatedAt": "2026-09-28T03:34:01Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1789,7 +1789,7 @@
       },
       "createdAt": "2025-11-11T09:34:40Z",
       "updatedAt": "2026-11-09T19:12:46Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1823,7 +1823,7 @@
       },
       "createdAt": "2020-10-22T18:33:52Z",
       "updatedAt": "2026-11-07T08:30:26Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1857,7 +1857,7 @@
       },
       "createdAt": "2018-05-26T13:58:04Z",
       "updatedAt": "2026-09-17T15:09:00Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     },
@@ -1893,7 +1893,7 @@
       },
       "createdAt": "2020-01-31T21:32:50Z",
       "updatedAt": "2026-07-24T06:26:53Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "firstSeenAt": "2026-11-11T15:55:22.013Z",
       "isNew": true,
       "existing": false
     }
