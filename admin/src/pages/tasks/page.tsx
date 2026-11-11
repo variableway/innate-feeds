@@ -218,8 +218,11 @@ export function TasksPage() {
             />
           </div>
 
-          <Tabs defaultValue="jobs" className="mt-6">
-            <TabsList>
+          {/* @innate/ui Tabs 的 `data-horizontal:*` 变体按 [data-horizontal] 属性编译，
+              但 Base UI Root 渲染的是 data-orientation="horizontal"——水平布局样式
+              （flex-col / h-8）不生效会让 tab 跑到左侧。这里显式补齐。 */}
+          <Tabs defaultValue="jobs" className="mt-6 flex-col">
+            <TabsList className="h-8">
               <TabsTrigger value="jobs">任务</TabsTrigger>
               <TabsTrigger value="runs">运行历史</TabsTrigger>
             </TabsList>
