@@ -486,6 +486,11 @@ Simplified SQLite workbench + 采集任务后台（issue #70）, API mode only (
 
 SQLite database file: `~/.innate/feeds.db` by default (configurable via `DB_PATH` or `INNATE_HOME` env vars). Uses WAL mode with foreign keys enabled.
 
+**数据目录统一约定**：本地数据（feeds.db + 各采集源 JSON + admin/tasks）统一放默认
+`INNATE_HOME = ~/.innate`，跨 worktree / 跨检出共享；**不要在仓库检出内另建 `.innate`**
+（2026-11-11 曾因主检出存在 `.innate` 分叉导致换环境后数据"丢失"，已合并退役为
+`.innate.retired-20261031`）。若某环境数据"消失"，先查 `INNATE_HOME` 是否被显式指定。
+
 Schema is defined in `backend/src/db/schema.sql`:
 
 - `trending_repos` — trending repository snapshots (composite text PK `trending-{date}-{period}-{repoId}`, includes `period`, `snapshot_date`).
