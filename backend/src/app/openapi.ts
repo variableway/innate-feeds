@@ -54,6 +54,11 @@ export const openApiSpec = {
       name: "AdminDb",
       description: "简化版 SQLite 后台（只读查询 / 保存 SQL / JSON 文件查询）",
     },
+    {
+      name: "AdminTasks",
+      description:
+        "采集任务后台（issue #70）：任务列表 / 运行 / 日志 / 定时调度",
+    },
   ],
   paths: {
     "/api/health": {
@@ -1091,6 +1096,168 @@ export const openApiSpec = {
               },
             },
           },
+        },
+      },
+    },
+
+    "/api/admin/tasks/jobs": {
+      get: {
+        tags: ["AdminTasks"],
+        summary: "采集任务列表（注册表 + 运行状态 + 调度配置）",
+        description:
+          "来自 `collectors/jobs.ts` 的 SYNC_JOBS 注册表，附带最近一次运行与定时配置。",
+        responses: {
+          "200": { description: "任务列表" },
+        },
+      },
+    },
+
+    "/api/admin/tasks/jobs/{id}/run": {
+      post: {
+        tags: ["AdminTasks"],
+        summary: "手动触发一次后台运行",
+        description:
+          "子进程执行 `bun src/app/cli.ts sync job <id>`；同一 job 同时只允许一次运行。",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "job id（SYNC_JOBS 注册表）",
+          },
+        ],
+        responses: {
+          "201": { description: "已启动的运行记录" },
+          "404": jsonError("未知 job"),
+          "409": jsonError("已在运行中"),
+        },
+      },
+    },
+
+    "/api/admin/tasks/runs": {
+      get: {
+        tags: ["AdminTasks"],
+        summary: "运行历史（最新在前）",
+        parameters: [
+          {
+            name: "jobId",
+            in: "query",
+            schema: { type: "string" },
+            description: "按 job 过滤",
+          },
+          {
+            name: "limit",
+            in: "query",
+            schema: { type: "integer", default: 50, maximum: 200 },
+          },
+        ],
+        responses: {
+          "200": { description: "运行记录列表" },
+        },
+      },
+    },
+
+    "/api/admin/tasks/runs/{runId}": {
+      get: {
+        tags: ["AdminTasks"],
+        summary: "运行详情 + 日志尾部",
+        parameters: [
+          {
+            name: "runId",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": { description: "运行记录 + 日志（尾部 ≤200KB）" },
+          "404": jsonError("运行记录不存在"),
+        },
+      },
+    },
+
+    "/api/admin/tasks/runs/{runId}/cancel": {
+      post: {
+        tags: ["AdminTasks"],
+        summary: "取消运行中的任务",
+        parameters: [
+          {
+            name: "runId",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": { description: "已取消" },
+          "404": jsonError("运行记录不存在"),
+          "409": jsonError("任务不在运行中"),
+        },
+      },
+    },
+
+    "/api/admin/tasks/schedules": {
+      get: {
+        tags: ["AdminTasks"],
+        summary: "全部定时调度配置",
+        responses: {
+          "200": { description: "调度配置列表" },
+        },
+      },
+    },
+
+    "/api/admin/tasks/schedules/{jobId}": {
+      put: {
+        tags: ["AdminTasks"],
+        summary: "设置定时自动运行",
+        parameters: [
+          {
+            name: "jobId",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  enabled: { type: "boolean" },
+                  everyMinutes: {
+                    type: "integer",
+                    minimum: 5,
+                    maximum: 10080,
+                    description: "运行间隔（分钟）",
+                  },
+                },
+                required: ["enabled", "everyMinutes"],
+              },
+            },
+          },
+        },
+        responses: {
+          "200": { description: "已保存的调度配置" },
+          "400": jsonError("请求体不合法"),
+          "404": jsonError("未知 job"),
+        },
+      },
+      delete: {
+        tags: ["AdminTasks"],
+        summary: "清除定时调度（停用）",
+        parameters: [
+          {
+            name: "jobId",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": { description: "已停用" },
         },
       },
     },

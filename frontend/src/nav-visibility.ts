@@ -12,7 +12,6 @@ const VISIBLE_PATHS = new Set([
   "/trending",
   "/trending-shift",
   "/starred",
-  "/admin", // SQLite 工作台（开发工具）
 ]);
 
 /** 可见路径前缀（域包的子路由组，如 /edu、/starred/$id）。 */

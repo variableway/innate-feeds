@@ -63,7 +63,7 @@ innate-feeds/
 │   │   ├── pages/            # Business pages (trending, starred, digest, topics, feeds, settings, admin) — page.tsx only
 │   │   ├── components/       # Business components (FeedCard, FilterBar, TopicRepoCard, …) — no shell chrome
 │   │   ├── hooks/            # usePersistedFeedFilters, use-digest-list, use-page-size, use-topics
-│   │   ├── services/         # API client (feeds.ts, topics.ts, external.ts, admin-db.ts, hidden.ts) — API + static modes
+│   │   ├── services/         # API client (feeds.ts, topics.ts, external.ts, hidden.ts) — API + static modes
 │   │   ├── types/            # TypeScript domain types (feed.ts, topics.ts)
 │   │   ├── lib/              # utils.ts (cn, formatNumber, formatDate), feed-filters-storage.ts
 │   │   └── styles.css        # Tailwind CSS v4 theme + dark mode
@@ -74,6 +74,22 @@ innate-feeds/
 │   │   ├── dev.ts            # Dev server: /api proxy, rebuild on change (src + ../shared + ../dsh), SSE live reload
 │   │   └── preview.ts        # Static server for dist/ (replaces `vite preview`)
 │   ├── package.json          # name: @innate/domain-feeds; @innate/ui + @innate/web-domain via innate-fe-cli install
+│   └── tsconfig.json
+├── admin/                   # @innate/domain-admin — 后台管理独立项目（issue #70：采集任务可视化 + SQLite 工作台，innate-fe 方式 = @innate/ui + admin-composites）
+│   ├── src/
+│   │   ├── index.ts          # export { webDomain }
+│   │   ├── web-domain.tsx    # createWebDomain("admin"): /admin/tasks + /admin/sqlite 路由 + navItems
+│   │   ├── domain-layout.tsx # admin business-area layout (scroll container)
+│   │   ├── host-shell.tsx    # 独立宿主紧凑左栏（host-only）
+│   │   ├── main.tsx          # 独立宿主入口（host-only）
+│   │   ├── pages/            # tasks/page.tsx（任务面板）、sqlite/page.tsx（自 frontend/src/pages/admin 迁入）
+│   │   ├── components/       # task-status-badge / run-log-dialog / schedule-dialog
+│   │   ├── services/         # admin-tasks.ts（/api/admin/tasks/*）、admin-db.ts（/api/admin/db/*，迁入）
+│   │   ├── types/            # tasks.ts — 任务后台 wire 类型
+│   │   └── lib/              # utils.ts (cn, formatDuration/formatRelative)
+│   ├── scripts/              # Bun build toolchain（dev :3001 代理 /api → :4000；build；preview :4174）
+│   ├── plugin.json           # innate.plugin.v1, kind: "domain", id: admin, order 50
+│   ├── package.json          # name: @innate/domain-admin; @innate/ui + @innate/admin-composites + @innate/web-domain
 │   └── tsconfig.json
 ├── topics/                   # 域插件包（M0 收编 dsh + edu-animate；每个一级 topic 一个包，见 docs/research/projects/topic-platform-redesign.md）
 │   ├── dsh/                      # @innate/domain-dsh — DSH plugin directory domain plugin (issue #13 拆分)
@@ -105,7 +121,7 @@ innate-feeds/
 │   │   └── tsconfig.json
 ├── docs/                    # Documentation
 ├── tasks/                   # Task working directories
-├── package.json             # Root bun workspace (workspaces: backend, frontend, dsh, edu-animate)
+├── package.json             # Root bun workspace (workspaces: backend, frontend, admin, topics/*)
 └── CLAUDE.md
 ```
 
@@ -165,6 +181,32 @@ The Bun dev server (`frontend/scripts/dev.ts`) proxies `/api` requests to `http:
 The DSH plugin browser is a separate domain plugin (`@innate/domain-dsh`, `topics/dsh/`) composed into the same standalone app by `frontend/src/main.tsx` (same sidebar and theme; issue #13 split). The Hono backend prefers `~/.innate/awesome-dsh/plugin-catalog.json` (`INNATE_HOME` controls the root; `DSH_PLUGIN_DATA_DIR` can point at an alternate legacy data directory) via the extracted datasource in `backend/src/dsh/`; the legacy YAML files are still the fallback. Static mode ships the same catalog as `frontend/public/data/plugins.json`, exported by `backend/src/dsh/export.ts`; `topics/dsh/src/services/plugins.ts` mirrors the backend's search/sort/pagination client-side. This generated catalog is intentionally local-only and not committed.
 
 Refresh the Awesome DSH catalog with `bun run data:sync:awesome-dsh` from the root. It reads the upstream format-1 market index and enriches Stars through GitHub GraphQL; then run `bun run data:export` to regenerate `plugins.json`. Daily and window Pages syncs run this automatically in CI, but only the build artifact is uploaded—not the collected JSON.
+
+### 后台管理项目（`admin/`，issue #70）
+
+独立的后端管理控制台（innate-fe 方式：@innate/ui + @innate/admin-composites，webDomain 路由），
+可视化 M-Sync 采集任务（手动触发 / 运行日志 / 运行历史 / 定时自动运行），并承接 SQLite 工作台
+（自 `frontend/src/pages/admin` 迁入）。仅 API 模式（依赖本地 Hono 后端）。
+
+```bash
+# 与前端同法：dev server 端口 3001，/api 代理到 :4000
+bun run dev:admin            # 从仓库根（= cd admin && bun run dev）
+cd admin && bun run build    # 生产构建到 admin/dist/
+cd admin && bun run preview  # 静态预览（端口 4174，同样代理 /api）
+
+# 后台任务 API（须先跑 backend；--no-admin / ADMIN_DB_UI=off 会一并关闭）
+curl http://localhost:3001/api/admin/tasks/jobs            # 任务注册表 + 状态 + 调度
+curl -X POST http://localhost:3001/api/admin/tasks/jobs/<id>/run   # 手动触发（子进程 cli sync job <id>）
+curl "http://localhost:3001/api/admin/tasks/runs?limit=20" # 运行历史
+curl http://localhost:3001/api/admin/tasks/runs/<runId>    # 运行详情 + 日志尾部
+curl -X POST http://localhost:3001/api/admin/tasks/runs/<runId>/cancel
+curl -X PUT http://localhost:3001/api/admin/tasks/schedules/<jobId> \
+  -H "Content-Type: application/json" -d '{"enabled":true,"everyMinutes":60}'   # 定时自动运行
+```
+
+运行与调度落在 `$INNATE_HOME/admin/tasks/`（runs.json / schedules.json / logs/）；
+运行器以子进程执行 `bun src/app/cli.ts sync job <id>`（不进 API 进程内采集，见
+`backend/src/app/task-runner.ts` 头注）。任务面板运行中 5s 轮询、空闲 15s。
 
 ### Sync data from GitHub
 
@@ -419,10 +461,17 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | PUT / DELETE | `/api/admin/db/queries/:id` | Update / delete a saved SQL. |
 | POST | `/api/admin/db/json/scan` | Scan JSON dir (default `~/.innate`, override `ADMIN_JSON_DIR`) into the temp `json_documents` registry. |
 | GET | `/api/admin/db/json/files` | Registered JSON files. |
+| GET | `/api/admin/tasks/jobs` | 采集任务注册表（SYNC_JOBS）+ 运行状态 + 调度配置（issue #70）。 |
+| POST | `/api/admin/tasks/jobs/:id/run` | 手动触发一次后台运行（子进程 `cli sync job <id>`；同 job 并发返回 409）。 |
+| GET | `/api/admin/tasks/runs` | 运行历史（`?jobId=` 过滤、`?limit=` 默认 50 最大 200）。 |
+| GET | `/api/admin/tasks/runs/:runId` | 运行详情 + 日志尾部（≤200KB）。 |
+| POST | `/api/admin/tasks/runs/:runId/cancel` | 取消运行中的任务（kill 子进程）。 |
+| GET | `/api/admin/tasks/schedules` | 全部定时调度配置。 |
+| PUT / DELETE | `/api/admin/tasks/schedules/:jobId` | 设置 `{enabled, everyMinutes}`（5 ~ 10080）/ 停用调度。 |
 
 ### Admin workspace (`/admin`)
 
-Simplified SQLite workbench served by the backend in API mode (not available in static/Pages mode): left = tables with row counts, center = CodeMirror SQL editor (highlighting, Ctrl/Cmd+Enter) + result table, right = saved SQL. On by default — **disable with `--no-admin` or `ADMIN_DB_UI=off`** (convenience script `bun run dev:no-admin`). Query logic lives in `backend/src/app/admin-db.ts`; UI in `frontend/src/pages/admin/page.tsx`.
+Simplified SQLite workbench + 采集任务后台（issue #70）, API mode only (not available in static/Pages mode): SQLite 左 = tables with row counts, center = CodeMirror SQL editor (highlighting, Ctrl/Cmd+Enter) + result table, right = saved SQL；任务页 = 任务注册表 / 手动触发 / 日志 / 运行历史 / 定时调度。On by default — **disable with `--no-admin` or `ADMIN_DB_UI=off`** (convenience script `bun run dev:no-admin`; 该开关同时关闭 `/api/admin/tasks/*` 与调度器). Query logic lives in `backend/src/app/admin-db.ts`; 任务运行器/调度在 `backend/src/app/task-runner.ts` + `admin-tasks.ts`；**UI 已迁至独立后台项目 `admin/`**（`admin/src/pages/sqlite/page.tsx` + `admin/src/pages/tasks/page.tsx`，dev 端口 3001）。
 
 ### Sync pipeline
 
@@ -503,7 +552,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `services/hidden.ts` tracks user-hidden items (localStorage + `/api/feeds/hide`; static mode also merges the exported `hidden.json`). `feeds.ts` filters them out of every list/detail response.
 - `styles.css` defines a Tailwind v4 theme with CSS custom properties and a `.dark` variant. **sprint-3 起基色为 AIHot 调色板**（纸感底/teal accent，`--sidebar` 用 sunk 档），叠加 ink/hot/rank 色阶与 radius 六档扩展层；shadcn token 名不变。Additional themes available via `themes/linear.css` and `themes/notion.css`.
 - **AIHot 布局原语**在 `frontend/src/components/layout/`（ReadingLayout / EmptyState / PillTabs）；热点榜组件 `components/hot-board.tsx`（trending 页三层结构）。
-- **导航可见性**（host 裁量）：`frontend/src/nav-visibility.ts` 决定侧栏露出——主页 / Trending / Trending Shift / Starred / 主题组（EDU、UI/UX Design）/ SQLite(admin)；digest/topics/feeds/dsh 为 hidden（路由保留 URL 直达）。「主题」组按域包 navItems `group: "主题"` 约定挂入，新增 `topics/<id>/` 域包即自动出现。
+- **导航可见性**（host 裁量）：`frontend/src/nav-visibility.ts` 决定侧栏露出——主页 / Trending / Trending Shift / Starred / 主题组（EDU、UI/UX Design）；digest/topics/feeds/dsh 为 hidden（路由保留 URL 直达）。「主题」组按域包 navItems `group: "主题"` 约定挂入，新增 `topics/<id>/` 域包即自动出现。SQLite / 任务后台已迁往独立 `admin/` 项目（issue #70）。
 
 ## Where to make changes
 
@@ -511,7 +560,9 @@ Schema is defined in `backend/src/db/schema.sql`:
 |---|---|
 | Adding or changing API endpoints | `backend/src/app/server.ts` |
 | Changing the admin DB workspace API | `backend/src/app/admin-db.ts`, `backend/src/data/admin-saved-queries.ts` |
-| Changing the admin workspace UI | `frontend/src/pages/admin/page.tsx`, `frontend/src/services/admin-db.ts` |
+| Changing the SQLite workbench UI | `admin/src/pages/sqlite/page.tsx`, `admin/src/services/admin-db.ts`（issue #70 迁出自 frontend） |
+| Changing the 采集任务后台（运行 / 调度 / 日志） | `backend/src/app/task-runner.ts`, `backend/src/app/admin-tasks.ts`, `backend/src/data/task-runs-store.ts`, `admin/src/pages/tasks/page.tsx`, `admin/src/services/admin-tasks.ts` |
+| Changing the admin console host shell / theme | `admin/src/host-shell.tsx`, `admin/src/styles.css`（AIHot 主题与 frontend/src/styles.css 统一） |
 | Changing how repos are fetched from GitHub | `backend/src/collectors/core/github.ts` |
 | Changing trending/starred/window sync | `backend/src/collectors/core/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
 | Changing the 90-day window / README prefetch | `backend/src/collectors/core/sync-window.ts` |

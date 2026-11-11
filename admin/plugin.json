@@ -1,0 +1,12 @@
+{
+  "protocol": "innate.plugin.v1",
+  "kind": "domain",
+  "id": "admin",
+  "name": "Innate Admin",
+  "description": "采集任务可视化后台 + SQLite 工作台（issue #70）",
+  "version": "0.1.0",
+  "entry": "src/index.ts",
+  "outlet": "app",
+  "capabilities": ["navItems"],
+  "order": 50
+}

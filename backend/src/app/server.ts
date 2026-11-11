@@ -6,6 +6,8 @@ import { swaggerUI } from "@hono/swagger-ui";
 import { z } from "zod";
 import { getOpenApiSpec } from "./openapi.js";
 import { adminDbRouter } from "./admin-db.js";
+import { adminTasksRouter } from "./admin-tasks.js";
+import { startTaskScheduler, describeScheduler } from "./task-runner.js";
 import {
   getDb,
   getFeedItems,
@@ -71,6 +73,9 @@ export const adminDbEnabled = !(
 );
 if (adminDbEnabled) {
   app.route("/", adminDbRouter);
+  // 采集任务后台（issue #70）：/api/admin/tasks/* + 定时调度器
+  app.route("/", adminTasksRouter);
+  startTaskScheduler();
 }
 
 /** Liveness probe (opens the database). */
@@ -664,6 +669,9 @@ const webRoot = mountWebsite(app);
 console.log(`Feeds server running on ${listenLabel}`);
 console.log(
   `Admin DB workspace: ${adminDbEnabled ? "enabled" : "disabled"} (default enabled; --no-admin / ADMIN_DB_UI=off to disable)`,
+);
+console.log(
+  `Admin tasks API: ${adminDbEnabled ? "enabled" : "disabled"} (scheduler: ${adminDbEnabled ? describeScheduler() : "off"})`,
 );
 if (webRoot) {
   console.log(`Website: ${listenLabel}  (from ${webRoot})`);

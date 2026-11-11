@@ -13,7 +13,6 @@ import { DigestPage } from "@/pages/digest/page";
 import { FeedsPage } from "@/pages/feeds/page";
 import { FeedsSourcePage } from "@/pages/feeds/source-page";
 import { SettingsPage } from "@/pages/settings/page";
-import { AdminPage } from "@/pages/admin/page";
 import { EXTERNAL_SOURCE_VIEWS } from "@/types/external";
 
 /**
@@ -112,11 +111,6 @@ export const webDomain = createWebDomain("feeds")
         path: "/settings",
         component: SettingsPage,
       }),
-      createRoute({
-        getParentRoute: () => layout,
-        path: "/admin",
-        component: AdminPage,
-      }),
     ];
 
     return layout.addChildren(routes as never) as unknown as AnyRoute;
@@ -186,13 +180,7 @@ export const webDomain = createWebDomain("feeds")
       order: 22 + idx,
       group: "Feeds",
     })),
-    {
-      label: "SQLite",
-      path: "/admin",
-      icon: "Database",
-      order: 40,
-      group: "Admin",
-    },
+    // SQLite 工作台已迁往独立后台项目 admin/（issue #70）
   ])
   .addCapability("homeTile", {
     title: "Feeds",

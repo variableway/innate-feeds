@@ -51,7 +51,7 @@ function previewValue(value: unknown): string {
   return text.length > 120 ? `${text.slice(0, 120)}…` : text;
 }
 
-export function AdminPage() {
+export function SqlitePage() {
   const [tables, setTables] = useState<AdminDbTable[]>([]);
   const [tablesError, setTablesError] = useState<string | null>(null);
   const [selectedTable, setSelectedTable] = useState<string | null>(null);

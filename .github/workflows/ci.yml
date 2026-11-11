@@ -70,6 +70,10 @@ jobs:
         working-directory: innate-feeds
         run: cd frontend && bun run typecheck
 
+      - name: Type check admin console
+        working-directory: innate-feeds
+        run: cd admin && bun run typecheck
+
       - name: Type check dsh domain
         working-directory: innate-feeds
         run: cd topics/dsh && bun run typecheck
@@ -133,3 +137,7 @@ jobs:
       - name: Build frontend
         working-directory: innate-feeds
         run: bun run build
+
+      - name: Build admin console
+        working-directory: innate-feeds
+        run: cd admin && bun run build
