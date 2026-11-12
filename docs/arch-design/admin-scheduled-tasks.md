@@ -30,6 +30,25 @@
    对话框对运行中任务每 2s 轮询并自动跟随底部（用户上翻后停止跟随）。
 4. **文档**：本文档。
 
+### 2.1 DB 标签分组（2026-11-12 追加）
+
+任务分组不再依赖代码里的 `group` 常量，改为 SQLite 表驱动：
+
+| 表 | 内容 |
+|---|---|
+| `task_tags` | 标签字典：`slug` / `label` / `sort_order`，当前四个：`github` / `dsh` / `topics` / `news` |
+| `task_job_tags` | `job_id` ↔ `tag_id` 多对多（`job_id` = `SYNC_JOBS.id`） |
+
+- **播种**：`backend/src/data/task-tags-store.ts` 的 `DEFAULT_JOB_TAGS` 在表为空时写入默认映射
+  （github 8 / dsh 1 / topics 4 / news 8 = 21 个任务）；之后**以库为准**，不会覆盖手工修改。
+- **维护**：后台 SQLite 工作台直接增删 `task_job_tags`（或 `PUT /api/admin/tasks/jobs/:id/tags`）即生效。
+- **读取**：`GET /api/admin/tasks/jobs` 每个 job 返回 `tags: [{slug,label}]`，顶层返回标签字典 + 计数。
+- **批量**：`POST /api/admin/tasks/jobs/run-batch` 支持 `{ tag }`，按标签取该组全部任务。
+- **UI**：任务表按主标签（`sort_order` 最小的标签）分组排列，分组行显示「标签 · N 个任务 · M 运行中」；
+  行内仍展示该任务的全部标签；批量工具栏为每个标签提供一键启动。
+- 测试：`backend/src/data/task-tags-store.test.ts` + `backend/src/app/admin-tasks.test.ts`
+  （顺带修复 `INNATE_HOME` 在模块加载时被冻结导致测试写到真实库的隔离缺陷，见 `backend/src/db/paths.ts`）。
+
 验收（已通过）：typecheck（backend + admin）通过；`run-batch` 未知 job → 409 + 条目错误，空 body → 400；
 真实批量启动 `hackernews` + `lobsters` → 两条 `success`、日志可读。
 
@@ -122,7 +141,9 @@
 |---|---|---|
 | GET | `/api/admin/tasks/schedules` | v2 字段 + `nextRunAt`；兼容返回 v1 字段（`everyMinutes`） |
 | PUT | `/api/admin/tasks/schedules/:jobId` | body 扩展 `kind` / `cron` / `timezone` / `overlapPolicy` / `catchUpPolicy` / `jitterSeconds`；Zod 校验（cron 用解析器试算下一次） |
-| POST | `/api/admin/tasks/jobs/run-batch` | 已实现（P0）；P1 增加 `{ dryRun: true }` 返回将启动的清单 |
+| POST | `/api/admin/tasks/jobs/run-batch` | 已实现（P0）；支持 `{ jobIds }` / `{ group }` / `{ tag }`；P1 增加 `{ dryRun: true }` 返回将启动的清单 |
+| GET | `/api/admin/tasks/tags` | 标签字典 + 每标签任务数（DB 驱动） |
+| PUT | `/api/admin/tasks/jobs/:id/tags` | 覆盖式设置任务标签（未知 slug → 400） |
 | GET | `/api/admin/tasks/health` | 新增聚合健康 |
 | POST | `/api/admin/tasks/schedules/stop-all` | 新增「全部停止」：取消运行中子进程 + 关闭全部调度 |
 | GET | `/api/admin/tasks/runs` | 新增 `trigger` / `status` / `since` 过滤 |
@@ -212,6 +233,8 @@ cron 解析建议引入 `cron-parser`（纯 JS、支持 IANA 时区、无 native
 | `backend/src/app/task-runner.ts` | 子进程启动 / 取消 / 全局并发上限 / 调度 tick |
 | `backend/src/app/admin-tasks.ts` | `/api/admin/tasks/*` 路由（含 `run-batch`） |
 | `backend/src/data/task-runs-store.ts` | `runs.json` / `schedules.json` / 日志读写与保留 |
+| `backend/src/data/task-tags-store.ts` | 任务标签：播种默认映射、读取 `task_tags`/`task_job_tags`、覆盖式更新 |
+| `backend/src/db/schema.sql` | `task_tags` / `task_job_tags` 建表与索引 |
 | `admin/src/pages/tasks/page.tsx` | 任务列表 / 批量启动 / 运行历史 |
 | `admin/src/components/run-log-dialog.tsx` | 日志对话框（运行中 2s 实时刷新） |
 | `admin/src/components/schedule-dialog.tsx` | 单 job 调度对话框（P1 将扩展 cron） |

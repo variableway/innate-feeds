@@ -18,7 +18,8 @@
   （innate-fe 方式：@innate/ui + admin-composites + webDomain 路由）——任务注册表可视化、手动触发、
   运行日志/历史、定时自动运行；SQLite 工作台自 frontend 迁入。API 见 `/api/admin/tasks/*`。
   2026-11-12 增补：按分组/勾选**批量启动**（`run-batch`）、全局并发上限 4、单任务**实时日志**；
-  调度演进（cron / 补跑 / 依赖编排）设计见
+  任务分组改为 **SQLite 标签驱动**（`task_tags` / `task_job_tags`：github / dsh / topics / news），
+  后台按主标签分组排列；调度演进（cron / 补跑 / 依赖编排）设计见
   [arch-design/admin-scheduled-tasks.md](../arch-design/admin-scheduled-tasks.md)。
 - **Topic 平台重构**（[research/projects/topic-platform-redesign](../research/projects/topic-platform-redesign.md)）：M0 目录重构已执行并合入 main；下一步 **M1 热度引擎**（curation/ + 三新表 + `sync hot` + `/api/hot`，≈2 天，零 LLM），观察两周后定 M2。
 - 未完成项 issue：M2 Topic Hub [#64](https://github.com/variableway/innate-feeds/issues/64) · M3/M4 出口 [#65](https://github.com/variableway/innate-feeds/issues/65) · 数据分离 S2/S1 余项 [#66](https://github.com/variableway/innate-feeds/issues/66) · 文档 v2 / CI 补源 [#67](https://github.com/variableway/innate-feeds/issues/67) · 增加 Topic 查询（分类+步骤，tasks/sprint-4 拆解中）[#68](https://github.com/variableway/innate-feeds/issues/68)

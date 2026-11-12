@@ -198,7 +198,10 @@ cd admin && bun run preview  # 静态预览（端口 4174，同样代理 /api）
 curl http://localhost:3001/api/admin/tasks/jobs            # 任务注册表 + 状态 + 调度
 curl -X POST http://localhost:3001/api/admin/tasks/jobs/<id>/run   # 手动触发（子进程 cli sync job <id>）
 curl -X POST http://localhost:3001/api/admin/tasks/jobs/run-batch \
-  -H "Content-Type: application/json" -d '{"group":"external"}'     # 批量启动（或 {"jobIds":["hackernews"]}）
+  -H "Content-Type: application/json" -d '{"tag":"github"}'         # 按 DB 标签批量启动（或 {"group":"external"} / {"jobIds":[...]}）
+curl http://localhost:3001/api/admin/tasks/tags                   # DB 标签字典（github/dsh/topics/news）+ 任务数
+curl -X PUT http://localhost:3001/api/admin/tasks/jobs/<id>/tags \
+  -H "Content-Type: application/json" -d '{"tags":["github","news"]}'  # 覆盖式改标签
 curl "http://localhost:3001/api/admin/tasks/runs?limit=20" # 运行历史
 curl http://localhost:3001/api/admin/tasks/runs/<runId>    # 运行详情 + 日志尾部
 curl -X POST http://localhost:3001/api/admin/tasks/runs/<runId>/cancel
@@ -463,9 +466,11 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | PUT / DELETE | `/api/admin/db/queries/:id` | Update / delete a saved SQL. |
 | POST | `/api/admin/db/json/scan` | Scan JSON dir (default `~/.innate`, override `ADMIN_JSON_DIR`) into the temp `json_documents` registry. |
 | GET | `/api/admin/db/json/files` | Registered JSON files. |
-| GET | `/api/admin/tasks/jobs` | 采集任务注册表（SYNC_JOBS）+ 运行状态 + 调度配置（issue #70）。 |
+| GET | `/api/admin/tasks/jobs` | 采集任务注册表（SYNC_JOBS）+ 运行状态 + 调度配置 + **DB 标签**（每个 job 的 `tags` + 顶层 `tags` 字典/计数，issue #70）。 |
 | POST | `/api/admin/tasks/jobs/:id/run` | 手动触发一次后台运行（子进程 `cli sync job <id>`；同 job 并发返回 409）。 |
-| POST | `/api/admin/tasks/jobs/run-batch` | 批量/一键启动：body `{ jobIds?: string[], group?: "core"\|"external"\|"topics"\|"vertical"\|"pipeline" }`，逐条返回 `{ jobId, run?, error? }`；全局并发上限 4（超出该条目返回错误，201/409 表示是否有任务启动）。 |
+| POST | `/api/admin/tasks/jobs/run-batch` | 批量/一键启动：body `{ jobIds?: string[], group?: "core"\|"external"\|"topics"\|"vertical"\|"pipeline", tag?: "github"\|"dsh"\|"topics"\|"news" }`，逐条返回 `{ jobId, run?, error? }`；全局并发上限 4（超出该条目返回错误，201/409 表示是否有任务启动）。 |
+| GET | `/api/admin/tasks/tags` | DB 标签字典 `task_tags` + 每个标签下的任务数。 |
+| PUT | `/api/admin/tasks/jobs/:id/tags` | 覆盖式设置任务标签 `{ tags: string[] }`（写入 `task_job_tags`；未知 slug 返回 400）。 |
 | GET | `/api/admin/tasks/runs` | 运行历史（`?jobId=` 过滤、`?limit=` 默认 50 最大 200）。 |
 | GET | `/api/admin/tasks/runs/:runId` | 运行详情 + 日志尾部（≤200KB）。 |
 | POST | `/api/admin/tasks/runs/:runId/cancel` | 取消运行中的任务（kill 子进程）。 |
@@ -474,7 +479,7 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 
 ### Admin workspace (`/admin`)
 
-Simplified SQLite workbench + 采集任务后台（issue #70）, API mode only (not available in static/Pages mode): SQLite 左 = tables with row counts, center = CodeMirror SQL editor (highlighting, Ctrl/Cmd+Enter) + result table, right = saved SQL；任务页 = 任务注册表 / 手动触发 / 日志 / 运行历史 / 定时调度。On by default — **disable with `--no-admin` or `ADMIN_DB_UI=off`** (convenience script `bun run dev:no-admin`; 该开关同时关闭 `/api/admin/tasks/*` 与调度器). Query logic lives in `backend/src/app/admin-db.ts`; 任务运行器/调度在 `backend/src/app/task-runner.ts` + `admin-tasks.ts`；**UI 已迁至独立后台项目 `admin/`**（`admin/src/pages/sqlite/page.tsx` + `admin/src/pages/tasks/page.tsx`，dev 端口 3001）。
+Simplified SQLite workbench + 采集任务后台（issue #70）, API mode only (not available in static/Pages mode): SQLite 左 = tables with row counts, center = CodeMirror SQL editor (highlighting, Ctrl/Cmd+Enter) + result table, right = saved SQL；任务页 = 任务注册表 / **DB 标签分组（task_tags/task_job_tags）** / 手动 + 批量触发 / 实时日志 / 运行历史 / 定时调度。On by default — **disable with `--no-admin` or `ADMIN_DB_UI=off`** (convenience script `bun run dev:no-admin`; 该开关同时关闭 `/api/admin/tasks/*` 与调度器). Query logic lives in `backend/src/app/admin-db.ts`; 任务运行器/调度在 `backend/src/app/task-runner.ts` + `admin-tasks.ts`；**UI 已迁至独立后台项目 `admin/`**（`admin/src/pages/sqlite/page.tsx` + `admin/src/pages/tasks/page.tsx`，dev 端口 3001）。
 
 ### Sync pipeline
 
@@ -502,6 +507,8 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `starred_repo_topics` — many-to-many topics for starred repos.
 - `trending_snapshots` — historical snapshot analytics table (defined but not yet written to by sync code).
 - `hot_snapshots` — GitHub Hot ranked snapshots (GH #63, M1): one ranked list per day, `rule_version` travels with every row; kept ≤30 days by `saveHotSnapshot`. Built by `backend/src/curation/heat.ts` (`cli sync hot`).
+- `task_tags` — 采集任务标签字典（`github` / `dsh` / `topics` / `news`），issue #70 跟进；首次读取时由 `backend/src/data/task-tags-store.ts` 播种。
+- `task_job_tags` — 任务 ↔ 标签多对多（`job_id` = SYNC_JOBS.id）。分组以库为准，可直接在 SQLite 工作台增删；后台任务页按主标签（`sort_order` 最小）分组排列。
 
 ## Code organization and conventions
 
@@ -570,6 +577,7 @@ Schema is defined in `backend/src/db/schema.sql`:
 | Changing the admin DB workspace API | `backend/src/app/admin-db.ts`, `backend/src/data/admin-saved-queries.ts` |
 | Changing the SQLite workbench UI | `admin/src/pages/sqlite/page.tsx`, `admin/src/services/admin-db.ts`（issue #70 迁出自 frontend） |
 | Changing the 采集任务后台（运行 / 调度 / 日志） | `backend/src/app/task-runner.ts`, `backend/src/app/admin-tasks.ts`, `backend/src/data/task-runs-store.ts`, `admin/src/pages/tasks/page.tsx`, `admin/src/services/admin-tasks.ts` |
+| Changing 任务标签 / 分组（github·dsh·topics·news） | `backend/src/data/task-tags-store.ts`, `backend/src/db/schema.sql`（`task_tags` / `task_job_tags`），默认映射在 `DEFAULT_JOB_TAGS`；后台可直接用 SQLite 工作台改表 |
 | Changing the admin console host shell / theme | `admin/src/host-shell.tsx`, `admin/src/styles.css`（AIHot 主题与 frontend/src/styles.css 统一） |
 | Changing how repos are fetched from GitHub | `backend/src/collectors/core/github.ts` |
 | Changing trending/starred/window sync | `backend/src/collectors/core/sync.ts`, `sync-window.ts`, `firecrawl.ts` |
