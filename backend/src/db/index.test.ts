@@ -134,7 +134,9 @@ describe("Database schema", () => {
     expect(tableNames).toContain("trending_repo_topics");
     expect(tableNames).toContain("starred_repos");
     expect(tableNames).toContain("starred_repo_topics");
-    expect(tableNames).toContain("trending_snapshots");
+    expect(tableNames).toContain("hot_snapshots");
+    // Removed 2026-11-12: never written by any collector, duplicated trending_repos.
+    expect(tableNames).not.toContain("trending_snapshots");
   });
 
   it("enforces period CHECK constraint", () => {

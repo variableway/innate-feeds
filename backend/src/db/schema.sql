@@ -55,18 +55,11 @@ CREATE TABLE IF NOT EXISTS starred_repo_topics (
   PRIMARY KEY (repo_id, topic)
 );
 
--- Historical trending snapshots for analytics (currently unused by sync code).
-CREATE TABLE IF NOT EXISTS trending_snapshots (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  snapshot_date TEXT NOT NULL,
-  period TEXT NOT NULL CHECK(period IN ('daily', 'weekly', 'monthly')),
-  repo_id INTEGER NOT NULL,
-  rank INTEGER,
-  stars_at_time INTEGER NOT NULL,
-  stars_gained INTEGER,
-  fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
-  UNIQUE(snapshot_date, period, repo_id)
-);
+-- 2026-11-12: removed the unused `trending_snapshots` analytics table.
+-- It was defined but never written by any collector (0 rows), and the same
+-- date/period facts already live on `trending_repos.snapshot_date` / `period`.
+-- The DROP keeps already-created databases converging on the slim schema.
+DROP TABLE IF EXISTS trending_snapshots;
 
 -- GitHub Hot (GH #63, M1 heat engine): one ranked snapshot per day.
 -- heat = Σ per independent source weight × 2^(-hours since first_seen / 24),
@@ -119,9 +112,6 @@ CREATE INDEX IF NOT EXISTS idx_trending_repo_topics_topic ON trending_repo_topic
 CREATE INDEX IF NOT EXISTS idx_starred_repos_language ON starred_repos(language);
 CREATE INDEX IF NOT EXISTS idx_starred_repos_stars ON starred_repos(stars);
 CREATE INDEX IF NOT EXISTS idx_starred_repo_topics_topic ON starred_repo_topics(topic);
-
-CREATE INDEX IF NOT EXISTS idx_trending_snapshots_date ON trending_snapshots(snapshot_date);
-CREATE INDEX IF NOT EXISTS idx_trending_snapshots_period ON trending_snapshots(period);
 
 -- Full-text search (FTS5) mirrors for keyword search with BM25 ranking.
 -- External-content tables: the text stays in the repo tables, triggers keep

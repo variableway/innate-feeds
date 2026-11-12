@@ -505,10 +505,12 @@ Schema is defined in `backend/src/db/schema.sql`:
 - `trending_repo_topics` — many-to-many topics for trending repos.
 - `starred_repos` — starred repository metadata (integer PK = GitHub repo ID, includes `starred_at`).
 - `starred_repo_topics` — many-to-many topics for starred repos.
-- `trending_snapshots` — historical snapshot analytics table (defined but not yet written to by sync code).
-- `hot_snapshots` — GitHub Hot ranked snapshots (GH #63, M1): one ranked list per day, `rule_version` travels with every row; kept ≤30 days by `saveHotSnapshot`. Built by `backend/src/curation/heat.ts` (`cli sync hot`).
+- `hot_snapshots` — GitHub Hot ranked snapshots (GH #63, M1): one ranked list per day, `rule_version` travels with every row; kept ≤30 days by `cleanupHotSnapshots`. Built by `backend/src/curation/heat.ts` (`cli sync hot`), served by `/api/hot` and exported to `frontend/public/data/hot`.
 - `task_tags` — 采集任务标签字典（`github` / `dsh` / `topics` / `news`），issue #70 跟进；首次读取时由 `backend/src/data/task-tags-store.ts` 播种。
 - `task_job_tags` — 任务 ↔ 标签多对多（`job_id` = SYNC_JOBS.id）。分组以库为准，可直接在 SQLite 工作台增删；后台任务页按主标签（`sort_order` 最小）分组排列。
+- `admin_saved_queries` — 后台 SQLite 工作台保存的 SQL（`ensureAdminSavedQueries()` 建表并播种 4 条示例）。
+
+逐列说明、行数、写入方与 FTS5 影子表见 [docs/arch-design/database-schema.md](docs/arch-design/database-schema.md)。2026-11-12 已删除从未写入的 `trending_snapshots`（`schema.sql` 保留 `DROP TABLE IF EXISTS` 收敛旧库）。
 
 ## Code organization and conventions
 
