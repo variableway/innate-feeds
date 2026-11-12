@@ -1,9 +1,9 @@
 {
   "topic": "anti-slop",
-  "fetchedAt": "2026-11-11T15:51:50.735Z",
+  "fetchedAt": "2026-11-12T09:12:43.777Z",
   "count": 50,
-  "newCount": 48,
-  "existingCount": 2,
+  "newCount": 1,
+  "existingCount": 4,
   "items": [
     {
       "id": "gh-topic-1162099055",
@@ -13,9 +13,9 @@
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
       "url": "https://github.com/Leonxlnx/taste-skill",
       "homepage": "https://tasteskill.dev",
-      "stars": 113353,
-      "forks": 7632,
-      "watchers": 113353,
+      "stars": 113836,
+      "forks": 7660,
+      "watchers": 113836,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -36,9 +36,9 @@
         "url": "https://github.com/Leonxlnx"
       },
       "createdAt": "2026-02-19T21:44:05Z",
-      "updatedAt": "2026-11-11T15:50:26Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:12:04Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -49,9 +49,9 @@
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "url": "https://github.com/pbakaus/impeccable",
       "homepage": "https://impeccable.style",
-      "stars": 108070,
-      "forks": 6425,
-      "watchers": 108070,
+      "stars": 108586,
+      "forks": 6454,
+      "watchers": 108586,
       "language": "Rust",
       "topics": [
         "agent-skills",
@@ -66,9 +66,9 @@
         "url": "https://github.com/pbakaus"
       },
       "createdAt": "2025-11-16T01:52:04Z",
-      "updatedAt": "2026-11-11T15:49:37Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:11:14Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -79,9 +79,9 @@
       "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
       "url": "https://github.com/miqdadbadjuber/anti-slop",
       "homepage": "https://antislop.ai.id",
-      "stars": 8941,
-      "forks": 607,
-      "watchers": 8941,
+      "stars": 8997,
+      "forks": 615,
+      "watchers": 8997,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -101,9 +101,9 @@
         "url": "https://github.com/miqdadbadjuber"
       },
       "createdAt": "2026-08-07T10:29:56Z",
-      "updatedAt": "2026-11-11T15:42:36Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:30:24Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -114,9 +114,9 @@
       "description": "说人话｜中文优先的去 AI 味改写 skill：保事实、分场景、改完可直接发。Chinese-first rewrite skill for Codex / Claude Code / Cursor / ChatGPT — removes AI tone, preserves facts.",
       "url": "https://github.com/MrGeDiao/shuorenhua",
       "homepage": "https://github.com/MrGeDiao/shuorenhua#readme",
-      "stars": 2589,
+      "stars": 2599,
       "forks": 95,
-      "watchers": 2589,
+      "watchers": 2599,
       "language": "Python",
       "topics": [
         "agent-skill",
@@ -142,9 +142,9 @@
         "url": "https://github.com/MrGeDiao"
       },
       "createdAt": "2026-03-22T17:22:11Z",
-      "updatedAt": "2026-11-11T12:20:20Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:19:38Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -155,9 +155,9 @@
       "description": "Make your agents talk human. ADHD-friendly output styles for Claude Code, Codex, and others. So you can pay attention, not tokens.",
       "url": "https://github.com/alexgreensh/attention-span",
       "homepage": "https://alexgreenshpun.com",
-      "stars": 1565,
+      "stars": 1568,
       "forks": 56,
-      "watchers": 1565,
+      "watchers": 1568,
       "language": "Python",
       "topics": [
         "adhd-friendly",
@@ -178,9 +178,9 @@
         "url": "https://github.com/alexgreensh"
       },
       "createdAt": "2026-08-04T23:20:01Z",
-      "updatedAt": "2026-11-11T15:42:17Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:52:59Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -191,9 +191,9 @@
       "description": "The skillbook for recursive self-improvement (RSI). NVIDIA's latest proof, unpacked with timeless engineering. Distilled from the OpenAI harness engineering hackathon winner's zero-touch method.",
       "url": "https://github.com/LilMGenius/paperthin",
       "homepage": "https://paperthin.ai",
-      "stars": 1423,
-      "forks": 123,
-      "watchers": 1423,
+      "stars": 1433,
+      "forks": 122,
+      "watchers": 1433,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -223,9 +223,9 @@
         "url": "https://github.com/LilMGenius"
       },
       "createdAt": "2026-06-19T02:03:18Z",
-      "updatedAt": "2026-11-11T15:31:19Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:03:04Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -260,8 +260,8 @@
       },
       "createdAt": "2026-07-11T17:23:46Z",
       "updatedAt": "2026-11-11T12:55:31Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -272,9 +272,9 @@
       "description": "Open-source design-method engine for Claude Code, Codex & Cursor. One agent skill with 22 internal workflows for fixed design judgment, multiple grammars, semantic palettes, reference compilation, and evidence-verified UI. MIT.",
       "url": "https://github.com/bitjaru/styleseed",
       "homepage": "https://styleseed-demo.vercel.app",
-      "stars": 1009,
+      "stars": 1010,
       "forks": 95,
-      "watchers": 1009,
+      "watchers": 1010,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -304,10 +304,10 @@
         "url": "https://github.com/bitjaru"
       },
       "createdAt": "2026-04-07T02:32:20Z",
-      "updatedAt": "2026-11-11T12:55:49Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T02:49:30Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1153153658",
@@ -349,8 +349,8 @@
       },
       "createdAt": "2026-02-09T00:52:40Z",
       "updatedAt": "2026-11-08T07:37:05Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -361,9 +361,9 @@
       "description": "AI writing skill that eliminates detectable AI patterns. Works with Claude Code, Codex, Cursor, Gemini CLI, and 8+ other agents.",
       "url": "https://github.com/jalaalrd/anti-ai-slop-writing",
       "homepage": null,
-      "stars": 603,
+      "stars": 607,
       "forks": 65,
-      "watchers": 603,
+      "watchers": 607,
       "language": null,
       "topics": [
         "ai-writing",
@@ -379,9 +379,9 @@
         "url": "https://github.com/jalaalrd"
       },
       "createdAt": "2026-03-27T15:59:07Z",
-      "updatedAt": "2026-11-11T14:12:23Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:49:46Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -392,9 +392,9 @@
       "description": "Design engineering system for AI coding agents — ship UI with craft-level quality. Install as an agent skill.",
       "url": "https://github.com/educlopez/ui-craft",
       "homepage": "https://ui-craft.smoothui.dev",
-      "stars": 450,
+      "stars": 452,
       "forks": 24,
-      "watchers": 450,
+      "watchers": 452,
       "language": "Go",
       "topics": [
         "agent-skills",
@@ -415,9 +415,9 @@
         "url": "https://github.com/educlopez"
       },
       "createdAt": "2026-03-19T11:21:25Z",
-      "updatedAt": "2026-11-11T09:08:50Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:14:14Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -428,9 +428,9 @@
       "description": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
       "url": "https://github.com/mdiri-ai/SoduWork",
       "homepage": "https://www.soduwork.ai",
-      "stars": 305,
-      "forks": 52,
-      "watchers": 305,
+      "stars": 378,
+      "forks": 70,
+      "watchers": 378,
       "language": "JavaScript",
       "topics": [
         "agent-harness",
@@ -460,9 +460,9 @@
         "url": "https://github.com/mdiri-ai"
       },
       "createdAt": "2026-10-29T02:43:14Z",
-      "updatedAt": "2026-11-11T15:48:28Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:09:57Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -473,9 +473,9 @@
       "description": "A UI/UX skill for coding agents to build distinctive, usable interfaces.",
       "url": "https://github.com/smokeeaasd/flawless-ui-ux",
       "homepage": null,
-      "stars": 219,
+      "stars": 223,
       "forks": 7,
-      "watchers": 219,
+      "watchers": 223,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -495,9 +495,9 @@
         "url": "https://github.com/smokeeaasd"
       },
       "createdAt": "2026-11-03T14:36:42Z",
-      "updatedAt": "2026-11-11T15:15:40Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:30:14Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -508,9 +508,9 @@
       "description": "Make AI output sound human. Strips AI-isms (sycophancy, stock vocab, hedging stacks, em-dash pileups), preserves code/URLs/headings. Plugin for Claude Code, Cursor, Windsurf, Codex, Cline, Copilot, Gemini.",
       "url": "https://github.com/MohamedAbdallah-14/unslop",
       "homepage": "https://mohamedabdallah-14.github.io/unslop/",
-      "stars": 186,
+      "stars": 188,
       "forks": 10,
-      "watchers": 186,
+      "watchers": 188,
       "language": "Python",
       "topics": [
         "ai-detection",
@@ -540,9 +540,9 @@
         "url": "https://github.com/MohamedAbdallah-14"
       },
       "createdAt": "2026-04-19T21:31:00Z",
-      "updatedAt": "2026-11-11T13:13:17Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:49:51Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -553,9 +553,9 @@
       "description": "Open-source Agent Skill that finds and removes AI slop from your writing",
       "url": "https://github.com/manavmishra/ZeroSlop",
       "homepage": "https://zero-slop.ai",
-      "stars": 165,
+      "stars": 167,
       "forks": 7,
-      "watchers": 165,
+      "watchers": 167,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -585,9 +585,9 @@
         "url": "https://github.com/manavmishra"
       },
       "createdAt": "2026-08-03T18:55:48Z",
-      "updatedAt": "2026-11-11T15:27:45Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:39:21Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -613,8 +613,8 @@
       },
       "createdAt": "2026-09-02T04:27:46Z",
       "updatedAt": "2026-11-10T08:54:53Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -652,8 +652,8 @@
       },
       "createdAt": "2026-06-18T19:41:25Z",
       "updatedAt": "2026-11-05T18:36:04Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -692,8 +692,8 @@
       },
       "createdAt": "2026-04-06T17:56:29Z",
       "updatedAt": "2026-11-04T09:10:45Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -726,8 +726,8 @@
       },
       "createdAt": "2026-05-31T03:54:04Z",
       "updatedAt": "2026-11-09T11:13:56Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -771,8 +771,8 @@
       },
       "createdAt": "2026-09-23T00:01:36Z",
       "updatedAt": "2026-11-09T17:55:46Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -804,8 +804,8 @@
       },
       "createdAt": "2026-05-01T04:57:25Z",
       "updatedAt": "2026-11-10T19:28:10Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -841,8 +841,8 @@
       },
       "createdAt": "2026-05-27T09:28:26Z",
       "updatedAt": "2026-11-10T16:45:01Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -853,9 +853,9 @@
       "description": "Strips the AI tells out of prose, code, and academic writing. 152 patterns from real AI-vs-human analysis, two-pass rewrite, three-tier scoring. No API key — a markdown skill that runs on the model you already use.",
       "url": "https://github.com/gabelul/slopbuster",
       "homepage": null,
-      "stars": 47,
+      "stars": 48,
       "forks": 5,
-      "watchers": 47,
+      "watchers": 48,
       "language": null,
       "topics": [
         "ai-agent-skills",
@@ -884,8 +884,53 @@
         "url": "https://github.com/gabelul"
       },
       "createdAt": "2026-03-24T00:38:39Z",
-      "updatedAt": "2026-11-10T04:43:47Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
+      "updatedAt": "2026-11-12T04:37:42Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1449531878",
+      "repoId": 1449531878,
+      "fullName": "anhnx000/viet-nhu-nguoi",
+      "name": "viet-nhu-nguoi",
+      "description": "Viết như người: chống giọng văn AI cho tiếng Việt (human voice, Vietnamese humanizer). Skill Claude Code sửa bài ChatGPT/Claude viết cho tự nhiên như người viết: bỏ văn dịch, giọng công văn, lời chatbot. Kèm máy quét 0-100 và công cụ kiểm số liệu.",
+      "url": "https://github.com/anhnx000/viet-nhu-nguoi",
+      "homepage": "https://github.com/anhnx000/vietnamese-humanizer#readme",
+      "stars": 40,
+      "forks": 9,
+      "watchers": 40,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "ai-humanizer",
+        "ai-writing",
+        "anti-slop",
+        "chatgpt",
+        "chong-giong-van-ai",
+        "claude",
+        "claude-code",
+        "claude-skills",
+        "copywriting",
+        "human-voice",
+        "humanize-ai-text",
+        "humanizer",
+        "llm",
+        "nlp",
+        "tieng-viet",
+        "viet-nhu-nguoi",
+        "vietnamese",
+        "vietnamese-nlp",
+        "writing-assistant"
+      ],
+      "owner": {
+        "login": "anhnx000",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/54397779?v=4",
+        "url": "https://github.com/anhnx000"
+      },
+      "createdAt": "2026-11-07T16:25:21Z",
+      "updatedAt": "2026-11-12T05:47:36Z",
+      "firstSeenAt": "2026-11-12T09:12:43.777Z",
       "isNew": true,
       "existing": false
     },
@@ -930,8 +975,8 @@
       },
       "createdAt": "2026-05-05T08:49:45Z",
       "updatedAt": "2026-11-08T15:11:43Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -965,8 +1010,8 @@
       },
       "createdAt": "2026-08-28T07:42:33Z",
       "updatedAt": "2026-11-02T20:25:40Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -977,9 +1022,9 @@
       "description": "Anti-AI Slop UI/UX steering skills — filter, palette, and research tool for Kiro, Claude Code, Cursor, Windsurf, Copilot, and more. Build intentional, branded, accessible interfaces.",
       "url": "https://github.com/Vanszs/Anti-AI-UI",
       "homepage": null,
-      "stars": 28,
+      "stars": 29,
       "forks": 7,
-      "watchers": 28,
+      "watchers": 29,
       "language": "Python",
       "topics": [
         "accessibility",
@@ -1009,9 +1054,9 @@
         "url": "https://github.com/Vanszs"
       },
       "createdAt": "2026-06-19T07:57:39Z",
-      "updatedAt": "2026-11-09T13:28:47Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:50:10Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1050,9 +1095,9 @@
       },
       "createdAt": "2026-04-16T10:37:34Z",
       "updatedAt": "2026-11-02T20:25:59Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1103404322",
@@ -1080,8 +1125,8 @@
       },
       "createdAt": "2025-11-24T20:35:45Z",
       "updatedAt": "2026-09-05T05:26:11Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1115,8 +1160,8 @@
       },
       "createdAt": "2026-06-02T01:38:05Z",
       "updatedAt": "2026-11-02T20:26:45Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1158,8 +1203,8 @@
       },
       "createdAt": "2026-02-28T01:46:08Z",
       "updatedAt": "2026-11-02T20:26:54Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1190,8 +1235,8 @@
       },
       "createdAt": "2026-05-25T14:54:27Z",
       "updatedAt": "2026-11-07T21:42:00Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1227,8 +1272,8 @@
       },
       "createdAt": "2026-06-01T15:01:12Z",
       "updatedAt": "2026-11-02T20:27:21Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1240,7 +1285,7 @@
       "url": "https://github.com/antonio0720/writing-intelligence",
       "homepage": "https://densitysix.com",
       "stars": 14,
-      "forks": 9,
+      "forks": 10,
       "watchers": 14,
       "language": "Python",
       "topics": [
@@ -1272,8 +1317,8 @@
       },
       "createdAt": "2026-03-31T01:26:15Z",
       "updatedAt": "2026-11-08T15:35:59Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1312,8 +1357,8 @@
       },
       "createdAt": "2026-10-18T12:53:08Z",
       "updatedAt": "2026-11-09T22:13:29Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1353,8 +1398,8 @@
       },
       "createdAt": "2026-05-10T13:36:21Z",
       "updatedAt": "2026-10-21T01:15:30Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1395,8 +1440,8 @@
       },
       "createdAt": "2026-04-10T15:27:45Z",
       "updatedAt": "2026-10-03T17:23:33Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1439,9 +1484,9 @@
         "url": "https://github.com/KyaniteLabs"
       },
       "createdAt": "2026-06-05T05:08:09Z",
-      "updatedAt": "2026-11-10T22:53:46Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:05:42Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1483,8 +1528,8 @@
       },
       "createdAt": "2026-07-01T06:25:15Z",
       "updatedAt": "2026-11-10T19:46:48Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1513,8 +1558,8 @@
       },
       "createdAt": "2026-07-17T15:30:44Z",
       "updatedAt": "2026-11-02T20:32:40Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1546,8 +1591,8 @@
       },
       "createdAt": "2026-07-28T10:12:08Z",
       "updatedAt": "2026-10-31T00:09:41Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1591,8 +1636,8 @@
       },
       "createdAt": "2026-06-05T10:36:07Z",
       "updatedAt": "2026-11-02T20:33:11Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1631,8 +1676,8 @@
       },
       "createdAt": "2025-08-23T01:39:01Z",
       "updatedAt": "2026-11-08T02:24:19Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1669,8 +1714,8 @@
       },
       "createdAt": "2026-04-24T17:10:47Z",
       "updatedAt": "2026-11-02T20:33:22Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1702,8 +1747,8 @@
       },
       "createdAt": "2026-10-14T06:47:41Z",
       "updatedAt": "2026-11-10T16:50:30Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1747,8 +1792,8 @@
       },
       "createdAt": "2026-10-03T12:23:11Z",
       "updatedAt": "2026-11-04T10:42:26Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1784,37 +1829,8 @@
       },
       "createdAt": "2026-11-02T17:12:02Z",
       "updatedAt": "2026-11-04T18:53:29Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1266465448",
-      "repoId": 1266465448,
-      "fullName": "Jondolf/ai-commit-check",
-      "name": "ai-commit-check",
-      "description": "A GitHub Action that detects AI-authored commits or AI metadata trailers within a commit range.",
-      "url": "https://github.com/Jondolf/ai-commit-check",
-      "homepage": null,
-      "stars": 6,
-      "forks": 1,
-      "watchers": 6,
-      "language": "Shell",
-      "topics": [
-        "ai",
-        "anti-slop",
-        "ci",
-        "github-actions"
-      ],
-      "owner": {
-        "login": "Jondolf",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/57632562?v=4",
-        "url": "https://github.com/Jondolf"
-      },
-      "createdAt": "2026-06-11T16:35:33Z",
-      "updatedAt": "2026-09-07T15:54:04Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1853,8 +1869,37 @@
       },
       "createdAt": "2026-09-26T10:34:02Z",
       "updatedAt": "2026-11-02T20:33:53Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1266465448",
+      "repoId": 1266465448,
+      "fullName": "Jondolf/ai-commit-check",
+      "name": "ai-commit-check",
+      "description": "A GitHub Action that detects AI-authored commits or AI metadata trailers within a commit range.",
+      "url": "https://github.com/Jondolf/ai-commit-check",
+      "homepage": null,
+      "stars": 6,
+      "forks": 1,
+      "watchers": 6,
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "anti-slop",
+        "ci",
+        "github-actions"
+      ],
+      "owner": {
+        "login": "Jondolf",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/57632562?v=4",
+        "url": "https://github.com/Jondolf"
+      },
+      "createdAt": "2026-06-11T16:35:33Z",
+      "updatedAt": "2026-09-07T15:54:04Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1862,7 +1907,7 @@
       "repoId": 1423733360,
       "fullName": "adrianpeticila/grai",
       "name": "grai",
-      "description": "The gatekeeper and proof engine for human voice. Binary style gate + ECDSA signed audit cards.",
+      "description": "The gatekeeper and proof engine for human voice. Binary style gate + ECDSA signed audit cards. Free AI Tell Checker at grai.page/ai-tells.",
       "url": "https://github.com/adrianpeticila/grai",
       "homepage": "https://grai.page",
       "stars": 6,
@@ -1896,40 +1941,9 @@
         "url": "https://github.com/adrianpeticila"
       },
       "createdAt": "2026-10-17T20:54:22Z",
-      "updatedAt": "2026-11-10T23:02:38Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1178150809",
-      "repoId": 1178150809,
-      "fullName": "FuzulsFriend/deep-research-post-engine",
-      "name": "deep-research-post-engine",
-      "description": "Claude Code skill: researches topics across 5-8 real sources and writes data-backed LinkedIn posts in your voice — not AI writing",
-      "url": "https://github.com/FuzulsFriend/deep-research-post-engine",
-      "homepage": null,
-      "stars": 5,
-      "forks": 1,
-      "watchers": 5,
-      "language": "HTML",
-      "topics": [
-        "ai-writing",
-        "anti-slop",
-        "claude-code",
-        "content-marketing",
-        "linkedin",
-        "skill"
-      ],
-      "owner": {
-        "login": "FuzulsFriend",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/255360241?v=4",
-        "url": "https://github.com/FuzulsFriend"
-      },
-      "createdAt": "2026-03-10T18:32:58Z",
-      "updatedAt": "2026-11-02T20:34:57Z",
-      "firstSeenAt": "2026-11-11T15:51:50.735Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:05:55Z",
+      "firstSeenAt": "2026-11-10T10:57:10.002Z",
+      "isNew": false,
       "existing": false
     }
   ]

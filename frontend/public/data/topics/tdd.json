@@ -1,9 +1,9 @@
 {
   "topic": "tdd",
-  "fetchedAt": "2026-11-11T15:55:09.370Z",
+  "fetchedAt": "2026-11-12T09:17:16.008Z",
   "count": 50,
-  "newCount": 48,
-  "existingCount": 2,
+  "newCount": 0,
+  "existingCount": 3,
   "items": [
     {
       "id": "gh-topic-123572362",
@@ -13,9 +13,9 @@
       "description": "Learn Go with test-driven development",
       "url": "https://github.com/quii/learn-go-with-tests",
       "homepage": null,
-      "stars": 23959,
+      "stars": 23960,
       "forks": 2936,
-      "watchers": 23959,
+      "watchers": 23960,
       "language": "Go",
       "topics": [
         "go",
@@ -30,9 +30,9 @@
         "url": "https://github.com/quii"
       },
       "createdAt": "2018-03-02T11:41:14Z",
-      "updatedAt": "2026-11-10T16:47:32Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:51:13Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -44,7 +44,7 @@
       "url": "https://github.com/mochajs/mocha",
       "homepage": "https://mochajs.org",
       "stars": 22911,
-      "forks": 3145,
+      "forks": 3144,
       "watchers": 22911,
       "language": "JavaScript",
       "topics": [
@@ -67,9 +67,9 @@
         "url": "https://github.com/mochajs"
       },
       "createdAt": "2011-03-07T18:44:25Z",
-      "updatedAt": "2026-11-10T23:33:30Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:05:28Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -80,9 +80,9 @@
       "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
       "url": "https://github.com/catchorg/Catch2",
       "homepage": "https://discord.gg/4CWS9zD",
-      "stars": 21562,
-      "forks": 3442,
-      "watchers": 21562,
+      "stars": 21570,
+      "forks": 3441,
+      "watchers": 21570,
       "language": "C++",
       "topics": [
         "bdd",
@@ -100,9 +100,9 @@
         "url": "https://github.com/catchorg"
       },
       "createdAt": "2010-11-08T18:22:56Z",
-      "updatedAt": "2026-11-11T14:47:45Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:29:00Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -113,9 +113,9 @@
       "description": "Node.js test runner that lets you develop with confidence 🚀",
       "url": "https://github.com/avajs/ava",
       "homepage": null,
-      "stars": 20831,
+      "stars": 20830,
       "forks": 1467,
-      "watchers": 20831,
+      "watchers": 20830,
       "language": "JavaScript",
       "topics": [
         "assert",
@@ -143,9 +143,9 @@
         "url": "https://github.com/avajs"
       },
       "createdAt": "2014-11-18T17:20:26Z",
-      "updatedAt": "2026-11-10T16:54:02Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:48:22Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -157,7 +157,7 @@
       "url": "https://github.com/jasmine/jasmine",
       "homepage": "http://jasmine.github.io/",
       "stars": 15808,
-      "forks": 2237,
+      "forks": 2238,
       "watchers": 15808,
       "language": "JavaScript",
       "topics": [
@@ -173,8 +173,8 @@
       },
       "createdAt": "2008-12-02T23:46:37Z",
       "updatedAt": "2026-11-10T17:10:09Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -206,8 +206,8 @@
       },
       "createdAt": "2010-06-29T21:15:32Z",
       "updatedAt": "2026-11-10T17:52:56Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -218,9 +218,9 @@
       "description": "🦸 AI 编程超能力 · 中文增强版 — superpowers（250k+ ⭐）完整汉化 + 4 个中国原创 skills，让 Claude Code / Copilot CLI / Hermes Agent / Cursor / Windsurf / Kiro / Gemini CLI / Qoder 等 26 款 AI 编程工具真正会干活",
       "url": "https://github.com/jnMetaCode/superpowers-zh",
       "homepage": "https://sp.aiolaola.com",
-      "stars": 8521,
-      "forks": 787,
-      "watchers": 8521,
+      "stars": 8529,
+      "forks": 788,
+      "watchers": 8529,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -246,9 +246,9 @@
         "url": "https://github.com/jnMetaCode"
       },
       "createdAt": "2026-03-20T00:12:39Z",
-      "updatedAt": "2026-11-11T13:51:23Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:39:04Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -277,8 +277,8 @@
       },
       "createdAt": "2011-12-07T08:06:35Z",
       "updatedAt": "2026-11-10T18:12:35Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -289,9 +289,9 @@
       "description": "Entitas is a super fast Entity Component System (ECS) Framework specifically made for C# and Unity",
       "url": "https://github.com/sschmid/Entitas",
       "homepage": null,
-      "stars": 7686,
-      "forks": 1124,
-      "watchers": 7686,
+      "stars": 7687,
+      "forks": 1123,
+      "watchers": 7687,
       "language": "C#",
       "topics": [
         "c-sharp",
@@ -317,9 +317,9 @@
         "url": "https://github.com/sschmid"
       },
       "createdAt": "2014-03-18T16:36:44Z",
-      "updatedAt": "2026-11-11T04:40:24Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:04:00Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -330,9 +330,9 @@
       "description": "The fastest feature-rich C++11/14/17/20/23 single-header testing framework",
       "url": "https://github.com/doctest/doctest",
       "homepage": "https://bit.ly/doctest-docs",
-      "stars": 6918,
+      "stars": 6921,
       "forks": 706,
-      "watchers": 6918,
+      "watchers": 6921,
       "language": "C++",
       "topics": [
         "c-plus-plus",
@@ -356,9 +356,9 @@
         "url": "https://github.com/doctest"
       },
       "createdAt": "2014-08-05T21:43:51Z",
-      "updatedAt": "2026-11-11T15:20:14Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:06:20Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -390,8 +390,8 @@
       },
       "createdAt": "2014-02-07T07:59:29Z",
       "updatedAt": "2026-11-10T18:47:36Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -402,9 +402,9 @@
       "description": "Quick and Easy server testing/validation",
       "url": "https://github.com/goss-org/goss",
       "homepage": "https://goss.rocks",
-      "stars": 6004,
+      "stars": 6005,
       "forks": 504,
-      "watchers": 6004,
+      "watchers": 6005,
       "language": "Go",
       "topics": [
         "devops",
@@ -431,9 +431,9 @@
         "url": "https://github.com/goss-org"
       },
       "createdAt": "2015-10-01T23:13:01Z",
-      "updatedAt": "2026-11-09T05:53:21Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:04:45Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -445,7 +445,7 @@
       "url": "https://github.com/mockk/mockk",
       "homepage": "https://mockk.io",
       "stars": 5769,
-      "forks": 430,
+      "forks": 431,
       "watchers": 5769,
       "language": "Kotlin",
       "topics": [
@@ -466,9 +466,9 @@
         "url": "https://github.com/mockk"
       },
       "createdAt": "2017-10-17T22:31:23Z",
-      "updatedAt": "2026-11-11T04:44:14Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T23:50:29Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -479,9 +479,9 @@
       "description": "Property based testing framework for JavaScript (like QuickCheck) written in TypeScript",
       "url": "https://github.com/dubzzz/fast-check",
       "homepage": "https://fast-check.dev/",
-      "stars": 5247,
+      "stars": 5250,
       "forks": 219,
-      "watchers": 5247,
+      "watchers": 5250,
       "language": "TypeScript",
       "topics": [
         "faker",
@@ -500,9 +500,9 @@
         "url": "https://github.com/dubzzz"
       },
       "createdAt": "2017-10-30T23:41:11Z",
-      "updatedAt": "2026-11-11T11:37:59Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:41:10Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -513,9 +513,9 @@
       "description": " :cyclone: Clean Architecture with .NET6, C#10 and React+Redux. Use cases as central organizing structure, completely testable, decoupled from frameworks",
       "url": "https://github.com/ivanpaulovich/clean-architecture-manga",
       "homepage": "http://paulovich.net/",
-      "stars": 4387,
+      "stars": 4388,
       "forks": 756,
-      "watchers": 4387,
+      "watchers": 4388,
       "language": "C#",
       "topics": [
         "clean-architecture",
@@ -545,9 +545,9 @@
         "url": "https://github.com/ivanpaulovich"
       },
       "createdAt": "2017-12-27T11:58:03Z",
-      "updatedAt": "2026-11-10T10:05:42Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:30:25Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -580,8 +580,8 @@
       },
       "createdAt": "2013-07-28T10:35:25Z",
       "updatedAt": "2026-11-11T11:19:43Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -624,8 +624,8 @@
       },
       "createdAt": "2012-05-29T00:00:02Z",
       "updatedAt": "2026-11-10T16:42:58Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -636,9 +636,9 @@
       "description": "《系统重构与迁移指南》手把手教你分析、评估现有系统、制定重构策略、探索可行重构方案、搭建测试防护网、进行系统架构重构、服务架构重构、模块重构、代码重构、数据库重构、重构后的架构守护",
       "url": "https://github.com/phodal/migration",
       "homepage": "https://migration.ink",
-      "stars": 3468,
+      "stars": 3469,
       "forks": 561,
-      "watchers": 3468,
+      "watchers": 3469,
       "language": "Java",
       "topics": [
         "agile",
@@ -657,9 +657,9 @@
         "url": "https://github.com/phodal"
       },
       "createdAt": "2020-01-08T02:11:38Z",
-      "updatedAt": "2026-11-10T07:31:17Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:04:16Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -693,9 +693,9 @@
         "url": "https://github.com/pester"
       },
       "createdAt": "2011-01-02T03:33:19Z",
-      "updatedAt": "2026-11-11T14:00:37Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T19:43:42Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -723,9 +723,9 @@
         "url": "https://github.com/vim-test"
       },
       "createdAt": "2014-12-15T17:34:43Z",
-      "updatedAt": "2026-11-10T11:08:35Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T18:57:22Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -759,8 +759,8 @@
       },
       "createdAt": "2015-08-28T22:16:01Z",
       "updatedAt": "2026-11-11T03:43:42Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -798,8 +798,8 @@
       },
       "createdAt": "2015-09-30T12:36:43Z",
       "updatedAt": "2026-11-07T22:51:00Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -832,8 +832,8 @@
       },
       "createdAt": "2017-03-23T22:28:13Z",
       "updatedAt": "2026-11-08T11:36:57Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -845,7 +845,7 @@
       "url": "https://github.com/nunit/nunit",
       "homepage": "https://nunit.org/",
       "stars": 2631,
-      "forks": 771,
+      "forks": 772,
       "watchers": 2631,
       "language": "C#",
       "topics": [
@@ -865,9 +865,9 @@
         "url": "https://github.com/nunit"
       },
       "createdAt": "2013-10-18T23:43:29Z",
-      "updatedAt": "2026-11-11T11:19:41Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:03:12Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -908,8 +908,8 @@
       },
       "createdAt": "2015-03-15T20:49:52Z",
       "updatedAt": "2026-11-08T18:03:24Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -946,8 +946,8 @@
       },
       "createdAt": "2011-03-21T18:02:54Z",
       "updatedAt": "2026-11-10T09:19:56Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -978,8 +978,8 @@
       },
       "createdAt": "2025-07-07T09:14:14Z",
       "updatedAt": "2026-11-09T18:03:01Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1009,8 +1009,8 @@
       },
       "createdAt": "2017-10-14T22:39:21Z",
       "updatedAt": "2026-11-09T04:27:59Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1039,8 +1039,8 @@
       },
       "createdAt": "2013-11-09T23:41:32Z",
       "updatedAt": "2026-11-03T17:51:09Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1051,9 +1051,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2251,
-      "forks": 268,
-      "watchers": 2251,
+      "stars": 2287,
+      "forks": 270,
+      "watchers": 2287,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -1083,9 +1083,9 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-11T15:32:57Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:41:25Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1114,8 +1114,8 @@
       },
       "createdAt": "2012-11-05T20:59:59Z",
       "updatedAt": "2026-11-10T07:29:09Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1151,8 +1151,8 @@
       },
       "createdAt": "2011-01-28T14:59:02Z",
       "updatedAt": "2026-10-30T15:48:31Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1163,9 +1163,9 @@
       "description": "Plan, build and review software with your coding agents. Work side by side in the App or browser, or use your favourite terminal or IDE.",
       "url": "https://github.com/maxritter/qualitylayer",
       "homepage": "https://qualitylayer.dev",
-      "stars": 2135,
+      "stars": 2140,
       "forks": 180,
-      "watchers": 2135,
+      "watchers": 2140,
       "language": "Shell",
       "topics": [
         "agent-skills",
@@ -1195,10 +1195,10 @@
         "url": "https://github.com/maxritter"
       },
       "createdAt": "2025-10-18T08:30:23Z",
-      "updatedAt": "2026-11-11T14:43:39Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T06:43:32Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-100339187",
@@ -1209,7 +1209,7 @@
       "url": "https://github.com/jsdecena/laracom",
       "homepage": "https://jsdecena.github.io/laracom",
       "stars": 2040,
-      "forks": 855,
+      "forks": 854,
       "watchers": 2040,
       "language": "PHP",
       "topics": [
@@ -1238,8 +1238,8 @@
       },
       "createdAt": "2017-08-15T04:38:27Z",
       "updatedAt": "2026-11-06T19:25:08Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1270,8 +1270,8 @@
       },
       "createdAt": "2015-03-12T12:09:55Z",
       "updatedAt": "2026-11-10T07:45:29Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1282,9 +1282,9 @@
       "description": "API em NodeJs usando Typescript, TDD, Clean Architecture, Design Patterns e SOLID principles",
       "url": "https://github.com/rmanguinho/clean-ts-api",
       "homepage": "https://rmanguinho.github.io/",
-      "stars": 1912,
+      "stars": 1913,
       "forks": 479,
-      "watchers": 1912,
+      "watchers": 1913,
       "language": "TypeScript",
       "topics": [
         "clean-architecture",
@@ -1312,9 +1312,9 @@
         "url": "https://github.com/rmanguinho"
       },
       "createdAt": "2020-01-24T17:51:41Z",
-      "updatedAt": "2026-11-11T14:43:25Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T21:00:07Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1347,8 +1347,8 @@
       },
       "createdAt": "2014-05-28T11:20:53Z",
       "updatedAt": "2026-11-10T07:46:14Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1387,8 +1387,8 @@
       },
       "createdAt": "2017-01-17T19:44:53Z",
       "updatedAt": "2026-11-11T07:57:58Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1419,9 +1419,9 @@
         "url": "https://github.com/TestableIO"
       },
       "createdAt": "2012-04-04T13:00:39Z",
-      "updatedAt": "2026-11-11T06:17:50Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T19:22:09Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1465,8 +1465,8 @@
       },
       "createdAt": "2017-09-24T12:45:23Z",
       "updatedAt": "2026-11-09T10:36:52Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1500,8 +1500,8 @@
       },
       "createdAt": "2020-05-12T20:30:30Z",
       "updatedAt": "2026-11-10T21:19:14Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1529,8 +1529,8 @@
       },
       "createdAt": "2019-10-06T01:33:26Z",
       "updatedAt": "2026-11-08T22:07:08Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1571,8 +1571,8 @@
       },
       "createdAt": "2019-02-05T18:04:57Z",
       "updatedAt": "2026-11-10T05:01:41Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1583,9 +1583,9 @@
       "description": "훌륭한 Swift 세션 동영상(강좌), 한글 자막있는 혹은 한국어 강의 정보 링크 모음 (Awesome Swift Korean lecture information)",
       "url": "https://github.com/ClintJang/awesome-swift-korean-lecture",
       "homepage": null,
-      "stars": 1335,
+      "stars": 1336,
       "forks": 211,
-      "watchers": 1335,
+      "watchers": 1336,
       "language": "Swift",
       "topics": [
         "apple",
@@ -1613,9 +1613,9 @@
         "url": "https://github.com/ClintJang"
       },
       "createdAt": "2018-02-09T04:35:03Z",
-      "updatedAt": "2026-10-12T08:56:06Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:15:56Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1626,9 +1626,9 @@
       "description": "A curated list of awesome learning resources for a Software Test Automation Engineer ",
       "url": "https://github.com/mfaisalkhatri/awesome-learning",
       "homepage": null,
-      "stars": 1298,
+      "stars": 1299,
       "forks": 263,
-      "watchers": 1298,
+      "watchers": 1299,
       "language": null,
       "topics": [
         "awesome",
@@ -1657,9 +1657,9 @@
         "url": "https://github.com/mfaisalkhatri"
       },
       "createdAt": "2023-01-17T14:35:55Z",
-      "updatedAt": "2026-11-11T12:06:23Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:24:55Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1702,9 +1702,9 @@
         "url": "https://github.com/modu-ai"
       },
       "createdAt": "2025-09-16T13:07:11Z",
-      "updatedAt": "2026-11-10T07:11:28Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:53:14Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1737,8 +1737,8 @@
       },
       "createdAt": "2017-05-12T06:49:12Z",
       "updatedAt": "2026-11-11T08:18:08Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1771,8 +1771,8 @@
       },
       "createdAt": "2021-02-10T19:31:41Z",
       "updatedAt": "2026-11-10T13:04:56Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1816,8 +1816,8 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1845,8 +1845,8 @@
       },
       "createdAt": "2015-08-07T12:07:34Z",
       "updatedAt": "2026-11-11T13:28:18Z",
-      "firstSeenAt": "2026-11-11T15:55:09.370Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     }
   ]

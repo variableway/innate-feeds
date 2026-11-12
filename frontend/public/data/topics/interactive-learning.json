@@ -1,9 +1,9 @@
 {
   "topic": "interactive-learning",
-  "fetchedAt": "2026-11-11T15:52:06.908Z",
+  "fetchedAt": "2026-11-12T09:13:09.513Z",
   "count": 50,
-  "newCount": 36,
-  "existingCount": 14,
+  "newCount": 2,
+  "existingCount": 22,
   "items": [
     {
       "id": "gh-topic-1124219907",
@@ -13,9 +13,9 @@
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "url": "https://github.com/HKUDS/DeepTutor",
       "homepage": "http://arxiv.org/abs/2604.26962",
-      "stars": 58239,
-      "forks": 7079,
-      "watchers": 58239,
+      "stars": 58491,
+      "forks": 7109,
+      "watchers": 58491,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -34,9 +34,9 @@
         "url": "https://github.com/HKUDS"
       },
       "createdAt": "2025-12-28T15:35:54Z",
-      "updatedAt": "2026-11-11T15:46:51Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:12:56Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -47,9 +47,9 @@
       "description": "🌍 Programming language learning platform for developers. Master new languages through comparison learning. Interactive editor, performance monitoring, multi-language support. ",
       "url": "https://github.com/erweixin/langshift.dev",
       "homepage": "https://langshift.dev",
-      "stars": 1127,
+      "stars": 1128,
       "forks": 97,
-      "watchers": 1127,
+      "watchers": 1128,
       "language": "MDX",
       "topics": [
         "code-comparison",
@@ -62,10 +62,52 @@
         "url": "https://github.com/erweixin"
       },
       "createdAt": "2025-07-08T11:58:09Z",
-      "updatedAt": "2026-11-09T05:21:32Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T06:29:56Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-1428439343",
+      "repoId": 1428439343,
+      "fullName": "agharsallah/esp-labs-web",
+      "name": "esp-labs-web",
+      "description": "The ESP32-S3 bench guide as a React app: live pinout, lessons with interactive simulators, a code reader for the esp-labs firmware, and the bench log. In 11 languages.",
+      "url": "https://github.com/agharsallah/esp-labs-web",
+      "homepage": "https://esp-labs-web.vercel.app",
+      "stars": 834,
+      "forks": 121,
+      "watchers": 834,
+      "language": "TypeScript",
+      "topics": [
+        "education",
+        "electronics",
+        "embedded",
+        "esp32",
+        "esp32-s3",
+        "i18n",
+        "interactive-learning",
+        "mit-license",
+        "open-source",
+        "pinout",
+        "react",
+        "react-router",
+        "rtl",
+        "simulator",
+        "tanstack-query",
+        "typescript",
+        "vite"
+      ],
+      "owner": {
+        "login": "agharsallah",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/17379925?v=4",
+        "url": "https://github.com/agharsallah"
+      },
+      "createdAt": "2026-10-21T13:40:04Z",
+      "updatedAt": "2026-11-12T08:24:02Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-69562331",
@@ -107,52 +149,10 @@
         "url": "https://github.com/ls1intum"
       },
       "createdAt": "2016-09-29T11:46:05Z",
-      "updatedAt": "2026-11-11T11:49:21Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1428439343",
-      "repoId": 1428439343,
-      "fullName": "agharsallah/esp-labs-web",
-      "name": "esp-labs-web",
-      "description": "The ESP32-S3 bench guide as a React app: live pinout, lessons with interactive simulators, a code reader for the esp-labs firmware, and the bench log. In 11 languages.",
-      "url": "https://github.com/agharsallah/esp-labs-web",
-      "homepage": "https://esp-labs-web.vercel.app",
-      "stars": 809,
-      "forks": 119,
-      "watchers": 809,
-      "language": "TypeScript",
-      "topics": [
-        "education",
-        "electronics",
-        "embedded",
-        "esp32",
-        "esp32-s3",
-        "i18n",
-        "interactive-learning",
-        "mit-license",
-        "open-source",
-        "pinout",
-        "react",
-        "react-router",
-        "rtl",
-        "simulator",
-        "tanstack-query",
-        "typescript",
-        "vite"
-      ],
-      "owner": {
-        "login": "agharsallah",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/17379925?v=4",
-        "url": "https://github.com/agharsallah"
-      },
-      "createdAt": "2026-10-21T13:40:04Z",
-      "updatedAt": "2026-11-11T15:17:37Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T08:14:37Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1405013963",
@@ -162,9 +162,9 @@
       "description": "Interactive desktop app with 58 labs covering ML fundamentals, transformers, RAG, agents, fine-tuning and quantization and more.",
       "url": "https://github.com/Fazmin/AILearningGuide",
       "homepage": "https://fazmin.github.io/AILearningGuide",
-      "stars": 252,
+      "stars": 254,
       "forks": 25,
-      "watchers": 252,
+      "watchers": 254,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -188,9 +188,9 @@
         "url": "https://github.com/Fazmin"
       },
       "createdAt": "2026-10-05T02:29:23Z",
-      "updatedAt": "2026-11-11T05:05:19Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:04:11Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -201,9 +201,9 @@
       "description": "SortVision is a web-based sorting algorithm visualizer 🖥️ that lets users explore and compare algorithms like Bubble, Quick, Merge, and more 🔄. Easily adjust speed ⚡ and array size 📊 to watch the sorting process in real-time. Perfect for students and enthusiasts looking to understand sorting mechanics!",
       "url": "https://github.com/alienx5499/SortVision",
       "homepage": "https://sortvision.com",
-      "stars": 242,
+      "stars": 243,
       "forks": 70,
-      "watchers": 242,
+      "watchers": 243,
       "language": "TypeScript",
       "topics": [
         "algorithm-visualization",
@@ -223,9 +223,9 @@
         "url": "https://github.com/alienx5499"
       },
       "createdAt": "2025-03-13T05:07:43Z",
-      "updatedAt": "2026-11-11T06:08:28Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:11:37Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -236,9 +236,9 @@
       "description": "Free interactive course on world models in AI. Nine visual chapters on prediction, latent dynamics, planning, JEPA, video models, and failure modes.",
       "url": "https://github.com/NiluK/worldmodels101",
       "homepage": "https://worldmodels101.com",
-      "stars": 205,
+      "stars": 206,
       "forks": 146,
-      "watchers": 205,
+      "watchers": 206,
       "language": "TypeScript",
       "topics": [
         "artificial-intelligence",
@@ -260,10 +260,10 @@
         "url": "https://github.com/NiluK"
       },
       "createdAt": "2026-08-19T10:39:11Z",
-      "updatedAt": "2026-11-10T06:12:46Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-11T18:47:33Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1412722812",
@@ -273,9 +273,9 @@
       "description": "DevStart Lab - An interactive open-source platform to learn programming, explore real projects, and contribute to GitHub.",
       "url": "https://github.com/brunnojob/devstart-lab",
       "homepage": "https://brunnojob.github.io/devstart-lab/",
-      "stars": 190,
+      "stars": 205,
       "forks": 7,
-      "watchers": 190,
+      "watchers": 205,
       "language": "TypeScript",
       "topics": [
         "beginner-friendly",
@@ -305,9 +305,45 @@
         "url": "https://github.com/brunnojob"
       },
       "createdAt": "2026-10-10T03:48:44Z",
-      "updatedAt": "2026-11-11T15:41:25Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:05:51Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-1443018818",
+      "repoId": 1443018818,
+      "fullName": "Future-Proof-DS/interactive-ai-ml-tools",
+      "name": "interactive-ai-ml-tools",
+      "description": "Free interactive tools for data scientists to learn MLOps, ML system design and agentic analytics: a production ML system map, ML project structure, data drift simulator, agentic analytics system map and AI evals.",
+      "url": "https://github.com/Future-Proof-DS/interactive-ai-ml-tools",
+      "homepage": "https://futureproofds.com/tools?utm_source=github&utm_medium=readme&utm_campaign=andres_vourakis_github&utm_content=interactive_tools",
+      "stars": 178,
+      "forks": 21,
+      "watchers": 178,
+      "language": null,
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "data-drift",
+        "data-science",
+        "interactive-learning",
+        "llm-evaluation",
+        "machine-learning",
+        "ml-system-design",
+        "mlops",
+        "model-monitoring",
+        "text-to-sql"
+      ],
+      "owner": {
+        "login": "Future-Proof-DS",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/232044963?v=4",
+        "url": "https://github.com/Future-Proof-DS"
+      },
+      "createdAt": "2026-11-02T13:44:28Z",
+      "updatedAt": "2026-11-12T09:12:48Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -338,9 +374,9 @@
       },
       "createdAt": "2021-01-31T17:30:29Z",
       "updatedAt": "2026-11-09T05:21:47Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1283346786",
@@ -379,9 +415,9 @@
         "url": "https://github.com/aminekago-web"
       },
       "createdAt": "2026-06-28T20:35:57Z",
-      "updatedAt": "2026-11-11T13:22:41Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:10:26Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -415,8 +451,8 @@
       },
       "createdAt": "2025-11-04T12:23:48Z",
       "updatedAt": "2026-10-12T09:51:49Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -456,8 +492,49 @@
       },
       "createdAt": "2024-01-21T08:02:20Z",
       "updatedAt": "2026-11-09T02:15:46Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-1361956002",
+      "repoId": 1361956002,
+      "fullName": "mohammadrezwankhan/datacenter-twin-lab",
+      "name": "datacenter-twin-lab",
+      "description": "Explore data center power continuity, energy ledgers & infrastructure assumptions through reproducible synthetic models.",
+      "url": "https://github.com/mohammadrezwankhan/datacenter-twin-lab",
+      "homepage": "https://khanlab.co.technology/",
+      "stars": 75,
+      "forks": 3,
+      "watchers": 75,
+      "language": "TypeScript",
+      "topics": [
+        "ai-infrastructure",
+        "battery-energy-storage",
+        "data-center",
+        "digital-twin",
+        "electrical-engineering",
+        "energy-efficiency",
+        "engineering-education",
+        "infrastructure",
+        "interactive-dashboard",
+        "interactive-learning",
+        "power-systems",
+        "python",
+        "reproducible-research",
+        "simulation",
+        "synthetic-data",
+        "typescript"
+      ],
+      "owner": {
+        "login": "mohammadrezwankhan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/33260510?v=4",
+        "url": "https://github.com/mohammadrezwankhan"
+      },
+      "createdAt": "2026-09-08T22:15:31Z",
+      "updatedAt": "2026-11-12T02:22:27Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -495,50 +572,9 @@
       },
       "createdAt": "2026-03-11T17:55:00Z",
       "updatedAt": "2026-11-08T16:55:25Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
-    },
-    {
-      "id": "gh-topic-1361956002",
-      "repoId": 1361956002,
-      "fullName": "mohammadrezwankhan/datacenter-twin-lab",
-      "name": "datacenter-twin-lab",
-      "description": "Explore data center power continuity, energy ledgers & infrastructure assumptions through reproducible synthetic models.",
-      "url": "https://github.com/mohammadrezwankhan/datacenter-twin-lab",
-      "homepage": "https://khanlab.co.technology/",
-      "stars": 73,
-      "forks": 3,
-      "watchers": 73,
-      "language": "TypeScript",
-      "topics": [
-        "ai-infrastructure",
-        "battery-energy-storage",
-        "data-center",
-        "digital-twin",
-        "electrical-engineering",
-        "energy-efficiency",
-        "engineering-education",
-        "infrastructure",
-        "interactive-dashboard",
-        "interactive-learning",
-        "power-systems",
-        "python",
-        "reproducible-research",
-        "simulation",
-        "synthetic-data",
-        "typescript"
-      ],
-      "owner": {
-        "login": "mohammadrezwankhan",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/33260510?v=4",
-        "url": "https://github.com/mohammadrezwankhan"
-      },
-      "createdAt": "2026-09-08T22:15:31Z",
-      "updatedAt": "2026-11-11T13:11:45Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
     },
     {
       "id": "gh-topic-1056335505",
@@ -575,8 +611,8 @@
       },
       "createdAt": "2025-09-13T21:43:25Z",
       "updatedAt": "2026-10-21T07:14:28Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -605,8 +641,8 @@
       },
       "createdAt": "2020-11-17T09:44:34Z",
       "updatedAt": "2026-08-03T04:17:07Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -650,9 +686,9 @@
       },
       "createdAt": "2026-10-24T13:03:46Z",
       "updatedAt": "2026-11-10T05:24:13Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1203445878",
@@ -693,8 +729,8 @@
       },
       "createdAt": "2026-04-07T03:37:02Z",
       "updatedAt": "2026-11-10T05:26:48Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -738,8 +774,8 @@
       },
       "createdAt": "2026-10-18T10:24:34Z",
       "updatedAt": "2026-11-11T07:44:11Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -768,44 +804,39 @@
       },
       "createdAt": "2025-08-25T06:22:31Z",
       "updatedAt": "2026-11-02T08:39:15Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1443018818",
-      "repoId": 1443018818,
-      "fullName": "Future-Proof-DS/interactive-ai-ml-tools",
-      "name": "interactive-ai-ml-tools",
-      "description": "Free interactive tools for data scientists to learn MLOps, ML system design and agentic analytics: a production ML system map, ML project structure, data drift simulator, agentic analytics system map and AI evals.",
-      "url": "https://github.com/Future-Proof-DS/interactive-ai-ml-tools",
-      "homepage": "https://futureproofds.com/tools?utm_source=github&utm_medium=readme&utm_campaign=andres_vourakis_github&utm_content=interactive_tools",
-      "stars": 42,
+      "id": "gh-topic-1303985965",
+      "repoId": 1303985965,
+      "fullName": "scienceetonnante/tangible",
+      "name": "tangible",
+      "description": "Create narrated interactive lessons with synchronized scenes and optional AI assistance.",
+      "url": "https://github.com/scienceetonnante/tangible",
+      "homepage": null,
+      "stars": 36,
       "forks": 2,
-      "watchers": 42,
-      "language": null,
+      "watchers": 36,
+      "language": "TypeScript",
       "topics": [
-        "agentic-ai",
-        "ai-agents",
-        "data-drift",
-        "data-science",
+        "ai-assisted-authoring",
+        "education",
+        "huggingface-spaces",
         "interactive-learning",
-        "llm-evaluation",
-        "machine-learning",
-        "ml-system-design",
-        "mlops",
-        "model-monitoring",
-        "text-to-sql"
+        "science-communication",
+        "typescript"
       ],
       "owner": {
-        "login": "Future-Proof-DS",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/232044963?v=4",
-        "url": "https://github.com/Future-Proof-DS"
+        "login": "scienceetonnante",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/15683540?v=4",
+        "url": "https://github.com/scienceetonnante"
       },
-      "createdAt": "2026-11-02T13:44:28Z",
-      "updatedAt": "2026-11-11T15:49:38Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "createdAt": "2026-07-17T12:45:33Z",
+      "updatedAt": "2026-10-26T10:11:16Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -837,40 +868,9 @@
       },
       "createdAt": "2026-05-20T09:48:53Z",
       "updatedAt": "2026-09-28T13:39:42Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
-    },
-    {
-      "id": "gh-topic-1303985965",
-      "repoId": 1303985965,
-      "fullName": "scienceetonnante/tangible",
-      "name": "tangible",
-      "description": "Create narrated interactive lessons with synchronized scenes and optional AI assistance.",
-      "url": "https://github.com/scienceetonnante/tangible",
-      "homepage": null,
-      "stars": 36,
-      "forks": 2,
-      "watchers": 36,
-      "language": "TypeScript",
-      "topics": [
-        "ai-assisted-authoring",
-        "education",
-        "huggingface-spaces",
-        "interactive-learning",
-        "science-communication",
-        "typescript"
-      ],
-      "owner": {
-        "login": "scienceetonnante",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/15683540?v=4",
-        "url": "https://github.com/scienceetonnante"
-      },
-      "createdAt": "2026-07-17T12:45:33Z",
-      "updatedAt": "2026-10-26T10:11:16Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
     },
     {
       "id": "gh-topic-471208211",
@@ -904,8 +904,8 @@
       },
       "createdAt": "2022-03-18T02:17:21Z",
       "updatedAt": "2026-08-03T10:00:25Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -947,9 +947,39 @@
       },
       "createdAt": "2026-01-02T17:29:45Z",
       "updatedAt": "2026-10-08T15:10:09Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
+    },
+    {
+      "id": "gh-topic-608869016",
+      "repoId": 608869016,
+      "fullName": "microsoft/Intrepid",
+      "name": "Intrepid",
+      "description": "INTeractive learning via REPresentatIon Discovery",
+      "url": "https://github.com/microsoft/Intrepid",
+      "homepage": null,
+      "stars": 35,
+      "forks": 4,
+      "watchers": 35,
+      "language": "Python",
+      "topics": [
+        "interactive-learning",
+        "machine-learning",
+        "reinforcement-learning",
+        "representation-learning",
+        "self-supervised-representation-learning"
+      ],
+      "owner": {
+        "login": "microsoft",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4",
+        "url": "https://github.com/microsoft"
+      },
+      "createdAt": "2023-03-02T22:43:06Z",
+      "updatedAt": "2026-11-09T12:05:22Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": false
     },
     {
       "id": "gh-topic-1031165657",
@@ -979,38 +1009,8 @@
       },
       "createdAt": "2025-08-03T06:37:39Z",
       "updatedAt": "2026-11-06T09:23:26Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-608869016",
-      "repoId": 608869016,
-      "fullName": "microsoft/Intrepid",
-      "name": "Intrepid",
-      "description": "INTeractive learning via REPresentatIon Discovery",
-      "url": "https://github.com/microsoft/Intrepid",
-      "homepage": null,
-      "stars": 35,
-      "forks": 4,
-      "watchers": 35,
-      "language": "Python",
-      "topics": [
-        "interactive-learning",
-        "machine-learning",
-        "reinforcement-learning",
-        "representation-learning",
-        "self-supervised-representation-learning"
-      ],
-      "owner": {
-        "login": "microsoft",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4",
-        "url": "https://github.com/microsoft"
-      },
-      "createdAt": "2023-03-02T22:43:06Z",
-      "updatedAt": "2026-11-09T12:05:22Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1037,8 +1037,8 @@
       },
       "createdAt": "2019-08-20T15:20:21Z",
       "updatedAt": "2026-02-10T17:22:22Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1071,7 +1071,44 @@
       },
       "createdAt": "2026-03-31T15:32:23Z",
       "updatedAt": "2026-11-07T08:38:43Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1414570258",
+      "repoId": 1414570258,
+      "fullName": "liangxiao777/TeachMeCoding",
+      "name": "TeachMeCoding",
+      "description": "Local-first AI coding tutor with personalized roadmaps, lessons, hands-on practice, and execution-backed assessments. 本地 AI 编程老师：生成学习路线和课件，在真实项目中练习，用运行结果辅助测评。",
+      "url": "https://github.com/liangxiao777/TeachMeCoding",
+      "homepage": null,
+      "stars": 28,
+      "forks": 2,
+      "watchers": 28,
+      "language": "TypeScript",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "ai-agents",
+        "ai-tutor",
+        "coding-education",
+        "education",
+        "interactive-learning",
+        "learn-to-code",
+        "llm",
+        "local-first",
+        "mcp",
+        "self-hosted"
+      ],
+      "owner": {
+        "login": "liangxiao777",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/93847933?v=4",
+        "url": "https://github.com/liangxiao777"
+      },
+      "createdAt": "2026-10-11T16:58:51Z",
+      "updatedAt": "2026-11-12T06:16:57Z",
+      "firstSeenAt": "2026-11-12T09:13:09.513Z",
       "isNew": true,
       "existing": false
     },
@@ -1109,8 +1146,8 @@
       },
       "createdAt": "2026-04-05T04:04:00Z",
       "updatedAt": "2026-10-20T07:52:44Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1150,8 +1187,8 @@
       },
       "createdAt": "2023-03-25T18:36:52Z",
       "updatedAt": "2026-11-05T23:48:47Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1188,9 +1225,9 @@
         "url": "https://github.com/HYH926"
       },
       "createdAt": "2026-06-10T11:00:30Z",
-      "updatedAt": "2026-11-10T10:31:16Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T00:35:55Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1234,9 +1271,40 @@
       },
       "createdAt": "2026-03-23T15:31:44Z",
       "updatedAt": "2026-11-01T19:38:28Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
+    },
+    {
+      "id": "gh-topic-1434210269",
+      "repoId": 1434210269,
+      "fullName": "harshitgupta31415/backend-fieldguide",
+      "name": "backend-fieldguide",
+      "description": "Interactive ecommerce backend learning course with guided lessons, games, simulations, and AI prompt practice.",
+      "url": "https://github.com/harshitgupta31415/backend-fieldguide",
+      "homepage": "https://backend-fieldguide.vercel.app",
+      "stars": 25,
+      "forks": 10,
+      "watchers": 25,
+      "language": "JavaScript",
+      "topics": [
+        "backend-development",
+        "developer-education",
+        "ecommerce",
+        "interactive-learning",
+        "nextjs",
+        "webhooks"
+      ],
+      "owner": {
+        "login": "harshitgupta31415",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/249720353?v=4",
+        "url": "https://github.com/harshitgupta31415"
+      },
+      "createdAt": "2026-10-26T10:11:02Z",
+      "updatedAt": "2026-11-11T17:06:20Z",
+      "firstSeenAt": "2026-11-12T09:13:09.513Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-81761760",
@@ -1264,8 +1332,8 @@
       },
       "createdAt": "2017-02-12T22:20:51Z",
       "updatedAt": "2026-09-19T10:03:27Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1292,8 +1360,8 @@
       },
       "createdAt": "2019-12-17T13:01:11Z",
       "updatedAt": "2025-07-03T14:24:06Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1326,8 +1394,8 @@
       },
       "createdAt": "2026-01-19T16:24:44Z",
       "updatedAt": "2026-08-02T06:47:14Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1363,8 +1431,8 @@
       },
       "createdAt": "2026-05-08T02:00:53Z",
       "updatedAt": "2026-10-15T06:30:11Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1404,45 +1472,49 @@
       },
       "createdAt": "2024-11-25T14:36:58Z",
       "updatedAt": "2026-09-10T12:32:30Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1414570258",
-      "repoId": 1414570258,
-      "fullName": "liangxiao777/TeachMeCoding",
-      "name": "TeachMeCoding",
-      "description": "Local-first AI coding tutor with personalized roadmaps, lessons, hands-on practice, and execution-backed assessments. 本地 AI 编程老师：生成学习路线和课件，在真实项目中练习，用运行结果辅助测评。",
-      "url": "https://github.com/liangxiao777/TeachMeCoding",
+      "id": "gh-topic-1443508681",
+      "repoId": 1443508681,
+      "fullName": "AlphaaCode/Popbook",
+      "name": "Popbook",
+      "description": "Turn any course PDF into an interactive 3D pop-up textbook with your own AI (Claude, OpenAI, Gemini, Ollama or Claude Code). Runs locally, open source.",
+      "url": "https://github.com/AlphaaCode/Popbook",
       "homepage": null,
-      "stars": 20,
-      "forks": 0,
-      "watchers": 20,
-      "language": "TypeScript",
+      "stars": 18,
+      "forks": 3,
+      "watchers": 18,
+      "language": "JavaScript",
       "topics": [
-        "agent-skills",
-        "ai-agent",
-        "ai-agents",
-        "ai-tutor",
-        "coding-education",
+        "ai",
+        "anthropic",
+        "claude-code",
+        "edtech",
         "education",
+        "gemini",
         "interactive-learning",
-        "learn-to-code",
         "llm",
-        "local-first",
-        "mcp",
-        "self-hosted"
+        "nodejs",
+        "ollama",
+        "openai",
+        "pdf",
+        "pop-up-book",
+        "study-tools",
+        "threejs",
+        "webgl"
       ],
       "owner": {
-        "login": "liangxiao777",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/93847933?v=4",
-        "url": "https://github.com/liangxiao777"
+        "login": "AlphaaCode",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/154357622?v=4",
+        "url": "https://github.com/AlphaaCode"
       },
-      "createdAt": "2026-10-11T16:58:51Z",
-      "updatedAt": "2026-11-11T15:33:51Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "createdAt": "2026-11-02T21:31:47Z",
+      "updatedAt": "2026-11-11T13:51:39Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1483,50 +1555,9 @@
         "url": "https://github.com/canyrtcn"
       },
       "createdAt": "2026-10-17T23:57:24Z",
-      "updatedAt": "2026-11-08T18:36:12Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1443508681",
-      "repoId": 1443508681,
-      "fullName": "AlphaaCode/Popbook",
-      "name": "Popbook",
-      "description": "Turn any course PDF into an interactive 3D pop-up textbook with your own AI (Claude, OpenAI, Gemini, Ollama or Claude Code). Runs locally, open source.",
-      "url": "https://github.com/AlphaaCode/Popbook",
-      "homepage": null,
-      "stars": 18,
-      "forks": 3,
-      "watchers": 18,
-      "language": "JavaScript",
-      "topics": [
-        "ai",
-        "anthropic",
-        "claude-code",
-        "edtech",
-        "education",
-        "gemini",
-        "interactive-learning",
-        "llm",
-        "nodejs",
-        "ollama",
-        "openai",
-        "pdf",
-        "pop-up-book",
-        "study-tools",
-        "threejs",
-        "webgl"
-      ],
-      "owner": {
-        "login": "AlphaaCode",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/154357622?v=4",
-        "url": "https://github.com/AlphaaCode"
-      },
-      "createdAt": "2026-11-02T21:31:47Z",
-      "updatedAt": "2026-11-11T13:51:39Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T21:01:01Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1559,8 +1590,8 @@
       },
       "createdAt": "2026-05-26T22:48:22Z",
       "updatedAt": "2026-11-01T17:01:35Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1604,40 +1635,8 @@
       },
       "createdAt": "2026-09-18T17:45:44Z",
       "updatedAt": "2026-11-08T04:26:06Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1338478137",
-      "repoId": 1338478137,
-      "fullName": "ryjohnson09/quarto-git-sandbox",
-      "name": "quarto-git-sandbox",
-      "description": "Interactive Git exercises for Quarto: a real Git repository in the reader's browser, with a task checklist, live diagrams, and a mock remote. Authored in Markdown and YAML, no JavaScript.",
-      "url": "https://github.com/ryjohnson09/quarto-git-sandbox",
-      "homepage": "https://ryjohnson09.github.io/quarto-git-sandbox/",
-      "stars": 16,
-      "forks": 0,
-      "watchers": 16,
-      "language": "JavaScript",
-      "topics": [
-        "education",
-        "git",
-        "interactive-learning",
-        "quarto",
-        "quarto-extension",
-        "stable",
-        "teaching"
-      ],
-      "owner": {
-        "login": "ryjohnson09",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/10009758?v=4",
-        "url": "https://github.com/ryjohnson09"
-      },
-      "createdAt": "2026-08-18T14:06:58Z",
-      "updatedAt": "2026-09-09T00:43:02Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1681,8 +1680,8 @@
       },
       "createdAt": "2025-12-30T21:03:27Z",
       "updatedAt": "2026-09-26T06:47:00Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1716,8 +1715,40 @@
       },
       "createdAt": "2026-08-20T01:25:40Z",
       "updatedAt": "2026-11-06T18:34:39Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1338478137",
+      "repoId": 1338478137,
+      "fullName": "ryjohnson09/quarto-git-sandbox",
+      "name": "quarto-git-sandbox",
+      "description": "Interactive Git exercises for Quarto: a real Git repository in the reader's browser, with a task checklist, live diagrams, and a mock remote. Authored in Markdown and YAML, no JavaScript.",
+      "url": "https://github.com/ryjohnson09/quarto-git-sandbox",
+      "homepage": "https://ryjohnson09.github.io/quarto-git-sandbox/",
+      "stars": 16,
+      "forks": 0,
+      "watchers": 16,
+      "language": "JavaScript",
+      "topics": [
+        "education",
+        "git",
+        "interactive-learning",
+        "quarto",
+        "quarto-extension",
+        "stable",
+        "teaching"
+      ],
+      "owner": {
+        "login": "ryjohnson09",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/10009758?v=4",
+        "url": "https://github.com/ryjohnson09"
+      },
+      "createdAt": "2026-08-18T14:06:58Z",
+      "updatedAt": "2026-09-09T00:43:02Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1753,9 +1784,39 @@
       },
       "createdAt": "2025-10-29T14:11:25Z",
       "updatedAt": "2026-10-26T05:28:35Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": true
+    },
+    {
+      "id": "gh-topic-81761806",
+      "repoId": 81761806,
+      "fullName": "NLPReViz/emr-nlp-server",
+      "name": "emr-nlp-server",
+      "description": "An Interactive Tool for Natural Language Processing on Clinical Text",
+      "url": "https://github.com/NLPReViz/emr-nlp-server",
+      "homepage": "https://NLPReViz.github.io",
+      "stars": 15,
+      "forks": 7,
+      "watchers": 15,
+      "language": "Java",
+      "topics": [
+        "clinical-notes",
+        "clinical-research",
+        "interactive-learning",
+        "interactive-visualizations",
+        "natural-language-processing"
+      ],
+      "owner": {
+        "login": "NLPReViz",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/25670380?v=4",
+        "url": "https://github.com/NLPReViz"
+      },
+      "createdAt": "2017-02-12T22:21:36Z",
+      "updatedAt": "2025-08-13T11:16:32Z",
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
+      "existing": false
     },
     {
       "id": "gh-topic-155327063",
@@ -1789,79 +1850,8 @@
       },
       "createdAt": "2018-10-30T05:01:35Z",
       "updatedAt": "2026-03-31T19:40:03Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-81761806",
-      "repoId": 81761806,
-      "fullName": "NLPReViz/emr-nlp-server",
-      "name": "emr-nlp-server",
-      "description": "An Interactive Tool for Natural Language Processing on Clinical Text",
-      "url": "https://github.com/NLPReViz/emr-nlp-server",
-      "homepage": "https://NLPReViz.github.io",
-      "stars": 15,
-      "forks": 7,
-      "watchers": 15,
-      "language": "Java",
-      "topics": [
-        "clinical-notes",
-        "clinical-research",
-        "interactive-learning",
-        "interactive-visualizations",
-        "natural-language-processing"
-      ],
-      "owner": {
-        "login": "NLPReViz",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/25670380?v=4",
-        "url": "https://github.com/NLPReViz"
-      },
-      "createdAt": "2017-02-12T22:21:36Z",
-      "updatedAt": "2025-08-13T11:16:32Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1312400022",
-      "repoId": 1312400022,
-      "fullName": "huguryildiz/signals-and-systems",
-      "name": "signals-and-systems",
-      "description": "Interactive course material for an undergraduate signals and systems course: step-by-step derivations, laboratories, worked problems and runnable Python code, with printable lecture notes and an independent numerical check of every stated result.",
-      "url": "https://github.com/huguryildiz/signals-and-systems",
-      "homepage": "https://signals-and-systems.huguryildiz.com/",
-      "stars": 14,
-      "forks": 1,
-      "watchers": 14,
-      "language": "JavaScript",
-      "topics": [
-        "convolution",
-        "courseware",
-        "discrete-time",
-        "electrical-engineering",
-        "engineering-education",
-        "fourier-series",
-        "fourier-transform",
-        "interactive-learning",
-        "lecture-notes",
-        "lti-systems",
-        "open-educational-resources",
-        "pyodide",
-        "python",
-        "sampling",
-        "signal-processing",
-        "signals-and-systems"
-      ],
-      "owner": {
-        "login": "huguryildiz",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/103906958?v=4",
-        "url": "https://github.com/huguryildiz"
-      },
-      "createdAt": "2026-07-26T00:47:09Z",
-      "updatedAt": "2026-11-09T21:21:28Z",
-      "firstSeenAt": "2026-11-11T15:52:06.908Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:36.254Z",
+      "isNew": false,
       "existing": false
     }
   ]

@@ -1,9 +1,9 @@
 {
   "topic": "explainer-video",
-  "fetchedAt": "2026-11-11T15:53:18.671Z",
+  "fetchedAt": "2026-11-12T09:14:37.036Z",
   "count": 50,
-  "newCount": 49,
-  "existingCount": 1,
+  "newCount": 2,
+  "existingCount": 5,
   "items": [
     {
       "id": "gh-topic-1406706284",
@@ -13,9 +13,9 @@
       "description": "艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。",
       "url": "https://github.com/alchaincyf/huashu-art-motion",
       "homepage": null,
-      "stars": 6740,
-      "forks": 666,
-      "watchers": 6740,
+      "stars": 6780,
+      "forks": 667,
+      "watchers": 6780,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -37,9 +37,9 @@
         "url": "https://github.com/alchaincyf"
       },
       "createdAt": "2026-10-06T04:49:37Z",
-      "updatedAt": "2026-11-11T15:39:48Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:09:28Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -50,9 +50,9 @@
       "description": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. Chinese or English; every frame drawn in code with Remotion.",
       "url": "https://github.com/Vincentwei1021/anything2explainer",
       "homepage": null,
-      "stars": 3222,
-      "forks": 415,
-      "watchers": 3222,
+      "stars": 3244,
+      "forks": 416,
+      "watchers": 3244,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -80,10 +80,10 @@
         "url": "https://github.com/Vincentwei1021"
       },
       "createdAt": "2026-09-08T17:19:54Z",
-      "updatedAt": "2026-11-11T15:07:33Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T08:42:19Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1296647613",
@@ -93,9 +93,9 @@
       "description": "Turn one topic into a finished Vox-style paper-collage explainer/ad video — automated end to end on Atlas Cloud + ffmpeg. An agent skill.",
       "url": "https://github.com/Alisa0808/vox-director",
       "homepage": null,
-      "stars": 2772,
-      "forks": 379,
-      "watchers": 2772,
+      "stars": 2780,
+      "forks": 381,
+      "watchers": 2780,
       "language": "Python",
       "topics": [
         "ai",
@@ -122,9 +122,9 @@
         "url": "https://github.com/Alisa0808"
       },
       "createdAt": "2026-07-10T15:32:05Z",
-      "updatedAt": "2026-11-11T14:36:15Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:45:30Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -135,9 +135,9 @@
       "description": "让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.",
       "url": "https://github.com/alchaincyf/huashu-motion",
       "homepage": "https://github.com/alchaincyf/huashu-motion",
-      "stars": 2640,
-      "forks": 263,
-      "watchers": 2640,
+      "stars": 2658,
+      "forks": 265,
+      "watchers": 2658,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -160,9 +160,9 @@
         "url": "https://github.com/alchaincyf"
       },
       "createdAt": "2026-10-18T12:19:27Z",
-      "updatedAt": "2026-11-11T15:35:39Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:38:56Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -173,9 +173,9 @@
       "description": "Agent skill that turns Claude Code / Codex into a motion-design studio for voiceover-driven explainer videos — word-level voiceover sync, 109 motion recipe cards, an anti-slideshow camera system, Remotion rendering.",
       "url": "https://github.com/Vincentwei1021/video-talkcraft",
       "homepage": "https://vincentwei1021.github.io/video-talkcraft/",
-      "stars": 2270,
+      "stars": 2281,
       "forks": 231,
-      "watchers": 2270,
+      "watchers": 2281,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -197,10 +197,10 @@
         "url": "https://github.com/Vincentwei1021"
       },
       "createdAt": "2026-08-22T17:11:05Z",
-      "updatedAt": "2026-11-11T15:40:37Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T07:10:48Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1403731980",
@@ -210,9 +210,9 @@
       "description": "Procedural animation in any style for Claude Code: short single-file canvas videos with story, look and storyboard check-ins. 7 built-in styles or one matched from your references, your own music (beat-mapped), real product screenshots, every format from one piece.",
       "url": "https://github.com/cth9191/animate",
       "homepage": null,
-      "stars": 1755,
-      "forks": 222,
-      "watchers": 1755,
+      "stars": 1778,
+      "forks": 225,
+      "watchers": 1778,
       "language": "JavaScript",
       "topics": [
         "animation",
@@ -232,10 +232,55 @@
         "url": "https://github.com/cth9191"
       },
       "createdAt": "2026-10-04T00:05:25Z",
-      "updatedAt": "2026-11-11T15:19:43Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:23:31Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
+    },
+    {
+      "id": "gh-topic-1276940779",
+      "repoId": 1276940779,
+      "fullName": "iart-ai/motion-skills",
+      "name": "motion-skills",
+      "description": "56 open-source skills that teach your AI coding agent to make motion graphics, animation & video — kinetic typography, data-viz, explainers, TikTok/Reels, WebGL, Manim. 19 installable packs. By iart.ai, the AI motion agent.",
+      "url": "https://github.com/iart-ai/motion-skills",
+      "homepage": "https://www.iart.ai/skills",
+      "stars": 1390,
+      "forks": 122,
+      "watchers": 1390,
+      "language": "HTML",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-animation",
+        "animation",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "data-visualization",
+        "deepseek",
+        "explainer-video",
+        "gsap",
+        "kinetic-typography",
+        "manim",
+        "motion-design",
+        "motion-graphics",
+        "remotion",
+        "skills",
+        "threejs",
+        "video-generation"
+      ],
+      "owner": {
+        "login": "iart-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/113883324?v=4",
+        "url": "https://github.com/iart-ai"
+      },
+      "createdAt": "2026-06-22T12:40:08Z",
+      "updatedAt": "2026-11-12T08:48:14Z",
+      "firstSeenAt": "2026-11-12T09:14:37.036Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-1407571878",
@@ -245,9 +290,9 @@
       "description": "抖音爆款Vibe知识大赏知识短片skill，深度拆解爆款视频，复刻画风，导演分镜表，自动配音效，一键出片",
       "url": "https://github.com/HeyChengC/vibe-knowledge-film",
       "homepage": null,
-      "stars": 1255,
-      "forks": 117,
-      "watchers": 1255,
+      "stars": 1277,
+      "forks": 118,
+      "watchers": 1277,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -271,9 +316,9 @@
         "url": "https://github.com/HeyChengC"
       },
       "createdAt": "2026-10-06T15:53:56Z",
-      "updatedAt": "2026-11-11T15:51:25Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:04:28Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -284,9 +329,9 @@
       "description": "Explainer videos and product demos made by your AI agent. Free and open source: a local voice (Kokoro), word timing (Whisper) and a canvas renderer turn a script into a narrated MP4.",
       "url": "https://github.com/vincentsch/explainroo",
       "homepage": "https://www.explainroo.com",
-      "stars": 1215,
-      "forks": 118,
-      "watchers": 1215,
+      "stars": 1235,
+      "forks": 121,
+      "watchers": 1235,
       "language": "JavaScript",
       "topics": [
         "ai-agents",
@@ -309,9 +354,9 @@
         "url": "https://github.com/vincentsch"
       },
       "createdAt": "2026-09-25T15:09:54Z",
-      "updatedAt": "2026-11-11T14:46:22Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:38:03Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -322,9 +367,9 @@
       "description": "华尔街式财经/科技解读短片 skill：设计思路、风格语言，以及找片、截图、配音、渲染和混音工具。",
       "url": "https://github.com/HeyChengC/wallstreet-explainer",
       "homepage": null,
-      "stars": 675,
+      "stars": 677,
       "forks": 146,
-      "watchers": 675,
+      "watchers": 677,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -348,9 +393,9 @@
         "url": "https://github.com/HeyChengC"
       },
       "createdAt": "2026-10-18T09:33:56Z",
-      "updatedAt": "2026-11-11T06:55:48Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:07:51Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -361,9 +406,9 @@
       "description": "Vibe 知识大赏：一个知识点 → 一条有旁白、每句有出处的精品知识短片（Claude Code skill · 44 套风格 · 代码逐帧成片）",
       "url": "https://github.com/andyhuo520/vibe-knowledge",
       "homepage": null,
-      "stars": 634,
-      "forks": 99,
-      "watchers": 634,
+      "stars": 642,
+      "forks": 102,
+      "watchers": 642,
       "language": "JavaScript",
       "topics": [
         "chinese",
@@ -380,9 +425,9 @@
         "url": "https://github.com/andyhuo520"
       },
       "createdAt": "2026-10-28T09:37:45Z",
-      "updatedAt": "2026-11-11T14:53:50Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:05:47Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -393,9 +438,9 @@
       "description": "Frametell: turn your ideas and material into vivid explainer videos with an AI director agent. Local-first, any model.",
       "url": "https://github.com/sitor-ai/frametell",
       "homepage": "https://frametell.ai",
-      "stars": 495,
+      "stars": 497,
       "forks": 97,
-      "watchers": 495,
+      "watchers": 497,
       "language": "JavaScript",
       "topics": [
         "ai-agent",
@@ -417,9 +462,9 @@
         "url": "https://github.com/sitor-ai"
       },
       "createdAt": "2026-10-10T10:02:14Z",
-      "updatedAt": "2026-11-11T12:42:59Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:09:26Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -430,9 +475,9 @@
       "description": "中文手绘知识讲解视频 Codex Skill：逐笔故事、双语义岛、让怪诞小黑动起来与程序动画",
       "url": "https://github.com/hi-nikola/hand-drawn-explainer-video-nikola",
       "homepage": null,
-      "stars": 468,
+      "stars": 469,
       "forks": 70,
-      "watchers": 468,
+      "watchers": 469,
       "language": "Python",
       "topics": [
         "chinese",
@@ -447,9 +492,9 @@
         "url": "https://github.com/hi-nikola"
       },
       "createdAt": "2026-09-02T07:20:10Z",
-      "updatedAt": "2026-11-10T21:52:18Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:27:41Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -460,9 +505,9 @@
       "description": "🎬 Turn any topic into a finished Vox-style paper-collage explainer / motion graphics video — script, collage keyframes, animation, voice-over, music & captions, all automated. An agent skill for Claude Code, Codex & other coding agents.",
       "url": "https://github.com/Anil-matcha/vox-ai-motion-graphics-generator",
       "homepage": null,
-      "stars": 339,
+      "stars": 341,
       "forks": 57,
-      "watchers": 339,
+      "watchers": 341,
       "language": "Python",
       "topics": [
         "agent-skill",
@@ -490,9 +535,9 @@
         "url": "https://github.com/Anil-matcha"
       },
       "createdAt": "2023-11-07T05:09:46Z",
-      "updatedAt": "2026-11-11T11:06:35Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:46:05Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -504,7 +549,7 @@
       "url": "https://github.com/FavioVazquez/showtime",
       "homepage": "https://faviovazquez.github.io/showtime/",
       "stars": 327,
-      "forks": 29,
+      "forks": 30,
       "watchers": 327,
       "language": "Python",
       "topics": [
@@ -536,8 +581,8 @@
       },
       "createdAt": "2026-09-28T15:16:41Z",
       "updatedAt": "2026-11-09T22:11:10Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -548,9 +593,9 @@
       "description": "把一个主题做成有配音、字幕、封面的讲解分析类视频 —— 全本地、用 HTML 写画面，稳定音画同步。 面向 AI 编程智能体的确定性 HTML → MP4 渲染流水线。",
       "url": "https://github.com/OneMoh/html-explainer",
       "homepage": null,
-      "stars": 294,
-      "forks": 43,
-      "watchers": 294,
+      "stars": 296,
+      "forks": 45,
+      "watchers": 296,
       "language": "Python",
       "topics": [
         "agent-skill",
@@ -577,9 +622,9 @@
         "url": "https://github.com/OneMoh"
       },
       "createdAt": "2026-09-21T04:42:31Z",
-      "updatedAt": "2026-11-11T02:02:28Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:03:36Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -609,8 +654,41 @@
       },
       "createdAt": "2026-10-10T13:34:45Z",
       "updatedAt": "2026-11-11T04:18:53Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1451084291",
+      "repoId": 1451084291,
+      "fullName": "Moh4696/cinematic-skill",
+      "name": "cinematic-skill",
+      "description": "Agent skill for narrated cinematic films built entirely from code: one continuous camera over photos, maps and cards, timed to the voice. Claude Code, Codex, Cursor, Gemini CLI.",
+      "url": "https://github.com/Moh4696/cinematic-skill",
+      "homepage": "https://x.com/exploraX_",
+      "stars": 215,
+      "forks": 14,
+      "watchers": 215,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "documentary",
+        "explainer-video",
+        "motion-graphics",
+        "skia",
+        "video"
+      ],
+      "owner": {
+        "login": "Moh4696",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/110087282?v=4",
+        "url": "https://github.com/Moh4696"
+      },
+      "createdAt": "2026-11-09T07:58:11Z",
+      "updatedAt": "2026-11-12T08:08:01Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -621,9 +699,9 @@
       "description": "AI motion graphics for YouTube explainer videos: 74 animated HTML explainer boards (charts, diagrams, Venn, timeline, heatmap) synced to your voice with Whisper, exported frame by frame with Chrome + FFmpeg. Every prompt + Claude skills. By TEIN AI.",
       "url": "https://github.com/sirioberati/YouTube-AI-Motion-Graphics",
       "homepage": "https://tein.ai",
-      "stars": 189,
-      "forks": 38,
-      "watchers": 189,
+      "stars": 193,
+      "forks": 40,
+      "watchers": 193,
       "language": "HTML",
       "topics": [
         "ai-agents",
@@ -653,42 +731,9 @@
         "url": "https://github.com/sirioberati"
       },
       "createdAt": "2026-10-27T17:35:05Z",
-      "updatedAt": "2026-11-11T12:13:49Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1451084291",
-      "repoId": 1451084291,
-      "fullName": "Moh4696/cinematic-skill",
-      "name": "cinematic-skill",
-      "description": "Agent skill for narrated cinematic films built entirely from code: one continuous camera over photos, maps and cards, timed to the voice. Claude Code, Codex, Cursor, Gemini CLI.",
-      "url": "https://github.com/Moh4696/cinematic-skill",
-      "homepage": "https://x.com/exploraX_",
-      "stars": 176,
-      "forks": 11,
-      "watchers": 176,
-      "language": "Python",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "documentary",
-        "explainer-video",
-        "motion-graphics",
-        "skia",
-        "video"
-      ],
-      "owner": {
-        "login": "Moh4696",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/110087282?v=4",
-        "url": "https://github.com/Moh4696"
-      },
-      "createdAt": "2026-11-09T07:58:11Z",
-      "updatedAt": "2026-11-11T15:33:10Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:03:17Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -699,9 +744,9 @@
       "description": "An agent skill that makes videos in pure code — narrated explainers and product promos in 35 visual styles (whiteboard, ink-wash, shadow puppets, pixel art, isometric worlds, movie trailers, manga, animated maps, Swiss kinetic type, blueprints, paper collage, Bayeux tapestry, pencil tests, rubber-hose cartoons, footage supercuts…), 16:9 and 9:16.",
       "url": "https://github.com/BubbleBrainBB/BB-Video",
       "homepage": null,
-      "stars": 173,
-      "forks": 35,
-      "watchers": 173,
+      "stars": 174,
+      "forks": 36,
+      "watchers": 174,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -719,9 +764,9 @@
         "url": "https://github.com/BubbleBrainBB"
       },
       "createdAt": "2026-10-05T09:18:42Z",
-      "updatedAt": "2026-11-11T15:23:26Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:56:39Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -756,9 +801,9 @@
         "url": "https://github.com/haiderfarooq3"
       },
       "createdAt": "2026-10-09T07:10:05Z",
-      "updatedAt": "2026-11-09T07:11:07Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T19:45:39Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -799,9 +844,9 @@
         "url": "https://github.com/haiderfarooq3"
       },
       "createdAt": "2026-10-23T15:46:29Z",
-      "updatedAt": "2026-11-11T09:40:00Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:19:27Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -845,8 +890,8 @@
       },
       "createdAt": "2026-04-14T05:24:48Z",
       "updatedAt": "2026-11-03T19:54:34Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -889,9 +934,9 @@
         "url": "https://github.com/erhanmeydan"
       },
       "createdAt": "2026-10-11T02:19:12Z",
-      "updatedAt": "2026-11-11T13:56:23Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:06:42Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -901,14 +946,21 @@
       "name": "explainer-video-skills",
       "description": "Explainer video skills for Claude Code: script, storyboard, and render narrated explainers, year-in-review recaps, and animated diagrams.",
       "url": "https://github.com/iart-ai/explainer-video-skills",
-      "homepage": "https://www.iart.ai/explainer-video",
-      "stars": 96,
+      "homepage": "https://www.iart.ai/skills#explainer-video-skills",
+      "stars": 97,
       "forks": 23,
-      "watchers": 96,
+      "watchers": 97,
       "language": "HTML",
       "topics": [
+        "agent-skills",
+        "ai-animation",
         "animated-diagram",
+        "claude-code",
         "claude-skill",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "deepseek",
         "diagram-animation",
         "explainer-video",
         "motion-graphics",
@@ -921,10 +973,10 @@
         "url": "https://github.com/iart-ai"
       },
       "createdAt": "2026-06-22T02:56:34Z",
-      "updatedAt": "2026-11-11T12:38:47Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T07:46:16Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1411207997",
@@ -955,8 +1007,8 @@
       },
       "createdAt": "2026-10-09T03:01:10Z",
       "updatedAt": "2026-11-11T05:03:32Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -988,8 +1040,8 @@
       },
       "createdAt": "2026-07-26T16:10:45Z",
       "updatedAt": "2026-11-10T08:42:12Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1000,9 +1052,9 @@
       "description": "A Claude Code skill that turns a topic into a narrated motion-design explainer, presented by a cartoon that lip-syncs to your voice.",
       "url": "https://github.com/brewed-ops/talking-explainer",
       "homepage": null,
-      "stars": 72,
+      "stars": 73,
       "forks": 20,
-      "watchers": 72,
+      "watchers": 73,
       "language": "Python",
       "topics": [
         "claude-code",
@@ -1018,9 +1070,9 @@
         "url": "https://github.com/brewed-ops"
       },
       "createdAt": "2026-11-02T07:19:33Z",
-      "updatedAt": "2026-11-10T16:15:29Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:34:10Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1031,9 +1083,9 @@
       "description": "Explainer reels drawn in code: every move lands on a spoken word, every render is checked. Free and open source, from tein.",
       "url": "https://github.com/sirioberati/showhow",
       "homepage": "https://tein.ai",
-      "stars": 71,
+      "stars": 72,
       "forks": 19,
-      "watchers": 71,
+      "watchers": 72,
       "language": "TypeScript",
       "topics": [
         "canvas",
@@ -1049,9 +1101,9 @@
         "url": "https://github.com/sirioberati"
       },
       "createdAt": "2026-10-29T17:07:14Z",
-      "updatedAt": "2026-11-10T08:42:04Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:43:05Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1062,9 +1114,9 @@
       "description": "Cursor Skills 合集：一句话生成短视频。包含 Tumblr 风格视频、知识讲解视频、Lottie 动画视频等多种 AI 视频制作技能。",
       "url": "https://github.com/xuliang2024/video_skills",
       "homepage": null,
-      "stars": 67,
+      "stars": 69,
       "forks": 17,
-      "watchers": 67,
+      "watchers": 69,
       "language": "Python",
       "topics": [
         "ai-video",
@@ -1084,9 +1136,9 @@
         "url": "https://github.com/xuliang2024"
       },
       "createdAt": "2026-02-18T14:44:38Z",
-      "updatedAt": "2026-10-28T03:04:48Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:27:23Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1097,9 +1149,9 @@
       "description": "格物 · 蜡笔状态图：一句话做一部会动的蜡笔状态图短片。3:4、2-3 分钟、四款合成旁白（可加自己的声音）、每章一张海报；支持 Codex、Claude Code、Grok 等，可批量出片。",
       "url": "https://github.com/threerocks/sweety-statechart-video",
       "homepage": "https://github.com/threerocks/sweety-statechart-video/releases",
-      "stars": 66,
+      "stars": 67,
       "forks": 13,
-      "watchers": 66,
+      "watchers": 67,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1117,9 +1169,9 @@
         "url": "https://github.com/threerocks"
       },
       "createdAt": "2026-11-03T09:24:43Z",
-      "updatedAt": "2026-11-10T15:34:40Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:43:46Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1151,8 +1203,8 @@
       },
       "createdAt": "2026-07-03T07:41:45Z",
       "updatedAt": "2026-11-11T09:51:04Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1196,8 +1248,8 @@
       },
       "createdAt": "2026-10-06T18:03:49Z",
       "updatedAt": "2026-11-11T02:31:43Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1208,9 +1260,9 @@
       "description": "独立可用的手绘讲解视频 skill：AI 原生 SVG 矢量图解逐笔生长 + GIF 拆帧微动效，接进确定性时间轴。自带安装器、文档与离线样板。",
       "url": "https://github.com/liangdabiao/whiteboard-teacher-video-motion",
       "homepage": "https://github.com/liangdabiao/whiteboard-teacher-video-motion#readme",
-      "stars": 36,
+      "stars": 37,
       "forks": 4,
-      "watchers": 36,
+      "watchers": 37,
       "language": "Python",
       "topics": [
         "ai-video",
@@ -1228,9 +1280,9 @@
         "url": "https://github.com/liangdabiao"
       },
       "createdAt": "2026-11-08T06:10:20Z",
-      "updatedAt": "2026-11-11T03:17:39Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:25:15Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1274,8 +1326,8 @@
       },
       "createdAt": "2026-06-17T08:46:24Z",
       "updatedAt": "2026-11-03T10:20:02Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1286,9 +1338,9 @@
       "description": "A video harness work platform for Agents such as Claude or Codex: the agent writes the code that renders the film, checks its own frames, storyboard and cut.  给 Claude Code 和 Codex 用的视频Harness工作台：agent 写代码渲染成片、自己检查分镜，立意、成片由你拍板；众多风格预设、引擎丰富，配音配乐也用代码做。",
       "url": "https://github.com/ZLHad/OpenVideoHarness",
       "homepage": "https://zlhad.top/OpenVideoHarness/docs/site/",
-      "stars": 29,
+      "stars": 30,
       "forks": 7,
-      "watchers": 29,
+      "watchers": 30,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1318,45 +1370,42 @@
         "url": "https://github.com/ZLHad"
       },
       "createdAt": "2026-09-28T18:22:24Z",
-      "updatedAt": "2026-11-10T14:04:09Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T22:29:31Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1386053677",
-      "repoId": 1386053677,
-      "fullName": "ahmdd4vd/MotionCraft",
-      "name": "MotionCraft",
-      "description": "Clean, high-taste motion graphics videos made by your AI agent with Remotion. One-command Agent Skill: npx skills add ahmdd4vd/motioncraft",
-      "url": "https://github.com/ahmdd4vd/MotionCraft",
-      "homepage": null,
-      "stars": 28,
-      "forks": 3,
-      "watchers": 28,
-      "language": "JavaScript",
+      "id": "gh-topic-1418797381",
+      "repoId": 1418797381,
+      "fullName": "heptameta/heptabase-explainer-studio",
+      "name": "heptabase-explainer-studio",
+      "description": "Turn any material into explainer videos, with your coding agent.",
+      "url": "https://github.com/heptameta/heptabase-explainer-studio",
+      "homepage": "https://heptabase.com",
+      "stars": 29,
+      "forks": 2,
+      "watchers": 29,
+      "language": "Python",
       "topics": [
-        "agent-skills",
-        "ai-agent",
         "claude-code",
-        "codex",
+        "claude-code-plugin",
+        "coding-agent",
+        "education",
         "explainer-video",
-        "motion-graphics",
-        "react",
-        "remotion",
-        "skills",
-        "typescript",
-        "video",
+        "manim",
+        "manimgl",
+        "text-to-video",
         "video-generation"
       ],
       "owner": {
-        "login": "ahmdd4vd",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/216016511?v=4",
-        "url": "https://github.com/ahmdd4vd"
+        "login": "heptameta",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/75839914?v=4",
+        "url": "https://github.com/heptameta"
       },
-      "createdAt": "2026-09-24T17:33:51Z",
-      "updatedAt": "2026-11-08T13:06:51Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
+      "createdAt": "2026-10-14T11:28:04Z",
+      "updatedAt": "2026-11-12T08:16:56Z",
+      "firstSeenAt": "2026-11-12T09:14:37.036Z",
       "isNew": true,
       "existing": false
     },
@@ -1393,8 +1442,45 @@
       },
       "createdAt": "2026-11-06T02:11:49Z",
       "updatedAt": "2026-11-11T04:26:41Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1386053677",
+      "repoId": 1386053677,
+      "fullName": "ahmdd4vd/MotionCraft",
+      "name": "MotionCraft",
+      "description": "Clean, high-taste motion graphics videos made by your AI agent with Remotion. One-command Agent Skill: npx skills add ahmdd4vd/motioncraft",
+      "url": "https://github.com/ahmdd4vd/MotionCraft",
+      "homepage": null,
+      "stars": 28,
+      "forks": 3,
+      "watchers": 28,
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "claude-code",
+        "codex",
+        "explainer-video",
+        "motion-graphics",
+        "react",
+        "remotion",
+        "skills",
+        "typescript",
+        "video",
+        "video-generation"
+      ],
+      "owner": {
+        "login": "ahmdd4vd",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/216016511?v=4",
+        "url": "https://github.com/ahmdd4vd"
+      },
+      "createdAt": "2026-09-24T17:33:51Z",
+      "updatedAt": "2026-11-08T13:06:51Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1405,9 +1491,9 @@
       "description": "Vibe 知识大赏（vibe knowledge）风格知识科普短片 Skill：Canvas 逐帧 + Playwright + ffmpeg，一键出 134 秒无旁白双语字幕视频。含互动式反常识开场模板、100 条爆款样本与 25 个选题。",
       "url": "https://github.com/wchhywizd/vibe-knowledge-interactive",
       "homepage": null,
-      "stars": 26,
+      "stars": 28,
       "forks": 2,
-      "watchers": 26,
+      "watchers": 28,
       "language": "HTML",
       "topics": [
         "agent-skill",
@@ -1430,42 +1516,9 @@
         "url": "https://github.com/wchhywizd"
       },
       "createdAt": "2026-10-21T03:12:55Z",
-      "updatedAt": "2026-11-11T10:31:07Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1276679693",
-      "repoId": 1276679693,
-      "fullName": "iart-ai/map-animation-skills",
-      "name": "map-animation-skills",
-      "description": "Animated map skills for AI coding agents — draw routes, zoom-to-location, and data-driven map animations rendered to video.",
-      "url": "https://github.com/iart-ai/map-animation-skills",
-      "homepage": "https://www.iart.ai",
-      "stars": 25,
-      "forks": 7,
-      "watchers": 25,
-      "language": "HTML",
-      "topics": [
-        "claude-skill",
-        "data-visualization",
-        "earth-studio",
-        "explainer-video",
-        "geojson",
-        "map-animation",
-        "motion-graphics",
-        "vox-style"
-      ],
-      "owner": {
-        "login": "iart-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/113883324?v=4",
-        "url": "https://github.com/iart-ai"
-      },
-      "createdAt": "2026-06-22T07:40:10Z",
-      "updatedAt": "2026-11-05T04:55:48Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:37:43Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1476,9 +1529,9 @@
       "description": "Build Kurzgesagt-quality animated explainer videos as one self-contained HTML file — GSAP choreography patterns, YouTube-retention method, overlap auditor, ElevenLabs VO pipeline. Claude Code skills + standalone tools. MIT.",
       "url": "https://github.com/BusyBee3333/animated-explainer-skills",
       "homepage": null,
-      "stars": 25,
+      "stars": 27,
       "forks": 7,
-      "watchers": 25,
+      "watchers": 27,
       "language": "HTML",
       "topics": [
         "animated-explainer",
@@ -1496,43 +1549,49 @@
         "url": "https://github.com/BusyBee3333"
       },
       "createdAt": "2026-07-13T08:55:33Z",
-      "updatedAt": "2026-11-09T08:59:06Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:33:42Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1418797381",
-      "repoId": 1418797381,
-      "fullName": "heptameta/heptabase-explainer-studio",
-      "name": "heptabase-explainer-studio",
-      "description": "Turn any material into explainer videos, with your coding agent.",
-      "url": "https://github.com/heptameta/heptabase-explainer-studio",
-      "homepage": "https://heptabase.com",
-      "stars": 24,
-      "forks": 1,
-      "watchers": 24,
-      "language": "Python",
+      "id": "gh-topic-1276679693",
+      "repoId": 1276679693,
+      "fullName": "iart-ai/map-animation-skills",
+      "name": "map-animation-skills",
+      "description": "Animated map skills for AI coding agents — draw routes, zoom-to-location, and data-driven map animations rendered to video.",
+      "url": "https://github.com/iart-ai/map-animation-skills",
+      "homepage": "https://www.iart.ai/skills#map-animation-skills",
+      "stars": 25,
+      "forks": 7,
+      "watchers": 25,
+      "language": "HTML",
       "topics": [
+        "agent-skills",
+        "ai-animation",
         "claude-code",
-        "claude-code-plugin",
-        "coding-agent",
-        "education",
+        "claude-skill",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "data-visualization",
+        "deepseek",
+        "earth-studio",
         "explainer-video",
-        "manim",
-        "manimgl",
-        "text-to-video",
-        "video-generation"
+        "geojson",
+        "map-animation",
+        "motion-graphics",
+        "vox-style"
       ],
       "owner": {
-        "login": "heptameta",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/75839914?v=4",
-        "url": "https://github.com/heptameta"
+        "login": "iart-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/113883324?v=4",
+        "url": "https://github.com/iart-ai"
       },
-      "createdAt": "2026-10-14T11:28:04Z",
-      "updatedAt": "2026-11-11T14:22:09Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "createdAt": "2026-06-22T07:40:10Z",
+      "updatedAt": "2026-11-11T17:14:41Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1543,9 +1602,9 @@
       "description": "Claude Code skill: turn any topic into a hand-drawn whiteboard explainer video with voice-over and captions",
       "url": "https://github.com/Matteoikarieth96/whiteboard-video-skill",
       "homepage": null,
-      "stars": 23,
+      "stars": 24,
       "forks": 4,
-      "watchers": 23,
+      "watchers": 24,
       "language": "HTML",
       "topics": [
         "claude-code",
@@ -1560,9 +1619,9 @@
         "url": "https://github.com/Matteoikarieth96"
       },
       "createdAt": "2026-09-26T09:43:36Z",
-      "updatedAt": "2026-11-11T11:24:10Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:27:51Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1595,8 +1654,8 @@
       },
       "createdAt": "2026-06-16T14:05:31Z",
       "updatedAt": "2026-10-30T08:57:41Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1629,7 +1688,37 @@
       },
       "createdAt": "2026-10-20T07:28:55Z",
       "updatedAt": "2026-11-11T04:18:56Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1442719161",
+      "repoId": 1442719161,
+      "fullName": "howoneai/xiaolin-explainer-packaging",
+      "name": "xiaolin-explainer-packaging",
+      "description": "小Lin说风格讲解视频包装 skill：Remotion 版式组件、关键词计时分镜、混音、逐帧质检、资料检索（非官方）",
+      "url": "https://github.com/howoneai/xiaolin-explainer-packaging",
+      "homepage": null,
+      "stars": 20,
+      "forks": 6,
+      "watchers": 20,
+      "language": "TypeScript",
+      "topics": [
+        "agent-skill",
+        "explainer-video",
+        "manus",
+        "remotion",
+        "video-editing"
+      ],
+      "owner": {
+        "login": "howoneai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/261429804?v=4",
+        "url": "https://github.com/howoneai"
+      },
+      "createdAt": "2026-11-02T08:47:55Z",
+      "updatedAt": "2026-11-12T08:56:09Z",
+      "firstSeenAt": "2026-11-12T09:14:37.036Z",
       "isNew": true,
       "existing": false
     },
@@ -1661,42 +1750,45 @@
       },
       "createdAt": "2026-07-26T15:21:52Z",
       "updatedAt": "2026-10-05T19:22:56Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1386334343",
-      "repoId": 1386334343,
-      "fullName": "edwardaiwang-svg/kinodraw",
-      "name": "kinodraw",
-      "description": "KinoDraw: turn any script into a hand-drawn whiteboard explainer video, free and open source, on your own computer.",
-      "url": "https://github.com/edwardaiwang-svg/kinodraw",
-      "homepage": "https://edwardaiwang-svg.github.io/kinodraw/",
-      "stars": 19,
-      "forks": 7,
-      "watchers": 19,
-      "language": "Python",
+      "id": "gh-topic-1409464128",
+      "repoId": 1409464128,
+      "fullName": "dsauce/stickman-kino",
+      "name": "stickman-kino",
+      "description": "Stickman films, directed by your coding agent, rendered as code. No video-generation model, no video API, renders locally.",
+      "url": "https://github.com/dsauce/stickman-kino",
+      "homepage": "https://dsauce.github.io/stickman-kino/",
+      "stars": 18,
+      "forks": 5,
+      "watchers": 18,
+      "language": "JavaScript",
       "topics": [
-        "education",
+        "agent-skills",
+        "ai-agents",
+        "animation",
+        "claude-code",
+        "codex",
         "explainer-video",
-        "kinodraw",
-        "offline-first",
-        "open-source",
-        "text-to-speech",
+        "gsap",
+        "hyperframes",
+        "motion-graphics",
+        "stickman",
         "text-to-video",
-        "video-maker",
-        "whiteboard-animation"
+        "video-generation"
       ],
       "owner": {
-        "login": "edwardaiwang-svg",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/292304838?v=4",
-        "url": "https://github.com/edwardaiwang-svg"
+        "login": "dsauce",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6794113?v=4",
+        "url": "https://github.com/dsauce"
       },
-      "createdAt": "2026-09-24T20:37:27Z",
-      "updatedAt": "2026-11-07T11:57:09Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "createdAt": "2026-10-07T22:57:16Z",
+      "updatedAt": "2026-11-12T08:24:49Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1706,13 +1798,20 @@
       "name": "manim-skills",
       "description": "Manim (math animation) skills for AI coding agents — animate equations, plot functions, and render 3Blue1Brown-style explainers to MP4 with Manim Community Edition.",
       "url": "https://github.com/iart-ai/manim-skills",
-      "homepage": "https://www.iart.ai",
+      "homepage": "https://www.iart.ai/skills#manim-skills",
       "stars": 18,
       "forks": 8,
       "watchers": 18,
       "language": "HTML",
       "topics": [
+        "agent-skills",
+        "ai-animation",
+        "claude-code",
         "claude-skill",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "deepseek",
         "educational-video",
         "explainer-video",
         "manim",
@@ -1727,9 +1826,9 @@
         "url": "https://github.com/iart-ai"
       },
       "createdAt": "2026-06-22T04:57:48Z",
-      "updatedAt": "2026-11-05T13:19:33Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:16:06Z",
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1765,90 +1864,8 @@
       },
       "createdAt": "2026-10-02T19:25:07Z",
       "updatedAt": "2026-11-03T07:38:37Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1409464128",
-      "repoId": 1409464128,
-      "fullName": "dsauce/stickman-kino",
-      "name": "stickman-kino",
-      "description": "Stickman films, directed by your coding agent, rendered as code. No video-generation model, no video API, renders locally.",
-      "url": "https://github.com/dsauce/stickman-kino",
-      "homepage": "https://dsauce.github.io/stickman-kino/",
-      "stars": 16,
-      "forks": 5,
-      "watchers": 16,
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "animation",
-        "claude-code",
-        "codex",
-        "explainer-video",
-        "gsap",
-        "hyperframes",
-        "motion-graphics",
-        "stickman",
-        "text-to-video",
-        "video-generation"
-      ],
-      "owner": {
-        "login": "dsauce",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6794113?v=4",
-        "url": "https://github.com/dsauce"
-      },
-      "createdAt": "2026-10-07T22:57:16Z",
-      "updatedAt": "2026-11-08T16:39:03Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1402786844",
-      "repoId": 1402786844,
-      "fullName": "AmirSbss/spotlight",
-      "name": "spotlight",
-      "description": "Open-source Agent Skill that turns a website, phone clips or a CSV into a finished short video: launch videos, promo reels and narrated explainers, made by Claude Code, Codex CLI or Hermes Agent. With music, captions in any language (Arabic and Persian too) and built-in quality checks.",
-      "url": "https://github.com/AmirSbss/spotlight",
-      "homepage": null,
-      "stars": 16,
-      "forks": 1,
-      "watchers": 16,
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "ai-video",
-        "ai-video-generator",
-        "arabic",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "codex-cli",
-        "explainer-video",
-        "ffmpeg",
-        "hermes-agent",
-        "launch-video",
-        "marketing-video",
-        "playwright",
-        "product-video",
-        "promo-video",
-        "short-form-video",
-        "video-editing",
-        "video-generation"
-      ],
-      "owner": {
-        "login": "AmirSbss",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/16446564?v=4",
-        "url": "https://github.com/AmirSbss"
-      },
-      "createdAt": "2026-10-03T06:56:42Z",
-      "updatedAt": "2026-11-07T13:33:14Z",
-      "firstSeenAt": "2026-11-11T15:53:18.671Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:59:16.668Z",
+      "isNew": false,
       "existing": false
     }
   ]

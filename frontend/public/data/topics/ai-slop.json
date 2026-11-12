@@ -1,9 +1,9 @@
 {
   "topic": "ai-slop",
-  "fetchedAt": "2026-11-11T15:51:58.868Z",
+  "fetchedAt": "2026-11-12T09:12:57.383Z",
   "count": 50,
-  "newCount": 50,
-  "existingCount": 0,
+  "newCount": 1,
+  "existingCount": 1,
   "items": [
     {
       "id": "gh-topic-1326531152",
@@ -13,9 +13,9 @@
       "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
       "url": "https://github.com/miqdadbadjuber/anti-slop",
       "homepage": "https://antislop.ai.id",
-      "stars": 8941,
-      "forks": 607,
-      "watchers": 8941,
+      "stars": 8997,
+      "forks": 615,
+      "watchers": 8997,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -35,9 +35,9 @@
         "url": "https://github.com/miqdadbadjuber"
       },
       "createdAt": "2026-08-07T10:29:56Z",
-      "updatedAt": "2026-11-11T15:42:36Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:30:24Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -80,8 +80,8 @@
       },
       "createdAt": "2026-02-09T00:52:40Z",
       "updatedAt": "2026-11-08T07:37:05Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -93,7 +93,7 @@
       "url": "https://github.com/scanaislop/aislop",
       "homepage": "https://scanaislop.com",
       "stars": 739,
-      "forks": 43,
+      "forks": 44,
       "watchers": 739,
       "language": "TypeScript",
       "topics": [
@@ -124,9 +124,9 @@
         "url": "https://github.com/scanaislop"
       },
       "createdAt": "2026-03-06T13:05:19Z",
-      "updatedAt": "2026-11-11T06:19:16Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T00:31:19Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -170,8 +170,8 @@
       },
       "createdAt": "2026-08-13T08:09:10Z",
       "updatedAt": "2026-11-11T06:41:31Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -182,9 +182,9 @@
       "description": "Fujifilm camera modification tools. DO NOT FLASH CUSTOM FIRMWARE TO YOUR CAMERA WITHOUT DUAL BOOTING FIRST",
       "url": "https://github.com/justjake/fujimod",
       "homepage": "https://fujimod.com",
-      "stars": 223,
-      "forks": 43,
-      "watchers": 223,
+      "stars": 224,
+      "forks": 45,
+      "watchers": 224,
       "language": "Rust",
       "topics": [
         "ai-slop",
@@ -198,9 +198,9 @@
         "url": "https://github.com/justjake"
       },
       "createdAt": "2026-10-15T16:34:15Z",
-      "updatedAt": "2026-11-11T15:27:11Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:43:50Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -244,8 +244,8 @@
       },
       "createdAt": "2026-04-30T03:50:18Z",
       "updatedAt": "2026-11-11T06:56:28Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -256,9 +256,9 @@
       "description": "Open-source Agent Skill that finds and removes AI slop from your writing",
       "url": "https://github.com/manavmishra/ZeroSlop",
       "homepage": "https://zero-slop.ai",
-      "stars": 165,
+      "stars": 167,
       "forks": 7,
-      "watchers": 165,
+      "watchers": 167,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -288,9 +288,9 @@
         "url": "https://github.com/manavmishra"
       },
       "createdAt": "2026-08-03T18:55:48Z",
-      "updatedAt": "2026-11-11T15:27:45Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:39:21Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -301,9 +301,9 @@
       "description": "Audits AI-generated frontend and rewrites it so it stops looking AI-made: purple-gradient slop and the \"tasteful\" defaults (cream + terracotta, mono chrome). Zero-dependency scanner included. The design counterpart to avoid-ai-writing.",
       "url": "https://github.com/funboy322/avoid-ai-design",
       "homepage": null,
-      "stars": 158,
-      "forks": 10,
-      "watchers": 158,
+      "stars": 159,
+      "forks": 11,
+      "watchers": 159,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -333,9 +333,9 @@
         "url": "https://github.com/funboy322"
       },
       "createdAt": "2026-05-30T22:04:55Z",
-      "updatedAt": "2026-11-11T04:15:42Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:14:29Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -379,8 +379,8 @@
       },
       "createdAt": "2025-12-02T20:36:50Z",
       "updatedAt": "2026-11-11T14:09:16Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -415,8 +415,53 @@
       },
       "createdAt": "2026-03-31T10:00:21Z",
       "updatedAt": "2026-11-03T11:24:19Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1188312314",
+      "repoId": 1188312314,
+      "fullName": "pablocaeg/sloptotal",
+      "name": "sloptotal",
+      "description": "Open-source AI text detector and ChatGPT detector: 23 engines, one calibrated score, every number measured on a public benchmark. Self-hosted, runs on CPU.",
+      "url": "https://github.com/pablocaeg/sloptotal",
+      "homepage": "https://sloptotal.com",
+      "stars": 113,
+      "forks": 46,
+      "watchers": 113,
+      "language": "Python",
+      "topics": [
+        "ai-content-detector",
+        "ai-detection",
+        "ai-detector",
+        "ai-essay-checker",
+        "ai-generated-text-detection",
+        "ai-slop",
+        "ai-text-detection",
+        "ai-text-detector",
+        "benchmark",
+        "chatgpt",
+        "chatgpt-detector",
+        "good-first-issue",
+        "huggingface",
+        "llm",
+        "llm-detection",
+        "open-source",
+        "privacy",
+        "self-hosted",
+        "text-classification",
+        "transformers"
+      ],
+      "owner": {
+        "login": "pablocaeg",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/72265284?v=4",
+        "url": "https://github.com/pablocaeg"
+      },
+      "createdAt": "2026-03-21T22:43:56Z",
+      "updatedAt": "2026-11-11T22:52:10Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -454,53 +499,8 @@
       },
       "createdAt": "2026-06-18T19:41:25Z",
       "updatedAt": "2026-11-05T18:36:04Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1188312314",
-      "repoId": 1188312314,
-      "fullName": "pablocaeg/sloptotal",
-      "name": "sloptotal",
-      "description": "Open-source AI text detector and ChatGPT detector: 23 engines, one calibrated score, every number measured on a public benchmark. Self-hosted, runs on CPU.",
-      "url": "https://github.com/pablocaeg/sloptotal",
-      "homepage": "https://sloptotal.com",
-      "stars": 111,
-      "forks": 46,
-      "watchers": 111,
-      "language": "Python",
-      "topics": [
-        "ai-content-detector",
-        "ai-detection",
-        "ai-detector",
-        "ai-essay-checker",
-        "ai-generated-text-detection",
-        "ai-slop",
-        "ai-text-detection",
-        "ai-text-detector",
-        "benchmark",
-        "chatgpt",
-        "chatgpt-detector",
-        "good-first-issue",
-        "huggingface",
-        "llm",
-        "llm-detection",
-        "open-source",
-        "privacy",
-        "self-hosted",
-        "text-classification",
-        "transformers"
-      ],
-      "owner": {
-        "login": "pablocaeg",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/72265284?v=4",
-        "url": "https://github.com/pablocaeg"
-      },
-      "createdAt": "2026-03-21T22:43:56Z",
-      "updatedAt": "2026-11-11T10:38:48Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -531,8 +531,8 @@
       },
       "createdAt": "2026-10-12T09:38:49Z",
       "updatedAt": "2026-11-11T12:18:38Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -570,8 +570,8 @@
       },
       "createdAt": "2026-01-16T19:23:04Z",
       "updatedAt": "2026-11-10T15:01:18Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -610,8 +610,8 @@
       },
       "createdAt": "2026-04-06T17:56:29Z",
       "updatedAt": "2026-11-04T09:10:45Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -643,8 +643,8 @@
       },
       "createdAt": "2026-07-15T11:02:50Z",
       "updatedAt": "2026-11-11T04:29:42Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -656,7 +656,7 @@
       "url": "https://github.com/leeandev/stop-slop-ko",
       "homepage": null,
       "stars": 82,
-      "forks": 7,
+      "forks": 6,
       "watchers": 82,
       "language": "Python",
       "topics": [
@@ -675,8 +675,8 @@
       },
       "createdAt": "2026-10-09T14:05:15Z",
       "updatedAt": "2026-11-11T02:56:05Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -707,37 +707,9 @@
         "url": "https://github.com/Mutakisa"
       },
       "createdAt": "2026-09-22T20:03:20Z",
-      "updatedAt": "2026-11-11T11:38:42Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-827838818",
-      "repoId": 827838818,
-      "fullName": "Hacksore/oghunt",
-      "name": "oghunt",
-      "description": "oghunt uses AI to remove the AI listings from Product Hunt launches  ",
-      "url": "https://github.com/Hacksore/oghunt",
-      "homepage": "https://oghunt.com",
-      "stars": 69,
-      "forks": 16,
-      "watchers": 69,
-      "language": "TypeScript",
-      "topics": [
-        "ai-slop",
-        "no-ai",
-        "producthunt"
-      ],
-      "owner": {
-        "login": "Hacksore",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/996134?v=4",
-        "url": "https://github.com/Hacksore"
-      },
-      "createdAt": "2024-07-12T13:40:48Z",
-      "updatedAt": "2026-08-29T03:03:49Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:26:35Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -776,8 +748,36 @@
       },
       "createdAt": "2026-07-28T01:13:24Z",
       "updatedAt": "2026-11-09T17:10:04Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-827838818",
+      "repoId": 827838818,
+      "fullName": "Hacksore/oghunt",
+      "name": "oghunt",
+      "description": "oghunt uses AI to remove the AI listings from Product Hunt launches  ",
+      "url": "https://github.com/Hacksore/oghunt",
+      "homepage": "https://oghunt.com",
+      "stars": 68,
+      "forks": 16,
+      "watchers": 68,
+      "language": "TypeScript",
+      "topics": [
+        "ai-slop",
+        "no-ai",
+        "producthunt"
+      ],
+      "owner": {
+        "login": "Hacksore",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/996134?v=4",
+        "url": "https://github.com/Hacksore"
+      },
+      "createdAt": "2024-07-12T13:40:48Z",
+      "updatedAt": "2026-11-12T09:04:09Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -821,8 +821,8 @@
       },
       "createdAt": "2026-09-23T00:01:36Z",
       "updatedAt": "2026-11-09T17:55:46Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -862,8 +862,8 @@
       },
       "createdAt": "2026-07-08T11:36:07Z",
       "updatedAt": "2026-11-10T15:47:26Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -896,8 +896,8 @@
       },
       "createdAt": "2026-11-05T11:58:52Z",
       "updatedAt": "2026-11-09T22:49:07Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -940,9 +940,9 @@
         "url": "https://github.com/haabe"
       },
       "createdAt": "2026-04-07T10:48:02Z",
-      "updatedAt": "2026-11-09T11:31:49Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:28:04Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -969,8 +969,8 @@
       },
       "createdAt": "2026-02-08T22:06:11Z",
       "updatedAt": "2026-10-06T09:20:54Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -981,9 +981,9 @@
       "description": "Strips the AI tells out of prose, code, and academic writing. 152 patterns from real AI-vs-human analysis, two-pass rewrite, three-tier scoring. No API key — a markdown skill that runs on the model you already use.",
       "url": "https://github.com/gabelul/slopbuster",
       "homepage": null,
-      "stars": 47,
+      "stars": 48,
       "forks": 5,
-      "watchers": 47,
+      "watchers": 48,
       "language": null,
       "topics": [
         "ai-agent-skills",
@@ -1012,9 +1012,9 @@
         "url": "https://github.com/gabelul"
       },
       "createdAt": "2026-03-24T00:38:39Z",
-      "updatedAt": "2026-11-10T04:43:47Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:37:42Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1044,8 +1044,8 @@
       },
       "createdAt": "2026-03-03T13:49:04Z",
       "updatedAt": "2026-11-06T23:57:38Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1084,8 +1084,8 @@
       },
       "createdAt": "2026-04-11T00:16:24Z",
       "updatedAt": "2026-11-10T21:01:53Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1127,9 +1127,9 @@
       },
       "createdAt": "2026-09-20T07:12:51Z",
       "updatedAt": "2026-11-05T04:58:19Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1309088427",
@@ -1162,8 +1162,8 @@
       },
       "createdAt": "2026-07-22T17:33:35Z",
       "updatedAt": "2026-11-03T04:57:08Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1207,8 +1207,8 @@
       },
       "createdAt": "2026-08-10T22:30:18Z",
       "updatedAt": "2026-11-11T14:37:16Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1251,8 +1251,8 @@
       },
       "createdAt": "2026-03-22T06:22:47Z",
       "updatedAt": "2026-11-11T11:58:20Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1288,8 +1288,8 @@
       },
       "createdAt": "2026-08-19T06:24:57Z",
       "updatedAt": "2026-11-07T12:38:32Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1300,9 +1300,9 @@
       "description": "Agent skill that removes slop, jargon, and AI writing tells from any text. \"The gun is not smoking; it's an honest footgun — that will be load-bearing when it lands.\"",
       "url": "https://github.com/woerndl/unsloppify",
       "homepage": null,
-      "stars": 29,
+      "stars": 30,
       "forks": 3,
-      "watchers": 29,
+      "watchers": 30,
       "language": "Shell",
       "topics": [
         "agent-skill",
@@ -1319,9 +1319,9 @@
         "url": "https://github.com/woerndl"
       },
       "createdAt": "2026-05-12T20:53:46Z",
-      "updatedAt": "2026-11-10T16:30:07Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:16:11Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1364,8 +1364,53 @@
       },
       "createdAt": "2026-02-26T21:01:46Z",
       "updatedAt": "2026-11-05T09:30:31Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1259558144",
+      "repoId": 1259558144,
+      "fullName": "fayerman-source/deslop",
+      "name": "deslop",
+      "description": "Plain-English legal writing skill for AI agents (Claude Code, Codex, Antigravity). For lawyers, paralegals, and in-house counsel: audits and rewrites legalese and AI slop in contracts, briefs, memos, and client letters into clear prose using Garner's plain-language rules, while preserving legal terms of art.",
+      "url": "https://github.com/fayerman-source/deslop",
+      "homepage": "https://skills.sh/fayerman-source/deslop/deslop",
+      "stars": 26,
+      "forks": 4,
+      "watchers": 26,
+      "language": null,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-slop",
+        "antigravity",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "contract-drafting",
+        "deslop",
+        "law",
+        "lawyers",
+        "legal-drafting",
+        "legal-tech",
+        "legal-writing",
+        "legalese",
+        "legaltech",
+        "plain-english",
+        "prompt-engineering",
+        "style-guide",
+        "writing-assistant"
+      ],
+      "owner": {
+        "login": "fayerman-source",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/234407473?v=4",
+        "url": "https://github.com/fayerman-source"
+      },
+      "createdAt": "2026-06-04T16:17:01Z",
+      "updatedAt": "2026-11-12T05:40:43Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1401,8 +1446,8 @@
       },
       "createdAt": "2026-10-08T08:41:08Z",
       "updatedAt": "2026-11-08T19:10:59Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1446,53 +1491,8 @@
       },
       "createdAt": "2026-06-30T10:21:13Z",
       "updatedAt": "2026-11-09T16:57:49Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1259558144",
-      "repoId": 1259558144,
-      "fullName": "fayerman-source/deslop",
-      "name": "deslop",
-      "description": "Plain-English legal writing skill for AI agents (Claude Code, Codex, Antigravity). For lawyers, paralegals, and in-house counsel: audits and rewrites legalese and AI slop in contracts, briefs, memos, and client letters into clear prose using Garner's plain-language rules, while preserving legal terms of art.",
-      "url": "https://github.com/fayerman-source/deslop",
-      "homepage": "https://skills.sh/fayerman-source/deslop/deslop",
-      "stars": 25,
-      "forks": 4,
-      "watchers": 25,
-      "language": null,
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "ai-slop",
-        "antigravity",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "contract-drafting",
-        "deslop",
-        "law",
-        "lawyers",
-        "legal-drafting",
-        "legal-tech",
-        "legal-writing",
-        "legalese",
-        "legaltech",
-        "plain-english",
-        "prompt-engineering",
-        "style-guide",
-        "writing-assistant"
-      ],
-      "owner": {
-        "login": "fayerman-source",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/234407473?v=4",
-        "url": "https://github.com/fayerman-source"
-      },
-      "createdAt": "2026-06-04T16:17:01Z",
-      "updatedAt": "2026-11-11T08:17:58Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1523,8 +1523,8 @@
       },
       "createdAt": "2026-09-20T01:07:43Z",
       "updatedAt": "2026-10-15T20:34:52Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1555,8 +1555,8 @@
       },
       "createdAt": "2026-07-04T16:04:01Z",
       "updatedAt": "2026-11-03T11:35:16Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1587,8 +1587,8 @@
       },
       "createdAt": "2026-06-03T16:11:11Z",
       "updatedAt": "2026-10-26T16:05:40Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1614,8 +1614,8 @@
       },
       "createdAt": "2026-01-26T21:02:55Z",
       "updatedAt": "2026-11-02T21:45:36Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1659,8 +1659,8 @@
       },
       "createdAt": "2026-07-31T16:36:32Z",
       "updatedAt": "2026-11-03T11:35:29Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1672,7 +1672,7 @@
       "url": "https://github.com/Ferousco-dev/anti-slop-design",
       "homepage": null,
       "stars": 21,
-      "forks": 7,
+      "forks": 8,
       "watchers": 21,
       "language": "Python",
       "topics": [
@@ -1699,8 +1699,8 @@
       },
       "createdAt": "2026-07-28T23:27:14Z",
       "updatedAt": "2026-11-05T13:35:35Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1744,8 +1744,8 @@
       },
       "createdAt": "2026-10-01T10:42:03Z",
       "updatedAt": "2026-10-14T19:29:26Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1780,8 +1780,8 @@
       },
       "createdAt": "2026-05-26T08:17:51Z",
       "updatedAt": "2026-11-11T06:53:35Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1825,7 +1825,7 @@
       },
       "createdAt": "2026-10-29T13:18:44Z",
       "updatedAt": "2026-11-10T16:57:49Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
+      "firstSeenAt": "2026-11-12T09:12:57.383Z",
       "isNew": true,
       "existing": false
     },
@@ -1857,8 +1857,8 @@
       },
       "createdAt": "2026-08-19T07:38:43Z",
       "updatedAt": "2026-11-11T07:59:08Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1890,8 +1890,8 @@
       },
       "createdAt": "2026-10-27T13:00:12Z",
       "updatedAt": "2026-11-10T19:06:44Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1935,8 +1935,8 @@
       },
       "createdAt": "2026-05-15T13:08:46Z",
       "updatedAt": "2026-11-11T10:09:35Z",
-      "firstSeenAt": "2026-11-11T15:51:58.868Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     }
   ]

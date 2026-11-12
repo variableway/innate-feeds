@@ -1,9 +1,9 @@
 {
   "topic": "qa",
-  "fetchedAt": "2026-11-11T15:55:30.543Z",
+  "fetchedAt": "2026-11-12T09:17:45.408Z",
   "count": 50,
-  "newCount": 46,
-  "existingCount": 4,
+  "newCount": 0,
+  "existingCount": 5,
   "items": [
     {
       "id": "gh-topic-10379607",
@@ -13,9 +13,9 @@
       "description": "GoReplay is an open-source tool for capturing and replaying live HTTP traffic into a test environment in order to continuously test your system with real data. It can be used to increase confidence in code deployments, configuration changes and infrastructure changes.",
       "url": "https://github.com/probelabs/goreplay",
       "homepage": "https://goreplay.org",
-      "stars": 19327,
+      "stars": 19326,
       "forks": 102,
-      "watchers": 19327,
+      "watchers": 19326,
       "language": "Go",
       "topics": [
         "devops",
@@ -30,9 +30,9 @@
         "url": "https://github.com/probelabs"
       },
       "createdAt": "2013-05-30T09:29:07Z",
-      "updatedAt": "2026-11-10T16:57:49Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:30:32Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -43,9 +43,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13676,
-      "forks": 718,
-      "watchers": 13676,
+      "stars": 13744,
+      "forks": 725,
+      "watchers": 13744,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -71,10 +71,10 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-11T15:39:10Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T09:04:13Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-2699935",
@@ -103,8 +103,8 @@
       },
       "createdAt": "2011-11-03T04:06:24Z",
       "updatedAt": "2026-11-10T19:28:01Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -115,9 +115,9 @@
       "description": "Windows GUI Automation with Python (based on text properties)",
       "url": "https://github.com/pywinauto/pywinauto",
       "homepage": "http://pywinauto.github.io/",
-      "stars": 6404,
+      "stars": 6409,
       "forks": 792,
-      "watchers": 6404,
+      "watchers": 6409,
       "language": "Python",
       "topics": [
         "automation",
@@ -144,9 +144,9 @@
         "url": "https://github.com/pywinauto"
       },
       "createdAt": "2015-05-25T09:50:40Z",
-      "updatedAt": "2026-11-11T15:52:20Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:19:36Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -157,9 +157,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5172,
-      "forks": 295,
-      "watchers": 5172,
+      "stars": 5173,
+      "forks": 298,
+      "watchers": 5173,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -176,9 +176,9 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-11T15:23:50Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:21:10Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -216,8 +216,8 @@
       },
       "createdAt": "2020-02-21T16:01:31Z",
       "updatedAt": "2026-11-09T11:48:56Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -228,9 +228,9 @@
       "description": "QA Wolf from anywhere — your terminal, your CI, your AI agent.",
       "url": "https://github.com/qawolf/cli",
       "homepage": "https://docs.qawolf.com/libraries/cli/api-reference",
-      "stars": 3458,
+      "stars": 3459,
       "forks": 140,
-      "watchers": 3458,
+      "watchers": 3459,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -249,9 +249,9 @@
         "url": "https://github.com/qawolf"
       },
       "createdAt": "2019-09-17T20:45:48Z",
-      "updatedAt": "2026-11-10T16:40:41Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:27:53Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -262,9 +262,9 @@
       "description": "AI agents can now use real Android and iOS apps, just like a human.",
       "url": "https://github.com/minitap-ai/mobile-use",
       "homepage": "https://minitap.ai",
-      "stars": 3382,
-      "forks": 314,
-      "watchers": 3382,
+      "stars": 3384,
+      "forks": 315,
+      "watchers": 3384,
       "language": "Python",
       "topics": [
         "agents",
@@ -284,9 +284,9 @@
         "url": "https://github.com/minitap-ai"
       },
       "createdAt": "2025-08-16T21:49:49Z",
-      "updatedAt": "2026-11-11T13:52:48Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:45:11Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -324,8 +324,8 @@
       },
       "createdAt": "2016-04-13T06:25:32Z",
       "updatedAt": "2026-11-11T10:37:32Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -336,9 +336,9 @@
       "description": "extendable code review and QA agent 🚢",
       "url": "https://github.com/mattzcarey/shippie",
       "homepage": "https://shippie.dev",
-      "stars": 2522,
+      "stars": 2523,
       "forks": 241,
-      "watchers": 2522,
+      "watchers": 2523,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -362,9 +362,9 @@
         "url": "https://github.com/mattzcarey"
       },
       "createdAt": "2023-07-06T22:15:26Z",
-      "updatedAt": "2026-11-10T07:59:09Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:27:31Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -375,9 +375,9 @@
       "description": ":books: The starting point of your career as a Software Quality Assurance Engineer | Quality Automation Engineer :books:",
       "url": "https://github.com/fityanos/awesome-quality-assurance-roadmap",
       "homepage": null,
-      "stars": 2210,
+      "stars": 2211,
       "forks": 363,
-      "watchers": 2210,
+      "watchers": 2211,
       "language": null,
       "topics": [
         "api-testing",
@@ -398,9 +398,9 @@
         "url": "https://github.com/fityanos"
       },
       "createdAt": "2018-02-11T14:53:01Z",
-      "updatedAt": "2026-11-07T08:16:01Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:02:35Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -411,9 +411,9 @@
       "description": "Multi-agent graph orchestration engine for building your own software factory. Bring your own QA workflow, and the engine enforces it.",
       "url": "https://github.com/the-open-engine/zeroshot",
       "homepage": "https://zeroshot.sh",
-      "stars": 2140,
+      "stars": 2144,
       "forks": 205,
-      "watchers": 2140,
+      "watchers": 2144,
       "language": "Rust",
       "topics": [
         "agent-harness",
@@ -443,9 +443,9 @@
         "url": "https://github.com/the-open-engine"
       },
       "createdAt": "2025-12-25T17:12:45Z",
-      "updatedAt": "2026-11-11T14:46:46Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:59:51Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -482,8 +482,8 @@
       },
       "createdAt": "2022-09-19T07:07:34Z",
       "updatedAt": "2026-11-06T00:43:10Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -527,8 +527,8 @@
       },
       "createdAt": "2022-09-16T14:48:21Z",
       "updatedAt": "2026-11-06T08:07:38Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -561,8 +561,8 @@
       },
       "createdAt": "2020-04-28T08:39:58Z",
       "updatedAt": "2026-11-03T08:30:35Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -593,8 +593,8 @@
       },
       "createdAt": "2024-12-12T14:22:40Z",
       "updatedAt": "2026-10-25T07:50:17Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -605,9 +605,9 @@
       "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.",
       "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
       "homepage": null,
-      "stars": 1574,
+      "stars": 1575,
       "forks": 120,
-      "watchers": 1574,
+      "watchers": 1575,
       "language": "PHP",
       "topics": [
         "automation",
@@ -628,9 +628,49 @@
         "url": "https://github.com/PHPCSStandards"
       },
       "createdAt": "2023-11-08T02:29:53Z",
-      "updatedAt": "2026-11-09T20:46:35Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:37:07Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1195492297",
+      "repoId": 1195492297,
+      "fullName": "bug0inc/qa-agent",
+      "name": "qa-agent",
+      "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
+      "url": "https://github.com/bug0inc/qa-agent",
+      "homepage": "https://ai.bug0.com",
+      "stars": 1327,
+      "forks": 190,
+      "watchers": 1327,
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-testing",
+        "aigateway",
+        "aisdk",
+        "browser-testing",
+        "e2e-testing",
+        "playwright",
+        "qa",
+        "qa-automation",
+        "qaautomation",
+        "regression-testing",
+        "testing",
+        "typescript",
+        "vercel"
+      ],
+      "owner": {
+        "login": "bug0inc",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/204126551?v=4",
+        "url": "https://github.com/bug0inc"
+      },
+      "createdAt": "2026-03-29T18:22:06Z",
+      "updatedAt": "2026-11-12T08:14:49Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -674,48 +714,8 @@
       },
       "createdAt": "2017-07-13T20:55:46Z",
       "updatedAt": "2026-11-10T13:04:18Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1195492297",
-      "repoId": 1195492297,
-      "fullName": "bug0inc/qa-agent",
-      "name": "qa-agent",
-      "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
-      "url": "https://github.com/bug0inc/qa-agent",
-      "homepage": "https://ai.bug0.com",
-      "stars": 1319,
-      "forks": 190,
-      "watchers": 1319,
-      "language": "TypeScript",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "ai-testing",
-        "aigateway",
-        "aisdk",
-        "browser-testing",
-        "e2e-testing",
-        "playwright",
-        "qa",
-        "qa-automation",
-        "qaautomation",
-        "regression-testing",
-        "testing",
-        "typescript",
-        "vercel"
-      ],
-      "owner": {
-        "login": "bug0inc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/204126551?v=4",
-        "url": "https://github.com/bug0inc"
-      },
-      "createdAt": "2026-03-29T18:22:06Z",
-      "updatedAt": "2026-11-10T16:51:39Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -747,8 +747,8 @@
       },
       "createdAt": "2017-05-25T08:18:13Z",
       "updatedAt": "2026-11-11T13:45:31Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -777,8 +777,8 @@
       },
       "createdAt": "2018-03-22T00:57:39Z",
       "updatedAt": "2026-11-11T09:58:30Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -818,8 +818,8 @@
       },
       "createdAt": "2025-01-08T06:49:17Z",
       "updatedAt": "2026-11-09T18:01:07Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -852,8 +852,8 @@
       },
       "createdAt": "2025-04-01T23:40:56Z",
       "updatedAt": "2026-11-08T16:06:17Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -894,8 +894,8 @@
       },
       "createdAt": "2014-04-08T20:05:26Z",
       "updatedAt": "2026-11-06T10:00:31Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -926,8 +926,8 @@
       },
       "createdAt": "2016-04-25T02:26:57Z",
       "updatedAt": "2026-11-09T21:15:47Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -957,8 +957,8 @@
       },
       "createdAt": "2019-06-01T04:04:53Z",
       "updatedAt": "2026-10-18T02:06:38Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1000,8 +1000,8 @@
       },
       "createdAt": "2017-04-20T01:42:01Z",
       "updatedAt": "2026-11-10T05:57:12Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1012,9 +1012,9 @@
       "description": "聚宝盆(Cornucopia): 中文金融系列开源可商用大模型，并提供一套高效轻量化的垂直领域LLM训练框架(Pretraining、SFT、RLHF、Quantize等)",
       "url": "https://github.com/jerry1993-tech/Cornucopia-LLaMA-Fin-Chinese",
       "homepage": "https://zhuanlan.zhihu.com/p/633736418",
-      "stars": 656,
+      "stars": 657,
       "forks": 66,
-      "watchers": 656,
+      "watchers": 657,
       "language": "Python",
       "topics": [
         "chinese",
@@ -1034,9 +1034,9 @@
         "url": "https://github.com/jerry1993-tech"
       },
       "createdAt": "2023-04-30T06:11:18Z",
-      "updatedAt": "2026-10-31T12:22:22Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:10:50Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1047,9 +1047,9 @@
       "description": "Easy-to-Use RAG Framework; CCF AIOps International Challenge 2024 Top3 Solution; CCF AIOps 国际挑战赛 2024 季军方案",
       "url": "https://github.com/BUAADreamer/EasyRAG",
       "homepage": "https://arxiv.org/abs/2410.10315",
-      "stars": 642,
+      "stars": 641,
       "forks": 79,
-      "watchers": 642,
+      "watchers": 641,
       "language": "Python",
       "topics": [
         "aiops",
@@ -1074,9 +1074,9 @@
         "url": "https://github.com/BUAADreamer"
       },
       "createdAt": "2024-06-04T12:04:28Z",
-      "updatedAt": "2026-10-26T01:42:20Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:12:54Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1110,8 +1110,8 @@
       },
       "createdAt": "2022-04-15T11:02:00Z",
       "updatedAt": "2026-11-10T10:16:28Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1155,8 +1155,8 @@
       },
       "createdAt": "2021-08-21T08:41:49Z",
       "updatedAt": "2026-10-26T09:50:56Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1185,8 +1185,8 @@
       },
       "createdAt": "2021-10-13T02:14:03Z",
       "updatedAt": "2026-11-06T13:26:50Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1213,8 +1213,8 @@
       },
       "createdAt": "2019-04-04T08:06:54Z",
       "updatedAt": "2026-07-25T02:50:56Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1247,8 +1247,8 @@
       },
       "createdAt": "2015-11-21T09:13:25Z",
       "updatedAt": "2026-11-09T08:51:11Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1282,8 +1282,8 @@
       },
       "createdAt": "2022-01-11T12:47:45Z",
       "updatedAt": "2026-11-11T09:03:07Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1313,8 +1313,8 @@
       },
       "createdAt": "2023-11-23T08:57:08Z",
       "updatedAt": "2026-11-07T01:26:08Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1353,8 +1353,8 @@
       },
       "createdAt": "2019-08-13T12:16:22Z",
       "updatedAt": "2026-11-10T07:00:36Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1366,7 +1366,7 @@
       "url": "https://github.com/ZoranPandovski/awesome-testing-tools",
       "homepage": "https://awesometesting.tools/",
       "stars": 382,
-      "forks": 196,
+      "forks": 198,
       "watchers": 382,
       "language": "CSS",
       "topics": [
@@ -1396,8 +1396,8 @@
       },
       "createdAt": "2018-05-09T21:45:15Z",
       "updatedAt": "2026-11-08T10:30:38Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1429,8 +1429,8 @@
       },
       "createdAt": "2018-11-08T07:00:47Z",
       "updatedAt": "2026-11-11T03:10:29Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1463,8 +1463,8 @@
       },
       "createdAt": "2013-01-23T03:45:38Z",
       "updatedAt": "2026-11-10T13:30:04Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1499,8 +1499,8 @@
       },
       "createdAt": "2023-10-30T14:25:22Z",
       "updatedAt": "2026-11-10T22:36:14Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1534,8 +1534,8 @@
       },
       "createdAt": "2019-09-06T17:18:53Z",
       "updatedAt": "2026-10-24T10:15:38Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1567,8 +1567,8 @@
       },
       "createdAt": "2020-02-13T18:43:28Z",
       "updatedAt": "2026-10-10T20:12:34Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1599,8 +1599,8 @@
       },
       "createdAt": "2018-03-19T04:10:41Z",
       "updatedAt": "2026-10-10T11:44:20Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1636,8 +1636,8 @@
       },
       "createdAt": "2020-04-23T06:48:12Z",
       "updatedAt": "2026-11-05T04:10:35Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1676,8 +1676,8 @@
       },
       "createdAt": "2020-07-31T19:26:44Z",
       "updatedAt": "2026-07-31T11:07:35Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1707,8 +1707,8 @@
       },
       "createdAt": "2017-08-27T05:11:40Z",
       "updatedAt": "2026-08-19T17:25:46Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1739,8 +1739,8 @@
       },
       "createdAt": "2019-07-22T14:08:03Z",
       "updatedAt": "2026-05-28T01:26:21Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1751,9 +1751,9 @@
       "description": "Bilingual Agent Skills for software testing and QA workflows from requirements through release. Independently installable for Codex, Claude Code, Cursor, and compatible coding agents. Licensed under PolyForm Noncommercial 1.0.0.",
       "url": "https://github.com/naodeng/awesome-qa-skills",
       "homepage": "https://inaodeng.com/qaskills/",
-      "stars": 305,
+      "stars": 306,
       "forks": 39,
-      "watchers": 305,
+      "watchers": 306,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1775,9 +1775,9 @@
         "url": "https://github.com/naodeng"
       },
       "createdAt": "2026-02-04T10:12:49Z",
-      "updatedAt": "2026-11-10T06:34:03Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T16:17:46Z",
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1814,8 +1814,8 @@
       },
       "createdAt": "2022-03-26T20:30:24Z",
       "updatedAt": "2026-11-05T23:57:39Z",
-      "firstSeenAt": "2026-11-11T15:55:30.543Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:34.410Z",
+      "isNew": false,
       "existing": false
     }
   ]

@@ -1,9 +1,9 @@
 {
   "topic": "spec-driven-development",
-  "fetchedAt": "2026-11-11T15:55:05.273Z",
+  "fetchedAt": "2026-11-12T09:17:05.664Z",
   "count": 50,
-  "newCount": 44,
-  "existingCount": 6,
+  "newCount": 0,
+  "existingCount": 15,
   "items": [
     {
       "id": "gh-topic-1032459340",
@@ -13,9 +13,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 74615,
-      "forks": 5111,
-      "watchers": 74615,
+      "stars": 74675,
+      "forks": 5118,
+      "watchers": 74675,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -35,9 +35,9 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-11T15:39:12Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:01:31Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -48,9 +48,9 @@
       "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
       "url": "https://github.com/gsd-build/get-shit-done",
       "homepage": null,
-      "stars": 64156,
+      "stars": 64153,
       "forks": 5448,
-      "watchers": 64156,
+      "watchers": 64153,
       "language": "JavaScript",
       "topics": [
         "claude-code",
@@ -64,9 +64,9 @@
         "url": "https://github.com/gsd-build"
       },
       "createdAt": "2025-12-14T14:17:12Z",
-      "updatedAt": "2026-11-11T15:04:58Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:59:52Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -77,9 +77,9 @@
       "description": "Breakthrough Method for Agile Ai Driven Development",
       "url": "https://github.com/bmad-code-org/BMAD-METHOD",
       "homepage": null,
-      "stars": 55261,
-      "forks": 6161,
-      "watchers": 55261,
+      "stars": 55289,
+      "forks": 6162,
+      "watchers": 55289,
       "language": "Python",
       "topics": [
         "agile",
@@ -94,10 +94,10 @@
         "url": "https://github.com/bmad-code-org"
       },
       "createdAt": "2025-04-13T14:54:25Z",
-      "updatedAt": "2026-11-11T15:36:43Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T08:33:50Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-285864199",
@@ -108,7 +108,7 @@
       "url": "https://github.com/zeromicro/go-zero",
       "homepage": "https://go-zero.dev",
       "stars": 33426,
-      "forks": 4331,
+      "forks": 4334,
       "watchers": 33426,
       "language": "Go",
       "topics": [
@@ -140,8 +140,8 @@
       },
       "createdAt": "2020-08-07T15:37:57Z",
       "updatedAt": "2026-11-11T12:58:10Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -152,9 +152,9 @@
       "description": "Open-source plugin for designing and reviewing software with agents",
       "url": "https://github.com/google/elephant-goldfish-model",
       "homepage": "https://egm.dev",
-      "stars": 17479,
-      "forks": 1305,
-      "watchers": 17479,
+      "stars": 17801,
+      "forks": 1329,
+      "watchers": 17801,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -180,10 +180,10 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2026-09-13T16:31:06Z",
-      "updatedAt": "2026-11-11T15:55:01Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T09:12:33Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1246625636",
@@ -193,9 +193,9 @@
       "description": "Git. Ship. Done - Core",
       "url": "https://github.com/open-gsd/gsd-core",
       "homepage": "https://opengsd.net",
-      "stars": 11449,
-      "forks": 825,
-      "watchers": 11449,
+      "stars": 11475,
+      "forks": 827,
+      "watchers": 11475,
       "language": "JavaScript",
       "topics": [
         "claude-code",
@@ -209,9 +209,9 @@
         "url": "https://github.com/open-gsd"
       },
       "createdAt": "2026-05-22T11:36:21Z",
-      "updatedAt": "2026-11-11T15:39:11Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:50:37Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -222,9 +222,9 @@
       "description": "Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, personas, and optional bounded review. Open source, no agent lock-in.",
       "url": "https://github.com/Gentleman-Programming/gentle-ai",
       "homepage": "https://gentlemanprogramming.com/",
-      "stars": 8779,
-      "forks": 892,
-      "watchers": 8779,
+      "stars": 8814,
+      "forks": 893,
+      "watchers": 8814,
       "language": "Go",
       "topics": [
         "agent-skills",
@@ -251,10 +251,10 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-02-27T23:28:01Z",
-      "updatedAt": "2026-11-11T15:32:58Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T05:51:29Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1293238217",
@@ -264,9 +264,9 @@
       "description": "ThinkRail is the agentic IDE that gets better every time you use it",
       "url": "https://github.com/JetBrains/thinkrail",
       "homepage": "https://thinkrail.ai/",
-      "stars": 8160,
+      "stars": 8183,
       "forks": 518,
-      "watchers": 8160,
+      "watchers": 8183,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -289,9 +289,9 @@
         "url": "https://github.com/JetBrains"
       },
       "createdAt": "2026-07-08T07:40:43Z",
-      "updatedAt": "2026-11-11T14:48:46Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T09:12:24Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -318,8 +318,8 @@
       },
       "createdAt": "2026-03-11T04:28:49Z",
       "updatedAt": "2026-11-11T04:30:55Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -330,9 +330,9 @@
       "description": "A plugin for AI coding agents (Antigravity, Claude Code) enabling Spec-Driven Development to specify, plan, and implement software features.",
       "url": "https://github.com/gemini-cli-extensions/conductor",
       "homepage": null,
-      "stars": 3786,
-      "forks": 303,
-      "watchers": 3786,
+      "stars": 3790,
+      "forks": 302,
+      "watchers": 3790,
       "language": "Python",
       "topics": [
         "antigravity",
@@ -348,9 +348,9 @@
         "url": "https://github.com/gemini-cli-extensions"
       },
       "createdAt": "2025-12-17T03:25:48Z",
-      "updatedAt": "2026-11-11T15:23:34Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:43:40Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -361,9 +361,9 @@
       "description": "Turn approved specs into long-running autonomous implementation. A minimal, adaptable SDD harness with Agent Skills for Claude Code, Codex, Cursor, Copilot, Windsurf, OpenCode, Gemini CLI, and Antigravity.",
       "url": "https://github.com/gotalab/cc-sdd",
       "homepage": null,
-      "stars": 3762,
+      "stars": 3763,
       "forks": 287,
-      "watchers": 3762,
+      "watchers": 3763,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -385,9 +385,9 @@
         "url": "https://github.com/gotalab"
       },
       "createdAt": "2025-07-17T04:41:37Z",
-      "updatedAt": "2026-11-10T15:59:31Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:51:21Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -398,9 +398,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2251,
-      "forks": 268,
-      "watchers": 2251,
+      "stars": 2287,
+      "forks": 270,
+      "watchers": 2287,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -430,9 +430,9 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-11T15:32:57Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:41:25Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -443,9 +443,9 @@
       "description": "Plan, build and review software with your coding agents. Work side by side in the App or browser, or use your favourite terminal or IDE.",
       "url": "https://github.com/maxritter/qualitylayer",
       "homepage": "https://qualitylayer.dev",
-      "stars": 2135,
+      "stars": 2140,
       "forks": 180,
-      "watchers": 2135,
+      "watchers": 2140,
       "language": "Shell",
       "topics": [
         "agent-skills",
@@ -475,10 +475,10 @@
         "url": "https://github.com/maxritter"
       },
       "createdAt": "2025-10-18T08:30:23Z",
-      "updatedAt": "2026-11-11T14:43:39Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T06:43:32Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1152720637",
@@ -488,9 +488,9 @@
       "description": "🏄🏼‍♂️ The blackboard for coding agents - agentic development environment for claude code, codex, cursor, opencode, grok and more.",
       "url": "https://github.com/fynnfluegge/agtx",
       "homepage": null,
-      "stars": 1737,
+      "stars": 1740,
       "forks": 143,
-      "watchers": 1737,
+      "watchers": 1740,
       "language": "Rust",
       "topics": [
         "ade",
@@ -512,9 +512,9 @@
         "url": "https://github.com/fynnfluegge"
       },
       "createdAt": "2026-02-08T10:24:00Z",
-      "updatedAt": "2026-11-11T03:14:19Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:25:59Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -557,10 +557,10 @@
         "url": "https://github.com/spec-kitty"
       },
       "createdAt": "2025-10-09T12:29:47Z",
-      "updatedAt": "2026-11-11T13:16:07Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T08:12:36Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1287043670",
@@ -570,9 +570,9 @@
       "description": "Reusable AI agent skills for software factories: explore ideas, write specs, implement, review, and run autonomous research. Works with Claude Code, Codex, and other skill-compatible agents.",
       "url": "https://github.com/dzhng/skills",
       "homepage": null,
-      "stars": 1493,
+      "stars": 1502,
       "forks": 86,
-      "watchers": 1493,
+      "watchers": 1502,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -592,9 +592,9 @@
         "url": "https://github.com/dzhng"
       },
       "createdAt": "2026-07-02T10:24:16Z",
-      "updatedAt": "2026-11-11T15:09:28Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:34:21Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -605,9 +605,9 @@
       "description": "Make AI coding agents architecture-aware: baseline-first, evidence-verified, drift-checked, and safe across long tasks.",
       "url": "https://github.com/GanyuanRan/Aegis",
       "homepage": "https://autoloom.codes/aegis/",
-      "stars": 1432,
-      "forks": 80,
-      "watchers": 1432,
+      "stars": 1435,
+      "forks": 81,
+      "watchers": 1435,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -634,10 +634,10 @@
         "url": "https://github.com/GanyuanRan"
       },
       "createdAt": "2026-04-30T17:40:49Z",
-      "updatedAt": "2026-11-11T06:56:29Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T09:12:55Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1114011551",
@@ -677,8 +677,8 @@
       },
       "createdAt": "2025-12-10T19:16:51Z",
       "updatedAt": "2026-11-11T14:30:33Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -689,9 +689,9 @@
       "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
       "url": "https://github.com/open-gsd/gsd-pi",
       "homepage": "https://www.opengsd.net",
-      "stars": 1366,
+      "stars": 1365,
       "forks": 117,
-      "watchers": 1366,
+      "watchers": 1365,
       "language": "TypeScript",
       "topics": [
         "context-engineering",
@@ -704,9 +704,9 @@
         "url": "https://github.com/open-gsd"
       },
       "createdAt": "2026-05-22T11:03:33Z",
-      "updatedAt": "2026-11-11T14:42:49Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T08:30:34Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -749,9 +749,9 @@
         "url": "https://github.com/modu-ai"
       },
       "createdAt": "2025-09-16T13:07:11Z",
-      "updatedAt": "2026-11-10T07:11:28Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T17:53:14Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -762,9 +762,9 @@
       "description": "You want to build with AI, but setting up the right context, prompts, and workflows takes time. AI Factory handles all of that so you can focus on what matters — shipping quality code.",
       "url": "https://github.com/lee-to/ai-factory",
       "homepage": "https://aif.cutcode.dev",
-      "stars": 1162,
+      "stars": 1163,
       "forks": 100,
-      "watchers": 1162,
+      "watchers": 1163,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -778,9 +778,9 @@
         "url": "https://github.com/lee-to"
       },
       "createdAt": "2026-02-06T09:47:40Z",
-      "updatedAt": "2026-11-10T20:49:34Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T22:51:58Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -791,9 +791,9 @@
       "description": "Frozen — compressed spec-driven development plugin for Claude Code. Still works; active development moved to JuliusBrussee/caveman.",
       "url": "https://github.com/JuliusBrussee/cavekit",
       "homepage": "https://caveman.so/",
-      "stars": 1161,
+      "stars": 1163,
       "forks": 87,
-      "watchers": 1161,
+      "watchers": 1163,
       "language": null,
       "topics": [
         "claude-code",
@@ -808,9 +808,9 @@
         "url": "https://github.com/JuliusBrussee"
       },
       "createdAt": "2026-03-14T23:59:42Z",
-      "updatedAt": "2026-11-06T23:14:27Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:54:13Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -821,9 +821,9 @@
       "description": "Autonomous software factory. Give it a GitHub issue, a spec or a one-line task; get back a pull request with a signed receipt anyone can re-check offline. Runs on your machine with your own keys: Claude, Codex, OpenCode.",
       "url": "https://github.com/asklokesh/loki-mode",
       "homepage": "https://www.autonomi.dev",
-      "stars": 1119,
+      "stars": 1118,
       "forks": 207,
-      "watchers": 1119,
+      "watchers": 1118,
       "language": "Shell",
       "topics": [
         "ai-agents",
@@ -846,9 +846,9 @@
         "url": "https://github.com/asklokesh"
       },
       "createdAt": "2025-12-26T16:26:14Z",
-      "updatedAt": "2026-11-10T14:15:29Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:59:51Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -892,8 +892,8 @@
       },
       "createdAt": "2026-03-21T09:37:20Z",
       "updatedAt": "2026-11-07T11:30:23Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -923,9 +923,9 @@
         "url": "https://github.com/cabloy"
       },
       "createdAt": "2018-01-14T05:13:19Z",
-      "updatedAt": "2026-11-11T14:45:29Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:49:05Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -936,9 +936,9 @@
       "description": "源码级融合 OpenSpec 规划引擎 + Superpowers 执行纪律的 AI 编程工作流插件。17 平台支持，9 skills，Spec-first，契约驱动。",
       "url": "https://github.com/MageByte-Zero/spec-superflow",
       "homepage": "https://www.npmjs.com/package/spec-superflow",
-      "stars": 885,
+      "stars": 887,
       "forks": 92,
-      "watchers": 885,
+      "watchers": 887,
       "language": "JavaScript",
       "topics": [
         "ai-coding",
@@ -967,10 +967,10 @@
         "url": "https://github.com/MageByte-Zero"
       },
       "createdAt": "2026-06-26T05:13:03Z",
-      "updatedAt": "2026-11-10T23:46:38Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T04:16:07Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1408228998",
@@ -980,9 +980,9 @@
       "description": "Autonomous development for real products. Governed agents build from specs you approve, follow the rules you set, and nothing merges until another agent proves it. Your decisions, judgement and taste are the bar that work must clear. Declare your vision and let agents build it.",
       "url": "https://github.com/pullboard-dev/pullboard",
       "homepage": "https://pullboard.dev",
-      "stars": 807,
+      "stars": 810,
       "forks": 92,
-      "watchers": 807,
+      "watchers": 810,
       "language": "JavaScript",
       "topics": [
         "agentic-coding",
@@ -1010,9 +1010,9 @@
         "url": "https://github.com/pullboard-dev"
       },
       "createdAt": "2026-10-07T04:14:39Z",
-      "updatedAt": "2026-11-11T14:48:43Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T05:39:30Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1023,9 +1023,9 @@
       "description": "Curso de SDD (Spec-Driven Development) desde cero",
       "url": "https://github.com/mouredev/hello-sdd",
       "homepage": "https://youtube.com/live/5HaOxAAA5qI",
-      "stars": 798,
+      "stars": 799,
       "forks": 196,
-      "watchers": 798,
+      "watchers": 799,
       "language": "Python",
       "topics": [
         "sdd",
@@ -1037,9 +1037,9 @@
         "url": "https://github.com/mouredev"
       },
       "createdAt": "2026-08-27T11:49:48Z",
-      "updatedAt": "2026-11-10T20:12:13Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:36:01Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1050,9 +1050,9 @@
       "description": "Spec-driven development for coding agents — a desktop app, a CLI, and skills for Codex, Claude Code, Cursor, Copilot, Antigravity and Junie",
       "url": "https://github.com/kaochenlong/spectra-app",
       "homepage": null,
-      "stars": 771,
+      "stars": 773,
       "forks": 34,
-      "watchers": 771,
+      "watchers": 773,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -1071,9 +1071,9 @@
         "url": "https://github.com/kaochenlong"
       },
       "createdAt": "2026-02-04T03:13:04Z",
-      "updatedAt": "2026-11-11T08:04:41Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:25:08Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1084,9 +1084,9 @@
       "description": "An old coder's strategy for the agent era: don't read the code — make it run the gauntlet. Evidence-first development skill for coding agents, inspired by Uncle Bob.",
       "url": "https://github.com/AmazingAng/old-coder",
       "homepage": null,
-      "stars": 758,
+      "stars": 759,
       "forks": 59,
-      "watchers": 758,
+      "watchers": 759,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1110,9 +1110,9 @@
         "url": "https://github.com/AmazingAng"
       },
       "createdAt": "2026-07-27T05:03:11Z",
-      "updatedAt": "2026-11-09T21:54:14Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:08:40Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1156,8 +1156,8 @@
       },
       "createdAt": "2025-12-26T22:27:07Z",
       "updatedAt": "2026-11-11T14:50:09Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1201,8 +1201,8 @@
       },
       "createdAt": "2024-04-14T21:08:14Z",
       "updatedAt": "2026-11-09T20:24:36Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1233,9 +1233,9 @@
       },
       "createdAt": "2025-08-05T08:53:12Z",
       "updatedAt": "2026-11-05T01:23:07Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1143271095",
@@ -1245,9 +1245,9 @@
       "description": "OpenSpec Practical Guide",
       "url": "https://github.com/ForceInjection/OpenSpec-practise",
       "homepage": "https://forceinjection.github.io/OpenSpec-practise/",
-      "stars": 647,
+      "stars": 649,
       "forks": 92,
-      "watchers": 647,
+      "watchers": 649,
       "language": null,
       "topics": [
         "sdd",
@@ -1259,9 +1259,9 @@
         "url": "https://github.com/ForceInjection"
       },
       "createdAt": "2026-01-27T11:25:10Z",
-      "updatedAt": "2026-11-11T15:14:13Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T06:41:17Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1272,9 +1272,9 @@
       "description": "Your agent invents things because it has no memory, and can't touch your database because it has no arms. rsc is the meta-harness that gives it both, plus the trade to know the job and the reflexes to not break your repo. For Claude Code, Codex and 15 more.",
       "url": "https://github.com/ericrisco/rsc-harness",
       "homepage": "https://ericrisco.github.io/rsc-harness/",
-      "stars": 585,
-      "forks": 80,
-      "watchers": 585,
+      "stars": 590,
+      "forks": 82,
+      "watchers": 590,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1304,9 +1304,9 @@
         "url": "https://github.com/ericrisco"
       },
       "createdAt": "2026-05-31T08:00:19Z",
-      "updatedAt": "2026-11-11T14:53:43Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T02:23:54Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1346,8 +1346,8 @@
       },
       "createdAt": "2026-03-31T04:18:20Z",
       "updatedAt": "2026-11-11T15:44:44Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1359,7 +1359,7 @@
       "url": "https://github.com/eltociear/awesome-AI-driven-development",
       "homepage": null,
       "stars": 575,
-      "forks": 209,
+      "forks": 212,
       "watchers": 575,
       "language": null,
       "topics": [
@@ -1385,8 +1385,8 @@
       },
       "createdAt": "2024-05-18T03:26:49Z",
       "updatedAt": "2026-11-11T10:27:31Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1397,9 +1397,9 @@
       "description": "Spec-driven development with smart compaction. Claude Code plugin combining Ralph Wiggum loop with structured specification workflow.",
       "url": "https://github.com/tzachbon/smart-ralph",
       "homepage": null,
-      "stars": 567,
+      "stars": 566,
       "forks": 49,
-      "watchers": 567,
+      "watchers": 566,
       "language": "Shell",
       "topics": [
         "agentic-coding",
@@ -1427,9 +1427,9 @@
         "url": "https://github.com/tzachbon"
       },
       "createdAt": "2026-01-11T21:51:41Z",
-      "updatedAt": "2026-11-10T13:06:58Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T07:38:46Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1440,9 +1440,9 @@
       "description": "The specification language that talks back",
       "url": "https://github.com/juxt/allium",
       "homepage": "https://allium-lang.org",
-      "stars": 530,
-      "forks": 28,
-      "watchers": 530,
+      "stars": 531,
+      "forks": 29,
+      "watchers": 531,
       "language": "JavaScript",
       "topics": [
         "ai-agent-tools",
@@ -1456,9 +1456,9 @@
         "url": "https://github.com/juxt"
       },
       "createdAt": "2026-01-25T19:49:03Z",
-      "updatedAt": "2026-11-11T07:46:27Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T03:57:13Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1469,9 +1469,9 @@
       "description": "ADE( Agentic Development Environment) The spec-driven environment for AI coding agents, where your planning becomes lasting, shared project context.",
       "url": "https://github.com/kaanozhan/Frame",
       "homepage": "http://frame.cool",
-      "stars": 458,
+      "stars": 459,
       "forks": 40,
-      "watchers": 458,
+      "watchers": 459,
       "language": "JavaScript",
       "topics": [
         "ade",
@@ -1497,9 +1497,9 @@
         "url": "https://github.com/kaanozhan"
       },
       "createdAt": "2026-01-20T22:32:25Z",
-      "updatedAt": "2026-11-11T09:18:30Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T01:21:56Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1543,8 +1543,8 @@
       },
       "createdAt": "2026-05-31T17:38:22Z",
       "updatedAt": "2026-11-11T07:11:41Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1572,8 +1572,8 @@
       },
       "createdAt": "2025-07-28T11:42:06Z",
       "updatedAt": "2026-10-30T12:01:06Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1584,9 +1584,9 @@
       "description": "The best agent skills in the world for software development.",
       "url": "https://github.com/owainlewis/blueprint",
       "homepage": "https://aiengineer.co",
-      "stars": 430,
+      "stars": 431,
       "forks": 73,
-      "watchers": 430,
+      "watchers": 431,
       "language": "Python",
       "topics": [
         "claude-code",
@@ -1600,9 +1600,9 @@
         "url": "https://github.com/owainlewis"
       },
       "createdAt": "2026-03-11T16:37:26Z",
-      "updatedAt": "2026-11-11T04:55:55Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-11T22:18:21Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1613,9 +1613,9 @@
       "description": "SWE-ATLAS turns Claude Code into a senior AI software engineer agent: multi-project workspaces with memory, wireframe & prototype first planning, secrets kept out of chat, psql, browser QA runners, and CI/CD-aware deploys. One command: npx swe-atlas new-project",
       "url": "https://github.com/syahiidkamil/Software-Engineer-AI-Agent-Atlas",
       "homepage": "https://www.npmjs.com/package/swe-atlas",
-      "stars": 406,
+      "stars": 405,
       "forks": 60,
-      "watchers": 406,
+      "watchers": 405,
       "language": "JavaScript",
       "topics": [
         "ai-agent",
@@ -1645,9 +1645,9 @@
         "url": "https://github.com/syahiidkamil"
       },
       "createdAt": "2025-06-14T09:53:42Z",
-      "updatedAt": "2026-11-09T22:06:05Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T04:14:07Z",
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1689,8 +1689,8 @@
       },
       "createdAt": "2026-03-31T02:49:55Z",
       "updatedAt": "2026-11-09T22:06:50Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1725,8 +1725,8 @@
       },
       "createdAt": "2026-01-26T11:31:59Z",
       "updatedAt": "2026-11-11T11:30:41Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1770,8 +1770,8 @@
       },
       "createdAt": "2025-11-23T06:45:40Z",
       "updatedAt": "2026-11-10T02:46:03Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1812,8 +1812,8 @@
       },
       "createdAt": "2026-02-25T10:02:34Z",
       "updatedAt": "2026-11-09T21:22:15Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1841,8 +1841,8 @@
       },
       "createdAt": "2025-11-27T03:20:51Z",
       "updatedAt": "2026-11-09T19:34:39Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1875,9 +1875,9 @@
       },
       "createdAt": "2026-07-04T19:57:44Z",
       "updatedAt": "2026-11-05T21:30:19Z",
-      "firstSeenAt": "2026-11-11T15:55:05.273Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:01:55.897Z",
+      "isNew": false,
+      "existing": true
     }
   ]
 }
