@@ -1,9 +1,9 @@
 {
   "topic": "e2e-testing",
-  "fetchedAt": "2026-11-12T09:17:34.417Z",
+  "fetchedAt": "2026-11-12T16:38:02.841Z",
   "count": 50,
-  "newCount": 0,
-  "existingCount": 6,
+  "newCount": 45,
+  "existingCount": 5,
   "items": [
     {
       "id": "gh-topic-221981891",
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 99942,
-      "forks": 6853,
-      "watchers": 99942,
+      "stars": 99983,
+      "forks": 6856,
+      "watchers": 99983,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,9 +40,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-12T09:07:31Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T16:33:57Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -53,9 +53,9 @@
       "description": "See interfaces like a human. E2E testing in natural language.",
       "url": "https://github.com/web-infra-dev/midscene",
       "homepage": "https://midscenejs.com",
-      "stars": 15593,
+      "stars": 15597,
       "forks": 1220,
-      "watchers": 15593,
+      "watchers": 15597,
       "language": "TypeScript",
       "topics": [
         "browser-use",
@@ -73,9 +73,9 @@
         "url": "https://github.com/web-infra-dev"
       },
       "createdAt": "2024-07-23T04:03:50Z",
-      "updatedAt": "2026-11-12T09:02:10Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T14:35:48Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -86,9 +86,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13744,
-      "forks": 725,
-      "watchers": 13744,
+      "stars": 13769,
+      "forks": 726,
+      "watchers": 13769,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -114,10 +114,10 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-12T09:04:13Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-12T16:35:45Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-17420614",
@@ -156,8 +156,8 @@
       },
       "createdAt": "2014-03-04T23:07:33Z",
       "updatedAt": "2026-11-11T22:31:26Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -168,9 +168,9 @@
       "description": "Go microservice template for Kubernetes",
       "url": "https://github.com/stefanprodan/podinfo",
       "homepage": null,
-      "stars": 6042,
+      "stars": 6043,
       "forks": 1904,
-      "watchers": 6042,
+      "watchers": 6043,
       "language": "Go",
       "topics": [
         "cuelang",
@@ -188,9 +188,9 @@
         "url": "https://github.com/stefanprodan"
       },
       "createdAt": "2018-01-05T14:19:59Z",
-      "updatedAt": "2026-11-11T05:43:04Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T15:41:41Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -227,8 +227,8 @@
       },
       "createdAt": "2024-09-18T20:44:05Z",
       "updatedAt": "2026-11-12T07:59:59Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -239,9 +239,9 @@
       "description": "Open source device layer for AI coding agents: a CLI, MCP server, and typed Node.js API to control mobile, web, TV, and desktop apps on devices and simulators, locally or in the cloud.",
       "url": "https://github.com/callstack/agent-device",
       "homepage": "https://agent-device.dev",
-      "stars": 5343,
-      "forks": 396,
-      "watchers": 5343,
+      "stars": 5352,
+      "forks": 397,
+      "watchers": 5352,
       "language": "TypeScript",
       "topics": [
         "adb",
@@ -268,9 +268,9 @@
         "url": "https://github.com/callstack"
       },
       "createdAt": "2026-01-30T18:41:54Z",
-      "updatedAt": "2026-11-12T08:44:54Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T16:32:46Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -301,8 +301,8 @@
       },
       "createdAt": "2026-06-11T10:44:15Z",
       "updatedAt": "2026-11-12T08:21:10Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -335,9 +335,9 @@
         "url": "https://github.com/hardkoded"
       },
       "createdAt": "2017-09-30T20:32:25Z",
-      "updatedAt": "2026-11-12T02:56:02Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T16:17:31Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -370,8 +370,8 @@
       },
       "createdAt": "2018-03-16T20:54:41Z",
       "updatedAt": "2026-11-11T13:22:35Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -382,9 +382,9 @@
       "description": ":books: The starting point of your career as a Software Quality Assurance Engineer | Quality Automation Engineer :books:",
       "url": "https://github.com/fityanos/awesome-quality-assurance-roadmap",
       "homepage": null,
-      "stars": 2211,
+      "stars": 2212,
       "forks": 363,
-      "watchers": 2211,
+      "watchers": 2212,
       "language": null,
       "topics": [
         "api-testing",
@@ -405,9 +405,9 @@
         "url": "https://github.com/fityanos"
       },
       "createdAt": "2018-02-11T14:53:01Z",
-      "updatedAt": "2026-11-11T17:02:35Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T11:55:53Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -436,8 +436,8 @@
       },
       "createdAt": "2019-03-15T18:05:12Z",
       "updatedAt": "2026-11-11T14:27:29Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -470,8 +470,8 @@
       },
       "createdAt": "2020-07-07T17:19:36Z",
       "updatedAt": "2026-11-10T09:23:12Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -506,8 +506,8 @@
       },
       "createdAt": "2017-01-30T15:45:30Z",
       "updatedAt": "2026-11-11T13:36:06Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -518,9 +518,9 @@
       "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
       "url": "https://github.com/bug0inc/qa-agent",
       "homepage": "https://ai.bug0.com",
-      "stars": 1327,
-      "forks": 190,
-      "watchers": 1327,
+      "stars": 1330,
+      "forks": 191,
+      "watchers": 1330,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -545,9 +545,44 @@
         "url": "https://github.com/bug0inc"
       },
       "createdAt": "2026-03-29T18:22:06Z",
-      "updatedAt": "2026-11-12T08:14:49Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T10:45:23Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1417558351",
+      "repoId": 1417558351,
+      "fullName": "open-wxa/wxa-runner",
+      "name": "wxa-runner",
+      "description": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
+      "url": "https://github.com/open-wxa/wxa-runner",
+      "homepage": "https://open-wxa.github.io/wxa-runner/",
+      "stars": 1235,
+      "forks": 141,
+      "watchers": 1235,
+      "language": "TypeScript",
+      "topics": [
+        "e2e-testing",
+        "mini-program",
+        "miniprogram",
+        "playwright",
+        "simulator",
+        "taro",
+        "uni-app",
+        "weapp",
+        "wechat",
+        "wechat-miniprogram"
+      ],
+      "owner": {
+        "login": "open-wxa",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/341914348?v=4",
+        "url": "https://github.com/open-wxa"
+      },
+      "createdAt": "2026-10-13T17:06:51Z",
+      "updatedAt": "2026-11-12T13:19:28Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -591,43 +626,8 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-12T04:07:15Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1417558351",
-      "repoId": 1417558351,
-      "fullName": "open-wxa/wxa-runner",
-      "name": "wxa-runner",
-      "description": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
-      "url": "https://github.com/open-wxa/wxa-runner",
-      "homepage": "https://open-wxa.github.io/wxa-runner/",
-      "stars": 1231,
-      "forks": 140,
-      "watchers": 1231,
-      "language": "TypeScript",
-      "topics": [
-        "e2e-testing",
-        "mini-program",
-        "miniprogram",
-        "playwright",
-        "simulator",
-        "taro",
-        "uni-app",
-        "weapp",
-        "wechat",
-        "wechat-miniprogram"
-      ],
-      "owner": {
-        "login": "open-wxa",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/341914348?v=4",
-        "url": "https://github.com/open-wxa"
-      },
-      "createdAt": "2026-10-13T17:06:51Z",
-      "updatedAt": "2026-11-12T08:58:40Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -671,8 +671,8 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -712,8 +712,8 @@
       },
       "createdAt": "2010-08-03T03:58:46Z",
       "updatedAt": "2026-11-11T13:34:14Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -744,8 +744,8 @@
       },
       "createdAt": "2025-06-05T21:16:31Z",
       "updatedAt": "2026-11-11T10:20:51Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -785,8 +785,8 @@
       },
       "createdAt": "2022-04-28T09:18:16Z",
       "updatedAt": "2026-11-09T22:09:48Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -823,8 +823,8 @@
       },
       "createdAt": "2018-11-01T15:11:47Z",
       "updatedAt": "2026-11-10T12:03:11Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -865,8 +865,8 @@
       },
       "createdAt": "2016-02-17T11:26:05Z",
       "updatedAt": "2026-11-10T13:33:03Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -899,8 +899,8 @@
       },
       "createdAt": "2015-04-17T08:52:14Z",
       "updatedAt": "2026-11-10T11:09:59Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -936,8 +936,8 @@
       },
       "createdAt": "2019-06-03T08:54:58Z",
       "updatedAt": "2026-11-10T09:32:02Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -979,8 +979,8 @@
       },
       "createdAt": "2016-06-16T16:20:06Z",
       "updatedAt": "2026-11-10T09:35:05Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1018,8 +1018,8 @@
       },
       "createdAt": "2019-12-25T11:53:42Z",
       "updatedAt": "2026-11-10T08:25:57Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1053,8 +1053,8 @@
       },
       "createdAt": "2020-07-26T13:46:10Z",
       "updatedAt": "2026-11-10T11:45:18Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1089,8 +1089,8 @@
       },
       "createdAt": "2026-03-24T10:22:09Z",
       "updatedAt": "2026-11-12T02:43:52Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1123,9 +1123,9 @@
         "url": "https://github.com/ShaftHQ"
       },
       "createdAt": "2018-07-15T07:02:02Z",
-      "updatedAt": "2026-11-12T08:25:08Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T13:05:12Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1169,8 +1169,8 @@
       },
       "createdAt": "2026-01-29T20:55:29Z",
       "updatedAt": "2026-11-10T15:55:49Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1203,8 +1203,8 @@
       },
       "createdAt": "2017-05-03T03:45:27Z",
       "updatedAt": "2026-11-11T13:33:05Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1238,8 +1238,8 @@
       },
       "createdAt": "2023-07-23T20:55:17Z",
       "updatedAt": "2026-10-09T15:23:11Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1251,7 +1251,7 @@
       "url": "https://github.com/microsoft/lisa",
       "homepage": "https://aka.ms/lisa",
       "stars": 337,
-      "forks": 260,
+      "forks": 261,
       "watchers": 337,
       "language": "Python",
       "topics": [
@@ -1271,8 +1271,8 @@
       },
       "createdAt": "2019-03-09T00:23:37Z",
       "updatedAt": "2026-11-12T08:47:47Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1284,7 +1284,7 @@
       "url": "https://github.com/microsoft/tui-test",
       "homepage": "https://tui-test.dev",
       "stars": 314,
-      "forks": 31,
+      "forks": 32,
       "watchers": 314,
       "language": "Rust",
       "topics": [
@@ -1310,8 +1310,8 @@
       },
       "createdAt": "2024-01-25T20:11:22Z",
       "updatedAt": "2026-11-10T07:13:04Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1347,9 +1347,9 @@
         "url": "https://github.com/Trendyol"
       },
       "createdAt": "2023-01-18T13:03:34Z",
-      "updatedAt": "2026-11-11T15:20:43Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T15:38:41Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1389,8 +1389,8 @@
       },
       "createdAt": "2026-03-12T01:47:17Z",
       "updatedAt": "2026-11-04T08:35:27Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1434,8 +1434,8 @@
       },
       "createdAt": "2017-12-29T15:58:24Z",
       "updatedAt": "2026-11-10T09:13:35Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1465,8 +1465,8 @@
       },
       "createdAt": "2021-11-19T16:14:05Z",
       "updatedAt": "2026-11-06T10:15:13Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1477,9 +1477,9 @@
       "description": "Drive a real, stock iPhone (and any macOS app) from any MCP client via iPhone Mirroring — no Developer Mode, no Xcode, no WebDriverAgent. Tap, swipe, type, OCR, plus replayable AI-authored test skills.",
       "url": "https://github.com/jfarcand/mirroir-mcp",
       "homepage": "https://mirroir.dev",
-      "stars": 290,
+      "stars": 291,
       "forks": 39,
-      "watchers": 290,
+      "watchers": 291,
       "language": "Swift",
       "topics": [
         "agent-skills",
@@ -1509,10 +1509,55 @@
         "url": "https://github.com/jfarcand"
       },
       "createdAt": "2026-02-06T21:20:07Z",
-      "updatedAt": "2026-11-12T07:22:55Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "updatedAt": "2026-11-12T14:32:00Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
+    },
+    {
+      "id": "gh-topic-1189740753",
+      "repoId": 1189740753,
+      "fullName": "petrkindlmann/qa-skills",
+      "name": "qa-skills",
+      "description": "50 QA and test-automation skills for Claude Code, Codex, Cursor, and any Agent Skills Standard runtime.",
+      "url": "https://github.com/petrkindlmann/qa-skills",
+      "homepage": "https://qa-skills.com",
+      "stars": 265,
+      "forks": 43,
+      "watchers": 265,
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "agentskills",
+        "ai-agents",
+        "ai-testing",
+        "ci-cd",
+        "claude-code",
+        "codex",
+        "cursor",
+        "cypress",
+        "e2e-testing",
+        "gemini-cli",
+        "playwright",
+        "qa-automation",
+        "qa-skills",
+        "quality-assurance",
+        "skill-md",
+        "skills",
+        "software-testing",
+        "test-automation",
+        "testing"
+      ],
+      "owner": {
+        "login": "petrkindlmann",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/183610650?v=4",
+        "url": "https://github.com/petrkindlmann"
+      },
+      "createdAt": "2026-03-23T16:11:04Z",
+      "updatedAt": "2026-11-12T15:52:32Z",
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-1210382787",
@@ -1550,54 +1595,9 @@
       },
       "createdAt": "2026-04-14T11:10:09Z",
       "updatedAt": "2026-11-12T03:07:46Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
-    },
-    {
-      "id": "gh-topic-1189740753",
-      "repoId": 1189740753,
-      "fullName": "petrkindlmann/qa-skills",
-      "name": "qa-skills",
-      "description": "50 QA and test-automation skills for Claude Code, Codex, Cursor, and any Agent Skills Standard runtime.",
-      "url": "https://github.com/petrkindlmann/qa-skills",
-      "homepage": "https://qa-skills.com",
-      "stars": 263,
-      "forks": 41,
-      "watchers": 263,
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "agentskills",
-        "ai-agents",
-        "ai-testing",
-        "ci-cd",
-        "claude-code",
-        "codex",
-        "cursor",
-        "cypress",
-        "e2e-testing",
-        "gemini-cli",
-        "playwright",
-        "qa-automation",
-        "qa-skills",
-        "quality-assurance",
-        "skill-md",
-        "skills",
-        "software-testing",
-        "test-automation",
-        "testing"
-      ],
-      "owner": {
-        "login": "petrkindlmann",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/183610650?v=4",
-        "url": "https://github.com/petrkindlmann"
-      },
-      "createdAt": "2026-03-23T16:11:04Z",
-      "updatedAt": "2026-11-12T08:16:58Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
-      "existing": true
     },
     {
       "id": "gh-topic-602739740",
@@ -1632,8 +1632,8 @@
       },
       "createdAt": "2023-02-16T20:59:01Z",
       "updatedAt": "2026-10-13T15:32:17Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1677,8 +1677,8 @@
       },
       "createdAt": "2026-01-12T09:20:28Z",
       "updatedAt": "2026-11-12T09:09:48Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1720,8 +1720,8 @@
       },
       "createdAt": "2020-05-01T11:05:44Z",
       "updatedAt": "2026-11-03T10:00:15Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -1749,8 +1749,8 @@
       },
       "createdAt": "2020-02-26T19:01:26Z",
       "updatedAt": "2026-09-28T03:34:01Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1789,8 +1789,8 @@
       },
       "createdAt": "2025-11-11T09:34:40Z",
       "updatedAt": "2026-11-09T19:12:46Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1823,8 +1823,8 @@
       },
       "createdAt": "2020-10-22T18:33:52Z",
       "updatedAt": "2026-11-07T08:30:26Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1857,8 +1857,8 @@
       },
       "createdAt": "2018-05-26T13:58:04Z",
       "updatedAt": "2026-09-17T15:09:00Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1893,8 +1893,8 @@
       },
       "createdAt": "2020-01-31T21:32:50Z",
       "updatedAt": "2026-07-24T06:26:53Z",
-      "firstSeenAt": "2026-11-10T11:02:21.737Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-12T16:38:02.841Z",
+      "isNew": true,
       "existing": false
     }
   ]
