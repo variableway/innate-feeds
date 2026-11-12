@@ -43,6 +43,26 @@ export interface AdminTaskJob {
   schedule: JobSchedule | null;
 }
 
+export interface JobsResponse {
+  jobs: AdminTaskJob[];
+  /** 当前运行中的子进程数 */
+  runningCount: number;
+  /** 全局并发上限（后端 MAX_CONCURRENT_RUNS） */
+  maxConcurrent: number;
+}
+
+/** 批量启动的单 job 结果：run 与 error 二选一。 */
+export interface BatchRunResult {
+  jobId: string;
+  run?: TaskRun;
+  error?: string;
+}
+
+export interface BatchRunResponse {
+  results: BatchRunResult[];
+  started: number;
+}
+
 export interface RunDetail {
   run: TaskRun;
   /** 日志尾部（≤200KB） */

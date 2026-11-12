@@ -2,7 +2,7 @@
  * 运行日志对话框（issue #70）：展示单次运行的记录 + 日志尾部。
  * 运行中每 2s 轮询刷新日志，结束即停。
  */
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import {
   Badge,
@@ -29,6 +29,9 @@ export function RunLogDialog({
   const [detail, setDetail] = useState<RunDetail | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [cancelling, setCancelling] = useState(false);
+  const logRef = useRef<HTMLPreElement>(null);
+  /** 用户滚到顶部查看历史时不要强行拽回底部。 */
+  const stickToBottom = useRef(true);
 
   const load = useCallback(async () => {
     if (!runId) return;
@@ -43,9 +46,24 @@ export function RunLogDialog({
   useEffect(() => {
     setDetail(null);
     setError(null);
+    stickToBottom.current = true;
     if (!runId) return;
     void load();
   }, [runId, load]);
+
+  // 日志增长时跟随到底部（用户主动上翻后不再打扰）。
+  useEffect(() => {
+    const element = logRef.current;
+    if (!element || !stickToBottom.current) return;
+    element.scrollTop = element.scrollHeight;
+  }, [detail?.log]);
+
+  const handleLogScroll = () => {
+    const element = logRef.current;
+    if (!element) return;
+    stickToBottom.current =
+      element.scrollHeight - element.scrollTop - element.clientHeight < 24;
+  };
 
   const running = detail?.run.status === "running";
   useEffect(() => {
@@ -75,8 +93,13 @@ export function RunLogDialog({
       <DialogContent className="flex max-h-[85vh] max-w-3xl flex-col">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            运行日志
+            {running ? "实时日志" : "运行日志"}
             {run ? <TaskStatusBadge status={run.status} /> : null}
+            {running ? (
+              <Badge variant="secondary" className="gap-1">
+                每 2s 刷新
+              </Badge>
+            ) : null}
           </DialogTitle>
           <DialogDescription>
             {run
@@ -96,7 +119,11 @@ export function RunLogDialog({
             <Skeleton className="h-4 w-2/3" />
           </div>
         ) : (
-          <pre className="min-h-0 flex-1 overflow-auto rounded-lg border bg-code p-3 font-mono text-[12px] leading-relaxed whitespace-pre-wrap text-code-foreground">
+          <pre
+            ref={logRef}
+            onScroll={handleLogScroll}
+            className="min-h-0 flex-1 overflow-auto rounded-lg border bg-code p-3 font-mono text-[12px] leading-relaxed whitespace-pre-wrap text-code-foreground"
+          >
             {detail.log || "（暂无日志输出）"}
           </pre>
         )}

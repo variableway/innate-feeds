@@ -4,9 +4,11 @@
  */
 
 import type {
-  AdminTaskJob,
+  BatchRunResponse,
   JobSchedule,
+  JobsResponse,
   RunDetail,
+  SyncJobGroup,
   TaskRun,
 } from "@/types/tasks";
 
@@ -25,7 +27,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return data as T;
 }
 
-export function fetchJobs(): Promise<{ jobs: AdminTaskJob[] }> {
+export function fetchJobs(): Promise<JobsResponse> {
   return request("/jobs");
 }
 
@@ -33,6 +35,27 @@ export function runJob(jobId: string): Promise<{ run: TaskRun }> {
   return request(`/jobs/${encodeURIComponent(jobId)}/run`, {
     method: "POST",
   });
+}
+
+/**
+ * 批量/一键启动：按 jobIds 或注册表分组。
+ * 全部未启动时后端返回 409 + results（每个 job 的跳过原因），这里保留该结构。
+ */
+export async function runJobs(body: {
+  jobIds?: string[];
+  group?: SyncJobGroup;
+}): Promise<BatchRunResponse> {
+  const res = await fetch(`${API_BASE}/jobs/run-batch`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = (await res.json().catch(() => null)) as
+    (BatchRunResponse & { error?: string }) | null;
+  if (!res.ok && !data?.results) {
+    throw new Error(data?.error || `Request failed (${res.status})`);
+  }
+  return data as BatchRunResponse;
 }
 
 export function fetchRuns(options?: {

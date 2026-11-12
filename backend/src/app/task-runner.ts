@@ -32,6 +32,16 @@ const backendRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const runningProcesses = new Map<string, Subprocess>();
 const runningByJob = new Map<string, string>();
 
+/**
+ * 全局并发上限：批量/调度一次拉起过多子进程会同时打满 GitHub / Firecrawl 的
+ * 速率限制，也会让日志与磁盘 IO 互相拖慢。超限时直接拒绝，由调用方提示。
+ */
+export const MAX_CONCURRENT_RUNS = 4;
+
+export function getRunningCount(): number {
+  return runningProcesses.size;
+}
+
 export function isJobRunning(jobId: string): boolean {
   return runningByJob.has(jobId);
 }
@@ -54,6 +64,11 @@ export function startJobRun(
   if (!job) return { error: `Unknown job: ${jobId}` };
   if (runningByJob.has(jobId)) {
     return { error: `Job already running: ${jobId}` };
+  }
+  if (runningProcesses.size >= MAX_CONCURRENT_RUNS) {
+    return {
+      error: `已达到并发上限（${MAX_CONCURRENT_RUNS} 个任务同时运行），请等当前任务结束后再启动`,
+    };
   }
 
   const runId = newRunId();

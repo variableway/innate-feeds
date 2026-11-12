@@ -1,9 +1,13 @@
 /**
  * 采集任务可视化后台（issue #70）：SYNC_JOBS 注册表 → 可操作的后台任务。
  *
- *   - 任务列表：手动触发 / 取消、上次运行状态、调度配置入口
+ *   - 任务列表：手动触发 / 批量（按分组或勾选）/ 取消、上次运行状态、调度配置入口
  *   - 运行历史：状态 / 触发方式 / 耗时 / 日志查看（含取消）
  *   - 定时调度：每 job 独立间隔（5 ~ 10080 分钟）
+ *
+ * 批量入口走 `POST /api/admin/tasks/jobs/run-batch`（`{ jobIds }` 或 `{ group }`），
+ * 每个 job 独立返回 started / skipped 原因；后端有全局并发上限（MAX_CONCURRENT_RUNS）。
+ * 任务名 / 状态可点击 → 打开该 job 当前运行（运行中优先）的日志，运行中 2s 实时刷新。
  *
  * 数据全部来自 `/api/admin/tasks/*`（backend/src/app/admin-tasks.ts）。
  * 有任务运行时 5s 轮询，空闲 15s。
@@ -18,6 +22,7 @@ import {
   RefreshCw,
   ScrollText,
   TimerReset,
+  Zap,
 } from "lucide-react";
 import {
   Badge,
@@ -27,6 +32,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  Checkbox,
   Table,
   TableBody,
   TableCell,
@@ -44,20 +50,25 @@ import {
   fetchJobs,
   fetchRuns,
   runJob,
+  runJobs,
 } from "@/services/admin-tasks";
-import type { AdminTaskJob, TaskRun } from "@/types/tasks";
+import type { AdminTaskJob, SyncJobGroup, TaskRun } from "@/types/tasks";
 import { formatDuration, formatRelative } from "@/lib/utils";
 import { TaskStatusBadge } from "@/components/task-status-badge";
 import { RunLogDialog } from "@/components/run-log-dialog";
 import { ScheduleDialog } from "@/components/schedule-dialog";
 
-const GROUP_LABEL: Record<string, string> = {
-  core: "GitHub 核心",
-  external: "外部源",
-  topics: "Topics",
-  vertical: "垂直域",
-  pipeline: "流水线",
-};
+const GROUPS: Array<{ id: SyncJobGroup; label: string }> = [
+  { id: "core", label: "GitHub 核心" },
+  { id: "external", label: "外部源" },
+  { id: "topics", label: "Topics" },
+  { id: "vertical", label: "垂直域" },
+  { id: "pipeline", label: "流水线" },
+];
+
+const GROUP_LABEL: Record<string, string> = Object.fromEntries(
+  GROUPS.map((group) => [group.id, group.label]),
+);
 
 function StatCard({
   title,
@@ -93,9 +104,13 @@ export function TasksPage() {
   const [runs, setRuns] = useState<TaskRun[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busyJobId, setBusyJobId] = useState<string | null>(null);
+  const [batchBusy, setBatchBusy] = useState<string | null>(null);
   const [cancellingRunId, setCancellingRunId] = useState<string | null>(null);
   const [logRunId, setLogRunId] = useState<string | null>(null);
   const [scheduleJob, setScheduleJob] = useState<AdminTaskJob | null>(null);
+  const [selectedJobIds, setSelectedJobIds] = useState<string[]>([]);
+  const [maxConcurrent, setMaxConcurrent] = useState<number | null>(null);
+  const [runningCount, setRunningCount] = useState(0);
 
   const load = useCallback(async () => {
     try {
@@ -105,6 +120,8 @@ export function TasksPage() {
       ]);
       setJobs(jobsRes.jobs);
       setRuns(runsRes.runs);
+      setRunningCount(jobsRes.runningCount);
+      setMaxConcurrent(jobsRes.maxConcurrent);
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
@@ -121,6 +138,25 @@ export function TasksPage() {
     const timer = setInterval(() => void load(), hasRunning ? 5000 : 15000);
     return () => clearInterval(timer);
   }, [hasRunning, load]);
+
+  // 选择集合跟随任务状态收敛：任务跑起来或被移除后自动取消勾选。
+  useEffect(() => {
+    if (!jobs) return;
+    setSelectedJobIds((previous) => {
+      const next = previous.filter((id) =>
+        jobs.some((job) => job.id === id && !job.running),
+      );
+      return next.length === previous.length ? previous : next;
+    });
+  }, [jobs]);
+
+  const selectableIds = useMemo(
+    () => (jobs ?? []).filter((job) => !job.running).map((job) => job.id),
+    [jobs],
+  );
+  const allSelected =
+    selectableIds.length > 0 && selectedJobIds.length === selectableIds.length;
+  const batchBusyNow = batchBusy !== null;
 
   const stats = useMemo(() => {
     const running = jobs?.filter((job) => job.running).length ?? 0;
@@ -139,6 +175,32 @@ export function TasksPage() {
     };
   }, [jobs, runs]);
 
+  const toggleJob = (jobId: string) => {
+    setSelectedJobIds((previous) =>
+      previous.includes(jobId)
+        ? previous.filter((id) => id !== jobId)
+        : [...previous, jobId],
+    );
+  };
+
+  const toggleAll = () => {
+    setSelectedJobIds(allSelected ? [] : selectableIds);
+    if (allSelected) toast(`已取消选择 ${selectedJobIds.length} 个任务`);
+  };
+
+  /** 打开某个 job 的日志：运行中优先看当前运行，否则看最近一次。 */
+  const openJobLog = (job: AdminTaskJob) => {
+    if (job.running && job.runningRunId) {
+      setLogRunId(job.runningRunId);
+      return;
+    }
+    if (job.lastRun) {
+      setLogRunId(job.lastRun.id);
+      return;
+    }
+    toast.info(`${job.id} 还没有运行记录，先点「运行」`);
+  };
+
   const handleRun = async (job: AdminTaskJob) => {
     setBusyJobId(job.id);
     try {
@@ -149,6 +211,36 @@ export function TasksPage() {
       toast.error(err instanceof Error ? err.message : String(err));
     } finally {
       setBusyJobId(null);
+    }
+  };
+
+  const handleBatchRun = async (
+    payload: { jobIds?: string[]; group?: SyncJobGroup },
+    label: string,
+  ) => {
+    setBatchBusy(label);
+    try {
+      const response = await runJobs(payload);
+      const started = response.results.filter((result) => result.run).length;
+      const skipped = response.results.filter((result) => !result.run);
+      if (started > 0) {
+        toast.success(
+          `${label}：已启动 ${started} 个任务，可在任务列表点开实时日志`,
+        );
+      }
+      if (skipped.length > 0) {
+        toast.error(`${label}：${skipped.length} 个未启动`, {
+          description: skipped
+            .map((result) => `${result.jobId}（${result.error ?? "未启动"}）`)
+            .join("；"),
+        });
+      }
+      setSelectedJobIds([]);
+      await load();
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : String(err));
+    } finally {
+      setBatchBusy(null);
     }
   };
 
@@ -168,7 +260,7 @@ export function TasksPage() {
   return (
     <PageContainer
       pageTitle="采集任务"
-      pageDescription="M-Sync 任务注册表 · 手动触发 · 运行日志 · 定时调度"
+      pageDescription="M-Sync 任务注册表 · 单任务 / 批量启动 · 实时日志 · 定时调度"
       isLoading={!jobs && !error}
       pageHeaderAction={
         <Button variant="outline" size="sm" onClick={() => void load()}>
@@ -201,7 +293,13 @@ export function TasksPage() {
             <StatCard
               title="运行中"
               value={String(stats.running)}
-              hint={hasRunning ? "正在采集，5s 自动刷新" : "当前无运行中的任务"}
+              hint={
+                maxConcurrent
+                  ? `并发上限 ${maxConcurrent} 个 · ${hasRunning ? "5s 自动刷新" : "当前无运行任务"}`
+                  : hasRunning
+                    ? "正在采集，5s 自动刷新"
+                    : "当前无运行中的任务"
+              }
               icon={Play}
             />
             <StatCard
@@ -229,14 +327,96 @@ export function TasksPage() {
 
             {/* ---------------- 任务列表 ---------------- */}
             <TabsContent value="jobs" className="mt-4">
+              {/* 批量启动工具栏 */}
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-muted/30 px-3 py-2">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="text-muted-foreground flex items-center gap-1 text-xs">
+                    <Zap className="size-3.5" />
+                    按分组启动
+                  </span>
+                  {GROUPS.map((group) => {
+                    const groupJobs = (jobs ?? []).filter(
+                      (job) => job.group === group.id,
+                    );
+                    const groupRunning = groupJobs.filter(
+                      (job) => job.running,
+                    ).length;
+                    return (
+                      <Button
+                        key={group.id}
+                        variant="outline"
+                        size="xs"
+                        title={`一次启动「${group.label}」分组下所有任务`}
+                        disabled={batchBusyNow || groupJobs.length === 0}
+                        onClick={() =>
+                          void handleBatchRun(
+                            { group: group.id },
+                            `启动${group.label}`,
+                          )
+                        }
+                      >
+                        <Play className="size-3" />
+                        {group.label}
+                        <span className="text-muted-foreground tabular-nums">
+                          {groupRunning > 0
+                            ? `${groupRunning}/${groupJobs.length}`
+                            : groupJobs.length}
+                        </span>
+                      </Button>
+                    );
+                  })}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-muted-foreground text-xs tabular-nums">
+                    已选 {selectedJobIds.length} / {selectableIds.length}
+                  </span>
+                  <Button
+                    size="xs"
+                    disabled={batchBusyNow || selectedJobIds.length === 0}
+                    onClick={() =>
+                      void handleBatchRun(
+                        { jobIds: selectedJobIds },
+                        "启动所选任务",
+                      )
+                    }
+                  >
+                    <Play className="size-3" />
+                    运行所选
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="xs"
+                    disabled={batchBusyNow || selectedJobIds.length === 0}
+                    onClick={() => setSelectedJobIds([])}
+                  >
+                    清空
+                  </Button>
+                </div>
+              </div>
+
+              {runningCount > 0 && maxConcurrent ? (
+                <p className="text-muted-foreground mb-3 text-xs">
+                  当前 {runningCount} / {maxConcurrent}{" "}
+                  个任务并发运行；超过上限的启动请求会返回 「已达并发上限」。
+                </p>
+              ) : null}
+
               <div className="rounded-lg border">
                 <Table>
                   <TableHeader>
                     <TableRow>
+                      <TableHead className="w-8">
+                        <Checkbox
+                          aria-label="全选可运行任务"
+                          checked={allSelected}
+                          disabled={batchBusyNow || selectableIds.length === 0}
+                          onCheckedChange={toggleAll}
+                        />
+                      </TableHead>
                       <TableHead>任务</TableHead>
                       <TableHead>分组</TableHead>
                       <TableHead>产出</TableHead>
-                      <TableHead>上次运行</TableHead>
+                      <TableHead>最新运行</TableHead>
                       <TableHead>调度</TableHead>
                       <TableHead className="text-right">操作</TableHead>
                     </TableRow>
@@ -245,10 +425,25 @@ export function TasksPage() {
                     {(jobs ?? []).map((job) => (
                       <TableRow key={job.id}>
                         <TableCell>
-                          <div className="font-medium">{job.id}</div>
-                          <div className="text-muted-foreground text-xs">
-                            {job.summary}
-                          </div>
+                          <Checkbox
+                            aria-label={`选择 ${job.id}`}
+                            checked={selectedJobIds.includes(job.id)}
+                            disabled={batchBusyNow || job.running}
+                            onCheckedChange={() => toggleJob(job.id)}
+                          />
+                        </TableCell>
+                        <TableCell>
+                          <button
+                            type="button"
+                            className="text-left"
+                            title="查看该任务的运行日志"
+                            onClick={() => openJobLog(job)}
+                          >
+                            <div className="font-medium">{job.id}</div>
+                            <div className="text-muted-foreground text-xs">
+                              {job.summary}
+                            </div>
+                          </button>
                         </TableCell>
                         <TableCell>
                           <Badge variant="muted">
@@ -261,10 +456,26 @@ export function TasksPage() {
                           </span>
                         </TableCell>
                         <TableCell>
-                          {job.lastRun ? (
+                          {job.running ? (
                             <button
                               type="button"
                               className="flex flex-col items-start gap-0.5 text-left"
+                              title="查看正在运行的实时日志"
+                              onClick={() =>
+                                job.runningRunId &&
+                                setLogRunId(job.runningRunId)
+                              }
+                            >
+                              <TaskStatusBadge status="running" />
+                              <span className="text-muted-foreground text-xs">
+                                点击查看实时日志
+                              </span>
+                            </button>
+                          ) : job.lastRun ? (
+                            <button
+                              type="button"
+                              className="flex flex-col items-start gap-0.5 text-left"
+                              title="查看本次运行日志"
                               onClick={() => setLogRunId(job.lastRun!.id)}
                             >
                               <TaskStatusBadge status={job.lastRun.status} />
@@ -307,7 +518,7 @@ export function TasksPage() {
                             ) : (
                               <Button
                                 size="xs"
-                                disabled={busyJobId === job.id}
+                                disabled={busyJobId === job.id || batchBusyNow}
                                 onClick={() => void handleRun(job)}
                               >
                                 <Play className="size-3" />
@@ -317,10 +528,11 @@ export function TasksPage() {
                             <Button
                               variant="outline"
                               size="xs"
-                              disabled={!job.lastRun}
-                              onClick={() =>
-                                job.lastRun && setLogRunId(job.lastRun.id)
+                              disabled={
+                                !(job.running && job.runningRunId) &&
+                                !job.lastRun
                               }
+                              onClick={() => openJobLog(job)}
                             >
                               <ScrollText className="size-3" />
                               日志
