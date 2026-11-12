@@ -17,6 +17,7 @@
 |---|---|
 | [arch-design/scoring-and-filters.md](./arch-design/scoring-and-filters.md) | EDU / UI-UX 主题域的打分公式、SKILL 识别启发式、过滤链与 M1 演进路线 |
 | [arch-design/edu-videos-bilibili.md](./arch-design/edu-videos-bilibili.md) | B 站视频采集链路（search→mid→渲染抓取）与策展方法 |
+| [arch-design/admin-scheduled-tasks.md](./arch-design/admin-scheduled-tasks.md) | 后台采集任务调度：现状（每 N 分钟 interval + 30s tick）、批量启动/并发上限/实时日志（P0 已交付）、cron/补跑/依赖编排目标模型与 P1–P3 计划 |
 
 ## Projects（调研与后续计划）
 

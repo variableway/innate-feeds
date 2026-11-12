@@ -197,6 +197,8 @@ cd admin && bun run preview  # 静态预览（端口 4174，同样代理 /api）
 # 后台任务 API（须先跑 backend；--no-admin / ADMIN_DB_UI=off 会一并关闭）
 curl http://localhost:3001/api/admin/tasks/jobs            # 任务注册表 + 状态 + 调度
 curl -X POST http://localhost:3001/api/admin/tasks/jobs/<id>/run   # 手动触发（子进程 cli sync job <id>）
+curl -X POST http://localhost:3001/api/admin/tasks/jobs/run-batch \
+  -H "Content-Type: application/json" -d '{"group":"external"}'     # 批量启动（或 {"jobIds":["hackernews"]}）
 curl "http://localhost:3001/api/admin/tasks/runs?limit=20" # 运行历史
 curl http://localhost:3001/api/admin/tasks/runs/<runId>    # 运行详情 + 日志尾部
 curl -X POST http://localhost:3001/api/admin/tasks/runs/<runId>/cancel
@@ -463,6 +465,7 @@ Interactive docs: **`/docs`** (Swagger UI) · spec: **`/api/openapi.json`** (`ba
 | GET | `/api/admin/db/json/files` | Registered JSON files. |
 | GET | `/api/admin/tasks/jobs` | 采集任务注册表（SYNC_JOBS）+ 运行状态 + 调度配置（issue #70）。 |
 | POST | `/api/admin/tasks/jobs/:id/run` | 手动触发一次后台运行（子进程 `cli sync job <id>`；同 job 并发返回 409）。 |
+| POST | `/api/admin/tasks/jobs/run-batch` | 批量/一键启动：body `{ jobIds?: string[], group?: "core"\|"external"\|"topics"\|"vertical"\|"pipeline" }`，逐条返回 `{ jobId, run?, error? }`；全局并发上限 4（超出该条目返回错误，201/409 表示是否有任务启动）。 |
 | GET | `/api/admin/tasks/runs` | 运行历史（`?jobId=` 过滤、`?limit=` 默认 50 最大 200）。 |
 | GET | `/api/admin/tasks/runs/:runId` | 运行详情 + 日志尾部（≤200KB）。 |
 | POST | `/api/admin/tasks/runs/:runId/cancel` | 取消运行中的任务（kill 子进程）。 |
