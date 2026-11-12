@@ -90,6 +90,26 @@ CREATE TABLE IF NOT EXISTS hot_snapshots (
 
 CREATE INDEX IF NOT EXISTS idx_hot_snapshots_date ON hot_snapshots(snapshot_date, rank);
 
+-- 采集任务标签（issue #70 跟进）：任务分组从代码常量迁到 SQLite。
+-- task_tags 是标签字典（github / dsh / topics / news），task_job_tags 是
+-- job_id ↔ tag 多对多映射；job_id 对应 collectors/jobs.ts 的 SYNC_JOBS.id。
+-- 首次读取时按 DEFAULT_JOB_TAGS 播种，之后以库为准（可直接用 SQLite 工作台维护）。
+CREATE TABLE IF NOT EXISTS task_tags (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug TEXT NOT NULL UNIQUE,
+  label TEXT NOT NULL,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS task_job_tags (
+  job_id TEXT NOT NULL,
+  tag_id INTEGER NOT NULL REFERENCES task_tags(id) ON DELETE CASCADE,
+  PRIMARY KEY (job_id, tag_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_task_job_tags_tag ON task_job_tags(tag_id);
+
 CREATE INDEX IF NOT EXISTS idx_trending_repos_language ON trending_repos(language);
 CREATE INDEX IF NOT EXISTS idx_trending_repos_stars ON trending_repos(stars);
 CREATE INDEX IF NOT EXISTS idx_trending_repos_snapshot_date ON trending_repos(snapshot_date);

@@ -21,6 +21,11 @@ import {
   type TaskRun,
 } from "../data/task-runs-store.js";
 import {
+  listJobTags,
+  listTaskTags,
+  setJobTags,
+} from "../data/task-tags-store.js";
+import {
   cancelJobRun,
   getRunningCount,
   getRunningRunId,
@@ -38,20 +43,29 @@ const SCHEDULE_BODY_SCHEMA = z.object({
     .max(10080, "间隔最多 7 天"),
 });
 
-/** 批量启动：显式 jobIds，或按注册表分组取全部。 */
+/** 批量启动：显式 jobIds、注册表分组，或数据库标签（tag）。 */
 const BATCH_RUN_BODY_SCHEMA = z
   .object({
     jobIds: z.array(z.string().min(1)).max(100).optional(),
     group: z
       .enum(["core", "external", "topics", "vertical", "pipeline"])
       .optional(),
+    tag: z.string().min(1).optional(),
   })
   .refine(
-    (body) => body.group !== undefined || (body.jobIds?.length ?? 0) > 0,
+    (body) =>
+      body.group !== undefined ||
+      body.tag !== undefined ||
+      (body.jobIds?.length ?? 0) > 0,
     {
-      message: "jobIds 或 group 至少提供一个",
+      message: "jobIds、group 或 tag 至少提供一个",
     },
   );
+
+/** 覆盖式设置 job 标签。 */
+const JOB_TAGS_BODY_SCHEMA = z.object({
+  tags: z.array(z.string().min(1)).max(8),
+});
 
 function runSummary(run: TaskRun | null | undefined) {
   return run ?? null;
@@ -59,10 +73,13 @@ function runSummary(run: TaskRun | null | undefined) {
 
 export const adminTasksRouter = new Hono();
 
-/** GET /api/admin/tasks/jobs — 注册表 + 运行状态 + 调度配置。 */
+/** GET /api/admin/tasks/jobs — 注册表 + 运行状态 + 调度配置 + DB 标签。 */
 adminTasksRouter.get("/api/admin/tasks/jobs", (c) => {
   const runs = listRuns();
   const schedules = new Map(listSchedules().map((s) => [s.jobId, s]));
+  const tags = listTaskTags();
+  const jobTags = listJobTags();
+  const tagBySlug = new Map(tags.map((tag) => [tag.slug, tag]));
   const jobs = SYNC_JOBS.map((job) => {
     const lastRun = runs.find((r) => r.jobId === job.id) ?? null;
     return {
@@ -71,13 +88,23 @@ adminTasksRouter.get("/api/admin/tasks/jobs", (c) => {
       runningRunId: getRunningRunId(job.id),
       lastRun: runSummary(lastRun),
       schedule: schedules.get(job.id) ?? null,
+      tags: (jobTags.get(job.id) ?? []).map((slug) => ({
+        slug,
+        label: tagBySlug.get(slug)?.label ?? slug,
+      })),
     };
   });
   return c.json({
     jobs,
+    tags,
     runningCount: getRunningCount(),
     maxConcurrent: MAX_CONCURRENT_RUNS,
   });
+});
+
+/** GET /api/admin/tasks/tags — 标签字典 + 每标签任务数。 */
+adminTasksRouter.get("/api/admin/tasks/tags", (c) => {
+  return c.json({ tags: listTaskTags() });
 });
 
 /**
@@ -104,6 +131,16 @@ adminTasksRouter.post("/api/admin/tasks/jobs/run-batch", async (c) => {
   if (parsed.data.group) {
     for (const job of SYNC_JOBS) {
       if (job.group === parsed.data.group) targets.set(job.id, job);
+    }
+  }
+  if (parsed.data.tag) {
+    const tag = listTaskTags().find((item) => item.slug === parsed.data.tag);
+    if (!tag) {
+      return c.json({ error: `Unknown tag: ${parsed.data.tag}` }, 400);
+    }
+    const jobTags = listJobTags();
+    for (const job of SYNC_JOBS) {
+      if (jobTags.get(job.id)?.includes(tag.slug)) targets.set(job.id, job);
     }
   }
   for (const jobId of parsed.data.jobIds ?? []) {
@@ -148,6 +185,36 @@ adminTasksRouter.post("/api/admin/tasks/jobs/:id/run", (c) => {
     return c.json({ error: result.error ?? "Failed to start run" }, 409);
   }
   return c.json({ run: result.run }, 201);
+});
+
+/** PUT /api/admin/tasks/jobs/:id/tags — 覆盖式设置任务标签（DB 为唯一事实源）。 */
+adminTasksRouter.put("/api/admin/tasks/jobs/:id/tags", async (c) => {
+  const jobId = c.req.param("id");
+  if (!findSyncJob(jobId)) {
+    return c.json({ error: `Unknown job: ${jobId}` }, 404);
+  }
+  let body: unknown;
+  try {
+    body = await c.req.json();
+  } catch {
+    return c.json({ error: "Invalid JSON body" }, 400);
+  }
+  const parsed = JOB_TAGS_BODY_SCHEMA.safeParse(body);
+  if (!parsed.success) {
+    return c.json(
+      { error: parsed.error.issues[0]?.message ?? "Invalid tags body" },
+      400,
+    );
+  }
+  try {
+    const tags = setJobTags(jobId, parsed.data.tags);
+    return c.json({ jobId, tags });
+  } catch (err) {
+    return c.json(
+      { error: err instanceof Error ? err.message : String(err) },
+      400,
+    );
+  }
 });
 
 /** GET /api/admin/tasks/runs — 运行历史（可按 job 过滤）。 */

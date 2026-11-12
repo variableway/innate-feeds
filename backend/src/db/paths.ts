@@ -3,8 +3,18 @@ import { homedir } from "os";
 import { dirname, join, parse, resolve } from "path";
 import { fileURLToPath } from "url";
 
-export const INNATE_HOME =
-  process.env.INNATE_HOME || join(homedir(), ".innate");
+/** INNATE_HOME 在调用时解析，便于测试 / 部署时重定向数据目录。 */
+export function resolveInnateHome(): string {
+  const fromEnv = process.env.INNATE_HOME?.trim();
+  return fromEnv || join(homedir(), ".innate");
+}
+
+/**
+ * 模块加载时的默认值，供不便于改成函数的调用点使用。
+ * 新的调用点请优先用 `resolveInnateHome()` / `getDefaultDbPath()`，它们会读取
+ * 当前环境变量（测试里临时改 INNATE_HOME 才能生效）。
+ */
+export const INNATE_HOME = resolveInnateHome();
 
 let repoRoot: string | null | undefined;
 
@@ -54,6 +64,6 @@ export function getDefaultDbPath(): string {
     mkdirSync(dirname(dbPath), { recursive: true });
     return dbPath;
   }
-  mkdirSync(INNATE_HOME, { recursive: true });
-  return join(INNATE_HOME, "feeds.db");
+  mkdirSync(resolveInnateHome(), { recursive: true });
+  return join(resolveInnateHome(), "feeds.db");
 }

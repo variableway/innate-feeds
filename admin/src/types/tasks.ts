@@ -31,6 +31,18 @@ export interface JobSchedule {
 export type SyncJobGroup =
   "core" | "external" | "topics" | "vertical" | "pipeline";
 
+/** 任务标签（DB 驱动，见 backend/src/data/task-tags-store.ts）。 */
+export interface AdminTaskTag {
+  slug: string;
+  label: string;
+}
+
+/** 标签字典项 + 挂载任务数（GET /jobs 的 `tags`）。 */
+export interface TaskTagSummary extends AdminTaskTag {
+  sortOrder: number;
+  count: number;
+}
+
 export interface AdminTaskJob {
   id: string;
   group: SyncJobGroup;
@@ -41,10 +53,14 @@ export interface AdminTaskJob {
   runningRunId: string | null;
   lastRun: TaskRun | null;
   schedule: JobSchedule | null;
+  /** DB 中该任务的标签（多标签，按 sort_order 排序） */
+  tags: AdminTaskTag[];
 }
 
 export interface JobsResponse {
   jobs: AdminTaskJob[];
+  /** 标签字典 + 每标签任务数 */
+  tags: TaskTagSummary[];
   /** 当前运行中的子进程数 */
   runningCount: number;
   /** 全局并发上限（后端 MAX_CONCURRENT_RUNS） */

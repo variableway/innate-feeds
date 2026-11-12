@@ -9,6 +9,7 @@ import { mkdtempSync, rmSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
 import { adminTasksRouter } from "./admin-tasks.js";
+import { closeDb } from "../db/index.js";
 
 let tempHome: string;
 let prevHome: string | undefined;
@@ -20,9 +21,15 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  closeDb();
   if (prevHome === undefined) delete process.env.INNATE_HOME;
   else process.env.INNATE_HOME = prevHome;
-  rmSync(tempHome, { recursive: true, force: true });
+  try {
+    rmSync(tempHome, { recursive: true, force: true });
+  } catch {
+    // Windows 上 bun:sqlite 的 Statement 在 close 后仍可能持有文件句柄（EBUSY），
+    // 临时目录交给系统清理；测试结果不受影响。
+  }
 });
 
 async function postBatch(body: unknown): Promise<Response> {
@@ -38,13 +45,68 @@ describe("admin tasks API", () => {
     const res = await adminTasksRouter.request("/api/admin/tasks/jobs");
     expect(res.status).toBe(200);
     const body = (await res.json()) as {
-      jobs: unknown[];
+      jobs: Array<{ id: string; tags: Array<{ slug: string }> }>;
+      tags: Array<{ slug: string; count: number }>;
       runningCount: number;
       maxConcurrent: number;
     };
     expect(body.jobs.length).toBeGreaterThan(0);
     expect(body.runningCount).toBe(0);
     expect(body.maxConcurrent).toBeGreaterThan(0);
+    // DB 标签字典：github / dsh / topics / news
+    expect(body.tags.map((tag) => tag.slug)).toEqual([
+      "github",
+      "dsh",
+      "topics",
+      "news",
+    ]);
+    const hackernews = body.jobs.find((job) => job.id === "hackernews");
+    expect(hackernews?.tags.map((tag) => tag.slug)).toEqual(["news"]);
+  });
+
+  test("POST /jobs/run-batch rejects an unknown tag", async () => {
+    const res = await postBatch({ tag: "__missing__" });
+    expect(res.status).toBe(400);
+    const body = (await res.json()) as { error: string };
+    expect(body.error).toContain("Unknown tag");
+  });
+
+  test("PUT /jobs/:id/tags persists overrides in SQLite", async () => {
+    const res = await adminTasksRouter.request(
+      "/api/admin/tasks/jobs/hackernews/tags",
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tags: ["github", "news"] }),
+      },
+    );
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { jobId: string; tags: string[] };
+    expect(body.tags).toEqual(["github", "news"]);
+
+    const jobsRes = await adminTasksRouter.request("/api/admin/tasks/jobs");
+    const jobsBody = (await jobsRes.json()) as {
+      jobs: Array<{
+        id: string;
+        tags: Array<{ slug: string; label: string }>;
+      }>;
+    };
+    expect(jobsBody.jobs.find((job) => job.id === "hackernews")?.tags).toEqual([
+      { slug: "github", label: "GitHub" },
+      { slug: "news", label: "News" },
+    ]);
+  });
+
+  test("PUT /jobs/:id/tags rejects unknown tags", async () => {
+    const res = await adminTasksRouter.request(
+      "/api/admin/tasks/jobs/hackernews/tags",
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tags: ["nope"] }),
+      },
+    );
+    expect(res.status).toBe(400);
   });
 
   test("POST /jobs/run-batch rejects an empty body", async () => {

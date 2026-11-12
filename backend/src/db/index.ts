@@ -32,6 +32,18 @@ export function getDb(dbPath?: string): Database {
 }
 
 /**
+ * Close the cached connection so the next getDb() reopens (tests / env switches).
+ * Windows keeps the file locked while the WAL connection is open.
+ */
+export function closeDb(): void {
+  if (db) {
+    db.close();
+    db = null;
+    activeDbPath = null;
+  }
+}
+
+/**
  * Prefix object keys with `@` for bun:sqlite named-parameter binding.
  * bun:sqlite requires the prefix in the key (better-sqlite3 did not).
  * Typed as `SQLQueryBindings` because @types/bun's `Statement.run` overload

@@ -44,6 +44,7 @@ export function runJob(jobId: string): Promise<{ run: TaskRun }> {
 export async function runJobs(body: {
   jobIds?: string[];
   group?: SyncJobGroup;
+  tag?: string;
 }): Promise<BatchRunResponse> {
   const res = await fetch(`${API_BASE}/jobs/run-batch`, {
     method: "POST",
