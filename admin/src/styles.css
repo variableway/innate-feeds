@@ -142,7 +142,9 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-sans:
+    "Inter", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", system-ui,
+    sans-serif;
   /* AIHot 扩展层：生成 text-ink-* / bg-hot-soft / text-rank-* / rounded-{mark,control,tile,card,panel,sheet} */
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
@@ -367,4 +369,14 @@
   border: 1px solid var(--border);
   padding: 0.4em 0.6em;
   text-align: left;
+}
+
+/* SQLite 工作台：SQL 编辑器 0.875rem（与界面正文一致），左侧表名单独放大 */
+.sql-workbench .cm-editor,
+.sql-workbench .cm-gutters {
+  font-size: 0.875rem;
+}
+
+.sql-workbench .cm-content {
+  line-height: 1.6;
 }

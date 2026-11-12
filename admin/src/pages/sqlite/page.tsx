@@ -1,4 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { sql as sqlLanguage } from "@codemirror/lang-sql";
 import {
@@ -41,6 +48,21 @@ function tablePreviewSql(name: string): string {
 
 const SCHEMA_PAGE_SIZE = 15;
 
+const DEFAULT_SIDEBAR_WIDTH = 256;
+const MIN_SIDEBAR_WIDTH = 160;
+const MAX_SIDEBAR_WIDTH = 480;
+const SIDEBAR_WIDTH_KEY = "innate.admin.sqlite.sidebarWidth";
+
+function readStoredSidebarWidth(): number {
+  if (typeof window === "undefined") return DEFAULT_SIDEBAR_WIDTH;
+  const stored = Number(window.localStorage.getItem(SIDEBAR_WIDTH_KEY));
+  return Number.isFinite(stored) &&
+    stored >= MIN_SIDEBAR_WIDTH &&
+    stored <= MAX_SIDEBAR_WIDTH
+    ? stored
+    : DEFAULT_SIDEBAR_WIDTH;
+}
+
 function previewValue(value: unknown): string {
   if (value === null || value === undefined) return "NULL";
   if (typeof value === "object") {
@@ -75,6 +97,53 @@ export function SqlitePage() {
   const [showSaveInput, setShowSaveInput] = useState(false);
   const [savedOpen, setSavedOpen] = useState(false);
   const drawerWrapRef = useRef<HTMLDivElement>(null);
+
+  // 左栏表列表宽度：可拖拽（160–480px），双击复位，localStorage 记忆。
+  const [sidebarWidth, setSidebarWidth] = useState(readStoredSidebarWidth);
+  const sidebarWidthRef = useRef(sidebarWidth);
+
+  useEffect(() => {
+    sidebarWidthRef.current = sidebarWidth;
+  }, [sidebarWidth]);
+
+  const startSidebarResize = (
+    event: ReactPointerEvent<HTMLDivElement>,
+  ): void => {
+    event.preventDefault();
+    const startX = event.clientX;
+    const startWidth = sidebarWidthRef.current;
+    const onMove = (moveEvent: PointerEvent): void => {
+      const next = Math.min(
+        MAX_SIDEBAR_WIDTH,
+        Math.max(MIN_SIDEBAR_WIDTH, startWidth + moveEvent.clientX - startX),
+      );
+      sidebarWidthRef.current = next;
+      setSidebarWidth(next);
+    };
+    const onUp = (): void => {
+      document.body.style.cursor = "";
+      document.body.style.userSelect = "";
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      window.localStorage.setItem(
+        SIDEBAR_WIDTH_KEY,
+        String(sidebarWidthRef.current),
+      );
+    };
+    document.body.style.cursor = "col-resize";
+    document.body.style.userSelect = "none";
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  };
+
+  const resetSidebarWidth = (): void => {
+    sidebarWidthRef.current = DEFAULT_SIDEBAR_WIDTH;
+    setSidebarWidth(DEFAULT_SIDEBAR_WIDTH);
+    window.localStorage.setItem(
+      SIDEBAR_WIDTH_KEY,
+      String(DEFAULT_SIDEBAR_WIDTH),
+    );
+  };
 
   const [jsonFiles, setJsonFiles] = useState<AdminDbJsonFile[]>([]);
   const [scanning, setScanning] = useState(false);
@@ -302,9 +371,12 @@ export function SqlitePage() {
 
       <div className="relative flex min-h-0 flex-1 gap-3">
         {/* Left: tables + JSON registry */}
-        <aside className="flex w-56 shrink-0 flex-col gap-2 overflow-hidden">
+        <aside
+          style={{ width: sidebarWidth }}
+          className="flex shrink-0 flex-col gap-2 overflow-hidden"
+        >
           <div className="flex min-h-0 flex-1 flex-col rounded-md border">
-            <div className="text-muted-foreground flex items-center gap-1.5 border-b px-2 py-1.5 text-xs font-medium">
+            <div className="text-muted-foreground flex items-center gap-1.5 border-b px-2 py-1.5 text-sm font-medium">
               <Database className="h-3.5 w-3.5" />
               表（{userTables.length}）
             </div>
@@ -324,12 +396,14 @@ export function SqlitePage() {
                     void runQuery(tablePreviewSql(table.name));
                   }}
                   title="单击填入 SQL，双击直接执行"
-                  className={`flex w-full items-center justify-between rounded px-2 py-1 text-left text-xs hover:bg-accent ${
+                  className={`flex w-full items-center justify-between rounded px-2 py-1.5 text-left hover:bg-accent ${
                     selectedTable === table.name ? "bg-accent" : ""
                   }`}
                 >
-                  <span className="truncate font-mono">{table.name}</span>
-                  <span className="text-muted-foreground ml-2 shrink-0 tabular-nums">
+                  <span className="truncate font-mono text-base">
+                    {table.name}
+                  </span>
+                  <span className="text-muted-foreground ml-2 shrink-0 text-sm tabular-nums">
                     {formatCount(table.rowCount)}
                   </span>
                 </button>
@@ -337,7 +411,7 @@ export function SqlitePage() {
             </div>
             {tableSchema && (
               <div className="border-t p-2">
-                <div className="text-muted-foreground mb-1 flex items-center justify-between text-[10px] font-medium uppercase">
+                <div className="text-muted-foreground mb-1 flex items-center justify-between text-xs font-medium uppercase">
                   <span>
                     {tableSchema.table} 列（{schemaColumns.length}）
                   </span>
@@ -374,7 +448,7 @@ export function SqlitePage() {
                 {schemaPageColumns.map((col) => (
                   <div
                     key={col.name}
-                    className="flex items-baseline justify-between gap-2 text-[11px]"
+                    className="flex items-baseline justify-between gap-2 text-sm"
                   >
                     <span className="truncate font-mono">{col.name}</span>
                     <span className="text-muted-foreground shrink-0">
@@ -414,6 +488,19 @@ export function SqlitePage() {
             </p>
           </div>
         </aside>
+
+        {/* 左栏宽度拖拽手柄：拖动调整、双击复位 */}
+        <div
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="调整表列表宽度"
+          title="拖动调整宽度，双击复位"
+          onPointerDown={startSidebarResize}
+          onDoubleClick={resetSidebarWidth}
+          className="group relative -mx-1.5 w-3 shrink-0 cursor-col-resize touch-none"
+        >
+          <span className="bg-border group-hover:bg-primary absolute inset-y-0 left-1/2 w-px -translate-x-1/2" />
+        </div>
 
         {/* Center: editor + results */}
         <section className="flex min-w-0 flex-1 flex-col gap-2">
@@ -460,11 +547,12 @@ export function SqlitePage() {
                 </button>
               </div>
             </div>
-            <div className="flex min-h-0 flex-1 overflow-hidden">
+            <div className="sql-workbench flex min-h-0 flex-1 overflow-hidden">
               <CodeMirror
                 value={sqlText}
                 height="100%"
                 className="h-full w-full min-w-0"
+                style={{ fontSize: "0.875rem" }}
                 theme={darkMode ? "dark" : "light"}
                 extensions={[sqlLanguage()]}
                 basicSetup={{
@@ -499,12 +587,12 @@ export function SqlitePage() {
             <div className="min-h-0 flex-1 overflow-auto">
               {result && result.rows.length > 0 ? (
                 <table className="w-full border-collapse text-left text-xs">
-                  <thead className="bg-muted/20 sticky top-0">
+                  <thead className="sticky top-0 z-10">
                     <tr>
                       {result.columns.map((column) => (
                         <th
                           key={column}
-                          className="text-muted-foreground border-b px-2 py-1.5 font-medium whitespace-nowrap"
+                          className="bg-secondary text-secondary-foreground sticky top-0 z-10 border-b px-2 py-1.5 font-semibold whitespace-nowrap shadow-[0_1px_0_0_var(--border)]"
                         >
                           {column}
                         </th>
