@@ -1,8 +1,8 @@
 {
   "topic": "ux-audit",
-  "fetchedAt": "2026-11-12T16:38:38.053Z",
+  "fetchedAt": "2026-11-13T02:52:11.060Z",
   "count": 50,
-  "newCount": 50,
+  "newCount": 1,
   "existingCount": 0,
   "items": [
     {
@@ -46,8 +46,8 @@
       },
       "createdAt": "2026-03-23T15:09:14Z",
       "updatedAt": "2026-11-04T14:38:25Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -79,8 +79,8 @@
       },
       "createdAt": "2026-04-01T15:06:32Z",
       "updatedAt": "2026-11-07T12:18:04Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -114,8 +114,8 @@
       },
       "createdAt": "2026-06-12T08:51:06Z",
       "updatedAt": "2026-11-12T14:29:27Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -149,8 +149,8 @@
       },
       "createdAt": "2026-08-01T16:05:02Z",
       "updatedAt": "2026-11-06T15:55:17Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -186,8 +186,8 @@
       },
       "createdAt": "2026-02-27T22:01:23Z",
       "updatedAt": "2026-11-01T14:55:23Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -216,8 +216,8 @@
       },
       "createdAt": "2026-02-23T20:18:47Z",
       "updatedAt": "2026-10-16T23:20:02Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -249,39 +249,8 @@
       },
       "createdAt": "2026-03-20T23:39:43Z",
       "updatedAt": "2026-08-01T19:33:49Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1178151314",
-      "repoId": 1178151314,
-      "fullName": "FuzulsFriend/roast-my-landing-page",
-      "name": "roast-my-landing-page",
-      "description": "Claude Code skill: brutally honest landing page audit — scored out of 100 across 6 dimensions with specific fixes in plain English",
-      "url": "https://github.com/FuzulsFriend/roast-my-landing-page",
-      "homepage": null,
-      "stars": 8,
-      "forks": 0,
-      "watchers": 8,
-      "language": "HTML",
-      "topics": [
-        "claude-code",
-        "conversion-rate-optimization",
-        "landing-page",
-        "skill",
-        "ux-audit",
-        "web-analytics"
-      ],
-      "owner": {
-        "login": "FuzulsFriend",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/255360241?v=4",
-        "url": "https://github.com/FuzulsFriend"
-      },
-      "createdAt": "2026-03-10T18:33:38Z",
-      "updatedAt": "2026-10-07T03:44:18Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -314,8 +283,39 @@
       },
       "createdAt": "2026-05-19T12:58:51Z",
       "updatedAt": "2026-10-18T21:21:37Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1178151314",
+      "repoId": 1178151314,
+      "fullName": "FuzulsFriend/roast-my-landing-page",
+      "name": "roast-my-landing-page",
+      "description": "Claude Code skill: brutally honest landing page audit — scored out of 100 across 6 dimensions with specific fixes in plain English",
+      "url": "https://github.com/FuzulsFriend/roast-my-landing-page",
+      "homepage": null,
+      "stars": 8,
+      "forks": 0,
+      "watchers": 8,
+      "language": "HTML",
+      "topics": [
+        "claude-code",
+        "conversion-rate-optimization",
+        "landing-page",
+        "skill",
+        "ux-audit",
+        "web-analytics"
+      ],
+      "owner": {
+        "login": "FuzulsFriend",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/255360241?v=4",
+        "url": "https://github.com/FuzulsFriend"
+      },
+      "createdAt": "2026-03-10T18:33:38Z",
+      "updatedAt": "2026-10-07T03:44:18Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -350,8 +350,8 @@
       },
       "createdAt": "2026-10-11T10:42:22Z",
       "updatedAt": "2026-10-20T16:08:32Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -389,8 +389,8 @@
       },
       "createdAt": "2026-03-10T05:45:29Z",
       "updatedAt": "2026-10-25T20:42:27Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -427,8 +427,8 @@
       },
       "createdAt": "2026-05-11T17:10:06Z",
       "updatedAt": "2026-09-28T03:53:20Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -464,8 +464,8 @@
       },
       "createdAt": "2026-03-25T16:39:37Z",
       "updatedAt": "2026-11-02T11:21:10Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -501,8 +501,8 @@
       },
       "createdAt": "2026-07-19T22:14:37Z",
       "updatedAt": "2026-11-08T12:57:28Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -534,8 +534,8 @@
       },
       "createdAt": "2026-09-04T10:07:13Z",
       "updatedAt": "2026-11-07T15:06:18Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -565,8 +565,8 @@
       },
       "createdAt": "2026-09-02T07:38:27Z",
       "updatedAt": "2026-10-20T03:24:46Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -599,8 +599,8 @@
       },
       "createdAt": "2026-08-12T14:32:31Z",
       "updatedAt": "2026-08-31T19:52:17Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -641,8 +641,8 @@
       },
       "createdAt": "2026-06-19T14:38:40Z",
       "updatedAt": "2026-10-16T18:03:33Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -674,8 +674,8 @@
       },
       "createdAt": "2026-07-02T06:10:27Z",
       "updatedAt": "2026-08-16T04:19:29Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -706,8 +706,8 @@
       },
       "createdAt": "2026-07-25T20:57:30Z",
       "updatedAt": "2026-07-30T14:25:41Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -751,8 +751,8 @@
       },
       "createdAt": "2026-03-13T11:39:49Z",
       "updatedAt": "2026-11-09T19:44:29Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -794,8 +794,8 @@
       },
       "createdAt": "2026-08-26T19:14:13Z",
       "updatedAt": "2026-08-26T21:22:02Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -828,8 +828,38 @@
       },
       "createdAt": "2026-06-11T15:20:13Z",
       "updatedAt": "2026-11-11T17:32:22Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1409621084",
+      "repoId": 1409621084,
+      "fullName": "Baraakhaldi/website-benchmark",
+      "name": "website-benchmark",
+      "description": "Claude Code skill: research, audit and benchmark a website against the best competitors, then get a cited research brief, benchmark report, component kit, UI resource directory and build prompt.",
+      "url": "https://github.com/Baraakhaldi/website-benchmark",
+      "homepage": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "HTML",
+      "topics": [
+        "claude-code",
+        "claude-skill",
+        "competitor-analysis",
+        "ux-audit",
+        "website-benchmark"
+      ],
+      "owner": {
+        "login": "Baraakhaldi",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/134837926?v=4",
+        "url": "https://github.com/Baraakhaldi"
+      },
+      "createdAt": "2026-10-08T02:37:32Z",
+      "updatedAt": "2026-10-08T02:38:59Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -869,8 +899,8 @@
       },
       "createdAt": "2026-07-24T18:33:48Z",
       "updatedAt": "2026-10-29T17:03:00Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -908,145 +938,8 @@
       },
       "createdAt": "2026-03-19T19:32:35Z",
       "updatedAt": "2026-10-19T03:14:15Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1409621084",
-      "repoId": 1409621084,
-      "fullName": "Baraakhaldi/website-benchmark",
-      "name": "website-benchmark",
-      "description": "Claude Code skill: research, audit and benchmark a website against the best competitors, then get a cited research brief, benchmark report, component kit, UI resource directory and build prompt.",
-      "url": "https://github.com/Baraakhaldi/website-benchmark",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "HTML",
-      "topics": [
-        "claude-code",
-        "claude-skill",
-        "competitor-analysis",
-        "ux-audit",
-        "website-benchmark"
-      ],
-      "owner": {
-        "login": "Baraakhaldi",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/134837926?v=4",
-        "url": "https://github.com/Baraakhaldi"
-      },
-      "createdAt": "2026-10-08T02:37:32Z",
-      "updatedAt": "2026-10-08T02:38:59Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1298497384",
-      "repoId": 1298497384,
-      "fullName": "Aakreit/design-counsel",
-      "name": "design-counsel",
-      "description": "Design Counsel — a veteran design reviewer for Claude Code and Codex. Evidence-grounded UX review: prioritized findings, state-matrix coverage, severity anchors, sourced design doctrine.",
-      "url": "https://github.com/Aakreit/design-counsel",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "accessibility",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "design-review",
-        "design-systems",
-        "ux-audit"
-      ],
-      "owner": {
-        "login": "Aakreit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/141206312?v=4",
-        "url": "https://github.com/Aakreit"
-      },
-      "createdAt": "2026-07-12T17:44:21Z",
-      "updatedAt": "2026-09-03T07:34:52Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1423856519",
-      "repoId": 1423856519,
-      "fullName": "habithabitude490/webreverse-designer",
-      "name": "webreverse-designer",
-      "description": "AI skill that analyzes and documents existing website design into a structured 12-section report. Python stdlib only. MIT.",
-      "url": "https://github.com/habithabitude490/webreverse-designer",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "accessibility",
-        "ai-skill",
-        "claude",
-        "cursor",
-        "python",
-        "responsive-design",
-        "reverse-engineering",
-        "ux-audit",
-        "web-design"
-      ],
-      "owner": {
-        "login": "habithabitude490",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/252579568?v=4",
-        "url": "https://github.com/habithabitude490"
-      },
-      "createdAt": "2026-10-18T00:14:22Z",
-      "updatedAt": "2026-10-18T21:50:15Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1380722815",
-      "repoId": 1380722815,
-      "fullName": "masanggil1986/flutter-ux-journey",
-      "name": "flutter-ux-journey",
-      "description": "Journey-level UX audit for Flutter apps, measured from a running app: real pixel rects, real contrast ratios, real semantics labels.",
-      "url": "https://github.com/masanggil1986/flutter-ux-journey",
-      "homepage": "https://github.com/masanggil1986/flutter-ux-journey#readme",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Dart",
-      "topics": [
-        "a11y",
-        "accessibility",
-        "agent-skills",
-        "claude-code",
-        "claude-code-plugin",
-        "dart",
-        "flutter",
-        "flutter-test",
-        "integration-test",
-        "semantics",
-        "usability",
-        "user-journey",
-        "ux",
-        "ux-audit",
-        "ux-research",
-        "wcag"
-      ],
-      "owner": {
-        "login": "masanggil1986",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5173379?v=4",
-        "url": "https://github.com/masanggil1986"
-      },
-      "createdAt": "2026-09-22T01:32:36Z",
-      "updatedAt": "2026-10-10T01:24:59Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1081,8 +974,78 @@
       },
       "createdAt": "2026-05-17T19:45:48Z",
       "updatedAt": "2026-10-28T13:37:46Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1325940882",
+      "repoId": 1325940882,
+      "fullName": "JietingWeiJietingWei/skills",
+      "name": "skills",
+      "description": "Skills for builders who ship their own products. Includes roast-my-product: a multi-perspective product audit for Claude Code.",
+      "url": "https://github.com/JietingWeiJietingWei/skills",
+      "homepage": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": null,
+      "topics": [
+        "claude-code",
+        "claude-code-marketplace",
+        "claude-code-plugin",
+        "claude-code-skills",
+        "claude-skills",
+        "code-review",
+        "product-management",
+        "ux-audit"
+      ],
+      "owner": {
+        "login": "JietingWeiJietingWei",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/136245820?v=4",
+        "url": "https://github.com/JietingWeiJietingWei"
+      },
+      "createdAt": "2026-08-06T22:15:41Z",
+      "updatedAt": "2026-08-06T23:57:28Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1419969312",
+      "repoId": 1419969312,
+      "fullName": "Bigoscrypt/fix-my-ui",
+      "name": "fix-my-ui",
+      "description": "Agent skill: audit and fix the UX of the app or website you already built, and extract a design system. Claude Code, Codex, Cursor and more.",
+      "url": "https://github.com/Bigoscrypt/fix-my-ui",
+      "homepage": "https://github.com/Bigoscrypt/fix-my-ui",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "JavaScript",
+      "topics": [
+        "accessibility",
+        "agent-skills",
+        "claude-code-plugin",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "design-system",
+        "playwright",
+        "responsive-design",
+        "ui-ux",
+        "ux-audit",
+        "vibe-coding"
+      ],
+      "owner": {
+        "login": "Bigoscrypt",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/221571716?v=4",
+        "url": "https://github.com/Bigoscrypt"
+      },
+      "createdAt": "2026-10-14T23:55:54Z",
+      "updatedAt": "2026-10-16T21:39:08Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1124,78 +1087,40 @@
       },
       "createdAt": "2026-10-18T19:24:11Z",
       "updatedAt": "2026-11-08T11:50:07Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1325940882",
-      "repoId": 1325940882,
-      "fullName": "JietingWeiJietingWei/skills",
-      "name": "skills",
-      "description": "Skills for builders who ship their own products. Includes roast-my-product: a multi-perspective product audit for Claude Code.",
-      "url": "https://github.com/JietingWeiJietingWei/skills",
-      "homepage": null,
+      "id": "gh-topic-1307468085",
+      "repoId": 1307468085,
+      "fullName": "ananas-agency/Website-Audit-Suite",
+      "name": "Website-Audit-Suite",
+      "description": "AI Skills Pack that turn Claude into a guided website auditor: one URL in, a graded, prioritised audit across messaging, CRO, SEO, UX and design out.",
+      "url": "https://github.com/ananas-agency/Website-Audit-Suite",
+      "homepage": "https://website-audit-suite.ananas-agency.com/",
       "stars": 1,
       "forks": 0,
       "watchers": 1,
-      "language": null,
+      "language": "Python",
       "topics": [
-        "claude-code",
-        "claude-code-marketplace",
-        "claude-code-plugin",
-        "claude-code-skills",
-        "claude-skills",
-        "code-review",
-        "product-management",
-        "ux-audit"
-      ],
-      "owner": {
-        "login": "JietingWeiJietingWei",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/136245820?v=4",
-        "url": "https://github.com/JietingWeiJietingWei"
-      },
-      "createdAt": "2026-08-06T22:15:41Z",
-      "updatedAt": "2026-08-06T23:57:28Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1419969312",
-      "repoId": 1419969312,
-      "fullName": "Bigoscrypt/fix-my-ui",
-      "name": "fix-my-ui",
-      "description": "Agent skill: audit and fix the UX of the app or website you already built, and extract a design system. Claude Code, Codex, Cursor and more.",
-      "url": "https://github.com/Bigoscrypt/fix-my-ui",
-      "homepage": "https://github.com/Bigoscrypt/fix-my-ui",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "JavaScript",
-      "topics": [
-        "accessibility",
-        "agent-skills",
-        "claude-code-plugin",
-        "claude-skills",
-        "codex",
-        "cursor",
-        "design-system",
-        "playwright",
-        "responsive-design",
-        "ui-ux",
+        "ai-agents",
+        "claude",
+        "marketing",
+        "seo-audit",
         "ux-audit",
-        "vibe-coding"
+        "wcag",
+        "website-audit"
       ],
       "owner": {
-        "login": "Bigoscrypt",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/221571716?v=4",
-        "url": "https://github.com/Bigoscrypt"
+        "login": "ananas-agency",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/291516179?v=4",
+        "url": "https://github.com/ananas-agency"
       },
-      "createdAt": "2026-10-14T23:55:54Z",
-      "updatedAt": "2026-10-16T21:39:08Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "createdAt": "2026-07-21T08:35:39Z",
+      "updatedAt": "2026-11-09T15:20:48Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1230,40 +1155,115 @@
       },
       "createdAt": "2026-08-02T21:14:16Z",
       "updatedAt": "2026-10-31T18:47:37Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1307468085",
-      "repoId": 1307468085,
-      "fullName": "ananas-agency/Website-Audit-Suite",
-      "name": "Website-Audit-Suite",
-      "description": "AI Skills Pack that turn Claude into a guided website auditor: one URL in, a graded, prioritised audit across messaging, CRO, SEO, UX and design out.",
-      "url": "https://github.com/ananas-agency/Website-Audit-Suite",
-      "homepage": "https://website-audit-suite.ananas-agency.com/",
+      "id": "gh-topic-1380722815",
+      "repoId": 1380722815,
+      "fullName": "masanggil1986/flutter-ux-journey",
+      "name": "flutter-ux-journey",
+      "description": "Journey-level UX audit for Flutter apps, measured from a running app: real pixel rects, real contrast ratios, real semantics labels.",
+      "url": "https://github.com/masanggil1986/flutter-ux-journey",
+      "homepage": "https://github.com/masanggil1986/flutter-ux-journey#readme",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Dart",
+      "topics": [
+        "a11y",
+        "accessibility",
+        "agent-skills",
+        "claude-code",
+        "claude-code-plugin",
+        "dart",
+        "flutter",
+        "flutter-test",
+        "integration-test",
+        "semantics",
+        "usability",
+        "user-journey",
+        "ux",
+        "ux-audit",
+        "ux-research",
+        "wcag"
+      ],
+      "owner": {
+        "login": "masanggil1986",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5173379?v=4",
+        "url": "https://github.com/masanggil1986"
+      },
+      "createdAt": "2026-09-22T01:32:36Z",
+      "updatedAt": "2026-10-10T01:24:59Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1298497384",
+      "repoId": 1298497384,
+      "fullName": "Aakreit/design-counsel",
+      "name": "design-counsel",
+      "description": "Design Counsel — a veteran design reviewer for Claude Code and Codex. Evidence-grounded UX review: prioritized findings, state-matrix coverage, severity anchors, sourced design doctrine.",
+      "url": "https://github.com/Aakreit/design-counsel",
+      "homepage": null,
       "stars": 1,
       "forks": 0,
       "watchers": 1,
       "language": "Python",
       "topics": [
-        "ai-agents",
-        "claude",
-        "marketing",
-        "seo-audit",
-        "ux-audit",
-        "wcag",
-        "website-audit"
+        "accessibility",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "design-review",
+        "design-systems",
+        "ux-audit"
       ],
       "owner": {
-        "login": "ananas-agency",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/291516179?v=4",
-        "url": "https://github.com/ananas-agency"
+        "login": "Aakreit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/141206312?v=4",
+        "url": "https://github.com/Aakreit"
       },
-      "createdAt": "2026-07-21T08:35:39Z",
-      "updatedAt": "2026-11-09T15:20:48Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "createdAt": "2026-07-12T17:44:21Z",
+      "updatedAt": "2026-09-03T07:34:52Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1423856519",
+      "repoId": 1423856519,
+      "fullName": "habithabitude490/webreverse-designer",
+      "name": "webreverse-designer",
+      "description": "AI skill that analyzes and documents existing website design into a structured 12-section report. Python stdlib only. MIT.",
+      "url": "https://github.com/habithabitude490/webreverse-designer",
+      "homepage": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Python",
+      "topics": [
+        "accessibility",
+        "ai-skill",
+        "claude",
+        "cursor",
+        "python",
+        "responsive-design",
+        "reverse-engineering",
+        "ux-audit",
+        "web-design"
+      ],
+      "owner": {
+        "login": "habithabitude490",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/252579568?v=4",
+        "url": "https://github.com/habithabitude490"
+      },
+      "createdAt": "2026-10-18T00:14:22Z",
+      "updatedAt": "2026-10-18T21:50:15Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1297,8 +1297,8 @@
       },
       "createdAt": "2026-07-08T06:15:01Z",
       "updatedAt": "2026-10-26T15:16:30Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1332,8 +1332,8 @@
       },
       "createdAt": "2026-04-21T16:12:03Z",
       "updatedAt": "2026-08-16T18:02:58Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1364,8 +1364,8 @@
       },
       "createdAt": "2026-07-19T13:40:24Z",
       "updatedAt": "2026-11-10T21:44:12Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-12T09:18:16.826Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1398,8 +1398,8 @@
       },
       "createdAt": "2026-04-23T18:31:34Z",
       "updatedAt": "2026-07-25T13:27:01Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1429,8 +1429,8 @@
       },
       "createdAt": "2026-08-07T12:02:32Z",
       "updatedAt": "2026-10-01T12:38:24Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1462,8 +1462,8 @@
       },
       "createdAt": "2026-06-18T18:55:01Z",
       "updatedAt": "2026-06-18T19:26:03Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1494,8 +1494,8 @@
       },
       "createdAt": "2026-06-01T16:28:57Z",
       "updatedAt": "2026-06-25T15:28:17Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1524,38 +1524,8 @@
       },
       "createdAt": "2026-07-21T15:40:13Z",
       "updatedAt": "2026-07-24T12:57:33Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1182154121",
-      "repoId": 1182154121,
-      "fullName": "Tony224x/skills-for-all",
-      "name": "skills-for-all",
-      "description": "Collection de skills Claude Code partagés : relecture littéraire et audit UX.",
-      "url": "https://github.com/Tony224x/skills-for-all",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "Python",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "claude-skills",
-        "editing",
-        "ux-audit"
-      ],
-      "owner": {
-        "login": "Tony224x",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/103569305?v=4",
-        "url": "https://github.com/Tony224x"
-      },
-      "createdAt": "2026-03-15T05:33:41Z",
-      "updatedAt": "2026-09-16T20:37:02Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1591,8 +1561,8 @@
       },
       "createdAt": "2026-05-08T21:43:41Z",
       "updatedAt": "2026-05-09T14:13:40Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1622,49 +1592,70 @@
       },
       "createdAt": "2026-09-29T20:07:25Z",
       "updatedAt": "2026-10-16T01:12:23Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1431154756",
-      "repoId": 1431154756,
-      "fullName": "AshwinSathian/loupe",
-      "name": "loupe",
-      "description": "Design review for Claude Code: checks UI and UX against Apple's Human Interface Guidelines, measures what it can, and flags template-made interfaces. iOS, iPadOS, macOS and the web.",
-      "url": "https://github.com/AshwinSathian/loupe",
-      "homepage": "https://loupe.ashwinsathian.com",
+      "id": "gh-topic-1182154121",
+      "repoId": 1182154121,
+      "fullName": "Tony224x/skills-for-all",
+      "name": "skills-for-all",
+      "description": "Collection de skills Claude Code partagés : relecture littéraire et audit UX.",
+      "url": "https://github.com/Tony224x/skills-for-all",
+      "homepage": null,
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "language": "JavaScript",
+      "language": "Python",
       "topics": [
-        "accessibility",
-        "agent-skills",
-        "ai-slop",
-        "anthropic",
-        "claude",
+        "ai-agents",
         "claude-code",
-        "claude-code-plugin",
-        "claude-skill",
-        "design-review",
-        "design-systems",
-        "human-interface-guidelines",
-        "skill-md",
-        "swiftui",
-        "ui-review",
-        "ux-audit",
-        "wcag"
+        "claude-skills",
+        "editing",
+        "ux-audit"
       ],
       "owner": {
-        "login": "AshwinSathian",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/28523681?v=4",
-        "url": "https://github.com/AshwinSathian"
+        "login": "Tony224x",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/103569305?v=4",
+        "url": "https://github.com/Tony224x"
       },
-      "createdAt": "2026-10-23T14:30:33Z",
-      "updatedAt": "2026-11-02T06:32:21Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "createdAt": "2026-03-15T05:33:41Z",
+      "updatedAt": "2026-09-16T20:37:02Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-943775806",
+      "repoId": 943775806,
+      "fullName": "jamesbriggs112/PreGo",
+      "name": "PreGo",
+      "description": "A pre-launch audit tool for websites and digital products. Checks accessibility, usability, content, performance, security and go-live readiness, and exports a Word report and ticket CSV. Runs entirely on your own computer.",
+      "url": "https://github.com/jamesbriggs112/PreGo",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "TypeScript",
+      "topics": [
+        "accessibility",
+        "lighthouse",
+        "playwright",
+        "ux-audit",
+        "wcag",
+        "website",
+        "website-audit"
+      ],
+      "owner": {
+        "login": "jamesbriggs112",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/201980136?v=4",
+        "url": "https://github.com/jamesbriggs112"
+      },
+      "createdAt": "2025-03-06T08:48:23Z",
+      "updatedAt": "2026-11-09T09:04:12Z",
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1692,8 +1683,8 @@
       },
       "createdAt": "2026-10-22T09:37:21Z",
       "updatedAt": "2026-11-09T15:59:10Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1728,8 +1719,8 @@
       },
       "createdAt": "2026-10-20T05:53:13Z",
       "updatedAt": "2026-11-10T21:37:37Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:03:16.152Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1759,7 +1750,7 @@
       },
       "createdAt": "2026-04-07T02:29:20Z",
       "updatedAt": "2026-05-01T21:24:24Z",
-      "firstSeenAt": "2026-11-12T16:38:38.053Z",
+      "firstSeenAt": "2026-11-13T02:52:11.060Z",
       "isNew": true,
       "existing": false
     }

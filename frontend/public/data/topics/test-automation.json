@@ -1,9 +1,9 @@
 {
   "topic": "test-automation",
-  "fetchedAt": "2026-11-12T16:37:58.860Z",
+  "fetchedAt": "2026-11-13T02:50:50.442Z",
   "count": 50,
-  "newCount": 43,
-  "existingCount": 7,
+  "newCount": 0,
+  "existingCount": 9,
   "items": [
     {
       "id": "gh-topic-221981891",
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 99983,
-      "forks": 6856,
-      "watchers": 99983,
+      "stars": 100025,
+      "forks": 6861,
+      "watchers": 100025,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,9 +40,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-12T16:33:57Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:49:25Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -53,9 +53,9 @@
       "description": "Cross-platform automation framework for all kinds of apps, built on top of the W3C WebDriver protocol",
       "url": "https://github.com/appium/appium",
       "homepage": "http://appium.io/",
-      "stars": 22210,
+      "stars": 22211,
       "forks": 6306,
-      "watchers": 22210,
+      "watchers": 22211,
       "language": "TypeScript",
       "topics": [
         "android",
@@ -73,9 +73,9 @@
         "url": "https://github.com/appium"
       },
       "createdAt": "2013-01-09T22:49:50Z",
-      "updatedAt": "2026-11-12T08:34:52Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T19:18:34Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -87,7 +87,7 @@
       "url": "https://github.com/keploy/keploy",
       "homepage": "https://keploy.io",
       "stars": 19734,
-      "forks": 2454,
+      "forks": 2453,
       "watchers": 19734,
       "language": "Go",
       "topics": [
@@ -112,9 +112,9 @@
         "url": "https://github.com/keploy"
       },
       "createdAt": "2022-01-19T10:40:31Z",
-      "updatedAt": "2026-11-12T16:11:57Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:43:44Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -125,9 +125,9 @@
       "description": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
       "url": "https://github.com/google/artemis",
       "homepage": null,
-      "stars": 17315,
-      "forks": 1928,
-      "watchers": 17315,
+      "stars": 17347,
+      "forks": 1931,
+      "watchers": 17347,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -142,10 +142,10 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2026-08-13T17:59:37Z",
-      "updatedAt": "2026-11-12T16:32:10Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:41:39Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-6207167",
@@ -180,8 +180,8 @@
       },
       "createdAt": "2012-10-13T20:27:12Z",
       "updatedAt": "2026-11-10T17:11:48Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -192,9 +192,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13769,
-      "forks": 726,
-      "watchers": 13769,
+      "stars": 13786,
+      "forks": 728,
+      "watchers": 13786,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -220,10 +220,10 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-12T16:35:45Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:35:46Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-237867883",
@@ -233,9 +233,9 @@
       "description": "MeterSphere 是新一代的开源持续测试工具，内置 AI 助手，让软件测试工作更简单、更高效，不再成为持续交付的瓶颈。",
       "url": "https://github.com/metersphere/metersphere",
       "homepage": "https://metersphere.io/",
-      "stars": 13628,
+      "stars": 13629,
       "forks": 2849,
-      "watchers": 13628,
+      "watchers": 13629,
       "language": "Java",
       "topics": [
         "api-testing",
@@ -256,9 +256,9 @@
         "url": "https://github.com/metersphere"
       },
       "createdAt": "2020-02-03T02:06:12Z",
-      "updatedAt": "2026-11-12T14:49:16Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:46:58Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -266,11 +266,11 @@
       "repoId": 17420614,
       "fullName": "seleniumbase/SeleniumBase",
       "name": "SeleniumBase",
-      "description": "Python APIs for web automation, testing, and bypassing bot-detection.",
+      "description": "Python APIs for browser automation, testing, and bypassing bot-detection.",
       "url": "https://github.com/seleniumbase/SeleniumBase",
       "homepage": "https://seleniumbase.io",
       "stars": 13250,
-      "forks": 1617,
+      "forks": 1616,
       "watchers": 13250,
       "language": "Python",
       "topics": [
@@ -297,9 +297,9 @@
         "url": "https://github.com/seleniumbase"
       },
       "createdAt": "2014-03-04T23:07:33Z",
-      "updatedAt": "2026-11-11T22:31:26Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:39:09Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -310,9 +310,9 @@
       "description": "Gray box end-to-end testing and automation framework for mobile apps",
       "url": "https://github.com/wix/Detox",
       "homepage": "https://wix.github.io/Detox/",
-      "stars": 12057,
+      "stars": 12058,
       "forks": 1903,
-      "watchers": 12057,
+      "watchers": 12058,
       "language": "JavaScript",
       "topics": [
         "android",
@@ -333,9 +333,9 @@
         "url": "https://github.com/wix"
       },
       "createdAt": "2016-06-15T11:58:01Z",
-      "updatedAt": "2026-11-12T14:43:14Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:05:34Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -369,8 +369,8 @@
       },
       "createdAt": "2015-04-20T13:43:28Z",
       "updatedAt": "2026-11-12T00:34:40Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -381,9 +381,9 @@
       "description": "UI Automation Framework for Games and Apps",
       "url": "https://github.com/AirtestProject/Airtest",
       "homepage": "http://airtest.netease.com/",
-      "stars": 9646,
+      "stars": 9647,
       "forks": 1457,
-      "watchers": 9646,
+      "watchers": 9647,
       "language": "Python",
       "topics": [
         "android",
@@ -402,9 +402,9 @@
         "url": "https://github.com/AirtestProject"
       },
       "createdAt": "2018-01-24T04:00:35Z",
-      "updatedAt": "2026-11-12T13:21:43Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T18:57:07Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -444,8 +444,8 @@
       },
       "createdAt": "2017-02-07T15:59:17Z",
       "updatedAt": "2026-11-11T19:03:46Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -456,9 +456,9 @@
       "description": "Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.",
       "url": "https://github.com/testcontainers/testcontainers-java",
       "homepage": "https://testcontainers.org",
-      "stars": 8760,
+      "stars": 8761,
       "forks": 1952,
-      "watchers": 8760,
+      "watchers": 8761,
       "language": "Java",
       "topics": [
         "docker",
@@ -477,9 +477,9 @@
         "url": "https://github.com/testcontainers"
       },
       "createdAt": "2015-04-12T12:44:59Z",
-      "updatedAt": "2026-11-11T05:27:24Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:40:19Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -490,9 +490,9 @@
       "description": "A curated list of awesome test automation frameworks, tools, libraries, and software for different programming languages. Sponsored by https://zapple.tech and https://automated-testing.info",
       "url": "https://github.com/atinfo/awesome-test-automation",
       "homepage": "https://testomat.io",
-      "stars": 7225,
+      "stars": 7227,
       "forks": 1575,
-      "watchers": 7225,
+      "watchers": 7227,
       "language": null,
       "topics": [
         "android",
@@ -522,9 +522,9 @@
         "url": "https://github.com/atinfo"
       },
       "createdAt": "2015-01-28T16:56:00Z",
-      "updatedAt": "2026-11-12T12:19:26Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:06:39Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -535,9 +535,9 @@
       "description": "Java DSL for easy testing of REST services",
       "url": "https://github.com/rest-assured/rest-assured",
       "homepage": null,
-      "stars": 7149,
+      "stars": 7150,
       "forks": 1946,
-      "watchers": 7149,
+      "watchers": 7150,
       "language": "Java",
       "topics": [
         "groovy",
@@ -557,9 +557,9 @@
         "url": "https://github.com/rest-assured"
       },
       "createdAt": "2010-10-21T08:35:43Z",
-      "updatedAt": "2026-11-12T15:21:06Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:46:38Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -570,9 +570,9 @@
       "description": "SoloPi 自动化测试工具",
       "url": "https://github.com/alipay/SoloPi",
       "homepage": "https://www.solopi.cn/",
-      "stars": 6366,
+      "stars": 6367,
       "forks": 1273,
-      "watchers": 6366,
+      "watchers": 6367,
       "language": "Java",
       "topics": [
         "adb",
@@ -591,9 +591,9 @@
         "url": "https://github.com/alipay"
       },
       "createdAt": "2019-03-14T15:32:49Z",
-      "updatedAt": "2026-11-12T06:30:18Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:56:24Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -604,9 +604,9 @@
       "description": "Test suites for Web platform specs — including WHATWG, W3C, and others",
       "url": "https://github.com/web-platform-tests/wpt",
       "homepage": "https://web-platform-tests.org/",
-      "stars": 6311,
-      "forks": 4045,
-      "watchers": 6311,
+      "stars": 6312,
+      "forks": 4046,
+      "watchers": 6312,
       "language": "HTML",
       "topics": [
         "blink",
@@ -635,9 +635,9 @@
         "url": "https://github.com/web-platform-tests"
       },
       "createdAt": "2012-03-04T12:58:11Z",
-      "updatedAt": "2026-11-12T15:34:46Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:22:15Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -664,8 +664,8 @@
       },
       "createdAt": "2018-03-27T12:32:31Z",
       "updatedAt": "2026-11-12T12:16:08Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -702,8 +702,8 @@
       },
       "createdAt": "2024-09-18T20:44:05Z",
       "updatedAt": "2026-11-12T07:59:59Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -731,8 +731,8 @@
       },
       "createdAt": "2024-05-18T09:34:18Z",
       "updatedAt": "2026-11-12T01:22:59Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -743,9 +743,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5173,
-      "forks": 298,
-      "watchers": 5173,
+      "stars": 5174,
+      "forks": 299,
+      "watchers": 5174,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -762,9 +762,9 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-12T08:21:10Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:53:45Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -791,9 +791,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2016-03-20T08:48:45Z",
-      "updatedAt": "2026-11-12T13:53:58Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:49:07Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -826,8 +826,8 @@
       },
       "createdAt": "2019-09-17T20:45:48Z",
       "updatedAt": "2026-11-12T07:27:53Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -838,9 +838,9 @@
       "description": "Mutation testing for JavaScript and friends",
       "url": "https://github.com/stryker-mutator/stryker-js",
       "homepage": "https://stryker-mutator.io",
-      "stars": 3361,
+      "stars": 3362,
       "forks": 315,
-      "watchers": 3361,
+      "watchers": 3362,
       "language": "TypeScript",
       "topics": [
         "hacktoberfest",
@@ -858,9 +858,9 @@
         "url": "https://github.com/stryker-mutator"
       },
       "createdAt": "2016-02-12T13:14:28Z",
-      "updatedAt": "2026-11-12T08:13:48Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:46:36Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -893,8 +893,8 @@
       },
       "createdAt": "2014-03-24T08:06:58Z",
       "updatedAt": "2026-11-11T08:32:26Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -927,8 +927,8 @@
       },
       "createdAt": "2018-08-21T21:27:13Z",
       "updatedAt": "2026-11-09T15:53:58Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -962,8 +962,8 @@
       },
       "createdAt": "2012-03-07T14:39:13Z",
       "updatedAt": "2026-11-11T15:42:06Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -991,8 +991,8 @@
       },
       "createdAt": "2017-06-28T07:50:54Z",
       "updatedAt": "2026-11-12T11:14:05Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1035,8 +1035,8 @@
       },
       "createdAt": "2017-10-21T16:24:27Z",
       "updatedAt": "2026-11-08T17:42:49Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1071,8 +1071,8 @@
       },
       "createdAt": "2016-09-26T02:47:43Z",
       "updatedAt": "2026-11-11T13:32:13Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1104,8 +1104,8 @@
       },
       "createdAt": "2013-10-27T00:48:22Z",
       "updatedAt": "2026-11-12T16:32:47Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1136,8 +1136,8 @@
       },
       "createdAt": "2018-01-24T03:24:01Z",
       "updatedAt": "2026-11-12T13:23:23Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1181,8 +1181,8 @@
       },
       "createdAt": "2022-09-16T14:48:21Z",
       "updatedAt": "2026-11-12T15:03:42Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1213,8 +1213,8 @@
       },
       "createdAt": "2018-09-08T11:33:38Z",
       "updatedAt": "2026-11-11T05:13:01Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1251,8 +1251,8 @@
       },
       "createdAt": "2021-07-01T07:47:49Z",
       "updatedAt": "2026-11-12T11:08:13Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1294,8 +1294,8 @@
       },
       "createdAt": "2021-12-20T21:29:32Z",
       "updatedAt": "2026-11-12T15:06:40Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1324,8 +1324,8 @@
       },
       "createdAt": "2016-02-25T14:54:35Z",
       "updatedAt": "2026-11-08T03:28:21Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1361,8 +1361,8 @@
       },
       "createdAt": "2022-10-05T18:09:10Z",
       "updatedAt": "2026-11-12T16:00:59Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1404,9 +1404,9 @@
         "url": "https://github.com/mfaisalkhatri"
       },
       "createdAt": "2023-01-17T14:35:55Z",
-      "updatedAt": "2026-11-12T12:04:33Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T18:41:56Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1436,8 +1436,8 @@
       },
       "createdAt": "2018-08-31T16:16:18Z",
       "updatedAt": "2026-11-03T06:44:22Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1470,8 +1470,8 @@
       },
       "createdAt": "2017-05-12T06:49:12Z",
       "updatedAt": "2026-11-11T08:18:08Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1515,8 +1515,8 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-12T04:07:15Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1551,52 +1551,9 @@
       },
       "createdAt": "2023-02-28T09:18:00Z",
       "updatedAt": "2026-11-06T08:52:58Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
-    },
-    {
-      "id": "gh-topic-888701643",
-      "repoId": 888701643,
-      "fullName": "test-zeus-ai/testzeus-hercules",
-      "name": "testzeus-hercules",
-      "description": "Hercules is the world’s first open-source testing agent, enabling UI, API, Security, Accessibility, and Visual validations – all without code or maintenance. Automate testing effortlessly and let Hercules handle the heavy lifting! ⚡",
-      "url": "https://github.com/test-zeus-ai/testzeus-hercules",
-      "homepage": "https://testzeus.com/hercules",
-      "stars": 1220,
-      "forks": 203,
-      "watchers": 1220,
-      "language": "Python",
-      "topics": [
-        "agent",
-        "agentic-ai",
-        "agents",
-        "ai",
-        "autogen",
-        "automation",
-        "browser",
-        "end-to-end-testing",
-        "hercules",
-        "large-action-model",
-        "playwright",
-        "qa-automation",
-        "rpa",
-        "software-testing",
-        "test-automation",
-        "testing",
-        "testing-tools",
-        "testzeus"
-      ],
-      "owner": {
-        "login": "test-zeus-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/178647201?v=4",
-        "url": "https://github.com/test-zeus-ai"
-      },
-      "createdAt": "2024-11-14T21:19:10Z",
-      "updatedAt": "2026-11-12T10:43:12Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
-      "existing": true
     },
     {
       "id": "gh-topic-8245842",
@@ -1639,9 +1596,52 @@
       },
       "createdAt": "2013-02-17T04:13:19Z",
       "updatedAt": "2026-10-31T00:32:07Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
+    },
+    {
+      "id": "gh-topic-888701643",
+      "repoId": 888701643,
+      "fullName": "test-zeus-ai/testzeus-hercules",
+      "name": "testzeus-hercules",
+      "description": "Hercules is the world’s first open-source testing agent, enabling UI, API, Security, Accessibility, and Visual validations – all without code or maintenance. Automate testing effortlessly and let Hercules handle the heavy lifting! ⚡",
+      "url": "https://github.com/test-zeus-ai/testzeus-hercules",
+      "homepage": "https://testzeus.com/hercules",
+      "stars": 1220,
+      "forks": 203,
+      "watchers": 1220,
+      "language": "Python",
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "autogen",
+        "automation",
+        "browser",
+        "end-to-end-testing",
+        "hercules",
+        "large-action-model",
+        "playwright",
+        "qa-automation",
+        "rpa",
+        "software-testing",
+        "test-automation",
+        "testing",
+        "testing-tools",
+        "testzeus"
+      ],
+      "owner": {
+        "login": "test-zeus-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/178647201?v=4",
+        "url": "https://github.com/test-zeus-ai"
+      },
+      "createdAt": "2024-11-14T21:19:10Z",
+      "updatedAt": "2026-11-12T10:43:12Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-465599955",
@@ -1675,8 +1675,8 @@
       },
       "createdAt": "2022-03-03T06:42:29Z",
       "updatedAt": "2026-11-11T10:03:07Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1716,8 +1716,8 @@
       },
       "createdAt": "2010-08-03T03:58:46Z",
       "updatedAt": "2026-11-11T13:34:14Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1749,8 +1749,8 @@
       },
       "createdAt": "2017-11-01T14:51:25Z",
       "updatedAt": "2026-11-12T01:46:48Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1781,8 +1781,8 @@
       },
       "createdAt": "2018-08-21T01:35:53Z",
       "updatedAt": "2026-11-11T20:37:08Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1793,9 +1793,9 @@
       "description": "Selects tests affected by changed files. Executes the right tests first. Continuous test runner when used with pytest-watch.",
       "url": "https://github.com/tarpas/pytest-testmon",
       "homepage": "https://testmon.org",
-      "stars": 1035,
+      "stars": 1036,
       "forks": 89,
-      "watchers": 1035,
+      "watchers": 1036,
       "language": "Python",
       "topics": [
         "build-tool",
@@ -1810,9 +1810,9 @@
         "url": "https://github.com/tarpas"
       },
       "createdAt": "2015-02-02T14:21:10Z",
-      "updatedAt": "2026-11-11T01:04:12Z",
-      "firstSeenAt": "2026-11-12T16:37:58.860Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:43:17Z",
+      "firstSeenAt": "2026-11-10T11:02:15.982Z",
+      "isNew": false,
       "existing": true
     }
   ]

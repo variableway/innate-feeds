@@ -1,9 +1,9 @@
 {
   "topic": "ai-assistant",
-  "fetchedAt": "2026-11-12T16:33:41.420Z",
+  "fetchedAt": "2026-11-13T02:43:57.728Z",
   "count": 50,
-  "newCount": 33,
-  "existingCount": 17,
+  "newCount": 0,
+  "existingCount": 22,
   "items": [
     {
       "id": "gh-topic-1161163182",
@@ -13,9 +13,9 @@
       "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
       "url": "https://github.com/tinyhumansai/openhuman",
       "homepage": "https://tinyhumans.ai/openhuman",
-      "stars": 42668,
+      "stars": 42672,
       "forks": 4217,
-      "watchers": 42668,
+      "watchers": 42672,
       "language": "Rust",
       "topics": [
         "agent-orchestration",
@@ -37,9 +37,9 @@
         "url": "https://github.com/tinyhumansai"
       },
       "createdAt": "2026-02-18T20:01:27Z",
-      "updatedAt": "2026-11-12T15:08:23Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:29:26Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -50,9 +50,9 @@
       "description": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
       "url": "https://github.com/CopilotKit/CopilotKit",
       "homepage": "https://docs.copilotkit.ai",
-      "stars": 38667,
-      "forks": 4820,
-      "watchers": 38667,
+      "stars": 38673,
+      "forks": 4822,
+      "watchers": 38673,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -82,9 +82,9 @@
         "url": "https://github.com/CopilotKit"
       },
       "createdAt": "2023-06-19T04:08:31Z",
-      "updatedAt": "2026-11-12T16:04:53Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:17:45Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -96,7 +96,7 @@
       "url": "https://github.com/nanocoai/nanoclaw",
       "homepage": "https://nanoclaw.dev",
       "stars": 31110,
-      "forks": 12647,
+      "forks": 12644,
       "watchers": 31110,
       "language": "TypeScript",
       "topics": [
@@ -112,9 +112,9 @@
         "url": "https://github.com/nanocoai"
       },
       "createdAt": "2026-01-31T15:47:22Z",
-      "updatedAt": "2026-11-12T15:57:12Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:09:22Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -125,9 +125,9 @@
       "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
       "url": "https://github.com/Usagi-org/ai-goofish-monitor",
       "homepage": null,
-      "stars": 19779,
-      "forks": 3208,
-      "watchers": 19779,
+      "stars": 19797,
+      "forks": 3210,
+      "watchers": 19797,
       "language": "Python",
       "topics": [
         "ai",
@@ -150,9 +150,9 @@
         "url": "https://github.com/Usagi-org"
       },
       "createdAt": "2025-07-16T08:13:41Z",
-      "updatedAt": "2026-11-12T16:22:16Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:29:48Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -163,9 +163,9 @@
       "description": "🧠 Leon is your open-source personal assistant.",
       "url": "https://github.com/leon-ai/leon",
       "homepage": "https://getleon.ai",
-      "stars": 17668,
+      "stars": 17669,
       "forks": 1481,
-      "watchers": 17668,
+      "watchers": 17669,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -195,9 +195,9 @@
         "url": "https://github.com/leon-ai"
       },
       "createdAt": "2019-02-10T12:25:12Z",
-      "updatedAt": "2026-11-12T14:26:56Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:07:09Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -208,9 +208,9 @@
       "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "url": "https://github.com/makecindy/cindy",
       "homepage": "https://cindy.app",
-      "stars": 9938,
-      "forks": 1236,
-      "watchers": 9938,
+      "stars": 9964,
+      "forks": 1237,
+      "watchers": 9964,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -233,9 +233,9 @@
         "url": "https://github.com/makecindy"
       },
       "createdAt": "2026-07-22T17:49:34Z",
-      "updatedAt": "2026-11-12T16:27:59Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:41:10Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -246,9 +246,9 @@
       "description": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
       "url": "https://github.com/Orkas-AI/Orkas",
       "homepage": "https://orkas.ai?source=gh-orkas",
-      "stars": 9289,
-      "forks": 548,
-      "watchers": 9289,
+      "stars": 9309,
+      "forks": 552,
+      "watchers": 9309,
       "language": "JavaScript",
       "topics": [
         "agent-collaboration",
@@ -278,9 +278,9 @@
         "url": "https://github.com/Orkas-AI"
       },
       "createdAt": "2026-04-29T12:19:08Z",
-      "updatedAt": "2026-11-12T16:33:39Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:40:15Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -291,9 +291,9 @@
       "description": "The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send. Android · Windows · macOS · iOS | 聊天辅助决策工具：先看懂对方再回复，发不发由你。",
       "url": "https://github.com/jev-chat/jev-chat-jarvis",
       "homepage": "https://chatjevs.com",
-      "stars": 8353,
+      "stars": 8354,
       "forks": 1336,
-      "watchers": 8353,
+      "watchers": 8354,
       "language": "Kotlin",
       "topics": [
         "accessibility-service",
@@ -312,9 +312,9 @@
         "url": "https://github.com/jev-chat"
       },
       "createdAt": "2026-09-21T11:12:53Z",
-      "updatedAt": "2026-11-12T15:06:25Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:30:17Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -325,9 +325,9 @@
       "description": "A pixel office for your OpenClaw: turn invisible work states into a cozy little space with characters, daily notes, and guest agents. Code under MIT; art assets for non-commercial learning only.",
       "url": "https://github.com/ringhyacinth/Star-Office-UI",
       "homepage": null,
-      "stars": 7576,
+      "stars": 7575,
       "forks": 802,
-      "watchers": 7576,
+      "watchers": 7575,
       "language": "HTML",
       "topics": [
         "agent-collaboration",
@@ -347,9 +347,9 @@
         "url": "https://github.com/ringhyacinth"
       },
       "createdAt": "2026-02-26T03:45:35Z",
-      "updatedAt": "2026-11-12T15:07:01Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:27:13Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -360,9 +360,9 @@
       "description": "Open-source, self-hosted alternative to Grok Bot, Claude Duet, OpenAI Dots, Meta Muse, Instinct, Manus Cue: AI coworkers (named agents) with instructions, memory, routines, their own isolated computer, and your approval before they act.",
       "url": "https://github.com/Anil-matcha/suparagent",
       "homepage": "https://suparagent.ai",
-      "stars": 7040,
-      "forks": 913,
-      "watchers": 7040,
+      "stars": 7048,
+      "forks": 914,
+      "watchers": 7048,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -392,9 +392,9 @@
         "url": "https://github.com/Anil-matcha"
       },
       "createdAt": "2023-05-25T14:21:12Z",
-      "updatedAt": "2026-11-12T15:28:27Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:22:16Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -405,9 +405,9 @@
       "description": "A curated list of Artificial Intelligence Top Tools",
       "url": "https://github.com/mahseema/awesome-ai-tools",
       "homepage": null,
-      "stars": 6583,
-      "forks": 2593,
-      "watchers": 6583,
+      "stars": 6586,
+      "forks": 2595,
+      "watchers": 6586,
       "language": null,
       "topics": [
         "ai",
@@ -437,9 +437,9 @@
         "url": "https://github.com/mahseema"
       },
       "createdAt": "2023-08-25T21:51:55Z",
-      "updatedAt": "2026-11-12T15:55:01Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:43:04Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -450,9 +450,9 @@
       "description": "Claude Code + OpenClaw + Codex + WorkBuddy 中文教程 | 50篇完整教程 + 1张速查卡 | 80万+内容量 | 1500+实操示例 | AI Coding / Agent 四线学习路径（编程+助手+Agent+办公）",
       "url": "https://github.com/KimYx0207/AI-Coding-Guide-Zh",
       "homepage": null,
-      "stars": 6498,
-      "forks": 1093,
-      "watchers": 6498,
+      "stars": 6503,
+      "forks": 1094,
+      "watchers": 6503,
       "language": "Python",
       "topics": [
         "ai-agent",
@@ -470,10 +470,10 @@
         "url": "https://github.com/KimYx0207"
       },
       "createdAt": "2026-02-11T05:34:29Z",
-      "updatedAt": "2026-11-12T16:13:08Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T01:20:04Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1131107802",
@@ -483,9 +483,9 @@
       "description": "The most comprehensive Claude Code guide: agentic workflows, hooks, skills, MCP servers, quizzes, and production-ready templates. 430K+ lines.",
       "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
       "homepage": "https://cc.bruniaux.com/",
-      "stars": 6422,
+      "stars": 6425,
       "forks": 830,
-      "watchers": 6422,
+      "watchers": 6425,
       "language": "Python",
       "topics": [
         "agentic-coding",
@@ -515,9 +515,9 @@
         "url": "https://github.com/FlorianBruniaux"
       },
       "createdAt": "2026-01-09T13:42:10Z",
-      "updatedAt": "2026-11-12T16:15:02Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T21:45:09Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -559,8 +559,8 @@
       },
       "createdAt": "2025-02-14T01:56:51Z",
       "updatedAt": "2026-11-12T15:54:55Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -571,9 +571,9 @@
       "description": "AI coding assistant for Xcode",
       "url": "https://github.com/github/CopilotForXcode",
       "homepage": null,
-      "stars": 6386,
-      "forks": 2097,
-      "watchers": 6386,
+      "stars": 6387,
+      "forks": 2098,
+      "watchers": 6387,
       "language": "Swift",
       "topics": [
         "ai-assistant",
@@ -592,9 +592,9 @@
         "url": "https://github.com/github"
       },
       "createdAt": "2024-09-19T17:48:15Z",
-      "updatedAt": "2026-11-12T15:51:33Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:52:04Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -637,8 +637,8 @@
       },
       "createdAt": "2026-05-21T13:22:06Z",
       "updatedAt": "2026-11-12T13:36:10Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -678,8 +678,8 @@
       },
       "createdAt": "2025-04-23T08:19:33Z",
       "updatedAt": "2026-11-12T16:29:57Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -690,9 +690,9 @@
       "description": "Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram.",
       "url": "https://github.com/netease-youdao/LobsterAI",
       "homepage": "https://lobsterai.youdao.com",
-      "stars": 6181,
+      "stars": 6184,
       "forks": 978,
-      "watchers": 6181,
+      "watchers": 6184,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -719,9 +719,9 @@
         "url": "https://github.com/netease-youdao"
       },
       "createdAt": "2026-02-12T09:56:20Z",
-      "updatedAt": "2026-11-12T14:43:49Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:32:39Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -733,7 +733,7 @@
       "url": "https://github.com/OpenSenseNova/SenseNova-Skills",
       "homepage": null,
       "stars": 6075,
-      "forks": 438,
+      "forks": 439,
       "watchers": 6075,
       "language": "JavaScript",
       "topics": [
@@ -753,8 +753,8 @@
       },
       "createdAt": "2026-04-14T06:21:51Z",
       "updatedAt": "2026-11-12T15:14:59Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -765,9 +765,9 @@
       "description": "Open-source desktop SQL workspace with 3 built-in database drivers and 29 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis. Built-in MCP server for Claude, Cursor and Devin, SQL notebooks and visual EXPLAIN.",
       "url": "https://github.com/TabularisDB/tabularis",
       "homepage": "https://tabularis.dev",
-      "stars": 5461,
-      "forks": 419,
-      "watchers": 5461,
+      "stars": 5462,
+      "forks": 423,
+      "watchers": 5462,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -797,9 +797,9 @@
         "url": "https://github.com/TabularisDB"
       },
       "createdAt": "2026-01-26T21:48:07Z",
-      "updatedAt": "2026-11-12T13:59:14Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:29:36Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -842,8 +842,8 @@
       },
       "createdAt": "2017-10-01T22:44:29Z",
       "updatedAt": "2026-11-11T15:32:05Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -854,9 +854,9 @@
       "description": "OpenClaw 中文教程（4500+ Star · 已出版纸质书）：安装、配置、Skills、飞书接入与避坑｜作者的 GPT-6 / Codex / Claude Code 新项目见 README 顶部",
       "url": "https://github.com/xianyu110/awesome-openclaw-tutorial",
       "homepage": "https://awesome.tryopenclaw.asia/",
-      "stars": 4579,
+      "stars": 4581,
       "forks": 678,
-      "watchers": 4579,
+      "watchers": 4581,
       "language": "Shell",
       "topics": [
         "agent-skills",
@@ -886,9 +886,9 @@
         "url": "https://github.com/xianyu110"
       },
       "createdAt": "2026-02-10T02:37:59Z",
-      "updatedAt": "2026-11-11T03:48:43Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:12:38Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -900,7 +900,7 @@
       "url": "https://github.com/gptme/gptme",
       "homepage": "https://gptme.org/",
       "stars": 4471,
-      "forks": 475,
+      "forks": 476,
       "watchers": 4471,
       "language": "Python",
       "topics": [
@@ -932,8 +932,8 @@
       },
       "createdAt": "2023-03-24T16:25:01Z",
       "updatedAt": "2026-11-12T16:19:11Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -944,9 +944,9 @@
       "description": "🇨🇳 OpenClaw中文用例大全 | 50个真实场景 | 国内特色 + 海外案例的国内适配 | 自动化办公·内容创作·运维·AI助理·知识管理 | 新手友好 ",
       "url": "https://github.com/AlexAnys/awesome-openclaw-usecases-zh",
       "homepage": "https://github.com/AlexAnys/awesome-openclaw-usecases-zh#readme",
-      "stars": 4455,
+      "stars": 4454,
       "forks": 469,
-      "watchers": 4455,
+      "watchers": 4454,
       "language": null,
       "topics": [
         "ai-agent",
@@ -976,9 +976,9 @@
         "url": "https://github.com/AlexAnys"
       },
       "createdAt": "2026-02-23T02:20:51Z",
-      "updatedAt": "2026-11-11T21:42:13Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:05:04Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1011,9 +1011,9 @@
         "url": "https://github.com/nickjvandyke"
       },
       "createdAt": "2025-07-12T13:52:17Z",
-      "updatedAt": "2026-11-12T06:38:19Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:08:44Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1024,9 +1024,9 @@
       "description": "Soul-driven AI agent with permission-hardened tools, token budgets, and multi-channel access. Runs 24/7 from CLI, Telegram or More.",
       "url": "https://github.com/cosmicstack-labs/mercury-agent",
       "homepage": "https://mercuryagent.sh/",
-      "stars": 3900,
+      "stars": 3903,
       "forks": 397,
-      "watchers": 3900,
+      "watchers": 3903,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -1039,9 +1039,9 @@
         "url": "https://github.com/cosmicstack-labs"
       },
       "createdAt": "2026-04-20T12:46:31Z",
-      "updatedAt": "2026-11-12T14:44:17Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:01:26Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1052,9 +1052,9 @@
       "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
       "url": "https://github.com/1186258278/OpenClawChineseTranslation",
       "homepage": "https://openclaw.qt.cool",
-      "stars": 3793,
+      "stars": 3791,
       "forks": 491,
-      "watchers": 3793,
+      "watchers": 3791,
       "language": "JavaScript",
       "topics": [
         "ai-agent",
@@ -1083,9 +1083,9 @@
         "url": "https://github.com/1186258278"
       },
       "createdAt": "2026-01-30T13:12:57Z",
-      "updatedAt": "2026-11-11T18:25:00Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:09:21Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1096,9 +1096,9 @@
       "description": "🤖 Open-source, local-first alternative to Grok Bot, OpenAI dots and Claude Duet. Your own AI bots on any model: GPT, Claude, Gemini, Grok, DeepSeek, Kimi, GLM and 70+ more through one Modelflare key. Reach them in the app, WeChat or Feishu; they remember you, work in the background, run commands and use your computer. Pay per use.",
       "url": "https://github.com/modelflare-ai/AnyModelBot",
       "homepage": "https://anymodel.bot/",
-      "stars": 3383,
-      "forks": 46,
-      "watchers": 3383,
+      "stars": 3453,
+      "forks": 47,
+      "watchers": 3453,
       "language": "Python",
       "topics": [
         "ai-agent",
@@ -1128,9 +1128,9 @@
         "url": "https://github.com/modelflare-ai"
       },
       "createdAt": "2026-10-27T08:51:18Z",
-      "updatedAt": "2026-11-12T16:32:28Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:08:10Z",
+      "firstSeenAt": "2026-11-10T10:55:58.326Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1142,7 +1142,7 @@
       "url": "https://github.com/giancarloerra/SocratiCode",
       "homepage": "https://socraticode.cloud",
       "stars": 3372,
-      "forks": 428,
+      "forks": 427,
       "watchers": 3372,
       "language": "TypeScript",
       "topics": [
@@ -1174,8 +1174,8 @@
       },
       "createdAt": "2026-02-26T16:12:26Z",
       "updatedAt": "2026-11-12T10:17:06Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1186,9 +1186,9 @@
       "description": "PentestAgent is an AI agent framework for black-box security testing, supporting bug bounty, red-team, and penetration testing workflows.",
       "url": "https://github.com/GH05TCREW/pentestagent",
       "homepage": null,
-      "stars": 3287,
+      "stars": 3289,
       "forks": 652,
-      "watchers": 3287,
+      "watchers": 3289,
       "language": "Python",
       "topics": [
         "ai",
@@ -1213,9 +1213,9 @@
         "url": "https://github.com/GH05TCREW"
       },
       "createdAt": "2025-05-15T22:28:38Z",
-      "updatedAt": "2026-11-12T15:24:27Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:21:18Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1258,9 +1258,9 @@
         "url": "https://github.com/Natively-AI-assistant"
       },
       "createdAt": "2026-01-27T12:32:08Z",
-      "updatedAt": "2026-11-12T14:31:06Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T21:12:01Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1271,9 +1271,9 @@
       "description": "Open-source desktop AI agent for tools, files, knowledge, workflows, and real deliverables.",
       "url": "https://github.com/Pinvou/pinvou-agent",
       "homepage": "https://pinvou.com/",
-      "stars": 2989,
+      "stars": 2996,
       "forks": 434,
-      "watchers": 2989,
+      "watchers": 2996,
       "language": "Rust",
       "topics": [
         "agent-client-protocol",
@@ -1303,10 +1303,10 @@
         "url": "https://github.com/Pinvou"
       },
       "createdAt": "2026-07-24T07:28:41Z",
-      "updatedAt": "2026-11-12T16:29:06Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
+      "updatedAt": "2026-11-13T02:03:04Z",
+      "firstSeenAt": "2026-11-13T02:43:57.728Z",
       "isNew": true,
-      "existing": false
+      "existing": true
     },
     {
       "id": "gh-topic-1147694880",
@@ -1335,8 +1335,8 @@
       },
       "createdAt": "2026-02-02T05:07:49Z",
       "updatedAt": "2026-11-12T10:16:48Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1347,9 +1347,9 @@
       "description": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, Discord, Teams, and MCP tools. Secure by design, runs on your hardware.",
       "url": "https://github.com/moltis-org/moltis",
       "homepage": "https://moltis.org",
-      "stars": 2955,
+      "stars": 2957,
       "forks": 363,
-      "watchers": 2955,
+      "watchers": 2957,
       "language": "Rust",
       "topics": [
         "ai-agent",
@@ -1371,9 +1371,9 @@
         "url": "https://github.com/moltis-org"
       },
       "createdAt": "2026-01-29T19:36:31Z",
-      "updatedAt": "2026-11-12T14:36:54Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:34:08Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1384,9 +1384,9 @@
       "description": "🦞 OpenClaw & Hermes Agent 多引擎 AI 管理面板 — 内置 AI 助手（工具调用 + 图片识别 + 多模态），一键安装 | Tauri v2 跨平台桌面应用 | 11 种语言",
       "url": "https://github.com/qingchencloud/clawpanel",
       "homepage": "https://claw.qt.cool",
-      "stars": 2937,
+      "stars": 2936,
       "forks": 369,
-      "watchers": 2937,
+      "watchers": 2936,
       "language": "JavaScript",
       "topics": [
         "admin-panel",
@@ -1416,10 +1416,10 @@
         "url": "https://github.com/qingchencloud"
       },
       "createdAt": "2026-02-26T13:37:07Z",
-      "updatedAt": "2026-11-11T04:01:24Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:09:26Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-538564726",
@@ -1459,9 +1459,53 @@
       },
       "createdAt": "2022-09-19T15:18:07Z",
       "updatedAt": "2026-11-12T15:02:10Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
+    },
+    {
+      "id": "gh-topic-1039062676",
+      "repoId": 1039062676,
+      "fullName": "iamsrikanthnani/pluely",
+      "name": "pluely",
+      "description": "The Open Source Alternative to Cluely - A lightning-fast, privacy-first AI assistant that works seamlessly during meetings, interviews, and conversations without anyone knowing. Built with Tauri for native performance, just 10MB. Completely undetectable in video calls, screen shares, and recordings.",
+      "url": "https://github.com/iamsrikanthnani/pluely",
+      "homepage": "https://pluely.com",
+      "stars": 2772,
+      "forks": 543,
+      "watchers": 2772,
+      "language": "TypeScript",
+      "topics": [
+        "ai-assistant",
+        "claude",
+        "cluely-alternative",
+        "desktop-app",
+        "gemini",
+        "grok",
+        "grok-4",
+        "llm",
+        "openai",
+        "react",
+        "rust",
+        "shadcn",
+        "speech-to-text",
+        "stealth",
+        "tailwindcss",
+        "tauri",
+        "typescript",
+        "undetectable",
+        "voice-activity-detection"
+      ],
+      "owner": {
+        "login": "iamsrikanthnani",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/55689131?v=4",
+        "url": "https://github.com/iamsrikanthnani"
+      },
+      "createdAt": "2025-08-16T11:57:54Z",
+      "updatedAt": "2026-11-12T17:06:05Z",
+      "firstSeenAt": "2026-11-13T02:43:57.728Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-982183014",
@@ -1501,8 +1545,8 @@
       },
       "createdAt": "2025-05-12T13:51:06Z",
       "updatedAt": "2026-11-12T14:55:18Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1513,9 +1557,9 @@
       "description": "Native iOS and Android client for Open WebUI, direct OpenAI-compatible, Ollama, and Hermes agents.",
       "url": "https://github.com/cogwheel0/conduit",
       "homepage": "https://conduit.mobile",
-      "stars": 2443,
-      "forks": 279,
-      "watchers": 2443,
+      "stars": 2445,
+      "forks": 280,
+      "watchers": 2445,
       "language": "Dart",
       "topics": [
         "ai-agents",
@@ -1545,9 +1589,9 @@
         "url": "https://github.com/cogwheel0"
       },
       "createdAt": "2025-08-09T19:46:53Z",
-      "updatedAt": "2026-11-12T16:20:08Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:20:59Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1591,8 +1635,8 @@
       },
       "createdAt": "2019-10-23T12:17:16Z",
       "updatedAt": "2026-10-31T18:10:33Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1603,9 +1647,9 @@
       "description": "Private local AI assistant for your desktop. Voice and text chat, personal memory, dictation and MCP tools. Runs offline with Ollama or OpenAI-compatible servers on macOS, Windows and Linux.",
       "url": "https://github.com/isair/jarvis",
       "homepage": "https://barissencan.com/jarvis/",
-      "stars": 2237,
+      "stars": 2240,
       "forks": 436,
-      "watchers": 2237,
+      "watchers": 2240,
       "language": "Python",
       "topics": [
         "ai",
@@ -1629,9 +1673,9 @@
         "url": "https://github.com/isair"
       },
       "createdAt": "2025-08-19T18:27:53Z",
-      "updatedAt": "2026-11-12T14:39:38Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T21:24:08Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1642,9 +1686,9 @@
       "description": "Personal AI agent harness for macOS, Windows, Linux, Android & iOS. New: Skales Scout, lasting AI agents that keep working on your desk, each optionally in its own virtual machine. Chat, coding (Skales Code), Flow, automations, computer use, browser, voice, MCP, local LLMs (Ollama). BYOK, 26 providers. No Docker, no terminal.",
       "url": "https://github.com/skalesapp/skales",
       "homepage": "https://skales.app",
-      "stars": 2237,
+      "stars": 2238,
       "forks": 299,
-      "watchers": 2237,
+      "watchers": 2238,
       "language": null,
       "topics": [
         "agentic-ai",
@@ -1674,9 +1718,9 @@
         "url": "https://github.com/skalesapp"
       },
       "createdAt": "2026-03-08T09:17:47Z",
-      "updatedAt": "2026-11-12T14:27:29Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:41:01Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1688,7 +1732,7 @@
       "url": "https://github.com/ShenSeanChen/waku-agent",
       "homepage": "waku.one",
       "stars": 2165,
-      "forks": 428,
+      "forks": 429,
       "watchers": 2165,
       "language": "Python",
       "topics": [
@@ -1712,8 +1756,8 @@
       },
       "createdAt": "2026-07-10T12:20:50Z",
       "updatedAt": "2026-11-12T07:52:57Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1745,8 +1789,8 @@
       },
       "createdAt": "2025-02-24T21:33:05Z",
       "updatedAt": "2026-11-07T16:08:38Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1757,9 +1801,9 @@
       "description": "Open source Grok Bot alternative, Bring your own agent and subscription: message Claude Code, Codex, Gemini CLI, Cursor, Copilot and 40+ AI agents as bots on your own computer, from iPhone, Mac, Windows, Linux or terminal. Agent-agnostic and free. Also a Muse and Dots alternative. Built in Rust.",
       "url": "https://github.com/leepokai/Codync",
       "homepage": "https://www.codync.dev",
-      "stars": 2060,
+      "stars": 2063,
       "forks": 209,
-      "watchers": 2060,
+      "watchers": 2063,
       "language": "Rust",
       "topics": [
         "acp",
@@ -1789,10 +1833,10 @@
         "url": "https://github.com/leepokai"
       },
       "createdAt": "2026-03-18T11:11:05Z",
-      "updatedAt": "2026-11-12T16:12:08Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:23:28Z",
+      "firstSeenAt": "2026-11-10T10:55:58.326Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-625710399",
@@ -1802,9 +1846,9 @@
       "description": "Desktop AI Assistant powered by GPT, Gemini, Claude, Grok, Ollama, DeepSeek, Perplexity, and more - chat, agents, tools, MCP, plugins, RAG, vision, voice, image and video generation, speech synthesis and speech recognition, web search, memory, presets, canvas, assistants, themes, computer use. Windows, Linux, and Mac.",
       "url": "https://github.com/szczyglis-dev/py-gpt",
       "homepage": "https://pygpt.net",
-      "stars": 2022,
+      "stars": 2023,
       "forks": 354,
-      "watchers": 2022,
+      "watchers": 2023,
       "language": "Python",
       "topics": [
         "agents",
@@ -1834,9 +1878,9 @@
         "url": "https://github.com/szczyglis-dev"
       },
       "createdAt": "2023-04-09T23:48:06Z",
-      "updatedAt": "2026-11-12T11:09:30Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:07:40Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1847,9 +1891,9 @@
       "description": "Local-first browser editor for Word, Excel, PowerPoint and PDF, with an experimental AI assistant. No Office installation or account required.",
       "url": "https://github.com/ranuts/document",
       "homepage": "https://edit.chaxus.com/",
-      "stars": 2020,
+      "stars": 2021,
       "forks": 228,
-      "watchers": 2020,
+      "watchers": 2021,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1879,9 +1923,9 @@
         "url": "https://github.com/ranuts"
       },
       "createdAt": "2025-06-08T07:29:11Z",
-      "updatedAt": "2026-11-11T02:55:58Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:34:51Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1892,9 +1936,9 @@
       "description": "Global threat map. Learn wars, conflicts, military bases and history of nations. ",
       "url": "https://github.com/unicodeveloper/globalthreatmap",
       "homepage": "https://globalthreatmap.up.railway.app",
-      "stars": 1870,
+      "stars": 1869,
       "forks": 295,
-      "watchers": 1870,
+      "watchers": 1869,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1914,9 +1958,9 @@
         "url": "https://github.com/unicodeveloper"
       },
       "createdAt": "2026-01-22T17:39:09Z",
-      "updatedAt": "2026-11-12T04:15:35Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:31:05Z",
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1960,8 +2004,8 @@
       },
       "createdAt": "2026-03-13T15:57:46Z",
       "updatedAt": "2026-11-12T04:28:21Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -2003,38 +2047,8 @@
       },
       "createdAt": "2026-03-09T02:01:51Z",
       "updatedAt": "2026-11-12T12:47:40Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-620076077",
-      "repoId": 620076077,
-      "fullName": "lifan0127/ai-research-assistant",
-      "name": "ai-research-assistant",
-      "description": "Aria is Your AI Research Assistant Powered by GPT Large Language Models",
-      "url": "https://github.com/lifan0127/ai-research-assistant",
-      "homepage": null,
-      "stars": 1730,
-      "forks": 119,
-      "watchers": 1730,
-      "language": "JavaScript",
-      "topics": [
-        "ai-assistant",
-        "gpt",
-        "large-language-models",
-        "research-paper",
-        "zotero"
-      ],
-      "owner": {
-        "login": "lifan0127",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7218193?v=4",
-        "url": "https://github.com/lifan0127"
-      },
-      "createdAt": "2023-03-28T01:30:13Z",
-      "updatedAt": "2026-11-12T12:26:17Z",
-      "firstSeenAt": "2026-11-12T16:33:41.420Z",
-      "isNew": true,
+      "firstSeenAt": "2026-10-28T14:47:14.409Z",
+      "isNew": false,
       "existing": false
     }
   ]

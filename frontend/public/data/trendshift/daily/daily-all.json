@@ -1,5 +1,543 @@
 [
   {
+    "periodKey": "2026-11-13",
+    "rank": 1,
+    "score": 890,
+    "fullName": "vercel-labs/ui",
+    "githubUrl": "https://github.com/vercel-labs/ui",
+    "description": "A library of behaviors for agents to build the next generation of user interfaces.",
+    "language": "TypeScript",
+    "starsTotal": 1300,
+    "starsGained": 184,
+    "forksTotal": 4,
+    "forksGained": 0,
+    "createdAt": "2026-10-26T17:39:27Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 2,
+    "score": 495,
+    "fullName": "wdcpclover/ai4paper",
+    "githubUrl": "https://github.com/wdcpclover/ai4paper",
+    "description": "PDF 全文翻译，保留排版双语对照 · 2.4 亿文献检索一键入库 · 文库知识库问答 · AI 精读论文、综述与思维导图 · 列表直显期刊分区 / 中科院 / JCR / 影响因子 · 免插件网页版 app.ai4paper.pro · 适配 Zotero 7–10",
+    "language": "HTML",
+    "starsTotal": 4819,
+    "starsGained": 119,
+    "forksTotal": 49,
+    "forksGained": 0,
+    "createdAt": "2026-02-27T19:59:28Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 3,
+    "score": 180,
+    "fullName": "h4ckf0r0day/obscura",
+    "githubUrl": "https://github.com/h4ckf0r0day/obscura",
+    "description": "The headless browser for AI agents and web scraping",
+    "language": "Rust",
+    "starsTotal": 33860,
+    "starsGained": 78,
+    "forksTotal": 2693,
+    "forksGained": 0,
+    "createdAt": "2026-04-13T10:31:41Z",
+    "tags": [
+      "browser-automation"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 4,
+    "score": 169,
+    "fullName": "aws/aws-emulator",
+    "githubUrl": "https://github.com/aws/aws-emulator",
+    "description": "",
+    "language": "Rust",
+    "starsTotal": 5262,
+    "starsGained": 87,
+    "forksTotal": 115,
+    "forksGained": 0,
+    "createdAt": "2026-09-11T19:01:12Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 5,
+    "score": 156,
+    "fullName": "zxsos/HGhubX",
+    "githubUrl": "https://github.com/zxsos/HGhubX",
+    "description": "YellowFruit third-party client",
+    "language": "TypeScript",
+    "starsTotal": 1282,
+    "starsGained": 45,
+    "forksTotal": 496,
+    "forksGained": 0,
+    "createdAt": "2026-11-09T13:23:43Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 6,
+    "score": 151,
+    "fullName": "GoogleChrome/modern-web-guidance-src",
+    "githubUrl": "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "description": "",
+    "language": "TypeScript",
+    "starsTotal": 2813,
+    "starsGained": 60,
+    "forksTotal": 155,
+    "forksGained": 0,
+    "createdAt": "2026-01-27T20:22:24Z",
+    "tags": [
+      "ai-skills"
+    ],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 7,
+    "score": 136,
+    "fullName": "GoogleChrome/modern-web-guidance",
+    "githubUrl": "https://github.com/GoogleChrome/modern-web-guidance",
+    "description": "Keep your coding agent up to date with the latest web best practices",
+    "language": "Unknown",
+    "starsTotal": 7211,
+    "starsGained": 71,
+    "forksTotal": 181,
+    "forksGained": 0,
+    "createdAt": "2026-03-23T17:49:14Z",
+    "tags": [
+      "ai-skills"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 8,
+    "score": 121,
+    "fullName": "Edge0-AI/Edge0",
+    "githubUrl": "https://github.com/Edge0-AI/Edge0",
+    "description": "Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, Android, Windows supported",
+    "language": "Python",
+    "starsTotal": 10212,
+    "starsGained": 47,
+    "forksTotal": 1751,
+    "forksGained": 0,
+    "createdAt": "2026-09-08T13:41:47Z",
+    "tags": [
+      "llm-inference"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 9,
+    "score": 112,
+    "fullName": "snchimata/tokenfold",
+    "githubUrl": "https://github.com/snchimata/tokenfold",
+    "description": "Private, provider-neutral context compression for LLMs. Reversibly compress schemas and logs inside your perimeter with zero third-party calls.",
+    "language": "Rust",
+    "starsTotal": 132,
+    "starsGained": 14,
+    "forksTotal": 36,
+    "forksGained": 0,
+    "createdAt": "2026-07-14T20:20:49Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 10,
+    "score": 86,
+    "fullName": "dotnet/skills",
+    "githubUrl": "https://github.com/dotnet/skills",
+    "description": "Repository for skills to assist AI coding agents with .NET and C#",
+    "language": "C#",
+    "starsTotal": 5994,
+    "starsGained": 22,
+    "forksTotal": 495,
+    "forksGained": 0,
+    "createdAt": "2026-02-03T22:51:09Z",
+    "tags": [
+      "ai-skills"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 11,
+    "score": 75,
+    "fullName": "anefzaoui/misterdownloadmanager",
+    "githubUrl": "https://github.com/anefzaoui/misterdownloadmanager",
+    "description": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+    "language": "Rust",
+    "starsTotal": 7845,
+    "starsGained": 42,
+    "forksTotal": 615,
+    "forksGained": 0,
+    "createdAt": "2026-10-29T01:25:19Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 12,
+    "score": 73,
+    "fullName": "zeronsh/zeron",
+    "githubUrl": "https://github.com/zeronsh/zeron",
+    "description": "A native control plane for Claude Code, Codex, Cursor, Devin and other coding agents.",
+    "language": "Rust",
+    "starsTotal": 3504,
+    "starsGained": 13,
+    "forksTotal": 428,
+    "forksGained": 0,
+    "createdAt": "2026-07-20T15:04:04Z",
+    "tags": [
+      "ai-coding"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 13,
+    "score": 72,
+    "fullName": "beenuar/AiSOC",
+    "githubUrl": "https://github.com/beenuar/AiSOC",
+    "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+    "language": "Python",
+    "starsTotal": 7493,
+    "starsGained": 29,
+    "forksTotal": 937,
+    "forksGained": 0,
+    "createdAt": "2026-05-02T03:30:19Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 14,
+    "score": 72,
+    "fullName": "huaizhuanghub/dsh-persona-dafeiyu",
+    "githubUrl": "https://github.com/huaizhuanghub/dsh-persona-dafeiyu",
+    "description": "Persona library plugin for DeepSeek Harness: built-in personas, import your own, switch without restart.",
+    "language": "JavaScript",
+    "starsTotal": 107,
+    "starsGained": 9,
+    "forksTotal": 9,
+    "forksGained": 0,
+    "createdAt": "2026-10-06T15:57:38Z",
+    "tags": [],
+    "socialMentionPlatforms": [],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 15,
+    "score": 69,
+    "fullName": "CopilotKit/OpenBot",
+    "githubUrl": "https://github.com/CopilotKit/OpenBot",
+    "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+    "language": "TypeScript",
+    "starsTotal": 11556,
+    "starsGained": 30,
+    "forksTotal": 1484,
+    "forksGained": 0,
+    "createdAt": "2026-08-17T00:44:59Z",
+    "tags": [
+      "ai-agent"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 16,
+    "score": 68,
+    "fullName": "we-promise/sure",
+    "githubUrl": "https://github.com/we-promise/sure",
+    "description": "The personal finance app for everyone (by everyone)",
+    "language": "Ruby",
+    "starsTotal": 13860,
+    "starsGained": 32,
+    "forksTotal": 1038,
+    "forksGained": 0,
+    "createdAt": "2025-07-23T04:13:55Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 17,
+    "score": 68,
+    "fullName": "serveroshq/panel",
+    "githubUrl": "https://github.com/serveroshq/panel",
+    "description": "The open source ServerOS panel: one place to run the Linux servers you already own.",
+    "language": "PHP",
+    "starsTotal": 444,
+    "starsGained": 25,
+    "forksTotal": 3,
+    "forksGained": 0,
+    "createdAt": "2026-11-09T00:47:33Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 18,
+    "score": 67,
+    "fullName": "NotRexed/Hookshot",
+    "githubUrl": "https://github.com/NotRexed/Hookshot",
+    "description": "",
+    "language": "C++",
+    "starsTotal": 8762,
+    "starsGained": 33,
+    "forksTotal": 780,
+    "forksGained": 0,
+    "createdAt": "2026-11-05T12:18:58Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 19,
+    "score": 63,
+    "fullName": "openai/codex-security",
+    "githubUrl": "https://github.com/openai/codex-security",
+    "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+    "language": "TypeScript",
+    "starsTotal": 12372,
+    "starsGained": 27,
+    "forksTotal": 1129,
+    "forksGained": 0,
+    "createdAt": "2026-07-13T22:00:13Z",
+    "tags": [
+      "static-analysis"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 20,
+    "score": 63,
+    "fullName": "meta/astryx",
+    "githubUrl": "https://github.com/meta/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "language": "TypeScript",
+    "starsTotal": 26450,
+    "starsGained": 47,
+    "forksTotal": 2280,
+    "forksGained": 0,
+    "createdAt": "2026-01-09T16:20:32Z",
+    "tags": [
+      "ui-components"
+    ],
+    "socialMentionPlatforms": [
+      "hackernews",
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 21,
+    "score": 62,
+    "fullName": "Alishahryar1/free-claude-code",
+    "githubUrl": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+    "language": "Python",
+    "starsTotal": 69238,
+    "starsGained": 29,
+    "forksTotal": 11634,
+    "forksGained": 0,
+    "createdAt": "2026-01-28T19:02:30Z",
+    "tags": [
+      "ai-coding",
+      "llm-gateway"
+    ],
+    "socialMentionPlatforms": [
+      "reddit",
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 22,
+    "score": 58,
+    "fullName": "ccch1mneyyy/dsh-Go",
+    "githubUrl": "https://github.com/ccch1mneyyy/dsh-Go",
+    "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+    "language": "Dart",
+    "starsTotal": 20718,
+    "starsGained": 40,
+    "forksTotal": 943,
+    "forksGained": 0,
+    "createdAt": "2026-10-25T08:09:52Z",
+    "tags": [
+      "ai-chat"
+    ],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 23,
+    "score": 58,
+    "fullName": "wici-ai/inferssd",
+    "githubUrl": "https://github.com/wici-ai/inferssd",
+    "description": "Run models larger than your RAM or VRAM by streaming MoE experts from SSD. Built on llama.cpp.",
+    "language": "C++",
+    "starsTotal": 634,
+    "starsGained": 20,
+    "forksTotal": 74,
+    "forksGained": 0,
+    "createdAt": "2026-10-22T10:40:45Z",
+    "tags": [],
+    "socialMentionPlatforms": [
+      "hackernews"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 24,
+    "score": 57,
+    "fullName": "kuafuai/andee",
+    "githubUrl": "https://github.com/kuafuai/andee",
+    "description": "Andee lives on your phone or Mac and uses any app like you do—no integrations, no root, any model; memory and passwords never leave your device | Andee 住进你的手机或 Mac，像你一样操作任何 App——无需集成、无需 Root、支持任意模型，记忆和密码绝不离开设备。",
+    "language": "Kotlin",
+    "starsTotal": 5198,
+    "starsGained": 26,
+    "forksTotal": 289,
+    "forksGained": 0,
+    "createdAt": "2026-09-17T13:20:59Z",
+    "tags": [
+      "ai-agent"
+    ],
+    "socialMentionPlatforms": [
+      "x"
+    ],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
+    "periodKey": "2026-11-13",
+    "rank": 25,
+    "score": 57,
+    "fullName": "canivel/dynolab",
+    "githubUrl": "https://github.com/canivel/dynolab",
+    "description": "Dyno Lab — an AI safety, alignment and interpretability research workbench for Apple Silicon. Explore activations, probes, SAEs and interventions with local inference, a Python SDK, APIs and MCP.",
+    "language": "Python",
+    "starsTotal": 323,
+    "starsGained": 17,
+    "forksTotal": 187,
+    "forksGained": 0,
+    "createdAt": "2026-09-04T17:42:19Z",
+    "tags": [],
+    "socialMentionPlatforms": [],
+    "timeframe": "daily",
+    "languageFilter": "all"
+  },
+  {
     "periodKey": "2026-11-12",
     "rank": 1,
     "score": 7456,
@@ -50,7 +588,7 @@
     "score": 1788,
     "fullName": "Lee-xeo/Claude-Cage",
     "githubUrl": "https://github.com/Lee-xeo/Claude-Cage",
-    "description": "Cage：Mac 上的独立 Claude 编码工作区，集成 Linux 终端、浏览器与项目编辑器。",
+    "description": "Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。",
     "language": "Go",
     "starsTotal": 3603,
     "starsGained": 488,

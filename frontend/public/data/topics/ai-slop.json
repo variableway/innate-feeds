@@ -1,9 +1,9 @@
 {
   "topic": "ai-slop",
-  "fetchedAt": "2026-11-12T16:34:39.314Z",
+  "fetchedAt": "2026-11-13T02:46:00.638Z",
   "count": 50,
-  "newCount": 50,
-  "existingCount": 0,
+  "newCount": 1,
+  "existingCount": 1,
   "items": [
     {
       "id": "gh-topic-1326531152",
@@ -13,9 +13,9 @@
       "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
       "url": "https://github.com/miqdadbadjuber/anti-slop",
       "homepage": "https://antislop.ai.id",
-      "stars": 9031,
-      "forks": 616,
-      "watchers": 9031,
+      "stars": 9052,
+      "forks": 618,
+      "watchers": 9052,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -35,9 +35,9 @@
         "url": "https://github.com/miqdadbadjuber"
       },
       "createdAt": "2026-08-07T10:29:56Z",
-      "updatedAt": "2026-11-12T16:26:30Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:41:04Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -80,8 +80,8 @@
       },
       "createdAt": "2026-02-09T00:52:40Z",
       "updatedAt": "2026-11-08T07:37:05Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -125,8 +125,8 @@
       },
       "createdAt": "2026-03-06T13:05:19Z",
       "updatedAt": "2026-11-12T00:31:19Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -170,8 +170,8 @@
       },
       "createdAt": "2026-08-13T08:09:10Z",
       "updatedAt": "2026-11-11T06:41:31Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -183,7 +183,7 @@
       "url": "https://github.com/justjake/fujimod",
       "homepage": "https://fujimod.com",
       "stars": 227,
-      "forks": 46,
+      "forks": 48,
       "watchers": 227,
       "language": "Rust",
       "topics": [
@@ -199,8 +199,8 @@
       },
       "createdAt": "2026-10-15T16:34:15Z",
       "updatedAt": "2026-11-12T15:24:43Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -244,8 +244,8 @@
       },
       "createdAt": "2026-04-30T03:50:18Z",
       "updatedAt": "2026-11-11T06:56:28Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -289,8 +289,8 @@
       },
       "createdAt": "2026-08-03T18:55:48Z",
       "updatedAt": "2026-11-12T07:39:21Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -301,9 +301,9 @@
       "description": "Audits AI-generated frontend and rewrites it so it stops looking AI-made: purple-gradient slop and the \"tasteful\" defaults (cream + terracotta, mono chrome). Zero-dependency scanner included. The design counterpart to avoid-ai-writing.",
       "url": "https://github.com/funboy322/avoid-ai-design",
       "homepage": null,
-      "stars": 160,
+      "stars": 161,
       "forks": 11,
-      "watchers": 160,
+      "watchers": 161,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -333,9 +333,9 @@
         "url": "https://github.com/funboy322"
       },
       "createdAt": "2026-05-30T22:04:55Z",
-      "updatedAt": "2026-11-12T11:34:01Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:00:46Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -346,9 +346,9 @@
       "description": "In today's rapidly evolving landscape, vale-ai-tells is a comprehensive, cutting-edge Vale style package that empowers writers to seamlessly delve into the rich tapestry of AI tells. It's not just a rule set; it's a game-changer that supercharges your prose, unlocks new possibilities, and really lands. Ship cleaner prose. Full stop. 🚀",
       "url": "https://github.com/tbhb/vale-ai-tells",
       "homepage": null,
-      "stars": 130,
+      "stars": 131,
       "forks": 13,
-      "watchers": 130,
+      "watchers": 131,
       "language": "Shell",
       "topics": [
         "ai-detection",
@@ -378,9 +378,9 @@
         "url": "https://github.com/tbhb"
       },
       "createdAt": "2025-12-02T20:36:50Z",
-      "updatedAt": "2026-11-11T14:09:16Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:05:12Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -415,8 +415,8 @@
       },
       "createdAt": "2026-03-31T10:00:21Z",
       "updatedAt": "2026-11-03T11:24:19Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -460,8 +460,8 @@
       },
       "createdAt": "2026-03-21T22:43:56Z",
       "updatedAt": "2026-11-11T22:52:10Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -499,8 +499,8 @@
       },
       "createdAt": "2026-06-18T19:41:25Z",
       "updatedAt": "2026-11-05T18:36:04Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -511,9 +511,9 @@
       "description": "120 patterns that make writing read like AI slop, with an agent skill for Claude Code and Codex.",
       "url": "https://github.com/FeedHive/ai-slop-detector",
       "homepage": "https://www.feedhive.com/tools/ai-slop-detector",
-      "stars": 110,
+      "stars": 111,
       "forks": 9,
-      "watchers": 110,
+      "watchers": 111,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -530,9 +530,9 @@
         "url": "https://github.com/FeedHive"
       },
       "createdAt": "2026-10-12T09:38:49Z",
-      "updatedAt": "2026-11-11T12:18:38Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:05:13Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -570,8 +570,8 @@
       },
       "createdAt": "2026-01-16T19:23:04Z",
       "updatedAt": "2026-11-10T15:01:18Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -610,8 +610,8 @@
       },
       "createdAt": "2026-04-06T17:56:29Z",
       "updatedAt": "2026-11-04T09:10:45Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -643,8 +643,8 @@
       },
       "createdAt": "2026-07-15T11:02:50Z",
       "updatedAt": "2026-11-11T04:29:42Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -675,8 +675,8 @@
       },
       "createdAt": "2026-10-09T14:05:15Z",
       "updatedAt": "2026-11-11T02:56:05Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -708,8 +708,8 @@
       },
       "createdAt": "2026-09-22T20:03:20Z",
       "updatedAt": "2026-11-12T10:38:46Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -748,8 +748,8 @@
       },
       "createdAt": "2026-07-28T01:13:24Z",
       "updatedAt": "2026-11-09T17:10:04Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -776,8 +776,49 @@
       },
       "createdAt": "2024-07-12T13:40:48Z",
       "updatedAt": "2026-11-12T09:04:09Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1293519636",
+      "repoId": 1293519636,
+      "fullName": "superdesigndev/superdesign-prompts",
+      "name": "superdesign-prompts",
+      "description": "128 usage-ranked, vision-curated UI design prompts (full design specs + live previews) that stop your AI coding agent from shipping generic AI-slop UI. Powered by superdesign.dev",
+      "url": "https://github.com/superdesigndev/superdesign-prompts",
+      "homepage": "https://superdesign.dev/library",
+      "stars": 68,
+      "forks": 15,
+      "watchers": 68,
+      "language": "Python",
+      "topics": [
+        "ai-design",
+        "ai-slop",
+        "awesome",
+        "claude-code",
+        "coding-agent",
+        "cursor",
+        "design-agent",
+        "design-prompts",
+        "frontend",
+        "generative-ui",
+        "prompt-engineering",
+        "prompt-library",
+        "superdesign",
+        "ui-design",
+        "ux-design",
+        "vibe-coding"
+      ],
+      "owner": {
+        "login": "superdesigndev",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/217153862?v=4",
+        "url": "https://github.com/superdesigndev"
+      },
+      "createdAt": "2026-07-08T11:36:07Z",
+      "updatedAt": "2026-11-13T00:23:32Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -821,49 +862,42 @@
       },
       "createdAt": "2026-09-23T00:01:36Z",
       "updatedAt": "2026-11-09T17:55:46Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1293519636",
-      "repoId": 1293519636,
-      "fullName": "superdesigndev/superdesign-prompts",
-      "name": "superdesign-prompts",
-      "description": "128 usage-ranked, vision-curated UI design prompts (full design specs + live previews) that stop your AI coding agent from shipping generic AI-slop UI. Powered by superdesign.dev",
-      "url": "https://github.com/superdesigndev/superdesign-prompts",
-      "homepage": "https://superdesign.dev/library",
-      "stars": 63,
-      "forks": 15,
-      "watchers": 63,
-      "language": "Python",
+      "id": "gh-topic-1446942372",
+      "repoId": 1446942372,
+      "fullName": "DeepWithinTotem/resocket-pixeljury",
+      "name": "resocket-pixeljury",
+      "description": "Visual QA CLI for AI-built frontends that renders pages, finds design and accessibility issues, and writes agent-ready fix prompts.",
+      "url": "https://github.com/DeepWithinTotem/resocket-pixeljury",
+      "homepage": null,
+      "stars": 60,
+      "forks": 0,
+      "watchers": 60,
+      "language": "HTML",
       "topics": [
-        "ai-design",
         "ai-slop",
-        "awesome",
-        "claude-code",
-        "coding-agent",
-        "cursor",
-        "design-agent",
-        "design-prompts",
-        "frontend",
-        "generative-ui",
-        "prompt-engineering",
-        "prompt-library",
-        "superdesign",
-        "ui-design",
-        "ux-design",
-        "vibe-coding"
+        "architecture-diagrams",
+        "frontend-qa",
+        "layout",
+        "pillow",
+        "qa",
+        "renderer",
+        "responsive-design",
+        "screenshot"
       ],
       "owner": {
-        "login": "superdesigndev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/217153862?v=4",
-        "url": "https://github.com/superdesigndev"
+        "login": "DeepWithinTotem",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/351013863?v=4",
+        "url": "https://github.com/DeepWithinTotem"
       },
-      "createdAt": "2026-07-08T11:36:07Z",
-      "updatedAt": "2026-11-12T15:44:59Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "createdAt": "2026-11-05T11:58:52Z",
+      "updatedAt": "2026-11-12T21:13:59Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -907,8 +941,8 @@
       },
       "createdAt": "2026-04-07T10:48:02Z",
       "updatedAt": "2026-11-12T16:04:58Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -935,8 +969,8 @@
       },
       "createdAt": "2026-02-08T22:06:11Z",
       "updatedAt": "2026-10-06T09:20:54Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -979,8 +1013,8 @@
       },
       "createdAt": "2026-03-24T00:38:39Z",
       "updatedAt": "2026-11-12T04:37:42Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1010,8 +1044,8 @@
       },
       "createdAt": "2026-03-03T13:49:04Z",
       "updatedAt": "2026-11-06T23:57:38Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1050,8 +1084,8 @@
       },
       "createdAt": "2026-04-11T00:16:24Z",
       "updatedAt": "2026-11-10T21:01:53Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1093,9 +1127,9 @@
       },
       "createdAt": "2026-09-20T07:12:51Z",
       "updatedAt": "2026-11-05T04:58:19Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1309088427",
@@ -1105,9 +1139,9 @@
       "description": "A field guide to the visual tells of AI-generated design. Like Wikipedia's Signs of AI writing, but for visuals.",
       "url": "https://github.com/febbhav/signs-of-ai-design",
       "homepage": "http://www.febian.com",
-      "stars": 36,
+      "stars": 37,
       "forks": 1,
-      "watchers": 36,
+      "watchers": 37,
       "language": null,
       "topics": [
         "ai",
@@ -1127,9 +1161,53 @@
         "url": "https://github.com/febbhav"
       },
       "createdAt": "2026-07-22T17:33:35Z",
-      "updatedAt": "2026-11-12T14:54:20Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T19:57:48Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1188487192",
+      "repoId": 1188487192,
+      "fullName": "khasky/awesome-agent-skills",
+      "name": "awesome-agent-skills",
+      "description": " Skills for AI coding agents: code review, debugging, security audits, refactoring, cleaning up AI-written code and text, and more.",
+      "url": "https://github.com/khasky/awesome-agent-skills",
+      "homepage": null,
+      "stars": 35,
+      "forks": 6,
+      "watchers": 35,
+      "language": "Python",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "ai",
+        "ai-coding",
+        "ai-skill",
+        "ai-slop",
+        "awesome",
+        "awesome-lists",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "claude-skill",
+        "code-review",
+        "codex",
+        "cursor",
+        "refactoring",
+        "security-audit",
+        "skills",
+        "vibe-coding"
+      ],
+      "owner": {
+        "login": "khasky",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6174042?v=4",
+        "url": "https://github.com/khasky"
+      },
+      "createdAt": "2026-03-22T06:22:47Z",
+      "updatedAt": "2026-11-12T23:19:29Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1173,52 +1251,8 @@
       },
       "createdAt": "2026-08-10T22:30:18Z",
       "updatedAt": "2026-11-11T14:37:16Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1188487192",
-      "repoId": 1188487192,
-      "fullName": "khasky/awesome-agent-skills",
-      "name": "awesome-agent-skills",
-      "description": " Skills for AI coding agents: code review, debugging, security audits, refactoring, cleaning up AI-written code and text, and more.",
-      "url": "https://github.com/khasky/awesome-agent-skills",
-      "homepage": null,
-      "stars": 34,
-      "forks": 6,
-      "watchers": 34,
-      "language": "Python",
-      "topics": [
-        "agent",
-        "agent-skills",
-        "ai",
-        "ai-coding",
-        "ai-skill",
-        "ai-slop",
-        "awesome",
-        "awesome-lists",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "claude-skill",
-        "code-review",
-        "codex",
-        "cursor",
-        "refactoring",
-        "security-audit",
-        "skills",
-        "vibe-coding"
-      ],
-      "owner": {
-        "login": "khasky",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6174042?v=4",
-        "url": "https://github.com/khasky"
-      },
-      "createdAt": "2026-03-22T06:22:47Z",
-      "updatedAt": "2026-11-11T11:58:20Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1254,8 +1288,8 @@
       },
       "createdAt": "2026-08-19T06:24:57Z",
       "updatedAt": "2026-11-07T12:38:32Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1286,8 +1320,8 @@
       },
       "createdAt": "2026-05-12T20:53:46Z",
       "updatedAt": "2026-11-12T08:16:11Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1330,8 +1364,8 @@
       },
       "createdAt": "2026-02-26T21:01:46Z",
       "updatedAt": "2026-11-05T09:30:31Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1374,9 +1408,9 @@
         "url": "https://github.com/haidrrrry"
       },
       "createdAt": "2026-06-30T10:21:13Z",
-      "updatedAt": "2026-11-12T11:47:21Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:16:22Z",
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1420,8 +1454,8 @@
       },
       "createdAt": "2026-06-04T16:17:01Z",
       "updatedAt": "2026-11-12T05:40:43Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1457,8 +1491,8 @@
       },
       "createdAt": "2026-10-08T08:41:08Z",
       "updatedAt": "2026-11-08T19:10:59Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1489,8 +1523,8 @@
       },
       "createdAt": "2026-09-20T01:07:43Z",
       "updatedAt": "2026-10-15T20:34:52Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1521,8 +1555,8 @@
       },
       "createdAt": "2026-07-04T16:04:01Z",
       "updatedAt": "2026-11-03T11:35:16Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1553,8 +1587,8 @@
       },
       "createdAt": "2026-06-03T16:11:11Z",
       "updatedAt": "2026-10-26T16:05:40Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1580,8 +1614,8 @@
       },
       "createdAt": "2026-01-26T21:02:55Z",
       "updatedAt": "2026-11-02T21:45:36Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1625,8 +1659,53 @@
       },
       "createdAt": "2026-07-31T16:36:32Z",
       "updatedAt": "2026-11-03T11:35:29Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1438447579",
+      "repoId": 1438447579,
+      "fullName": "MADEVAL/humanizer-ua",
+      "name": "humanizer-ua",
+      "description": "Редактура українського тексту: прибирає сліди ШІ, канцелярит, суржик і кальки, зберігаючи зміст і голос автора. 63 маркери, 30 заборон, сканер без залежностей.",
+      "url": "https://github.com/MADEVAL/humanizer-ua",
+      "homepage": null,
+      "stars": 21,
+      "forks": 0,
+      "watchers": 21,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "ai-slop",
+        "ai-writing",
+        "claude-code",
+        "codex",
+        "content-editing",
+        "cursor",
+        "developer-tools",
+        "editing",
+        "humanizer",
+        "llm",
+        "nlp",
+        "opencode",
+        "proofreading",
+        "style-guide",
+        "text-editing",
+        "ukraine",
+        "ukrainian",
+        "ukrainian-language",
+        "writing"
+      ],
+      "owner": {
+        "login": "MADEVAL",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/10908537?v=4",
+        "url": "https://github.com/MADEVAL"
+      },
+      "createdAt": "2026-10-29T13:18:44Z",
+      "updatedAt": "2026-11-12T18:10:04Z",
+      "firstSeenAt": "2026-11-12T09:12:57.383Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1665,8 +1744,8 @@
       },
       "createdAt": "2026-07-28T23:27:14Z",
       "updatedAt": "2026-11-05T13:35:35Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1710,8 +1789,8 @@
       },
       "createdAt": "2026-10-01T10:42:03Z",
       "updatedAt": "2026-10-14T19:29:26Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1746,52 +1825,45 @@
       },
       "createdAt": "2026-05-26T08:17:51Z",
       "updatedAt": "2026-11-11T06:53:35Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1438447579",
-      "repoId": 1438447579,
-      "fullName": "MADEVAL/humanizer-ua",
-      "name": "humanizer-ua",
-      "description": "Редактура українського тексту: прибирає сліди ШІ, канцелярит, суржик і кальки, зберігаючи зміст і голос автора. 63 маркери, 30 заборон, сканер без залежностей.",
-      "url": "https://github.com/MADEVAL/humanizer-ua",
-      "homepage": null,
+      "id": "gh-topic-1451803034",
+      "repoId": 1451803034,
+      "fullName": "erkamyaman/unslopovich",
+      "name": "unslopovich",
+      "description": "Your app looks AI-generated. Dr. Unslopovich noticed. An agent skill that finds and fixes AI-looking UI and UX in mobile apps.",
+      "url": "https://github.com/erkamyaman/unslopovich",
+      "homepage": "https://www.npmjs.com/package/unslopovich",
       "stars": 19,
       "forks": 0,
       "watchers": 19,
-      "language": "Python",
+      "language": "JavaScript",
       "topics": [
         "agent-skills",
         "ai-slop",
-        "ai-writing",
         "claude-code",
-        "codex",
-        "content-editing",
-        "cursor",
-        "developer-tools",
-        "editing",
-        "humanizer",
-        "llm",
-        "nlp",
-        "opencode",
-        "proofreading",
-        "style-guide",
-        "text-editing",
-        "ukraine",
-        "ukrainian",
-        "ukrainian-language",
-        "writing"
+        "expo",
+        "flutter",
+        "ionic",
+        "jetpack-compose",
+        "mobile",
+        "react-native",
+        "swiftui",
+        "ui",
+        "ux",
+        "vibe-coding"
       ],
       "owner": {
-        "login": "MADEVAL",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/10908537?v=4",
-        "url": "https://github.com/MADEVAL"
+        "login": "erkamyaman",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/88717125?v=4",
+        "url": "https://github.com/erkamyaman"
       },
-      "createdAt": "2026-10-29T13:18:44Z",
-      "updatedAt": "2026-11-10T16:57:49Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
+      "createdAt": "2026-11-09T19:42:33Z",
+      "updatedAt": "2026-11-12T20:54:08Z",
+      "firstSeenAt": "2026-11-13T02:46:00.638Z",
       "isNew": true,
       "existing": false
     },
@@ -1823,8 +1895,8 @@
       },
       "createdAt": "2026-08-19T07:38:43Z",
       "updatedAt": "2026-11-11T07:59:08Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1856,91 +1928,8 @@
       },
       "createdAt": "2026-10-27T13:00:12Z",
       "updatedAt": "2026-11-10T19:06:44Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1239804380",
-      "repoId": 1239804380,
-      "fullName": "hannsxpeter/humanizer",
-      "name": "humanizer",
-      "description": "Pure-prompt Agent Skill that de-slops AI-sounding prose, rewrites it in a writer's own voice, and conservatively cleans hidden Unicode, with guards against invented facts and over-editing. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and 8 more AI coding tools.",
-      "url": "https://github.com/hannsxpeter/humanizer",
-      "homepage": null,
-      "stars": 17,
-      "forks": 1,
-      "watchers": 17,
-      "language": null,
-      "topics": [
-        "agent-skills",
-        "ai-slop",
-        "ai-writing",
-        "aider",
-        "antigravity",
-        "claude-code",
-        "cline",
-        "codex",
-        "cursor",
-        "deslop",
-        "gemini-cli",
-        "github-copilot",
-        "humanizer",
-        "llm",
-        "opencode",
-        "prose-editing",
-        "unicode",
-        "windsurf",
-        "writing",
-        "zed"
-      ],
-      "owner": {
-        "login": "hannsxpeter",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/14729079?v=4",
-        "url": "https://github.com/hannsxpeter"
-      },
-      "createdAt": "2026-05-15T13:08:46Z",
-      "updatedAt": "2026-11-11T10:09:35Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1341563849",
-      "repoId": 1341563849,
-      "fullName": "lumioguard/lumioguard-tools",
-      "name": "lumioguard-tools",
-      "description": "Paste a URL, find out something true about the site. Three URL-only readings on one page: Slopmeter scores how much of it is still the template, Leakpeek reports what it is exposing, Citecheck reports what stops an answer engine quoting it.",
-      "url": "https://github.com/lumioguard/lumioguard-tools",
-      "homepage": "https://lumioguard.dev/",
-      "stars": 16,
-      "forks": 0,
-      "watchers": 16,
-      "language": "TypeScript",
-      "topics": [
-        "ai-safety",
-        "ai-slop",
-        "answer-engine",
-        "cloudflare-workers",
-        "rls",
-        "security-tools",
-        "seo",
-        "slop",
-        "static-analysis",
-        "supabase",
-        "typescript",
-        "vite",
-        "website-audit"
-      ],
-      "owner": {
-        "login": "lumioguard",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/314169178?v=4",
-        "url": "https://github.com/lumioguard"
-      },
-      "createdAt": "2026-08-21T08:14:24Z",
-      "updatedAt": "2026-09-25T20:12:30Z",
-      "firstSeenAt": "2026-11-12T16:34:39.314Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:23.517Z",
+      "isNew": false,
       "existing": false
     }
   ]

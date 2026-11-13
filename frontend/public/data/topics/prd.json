@@ -1,9 +1,9 @@
 {
   "topic": "prd",
-  "fetchedAt": "2026-11-12T16:36:55.267Z",
+  "fetchedAt": "2026-11-13T02:49:22.740Z",
   "count": 50,
-  "newCount": 46,
-  "existingCount": 4,
+  "newCount": 0,
+  "existingCount": 17,
   "items": [
     {
       "id": "gh-topic-1042367133",
@@ -13,9 +13,9 @@
       "description": "💫 Toolkit to help you get started with SDD or any other process!",
       "url": "https://github.com/github/spec-kit",
       "homepage": "https://github.github.com/spec-kit/",
-      "stars": 149500,
-      "forks": 13433,
-      "watchers": 149500,
+      "stars": 149553,
+      "forks": 13437,
+      "watchers": 149553,
       "language": "Python",
       "topics": [
         "ai",
@@ -32,9 +32,9 @@
         "url": "https://github.com/github"
       },
       "createdAt": "2025-08-21T22:54:31Z",
-      "updatedAt": "2026-11-12T16:07:01Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:44:37Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -45,9 +45,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 74712,
-      "forks": 5118,
-      "watchers": 74712,
+      "stars": 74742,
+      "forks": 5122,
+      "watchers": 74742,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -67,9 +67,9 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-12T16:32:49Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:04:12Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -113,9 +113,9 @@
       },
       "createdAt": "2025-04-22T17:05:43Z",
       "updatedAt": "2026-11-11T23:06:11Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1032400350",
@@ -145,9 +145,9 @@
       },
       "createdAt": "2025-08-05T08:53:12Z",
       "updatedAt": "2026-11-05T01:23:07Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1080617301",
@@ -180,8 +180,8 @@
       },
       "createdAt": "2025-10-21T16:08:42Z",
       "updatedAt": "2026-11-09T21:17:41Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -220,8 +220,8 @@
       },
       "createdAt": "2026-01-14T01:27:15Z",
       "updatedAt": "2026-11-09T22:06:09Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -232,9 +232,9 @@
       "description": "PRD 한 장으로 한국 앱 스타일 모바일 화면 초안을 15분 안팎에 만드는 Claude Code·Codex 플러그인",
       "url": "https://github.com/vmc-inner-circle/k-style-ui-ux",
       "homepage": "https://www.vibemafiaclub.com/inner-circle",
-      "stars": 401,
+      "stars": 400,
       "forks": 50,
-      "watchers": 401,
+      "watchers": 400,
       "language": "Python",
       "topics": [
         "claude-code",
@@ -252,9 +252,9 @@
         "url": "https://github.com/vmc-inner-circle"
       },
       "createdAt": "2026-09-09T10:52:27Z",
-      "updatedAt": "2026-11-11T06:24:24Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:41:23Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -265,9 +265,9 @@
       "description": "A long-running AI agent loop. Ralph automates software development tasks by iteratively working through a task list until completion.",
       "url": "https://github.com/PageAI-Pro/ralph-loop",
       "homepage": "https://ralphloop.sh",
-      "stars": 341,
+      "stars": 342,
       "forks": 49,
-      "watchers": 341,
+      "watchers": 342,
       "language": "Shell",
       "topics": [
         "agentic-ai",
@@ -285,10 +285,10 @@
         "url": "https://github.com/PageAI-Pro"
       },
       "createdAt": "2026-01-26T13:32:13Z",
-      "updatedAt": "2026-11-12T14:16:00Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T18:43:02Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1289476943",
@@ -320,9 +320,9 @@
       },
       "createdAt": "2026-07-04T19:57:44Z",
       "updatedAt": "2026-11-05T21:30:19Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-945592798",
@@ -333,7 +333,7 @@
       "url": "https://github.com/nurettincoban/ai-prd-workflow",
       "homepage": "https://nurettincoban.github.io/ai-prd-workflow/",
       "stars": 310,
-      "forks": 33,
+      "forks": 34,
       "watchers": 310,
       "language": "Python",
       "topics": [
@@ -362,9 +362,9 @@
       },
       "createdAt": "2025-03-09T19:23:57Z",
       "updatedAt": "2026-11-09T22:12:30Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1158743495",
@@ -396,9 +396,42 @@
       },
       "createdAt": "2026-02-15T21:07:33Z",
       "updatedAt": "2026-11-09T18:03:27Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
+    },
+    {
+      "id": "gh-topic-1214845304",
+      "repoId": 1214845304,
+      "fullName": "golbin/agent-skills",
+      "name": "agent-skills",
+      "description": "Reusable agent skills for Codex and compatible tools",
+      "url": "https://github.com/golbin/agent-skills",
+      "homepage": null,
+      "stars": 216,
+      "forks": 26,
+      "watchers": 216,
+      "language": "Shell",
+      "topics": [
+        "agent-skills",
+        "code-review",
+        "codex",
+        "implementation-review",
+        "prd",
+        "product-requirements-document",
+        "review-implementation",
+        "skills-sh"
+      ],
+      "owner": {
+        "login": "golbin",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6277035?v=4",
+        "url": "https://github.com/golbin"
+      },
+      "createdAt": "2026-04-19T05:56:45Z",
+      "updatedAt": "2026-11-13T02:44:44Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1272696562",
@@ -441,42 +474,9 @@
       },
       "createdAt": "2026-06-17T21:19:02Z",
       "updatedAt": "2026-11-12T12:29:16Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1214845304",
-      "repoId": 1214845304,
-      "fullName": "golbin/agent-skills",
-      "name": "agent-skills",
-      "description": "Reusable agent skills for Codex and compatible tools",
-      "url": "https://github.com/golbin/agent-skills",
-      "homepage": null,
-      "stars": 215,
-      "forks": 26,
-      "watchers": 215,
-      "language": "Shell",
-      "topics": [
-        "agent-skills",
-        "code-review",
-        "codex",
-        "implementation-review",
-        "prd",
-        "product-requirements-document",
-        "review-implementation",
-        "skills-sh"
-      ],
-      "owner": {
-        "login": "golbin",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6277035?v=4",
-        "url": "https://github.com/golbin"
-      },
-      "createdAt": "2026-04-19T05:56:45Z",
-      "updatedAt": "2026-10-14T10:44:07Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1171476919",
@@ -519,8 +519,8 @@
       },
       "createdAt": "2026-03-03T09:19:21Z",
       "updatedAt": "2026-11-10T13:52:56Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -561,8 +561,8 @@
       },
       "createdAt": "2025-08-13T20:32:26Z",
       "updatedAt": "2026-11-09T09:18:11Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -602,9 +602,9 @@
       },
       "createdAt": "2025-07-10T01:36:43Z",
       "updatedAt": "2026-11-05T14:19:33Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1168031239",
@@ -635,8 +635,8 @@
       },
       "createdAt": "2026-02-27T00:06:23Z",
       "updatedAt": "2026-11-08T20:43:04Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -675,9 +675,9 @@
       },
       "createdAt": "2025-12-15T03:02:04Z",
       "updatedAt": "2026-11-11T16:24:44Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1306969596",
@@ -714,8 +714,8 @@
       },
       "createdAt": "2026-07-20T19:56:49Z",
       "updatedAt": "2026-11-10T08:06:52Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -752,9 +752,9 @@
       },
       "createdAt": "2026-03-11T03:31:37Z",
       "updatedAt": "2026-11-01T16:32:53Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1070511310",
@@ -794,9 +794,9 @@
       },
       "createdAt": "2025-10-06T03:29:38Z",
       "updatedAt": "2026-11-09T08:03:30Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1272840358",
@@ -831,8 +831,8 @@
       },
       "createdAt": "2026-06-18T01:33:03Z",
       "updatedAt": "2026-11-09T22:49:36Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -864,9 +864,9 @@
       },
       "createdAt": "2026-06-16T15:39:11Z",
       "updatedAt": "2026-10-13T19:24:10Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1140824901",
@@ -909,8 +909,8 @@
       },
       "createdAt": "2026-01-23T20:04:26Z",
       "updatedAt": "2026-11-11T03:47:18Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -942,8 +942,8 @@
       },
       "createdAt": "2026-02-18T09:32:59Z",
       "updatedAt": "2026-11-12T09:34:53Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -976,9 +976,9 @@
       },
       "createdAt": "2026-05-19T03:41:18Z",
       "updatedAt": "2026-11-04T05:57:18Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-1168300654",
@@ -1009,8 +1009,8 @@
       },
       "createdAt": "2026-02-27T08:25:00Z",
       "updatedAt": "2026-11-07T04:38:14Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1040,8 +1040,8 @@
       },
       "createdAt": "2026-01-14T10:28:16Z",
       "updatedAt": "2026-11-06T23:59:28Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1067,8 +1067,8 @@
       },
       "createdAt": "2026-03-26T14:22:26Z",
       "updatedAt": "2026-09-19T00:46:29Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1102,8 +1102,8 @@
       },
       "createdAt": "2026-07-02T18:28:03Z",
       "updatedAt": "2026-11-04T03:02:39Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1139,8 +1139,8 @@
       },
       "createdAt": "2026-02-16T19:00:47Z",
       "updatedAt": "2026-10-12T11:37:12Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1170,8 +1170,8 @@
       },
       "createdAt": "2026-08-28T03:11:02Z",
       "updatedAt": "2026-11-10T12:14:10Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1202,8 +1202,8 @@
       },
       "createdAt": "2026-07-22T12:33:36Z",
       "updatedAt": "2026-09-09T01:50:33Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1237,8 +1237,8 @@
       },
       "createdAt": "2023-06-11T18:05:24Z",
       "updatedAt": "2026-09-08T12:23:10Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1279,8 +1279,8 @@
       },
       "createdAt": "2026-06-07T09:25:46Z",
       "updatedAt": "2026-11-09T20:07:21Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1311,8 +1311,8 @@
       },
       "createdAt": "2026-09-05T03:00:42Z",
       "updatedAt": "2026-11-10T07:52:43Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1356,8 +1356,8 @@
       },
       "createdAt": "2026-07-07T08:55:24Z",
       "updatedAt": "2026-11-05T00:19:13Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1388,8 +1388,8 @@
       },
       "createdAt": "2025-05-21T07:17:56Z",
       "updatedAt": "2026-10-28T14:19:50Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1427,8 +1427,40 @@
       },
       "createdAt": "2026-04-28T16:21:11Z",
       "updatedAt": "2026-10-23T00:05:30Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1259147822",
+      "repoId": 1259147822,
+      "fullName": "Panix22/prd-writer-skill",
+      "name": "prd-writer-skill",
+      "description": "对话式 PRD 生成技能，中文优化，通用 Agent Skill（Claude Code / Codex / Hermes / OpenClaw 等） · A conversational PRD-writing Agent Skill",
+      "url": "https://github.com/Panix22/prd-writer-skill",
+      "homepage": null,
+      "stars": 29,
+      "forks": 1,
+      "watchers": 29,
+      "language": null,
+      "topics": [
+        "agent-skill",
+        "ai-agent",
+        "claude-code",
+        "claude-skill",
+        "codex",
+        "prd",
+        "product-management"
+      ],
+      "owner": {
+        "login": "Panix22",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/22882850?v=4",
+        "url": "https://github.com/Panix22"
+      },
+      "createdAt": "2026-06-04T08:31:07Z",
+      "updatedAt": "2026-11-08T12:15:37Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1466,40 +1498,38 @@
       },
       "createdAt": "2026-06-25T10:17:07Z",
       "updatedAt": "2026-11-04T16:57:33Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
-      "id": "gh-topic-1259147822",
-      "repoId": 1259147822,
-      "fullName": "Panix22/prd-writer-skill",
-      "name": "prd-writer-skill",
-      "description": "对话式 PRD 生成技能，中文优化，通用 Agent Skill（Claude Code / Codex / Hermes / OpenClaw 等） · A conversational PRD-writing Agent Skill",
-      "url": "https://github.com/Panix22/prd-writer-skill",
+      "id": "gh-topic-1072324553",
+      "repoId": 1072324553,
+      "fullName": "ugur10/prd-template",
+      "name": "prd-template",
+      "description": "Comprehensive, reusable PRD template for product managers building digital products. Includes full template, real-world example, checklist, and best practices refined over 10+ years.",
+      "url": "https://github.com/ugur10/prd-template",
       "homepage": null,
-      "stars": 29,
-      "forks": 1,
-      "watchers": 29,
+      "stars": 27,
+      "forks": 4,
+      "watchers": 27,
       "language": null,
       "topics": [
-        "agent-skill",
-        "ai-agent",
-        "claude-code",
-        "claude-skill",
-        "codex",
+        "documentation",
         "prd",
-        "product-management"
+        "product-management",
+        "product-requirements",
+        "template"
       ],
       "owner": {
-        "login": "Panix22",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22882850?v=4",
-        "url": "https://github.com/Panix22"
+        "login": "ugur10",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20268759?v=4",
+        "url": "https://github.com/ugur10"
       },
-      "createdAt": "2026-06-04T08:31:07Z",
-      "updatedAt": "2026-11-08T12:15:37Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "createdAt": "2025-10-08T15:04:38Z",
+      "updatedAt": "2026-11-13T02:08:26Z",
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1532,38 +1562,8 @@
       },
       "createdAt": "2026-06-22T06:43:04Z",
       "updatedAt": "2026-08-12T08:46:03Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1072324553",
-      "repoId": 1072324553,
-      "fullName": "ugur10/prd-template",
-      "name": "prd-template",
-      "description": "Comprehensive, reusable PRD template for product managers building digital products. Includes full template, real-world example, checklist, and best practices refined over 10+ years.",
-      "url": "https://github.com/ugur10/prd-template",
-      "homepage": null,
-      "stars": 26,
-      "forks": 4,
-      "watchers": 26,
-      "language": null,
-      "topics": [
-        "documentation",
-        "prd",
-        "product-management",
-        "product-requirements",
-        "template"
-      ],
-      "owner": {
-        "login": "ugur10",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/20268759?v=4",
-        "url": "https://github.com/ugur10"
-      },
-      "createdAt": "2025-10-08T15:04:38Z",
-      "updatedAt": "2026-11-09T10:20:19Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1597,8 +1597,8 @@
       },
       "createdAt": "2026-01-17T10:32:10Z",
       "updatedAt": "2026-11-12T12:50:35Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1630,8 +1630,8 @@
       },
       "createdAt": "2026-07-03T08:40:34Z",
       "updatedAt": "2026-09-21T13:14:55Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1670,8 +1670,8 @@
       },
       "createdAt": "2026-09-15T04:57:28Z",
       "updatedAt": "2026-10-15T16:48:32Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1705,8 +1705,8 @@
       },
       "createdAt": "2026-03-26T19:29:43Z",
       "updatedAt": "2026-09-08T11:25:39Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1737,8 +1737,8 @@
       },
       "createdAt": "2026-06-09T13:41:11Z",
       "updatedAt": "2026-11-03T18:17:33Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1771,8 +1771,8 @@
       },
       "createdAt": "2026-03-16T11:21:25Z",
       "updatedAt": "2026-08-30T03:16:48Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1807,8 +1807,8 @@
       },
       "createdAt": "2026-05-26T11:13:14Z",
       "updatedAt": "2026-11-04T09:45:30Z",
-      "firstSeenAt": "2026-11-12T16:36:55.267Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:00:39.598Z",
+      "isNew": false,
       "existing": false
     }
   ]

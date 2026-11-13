@@ -1,9 +1,9 @@
 {
   "topic": "tdd",
-  "fetchedAt": "2026-11-12T16:37:50.909Z",
+  "fetchedAt": "2026-11-13T02:50:39.747Z",
   "count": 50,
-  "newCount": 48,
-  "existingCount": 2,
+  "newCount": 0,
+  "existingCount": 3,
   "items": [
     {
       "id": "gh-topic-123572362",
@@ -13,9 +13,9 @@
       "description": "Learn Go with test-driven development",
       "url": "https://github.com/quii/learn-go-with-tests",
       "homepage": null,
-      "stars": 23959,
+      "stars": 23961,
       "forks": 2936,
-      "watchers": 23959,
+      "watchers": 23961,
       "language": "Go",
       "topics": [
         "go",
@@ -30,9 +30,9 @@
         "url": "https://github.com/quii"
       },
       "createdAt": "2018-03-02T11:41:14Z",
-      "updatedAt": "2026-11-12T13:39:19Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:14:15Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -43,9 +43,9 @@
       "description": "☕️ Classic, reliable, trusted test framework for Node.js and the browser",
       "url": "https://github.com/mochajs/mocha",
       "homepage": "https://mochajs.org",
-      "stars": 22911,
+      "stars": 22912,
       "forks": 3146,
-      "watchers": 22911,
+      "watchers": 22912,
       "language": "JavaScript",
       "topics": [
         "bdd",
@@ -67,9 +67,9 @@
         "url": "https://github.com/mochajs"
       },
       "createdAt": "2011-03-07T18:44:25Z",
-      "updatedAt": "2026-11-12T03:05:28Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:48:46Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -81,7 +81,7 @@
       "url": "https://github.com/catchorg/Catch2",
       "homepage": "https://discord.gg/4CWS9zD",
       "stars": 21575,
-      "forks": 3440,
+      "forks": 3439,
       "watchers": 21575,
       "language": "C++",
       "topics": [
@@ -101,8 +101,8 @@
       },
       "createdAt": "2010-11-08T18:22:56Z",
       "updatedAt": "2026-11-12T14:06:08Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -113,9 +113,9 @@
       "description": "Node.js test runner that lets you develop with confidence 🚀",
       "url": "https://github.com/avajs/ava",
       "homepage": null,
-      "stars": 20830,
+      "stars": 20828,
       "forks": 1467,
-      "watchers": 20830,
+      "watchers": 20828,
       "language": "JavaScript",
       "topics": [
         "assert",
@@ -143,9 +143,9 @@
         "url": "https://github.com/avajs"
       },
       "createdAt": "2014-11-18T17:20:26Z",
-      "updatedAt": "2026-11-12T02:48:22Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:26:04Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -156,9 +156,9 @@
       "description": "Simple JavaScript testing framework for browsers and node.js",
       "url": "https://github.com/jasmine/jasmine",
       "homepage": "http://jasmine.github.io/",
-      "stars": 15808,
-      "forks": 2238,
-      "watchers": 15808,
+      "stars": 15807,
+      "forks": 2239,
+      "watchers": 15807,
       "language": "JavaScript",
       "topics": [
         "jasmine",
@@ -172,9 +172,9 @@
         "url": "https://github.com/jasmine"
       },
       "createdAt": "2008-12-02T23:46:37Z",
-      "updatedAt": "2026-11-10T17:10:09Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:23:36Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -185,9 +185,9 @@
       "description": "Test spies, stubs and mocks for JavaScript.",
       "url": "https://github.com/sinonjs/sinon",
       "homepage": "https://sinonjs.org/",
-      "stars": 9750,
+      "stars": 9752,
       "forks": 815,
-      "watchers": 9750,
+      "watchers": 9752,
       "language": "JavaScript",
       "topics": [
         "javascript",
@@ -205,9 +205,9 @@
         "url": "https://github.com/sinonjs"
       },
       "createdAt": "2010-06-29T21:15:32Z",
-      "updatedAt": "2026-11-12T13:45:05Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T21:12:37Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -247,8 +247,8 @@
       },
       "createdAt": "2026-03-20T00:12:39Z",
       "updatedAt": "2026-11-12T14:28:12Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -259,9 +259,9 @@
       "description": "BDD / TDD assertion framework for node.js and the browser that can be paired with any testing framework.",
       "url": "https://github.com/chaijs/chai",
       "homepage": "https://chaijs.github.io",
-      "stars": 8267,
+      "stars": 8268,
       "forks": 735,
-      "watchers": 8267,
+      "watchers": 8268,
       "language": "JavaScript",
       "topics": [
         "assertions",
@@ -276,9 +276,9 @@
         "url": "https://github.com/chaijs"
       },
       "createdAt": "2011-12-07T08:06:35Z",
-      "updatedAt": "2026-11-12T15:01:22Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:48:47Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -318,8 +318,8 @@
       },
       "createdAt": "2014-03-18T16:36:44Z",
       "updatedAt": "2026-11-12T09:04:00Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -330,9 +330,9 @@
       "description": "The fastest feature-rich C++11/14/17/20/23 single-header testing framework",
       "url": "https://github.com/doctest/doctest",
       "homepage": "https://bit.ly/doctest-docs",
-      "stars": 6924,
+      "stars": 6925,
       "forks": 706,
-      "watchers": 6924,
+      "watchers": 6925,
       "language": "C++",
       "topics": [
         "c-plus-plus",
@@ -356,9 +356,9 @@
         "url": "https://github.com/doctest"
       },
       "createdAt": "2014-08-05T21:43:51Z",
-      "updatedAt": "2026-11-12T15:10:48Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:31:08Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -390,8 +390,8 @@
       },
       "createdAt": "2014-02-07T07:59:29Z",
       "updatedAt": "2026-11-10T18:47:36Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -402,9 +402,9 @@
       "description": "Quick and Easy server testing/validation",
       "url": "https://github.com/goss-org/goss",
       "homepage": "https://goss.rocks",
-      "stars": 6005,
+      "stars": 6007,
       "forks": 505,
-      "watchers": 6005,
+      "watchers": 6007,
       "language": "Go",
       "topics": [
         "devops",
@@ -431,9 +431,9 @@
         "url": "https://github.com/goss-org"
       },
       "createdAt": "2015-10-01T23:13:01Z",
-      "updatedAt": "2026-11-12T09:04:45Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:21:08Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -467,8 +467,8 @@
       },
       "createdAt": "2017-10-17T22:31:23Z",
       "updatedAt": "2026-11-12T15:25:48Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -479,9 +479,9 @@
       "description": "Property based testing framework for JavaScript (like QuickCheck) written in TypeScript",
       "url": "https://github.com/dubzzz/fast-check",
       "homepage": "https://fast-check.dev/",
-      "stars": 5250,
+      "stars": 5251,
       "forks": 219,
-      "watchers": 5250,
+      "watchers": 5251,
       "language": "TypeScript",
       "topics": [
         "faker",
@@ -500,9 +500,9 @@
         "url": "https://github.com/dubzzz"
       },
       "createdAt": "2017-10-30T23:41:11Z",
-      "updatedAt": "2026-11-12T07:41:10Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:58:32Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -546,8 +546,8 @@
       },
       "createdAt": "2017-12-27T11:58:03Z",
       "updatedAt": "2026-11-12T13:27:10Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -580,8 +580,8 @@
       },
       "createdAt": "2013-07-28T10:35:25Z",
       "updatedAt": "2026-11-12T15:31:04Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -624,8 +624,8 @@
       },
       "createdAt": "2012-05-29T00:00:02Z",
       "updatedAt": "2026-11-10T16:42:58Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -658,8 +658,8 @@
       },
       "createdAt": "2020-01-08T02:11:38Z",
       "updatedAt": "2026-11-12T04:04:16Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -671,7 +671,7 @@
       "url": "https://github.com/pester/Pester",
       "homepage": "https://pester.dev/",
       "stars": 3381,
-      "forks": 479,
+      "forks": 478,
       "watchers": 3381,
       "language": "PowerShell",
       "topics": [
@@ -693,9 +693,9 @@
         "url": "https://github.com/pester"
       },
       "createdAt": "2011-01-02T03:33:19Z",
-      "updatedAt": "2026-11-11T19:43:42Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T19:46:20Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -724,8 +724,8 @@
       },
       "createdAt": "2014-12-15T17:34:43Z",
       "updatedAt": "2026-11-11T18:57:22Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -759,8 +759,8 @@
       },
       "createdAt": "2015-08-28T22:16:01Z",
       "updatedAt": "2026-11-11T03:43:42Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -798,8 +798,8 @@
       },
       "createdAt": "2015-09-30T12:36:43Z",
       "updatedAt": "2026-11-07T22:51:00Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -832,8 +832,8 @@
       },
       "createdAt": "2017-03-23T22:28:13Z",
       "updatedAt": "2026-11-08T11:36:57Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -866,8 +866,8 @@
       },
       "createdAt": "2013-10-18T23:43:29Z",
       "updatedAt": "2026-11-12T09:03:12Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -908,8 +908,53 @@
       },
       "createdAt": "2015-03-15T20:49:52Z",
       "updatedAt": "2026-11-08T18:03:24Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1234537369",
+      "repoId": 1234537369,
+      "fullName": "Gentleman-Programming/gentle-shell",
+      "name": "gentle-shell",
+      "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
+      "url": "https://github.com/Gentleman-Programming/gentle-shell",
+      "homepage": "https://gentle-ai.gentlemanprogramming.com/",
+      "stars": 2462,
+      "forks": 275,
+      "watchers": 2462,
+      "language": "TypeScript",
+      "topics": [
+        "agent-harness",
+        "agent-skills",
+        "ai-agents",
+        "ai-coding",
+        "ai-coding-agent",
+        "code-review",
+        "coding-agents",
+        "developer-tools",
+        "gentle-ai",
+        "gentle-shell-package",
+        "llm",
+        "mcp",
+        "openspec",
+        "pi",
+        "pi-coding-agent",
+        "rdd",
+        "sdd",
+        "spec-driven-development",
+        "subagents",
+        "tdd"
+      ],
+      "owner": {
+        "login": "Gentleman-Programming",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/97131605?v=4",
+        "url": "https://github.com/Gentleman-Programming"
+      },
+      "createdAt": "2026-05-10T10:11:33Z",
+      "updatedAt": "2026-11-13T02:47:12Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -946,8 +991,8 @@
       },
       "createdAt": "2011-03-21T18:02:54Z",
       "updatedAt": "2026-11-10T09:19:56Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -958,9 +1003,9 @@
       "description": "Automated TDD enforcement for Claude Code",
       "url": "https://github.com/nizos/tdd-guard",
       "homepage": null,
-      "stars": 2375,
+      "stars": 2376,
       "forks": 191,
-      "watchers": 2375,
+      "watchers": 2376,
       "language": "TypeScript",
       "topics": [
         "agentic-coding",
@@ -977,9 +1022,9 @@
         "url": "https://github.com/nizos"
       },
       "createdAt": "2025-07-07T09:14:14Z",
-      "updatedAt": "2026-11-09T18:03:01Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T18:17:44Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -990,9 +1035,9 @@
       "description": "Additional Jest matchers 🃏💪",
       "url": "https://github.com/jest-community/jest-extended",
       "homepage": "https://jest-extended.jestcommunity.dev/",
-      "stars": 2349,
-      "forks": 230,
-      "watchers": 2349,
+      "stars": 2348,
+      "forks": 229,
+      "watchers": 2348,
       "language": "TypeScript",
       "topics": [
         "assertions",
@@ -1008,9 +1053,9 @@
         "url": "https://github.com/jest-community"
       },
       "createdAt": "2017-10-14T22:39:21Z",
-      "updatedAt": "2026-11-09T04:27:59Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:13:52Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1021,9 +1066,9 @@
       "description": " Flaskr: Intro to Flask, Test-Driven Development (TDD), and JavaScript",
       "url": "https://github.com/mjhea0/flaskr-tdd",
       "homepage": null,
-      "stars": 2340,
+      "stars": 2339,
       "forks": 517,
-      "watchers": 2340,
+      "watchers": 2339,
       "language": "Python",
       "topics": [
         "flask",
@@ -1038,54 +1083,9 @@
         "url": "https://github.com/mjhea0"
       },
       "createdAt": "2013-11-09T23:41:32Z",
-      "updatedAt": "2026-11-12T12:45:54Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1234537369",
-      "repoId": 1234537369,
-      "fullName": "Gentleman-Programming/gentle-shell",
-      "name": "gentle-shell",
-      "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
-      "url": "https://github.com/Gentleman-Programming/gentle-shell",
-      "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2339,
-      "forks": 271,
-      "watchers": 2339,
-      "language": "TypeScript",
-      "topics": [
-        "agent-harness",
-        "agent-skills",
-        "ai-agents",
-        "ai-coding",
-        "ai-coding-agent",
-        "code-review",
-        "coding-agents",
-        "developer-tools",
-        "gentle-ai",
-        "gentle-shell-package",
-        "llm",
-        "mcp",
-        "openspec",
-        "pi",
-        "pi-coding-agent",
-        "rdd",
-        "sdd",
-        "spec-driven-development",
-        "subagents",
-        "tdd"
-      ],
-      "owner": {
-        "login": "Gentleman-Programming",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/97131605?v=4",
-        "url": "https://github.com/Gentleman-Programming"
-      },
-      "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-12T16:37:13Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:58:41Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1114,8 +1114,8 @@
       },
       "createdAt": "2012-11-05T20:59:59Z",
       "updatedAt": "2026-11-10T07:29:09Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1151,8 +1151,8 @@
       },
       "createdAt": "2011-01-28T14:59:02Z",
       "updatedAt": "2026-10-30T15:48:31Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1163,9 +1163,9 @@
       "description": "Plan, implement and verify software with your favorite coding agents. Work in the App or browser, or in your own terminal, IDE or agent app.",
       "url": "https://github.com/maxritter/qualitylayer",
       "homepage": "https://qualitylayer.dev",
-      "stars": 2144,
+      "stars": 2145,
       "forks": 180,
-      "watchers": 2144,
+      "watchers": 2145,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1195,10 +1195,10 @@
         "url": "https://github.com/maxritter"
       },
       "createdAt": "2025-10-18T08:30:23Z",
-      "updatedAt": "2026-11-12T15:56:38Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-12T18:43:06Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-100339187",
@@ -1208,9 +1208,9 @@
       "description": "Laravel FREE E-Commerce Software",
       "url": "https://github.com/jsdecena/laracom",
       "homepage": "https://jsdecena.github.io/laracom",
-      "stars": 2040,
+      "stars": 2041,
       "forks": 854,
-      "watchers": 2040,
+      "watchers": 2041,
       "language": "PHP",
       "topics": [
         "admin-lte",
@@ -1237,9 +1237,9 @@
         "url": "https://github.com/jsdecena"
       },
       "createdAt": "2017-08-15T04:38:27Z",
-      "updatedAt": "2026-11-06T19:25:08Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:16:46Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1270,8 +1270,8 @@
       },
       "createdAt": "2015-03-12T12:09:55Z",
       "updatedAt": "2026-11-10T07:45:29Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1313,8 +1313,8 @@
       },
       "createdAt": "2020-01-24T17:51:41Z",
       "updatedAt": "2026-11-11T21:00:07Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1347,8 +1347,8 @@
       },
       "createdAt": "2014-05-28T11:20:53Z",
       "updatedAt": "2026-11-10T07:46:14Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1387,8 +1387,8 @@
       },
       "createdAt": "2017-01-17T19:44:53Z",
       "updatedAt": "2026-11-11T07:57:58Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1420,8 +1420,8 @@
       },
       "createdAt": "2012-04-04T13:00:39Z",
       "updatedAt": "2026-11-11T19:22:09Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1465,8 +1465,8 @@
       },
       "createdAt": "2017-09-24T12:45:23Z",
       "updatedAt": "2026-11-12T12:09:47Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1500,8 +1500,8 @@
       },
       "createdAt": "2020-05-12T20:30:30Z",
       "updatedAt": "2026-11-10T21:19:14Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1512,9 +1512,9 @@
       "description": "C++20 μ(micro)/Unit Testing framework",
       "url": "https://github.com/boost-ext/ut",
       "homepage": "https://boost-ext.github.io/ut/",
-      "stars": 1449,
+      "stars": 1450,
       "forks": 134,
-      "watchers": 1449,
+      "watchers": 1450,
       "language": "C++",
       "topics": [
         "bdd",
@@ -1528,9 +1528,9 @@
         "url": "https://github.com/boost-ext"
       },
       "createdAt": "2019-10-06T01:33:26Z",
-      "updatedAt": "2026-11-08T22:07:08Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T18:12:12Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1571,8 +1571,8 @@
       },
       "createdAt": "2019-02-05T18:04:57Z",
       "updatedAt": "2026-11-10T05:01:41Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1614,8 +1614,8 @@
       },
       "createdAt": "2018-02-09T04:35:03Z",
       "updatedAt": "2026-11-12T07:15:56Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1657,9 +1657,9 @@
         "url": "https://github.com/mfaisalkhatri"
       },
       "createdAt": "2023-01-17T14:35:55Z",
-      "updatedAt": "2026-11-12T12:04:33Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T18:41:56Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1703,8 +1703,8 @@
       },
       "createdAt": "2025-09-16T13:07:11Z",
       "updatedAt": "2026-11-12T16:27:06Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1737,8 +1737,8 @@
       },
       "createdAt": "2017-05-12T06:49:12Z",
       "updatedAt": "2026-11-11T08:18:08Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1749,9 +1749,9 @@
       "description": "Unit testing tips by examples in PHP",
       "url": "https://github.com/sarven/unit-testing-tips",
       "homepage": "https://testing-tips.sarvendev.com/",
-      "stars": 1205,
+      "stars": 1203,
       "forks": 60,
-      "watchers": 1205,
+      "watchers": 1203,
       "language": "HTML",
       "topics": [
         "best-practices",
@@ -1770,9 +1770,9 @@
         "url": "https://github.com/sarven"
       },
       "createdAt": "2021-02-10T19:31:41Z",
-      "updatedAt": "2026-11-10T13:04:56Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:46:28Z",
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1816,8 +1816,8 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1845,8 +1845,8 @@
       },
       "createdAt": "2015-08-07T12:07:34Z",
       "updatedAt": "2026-11-11T13:28:18Z",
-      "firstSeenAt": "2026-11-12T16:37:50.909Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:03.695Z",
+      "isNew": false,
       "existing": false
     }
   ]

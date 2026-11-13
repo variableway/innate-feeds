@@ -1,9 +1,9 @@
 {
   "topic": "e2e-testing",
-  "fetchedAt": "2026-11-12T16:38:02.841Z",
+  "fetchedAt": "2026-11-13T02:50:57.190Z",
   "count": 50,
-  "newCount": 45,
-  "existingCount": 5,
+  "newCount": 0,
+  "existingCount": 6,
   "items": [
     {
       "id": "gh-topic-221981891",
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 99983,
-      "forks": 6856,
-      "watchers": 99983,
+      "stars": 100025,
+      "forks": 6861,
+      "watchers": 100025,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,9 +40,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-12T16:33:57Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:49:25Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -53,9 +53,9 @@
       "description": "See interfaces like a human. E2E testing in natural language.",
       "url": "https://github.com/web-infra-dev/midscene",
       "homepage": "https://midscenejs.com",
-      "stars": 15597,
+      "stars": 15600,
       "forks": 1220,
-      "watchers": 15597,
+      "watchers": 15600,
       "language": "TypeScript",
       "topics": [
         "browser-use",
@@ -73,9 +73,9 @@
         "url": "https://github.com/web-infra-dev"
       },
       "createdAt": "2024-07-23T04:03:50Z",
-      "updatedAt": "2026-11-12T14:35:48Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:18:11Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -86,9 +86,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13769,
-      "forks": 726,
-      "watchers": 13769,
+      "stars": 13786,
+      "forks": 728,
+      "watchers": 13786,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -114,21 +114,21 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-12T16:35:45Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:35:46Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-17420614",
       "repoId": 17420614,
       "fullName": "seleniumbase/SeleniumBase",
       "name": "SeleniumBase",
-      "description": "Python APIs for web automation, testing, and bypassing bot-detection.",
+      "description": "Python APIs for browser automation, testing, and bypassing bot-detection.",
       "url": "https://github.com/seleniumbase/SeleniumBase",
       "homepage": "https://seleniumbase.io",
       "stars": 13250,
-      "forks": 1617,
+      "forks": 1616,
       "watchers": 13250,
       "language": "Python",
       "topics": [
@@ -155,9 +155,9 @@
         "url": "https://github.com/seleniumbase"
       },
       "createdAt": "2014-03-04T23:07:33Z",
-      "updatedAt": "2026-11-11T22:31:26Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:39:09Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -189,8 +189,8 @@
       },
       "createdAt": "2018-01-05T14:19:59Z",
       "updatedAt": "2026-11-12T15:41:41Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -227,8 +227,8 @@
       },
       "createdAt": "2024-09-18T20:44:05Z",
       "updatedAt": "2026-11-12T07:59:59Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -239,9 +239,9 @@
       "description": "Open source device layer for AI coding agents: a CLI, MCP server, and typed Node.js API to control mobile, web, TV, and desktop apps on devices and simulators, locally or in the cloud.",
       "url": "https://github.com/callstack/agent-device",
       "homepage": "https://agent-device.dev",
-      "stars": 5352,
-      "forks": 397,
-      "watchers": 5352,
+      "stars": 5359,
+      "forks": 398,
+      "watchers": 5359,
       "language": "TypeScript",
       "topics": [
         "adb",
@@ -268,9 +268,9 @@
         "url": "https://github.com/callstack"
       },
       "createdAt": "2026-01-30T18:41:54Z",
-      "updatedAt": "2026-11-12T16:32:46Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:31:32Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -281,9 +281,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5173,
-      "forks": 298,
-      "watchers": 5173,
+      "stars": 5174,
+      "forks": 299,
+      "watchers": 5174,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -300,9 +300,9 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-12T08:21:10Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:53:45Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -336,8 +336,8 @@
       },
       "createdAt": "2017-09-30T20:32:25Z",
       "updatedAt": "2026-11-12T16:17:31Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -348,9 +348,9 @@
       "description": "A browser testing and web crawling library for PHP and Symfony",
       "url": "https://github.com/symfony/panther",
       "homepage": "https://symfony.com/packages/Panther",
-      "stars": 3071,
+      "stars": 3070,
       "forks": 236,
-      "watchers": 3071,
+      "watchers": 3070,
       "language": "PHP",
       "topics": [
         "chromedriver",
@@ -369,9 +369,9 @@
         "url": "https://github.com/symfony"
       },
       "createdAt": "2018-03-16T20:54:41Z",
-      "updatedAt": "2026-11-11T13:22:35Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:39:49Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -382,9 +382,9 @@
       "description": ":books: The starting point of your career as a Software Quality Assurance Engineer | Quality Automation Engineer :books:",
       "url": "https://github.com/fityanos/awesome-quality-assurance-roadmap",
       "homepage": null,
-      "stars": 2212,
+      "stars": 2213,
       "forks": 363,
-      "watchers": 2212,
+      "watchers": 2213,
       "language": null,
       "topics": [
         "api-testing",
@@ -405,9 +405,9 @@
         "url": "https://github.com/fityanos"
       },
       "createdAt": "2018-02-11T14:53:01Z",
-      "updatedAt": "2026-11-12T11:55:53Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:28:23Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -436,8 +436,8 @@
       },
       "createdAt": "2019-03-15T18:05:12Z",
       "updatedAt": "2026-11-11T14:27:29Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -470,8 +470,8 @@
       },
       "createdAt": "2020-07-07T17:19:36Z",
       "updatedAt": "2026-11-10T09:23:12Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -506,8 +506,8 @@
       },
       "createdAt": "2017-01-30T15:45:30Z",
       "updatedAt": "2026-11-11T13:36:06Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -518,9 +518,9 @@
       "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
       "url": "https://github.com/bug0inc/qa-agent",
       "homepage": "https://ai.bug0.com",
-      "stars": 1330,
+      "stars": 1331,
       "forks": 191,
-      "watchers": 1330,
+      "watchers": 1331,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -545,9 +545,9 @@
         "url": "https://github.com/bug0inc"
       },
       "createdAt": "2026-03-29T18:22:06Z",
-      "updatedAt": "2026-11-12T10:45:23Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:30:07Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -558,9 +558,9 @@
       "description": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
       "url": "https://github.com/open-wxa/wxa-runner",
       "homepage": "https://open-wxa.github.io/wxa-runner/",
-      "stars": 1235,
-      "forks": 141,
-      "watchers": 1235,
+      "stars": 1238,
+      "forks": 143,
+      "watchers": 1238,
       "language": "TypeScript",
       "topics": [
         "e2e-testing",
@@ -580,9 +580,9 @@
         "url": "https://github.com/open-wxa"
       },
       "createdAt": "2026-10-13T17:06:51Z",
-      "updatedAt": "2026-11-12T13:19:28Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:22:14Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -626,8 +626,8 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-12T04:07:15Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -671,8 +671,8 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -712,8 +712,8 @@
       },
       "createdAt": "2010-08-03T03:58:46Z",
       "updatedAt": "2026-11-11T13:34:14Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -744,8 +744,8 @@
       },
       "createdAt": "2025-06-05T21:16:31Z",
       "updatedAt": "2026-11-11T10:20:51Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -785,8 +785,8 @@
       },
       "createdAt": "2022-04-28T09:18:16Z",
       "updatedAt": "2026-11-09T22:09:48Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -823,8 +823,8 @@
       },
       "createdAt": "2018-11-01T15:11:47Z",
       "updatedAt": "2026-11-10T12:03:11Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -865,8 +865,8 @@
       },
       "createdAt": "2016-02-17T11:26:05Z",
       "updatedAt": "2026-11-10T13:33:03Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -899,8 +899,8 @@
       },
       "createdAt": "2015-04-17T08:52:14Z",
       "updatedAt": "2026-11-10T11:09:59Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -936,8 +936,8 @@
       },
       "createdAt": "2019-06-03T08:54:58Z",
       "updatedAt": "2026-11-10T09:32:02Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -979,8 +979,8 @@
       },
       "createdAt": "2016-06-16T16:20:06Z",
       "updatedAt": "2026-11-10T09:35:05Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1018,8 +1018,8 @@
       },
       "createdAt": "2019-12-25T11:53:42Z",
       "updatedAt": "2026-11-10T08:25:57Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1053,8 +1053,8 @@
       },
       "createdAt": "2020-07-26T13:46:10Z",
       "updatedAt": "2026-11-10T11:45:18Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1089,8 +1089,8 @@
       },
       "createdAt": "2026-03-24T10:22:09Z",
       "updatedAt": "2026-11-12T02:43:52Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1124,8 +1124,8 @@
       },
       "createdAt": "2018-07-15T07:02:02Z",
       "updatedAt": "2026-11-12T13:05:12Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1169,8 +1169,8 @@
       },
       "createdAt": "2026-01-29T20:55:29Z",
       "updatedAt": "2026-11-10T15:55:49Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1203,8 +1203,8 @@
       },
       "createdAt": "2017-05-03T03:45:27Z",
       "updatedAt": "2026-11-11T13:33:05Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1238,8 +1238,8 @@
       },
       "createdAt": "2023-07-23T20:55:17Z",
       "updatedAt": "2026-10-09T15:23:11Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1271,8 +1271,8 @@
       },
       "createdAt": "2019-03-09T00:23:37Z",
       "updatedAt": "2026-11-12T08:47:47Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1310,8 +1310,8 @@
       },
       "createdAt": "2024-01-25T20:11:22Z",
       "updatedAt": "2026-11-10T07:13:04Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1348,8 +1348,8 @@
       },
       "createdAt": "2023-01-18T13:03:34Z",
       "updatedAt": "2026-11-12T15:38:41Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1389,8 +1389,8 @@
       },
       "createdAt": "2026-03-12T01:47:17Z",
       "updatedAt": "2026-11-04T08:35:27Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1434,8 +1434,8 @@
       },
       "createdAt": "2017-12-29T15:58:24Z",
       "updatedAt": "2026-11-10T09:13:35Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1465,8 +1465,8 @@
       },
       "createdAt": "2021-11-19T16:14:05Z",
       "updatedAt": "2026-11-06T10:15:13Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1510,8 +1510,8 @@
       },
       "createdAt": "2026-02-06T21:20:07Z",
       "updatedAt": "2026-11-12T14:32:00Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1522,9 +1522,9 @@
       "description": "50 QA and test-automation skills for Claude Code, Codex, Cursor, and any Agent Skills Standard runtime.",
       "url": "https://github.com/petrkindlmann/qa-skills",
       "homepage": "https://qa-skills.com",
-      "stars": 265,
+      "stars": 266,
       "forks": 43,
-      "watchers": 265,
+      "watchers": 266,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1554,9 +1554,9 @@
         "url": "https://github.com/petrkindlmann"
       },
       "createdAt": "2026-03-23T16:11:04Z",
-      "updatedAt": "2026-11-12T15:52:32Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:52:53Z",
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1595,8 +1595,8 @@
       },
       "createdAt": "2026-04-14T11:10:09Z",
       "updatedAt": "2026-11-12T03:07:46Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1632,8 +1632,8 @@
       },
       "createdAt": "2023-02-16T20:59:01Z",
       "updatedAt": "2026-10-13T15:32:17Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1677,8 +1677,8 @@
       },
       "createdAt": "2026-01-12T09:20:28Z",
       "updatedAt": "2026-11-12T09:09:48Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1720,8 +1720,8 @@
       },
       "createdAt": "2020-05-01T11:05:44Z",
       "updatedAt": "2026-11-03T10:00:15Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1749,8 +1749,8 @@
       },
       "createdAt": "2020-02-26T19:01:26Z",
       "updatedAt": "2026-09-28T03:34:01Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1789,8 +1789,8 @@
       },
       "createdAt": "2025-11-11T09:34:40Z",
       "updatedAt": "2026-11-09T19:12:46Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1823,8 +1823,8 @@
       },
       "createdAt": "2020-10-22T18:33:52Z",
       "updatedAt": "2026-11-07T08:30:26Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1857,8 +1857,8 @@
       },
       "createdAt": "2018-05-26T13:58:04Z",
       "updatedAt": "2026-09-17T15:09:00Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1893,8 +1893,8 @@
       },
       "createdAt": "2020-01-31T21:32:50Z",
       "updatedAt": "2026-07-24T06:26:53Z",
-      "firstSeenAt": "2026-11-12T16:38:02.841Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T11:02:21.737Z",
+      "isNew": false,
       "existing": false
     }
   ]

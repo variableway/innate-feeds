@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12T09:06:11.108Z",
+  "updatedAt": "2026-11-13T02:41:45.078Z",
   "files": [
     {
       "path": "daily/daily-all.json",
       "timeframe": "daily",
       "language": "all",
-      "count": 25,
-      "fetchedAt": "2026-11-12T09:06:11.086Z"
+      "count": 50,
+      "fetchedAt": "2026-11-13T02:41:45.057Z"
     },
     {
       "path": "daily/daily-python.json",
@@ -21,7 +21,7 @@
       "timeframe": "weekly",
       "language": "all",
       "count": 3750,
-      "fetchedAt": "2026-11-12T09:06:11.095Z"
+      "fetchedAt": "2026-11-13T02:41:45.067Z"
     },
     {
       "path": "weekly/weekly-rust.json",
@@ -35,14 +35,14 @@
       "timeframe": "monthly",
       "language": "all",
       "count": 875,
-      "fetchedAt": "2026-11-12T09:06:11.101Z"
+      "fetchedAt": "2026-11-13T02:41:45.074Z"
     },
     {
       "path": "yearly/yearly-all.json",
       "timeframe": "yearly",
       "language": "all",
       "count": 75,
-      "fetchedAt": "2026-11-12T09:06:11.108Z"
+      "fetchedAt": "2026-11-13T02:41:45.078Z"
     }
   ]
 }

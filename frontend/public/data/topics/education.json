@@ -1,9 +1,9 @@
 {
   "topic": "education",
-  "fetchedAt": "2026-11-12T16:34:56.109Z",
+  "fetchedAt": "2026-11-13T02:46:31.416Z",
   "count": 50,
-  "newCount": 42,
-  "existingCount": 8,
+  "newCount": 0,
+  "existingCount": 10,
   "items": [
     {
       "id": "gh-topic-28457823",
@@ -13,9 +13,9 @@
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "homepage": "https://contribute.freecodecamp.org",
-      "stars": 459040,
-      "forks": 47462,
-      "watchers": 459040,
+      "stars": 459061,
+      "forks": 47465,
+      "watchers": 459061,
       "language": "TypeScript",
       "topics": [
         "careers",
@@ -40,9 +40,9 @@
         "url": "https://github.com/freeCodeCamp"
       },
       "createdAt": "2014-12-24T17:49:19Z",
-      "updatedAt": "2026-11-12T16:28:14Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:34:05Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -53,9 +53,9 @@
       "description": ":books: Freely available programming books",
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "homepage": "https://ebookfoundation.github.io/free-programming-books/",
-      "stars": 401487,
-      "forks": 67682,
-      "watchers": 401487,
+      "stars": 401500,
+      "forks": 67730,
+      "watchers": 401500,
       "language": "Python",
       "topics": [
         "books",
@@ -70,9 +70,9 @@
         "url": "https://github.com/EbookFoundation"
       },
       "createdAt": "2013-10-11T06:50:37Z",
-      "updatedAt": "2026-11-12T16:22:35Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:41:59Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -83,9 +83,9 @@
       "description": "All Algorithms implemented in Python",
       "url": "https://github.com/TheAlgorithms/Python",
       "homepage": "https://thealgorithms.github.io/Python/",
-      "stars": 226046,
-      "forks": 51302,
-      "watchers": 226046,
+      "stars": 226065,
+      "forks": 51315,
+      "watchers": 226065,
       "language": "Python",
       "topics": [
         "algorithm",
@@ -109,9 +109,9 @@
         "url": "https://github.com/TheAlgorithms"
       },
       "createdAt": "2016-07-16T09:44:01Z",
-      "updatedAt": "2026-11-12T15:53:40Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:42:28Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -122,9 +122,9 @@
       "description": "Free domain registration and practical DNS learning resources for everyone.",
       "url": "https://github.com/DigitalPlatDev/FreeDomain",
       "homepage": "https://dashboard.digitalplat.org",
-      "stars": 207952,
-      "forks": 4688,
-      "watchers": 207952,
+      "stars": 207982,
+      "forks": 4687,
+      "watchers": 207982,
       "language": "Markdown",
       "topics": [
         "digitalplat",
@@ -149,9 +149,9 @@
         "url": "https://github.com/DigitalPlatDev"
       },
       "createdAt": "2024-05-30T13:23:00Z",
-      "updatedAt": "2026-11-12T16:34:18Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:39:49Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -162,9 +162,9 @@
       "description": "A book series (2 published editions) on the JS language.",
       "url": "https://github.com/getify/You-Dont-Know-JS",
       "homepage": "https://www.amazon.com/dp/B085XXCJ7X",
-      "stars": 184844,
-      "forks": 33334,
-      "watchers": 184844,
+      "stars": 184850,
+      "forks": 33335,
+      "watchers": 184850,
       "language": null,
       "topics": [
         "async",
@@ -187,9 +187,9 @@
         "url": "https://github.com/getify"
       },
       "createdAt": "2013-11-16T02:37:24Z",
-      "updatedAt": "2026-11-12T16:07:43Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:56:03Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -200,9 +200,9 @@
       "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
       "url": "https://github.com/krahets/hello-algo",
       "homepage": "https://www.hello-algo.com",
-      "stars": 132267,
-      "forks": 15621,
-      "watchers": 132267,
+      "stars": 132278,
+      "forks": 15619,
+      "watchers": 132278,
       "language": "Python",
       "topics": [
         "algo",
@@ -223,9 +223,9 @@
         "url": "https://github.com/krahets"
       },
       "createdAt": "2022-11-04T11:08:34Z",
-      "updatedAt": "2026-11-12T16:08:04Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:43:54Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -236,9 +236,9 @@
       "description": "Coding articles to level up your development skills",
       "url": "https://github.com/Chalarangelo/30-seconds-of-code",
       "homepage": "https://30secondsofcode.org/",
-      "stars": 129491,
+      "stars": 129492,
       "forks": 12520,
-      "watchers": 129491,
+      "watchers": 129492,
       "language": "JavaScript",
       "topics": [
         "astro",
@@ -261,9 +261,9 @@
         "url": "https://github.com/Chalarangelo"
       },
       "createdAt": "2017-11-29T17:35:03Z",
-      "updatedAt": "2026-11-12T14:28:02Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:55:05Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -274,9 +274,9 @@
       "description": "24 Lessons, 12 Weeks, Get Started as a Web Developer",
       "url": "https://github.com/microsoft/Web-Dev-For-Beginners",
       "homepage": null,
-      "stars": 97124,
-      "forks": 16133,
-      "watchers": 97124,
+      "stars": 97126,
+      "forks": 16134,
+      "watchers": 97126,
       "language": "JavaScript",
       "topics": [
         "css",
@@ -294,9 +294,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2020-11-10T02:44:00Z",
-      "updatedAt": "2026-11-12T15:45:50Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:21:53Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -307,9 +307,9 @@
       "description": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
       "url": "https://github.com/microsoft/ML-For-Beginners",
       "homepage": null,
-      "stars": 92148,
+      "stars": 92155,
       "forks": 22915,
-      "watchers": 92148,
+      "watchers": 92155,
       "language": "Jupyter Notebook",
       "topics": [
         "data-science",
@@ -331,9 +331,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2021-03-03T01:34:05Z",
-      "updatedAt": "2026-11-12T15:21:09Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:34:27Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -344,9 +344,9 @@
       "description": "FCC China open source codebase and curriculum. Learn to code and help nonprofits.",
       "url": "https://github.com/FreeCodeCampChina/freecodecamp.cn",
       "homepage": "https://fcc.asia/",
-      "stars": 37788,
+      "stars": 37789,
       "forks": 1414,
-      "watchers": 37788,
+      "watchers": 37789,
       "language": "CSS",
       "topics": [
         "career",
@@ -370,9 +370,9 @@
         "url": "https://github.com/FreeCodeCampChina"
       },
       "createdAt": "2016-09-30T03:13:43Z",
-      "updatedAt": "2026-11-12T11:34:00Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:24:15Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -405,8 +405,8 @@
       },
       "createdAt": "2017-06-16T02:50:28Z",
       "updatedAt": "2026-11-12T15:14:50Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -417,9 +417,9 @@
       "description": "A GPT-4 AI Tutor Prompt for customizable personalized learning experiences.",
       "url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor",
       "homepage": "https://Mr-Ranedeer.com",
-      "stars": 29535,
+      "stars": 29536,
       "forks": 3240,
-      "watchers": 29535,
+      "watchers": 29536,
       "language": null,
       "topics": [
         "ai",
@@ -433,9 +433,9 @@
         "url": "https://github.com/JushBJJ"
       },
       "createdAt": "2023-03-31T12:37:26Z",
-      "updatedAt": "2026-11-12T11:15:41Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T16:45:33Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -446,9 +446,9 @@
       "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
       "url": "https://github.com/processing/p5.js",
       "homepage": "http://p5js.org/",
-      "stars": 24339,
+      "stars": 24341,
       "forks": 3905,
-      "watchers": 24339,
+      "watchers": 24341,
       "language": "JavaScript",
       "topics": [
         "art",
@@ -469,9 +469,9 @@
         "url": "https://github.com/processing"
       },
       "createdAt": "2013-02-26T03:14:47Z",
-      "updatedAt": "2026-11-12T14:50:00Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:32:49Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -513,9 +513,9 @@
         "url": "https://github.com/TheAlgorithms"
       },
       "createdAt": "2016-07-16T10:17:03Z",
-      "updatedAt": "2026-11-12T12:08:50Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:16:06Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -526,9 +526,9 @@
       "description": "Jargon from the functional programming world in simple terms!",
       "url": "https://github.com/hemanth/functional-programming-jargon",
       "homepage": "http://hemanth.github.io/functional-programming-jargon/",
-      "stars": 18745,
+      "stars": 18743,
       "forks": 1002,
-      "watchers": 18745,
+      "watchers": 18743,
       "language": "JavaScript",
       "topics": [
         "awesome-list",
@@ -544,9 +544,9 @@
         "url": "https://github.com/hemanth"
       },
       "createdAt": "2015-02-22T16:04:42Z",
-      "updatedAt": "2026-11-12T08:33:14Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:49:13Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -557,9 +557,9 @@
       "description": "💿 Free software that works great, and also happens to be open-source Python. ",
       "url": "https://github.com/mahmoud/awesome-python-applications",
       "homepage": "ftp://you:relookin@it#readme",
-      "stars": 18154,
+      "stars": 18153,
       "forks": 2749,
-      "watchers": 18154,
+      "watchers": 18153,
       "language": "Jupyter Notebook",
       "topics": [
         "application",
@@ -579,9 +579,9 @@
         "url": "https://github.com/mahmoud"
       },
       "createdAt": "2018-11-14T07:36:44Z",
-      "updatedAt": "2026-11-12T09:25:00Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:37:31Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -592,9 +592,9 @@
       "description": "Pragmatic, balanced FP in JavaScript. @FLJSBook on twitter.",
       "url": "https://github.com/getify/Functional-Light-JS",
       "homepage": "http://FLJSBook.com",
-      "stars": 16717,
+      "stars": 16715,
       "forks": 1905,
-      "watchers": 16717,
+      "watchers": 16715,
       "language": "JavaScript",
       "topics": [
         "book",
@@ -610,9 +610,9 @@
         "url": "https://github.com/getify"
       },
       "createdAt": "2016-08-17T01:40:50Z",
-      "updatedAt": "2026-11-12T11:56:37Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:08:29Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -623,9 +623,9 @@
       "description": "Short CSS code snippets for all your development needs",
       "url": "https://github.com/Chalarangelo/30-seconds-of-css",
       "homepage": "https://www.30secondsofcode.org/css/p/1",
-      "stars": 15963,
+      "stars": 15961,
       "forks": 990,
-      "watchers": 15963,
+      "watchers": 15961,
       "language": "CSS",
       "topics": [
         "css",
@@ -643,9 +643,9 @@
         "url": "https://github.com/Chalarangelo"
       },
       "createdAt": "2018-02-25T13:22:25Z",
-      "updatedAt": "2026-11-12T06:28:10Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:39:47Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -656,9 +656,9 @@
       "description": "Learning Vim and Vimscript doesn't have to be hard. This is the guide that you're looking for 📖",
       "url": "https://github.com/iggredible/Learn-Vim",
       "homepage": null,
-      "stars": 15364,
+      "stars": 15363,
       "forks": 1144,
-      "watchers": 15364,
+      "watchers": 15363,
       "language": "Dockerfile",
       "topics": [
         "advanced",
@@ -685,9 +685,9 @@
         "url": "https://github.com/iggredible"
       },
       "createdAt": "2020-07-13T13:27:44Z",
-      "updatedAt": "2026-11-12T15:26:24Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:44:24Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -698,9 +698,9 @@
       "description": "Source code for Hacker101.com - a free online web and mobile security class.",
       "url": "https://github.com/Hacker0x01/hacker101",
       "homepage": "https://www.hacker101.com",
-      "stars": 14642,
+      "stars": 14643,
       "forks": 2661,
-      "watchers": 14642,
+      "watchers": 14643,
       "language": "SCSS",
       "topics": [
         "clickjacking",
@@ -724,9 +724,9 @@
         "url": "https://github.com/Hacker0x01"
       },
       "createdAt": "2017-11-27T18:57:00Z",
-      "updatedAt": "2026-11-12T15:14:05Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T23:27:47Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -765,8 +765,8 @@
       },
       "createdAt": "2017-06-22T16:09:36Z",
       "updatedAt": "2026-11-11T21:20:56Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -777,9 +777,9 @@
       "description": "Must-watch videos about javascript",
       "url": "https://github.com/bolshchikov/js-must-watch",
       "homepage": null,
-      "stars": 13651,
+      "stars": 13650,
       "forks": 870,
-      "watchers": 13651,
+      "watchers": 13650,
       "language": null,
       "topics": [
         "awesome",
@@ -795,9 +795,9 @@
         "url": "https://github.com/bolshchikov"
       },
       "createdAt": "2014-06-21T09:56:48Z",
-      "updatedAt": "2026-11-11T13:42:54Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:35:08Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -808,9 +808,9 @@
       "description": "A list of resources for those interested in getting started in bug bounties",
       "url": "https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters",
       "homepage": null,
-      "stars": 12334,
+      "stars": 12336,
       "forks": 2055,
-      "watchers": 12334,
+      "watchers": 12336,
       "language": null,
       "topics": [
         "bug-bounty",
@@ -831,9 +831,9 @@
         "url": "https://github.com/nahamsec"
       },
       "createdAt": "2019-01-15T19:30:25Z",
-      "updatedAt": "2026-11-12T03:53:58Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:44:30Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -844,9 +844,9 @@
       "description": "Code. Music. Live.",
       "url": "https://github.com/sonic-pi-net/sonic-pi",
       "homepage": "https://sonic-pi.net",
-      "stars": 12259,
+      "stars": 12260,
       "forks": 1004,
-      "watchers": 12259,
+      "watchers": 12260,
       "language": "C++",
       "topics": [
         "art",
@@ -867,9 +867,9 @@
         "url": "https://github.com/sonic-pi-net"
       },
       "createdAt": "2013-04-29T11:17:54Z",
-      "updatedAt": "2026-11-12T15:40:26Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:06:40Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -880,9 +880,9 @@
       "description": "AnkiDroid: Anki flashcards on Android. Your secret trick to achieve superhuman information retention.",
       "url": "https://github.com/ankidroid/Anki-Android",
       "homepage": null,
-      "stars": 12232,
-      "forks": 3031,
-      "watchers": 12232,
+      "stars": 12234,
+      "forks": 3032,
+      "watchers": 12234,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -900,9 +900,9 @@
         "url": "https://github.com/ankidroid"
       },
       "createdAt": "2013-01-20T13:55:53Z",
-      "updatedAt": "2026-11-12T15:57:28Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:12:36Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -913,9 +913,9 @@
       "description": "Rethinking Student Productivity",
       "url": "https://github.com/noodle-run/noodle",
       "homepage": "https://noodle.run",
-      "stars": 12155,
+      "stars": 12154,
       "forks": 771,
-      "watchers": 12155,
+      "watchers": 12154,
       "language": "TypeScript",
       "topics": [
         "drizzle-orm",
@@ -941,9 +941,9 @@
         "url": "https://github.com/noodle-run"
       },
       "createdAt": "2022-05-19T03:44:15Z",
-      "updatedAt": "2026-11-12T06:13:57Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T01:04:11Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -978,8 +978,8 @@
       },
       "createdAt": "2018-04-07T20:11:31Z",
       "updatedAt": "2026-11-11T02:04:44Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -990,9 +990,9 @@
       "description": "张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
       "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
       "homepage": null,
-      "stars": 10754,
-      "forks": 2690,
-      "watchers": 10754,
+      "stars": 10757,
+      "forks": 2689,
+      "watchers": 10757,
       "language": null,
       "topics": [
         "agent-skills",
@@ -1022,9 +1022,9 @@
         "url": "https://github.com/alchaincyf"
       },
       "createdAt": "2026-04-05T11:37:18Z",
-      "updatedAt": "2026-11-12T09:30:08Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:21:23Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1035,9 +1035,9 @@
       "description": "Short Python code snippets for all your development needs",
       "url": "https://github.com/Chalarangelo/30-seconds-of-python",
       "homepage": "https://www.30secondsofcode.org/python/p/1",
-      "stars": 8810,
+      "stars": 8811,
       "forks": 1238,
-      "watchers": 8810,
+      "watchers": 8811,
       "language": "Python",
       "topics": [
         "education",
@@ -1055,9 +1055,9 @@
         "url": "https://github.com/Chalarangelo"
       },
       "createdAt": "2018-01-08T12:17:16Z",
-      "updatedAt": "2026-11-11T10:19:52Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:12:25Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1068,9 +1068,9 @@
       "description": "Digital logic design tool and simulator",
       "url": "https://github.com/logisim-evolution/logisim-evolution",
       "homepage": null,
-      "stars": 7934,
+      "stars": 7935,
       "forks": 1067,
-      "watchers": 7934,
+      "watchers": 7935,
       "language": "Java",
       "topics": [
         "circuit",
@@ -1095,9 +1095,9 @@
         "url": "https://github.com/logisim-evolution"
       },
       "createdAt": "2014-09-19T05:23:24Z",
-      "updatedAt": "2026-11-12T16:00:01Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:21:13Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1108,9 +1108,9 @@
       "description": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
       "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
       "homepage": "https://math.pansgo.com/",
-      "stars": 7847,
-      "forks": 2093,
-      "watchers": 7847,
+      "stars": 7864,
+      "forks": 2100,
+      "watchers": 7864,
       "language": "Python",
       "topics": [
         "chinese",
@@ -1136,10 +1136,10 @@
         "url": "https://github.com/xiaoyang111222"
       },
       "createdAt": "2026-10-18T09:04:43Z",
-      "updatedAt": "2026-11-12T16:24:23Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:34:17Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-93441336",
@@ -1149,9 +1149,9 @@
       "description": "Awesome Books",
       "url": "https://github.com/gendotnew/books",
       "homepage": null,
-      "stars": 7774,
+      "stars": 7775,
       "forks": 830,
-      "watchers": 7774,
+      "watchers": 7775,
       "language": null,
       "topics": [
         "awesome",
@@ -1171,9 +1171,9 @@
         "url": "https://github.com/gendotnew"
       },
       "createdAt": "2017-06-05T19:58:10Z",
-      "updatedAt": "2026-11-12T12:28:05Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:47:38Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1184,9 +1184,9 @@
       "description": "A free, online learning platform to make quality education accessible for all.",
       "url": "https://github.com/oppia/oppia",
       "homepage": "https://www.oppia.org",
-      "stars": 6989,
-      "forks": 5909,
-      "watchers": 6989,
+      "stars": 6988,
+      "forks": 5911,
+      "watchers": 6988,
       "language": "Python",
       "topics": [
         "angular",
@@ -1215,9 +1215,9 @@
         "url": "https://github.com/oppia"
       },
       "createdAt": "2015-08-14T00:16:14Z",
-      "updatedAt": "2026-11-12T15:23:22Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:35:48Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1248,8 +1248,8 @@
       },
       "createdAt": "2016-07-03T15:04:29Z",
       "updatedAt": "2026-11-12T11:57:06Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1260,9 +1260,9 @@
       "description": "CTFs as you need them",
       "url": "https://github.com/CTFd/CTFd",
       "homepage": "https://ctfd.io",
-      "stars": 6908,
-      "forks": 2796,
-      "watchers": 6908,
+      "stars": 6909,
+      "forks": 2797,
+      "watchers": 6909,
       "language": "Python",
       "topics": [
         "ctf",
@@ -1277,9 +1277,9 @@
         "url": "https://github.com/CTFd"
       },
       "createdAt": "2015-01-01T05:36:55Z",
-      "updatedAt": "2026-11-12T15:01:40Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T16:49:49Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1314,8 +1314,8 @@
       },
       "createdAt": "2025-11-21T02:36:29Z",
       "updatedAt": "2026-11-12T11:40:12Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1326,9 +1326,9 @@
       "description": "Text editor - Notes, ToDo & Filemanager (for Android) - Markdown, todo.txt, plaintext, math, ..",
       "url": "https://github.com/gsantner/markor",
       "homepage": "https://github.com/gsantner/markor/discussions/2269",
-      "stars": 6417,
+      "stars": 6418,
       "forks": 566,
-      "watchers": 6417,
+      "watchers": 6418,
       "language": "Java",
       "topics": [
         "android-app",
@@ -1358,9 +1358,9 @@
         "url": "https://github.com/gsantner"
       },
       "createdAt": "2017-08-26T00:08:35Z",
-      "updatedAt": "2026-11-12T08:11:14Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:28:22Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1391,8 +1391,8 @@
       },
       "createdAt": "2016-04-03T17:06:38Z",
       "updatedAt": "2026-11-07T17:30:57Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1417,8 +1417,8 @@
       },
       "createdAt": "2016-08-24T03:53:47Z",
       "updatedAt": "2026-11-11T08:58:07Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1429,9 +1429,9 @@
       "description": "A digital logic designer and circuit simulator.",
       "url": "https://github.com/hneemann/Digital",
       "homepage": null,
-      "stars": 6162,
+      "stars": 6164,
       "forks": 620,
-      "watchers": 6162,
+      "watchers": 6164,
       "language": "Java",
       "topics": [
         "circuit",
@@ -1448,9 +1448,9 @@
         "url": "https://github.com/hneemann"
       },
       "createdAt": "2016-06-28T17:40:16Z",
-      "updatedAt": "2026-11-12T09:16:23Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T20:22:12Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1461,9 +1461,9 @@
       "description": "Archive of the Coding Train website (first version)",
       "url": "https://github.com/CodingTrain/website-archive",
       "homepage": "https://codingtrain.github.io/website-archive/",
-      "stars": 5742,
+      "stars": 5741,
       "forks": 5422,
-      "watchers": 5742,
+      "watchers": 5741,
       "language": "JavaScript",
       "topics": [
         "art",
@@ -1479,9 +1479,9 @@
         "url": "https://github.com/CodingTrain"
       },
       "createdAt": "2015-08-25T02:03:37Z",
-      "updatedAt": "2026-11-08T12:14:24Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T22:15:04Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1525,8 +1525,8 @@
       },
       "createdAt": "2021-01-03T15:42:00Z",
       "updatedAt": "2026-11-12T14:24:04Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1537,9 +1537,9 @@
       "description": "🎈 Simple reactive notebooks for Julia",
       "url": "https://github.com/JuliaPluto/Pluto.jl",
       "homepage": "https://plutojl.org/",
-      "stars": 5405,
+      "stars": 5406,
       "forks": 352,
-      "watchers": 5405,
+      "watchers": 5406,
       "language": "JavaScript",
       "topics": [
         "designed-for-teachers",
@@ -1558,9 +1558,9 @@
         "url": "https://github.com/JuliaPluto"
       },
       "createdAt": "2020-02-23T01:50:12Z",
-      "updatedAt": "2026-11-11T13:26:39Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-12T17:20:25Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1571,9 +1571,9 @@
       "description": "A computer science textbook",
       "url": "https://github.com/algorithmica-org/algorithmica",
       "homepage": "https://algorithmica.org/",
-      "stars": 5151,
+      "stars": 5152,
       "forks": 530,
-      "watchers": 5151,
+      "watchers": 5152,
       "language": "Jupyter Notebook",
       "topics": [
         "computer-science",
@@ -1586,9 +1586,9 @@
         "url": "https://github.com/algorithmica-org"
       },
       "createdAt": "2021-01-27T19:28:30Z",
-      "updatedAt": "2026-11-12T10:26:21Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T00:36:02Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1622,8 +1622,8 @@
       },
       "createdAt": "2018-09-27T16:17:30Z",
       "updatedAt": "2026-11-12T06:28:12Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1634,9 +1634,9 @@
       "description": "🔬 A curated collection of 23,000+ agent skills for empirical research across 8 social science disciplines. | 精选 23,000+ AI Agent 技能库，覆盖8大社会科学学科的实证研究。CoPaper.AI 20分钟完成一篇可复现的规范实证论文，并支持用户上传 Skills。-- Maintained by CoPaper.AI from Stanford REAP.",
       "url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
       "homepage": "https://copaper.ai",
-      "stars": 5009,
+      "stars": 5010,
       "forks": 576,
-      "watchers": 5009,
+      "watchers": 5010,
       "language": "Stata",
       "topics": [
         "academic-research",
@@ -1663,9 +1663,9 @@
         "url": "https://github.com/brycewang-stanford"
       },
       "createdAt": "2026-04-03T06:31:20Z",
-      "updatedAt": "2026-11-12T16:06:49Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "updatedAt": "2026-11-13T02:40:32Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": true
     },
     {
@@ -1676,9 +1676,9 @@
       "description": "Echo Loop 是一款科学、高效的 AI 英语听说训练 App，通过精听、跟读、盲听、复述和间隔复习，自动驱动学习者把每一段音频真正练懂、练熟、练到会说。",
       "url": "https://github.com/echo-loop/Echo-Loop",
       "homepage": "https://www.echo-loop.top",
-      "stars": 4717,
-      "forks": 497,
-      "watchers": 4717,
+      "stars": 4721,
+      "forks": 496,
+      "watchers": 4721,
       "language": "Dart",
       "topics": [
         "ai",
@@ -1696,10 +1696,10 @@
         "url": "https://github.com/echo-loop"
       },
       "createdAt": "2026-05-07T08:41:45Z",
-      "updatedAt": "2026-11-12T15:22:19Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
-      "existing": false
+      "updatedAt": "2026-11-13T02:40:53Z",
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
+      "existing": true
     },
     {
       "id": "gh-topic-416144775",
@@ -1730,8 +1730,8 @@
       },
       "createdAt": "2021-10-12T01:44:38Z",
       "updatedAt": "2026-11-05T05:32:11Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1768,8 +1768,8 @@
       },
       "createdAt": "2018-01-18T16:36:55Z",
       "updatedAt": "2026-11-11T13:32:15Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     },
     {
@@ -1802,8 +1802,8 @@
       },
       "createdAt": "2015-11-17T11:07:26Z",
       "updatedAt": "2026-11-06T14:01:07Z",
-      "firstSeenAt": "2026-11-12T16:34:56.109Z",
-      "isNew": true,
+      "firstSeenAt": "2026-11-10T10:57:48.498Z",
+      "isNew": false,
       "existing": false
     }
   ]
