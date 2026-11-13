@@ -1,9 +1,9 @@
 {
   "topic": "qa",
-  "fetchedAt": "2026-11-13T02:51:15.228Z",
+  "fetchedAt": "2026-11-13T15:59:33.414Z",
   "count": 50,
-  "newCount": 0,
-  "existingCount": 5,
+  "newCount": 46,
+  "existingCount": 4,
   "items": [
     {
       "id": "gh-topic-10379607",
@@ -13,9 +13,9 @@
       "description": "GoReplay is an open-source tool for capturing and replaying live HTTP traffic into a test environment in order to continuously test your system with real data. It can be used to increase confidence in code deployments, configuration changes and infrastructure changes.",
       "url": "https://github.com/probelabs/goreplay",
       "homepage": "https://goreplay.org",
-      "stars": 19326,
+      "stars": 19324,
       "forks": 102,
-      "watchers": 19326,
+      "watchers": 19324,
       "language": "Go",
       "topics": [
         "devops",
@@ -30,9 +30,9 @@
         "url": "https://github.com/probelabs"
       },
       "createdAt": "2013-05-30T09:29:07Z",
-      "updatedAt": "2026-11-12T06:30:32Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T07:52:43Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -43,9 +43,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13786,
-      "forks": 728,
-      "watchers": 13786,
+      "stars": 13814,
+      "forks": 737,
+      "watchers": 13814,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -71,10 +71,10 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-13T02:35:46Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T15:23:05Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-2699935",
@@ -84,9 +84,9 @@
       "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.",
       "url": "https://github.com/squizlabs/PHP_CodeSniffer",
       "homepage": null,
-      "stars": 10765,
+      "stars": 10764,
       "forks": 1440,
-      "watchers": 10765,
+      "watchers": 10764,
       "language": "PHP",
       "topics": [
         "automation",
@@ -102,9 +102,9 @@
         "url": "https://github.com/squizlabs"
       },
       "createdAt": "2011-11-03T04:06:24Z",
-      "updatedAt": "2026-11-10T19:28:01Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T08:36:32Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -115,9 +115,9 @@
       "description": "Windows GUI Automation with Python (based on text properties)",
       "url": "https://github.com/pywinauto/pywinauto",
       "homepage": "http://pywinauto.github.io/",
-      "stars": 6411,
-      "forks": 791,
-      "watchers": 6411,
+      "stars": 6412,
+      "forks": 792,
+      "watchers": 6412,
       "language": "Python",
       "topics": [
         "automation",
@@ -144,9 +144,9 @@
         "url": "https://github.com/pywinauto"
       },
       "createdAt": "2015-05-25T09:50:40Z",
-      "updatedAt": "2026-11-13T02:05:37Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T06:50:01Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -157,9 +157,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5174,
-      "forks": 299,
-      "watchers": 5174,
+      "stars": 5175,
+      "forks": 300,
+      "watchers": 5175,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -176,9 +176,9 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-12T23:53:45Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T10:46:20Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -216,8 +216,8 @@
       },
       "createdAt": "2020-02-21T16:01:31Z",
       "updatedAt": "2026-11-12T09:50:16Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -250,8 +250,8 @@
       },
       "createdAt": "2019-09-17T20:45:48Z",
       "updatedAt": "2026-11-12T07:27:53Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -262,9 +262,9 @@
       "description": "AI agents can now use real Android and iOS apps, just like a human.",
       "url": "https://github.com/minitap-ai/mobile-use",
       "homepage": "https://minitap.ai",
-      "stars": 3388,
-      "forks": 315,
-      "watchers": 3388,
+      "stars": 3389,
+      "forks": 316,
+      "watchers": 3389,
       "language": "Python",
       "topics": [
         "agents",
@@ -284,9 +284,9 @@
         "url": "https://github.com/minitap-ai"
       },
       "createdAt": "2025-08-16T21:49:49Z",
-      "updatedAt": "2026-11-12T21:58:58Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T03:18:44Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -297,9 +297,9 @@
       "description": "UI automation library for .Net",
       "url": "https://github.com/FlaUI/FlaUI",
       "homepage": null,
-      "stars": 3205,
+      "stars": 3206,
       "forks": 449,
-      "watchers": 3205,
+      "watchers": 3206,
       "language": "C#",
       "topics": [
         "automation",
@@ -323,9 +323,9 @@
         "url": "https://github.com/FlaUI"
       },
       "createdAt": "2016-04-13T06:25:32Z",
-      "updatedAt": "2026-11-13T02:48:12Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T06:50:12Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -363,8 +363,8 @@
       },
       "createdAt": "2023-07-06T22:15:26Z",
       "updatedAt": "2026-11-12T15:00:10Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -399,8 +399,8 @@
       },
       "createdAt": "2018-02-11T14:53:01Z",
       "updatedAt": "2026-11-13T01:28:23Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -411,9 +411,9 @@
       "description": "Multi-agent graph orchestration engine for building your own software factory. Bring your own QA workflow, and the engine enforces it.",
       "url": "https://github.com/the-open-engine/zeroshot",
       "homepage": "https://zeroshot.sh",
-      "stars": 2151,
+      "stars": 2154,
       "forks": 207,
-      "watchers": 2151,
+      "watchers": 2154,
       "language": "Rust",
       "topics": [
         "agent-harness",
@@ -443,9 +443,9 @@
         "url": "https://github.com/the-open-engine"
       },
       "createdAt": "2025-12-25T17:12:45Z",
-      "updatedAt": "2026-11-13T02:20:17Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T08:47:09Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -482,8 +482,8 @@
       },
       "createdAt": "2022-09-19T07:07:34Z",
       "updatedAt": "2026-11-12T10:02:47Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -527,8 +527,8 @@
       },
       "createdAt": "2022-09-16T14:48:21Z",
       "updatedAt": "2026-11-12T15:03:42Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -561,8 +561,8 @@
       },
       "createdAt": "2020-04-28T08:39:58Z",
       "updatedAt": "2026-11-03T08:30:35Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -593,8 +593,8 @@
       },
       "createdAt": "2024-12-12T14:22:40Z",
       "updatedAt": "2026-11-12T12:33:33Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -629,8 +629,8 @@
       },
       "createdAt": "2023-11-08T02:29:53Z",
       "updatedAt": "2026-11-12T08:37:07Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -669,8 +669,8 @@
       },
       "createdAt": "2026-03-29T18:22:06Z",
       "updatedAt": "2026-11-12T17:30:07Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -714,8 +714,8 @@
       },
       "createdAt": "2017-07-13T20:55:46Z",
       "updatedAt": "2026-11-12T22:41:25Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -747,8 +747,8 @@
       },
       "createdAt": "2017-05-25T08:18:13Z",
       "updatedAt": "2026-11-12T15:40:15Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -777,8 +777,8 @@
       },
       "createdAt": "2018-03-22T00:57:39Z",
       "updatedAt": "2026-11-11T09:58:30Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -818,8 +818,8 @@
       },
       "createdAt": "2025-01-08T06:49:17Z",
       "updatedAt": "2026-11-09T18:01:07Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -831,7 +831,7 @@
       "url": "https://github.com/refreshdotdev/web-eval-agent",
       "homepage": "https://www.operative.sh/mcp",
       "stars": 1232,
-      "forks": 108,
+      "forks": 109,
       "watchers": 1232,
       "language": "Python",
       "topics": [
@@ -852,8 +852,8 @@
       },
       "createdAt": "2025-04-01T23:40:56Z",
       "updatedAt": "2026-11-08T16:06:17Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -894,8 +894,8 @@
       },
       "createdAt": "2014-04-08T20:05:26Z",
       "updatedAt": "2026-11-12T11:15:18Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -926,8 +926,8 @@
       },
       "createdAt": "2016-04-25T02:26:57Z",
       "updatedAt": "2026-11-09T21:15:47Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -957,8 +957,8 @@
       },
       "createdAt": "2019-06-01T04:04:53Z",
       "updatedAt": "2026-10-18T02:06:38Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1000,8 +1000,8 @@
       },
       "createdAt": "2017-04-20T01:42:01Z",
       "updatedAt": "2026-11-10T05:57:12Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1035,8 +1035,8 @@
       },
       "createdAt": "2023-04-30T06:11:18Z",
       "updatedAt": "2026-11-12T02:10:50Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1075,8 +1075,8 @@
       },
       "createdAt": "2024-06-04T12:04:28Z",
       "updatedAt": "2026-11-12T08:12:54Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1110,8 +1110,8 @@
       },
       "createdAt": "2022-04-15T11:02:00Z",
       "updatedAt": "2026-11-10T10:16:28Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1155,8 +1155,8 @@
       },
       "createdAt": "2021-08-21T08:41:49Z",
       "updatedAt": "2026-10-26T09:50:56Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1185,8 +1185,8 @@
       },
       "createdAt": "2021-10-13T02:14:03Z",
       "updatedAt": "2026-11-06T13:26:50Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1213,8 +1213,8 @@
       },
       "createdAt": "2019-04-04T08:06:54Z",
       "updatedAt": "2026-07-25T02:50:56Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1247,8 +1247,8 @@
       },
       "createdAt": "2015-11-21T09:13:25Z",
       "updatedAt": "2026-11-09T08:51:11Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1282,8 +1282,8 @@
       },
       "createdAt": "2022-01-11T12:47:45Z",
       "updatedAt": "2026-11-11T09:03:07Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1313,8 +1313,8 @@
       },
       "createdAt": "2023-11-23T08:57:08Z",
       "updatedAt": "2026-11-07T01:26:08Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -1353,8 +1353,8 @@
       },
       "createdAt": "2019-08-13T12:16:22Z",
       "updatedAt": "2026-11-10T07:00:36Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1396,8 +1396,8 @@
       },
       "createdAt": "2018-05-09T21:45:15Z",
       "updatedAt": "2026-11-12T17:40:47Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1429,8 +1429,8 @@
       },
       "createdAt": "2018-11-08T07:00:47Z",
       "updatedAt": "2026-11-12T20:40:01Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1463,8 +1463,8 @@
       },
       "createdAt": "2013-01-23T03:45:38Z",
       "updatedAt": "2026-11-10T13:30:04Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1499,8 +1499,8 @@
       },
       "createdAt": "2023-10-30T14:25:22Z",
       "updatedAt": "2026-11-10T22:36:14Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1534,8 +1534,8 @@
       },
       "createdAt": "2019-09-06T17:18:53Z",
       "updatedAt": "2026-10-24T10:15:38Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1567,8 +1567,8 @@
       },
       "createdAt": "2020-02-13T18:43:28Z",
       "updatedAt": "2026-10-10T20:12:34Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1599,8 +1599,8 @@
       },
       "createdAt": "2018-03-19T04:10:41Z",
       "updatedAt": "2026-10-10T11:44:20Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1636,8 +1636,8 @@
       },
       "createdAt": "2020-04-23T06:48:12Z",
       "updatedAt": "2026-11-05T04:10:35Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1676,8 +1676,8 @@
       },
       "createdAt": "2020-07-31T19:26:44Z",
       "updatedAt": "2026-07-31T11:07:35Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1707,8 +1707,8 @@
       },
       "createdAt": "2017-08-27T05:11:40Z",
       "updatedAt": "2026-08-19T17:25:46Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1739,8 +1739,8 @@
       },
       "createdAt": "2019-07-22T14:08:03Z",
       "updatedAt": "2026-05-28T01:26:21Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1751,9 +1751,9 @@
       "description": "Bilingual Agent Skills for software testing and QA workflows from requirements through release. Independently installable for Codex, Claude Code, Cursor, and compatible coding agents. Licensed under PolyForm Noncommercial 1.0.0.",
       "url": "https://github.com/naodeng/awesome-qa-skills",
       "homepage": "https://inaodeng.com/qaskills/",
-      "stars": 307,
+      "stars": 308,
       "forks": 39,
-      "watchers": 307,
+      "watchers": 308,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1775,9 +1775,9 @@
         "url": "https://github.com/naodeng"
       },
       "createdAt": "2026-02-04T10:12:49Z",
-      "updatedAt": "2026-11-13T01:29:25Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T02:58:00Z",
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -1814,8 +1814,8 @@
       },
       "createdAt": "2022-03-26T20:30:24Z",
       "updatedAt": "2026-11-05T23:57:39Z",
-      "firstSeenAt": "2026-11-10T11:02:34.410Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:33.414Z",
+      "isNew": true,
       "existing": false
     }
   ]

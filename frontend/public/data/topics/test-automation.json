@@ -1,9 +1,9 @@
 {
   "topic": "test-automation",
-  "fetchedAt": "2026-11-13T02:50:50.442Z",
+  "fetchedAt": "2026-11-13T15:59:21.053Z",
   "count": 50,
-  "newCount": 0,
-  "existingCount": 9,
+  "newCount": 43,
+  "existingCount": 7,
   "items": [
     {
       "id": "gh-topic-221981891",
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 100025,
-      "forks": 6861,
-      "watchers": 100025,
+      "stars": 100088,
+      "forks": 6867,
+      "watchers": 100088,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,9 +40,9 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-13T02:49:25Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T15:42:35Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -53,9 +53,9 @@
       "description": "Cross-platform automation framework for all kinds of apps, built on top of the W3C WebDriver protocol",
       "url": "https://github.com/appium/appium",
       "homepage": "http://appium.io/",
-      "stars": 22211,
-      "forks": 6306,
-      "watchers": 22211,
+      "stars": 22213,
+      "forks": 6305,
+      "watchers": 22213,
       "language": "TypeScript",
       "topics": [
         "android",
@@ -73,9 +73,9 @@
         "url": "https://github.com/appium"
       },
       "createdAt": "2013-01-09T22:49:50Z",
-      "updatedAt": "2026-11-12T19:18:34Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T12:29:47Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -86,9 +86,9 @@
       "description": "Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.",
       "url": "https://github.com/keploy/keploy",
       "homepage": "https://keploy.io",
-      "stars": 19734,
-      "forks": 2453,
-      "watchers": 19734,
+      "stars": 19758,
+      "forks": 2454,
+      "watchers": 19758,
       "language": "Go",
       "topics": [
         "agentic-ai",
@@ -112,9 +112,9 @@
         "url": "https://github.com/keploy"
       },
       "createdAt": "2022-01-19T10:40:31Z",
-      "updatedAt": "2026-11-12T20:43:44Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T15:40:33Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -125,9 +125,9 @@
       "description": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
       "url": "https://github.com/google/artemis",
       "homepage": null,
-      "stars": 17347,
-      "forks": 1931,
-      "watchers": 17347,
+      "stars": 17389,
+      "forks": 1938,
+      "watchers": 17389,
       "language": "Python",
       "topics": [
         "ai-agents",
@@ -142,10 +142,10 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2026-08-13T17:59:37Z",
-      "updatedAt": "2026-11-13T02:41:39Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T15:04:10Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-6207167",
@@ -180,8 +180,8 @@
       },
       "createdAt": "2012-10-13T20:27:12Z",
       "updatedAt": "2026-11-10T17:11:48Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -192,9 +192,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13786,
-      "forks": 728,
-      "watchers": 13786,
+      "stars": 13814,
+      "forks": 737,
+      "watchers": 13814,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -220,10 +220,10 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-13T02:35:46Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T15:23:05Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-237867883",
@@ -233,9 +233,9 @@
       "description": "MeterSphere 是新一代的开源持续测试工具，内置 AI 助手，让软件测试工作更简单、更高效，不再成为持续交付的瓶颈。",
       "url": "https://github.com/metersphere/metersphere",
       "homepage": "https://metersphere.io/",
-      "stars": 13629,
+      "stars": 13631,
       "forks": 2849,
-      "watchers": 13629,
+      "watchers": 13631,
       "language": "Java",
       "topics": [
         "api-testing",
@@ -256,9 +256,9 @@
         "url": "https://github.com/metersphere"
       },
       "createdAt": "2020-02-03T02:06:12Z",
-      "updatedAt": "2026-11-13T02:46:58Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T14:30:36Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -298,8 +298,8 @@
       },
       "createdAt": "2014-03-04T23:07:33Z",
       "updatedAt": "2026-11-12T20:39:09Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -334,8 +334,8 @@
       },
       "createdAt": "2016-06-15T11:58:01Z",
       "updatedAt": "2026-11-12T17:05:34Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -369,8 +369,8 @@
       },
       "createdAt": "2015-04-20T13:43:28Z",
       "updatedAt": "2026-11-12T00:34:40Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -381,9 +381,9 @@
       "description": "UI Automation Framework for Games and Apps",
       "url": "https://github.com/AirtestProject/Airtest",
       "homepage": "http://airtest.netease.com/",
-      "stars": 9647,
+      "stars": 9650,
       "forks": 1457,
-      "watchers": 9647,
+      "watchers": 9650,
       "language": "Python",
       "topics": [
         "android",
@@ -402,9 +402,9 @@
         "url": "https://github.com/AirtestProject"
       },
       "createdAt": "2018-01-24T04:00:35Z",
-      "updatedAt": "2026-11-12T18:57:07Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T11:08:34Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -415,9 +415,9 @@
       "description": "Test Automation Made Simple",
       "url": "https://github.com/karatelabs/karate",
       "homepage": "https://docs.karatelabs.io",
-      "stars": 9007,
+      "stars": 9008,
       "forks": 2048,
-      "watchers": 9007,
+      "watchers": 9008,
       "language": "Java",
       "topics": [
         "api-testing",
@@ -443,9 +443,9 @@
         "url": "https://github.com/karatelabs"
       },
       "createdAt": "2017-02-07T15:59:17Z",
-      "updatedAt": "2026-11-11T19:03:46Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T11:38:15Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -456,9 +456,9 @@
       "description": "Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.",
       "url": "https://github.com/testcontainers/testcontainers-java",
       "homepage": "https://testcontainers.org",
-      "stars": 8761,
+      "stars": 8762,
       "forks": 1952,
-      "watchers": 8761,
+      "watchers": 8762,
       "language": "Java",
       "topics": [
         "docker",
@@ -477,9 +477,9 @@
         "url": "https://github.com/testcontainers"
       },
       "createdAt": "2015-04-12T12:44:59Z",
-      "updatedAt": "2026-11-12T23:40:19Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T15:05:36Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -490,9 +490,9 @@
       "description": "A curated list of awesome test automation frameworks, tools, libraries, and software for different programming languages. Sponsored by https://zapple.tech and https://automated-testing.info",
       "url": "https://github.com/atinfo/awesome-test-automation",
       "homepage": "https://testomat.io",
-      "stars": 7227,
-      "forks": 1575,
-      "watchers": 7227,
+      "stars": 7226,
+      "forks": 1574,
+      "watchers": 7226,
       "language": null,
       "topics": [
         "android",
@@ -522,9 +522,9 @@
         "url": "https://github.com/atinfo"
       },
       "createdAt": "2015-01-28T16:56:00Z",
-      "updatedAt": "2026-11-13T01:06:39Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T09:35:45Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -535,9 +535,9 @@
       "description": "Java DSL for easy testing of REST services",
       "url": "https://github.com/rest-assured/rest-assured",
       "homepage": null,
-      "stars": 7150,
+      "stars": 7151,
       "forks": 1946,
-      "watchers": 7150,
+      "watchers": 7151,
       "language": "Java",
       "topics": [
         "groovy",
@@ -557,9 +557,9 @@
         "url": "https://github.com/rest-assured"
       },
       "createdAt": "2010-10-21T08:35:43Z",
-      "updatedAt": "2026-11-12T20:46:38Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T11:38:13Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -570,9 +570,9 @@
       "description": "SoloPi 自动化测试工具",
       "url": "https://github.com/alipay/SoloPi",
       "homepage": "https://www.solopi.cn/",
-      "stars": 6367,
-      "forks": 1273,
-      "watchers": 6367,
+      "stars": 6368,
+      "forks": 1274,
+      "watchers": 6368,
       "language": "Java",
       "topics": [
         "adb",
@@ -591,9 +591,9 @@
         "url": "https://github.com/alipay"
       },
       "createdAt": "2019-03-14T15:32:49Z",
-      "updatedAt": "2026-11-12T20:56:24Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T12:38:29Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -604,9 +604,9 @@
       "description": "Test suites for Web platform specs — including WHATWG, W3C, and others",
       "url": "https://github.com/web-platform-tests/wpt",
       "homepage": "https://web-platform-tests.org/",
-      "stars": 6312,
-      "forks": 4046,
-      "watchers": 6312,
+      "stars": 6313,
+      "forks": 4048,
+      "watchers": 6313,
       "language": "HTML",
       "topics": [
         "blink",
@@ -635,9 +635,9 @@
         "url": "https://github.com/web-platform-tests"
       },
       "createdAt": "2012-03-04T12:58:11Z",
-      "updatedAt": "2026-11-13T01:22:15Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T14:58:39Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -664,8 +664,8 @@
       },
       "createdAt": "2018-03-27T12:32:31Z",
       "updatedAt": "2026-11-12T12:16:08Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -676,9 +676,9 @@
       "description": "QA via natural language AI tests",
       "url": "https://github.com/antiwork/shortest",
       "homepage": "https://shortest.com",
-      "stars": 5699,
+      "stars": 5700,
       "forks": 340,
-      "watchers": 5699,
+      "watchers": 5700,
       "language": "TypeScript",
       "topics": [
         "anthropic",
@@ -701,9 +701,9 @@
         "url": "https://github.com/antiwork"
       },
       "createdAt": "2024-09-18T20:44:05Z",
-      "updatedAt": "2026-11-12T07:59:59Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T13:41:30Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -714,9 +714,9 @@
       "description": "Qodo-Cover: An AI-Powered Tool for Automated Test Generation and Code Coverage Enhancement! 💻🤖🧪🐞",
       "url": "https://github.com/qodo-ai/qodo-cover",
       "homepage": "https://qodo.ai/",
-      "stars": 5688,
+      "stars": 5687,
       "forks": 573,
-      "watchers": 5688,
+      "watchers": 5687,
       "language": "Python",
       "topics": [
         "agents",
@@ -730,9 +730,9 @@
         "url": "https://github.com/qodo-ai"
       },
       "createdAt": "2024-05-18T09:34:18Z",
-      "updatedAt": "2026-11-12T01:22:59Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T06:24:04Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -743,9 +743,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5174,
-      "forks": 299,
-      "watchers": 5174,
+      "stars": 5175,
+      "forks": 300,
+      "watchers": 5175,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -762,9 +762,9 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-12T23:53:45Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T10:46:20Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -792,8 +792,8 @@
       },
       "createdAt": "2016-03-20T08:48:45Z",
       "updatedAt": "2026-11-13T01:49:07Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -826,8 +826,8 @@
       },
       "createdAt": "2019-09-17T20:45:48Z",
       "updatedAt": "2026-11-12T07:27:53Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -838,9 +838,9 @@
       "description": "Mutation testing for JavaScript and friends",
       "url": "https://github.com/stryker-mutator/stryker-js",
       "homepage": "https://stryker-mutator.io",
-      "stars": 3362,
-      "forks": 315,
-      "watchers": 3362,
+      "stars": 3367,
+      "forks": 316,
+      "watchers": 3367,
       "language": "TypeScript",
       "topics": [
         "hacktoberfest",
@@ -858,9 +858,9 @@
         "url": "https://github.com/stryker-mutator"
       },
       "createdAt": "2016-02-12T13:14:28Z",
-      "updatedAt": "2026-11-12T20:46:36Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T13:05:38Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -893,8 +893,8 @@
       },
       "createdAt": "2014-03-24T08:06:58Z",
       "updatedAt": "2026-11-11T08:32:26Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -927,8 +927,8 @@
       },
       "createdAt": "2018-08-21T21:27:13Z",
       "updatedAt": "2026-11-09T15:53:58Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -962,8 +962,8 @@
       },
       "createdAt": "2012-03-07T14:39:13Z",
       "updatedAt": "2026-11-11T15:42:06Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -991,8 +991,8 @@
       },
       "createdAt": "2017-06-28T07:50:54Z",
       "updatedAt": "2026-11-12T11:14:05Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1003,9 +1003,9 @@
       "description": "☔ 敏捷开发最强大易用的接口工具，机器学习零代码测试与 AI 问答、生成代码与静态检查、生成文档与光标悬浮注释，腾讯、华为、SHEIN、传音、工行等使用 ☔ The most advanced tool for HTTP API. Machine learning no-code testing and AI assistant, generating codes and static analysis, generating comments and floating hints. Used by Tencent, Huawei, SHEIN, TRANSSION, ICBC, etc.",
       "url": "https://github.com/TommyLemon/APIAuto",
       "homepage": "http://apijson.cn/api",
-      "stars": 2223,
+      "stars": 2222,
       "forks": 275,
-      "watchers": 2223,
+      "watchers": 2222,
       "language": "JavaScript",
       "topics": [
         "aitesting",
@@ -1034,9 +1034,9 @@
         "url": "https://github.com/TommyLemon"
       },
       "createdAt": "2017-10-21T16:24:27Z",
-      "updatedAt": "2026-11-08T17:42:49Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T10:57:25Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1071,8 +1071,8 @@
       },
       "createdAt": "2016-09-26T02:47:43Z",
       "updatedAt": "2026-11-11T13:32:13Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1104,8 +1104,8 @@
       },
       "createdAt": "2013-10-27T00:48:22Z",
       "updatedAt": "2026-11-12T16:32:47Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1116,9 +1116,9 @@
       "description": "A cross-engine test automation framework based on UI inspection",
       "url": "https://github.com/AirtestProject/Poco",
       "homepage": "http://airtest.netease.com/",
-      "stars": 1965,
+      "stars": 1966,
       "forks": 344,
-      "watchers": 1965,
+      "watchers": 1966,
       "language": "Python",
       "topics": [
         "android",
@@ -1135,9 +1135,9 @@
         "url": "https://github.com/AirtestProject"
       },
       "createdAt": "2018-01-24T03:24:01Z",
-      "updatedAt": "2026-11-12T13:23:23Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T10:32:29Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1181,8 +1181,8 @@
       },
       "createdAt": "2022-09-16T14:48:21Z",
       "updatedAt": "2026-11-12T15:03:42Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1213,8 +1213,8 @@
       },
       "createdAt": "2018-09-08T11:33:38Z",
       "updatedAt": "2026-11-11T05:13:01Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1226,7 +1226,7 @@
       "url": "https://github.com/kubeshop/testkube",
       "homepage": "https://testkube.io",
       "stars": 1679,
-      "forks": 178,
+      "forks": 179,
       "watchers": 1679,
       "language": "Go",
       "topics": [
@@ -1251,8 +1251,8 @@
       },
       "createdAt": "2021-07-01T07:47:49Z",
       "updatedAt": "2026-11-12T11:08:13Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1294,8 +1294,8 @@
       },
       "createdAt": "2021-12-20T21:29:32Z",
       "updatedAt": "2026-11-12T15:06:40Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1324,45 +1324,8 @@
       },
       "createdAt": "2016-02-25T14:54:35Z",
       "updatedAt": "2026-11-08T03:28:21Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-546211411",
-      "repoId": 546211411,
-      "fullName": "godot-gdunit-labs/gdUnit4",
-      "name": "gdUnit4",
-      "description": "Embedded unit testing framework for Godot 4 supporting GDScript and C#. Features test-driven development, embedded test inspector, extensive assertions, mocking, scene testing.",
-      "url": "https://github.com/godot-gdunit-labs/gdUnit4",
-      "homepage": "https://godot-gdunit-labs.github.io/gdUnit4/latest/",
-      "stars": 1302,
-      "forks": 82,
-      "watchers": 1302,
-      "language": "GDScript",
-      "topics": [
-        "game-development",
-        "gdscript",
-        "gdunit4",
-        "godot4",
-        "mocking",
-        "scene-testing",
-        "test-automation",
-        "testing",
-        "testing-tools",
-        "unit-test",
-        "unittest",
-        "unittest-framework"
-      ],
-      "owner": {
-        "login": "godot-gdunit-labs",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/249951991?v=4",
-        "url": "https://github.com/godot-gdunit-labs"
-      },
-      "createdAt": "2022-10-05T18:09:10Z",
-      "updatedAt": "2026-11-12T16:00:59Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1405,8 +1368,45 @@
       },
       "createdAt": "2023-01-17T14:35:55Z",
       "updatedAt": "2026-11-12T18:41:56Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-546211411",
+      "repoId": 546211411,
+      "fullName": "godot-gdunit-labs/gdUnit4",
+      "name": "gdUnit4",
+      "description": "Embedded unit testing framework for Godot 4 supporting GDScript and C#. Features test-driven development, embedded test inspector, extensive assertions, mocking, scene testing.",
+      "url": "https://github.com/godot-gdunit-labs/gdUnit4",
+      "homepage": "https://godot-gdunit-labs.github.io/gdUnit4/latest/",
+      "stars": 1301,
+      "forks": 82,
+      "watchers": 1301,
+      "language": "GDScript",
+      "topics": [
+        "game-development",
+        "gdscript",
+        "gdunit4",
+        "godot4",
+        "mocking",
+        "scene-testing",
+        "test-automation",
+        "testing",
+        "testing-tools",
+        "unit-test",
+        "unittest",
+        "unittest-framework"
+      ],
+      "owner": {
+        "login": "godot-gdunit-labs",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/249951991?v=4",
+        "url": "https://github.com/godot-gdunit-labs"
+      },
+      "createdAt": "2022-10-05T18:09:10Z",
+      "updatedAt": "2026-11-13T15:52:12Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1436,8 +1436,8 @@
       },
       "createdAt": "2018-08-31T16:16:18Z",
       "updatedAt": "2026-11-03T06:44:22Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1470,8 +1470,8 @@
       },
       "createdAt": "2017-05-12T06:49:12Z",
       "updatedAt": "2026-11-11T08:18:08Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1515,8 +1515,8 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-12T04:07:15Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1551,9 +1551,52 @@
       },
       "createdAt": "2023-02-28T09:18:00Z",
       "updatedAt": "2026-11-06T08:52:58Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
+    },
+    {
+      "id": "gh-topic-888701643",
+      "repoId": 888701643,
+      "fullName": "test-zeus-ai/testzeus-hercules",
+      "name": "testzeus-hercules",
+      "description": "Hercules is the world’s first open-source testing agent, enabling UI, API, Security, Accessibility, and Visual validations – all without code or maintenance. Automate testing effortlessly and let Hercules handle the heavy lifting! ⚡",
+      "url": "https://github.com/test-zeus-ai/testzeus-hercules",
+      "homepage": "https://testzeus.com/hercules",
+      "stars": 1221,
+      "forks": 203,
+      "watchers": 1221,
+      "language": "Python",
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "autogen",
+        "automation",
+        "browser",
+        "end-to-end-testing",
+        "hercules",
+        "large-action-model",
+        "playwright",
+        "qa-automation",
+        "rpa",
+        "software-testing",
+        "test-automation",
+        "testing",
+        "testing-tools",
+        "testzeus"
+      ],
+      "owner": {
+        "login": "test-zeus-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/178647201?v=4",
+        "url": "https://github.com/test-zeus-ai"
+      },
+      "createdAt": "2024-11-14T21:19:10Z",
+      "updatedAt": "2026-11-13T09:46:49Z",
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-8245842",
@@ -1596,52 +1639,9 @@
       },
       "createdAt": "2013-02-17T04:13:19Z",
       "updatedAt": "2026-10-31T00:32:07Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
-    },
-    {
-      "id": "gh-topic-888701643",
-      "repoId": 888701643,
-      "fullName": "test-zeus-ai/testzeus-hercules",
-      "name": "testzeus-hercules",
-      "description": "Hercules is the world’s first open-source testing agent, enabling UI, API, Security, Accessibility, and Visual validations – all without code or maintenance. Automate testing effortlessly and let Hercules handle the heavy lifting! ⚡",
-      "url": "https://github.com/test-zeus-ai/testzeus-hercules",
-      "homepage": "https://testzeus.com/hercules",
-      "stars": 1220,
-      "forks": 203,
-      "watchers": 1220,
-      "language": "Python",
-      "topics": [
-        "agent",
-        "agentic-ai",
-        "agents",
-        "ai",
-        "autogen",
-        "automation",
-        "browser",
-        "end-to-end-testing",
-        "hercules",
-        "large-action-model",
-        "playwright",
-        "qa-automation",
-        "rpa",
-        "software-testing",
-        "test-automation",
-        "testing",
-        "testing-tools",
-        "testzeus"
-      ],
-      "owner": {
-        "login": "test-zeus-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/178647201?v=4",
-        "url": "https://github.com/test-zeus-ai"
-      },
-      "createdAt": "2024-11-14T21:19:10Z",
-      "updatedAt": "2026-11-12T10:43:12Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
-      "existing": true
     },
     {
       "id": "gh-topic-465599955",
@@ -1675,8 +1675,8 @@
       },
       "createdAt": "2022-03-03T06:42:29Z",
       "updatedAt": "2026-11-11T10:03:07Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -1716,8 +1716,8 @@
       },
       "createdAt": "2010-08-03T03:58:46Z",
       "updatedAt": "2026-11-11T13:34:14Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1749,8 +1749,8 @@
       },
       "createdAt": "2017-11-01T14:51:25Z",
       "updatedAt": "2026-11-12T01:46:48Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1781,8 +1781,8 @@
       },
       "createdAt": "2018-08-21T01:35:53Z",
       "updatedAt": "2026-11-11T20:37:08Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1811,8 +1811,8 @@
       },
       "createdAt": "2015-02-02T14:21:10Z",
       "updatedAt": "2026-11-12T20:43:17Z",
-      "firstSeenAt": "2026-11-10T11:02:15.982Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:59:21.053Z",
+      "isNew": true,
       "existing": true
     }
   ]

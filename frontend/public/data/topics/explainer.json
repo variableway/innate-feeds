@@ -1,9 +1,9 @@
 {
   "topic": "explainer",
-  "fetchedAt": "2026-11-13T02:48:03.111Z",
+  "fetchedAt": "2026-11-13T15:57:29.326Z",
   "count": 50,
-  "newCount": 0,
-  "existingCount": 2,
+  "newCount": 50,
+  "existingCount": 0,
   "items": [
     {
       "id": "gh-topic-1401476500",
@@ -13,9 +13,9 @@
       "description": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
       "url": "https://github.com/QingYunA/answer-me-with-html",
       "homepage": "https://answer-me-with-html.com/",
-      "stars": 6275,
-      "forks": 419,
-      "watchers": 6275,
+      "stars": 6303,
+      "forks": 423,
+      "watchers": 6303,
       "language": "JavaScript",
       "topics": [
         "agent-skill",
@@ -38,10 +38,10 @@
         "url": "https://github.com/QingYunA"
       },
       "createdAt": "2026-10-02T09:57:40Z",
-      "updatedAt": "2026-11-13T02:18:25Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T15:47:44Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-218478064",
@@ -78,8 +78,8 @@
       },
       "createdAt": "2019-10-30T08:26:16Z",
       "updatedAt": "2026-11-10T16:39:19Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -107,8 +107,8 @@
       },
       "createdAt": "2018-12-06T00:30:17Z",
       "updatedAt": "2026-11-12T03:49:40Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -119,9 +119,9 @@
       "description": "归藏的材质插画 skill：生成带字解释图、图表美化和参考辅助配图。",
       "url": "https://github.com/op7418/guizang-material-illustration",
       "homepage": null,
-      "stars": 1252,
+      "stars": 1257,
       "forks": 120,
-      "watchers": 1252,
+      "watchers": 1257,
       "language": null,
       "topics": [
         "agent",
@@ -143,10 +143,10 @@
         "url": "https://github.com/op7418"
       },
       "createdAt": "2026-07-07T13:57:13Z",
-      "updatedAt": "2026-11-12T08:09:48Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T11:49:33Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-210882381",
@@ -178,8 +178,8 @@
       },
       "createdAt": "2019-09-25T15:43:56Z",
       "updatedAt": "2026-11-10T06:43:07Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -222,8 +222,8 @@
       },
       "createdAt": "2019-09-04T16:39:48Z",
       "updatedAt": "2026-11-10T06:46:45Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -253,8 +253,8 @@
       },
       "createdAt": "2023-02-07T15:03:04Z",
       "updatedAt": "2026-09-25T12:03:00Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -290,8 +290,40 @@
       },
       "createdAt": "2026-10-04T21:41:34Z",
       "updatedAt": "2026-11-11T15:19:04Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-855226284",
+      "repoId": 855226284,
+      "fullName": "eXascaleInfolab/ImputeGAP",
+      "name": "ImputeGAP",
+      "description": "ImputeGAP is a comprehensive Python library for imputation of missing values in time series data. It implements user-friendly APIs to easily visualize, analyze, and repair incomplete time series datasets. ",
+      "url": "https://github.com/eXascaleInfolab/ImputeGAP",
+      "homepage": "https://imputegap.readthedocs.io/",
+      "stars": 73,
+      "forks": 20,
+      "watchers": 73,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "auto-ml",
+        "benchmark",
+        "downstream-analysis",
+        "explainer",
+        "imputation",
+        "missing-values",
+        "time-series"
+      ],
+      "owner": {
+        "login": "eXascaleInfolab",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/18044827?v=4",
+        "url": "https://github.com/eXascaleInfolab"
+      },
+      "createdAt": "2024-09-10T14:27:12Z",
+      "updatedAt": "2026-11-13T14:53:53Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -319,40 +351,8 @@
       },
       "createdAt": "2021-04-13T17:15:46Z",
       "updatedAt": "2026-09-17T05:54:18Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-855226284",
-      "repoId": 855226284,
-      "fullName": "eXascaleInfolab/ImputeGAP",
-      "name": "ImputeGAP",
-      "description": "ImputeGAP is a comprehensive Python library for imputation of missing values in time series data. It implements user-friendly APIs to easily visualize, analyze, and repair incomplete time series datasets. ",
-      "url": "https://github.com/eXascaleInfolab/ImputeGAP",
-      "homepage": "https://imputegap.readthedocs.io/",
-      "stars": 72,
-      "forks": 19,
-      "watchers": 72,
-      "language": "Jupyter Notebook",
-      "topics": [
-        "auto-ml",
-        "benchmark",
-        "downstream-analysis",
-        "explainer",
-        "imputation",
-        "missing-values",
-        "time-series"
-      ],
-      "owner": {
-        "login": "eXascaleInfolab",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/18044827?v=4",
-        "url": "https://github.com/eXascaleInfolab"
-      },
-      "createdAt": "2024-09-10T14:27:12Z",
-      "updatedAt": "2026-11-10T18:02:56Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -385,8 +385,42 @@
       },
       "createdAt": "2026-06-19T15:31:24Z",
       "updatedAt": "2026-11-11T21:08:36Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1404662214",
+      "repoId": 1404662214,
+      "fullName": "Win-Hao/knowledge-video",
+      "name": "knowledge-video",
+      "description": "Agent skill: turn one topic into a 1–3 minute knowledge explainer video — fact-checked article, scene-by-scene copy, freely licensed images, three looks to pick from, a beat-synced storyboard, the opening first. Rendered with HyperFrames.",
+      "url": "https://github.com/Win-Hao/knowledge-video",
+      "homepage": null,
+      "stars": 63,
+      "forks": 5,
+      "watchers": 63,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "beat-sync",
+        "claude-code",
+        "explainer",
+        "hyperframes",
+        "knowledge",
+        "skill",
+        "storyboard",
+        "video"
+      ],
+      "owner": {
+        "login": "Win-Hao",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/149796298?v=4",
+        "url": "https://github.com/Win-Hao"
+      },
+      "createdAt": "2026-10-04T17:16:22Z",
+      "updatedAt": "2026-11-13T11:11:51Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -419,42 +453,8 @@
       },
       "createdAt": "2026-11-05T11:58:42Z",
       "updatedAt": "2026-11-12T21:17:17Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1404662214",
-      "repoId": 1404662214,
-      "fullName": "Win-Hao/knowledge-video",
-      "name": "knowledge-video",
-      "description": "Agent skill: turn one topic into a 1–3 minute knowledge explainer video — fact-checked article, scene-by-scene copy, freely licensed images, three looks to pick from, a beat-synced storyboard, the opening first. Rendered with HyperFrames.",
-      "url": "https://github.com/Win-Hao/knowledge-video",
-      "homepage": null,
-      "stars": 61,
-      "forks": 5,
-      "watchers": 61,
-      "language": "Python",
-      "topics": [
-        "agent-skills",
-        "beat-sync",
-        "claude-code",
-        "explainer",
-        "hyperframes",
-        "knowledge",
-        "skill",
-        "storyboard",
-        "video"
-      ],
-      "owner": {
-        "login": "Win-Hao",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/149796298?v=4",
-        "url": "https://github.com/Win-Hao"
-      },
-      "createdAt": "2026-10-04T17:16:22Z",
-      "updatedAt": "2026-11-06T09:47:17Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -465,9 +465,9 @@
       "description": "f(t)函数: Agent制作的动画集. 自由软件, 自由视频.",
       "url": "https://github.com/Water-Run/ft",
       "homepage": "https://space.bilibili.com/68328330",
-      "stars": 57,
-      "forks": 5,
-      "watchers": 57,
+      "stars": 59,
+      "forks": 6,
+      "watchers": 59,
       "language": "JavaScript",
       "topics": [
         "agent",
@@ -497,9 +497,9 @@
         "url": "https://github.com/Water-Run"
       },
       "createdAt": "2026-10-02T05:59:48Z",
-      "updatedAt": "2026-11-12T07:23:18Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T08:45:24Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -530,8 +530,8 @@
       },
       "createdAt": "2026-03-17T21:10:03Z",
       "updatedAt": "2026-11-12T04:50:59Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -562,8 +562,8 @@
       },
       "createdAt": "2022-04-14T02:51:37Z",
       "updatedAt": "2026-04-05T11:54:53Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -589,8 +589,8 @@
       },
       "createdAt": "2023-06-09T14:09:46Z",
       "updatedAt": "2026-11-02T18:57:04Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -601,9 +601,9 @@
       "description": "A Claude Skill that builds polished, interactive HTML explainers, with an automatic QA loop and anti-slop visual guards.",
       "url": "https://github.com/ds-vibe/html-explainer",
       "homepage": "https://ds-vibe.github.io/html-explainer/",
-      "stars": 23,
+      "stars": 24,
       "forks": 4,
-      "watchers": 23,
+      "watchers": 24,
       "language": "JavaScript",
       "topics": [
         "anthropic",
@@ -620,9 +620,9 @@
         "url": "https://github.com/ds-vibe"
       },
       "createdAt": "2026-06-22T21:22:38Z",
-      "updatedAt": "2026-10-27T07:05:18Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T05:43:45Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -653,8 +653,8 @@
       },
       "createdAt": "2026-08-27T00:02:30Z",
       "updatedAt": "2026-11-10T12:19:47Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -696,8 +696,8 @@
       },
       "createdAt": "2026-10-03T10:05:59Z",
       "updatedAt": "2026-10-30T00:54:13Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -735,8 +735,8 @@
       },
       "createdAt": "2026-04-08T17:14:18Z",
       "updatedAt": "2026-06-17T15:26:15Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -766,8 +766,8 @@
       },
       "createdAt": "2022-03-23T12:05:19Z",
       "updatedAt": "2026-11-03T22:39:16Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -796,8 +796,8 @@
       },
       "createdAt": "2026-10-31T15:08:53Z",
       "updatedAt": "2026-11-10T02:38:42Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -829,8 +829,8 @@
       },
       "createdAt": "2026-08-26T11:38:03Z",
       "updatedAt": "2026-11-11T10:39:47Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -863,8 +863,8 @@
       },
       "createdAt": "2026-10-03T20:00:14Z",
       "updatedAt": "2026-10-16T09:52:32Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -892,8 +892,8 @@
       },
       "createdAt": "2016-07-12T11:20:53Z",
       "updatedAt": "2026-10-09T05:53:06Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -927,8 +927,8 @@
       },
       "createdAt": "2026-10-31T22:08:58Z",
       "updatedAt": "2026-11-08T10:41:43Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -965,8 +965,8 @@
       },
       "createdAt": "2026-05-22T16:21:39Z",
       "updatedAt": "2026-10-23T18:15:58Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1010,8 +1010,8 @@
       },
       "createdAt": "2026-05-31T01:06:17Z",
       "updatedAt": "2026-10-28T22:41:04Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1045,8 +1045,8 @@
       },
       "createdAt": "2026-10-10T00:29:24Z",
       "updatedAt": "2026-11-12T03:23:32Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1077,8 +1077,8 @@
       },
       "createdAt": "2026-08-26T10:39:07Z",
       "updatedAt": "2026-10-02T07:44:33Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1122,8 +1122,8 @@
       },
       "createdAt": "2020-08-25T19:41:44Z",
       "updatedAt": "2024-05-12T09:11:53Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1159,8 +1159,38 @@
       },
       "createdAt": "2026-10-16T17:01:39Z",
       "updatedAt": "2026-11-04T18:24:47Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1447125522",
+      "repoId": 1447125522,
+      "fullName": "runlayer/mcp-explained",
+      "name": "mcp-explained",
+      "description": "Interactive, animated explainer of the Model Context Protocol: every JSON-RPC message on the wire",
+      "url": "https://github.com/runlayer/mcp-explained",
+      "homepage": "https://mcp-explained.com",
+      "stars": 5,
+      "forks": 0,
+      "watchers": 5,
+      "language": "HTML",
+      "topics": [
+        "ai-agents",
+        "explainer",
+        "json-rpc",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "owner": {
+        "login": "runlayer",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/205478646?v=4",
+        "url": "https://github.com/runlayer"
+      },
+      "createdAt": "2026-11-05T14:47:24Z",
+      "updatedAt": "2026-11-13T10:41:37Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1188,8 +1218,8 @@
       },
       "createdAt": "2022-01-03T15:18:00Z",
       "updatedAt": "2026-04-08T11:28:46Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1223,8 +1253,8 @@
       },
       "createdAt": "2026-10-28T14:37:36Z",
       "updatedAt": "2026-11-11T20:55:39Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1252,8 +1282,8 @@
       },
       "createdAt": "2020-08-18T16:06:00Z",
       "updatedAt": "2025-12-09T13:40:01Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1283,8 +1313,8 @@
       },
       "createdAt": "2021-03-30T23:22:40Z",
       "updatedAt": "2025-10-08T16:11:09Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1313,8 +1343,8 @@
       },
       "createdAt": "2026-10-04T10:57:08Z",
       "updatedAt": "2026-11-12T13:49:53Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1346,8 +1376,8 @@
       },
       "createdAt": "2020-09-26T20:16:05Z",
       "updatedAt": "2025-08-12T12:28:27Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1376,45 +1406,8 @@
       },
       "createdAt": "2026-09-26T19:06:31Z",
       "updatedAt": "2026-11-12T13:02:53Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1241580285",
-      "repoId": 1241580285,
-      "fullName": "AgentBuff/animation-explainer",
-      "name": "animation-explainer",
-      "description": "Multi-scene animated HTML technical explainers with TTS narration + one-command MP4 export. Install via: npx skills add AgentBuff/animation-explainer",
-      "url": "https://github.com/AgentBuff/animation-explainer",
-      "homepage": "https://skills.sh",
-      "stars": 3,
-      "forks": 0,
-      "watchers": 3,
-      "language": "HTML",
-      "topics": [
-        "agent-skill",
-        "ai-agents",
-        "animation",
-        "claude-code",
-        "cursor",
-        "edge-tts",
-        "educational",
-        "explainer",
-        "ffmpeg",
-        "skills",
-        "skills-sh",
-        "tts"
-      ],
-      "owner": {
-        "login": "AgentBuff",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/274437570?v=4",
-        "url": "https://github.com/AgentBuff"
-      },
-      "createdAt": "2026-05-17T15:10:25Z",
-      "updatedAt": "2026-06-20T00:02:10Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1456,38 +1449,45 @@
       },
       "createdAt": "2026-09-20T12:29:52Z",
       "updatedAt": "2026-11-12T07:06:51Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1447125522",
-      "repoId": 1447125522,
-      "fullName": "runlayer/mcp-explained",
-      "name": "mcp-explained",
-      "description": "Interactive, animated explainer of the Model Context Protocol: every JSON-RPC message on the wire",
-      "url": "https://github.com/runlayer/mcp-explained",
-      "homepage": "https://mcp-explained.com",
+      "id": "gh-topic-1241580285",
+      "repoId": 1241580285,
+      "fullName": "AgentBuff/animation-explainer",
+      "name": "animation-explainer",
+      "description": "Multi-scene animated HTML technical explainers with TTS narration + one-command MP4 export. Install via: npx skills add AgentBuff/animation-explainer",
+      "url": "https://github.com/AgentBuff/animation-explainer",
+      "homepage": "https://skills.sh",
       "stars": 3,
       "forks": 0,
       "watchers": 3,
       "language": "HTML",
       "topics": [
+        "agent-skill",
         "ai-agents",
+        "animation",
+        "claude-code",
+        "cursor",
+        "edge-tts",
+        "educational",
         "explainer",
-        "json-rpc",
-        "mcp",
-        "model-context-protocol"
+        "ffmpeg",
+        "skills",
+        "skills-sh",
+        "tts"
       ],
       "owner": {
-        "login": "runlayer",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/205478646?v=4",
-        "url": "https://github.com/runlayer"
+        "login": "AgentBuff",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/274437570?v=4",
+        "url": "https://github.com/AgentBuff"
       },
-      "createdAt": "2026-11-05T14:47:24Z",
-      "updatedAt": "2026-11-09T04:24:28Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "createdAt": "2026-05-17T15:10:25Z",
+      "updatedAt": "2026-06-20T00:02:10Z",
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1521,8 +1521,8 @@
       },
       "createdAt": "2025-06-19T05:24:58Z",
       "updatedAt": "2026-10-01T16:46:04Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1556,8 +1556,8 @@
       },
       "createdAt": "2026-09-15T07:59:56Z",
       "updatedAt": "2026-10-12T08:53:58Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1591,8 +1591,8 @@
       },
       "createdAt": "2026-10-06T21:16:35Z",
       "updatedAt": "2026-11-01T03:47:46Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1628,8 +1628,8 @@
       },
       "createdAt": "2026-06-10T12:07:22Z",
       "updatedAt": "2026-08-29T15:11:53Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1664,8 +1664,8 @@
       },
       "createdAt": "2026-08-26T02:33:48Z",
       "updatedAt": "2026-09-22T15:42:20Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1694,8 +1694,8 @@
       },
       "createdAt": "2025-04-02T10:07:58Z",
       "updatedAt": "2026-10-19T16:30:26Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1731,8 +1731,8 @@
       },
       "createdAt": "2026-06-01T20:39:54Z",
       "updatedAt": "2026-08-25T13:21:45Z",
-      "firstSeenAt": "2026-11-10T10:59:22.608Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:57:29.326Z",
+      "isNew": true,
       "existing": false
     }
   ]

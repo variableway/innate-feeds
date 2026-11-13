@@ -1,9 +1,9 @@
 {
   "topic": "task-management",
-  "fetchedAt": "2026-11-13T02:49:50.585Z",
+  "fetchedAt": "2026-11-13T15:58:40.370Z",
   "count": 50,
-  "newCount": 0,
-  "existingCount": 12,
+  "newCount": 40,
+  "existingCount": 10,
   "items": [
     {
       "id": "gh-topic-643445235",
@@ -13,9 +13,9 @@
       "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
       "url": "https://github.com/lobehub/lobehub",
       "homepage": "https://lobehub.com",
-      "stars": 85185,
-      "forks": 16261,
-      "watchers": 85185,
+      "stars": 85315,
+      "forks": 16282,
+      "watchers": 85315,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -35,9 +35,9 @@
         "url": "https://github.com/lobehub"
       },
       "createdAt": "2023-05-21T07:19:12Z",
-      "updatedAt": "2026-11-13T02:42:12Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T15:58:36Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -48,9 +48,9 @@
       "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
       "url": "https://github.com/AppFlowy-IO/AppFlowy",
       "homepage": "https://appflowy.com",
-      "stars": 78820,
-      "forks": 6262,
-      "watchers": 78820,
+      "stars": 78857,
+      "forks": 6266,
+      "watchers": 78857,
       "language": "Dart",
       "topics": [
         "blog",
@@ -72,9 +72,9 @@
         "url": "https://github.com/AppFlowy-IO"
       },
       "createdAt": "2021-06-16T12:56:48Z",
-      "updatedAt": "2026-11-13T02:40:16Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T15:56:43Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -85,9 +85,9 @@
       "description": "Elegant open source project tracking. Self-hosted Kanban for teams — free Community edition, with PLANKA Pro for organisations.",
       "url": "https://github.com/plankanban/planka",
       "homepage": "https://planka.app",
-      "stars": 12678,
+      "stars": 12681,
       "forks": 1403,
-      "watchers": 12678,
+      "watchers": 12681,
       "language": "JavaScript",
       "topics": [
         "collaboration",
@@ -104,9 +104,9 @@
         "url": "https://github.com/plankanban"
       },
       "createdAt": "2019-08-30T20:35:36Z",
-      "updatedAt": "2026-11-12T14:19:06Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T09:36:00Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -117,9 +117,9 @@
       "description": "Self-hosted control plane for AI agents: dispatch tasks, review runs, track spend, and operate OpenClaw, Claude Code, Codex, and other runtimes.",
       "url": "https://github.com/builderz-labs/mission-control",
       "homepage": "https://mc.builderz.dev",
-      "stars": 6488,
+      "stars": 6489,
       "forks": 135,
-      "watchers": 6488,
+      "watchers": 6489,
       "language": "TypeScript",
       "topics": [
         "agent-observability",
@@ -144,9 +144,9 @@
         "url": "https://github.com/builderz-labs"
       },
       "createdAt": "2026-02-13T04:06:19Z",
-      "updatedAt": "2026-11-13T00:48:58Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T07:09:05Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -157,9 +157,9 @@
       "description": "Task management for the Obsidian knowledge base.",
       "url": "https://github.com/obsidian-tasks-group/obsidian-tasks",
       "homepage": "https://publish.obsidian.md/tasks/",
-      "stars": 4098,
-      "forks": 403,
-      "watchers": 4098,
+      "stars": 4099,
+      "forks": 404,
+      "watchers": 4099,
       "language": "TypeScript",
       "topics": [
         "obsidian-plugin",
@@ -174,9 +174,9 @@
         "url": "https://github.com/obsidian-tasks-group"
       },
       "createdAt": "2021-03-19T19:42:53Z",
-      "updatedAt": "2026-11-12T11:29:28Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T07:09:08Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -187,9 +187,9 @@
       "description": "A calm, open system for organizing life and work. Tasks, projects, notes, areas, and smart workflows - self-hosted or hosted.",
       "url": "https://github.com/chrisvel/tududi",
       "homepage": "https://tududi.com/",
-      "stars": 3548,
+      "stars": 3549,
       "forks": 289,
-      "watchers": 3548,
+      "watchers": 3549,
       "language": "JavaScript",
       "topics": [
         "expressjs",
@@ -210,9 +210,9 @@
         "url": "https://github.com/chrisvel"
       },
       "createdAt": "2023-11-13T09:23:23Z",
-      "updatedAt": "2026-11-12T15:53:08Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T14:28:56Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -224,7 +224,7 @@
       "url": "https://github.com/Worklenz/worklenz",
       "homepage": "https://worklenz.com",
       "stars": 3307,
-      "forks": 397,
+      "forks": 398,
       "watchers": 3307,
       "language": "TypeScript",
       "topics": [
@@ -246,8 +246,8 @@
       },
       "createdAt": "2024-05-16T05:51:01Z",
       "updatedAt": "2026-11-12T14:11:32Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -275,8 +275,8 @@
       },
       "createdAt": "2023-05-23T04:04:25Z",
       "updatedAt": "2026-11-10T11:20:52Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -287,9 +287,9 @@
       "description": "Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobile. Works offline, no account needed",
       "url": "https://github.com/dongdongbh/Mindwtr",
       "homepage": "https://mindwtr.app",
-      "stars": 2393,
-      "forks": 161,
-      "watchers": 2393,
+      "stars": 2394,
+      "forks": 162,
+      "watchers": 2394,
       "language": "TypeScript",
       "topics": [
         "adhd",
@@ -311,10 +311,10 @@
         "url": "https://github.com/dongdongbh"
       },
       "createdAt": "2025-12-08T01:12:07Z",
-      "updatedAt": "2026-11-13T01:54:56Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T04:12:51Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-606891664",
@@ -343,8 +343,8 @@
       },
       "createdAt": "2023-02-26T21:19:33Z",
       "updatedAt": "2026-11-12T09:41:41Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -379,8 +379,8 @@
       },
       "createdAt": "2025-08-04T15:10:45Z",
       "updatedAt": "2026-11-09T09:49:15Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -416,8 +416,8 @@
       },
       "createdAt": "2017-03-11T14:46:24Z",
       "updatedAt": "2026-10-27T17:38:42Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -428,9 +428,9 @@
       "description": "The open-source collaboration system for people and AI agents. Share context, coordinate tasks, and work in parallel with your team, cloud agents, Codex, Claude Code, Grok, Grok Bot, OpenCode, Antigravity, and Cursor.",
       "url": "https://github.com/amplifthq/openmeld",
       "homepage": "https://openmeld.ai",
-      "stars": 1423,
+      "stars": 1424,
       "forks": 89,
-      "watchers": 1423,
+      "watchers": 1424,
       "language": "TypeScript",
       "topics": [
         "agent-client-protocol",
@@ -458,9 +458,9 @@
         "url": "https://github.com/amplifthq"
       },
       "createdAt": "2026-06-24T08:05:12Z",
-      "updatedAt": "2026-11-12T17:56:45Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T08:24:32Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -471,9 +471,9 @@
       "description": "TaskView is a self-hosted project and task management platform focused on clarity, ownership, and control. TaskView is built for teams that want a transparent, self-hosted alternative to SaaS task managers.",
       "url": "https://github.com/Gimanh/taskview-community",
       "homepage": "https://taskview.tech/",
-      "stars": 1411,
-      "forks": 143,
-      "watchers": 1411,
+      "stars": 1414,
+      "forks": 145,
+      "watchers": 1414,
       "language": "TypeScript",
       "topics": [
         "graphview",
@@ -493,9 +493,9 @@
         "url": "https://github.com/Gimanh"
       },
       "createdAt": "2025-12-29T21:09:59Z",
-      "updatedAt": "2026-11-12T13:50:02Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T13:39:52Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -506,9 +506,9 @@
       "description": "The Agent Harness for AI-Human Collaboration, inspired by the AI-DLC (AI-Driven Development Lifecycle)",
       "url": "https://github.com/Chorus-AIDLC/Chorus",
       "homepage": "https://chorus-ai.dev/",
-      "stars": 1228,
+      "stars": 1229,
       "forks": 112,
-      "watchers": 1228,
+      "watchers": 1229,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -526,9 +526,9 @@
         "url": "https://github.com/Chorus-AIDLC"
       },
       "createdAt": "2026-02-04T06:56:16Z",
-      "updatedAt": "2026-11-12T09:07:42Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T07:11:23Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -572,8 +572,8 @@
       },
       "createdAt": "2016-03-16T15:01:59Z",
       "updatedAt": "2026-11-12T01:42:41Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -616,8 +616,8 @@
       },
       "createdAt": "2025-09-02T07:28:06Z",
       "updatedAt": "2026-11-09T19:46:12Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -628,9 +628,9 @@
       "description": "#1 Self hosted CMMS web & mobile application that allows you to manage enterprise maintenance for free - Computerized Maintenance Management System",
       "url": "https://github.com/Grashjs/cmms",
       "homepage": "https://atlas-cmms.com",
-      "stars": 864,
-      "forks": 249,
-      "watchers": 864,
+      "stars": 866,
+      "forks": 251,
+      "watchers": 866,
       "language": "TypeScript",
       "topics": [
         "asset-management",
@@ -660,9 +660,9 @@
         "url": "https://github.com/Grashjs"
       },
       "createdAt": "2025-02-17T20:53:50Z",
-      "updatedAt": "2026-11-12T07:06:54Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T14:11:47Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -706,8 +706,53 @@
       },
       "createdAt": "2026-01-26T08:35:20Z",
       "updatedAt": "2026-11-09T22:20:26Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
+      "existing": true
+    },
+    {
+      "id": "gh-topic-1269836503",
+      "repoId": 1269836503,
+      "fullName": "dongshuyan/compass-skills",
+      "name": "compass-skills",
+      "description": "司南：个性化 AI 任务总控 Skills 系统 /COMPASS: Personal Alignment Skills OS for AI Agents",
+      "url": "https://github.com/dongshuyan/compass-skills",
+      "homepage": null,
+      "stars": 769,
+      "forks": 62,
+      "watchers": 769,
+      "language": "Python",
+      "topics": [
+        "agent-memory",
+        "agent-skill",
+        "agent-skills",
+        "ai-agents",
+        "ai-coding-agent",
+        "ai-skills",
+        "claude-code",
+        "claude-skills",
+        "codex-skills",
+        "developer-tools",
+        "local-first",
+        "openai-codex",
+        "personal-ai",
+        "prompt-engineering",
+        "skill-md",
+        "skill-md-skillsmp",
+        "skills-sh",
+        "skillsmp",
+        "task-management",
+        "workflow-automation"
+      ],
+      "owner": {
+        "login": "dongshuyan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/17682201?v=4",
+        "url": "https://github.com/dongshuyan"
+      },
+      "createdAt": "2026-06-15T06:28:04Z",
+      "updatedAt": "2026-11-13T06:11:38Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -739,54 +784,9 @@
       },
       "createdAt": "2026-01-23T10:37:02Z",
       "updatedAt": "2026-11-09T21:53:59Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
-    },
-    {
-      "id": "gh-topic-1269836503",
-      "repoId": 1269836503,
-      "fullName": "dongshuyan/compass-skills",
-      "name": "compass-skills",
-      "description": "司南：个性化 AI 任务总控 Skills 系统 /COMPASS: Personal Alignment Skills OS for AI Agents",
-      "url": "https://github.com/dongshuyan/compass-skills",
-      "homepage": null,
-      "stars": 768,
-      "forks": 62,
-      "watchers": 768,
-      "language": "Python",
-      "topics": [
-        "agent-memory",
-        "agent-skill",
-        "agent-skills",
-        "ai-agents",
-        "ai-coding-agent",
-        "ai-skills",
-        "claude-code",
-        "claude-skills",
-        "codex-skills",
-        "developer-tools",
-        "local-first",
-        "openai-codex",
-        "personal-ai",
-        "prompt-engineering",
-        "skill-md",
-        "skill-md-skillsmp",
-        "skills-sh",
-        "skillsmp",
-        "task-management",
-        "workflow-automation"
-      ],
-      "owner": {
-        "login": "dongshuyan",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/17682201?v=4",
-        "url": "https://github.com/dongshuyan"
-      },
-      "createdAt": "2026-06-15T06:28:04Z",
-      "updatedAt": "2026-11-12T13:36:37Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
-      "existing": true
     },
     {
       "id": "gh-topic-590023059",
@@ -797,7 +797,7 @@
       "url": "https://github.com/RARgames/4gaBoards",
       "homepage": "https://4gaboards.com",
       "stars": 738,
-      "forks": 132,
+      "forks": 131,
       "watchers": 738,
       "language": "JavaScript",
       "topics": [
@@ -828,8 +828,8 @@
       },
       "createdAt": "2023-01-17T13:44:59Z",
       "updatedAt": "2026-11-12T02:44:59Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -860,8 +860,8 @@
       },
       "createdAt": "2025-06-21T18:57:35Z",
       "updatedAt": "2026-11-10T19:28:22Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -905,8 +905,8 @@
       },
       "createdAt": "2024-06-23T13:13:53Z",
       "updatedAt": "2026-11-11T12:02:15Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -936,8 +936,8 @@
       },
       "createdAt": "2021-03-31T08:55:45Z",
       "updatedAt": "2026-11-07T04:26:29Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -975,8 +975,8 @@
       },
       "createdAt": "2017-09-21T23:06:32Z",
       "updatedAt": "2026-11-04T22:01:03Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1015,8 +1015,8 @@
       },
       "createdAt": "2025-07-30T07:23:19Z",
       "updatedAt": "2026-11-12T13:57:43Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1043,8 +1043,8 @@
       },
       "createdAt": "2019-10-24T23:09:28Z",
       "updatedAt": "2026-10-28T07:54:48Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1073,8 +1073,8 @@
       },
       "createdAt": "2022-06-07T06:12:28Z",
       "updatedAt": "2026-11-10T03:01:59Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1102,51 +1102,8 @@
       },
       "createdAt": "2018-01-16T09:48:06Z",
       "updatedAt": "2026-11-10T11:41:08Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1289484140",
-      "repoId": 1289484140,
-      "fullName": "flyl1u/fly-island",
-      "name": "fly-island",
-      "description": "A lightweight PC Dynamic Island that integrates QQ, WeChat, and email notifications, clipboard history, quick translation, a Codex status light, media controls, daily to-dos, and more. | 轻量的PC灵动岛，集成QQ、微信及邮箱通知、剪贴历史、快捷翻译、Agent状态灯、媒体控制、每日待办等功能",
-      "url": "https://github.com/flyl1u/fly-island",
-      "homepage": "https://island.flyliu.org",
-      "stars": 574,
-      "forks": 55,
-      "watchers": 574,
-      "language": "TypeScript",
-      "topics": [
-        "ai-agents",
-        "clipboard",
-        "clipboard-manager",
-        "desktop",
-        "dynamic-island",
-        "markdown",
-        "media-controls",
-        "notes",
-        "notifications",
-        "productivity",
-        "quick-translation",
-        "react",
-        "rust",
-        "task-management",
-        "tauri",
-        "todo",
-        "windows",
-        "windows-app"
-      ],
-      "owner": {
-        "login": "flyl1u",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/252292071?v=4",
-        "url": "https://github.com/flyl1u"
-      },
-      "createdAt": "2026-07-04T20:11:41Z",
-      "updatedAt": "2026-11-12T18:14:33Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1186,8 +1143,8 @@
       },
       "createdAt": "2026-03-12T06:11:44Z",
       "updatedAt": "2026-11-10T10:22:58Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1230,8 +1187,8 @@
       },
       "createdAt": "2025-10-18T06:55:49Z",
       "updatedAt": "2026-11-03T17:46:12Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1266,8 +1223,8 @@
       },
       "createdAt": "2026-08-09T12:34:20Z",
       "updatedAt": "2026-11-12T18:58:28Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1311,8 +1268,8 @@
       },
       "createdAt": "2022-02-03T14:42:57Z",
       "updatedAt": "2026-11-10T13:19:44Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1348,8 +1305,8 @@
       },
       "createdAt": "2026-03-20T19:37:48Z",
       "updatedAt": "2026-11-11T20:22:33Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -1386,8 +1343,8 @@
       },
       "createdAt": "2022-07-18T19:42:21Z",
       "updatedAt": "2026-11-10T16:12:05Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1423,8 +1380,8 @@
       },
       "createdAt": "2024-12-16T05:55:30Z",
       "updatedAt": "2026-11-10T09:41:48Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1464,8 +1421,8 @@
       },
       "createdAt": "2026-01-20T22:32:25Z",
       "updatedAt": "2026-11-12T01:21:56Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1509,8 +1466,8 @@
       },
       "createdAt": "2025-12-15T14:26:44Z",
       "updatedAt": "2026-11-12T23:16:11Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1544,8 +1501,8 @@
       },
       "createdAt": "2025-12-27T20:52:41Z",
       "updatedAt": "2026-11-10T22:07:29Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1576,8 +1533,8 @@
       },
       "createdAt": "2026-03-28T16:38:45Z",
       "updatedAt": "2026-11-03T18:17:07Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1609,8 +1566,53 @@
       },
       "createdAt": "2017-03-08T10:17:42Z",
       "updatedAt": "2026-11-10T13:40:00Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1179469954",
+      "repoId": 1179469954,
+      "fullName": "CronusL-1141/AI-company",
+      "name": "AI-company",
+      "description": "Multi-agent team operating system for Claude Code. 108 MCP tools, 40+ agent templates, 10 lifecycle hooks, 7 pipeline workflows. Persistent teams, structured meetings, task wall, real-time React dashboard. No LangChain/AutoGen — pure CC native integration.",
+      "url": "https://github.com/CronusL-1141/AI-company",
+      "homepage": null,
+      "stars": 377,
+      "forks": 65,
+      "watchers": 377,
+      "language": "Python",
+      "topics": [
+        "agent-framework",
+        "agent-orchestration",
+        "ai-agents",
+        "autonomous-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "dashboard",
+        "fastapi",
+        "mcp",
+        "mcp-server",
+        "meeting-system",
+        "multi-agent-system",
+        "pipeline-workflow",
+        "python",
+        "react",
+        "sqlite",
+        "task-management",
+        "team-collaboration",
+        "typescript"
+      ],
+      "owner": {
+        "login": "CronusL-1141",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/219117599?v=4",
+        "url": "https://github.com/CronusL-1141"
+      },
+      "createdAt": "2026-03-12T03:58:24Z",
+      "updatedAt": "2026-11-13T13:44:55Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1644,8 +1646,8 @@
       },
       "createdAt": "2025-04-06T18:27:05Z",
       "updatedAt": "2026-11-12T18:10:34Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1656,9 +1658,9 @@
       "description": "Project memory system for AI coding assistants (Claude Code, Cursor, Codex): session logs, project wiki, rules, TODOs, and handoff.",
       "url": "https://github.com/JamesShi96/project-butler",
       "homepage": null,
-      "stars": 376,
+      "stars": 377,
       "forks": 12,
-      "watchers": 376,
+      "watchers": 377,
       "language": "Shell",
       "topics": [
         "ai-agent",
@@ -1688,54 +1690,44 @@
         "url": "https://github.com/JamesShi96"
       },
       "createdAt": "2026-04-21T08:20:42Z",
-      "updatedAt": "2026-11-09T22:07:45Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
-      "existing": true
+      "updatedAt": "2026-11-13T09:56:25Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
+      "existing": false
     },
     {
-      "id": "gh-topic-1179469954",
-      "repoId": 1179469954,
-      "fullName": "CronusL-1141/AI-company",
-      "name": "AI-company",
-      "description": "Multi-agent team operating system for Claude Code. 108 MCP tools, 40+ agent templates, 10 lifecycle hooks, 7 pipeline workflows. Persistent teams, structured meetings, task wall, real-time React dashboard. No LangChain/AutoGen — pure CC native integration.",
-      "url": "https://github.com/CronusL-1141/AI-company",
+      "id": "gh-topic-1152798823",
+      "repoId": 1152798823,
+      "fullName": "Santofer/Remindian",
+      "name": "Remindian",
+      "description": "Sync Obsidian Tasks or TaskNotes with Apple Reminders or Things 3 — two-way sync, surgical edits, tag mapping, menu-bar app for macOS",
+      "url": "https://github.com/Santofer/Remindian",
       "homepage": null,
-      "stars": 375,
-      "forks": 65,
-      "watchers": 375,
-      "language": "Python",
+      "stars": 366,
+      "forks": 25,
+      "watchers": 366,
+      "language": "Swift",
       "topics": [
-        "agent-framework",
-        "agent-orchestration",
-        "ai-agents",
-        "autonomous-agents",
-        "claude",
-        "claude-code",
-        "claude-code-plugin",
-        "dashboard",
-        "fastapi",
-        "mcp",
-        "mcp-server",
-        "meeting-system",
-        "multi-agent-system",
-        "pipeline-workflow",
-        "python",
-        "react",
-        "sqlite",
+        "apple-reminders",
+        "macos",
+        "menu-bar-app",
+        "obsidian",
+        "productivity",
+        "swiftui",
+        "sync",
         "task-management",
-        "team-collaboration",
-        "typescript"
+        "tasknotes",
+        "things3"
       ],
       "owner": {
-        "login": "CronusL-1141",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/219117599?v=4",
-        "url": "https://github.com/CronusL-1141"
+        "login": "Santofer",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/73022401?v=4",
+        "url": "https://github.com/Santofer"
       },
-      "createdAt": "2026-03-12T03:58:24Z",
-      "updatedAt": "2026-11-09T19:59:07Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "createdAt": "2026-02-08T13:04:31Z",
+      "updatedAt": "2026-11-13T06:14:42Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1773,43 +1765,8 @@
       },
       "createdAt": "2025-10-10T05:30:34Z",
       "updatedAt": "2026-11-10T22:26:57Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1152798823",
-      "repoId": 1152798823,
-      "fullName": "Santofer/Remindian",
-      "name": "Remindian",
-      "description": "Sync Obsidian Tasks or TaskNotes with Apple Reminders or Things 3 — two-way sync, surgical edits, tag mapping, menu-bar app for macOS",
-      "url": "https://github.com/Santofer/Remindian",
-      "homepage": null,
-      "stars": 365,
-      "forks": 25,
-      "watchers": 365,
-      "language": "Swift",
-      "topics": [
-        "apple-reminders",
-        "macos",
-        "menu-bar-app",
-        "obsidian",
-        "productivity",
-        "swiftui",
-        "sync",
-        "task-management",
-        "tasknotes",
-        "things3"
-      ],
-      "owner": {
-        "login": "Santofer",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/73022401?v=4",
-        "url": "https://github.com/Santofer"
-      },
-      "createdAt": "2026-02-08T13:04:31Z",
-      "updatedAt": "2026-11-11T13:48:29Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1820,9 +1777,9 @@
       "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
       "url": "https://github.com/AppFlowy-IO/AppFlowy-Web",
       "homepage": "https://appflowy.com",
-      "stars": 351,
+      "stars": 353,
       "forks": 186,
-      "watchers": 351,
+      "watchers": 353,
       "language": "TypeScript",
       "topics": [
         "blogging",
@@ -1838,9 +1795,9 @@
         "url": "https://github.com/AppFlowy-IO"
       },
       "createdAt": "2024-12-16T02:59:00Z",
-      "updatedAt": "2026-11-11T01:42:45Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "updatedAt": "2026-11-13T14:47:42Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1871,8 +1828,41 @@
       },
       "createdAt": "2014-10-16T11:47:28Z",
       "updatedAt": "2026-11-08T16:41:26Z",
-      "firstSeenAt": "2026-11-10T11:01:16.020Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-687678476",
+      "repoId": 687678476,
+      "fullName": "thesamim/TickTickSync",
+      "name": "TickTickSync",
+      "description": "Bidirectional synchronization between Obsidian and TickTick. Mobile compatible. ",
+      "url": "https://github.com/thesamim/TickTickSync",
+      "homepage": "https://thesamim.github.io/TickTickSync/",
+      "stars": 346,
+      "forks": 39,
+      "watchers": 346,
+      "language": "TypeScript",
+      "topics": [
+        "cross-device",
+        "cross-device-sync",
+        "cross-platform",
+        "note-taking",
+        "obsidian",
+        "obsidian-plugin",
+        "organization",
+        "task-management"
+      ],
+      "owner": {
+        "login": "thesamim",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5315625?v=4",
+        "url": "https://github.com/thesamim"
+      },
+      "createdAt": "2023-09-05T19:20:10Z",
+      "updatedAt": "2026-11-10T10:48:56Z",
+      "firstSeenAt": "2026-11-13T15:58:40.370Z",
+      "isNew": true,
       "existing": false
     }
   ]
