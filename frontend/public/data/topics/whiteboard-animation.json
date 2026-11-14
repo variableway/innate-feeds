@@ -1,8 +1,8 @@
 {
   "topic": "whiteboard-animation",
-  "fetchedAt": "2026-11-13T15:57:33.291Z",
-  "count": 40,
-  "newCount": 40,
+  "fetchedAt": "2026-11-14T14:47:52.021Z",
+  "count": 41,
+  "newCount": 41,
   "existingCount": 0,
   "items": [
     {
@@ -13,9 +13,9 @@
       "description": "将 SRT 字幕做成暖米黄纸张底的流式笔迹白板手绘动画 skill：mask 分区遮罩编排 + stream 连续笔迹（ink→color）。",
       "url": "https://github.com/geeklee/srt-whiteboard-animation",
       "homepage": null,
-      "stars": 5590,
-      "forks": 877,
-      "watchers": 5590,
+      "stars": 5599,
+      "forks": 879,
+      "watchers": 5599,
       "language": "Python",
       "topics": [
         "ai-skill",
@@ -32,8 +32,8 @@
         "url": "https://github.com/geeklee"
       },
       "createdAt": "2026-07-27T16:22:49Z",
-      "updatedAt": "2026-11-13T15:49:36Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "updatedAt": "2026-11-14T14:27:22Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -65,7 +65,7 @@
       },
       "createdAt": "2026-08-21T00:50:30Z",
       "updatedAt": "2026-11-13T10:40:55Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -77,9 +77,9 @@
       "description": "中文手绘知识讲解视频 Codex Skill：逐笔故事、双语义岛、让怪诞小黑动起来与程序动画",
       "url": "https://github.com/hi-nikola/hand-drawn-explainer-video-nikola",
       "homepage": null,
-      "stars": 476,
+      "stars": 480,
       "forks": 72,
-      "watchers": 476,
+      "watchers": 480,
       "language": "Python",
       "topics": [
         "chinese",
@@ -94,8 +94,39 @@
         "url": "https://github.com/hi-nikola"
       },
       "createdAt": "2026-09-02T07:20:10Z",
-      "updatedAt": "2026-11-13T14:13:14Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "updatedAt": "2026-11-14T11:28:09Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1408519931",
+      "repoId": 1408519931,
+      "fullName": "letuandat131/whiteboard-animation-vi",
+      "name": "whiteboard-animation-vi",
+      "description": "Image-to-whiteboard animation: character-first coloring, ink-aware color groups, animated photographic hands, Gradio UI, and CUDA/NVENC rendering. Developed in Vietnam.",
+      "url": "https://github.com/letuandat131/whiteboard-animation-vi",
+      "homepage": null,
+      "stars": 319,
+      "forks": 95,
+      "watchers": 319,
+      "language": "Python",
+      "topics": [
+        "gradio",
+        "hand-drawn-animation",
+        "image-segmentation",
+        "image-to-video",
+        "opencv",
+        "whiteboard-animation"
+      ],
+      "owner": {
+        "login": "letuandat131",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/241504361?v=4",
+        "url": "https://github.com/letuandat131"
+      },
+      "createdAt": "2026-10-07T08:59:39Z",
+      "updatedAt": "2026-11-14T13:30:22Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -132,7 +163,7 @@
       },
       "createdAt": "2026-10-09T07:10:05Z",
       "updatedAt": "2026-11-13T06:26:14Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -172,7 +203,7 @@
       },
       "createdAt": "2021-09-09T05:50:11Z",
       "updatedAt": "2026-11-12T18:45:55Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -202,7 +233,7 @@
       },
       "createdAt": "2026-09-04T11:44:11Z",
       "updatedAt": "2026-11-10T06:22:21Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -235,7 +266,7 @@
       },
       "createdAt": "2026-07-03T07:41:45Z",
       "updatedAt": "2026-11-11T09:51:04Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -265,7 +296,7 @@
       },
       "createdAt": "2026-06-02T09:04:19Z",
       "updatedAt": "2026-11-11T10:10:44Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -295,7 +326,7 @@
       },
       "createdAt": "2026-09-26T09:43:36Z",
       "updatedAt": "2026-11-12T08:27:51Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -307,9 +338,9 @@
       "description": "Agent-native deterministic hand-drawn animation video engine powered by SVG, Remotion, FFmpeg, and free Edge TTS.",
       "url": "https://github.com/ToBeWin/HandDraw-Skill",
       "homepage": null,
-      "stars": 22,
+      "stars": 23,
       "forks": 1,
-      "watchers": 22,
+      "watchers": 23,
       "language": "TypeScript",
       "topics": [
         "agent-skill",
@@ -324,8 +355,8 @@
         "url": "https://github.com/ToBeWin"
       },
       "createdAt": "2026-07-14T09:54:48Z",
-      "updatedAt": "2026-11-13T13:36:13Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "updatedAt": "2026-11-13T16:24:57Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -355,7 +386,7 @@
       },
       "createdAt": "2026-07-09T07:51:17Z",
       "updatedAt": "2026-11-07T16:30:49Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -388,7 +419,7 @@
       },
       "createdAt": "2026-07-28T15:43:17Z",
       "updatedAt": "2026-10-31T04:03:58Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -433,7 +464,7 @@
       },
       "createdAt": "2026-10-17T13:35:56Z",
       "updatedAt": "2026-11-12T09:17:31Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -468,7 +499,7 @@
       },
       "createdAt": "2026-05-05T12:21:37Z",
       "updatedAt": "2026-10-21T01:18:22Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -499,7 +530,7 @@
       },
       "createdAt": "2026-08-22T01:04:33Z",
       "updatedAt": "2026-11-13T02:09:15Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -534,7 +565,7 @@
       },
       "createdAt": "2025-08-22T07:48:05Z",
       "updatedAt": "2026-08-12T14:02:54Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -566,7 +597,7 @@
       },
       "createdAt": "2026-09-07T02:10:37Z",
       "updatedAt": "2026-11-01T11:40:15Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -596,7 +627,7 @@
       },
       "createdAt": "2026-10-16T21:20:47Z",
       "updatedAt": "2026-11-10T20:25:00Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -641,7 +672,7 @@
       },
       "createdAt": "2026-10-16T15:46:57Z",
       "updatedAt": "2026-11-08T16:58:30Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -675,7 +706,7 @@
       },
       "createdAt": "2026-10-21T05:25:21Z",
       "updatedAt": "2026-11-10T12:19:20Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -716,7 +747,41 @@
       },
       "createdAt": "2026-10-30T02:49:49Z",
       "updatedAt": "2026-11-02T12:42:01Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1368320884",
+      "repoId": 1368320884,
+      "fullName": "ajithpinninti/awesome-document-to-video",
+      "name": "awesome-document-to-video",
+      "description": "Curated list of tools that turn documents, PDFs, articles and scripts into video. Every entry names a real limitation.",
+      "url": "https://github.com/ajithpinninti/awesome-document-to-video",
+      "homepage": null,
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "language": null,
+      "topics": [
+        "ai-video",
+        "awesome",
+        "awesome-list",
+        "document-to-video",
+        "explainer-video",
+        "pdf-to-video",
+        "text-to-video",
+        "video-generation",
+        "whiteboard-animation"
+      ],
+      "owner": {
+        "login": "ajithpinninti",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/48728099?v=4",
+        "url": "https://github.com/ajithpinninti"
+      },
+      "createdAt": "2026-09-13T11:27:33Z",
+      "updatedAt": "2026-11-02T05:49:54Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -751,41 +816,7 @@
       },
       "createdAt": "2026-09-16T09:22:20Z",
       "updatedAt": "2026-09-25T02:21:55Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1368320884",
-      "repoId": 1368320884,
-      "fullName": "ajithpinninti/awesome-document-to-video",
-      "name": "awesome-document-to-video",
-      "description": "Curated list of tools that turn documents, PDFs, articles and scripts into video. Every entry names a real limitation.",
-      "url": "https://github.com/ajithpinninti/awesome-document-to-video",
-      "homepage": null,
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "language": null,
-      "topics": [
-        "ai-video",
-        "awesome",
-        "awesome-list",
-        "document-to-video",
-        "explainer-video",
-        "pdf-to-video",
-        "text-to-video",
-        "video-generation",
-        "whiteboard-animation"
-      ],
-      "owner": {
-        "login": "ajithpinninti",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/48728099?v=4",
-        "url": "https://github.com/ajithpinninti"
-      },
-      "createdAt": "2026-09-13T11:27:33Z",
-      "updatedAt": "2026-11-02T05:49:54Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -825,7 +856,7 @@
       },
       "createdAt": "2026-11-05T10:45:47Z",
       "updatedAt": "2026-11-11T18:55:46Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -857,7 +888,7 @@
       },
       "createdAt": "2026-11-02T16:59:06Z",
       "updatedAt": "2026-11-03T18:12:45Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -887,7 +918,7 @@
       },
       "createdAt": "2026-07-05T18:46:16Z",
       "updatedAt": "2026-10-06T07:25:48Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -917,7 +948,7 @@
       },
       "createdAt": "2026-09-24T07:25:44Z",
       "updatedAt": "2026-09-24T08:06:04Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -962,7 +993,7 @@
       },
       "createdAt": "2026-11-07T04:12:20Z",
       "updatedAt": "2026-11-07T04:25:57Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -992,7 +1023,7 @@
       },
       "createdAt": "2026-11-09T03:48:42Z",
       "updatedAt": "2026-11-09T03:49:02Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1024,37 +1055,7 @@
       },
       "createdAt": "2026-10-07T10:40:24Z",
       "updatedAt": "2026-10-17T16:02:26Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1443243738",
-      "repoId": 1443243738,
-      "fullName": "arkyu2077/whiteboard-video-guide",
-      "name": "whiteboard-video-guide",
-      "description": "Practical guides on AI whiteboard animation, speedpaint drawing videos, and narrated explainers",
-      "url": "https://github.com/arkyu2077/whiteboard-video-guide",
-      "homepage": "https://arkyu2077.github.io/whiteboard-video-guide/",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "HTML",
-      "topics": [
-        "ai-video-generator",
-        "explainer-video",
-        "guides",
-        "speedpaint",
-        "whiteboard-animation"
-      ],
-      "owner": {
-        "login": "arkyu2077",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/42494191?v=4",
-        "url": "https://github.com/arkyu2077"
-      },
-      "createdAt": "2026-11-02T17:02:17Z",
-      "updatedAt": "2026-11-03T06:38:21Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1085,7 +1086,37 @@
       },
       "createdAt": "2026-09-03T10:16:57Z",
       "updatedAt": "2026-09-25T02:22:04Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1443243738",
+      "repoId": 1443243738,
+      "fullName": "arkyu2077/whiteboard-video-guide",
+      "name": "whiteboard-video-guide",
+      "description": "Practical guides on AI whiteboard animation, speedpaint drawing videos, and narrated explainers",
+      "url": "https://github.com/arkyu2077/whiteboard-video-guide",
+      "homepage": "https://arkyu2077.github.io/whiteboard-video-guide/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "HTML",
+      "topics": [
+        "ai-video-generator",
+        "explainer-video",
+        "guides",
+        "speedpaint",
+        "whiteboard-animation"
+      ],
+      "owner": {
+        "login": "arkyu2077",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/42494191?v=4",
+        "url": "https://github.com/arkyu2077"
+      },
+      "createdAt": "2026-11-02T17:02:17Z",
+      "updatedAt": "2026-11-03T06:38:21Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1119,42 +1150,7 @@
       },
       "createdAt": "2026-10-14T13:02:46Z",
       "updatedAt": "2026-10-14T13:04:37Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1416049484",
-      "repoId": 1416049484,
-      "fullName": "SunFloat/inkline",
-      "name": "inkline",
-      "description": "Prompt in, hand-drawn video out. A Claude skill that draws photos, prompts and SVGs stroke by stroke.",
-      "url": "https://github.com/SunFloat/inkline",
-      "homepage": "https://sunfloat.github.io/inkline/site/",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "claude-plugin",
-        "claude-skill",
-        "drawing",
-        "headless-chrome",
-        "portrait",
-        "sketch",
-        "video-generation",
-        "whiteboard-animation"
-      ],
-      "owner": {
-        "login": "SunFloat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/60574276?v=4",
-        "url": "https://github.com/SunFloat"
-      },
-      "createdAt": "2026-10-12T19:33:38Z",
-      "updatedAt": "2026-10-12T20:20:38Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1189,7 +1185,42 @@
       },
       "createdAt": "2026-11-10T23:45:28Z",
       "updatedAt": "2026-11-12T08:44:40Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1416049484",
+      "repoId": 1416049484,
+      "fullName": "SunFloat/inkline",
+      "name": "inkline",
+      "description": "Prompt in, hand-drawn video out. A Claude skill that draws photos, prompts and SVGs stroke by stroke.",
+      "url": "https://github.com/SunFloat/inkline",
+      "homepage": "https://sunfloat.github.io/inkline/site/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-plugin",
+        "claude-skill",
+        "drawing",
+        "headless-chrome",
+        "portrait",
+        "sketch",
+        "video-generation",
+        "whiteboard-animation"
+      ],
+      "owner": {
+        "login": "SunFloat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/60574276?v=4",
+        "url": "https://github.com/SunFloat"
+      },
+      "createdAt": "2026-10-12T19:33:38Z",
+      "updatedAt": "2026-10-12T20:20:38Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1221,7 +1252,7 @@
       },
       "createdAt": "2026-11-04T06:54:03Z",
       "updatedAt": "2026-11-04T08:46:14Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1255,7 +1286,7 @@
       },
       "createdAt": "2026-11-13T03:52:29Z",
       "updatedAt": "2026-11-13T03:53:13Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1286,7 +1317,7 @@
       },
       "createdAt": "2026-10-20T08:00:40Z",
       "updatedAt": "2026-10-21T06:48:31Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1317,7 +1348,7 @@
       },
       "createdAt": "2020-08-17T11:49:09Z",
       "updatedAt": "2022-03-10T12:17:09Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     },
@@ -1350,7 +1381,7 @@
       },
       "createdAt": "2026-10-30T09:05:38Z",
       "updatedAt": "2026-10-31T17:03:48Z",
-      "firstSeenAt": "2026-11-13T15:57:33.291Z",
+      "firstSeenAt": "2026-11-14T14:47:52.021Z",
       "isNew": true,
       "existing": false
     }

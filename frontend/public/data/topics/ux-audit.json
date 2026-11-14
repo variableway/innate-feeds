@@ -1,6 +1,6 @@
 {
   "topic": "ux-audit",
-  "fetchedAt": "2026-11-13T15:59:58.535Z",
+  "fetchedAt": "2026-11-14T14:50:31.431Z",
   "count": 50,
   "newCount": 50,
   "existingCount": 0,
@@ -13,9 +13,9 @@
       "description": "The design layer for agentic AI — design context, interface checks, and verification for coding agents.",
       "url": "https://github.com/memi-design/memi",
       "homepage": "https://memoire.cv",
-      "stars": 50,
+      "stars": 51,
       "forks": 6,
-      "watchers": 50,
+      "watchers": 51,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -45,8 +45,8 @@
         "url": "https://github.com/memi-design"
       },
       "createdAt": "2026-03-23T15:09:14Z",
-      "updatedAt": "2026-11-04T14:38:25Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "updatedAt": "2026-11-14T14:03:31Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -79,7 +79,7 @@
       },
       "createdAt": "2026-04-01T15:06:32Z",
       "updatedAt": "2026-11-07T12:18:04Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -91,9 +91,9 @@
       "description": "Heuristic UX audits from screenshots for Claude Code & Codex with severity-rated findings, heuristic citations, annotated screenshots, structured reports.",
       "url": "https://github.com/EliaAlberti/ux-audit-skill",
       "homepage": null,
-      "stars": 28,
+      "stars": 29,
       "forks": 4,
-      "watchers": 28,
+      "watchers": 29,
       "language": "Python",
       "topics": [
         "accessibility",
@@ -113,8 +113,45 @@
         "url": "https://github.com/EliaAlberti"
       },
       "createdAt": "2026-06-12T08:51:06Z",
-      "updatedAt": "2026-11-12T14:29:27Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "updatedAt": "2026-11-14T07:44:33Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1168859151",
+      "repoId": 1168859151,
+      "fullName": "narenkatakam/ux-audit",
+      "name": "ux-audit",
+      "description": "Give your AI coding assistant a design eye. 12 principles, 13 reference docs, 7 component checklists. Works with Claude Code, Cursor, Codex, and Windsurf.",
+      "url": "https://github.com/narenkatakam/ux-audit",
+      "homepage": "https://narenkatakam.github.io/ux-audit/skill-coverage-map.html",
+      "stars": 15,
+      "forks": 6,
+      "watchers": 15,
+      "language": "HTML",
+      "topics": [
+        "accessibility",
+        "ai-coding",
+        "ai-tools",
+        "claude-code",
+        "cursor",
+        "design-system",
+        "developer-tools",
+        "tailwind",
+        "ui-design",
+        "ux",
+        "ux-audit",
+        "wcag"
+      ],
+      "owner": {
+        "login": "narenkatakam",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/18749278?v=4",
+        "url": "https://github.com/narenkatakam"
+      },
+      "createdAt": "2026-02-27T22:01:23Z",
+      "updatedAt": "2026-11-14T08:19:22Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -149,44 +186,7 @@
       },
       "createdAt": "2026-08-01T16:05:02Z",
       "updatedAt": "2026-11-06T15:55:17Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1168859151",
-      "repoId": 1168859151,
-      "fullName": "narenkatakam/ux-audit",
-      "name": "ux-audit",
-      "description": "Give your AI coding assistant a design eye. 12 principles, 13 reference docs, 7 component checklists. Works with Claude Code, Cursor, Codex, and Windsurf.",
-      "url": "https://github.com/narenkatakam/ux-audit",
-      "homepage": "https://narenkatakam.github.io/ux-audit/skill-coverage-map.html",
-      "stars": 14,
-      "forks": 6,
-      "watchers": 14,
-      "language": "HTML",
-      "topics": [
-        "accessibility",
-        "ai-coding",
-        "ai-tools",
-        "claude-code",
-        "cursor",
-        "design-system",
-        "developer-tools",
-        "tailwind",
-        "ui-design",
-        "ux",
-        "ux-audit",
-        "wcag"
-      ],
-      "owner": {
-        "login": "narenkatakam",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/18749278?v=4",
-        "url": "https://github.com/narenkatakam"
-      },
-      "createdAt": "2026-02-27T22:01:23Z",
-      "updatedAt": "2026-11-01T14:55:23Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -216,7 +216,7 @@
       },
       "createdAt": "2026-02-23T20:18:47Z",
       "updatedAt": "2026-10-16T23:20:02Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -249,7 +249,7 @@
       },
       "createdAt": "2026-03-20T23:39:43Z",
       "updatedAt": "2026-08-01T19:33:49Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -280,7 +280,7 @@
       },
       "createdAt": "2026-03-10T18:33:38Z",
       "updatedAt": "2026-10-07T03:44:18Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -314,7 +314,7 @@
       },
       "createdAt": "2026-05-19T12:58:51Z",
       "updatedAt": "2026-10-18T21:21:37Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -350,7 +350,7 @@
       },
       "createdAt": "2026-10-11T10:42:22Z",
       "updatedAt": "2026-10-20T16:08:32Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -389,7 +389,7 @@
       },
       "createdAt": "2026-03-10T05:45:29Z",
       "updatedAt": "2026-10-25T20:42:27Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -427,7 +427,7 @@
       },
       "createdAt": "2026-05-11T17:10:06Z",
       "updatedAt": "2026-09-28T03:53:20Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -464,7 +464,7 @@
       },
       "createdAt": "2026-03-25T16:39:37Z",
       "updatedAt": "2026-11-02T11:21:10Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -501,7 +501,7 @@
       },
       "createdAt": "2026-07-19T22:14:37Z",
       "updatedAt": "2026-11-08T12:57:28Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -534,7 +534,7 @@
       },
       "createdAt": "2026-09-04T10:07:13Z",
       "updatedAt": "2026-11-07T15:06:18Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -565,7 +565,7 @@
       },
       "createdAt": "2026-09-02T07:38:27Z",
       "updatedAt": "2026-10-20T03:24:46Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -599,7 +599,7 @@
       },
       "createdAt": "2026-08-12T14:32:31Z",
       "updatedAt": "2026-08-31T19:52:17Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -641,7 +641,7 @@
       },
       "createdAt": "2026-06-19T14:38:40Z",
       "updatedAt": "2026-10-16T18:03:33Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -674,7 +674,7 @@
       },
       "createdAt": "2026-07-02T06:10:27Z",
       "updatedAt": "2026-08-16T04:19:29Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -706,7 +706,7 @@
       },
       "createdAt": "2026-07-25T20:57:30Z",
       "updatedAt": "2026-07-30T14:25:41Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -751,7 +751,7 @@
       },
       "createdAt": "2026-03-13T11:39:49Z",
       "updatedAt": "2026-11-09T19:44:29Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -794,7 +794,7 @@
       },
       "createdAt": "2026-08-26T19:14:13Z",
       "updatedAt": "2026-08-26T21:22:02Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -828,7 +828,7 @@
       },
       "createdAt": "2026-06-11T15:20:13Z",
       "updatedAt": "2026-11-11T17:32:22Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -867,7 +867,7 @@
       },
       "createdAt": "2026-03-19T19:32:35Z",
       "updatedAt": "2026-10-19T03:14:15Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -908,7 +908,7 @@
       },
       "createdAt": "2026-07-24T18:33:48Z",
       "updatedAt": "2026-10-29T17:03:00Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -938,7 +938,7 @@
       },
       "createdAt": "2026-10-08T02:37:32Z",
       "updatedAt": "2026-10-08T02:38:59Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -979,7 +979,7 @@
       },
       "createdAt": "2026-09-22T01:32:36Z",
       "updatedAt": "2026-10-10T01:24:59Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1011,7 +1011,7 @@
       },
       "createdAt": "2026-07-12T17:44:21Z",
       "updatedAt": "2026-09-03T07:34:52Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1045,7 +1045,7 @@
       },
       "createdAt": "2026-10-18T00:14:22Z",
       "updatedAt": "2026-10-18T21:50:15Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1081,7 +1081,7 @@
       },
       "createdAt": "2026-05-17T19:45:48Z",
       "updatedAt": "2026-10-28T13:37:46Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1114,7 +1114,7 @@
       },
       "createdAt": "2026-08-06T22:15:41Z",
       "updatedAt": "2026-08-06T23:57:28Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1151,75 +1151,7 @@
       },
       "createdAt": "2026-10-14T23:55:54Z",
       "updatedAt": "2026-10-16T21:39:08Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1320745441",
-      "repoId": 1320745441,
-      "fullName": "aftabkhan/ai-ux-audit-lite",
-      "name": "ai-ux-audit-lite",
-      "description": "AI-assisted UX audit tool for reviewing UI screenshots with structured heuristics, accessible results, and actionable recommendations.",
-      "url": "https://github.com/aftabkhan/ai-ux-audit-lite",
-      "homepage": "https://ai-ux-audit-lite.vercel.app",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "TypeScript",
-      "topics": [
-        "accessibility",
-        "ai",
-        "frontend",
-        "heuristic-evaluation",
-        "heuristics",
-        "nextjs",
-        "portfolio-project",
-        "reactjs",
-        "typescript",
-        "ux",
-        "ux-audit"
-      ],
-      "owner": {
-        "login": "aftabkhan",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3264285?v=4",
-        "url": "https://github.com/aftabkhan"
-      },
-      "createdAt": "2026-08-02T21:14:16Z",
-      "updatedAt": "2026-10-31T18:47:37Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1307468085",
-      "repoId": 1307468085,
-      "fullName": "ananas-agency/Website-Audit-Suite",
-      "name": "Website-Audit-Suite",
-      "description": "AI Skills Pack that turn Claude into a guided website auditor: one URL in, a graded, prioritised audit across messaging, CRO, SEO, UX and design out.",
-      "url": "https://github.com/ananas-agency/Website-Audit-Suite",
-      "homepage": "https://website-audit-suite.ananas-agency.com/",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "ai-agents",
-        "claude",
-        "marketing",
-        "seo-audit",
-        "ux-audit",
-        "wcag",
-        "website-audit"
-      ],
-      "owner": {
-        "login": "ananas-agency",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/291516179?v=4",
-        "url": "https://github.com/ananas-agency"
-      },
-      "createdAt": "2026-07-21T08:35:39Z",
-      "updatedAt": "2026-11-09T15:20:48Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1262,7 +1194,75 @@
       },
       "createdAt": "2026-10-18T19:24:11Z",
       "updatedAt": "2026-11-08T11:50:07Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1320745441",
+      "repoId": 1320745441,
+      "fullName": "aftabkhan/ai-ux-audit-lite",
+      "name": "ai-ux-audit-lite",
+      "description": "AI-assisted UX audit tool for reviewing UI screenshots with structured heuristics, accessible results, and actionable recommendations.",
+      "url": "https://github.com/aftabkhan/ai-ux-audit-lite",
+      "homepage": "https://ai-ux-audit-lite.vercel.app",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "TypeScript",
+      "topics": [
+        "accessibility",
+        "ai",
+        "frontend",
+        "heuristic-evaluation",
+        "heuristics",
+        "nextjs",
+        "portfolio-project",
+        "reactjs",
+        "typescript",
+        "ux",
+        "ux-audit"
+      ],
+      "owner": {
+        "login": "aftabkhan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/3264285?v=4",
+        "url": "https://github.com/aftabkhan"
+      },
+      "createdAt": "2026-08-02T21:14:16Z",
+      "updatedAt": "2026-10-31T18:47:37Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1307468085",
+      "repoId": 1307468085,
+      "fullName": "ananas-agency/Website-Audit-Suite",
+      "name": "Website-Audit-Suite",
+      "description": "AI Skills Pack that turn Claude into a guided website auditor: one URL in, a graded, prioritised audit across messaging, CRO, SEO, UX and design out.",
+      "url": "https://github.com/ananas-agency/Website-Audit-Suite",
+      "homepage": "https://website-audit-suite.ananas-agency.com/",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Python",
+      "topics": [
+        "ai-agents",
+        "claude",
+        "marketing",
+        "seo-audit",
+        "ux-audit",
+        "wcag",
+        "website-audit"
+      ],
+      "owner": {
+        "login": "ananas-agency",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/291516179?v=4",
+        "url": "https://github.com/ananas-agency"
+      },
+      "createdAt": "2026-07-21T08:35:39Z",
+      "updatedAt": "2026-11-09T15:20:48Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1297,7 +1297,7 @@
       },
       "createdAt": "2026-07-08T06:15:01Z",
       "updatedAt": "2026-10-26T15:16:30Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1332,7 +1332,7 @@
       },
       "createdAt": "2026-04-21T16:12:03Z",
       "updatedAt": "2026-08-16T18:02:58Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1364,7 +1364,7 @@
       },
       "createdAt": "2026-07-19T13:40:24Z",
       "updatedAt": "2026-11-10T21:44:12Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1398,7 +1398,7 @@
       },
       "createdAt": "2026-04-23T18:31:34Z",
       "updatedAt": "2026-07-25T13:27:01Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1443,7 +1443,7 @@
       },
       "createdAt": "2026-08-07T12:02:32Z",
       "updatedAt": "2026-11-13T13:20:13Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1476,7 +1476,7 @@
       },
       "createdAt": "2026-06-18T18:55:01Z",
       "updatedAt": "2026-06-18T19:26:03Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1508,7 +1508,7 @@
       },
       "createdAt": "2026-06-01T16:28:57Z",
       "updatedAt": "2026-06-25T15:28:17Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1538,7 +1538,7 @@
       },
       "createdAt": "2026-07-21T15:40:13Z",
       "updatedAt": "2026-07-24T12:57:33Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1568,7 +1568,7 @@
       },
       "createdAt": "2026-03-15T05:33:41Z",
       "updatedAt": "2026-09-16T20:37:02Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1605,7 +1605,7 @@
       },
       "createdAt": "2026-05-08T21:43:41Z",
       "updatedAt": "2026-05-09T14:13:40Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1636,7 +1636,7 @@
       },
       "createdAt": "2026-09-29T20:07:25Z",
       "updatedAt": "2026-10-16T01:12:23Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1677,72 +1677,7 @@
       },
       "createdAt": "2026-10-23T14:30:33Z",
       "updatedAt": "2026-11-02T06:32:21Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1429532129",
-      "repoId": 1429532129,
-      "fullName": "teotiabhumik-ship-it/darkpatterns",
-      "name": "darkpatterns",
-      "description": "Synthetic mock test suites demonstrating deceptive UX patterns for automated WCAG and AI audit tools",
-      "url": "https://github.com/teotiabhumik-ship-it/darkpatterns",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "HTML",
-      "topics": [
-        "accessibility",
-        "dark-patterns",
-        "ux-audit",
-        "wcag"
-      ],
-      "owner": {
-        "login": "teotiabhumik-ship-it",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/317973664?v=4",
-        "url": "https://github.com/teotiabhumik-ship-it"
-      },
-      "createdAt": "2026-10-22T09:37:21Z",
-      "updatedAt": "2026-11-09T15:59:10Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1426567259",
-      "repoId": 1426567259,
-      "fullName": "AdityaHasija37/touchline",
-      "name": "touchline",
-      "description": "Match prep for grassroots football captains: squad on the pitch, roles, set pieces, fair minutes, and one briefing where every player finds their job. PM case study with PRD, PR-FAQ, metrics and UX audit.",
-      "url": "https://github.com/AdityaHasija37/touchline",
-      "homepage": "https://touchline-olive-six.vercel.app",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "TypeScript",
-      "topics": [
-        "accessibility",
-        "case-study",
-        "football",
-        "nextjs",
-        "portfolio",
-        "prd",
-        "product-management",
-        "react",
-        "supabase",
-        "typescript",
-        "ux-audit"
-      ],
-      "owner": {
-        "login": "AdityaHasija37",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/194558652?v=4",
-        "url": "https://github.com/AdityaHasija37"
-      },
-      "createdAt": "2026-10-20T05:53:13Z",
-      "updatedAt": "2026-11-10T21:37:37Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     },
@@ -1776,7 +1711,72 @@
       },
       "createdAt": "2026-02-06T01:54:17Z",
       "updatedAt": "2026-02-06T02:35:27Z",
-      "firstSeenAt": "2026-11-13T15:59:58.535Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1245518121",
+      "repoId": 1245518121,
+      "fullName": "Palash-AI/pAI-teardown",
+      "name": "pAI-teardown",
+      "description": "Framework-grounded app teardown system for Claude Desktop. 10 modules, 5 personas, India consumer context. Built by Palash Somani.",
+      "url": "https://github.com/Palash-AI/pAI-teardown",
+      "homepage": "https://www.linkedin.com/in/palash-somani-artificial-intelligence/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "anthropic",
+        "app-teardown",
+        "claude",
+        "claude-desktop",
+        "india",
+        "mcp",
+        "mobile-mcp",
+        "product-management",
+        "ux-audit"
+      ],
+      "owner": {
+        "login": "Palash-AI",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/194589219?v=4",
+        "url": "https://github.com/Palash-AI"
+      },
+      "createdAt": "2026-05-21T09:45:29Z",
+      "updatedAt": "2026-05-21T11:11:30Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1355194642",
+      "repoId": 1355194642,
+      "fullName": "glisom/ux-deep-dive",
+      "name": "ux-deep-dive",
+      "description": "[Moved to glisom/skills] Drive every screen of a mobile or web app, capture all of it, and hand back a pre-annotated, markup-ready UX audit. Every screen, every state, one PDF you can mark up.",
+      "url": "https://github.com/glisom/ux-deep-dive",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "android",
+        "claude-code",
+        "ios",
+        "playwright",
+        "skills",
+        "ux-audit"
+      ],
+      "owner": {
+        "login": "glisom",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/945818?v=4",
+        "url": "https://github.com/glisom"
+      },
+      "createdAt": "2026-09-02T20:17:34Z",
+      "updatedAt": "2026-09-15T15:58:40Z",
+      "firstSeenAt": "2026-11-14T14:50:31.431Z",
       "isNew": true,
       "existing": false
     }

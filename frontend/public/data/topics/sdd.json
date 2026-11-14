@@ -1,8 +1,8 @@
 {
   "topic": "sdd",
-  "fetchedAt": "2026-11-14T06:45:06.206Z",
+  "fetchedAt": "2026-11-14T14:49:40.840Z",
   "count": 50,
-  "newCount": 1,
+  "newCount": 47,
   "existingCount": 3,
   "items": [
     {
@@ -13,9 +13,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 74822,
-      "forks": 5129,
-      "watchers": 74822,
+      "stars": 74845,
+      "forks": 5132,
+      "watchers": 74845,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -35,9 +35,9 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-14T06:33:16Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "updatedAt": "2026-11-14T14:27:28Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -48,9 +48,9 @@
       "description": "Turn approved specs into long-running autonomous implementation. A minimal, adaptable SDD harness with Agent Skills for Claude Code, Codex, Cursor, Copilot, Windsurf, OpenCode, Gemini CLI, and Antigravity.",
       "url": "https://github.com/gotalab/cc-sdd",
       "homepage": null,
-      "stars": 3764,
+      "stars": 3765,
       "forks": 287,
-      "watchers": 3764,
+      "watchers": 3765,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -72,9 +72,9 @@
         "url": "https://github.com/gotalab"
       },
       "createdAt": "2025-07-17T04:41:37Z",
-      "updatedAt": "2026-11-13T13:42:47Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "updatedAt": "2026-11-14T13:12:28Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -85,9 +85,9 @@
       "description": "Comet: agent skill harness for turning ideas into evaluated workflows",
       "url": "https://github.com/rpamis/comet",
       "homepage": "https://docs.comet.rpamis.com",
-      "stars": 3296,
-      "forks": 313,
-      "watchers": 3296,
+      "stars": 3297,
+      "forks": 314,
+      "watchers": 3297,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -106,9 +106,9 @@
         "url": "https://github.com/rpamis"
       },
       "createdAt": "2026-05-14T09:22:35Z",
-      "updatedAt": "2026-11-14T00:43:54Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "updatedAt": "2026-11-14T10:33:16Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -119,9 +119,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2586,
+      "stars": 2604,
       "forks": 282,
-      "watchers": 2586,
+      "watchers": 2604,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -151,9 +151,9 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-14T05:54:04Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "updatedAt": "2026-11-14T14:39:43Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -164,9 +164,9 @@
       "description": "参考Spec-kit 实现小说撰写工具",
       "url": "https://github.com/wordflowlab/novel-writer",
       "homepage": null,
-      "stars": 958,
+      "stars": 959,
       "forks": 175,
-      "watchers": 958,
+      "watchers": 959,
       "language": "Shell",
       "topics": [
         "engineering",
@@ -181,9 +181,9 @@
         "url": "https://github.com/wordflowlab"
       },
       "createdAt": "2025-09-20T03:12:06Z",
-      "updatedAt": "2026-11-11T20:00:12Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "updatedAt": "2026-11-14T13:33:00Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -209,8 +209,8 @@
       },
       "createdAt": "2026-08-27T11:49:48Z",
       "updatedAt": "2026-11-14T06:40:12Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -243,8 +243,8 @@
       },
       "createdAt": "2026-02-04T03:13:04Z",
       "updatedAt": "2026-11-13T02:28:17Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -270,8 +270,8 @@
       },
       "createdAt": "2026-01-27T11:25:10Z",
       "updatedAt": "2026-11-13T03:46:24Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -299,8 +299,8 @@
       },
       "createdAt": "2026-03-07T03:44:10Z",
       "updatedAt": "2026-11-08T06:50:27Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -342,8 +342,8 @@
       },
       "createdAt": "2026-03-31T02:49:55Z",
       "updatedAt": "2026-11-09T22:06:50Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -370,8 +370,8 @@
       },
       "createdAt": "2025-09-11T08:28:19Z",
       "updatedAt": "2026-10-23T17:49:02Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -403,8 +403,8 @@
       },
       "createdAt": "2026-03-29T13:46:50Z",
       "updatedAt": "2026-11-06T07:41:16Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -430,8 +430,8 @@
       },
       "createdAt": "2026-05-15T09:19:02Z",
       "updatedAt": "2026-10-22T14:02:21Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -468,8 +468,8 @@
       },
       "createdAt": "2025-12-24T14:28:50Z",
       "updatedAt": "2026-11-11T08:35:50Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -513,8 +513,8 @@
       },
       "createdAt": "2026-06-17T21:19:02Z",
       "updatedAt": "2026-11-13T19:09:44Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -558,8 +558,8 @@
       },
       "createdAt": "2026-05-10T11:13:51Z",
       "updatedAt": "2026-11-14T06:32:34Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -596,8 +596,8 @@
       },
       "createdAt": "2025-09-19T05:47:57Z",
       "updatedAt": "2026-11-05T01:23:14Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -631,8 +631,8 @@
       },
       "createdAt": "2026-09-06T21:28:21Z",
       "updatedAt": "2026-11-14T06:43:50Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -667,8 +667,8 @@
       },
       "createdAt": "2026-01-19T09:33:40Z",
       "updatedAt": "2026-11-13T14:44:52Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -694,8 +694,8 @@
       },
       "createdAt": "2026-03-01T17:54:24Z",
       "updatedAt": "2026-10-31T06:27:35Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -730,8 +730,8 @@
       },
       "createdAt": "2025-12-16T02:14:49Z",
       "updatedAt": "2026-11-14T03:16:55Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": true
     },
     {
@@ -762,8 +762,8 @@
       },
       "createdAt": "2026-02-11T16:54:55Z",
       "updatedAt": "2026-11-14T06:32:42Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -806,8 +806,8 @@
       },
       "createdAt": "2026-03-01T01:14:30Z",
       "updatedAt": "2026-11-09T09:26:15Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -845,8 +845,8 @@
       },
       "createdAt": "2025-10-02T22:03:29Z",
       "updatedAt": "2026-11-10T08:22:43Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -886,8 +886,8 @@
       },
       "createdAt": "2025-11-24T16:21:05Z",
       "updatedAt": "2026-11-01T22:54:10Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -899,7 +899,7 @@
       "url": "https://github.com/IBM/iac-spec-kit",
       "homepage": null,
       "stars": 93,
-      "forks": 15,
+      "forks": 14,
       "watchers": 93,
       "language": "Python",
       "topics": [
@@ -921,8 +921,8 @@
       },
       "createdAt": "2025-11-14T15:16:54Z",
       "updatedAt": "2026-11-11T17:25:48Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -934,7 +934,7 @@
       "url": "https://github.com/promovaweb/specsfy",
       "homepage": "https://promovaweb.com/formacoes/vibe-coding/",
       "stars": 88,
-      "forks": 45,
+      "forks": 44,
       "watchers": 88,
       "language": "TypeScript",
       "topics": [
@@ -950,8 +950,8 @@
       },
       "createdAt": "2026-07-27T19:53:08Z",
       "updatedAt": "2026-11-13T21:00:32Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -981,8 +981,8 @@
       },
       "createdAt": "2026-05-12T06:01:30Z",
       "updatedAt": "2026-10-28T07:56:34Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1011,8 +1011,8 @@
       },
       "createdAt": "2026-03-09T17:08:36Z",
       "updatedAt": "2026-11-05T12:54:23Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1042,8 +1042,8 @@
       },
       "createdAt": "2026-06-27T07:27:09Z",
       "updatedAt": "2026-11-12T03:26:44Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1070,8 +1070,8 @@
       },
       "createdAt": "2026-02-13T15:05:35Z",
       "updatedAt": "2026-11-13T15:04:23Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1101,8 +1101,8 @@
       },
       "createdAt": "2018-03-14T15:37:17Z",
       "updatedAt": "2026-05-15T20:56:51Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1137,8 +1137,8 @@
       },
       "createdAt": "2026-03-06T16:47:43Z",
       "updatedAt": "2026-11-12T07:53:49Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1174,8 +1174,8 @@
       },
       "createdAt": "2026-04-11T07:21:16Z",
       "updatedAt": "2026-09-21T13:51:04Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1186,9 +1186,9 @@
       "description": "Walden proves that your code meets its spec, and shows what is no longer proven when either one changes. An open-source, deterministic Go CLI: reviewed specs, executable proofs, durable evidence, a release gate for CI.",
       "url": "https://github.com/andrearaponi/walden",
       "homepage": "https://andrearaponi.github.io/walden/",
-      "stars": 60,
+      "stars": 61,
       "forks": 5,
-      "watchers": 60,
+      "watchers": 61,
       "language": "Go",
       "topics": [
         "acceptance-testing",
@@ -1211,8 +1211,8 @@
         "url": "https://github.com/andrearaponi"
       },
       "createdAt": "2026-03-21T15:44:15Z",
-      "updatedAt": "2026-11-12T14:35:02Z",
-      "firstSeenAt": "2026-11-14T06:45:06.206Z",
+      "updatedAt": "2026-11-14T11:27:49Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
       "isNew": true,
       "existing": false
     },
@@ -1257,8 +1257,8 @@
       },
       "createdAt": "2026-03-21T23:18:51Z",
       "updatedAt": "2026-10-29T05:43:18Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1302,8 +1302,8 @@
       },
       "createdAt": "2021-02-04T21:35:23Z",
       "updatedAt": "2026-10-11T09:07:03Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1346,8 +1346,39 @@
       },
       "createdAt": "2026-01-07T18:09:09Z",
       "updatedAt": "2026-11-02T16:54:58Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1199059123",
+      "repoId": 1199059123,
+      "fullName": "visual-req/visual-spec",
+      "name": "visual-spec",
+      "description": "Give your short business requirement, follow instructions, answer a few questions, get your specification, prototypes, codes, tests.",
+      "url": "https://github.com/visual-req/visual-spec",
+      "homepage": null,
+      "stars": 52,
+      "forks": 14,
+      "watchers": 52,
+      "language": "HTML",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "requirements-engineering",
+        "sdd",
+        "skills",
+        "specification"
+      ],
+      "owner": {
+        "login": "visual-req",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/272982145?v=4",
+        "url": "https://github.com/visual-req"
+      },
+      "createdAt": "2026-04-02T02:38:08Z",
+      "updatedAt": "2026-11-14T08:02:34Z",
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1387,39 +1418,8 @@
       },
       "createdAt": "2026-03-22T05:37:37Z",
       "updatedAt": "2026-10-31T06:55:00Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1199059123",
-      "repoId": 1199059123,
-      "fullName": "visual-req/visual-spec",
-      "name": "visual-spec",
-      "description": "Give your short business requirement, follow instructions, answer a few questions, get your specification, prototypes, codes, tests.",
-      "url": "https://github.com/visual-req/visual-spec",
-      "homepage": null,
-      "stars": 51,
-      "forks": 14,
-      "watchers": 51,
-      "language": "HTML",
-      "topics": [
-        "ai",
-        "ai-agent",
-        "requirements-engineering",
-        "sdd",
-        "skills",
-        "specification"
-      ],
-      "owner": {
-        "login": "visual-req",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/272982145?v=4",
-        "url": "https://github.com/visual-req"
-      },
-      "createdAt": "2026-04-02T02:38:08Z",
-      "updatedAt": "2026-10-05T04:28:51Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1455,8 +1455,8 @@
       },
       "createdAt": "2026-01-11T15:09:37Z",
       "updatedAt": "2026-11-13T11:33:15Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1492,8 +1492,8 @@
       },
       "createdAt": "2026-03-04T13:11:24Z",
       "updatedAt": "2026-11-13T18:06:22Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1524,8 +1524,8 @@
       },
       "createdAt": "2026-03-03T06:58:56Z",
       "updatedAt": "2026-11-12T10:01:36Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1554,8 +1554,8 @@
       },
       "createdAt": "2026-02-19T06:46:08Z",
       "updatedAt": "2026-11-12T02:43:10Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1594,8 +1594,8 @@
       },
       "createdAt": "2026-04-09T11:24:04Z",
       "updatedAt": "2026-11-12T08:44:09Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1632,8 +1632,8 @@
       },
       "createdAt": "2025-12-31T10:39:46Z",
       "updatedAt": "2026-11-12T06:06:07Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1672,8 +1672,8 @@
       },
       "createdAt": "2025-09-27T11:51:17Z",
       "updatedAt": "2026-11-11T09:27:14Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1706,8 +1706,8 @@
       },
       "createdAt": "2016-12-10T19:19:17Z",
       "updatedAt": "2024-12-07T14:23:17Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1742,8 +1742,8 @@
       },
       "createdAt": "2026-05-15T02:32:13Z",
       "updatedAt": "2026-11-13T13:56:11Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     },
     {
@@ -1775,8 +1775,8 @@
       },
       "createdAt": "2019-05-31T09:45:50Z",
       "updatedAt": "2026-05-06T07:49:52Z",
-      "firstSeenAt": "2026-11-11T14:22:00.304Z",
-      "isNew": false,
+      "firstSeenAt": "2026-11-14T14:49:40.840Z",
+      "isNew": true,
       "existing": false
     }
   ]
