@@ -159,7 +159,8 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "实现计划·Spec·实现任务·验证测试·handoff",
         kind: "step",
         step: 4,
-        summary: "从 spec 到实现再到验证与交接：规格驱动开发、测试自动化与 agent 交接。",
+        summary:
+          "从 spec 到实现再到验证与交接：规格驱动开发、测试自动化与 agent 交接。",
         topics: [
           "spec-driven-development",
           "spec-kit",
