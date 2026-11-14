@@ -101,7 +101,9 @@ export function useTopicsIndex() {
   }, [topics, search]);
 
   return {
+    /** GH #68 polish：始终是全量列表；搜索过滤交给消费方（组卡片计数需要全量）。 */
     topics: filtered,
+    allTopics: topics,
     total: topics.length,
     updatedAt,
     loading,

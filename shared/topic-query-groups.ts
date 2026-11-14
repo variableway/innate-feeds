@@ -20,6 +20,8 @@ export interface TopicQueryGroup {
   id: string;
   label: string;
   labelZh: string;
+  /** 一句话说明这一组/步在做什么、查什么（/topics 组卡片副标题）。 */
+  summary?: string;
   /** "category" = EDU 子类；"step" = 产品开发步骤（渲染时带序号） */
   kind: "category" | "step";
   /** 产品开发步骤序（1-5）；category 组为 undefined */
@@ -46,6 +48,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         label: "Interactive Edu",
         labelZh: "交互式教育",
         kind: "category",
+        summary: "可动手、可参与的学习产品：练习与测验、教学游戏、交互式教程。",
         topics: [
           "interactive-learning",
           "interactive-tutorial",
@@ -63,6 +66,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         label: "Teachable Edu",
         labelZh: "授课型教育",
         kind: "category",
+        summary: "能整理成课程往外教的内容：课程结构、讲义、慕课与教学平台。",
         topics: [
           "curriculum",
           "course",
@@ -79,6 +83,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         label: "Edu Animation Tutorial",
         labelZh: "教学动画教程",
         kind: "category",
+        summary: "把知识做成动画与解说视频：动画引擎、分镜与教学视频。",
         topics: [
           "explainer-video",
           "explainer",
@@ -101,6 +106,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "头脑风暴",
         kind: "step",
         step: 1,
+        summary: "发散想法、画草图、收集灵感：白板 / 心智图 / 便签类工具。",
         topics: [
           "brainstorm",
           "brainstorming",
@@ -117,10 +123,13 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "需求分析和编写",
         kind: "step",
         step: 2,
+        summary: "把想法写成可执行的需求：PRD、用户故事与需求分析。",
         topics: [
           "prd",
+          "requirements",
           "user-stories",
           "requirements-management",
+          "requirements-analysis",
           "use-case",
           "product-management",
         ],
@@ -131,12 +140,15 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "需求任务分解和开发任务编写",
         kind: "step",
         step: 3,
+        summary: "把需求拆成可排期的开发任务：任务管理、看板与迭代计划。",
         topics: [
           "task-management",
           "project-management",
           "issue-tracking",
+          "backlog",
           "roadmap",
           "kanban",
+          "sprint-planning",
           "agile",
           "todo-list",
         ],
@@ -147,8 +159,11 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "实现计划·Spec·实现任务·验证测试·handoff",
         kind: "step",
         step: 4,
+        summary: "从 spec 到实现再到验证与交接：规格驱动开发、测试自动化与 agent 交接。",
         topics: [
           "spec-driven-development",
+          "spec-kit",
+          "sdd",
           "tdd",
           "bdd",
           "test-automation",
@@ -157,6 +172,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
           "qa",
           "code-review",
           "handoff",
+          "agent-handoff",
         ],
       },
       {
@@ -165,6 +181,7 @@ export const TOPIC_QUERY_CATEGORIES: TopicQueryCategory[] = [
         labelZh: "UI/UX 设计·分析·优化·Anti-Slop",
         kind: "step",
         step: 5,
+        summary: "界面与体验的设计、分析与去 AI 味优化；完整视图见 /ux 域。",
         // 前 14 项与 backend `UX_DESIGN_TOPICS`（sprint-3 B17）同集，DEFAULT_TOPICS
         // 去重后不重复同步；后 5 项为分析/优化类新增（task-01 实证）。
         topics: [

@@ -20,6 +20,7 @@ import { formatDate } from "@/lib/utils";
 export function TopicsPage() {
   const {
     topics,
+    allTopics,
     total,
     updatedAt,
     loading,
@@ -39,7 +40,9 @@ export function TopicsPage() {
   const navigate = useNavigate();
 
   const pendingTopic = topics.find((topic) => !topic.fetchedAt);
-  const byTopic = new Map(topics.map((t) => [t.topic, t]));
+  // GH #68 polish：组卡片计数取**全量**索引（allTopics），搜索过滤只作用于
+  // "其他 Topics" 平铺区与组卡片是否展示——避免已同步 chip 在搜索时误显 "pending"。
+  const byTopic = new Map(allTopics.map((t) => [t.topic, t]));
 
   const groupedTopicNames = new Set(
     TOPIC_QUERY_CATEGORIES.flatMap((cat) =>
@@ -255,6 +258,11 @@ function GroupCard({
         </button>
         <span className="text-xs text-muted-foreground">{group.label}</span>
       </div>
+      {group.summary && (
+        <p className="text-xs leading-relaxed text-muted-foreground">
+          {group.summary}
+        </p>
+      )}
       <div className="flex flex-wrap gap-1.5">
         {group.topics.map((name) => {
           const summary = byTopic.get(name);

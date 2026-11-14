@@ -72,4 +72,12 @@ describe("topic query taxonomy (issue #68)", () => {
       expect(g.step).toBeUndefined();
     }
   });
+
+  test("每组都有 summary 文案（GH #68 polish：组卡片副标题）", () => {
+    for (const cat of TOPIC_QUERY_CATEGORIES) {
+      for (const group of cat.groups) {
+        expect(group.summary?.trim().length ?? 0).toBeGreaterThan(4);
+      }
+    }
+  });
 });
