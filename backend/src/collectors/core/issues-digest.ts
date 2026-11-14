@@ -95,6 +95,10 @@ function ghApiJsonViaCli(apiPath: string): unknown {
     encoding: "utf-8",
     stdio: ["pipe", "pipe", "pipe"],
     maxBuffer: 20 * 1024 * 1024,
+    // 2026-11-10：gh 偶发挂起（无输出也不退出）会冻结整条 sync 链——
+    // 30s 上限 + 超时杀进程，让 ghApiJson 走 public fetch 回退。
+    timeout: 30_000,
+    killSignal: "SIGKILL",
   });
   return JSON.parse(raw);
 }
@@ -107,6 +111,9 @@ async function ghApiJsonViaFetch(apiPath: string): Promise<unknown> {
       "User-Agent": USER_AGENT,
       "X-GitHub-Api-Version": "2022-11-28",
     },
+    // 2026-11-10：本机直连 api.github.com 可能无限挂起（无默认超时），
+    // 挂满整条 sync 链。30s 上限，超时抛错由调用方决定重试/跳过。
+    signal: AbortSignal.timeout(30_000),
   });
   if (!res.ok) {
     const body = await res.text();
