@@ -1,6 +1,6 @@
 {
   "topic": "accessibility",
-  "fetchedAt": "2026-11-15T15:18:26.620Z",
+  "fetchedAt": "2026-11-16T17:55:23.664Z",
   "count": 50,
   "newCount": 43,
   "existingCount": 7,
@@ -13,9 +13,9 @@
       "description": "基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules",
       "url": "https://github.com/gkd-kit/gkd",
       "homepage": "https://gkd.li",
-      "stars": 44813,
-      "forks": 2139,
-      "watchers": 44813,
+      "stars": 44886,
+      "forks": 2142,
+      "watchers": 44886,
       "language": "Kotlin",
       "topics": [
         "accessibility",
@@ -36,8 +36,8 @@
         "url": "https://github.com/gkd-kit"
       },
       "createdAt": "2023-07-04T03:59:15Z",
-      "updatedAt": "2026-11-15T14:55:05Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:36:03Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
     },
@@ -49,9 +49,9 @@
       "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
       "url": "https://github.com/cjpais/Handy",
       "homepage": "https://handy.computer",
-      "stars": 38838,
-      "forks": 3674,
-      "watchers": 38838,
+      "stars": 38973,
+      "forks": 3686,
+      "watchers": 38973,
       "language": "Rust",
       "topics": [
         "accessibility",
@@ -65,46 +65,10 @@
         "url": "https://github.com/cjpais"
       },
       "createdAt": "2025-02-13T02:42:29Z",
-      "updatedAt": "2026-11-15T15:15:48Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:48:33Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
-    },
-    {
-      "id": "gh-topic-41592744",
-      "repoId": 41592744,
-      "fullName": "AllThingsSmitty/css-protips",
-      "name": "css-protips",
-      "description": "A collection of tips to help take your CSS skills pro. 🕹 ",
-      "url": "https://github.com/AllThingsSmitty/css-protips",
-      "homepage": null,
-      "stars": 30304,
-      "forks": 2195,
-      "watchers": 30304,
-      "language": null,
-      "topics": [
-        "accessibility",
-        "awesome-list",
-        "best-practices",
-        "cheatsheet",
-        "css",
-        "css-tips",
-        "css-tricks",
-        "css3",
-        "flexbox",
-        "frontend",
-        "web-development"
-      ],
-      "owner": {
-        "login": "AllThingsSmitty",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1682367?v=4",
-        "url": "https://github.com/AllThingsSmitty"
-      },
-      "createdAt": "2015-08-29T12:29:03Z",
-      "updatedAt": "2026-11-15T12:40:20Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
-      "isNew": true,
-      "existing": false
     },
     {
       "id": "gh-topic-982587624",
@@ -114,9 +78,9 @@
       "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
       "url": "https://github.com/opendataloader-project/opendataloader-pdf",
       "homepage": "https://opendataloader.org",
-      "stars": 30303,
-      "forks": 2903,
-      "watchers": 30303,
+      "stars": 30312,
+      "forks": 2904,
+      "watchers": 30312,
       "language": "Java",
       "topics": [
         "a11y",
@@ -146,10 +110,46 @@
         "url": "https://github.com/opendataloader-project"
       },
       "createdAt": "2025-05-13T05:48:02Z",
-      "updatedAt": "2026-11-15T14:05:49Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T16:23:39Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
+    },
+    {
+      "id": "gh-topic-41592744",
+      "repoId": 41592744,
+      "fullName": "AllThingsSmitty/css-protips",
+      "name": "css-protips",
+      "description": "A collection of tips to help take your CSS skills pro. 🕹 ",
+      "url": "https://github.com/AllThingsSmitty/css-protips",
+      "homepage": null,
+      "stars": 30305,
+      "forks": 2194,
+      "watchers": 30305,
+      "language": null,
+      "topics": [
+        "accessibility",
+        "awesome-list",
+        "best-practices",
+        "cheatsheet",
+        "css",
+        "css-tips",
+        "css-tricks",
+        "css3",
+        "flexbox",
+        "frontend",
+        "web-development"
+      ],
+      "owner": {
+        "login": "AllThingsSmitty",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1682367?v=4",
+        "url": "https://github.com/AllThingsSmitty"
+      },
+      "createdAt": "2015-08-29T12:29:03Z",
+      "updatedAt": "2026-11-16T06:35:32Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-295992065",
@@ -159,9 +159,9 @@
       "description": "Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
       "url": "https://github.com/tailwindlabs/headlessui",
       "homepage": "https://headlessui.com",
-      "stars": 28830,
-      "forks": 1218,
-      "watchers": 28830,
+      "stars": 28831,
+      "forks": 1219,
+      "watchers": 28831,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -179,8 +179,8 @@
         "url": "https://github.com/tailwindlabs"
       },
       "createdAt": "2020-09-16T09:53:09Z",
-      "updatedAt": "2026-11-15T09:34:17Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T16:03:58Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -192,9 +192,9 @@
       "description": "Computer use CLI for AI agents",
       "url": "https://github.com/vercel-labs/agent-desktop",
       "homepage": "https://agent-browser.dev/desktop",
-      "stars": 24063,
-      "forks": 1789,
-      "watchers": 24063,
+      "stars": 24554,
+      "forks": 1825,
+      "watchers": 24554,
       "language": "Rust",
       "topics": [
         "accessibility",
@@ -216,8 +216,8 @@
         "url": "https://github.com/vercel-labs"
       },
       "createdAt": "2026-02-19T18:00:49Z",
-      "updatedAt": "2026-11-15T15:16:57Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:54:39Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
     },
@@ -229,9 +229,9 @@
       "description": "Dark Reader Chrome and Firefox extension",
       "url": "https://github.com/darkreader/darkreader",
       "homepage": "https://darkreader.org/",
-      "stars": 22591,
-      "forks": 2783,
-      "watchers": 22591,
+      "stars": 22596,
+      "forks": 2784,
+      "watchers": 22596,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -250,8 +250,8 @@
         "url": "https://github.com/darkreader"
       },
       "createdAt": "2014-11-15T14:22:52Z",
-      "updatedAt": "2026-11-15T15:13:42Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T13:42:59Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -263,9 +263,9 @@
       "description": "Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.",
       "url": "https://github.com/radix-ui/primitives",
       "homepage": "https://radix-ui.com/primitives",
-      "stars": 19499,
-      "forks": 1321,
-      "watchers": 19499,
+      "stars": 19506,
+      "forks": 1322,
+      "watchers": 19506,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -284,8 +284,8 @@
         "url": "https://github.com/radix-ui"
       },
       "createdAt": "2020-06-19T13:23:22Z",
-      "updatedAt": "2026-11-15T14:50:42Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T13:13:03Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -297,9 +297,9 @@
       "description": "A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences.",
       "url": "https://github.com/adobe/react-spectrum",
       "homepage": "https://react-spectrum.adobe.com",
-      "stars": 16036,
-      "forks": 1644,
-      "watchers": 16036,
+      "stars": 16043,
+      "forks": 1648,
+      "watchers": 16043,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -315,8 +315,8 @@
         "url": "https://github.com/adobe"
       },
       "createdAt": "2019-09-13T23:32:51Z",
-      "updatedAt": "2026-11-15T06:52:10Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T07:01:32Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -353,7 +353,7 @@
       },
       "createdAt": "2016-10-08T15:59:35Z",
       "updatedAt": "2026-11-13T16:07:27Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -366,7 +366,7 @@
       "url": "https://github.com/shipshapecode/shepherd",
       "homepage": "https://shepherdjs.dev",
       "stars": 13833,
-      "forks": 654,
+      "forks": 656,
       "watchers": 13833,
       "language": "JavaScript",
       "topics": [
@@ -390,8 +390,8 @@
         "url": "https://github.com/shipshapecode"
       },
       "createdAt": "2013-12-17T06:30:27Z",
-      "updatedAt": "2026-11-15T08:34:55Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T15:05:36Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -426,8 +426,8 @@
         "url": "https://github.com/markmead"
       },
       "createdAt": "2021-11-12T17:14:11Z",
-      "updatedAt": "2026-11-15T14:54:05Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T09:46:09Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -439,9 +439,9 @@
       "description": "Thefatrat a massive exploiting tool : Easy tool to generate backdoor and easy tool to post exploitation attack like browser attack and etc . This tool compiles a malware with popular payload and then the compiled malware can be execute on windows, android, mac . The malware that created with this tool also have an ability to bypass most AV software protection .",
       "url": "https://github.com/screetsec/TheFatRat",
       "homepage": null,
-      "stars": 11604,
-      "forks": 2537,
-      "watchers": 11604,
+      "stars": 11611,
+      "forks": 2538,
+      "watchers": 11611,
       "language": "C",
       "topics": [
         "accessibility",
@@ -471,8 +471,8 @@
         "url": "https://github.com/screetsec"
       },
       "createdAt": "2016-07-24T10:30:19Z",
-      "updatedAt": "2026-11-15T11:24:55Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T16:13:06Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -484,9 +484,9 @@
       "description": "Unstyled UI components for building accessible web apps and design systems. From the creators of Radix, Floating UI, and Material UI.",
       "url": "https://github.com/mui/base-ui",
       "homepage": "https://base-ui.com",
-      "stars": 11424,
-      "forks": 614,
-      "watchers": 11424,
+      "stars": 11434,
+      "forks": 615,
+      "watchers": 11434,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -504,8 +504,8 @@
         "url": "https://github.com/mui"
       },
       "createdAt": "2024-02-23T13:23:54Z",
-      "updatedAt": "2026-11-15T12:17:41Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:01:19Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
     },
@@ -517,9 +517,9 @@
       "description": "Beautiful and accessible math in all browsers",
       "url": "https://github.com/mathjax/MathJax",
       "homepage": "http://www.mathjax.org/",
-      "stars": 10950,
+      "stars": 10949,
       "forks": 1189,
-      "watchers": 10950,
+      "watchers": 10949,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -540,8 +540,8 @@
         "url": "https://github.com/mathjax"
       },
       "createdAt": "2010-08-19T03:28:53Z",
-      "updatedAt": "2026-11-14T10:23:49Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T12:21:13Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -553,9 +553,9 @@
       "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
       "url": "https://github.com/miqdadbadjuber/anti-slop",
       "homepage": "https://antislop.ai.id",
-      "stars": 9285,
-      "forks": 636,
-      "watchers": 9285,
+      "stars": 9352,
+      "forks": 640,
+      "watchers": 9352,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -575,8 +575,8 @@
         "url": "https://github.com/miqdadbadjuber"
       },
       "createdAt": "2026-08-07T10:29:56Z",
-      "updatedAt": "2026-11-15T15:12:03Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:55:08Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -588,9 +588,9 @@
       "description": "Open source website builder and Webflow alternative. Webstudio is an advanced visual builder that connects to any headless CMS, supports all CSS properties, and can be hosted anywhere, including with us.",
       "url": "https://github.com/webstudio-is/webstudio",
       "homepage": "https://webstudio.is",
-      "stars": 9169,
+      "stars": 9171,
       "forks": 1640,
-      "watchers": 9169,
+      "watchers": 9171,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -617,8 +617,8 @@
         "url": "https://github.com/webstudio-is"
       },
       "createdAt": "2022-03-13T04:19:01Z",
-      "updatedAt": "2026-11-15T15:05:46Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:19:12Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -630,9 +630,9 @@
       "description": "Radix Themes is an open-source component library optimized for fast development, easy maintenance, and accessibility. Maintained by @workos.",
       "url": "https://github.com/radix-ui/themes",
       "homepage": "https://radix-ui.com/themes",
-      "stars": 8850,
-      "forks": 347,
-      "watchers": 8850,
+      "stars": 8854,
+      "forks": 348,
+      "watchers": 8854,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -653,8 +653,8 @@
         "url": "https://github.com/radix-ui"
       },
       "createdAt": "2023-06-15T12:21:08Z",
-      "updatedAt": "2026-11-15T14:53:19Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:01:09Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -666,9 +666,9 @@
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "url": "https://github.com/wangzan101/Mika",
       "homepage": "https://mikaphone.com",
-      "stars": 8686,
-      "forks": 1984,
-      "watchers": 8686,
+      "stars": 8841,
+      "forks": 2010,
+      "watchers": 8841,
       "language": "Kotlin",
       "topics": [
         "accessibility",
@@ -686,8 +686,8 @@
         "url": "https://github.com/wangzan101"
       },
       "createdAt": "2026-10-29T14:34:07Z",
-      "updatedAt": "2026-11-15T15:09:43Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:26:07Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -699,9 +699,9 @@
       "description": "Toolkit with accessible components, styles, and examples for your next web app",
       "url": "https://github.com/ariakit/ariakit",
       "homepage": "https://ariakit.com",
-      "stars": 8635,
+      "stars": 8638,
       "forks": 424,
-      "watchers": 8635,
+      "watchers": 8638,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -722,8 +722,8 @@
         "url": "https://github.com/ariakit"
       },
       "createdAt": "2017-09-19T22:00:42Z",
-      "updatedAt": "2026-11-12T20:22:40Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:09:55Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -755,7 +755,7 @@
       },
       "createdAt": "2012-12-30T20:17:34Z",
       "updatedAt": "2026-11-11T10:43:34Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -767,9 +767,9 @@
       "description": "Accessibility engine for automated Web UI testing",
       "url": "https://github.com/dequelabs/axe-core",
       "homepage": "https://www.deque.com/axe/",
-      "stars": 7825,
-      "forks": 994,
-      "watchers": 7825,
+      "stars": 7832,
+      "forks": 993,
+      "watchers": 7832,
       "language": "HTML",
       "topics": [
         "a11y",
@@ -782,8 +782,8 @@
         "url": "https://github.com/dequelabs"
       },
       "createdAt": "2015-06-10T15:26:45Z",
-      "updatedAt": "2026-11-15T05:33:43Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T15:21:22Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -795,9 +795,9 @@
       "description": "A visual overview of useful skills to learn as a web developer",
       "url": "https://github.com/andreasbm/web-skills",
       "homepage": "https://andreasbm.github.io/web-skills/",
-      "stars": 7672,
+      "stars": 7676,
       "forks": 729,
-      "watchers": 7672,
+      "watchers": 7676,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -820,8 +820,8 @@
         "url": "https://github.com/andreasbm"
       },
       "createdAt": "2019-09-29T13:11:44Z",
-      "updatedAt": "2026-11-14T12:21:42Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T11:21:06Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -833,9 +833,9 @@
       "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
       "url": "https://github.com/unovue/reka-ui",
       "homepage": "https://reka-ui.com",
-      "stars": 6958,
-      "forks": 585,
-      "watchers": 6958,
+      "stars": 6959,
+      "forks": 584,
+      "watchers": 6959,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -861,8 +861,8 @@
         "url": "https://github.com/unovue"
       },
       "createdAt": "2023-06-22T11:08:02Z",
-      "updatedAt": "2026-11-14T18:41:35Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T11:36:36Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
     },
@@ -904,7 +904,7 @@
       },
       "createdAt": "2016-09-29T17:24:17Z",
       "updatedAt": "2026-11-12T12:20:29Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -916,9 +916,9 @@
       "description": "Skeleton is an adaptive design system powered by Tailwind CSS.",
       "url": "https://github.com/skeletonlabs/skeleton",
       "homepage": "https://skeleton.dev",
-      "stars": 6090,
+      "stars": 6091,
       "forks": 391,
-      "watchers": 6090,
+      "watchers": 6091,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -942,8 +942,8 @@
         "url": "https://github.com/skeletonlabs"
       },
       "createdAt": "2022-02-23T16:04:46Z",
-      "updatedAt": "2026-11-14T15:26:30Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T13:44:39Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -955,9 +955,9 @@
       "description": "noUiSlider is a lightweight, ARIA-accessible JavaScript range slider with multi-touch and keyboard support. It is fully GPU animated: no reflows, so it is fast; even on older devices. It also fits wonderfully in responsive designs and has no dependencies.",
       "url": "https://github.com/leongersen/noUiSlider",
       "homepage": "https://refreshless.com/nouislider/",
-      "stars": 5797,
+      "stars": 5796,
       "forks": 646,
-      "watchers": 5797,
+      "watchers": 5796,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -975,8 +975,8 @@
         "url": "https://github.com/leongersen"
       },
       "createdAt": "2011-11-19T12:38:41Z",
-      "updatedAt": "2026-11-13T23:24:56Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T03:13:52Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -988,9 +988,9 @@
       "description": "React & React Native Components & Patterns (copy-paste components & patterns crafted with Tailwind CSS (NativeWind))",
       "url": "https://github.com/gluestack/gluestack-ui",
       "homepage": "https://gluestack.io/",
-      "stars": 5359,
+      "stars": 5360,
       "forks": 238,
-      "watchers": 5359,
+      "watchers": 5360,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -1010,8 +1010,8 @@
         "url": "https://github.com/gluestack"
       },
       "createdAt": "2023-01-11T12:03:50Z",
-      "updatedAt": "2026-11-14T16:11:17Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-15T19:25:38Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1023,9 +1023,9 @@
       "description": "AdSkip — an Android assistant for automatically skipping app launch ads",
       "url": "https://github.com/zfdang/Android-Touch-Helper",
       "homepage": "https://TouchHelper.zfdang.com",
-      "stars": 5337,
+      "stars": 5340,
       "forks": 509,
-      "watchers": 5337,
+      "watchers": 5340,
       "language": "Java",
       "topics": [
         "accessibility",
@@ -1046,8 +1046,8 @@
         "url": "https://github.com/zfdang"
       },
       "createdAt": "2020-10-16T00:58:41Z",
-      "updatedAt": "2026-11-14T16:54:33Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:35:58Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1059,9 +1059,9 @@
       "description": "Build your design system in React, Solid, Vue, Svelte or Vanilla. Powered by finite state machines",
       "url": "https://github.com/chakra-ui/zag",
       "homepage": "http://zagjs.com",
-      "stars": 5281,
+      "stars": 5284,
       "forks": 312,
-      "watchers": 5281,
+      "watchers": 5284,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -1091,8 +1091,49 @@
         "url": "https://github.com/chakra-ui"
       },
       "createdAt": "2021-07-07T11:38:07Z",
-      "updatedAt": "2026-11-15T08:47:03Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T12:53:28Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1434724807",
+      "repoId": 1434724807,
+      "fullName": "vercel-labs/ui",
+      "name": "ui",
+      "description": "A library of behaviors for agents to build the next generation of user interfaces.",
+      "url": "https://github.com/vercel-labs/ui",
+      "homepage": "https://ui-sdk.dev",
+      "stars": 5229,
+      "forks": 170,
+      "watchers": 5229,
+      "language": "TypeScript",
+      "topics": [
+        "accessibility",
+        "agent",
+        "agents",
+        "ai",
+        "aria",
+        "behaviors",
+        "component",
+        "component-library",
+        "headless",
+        "mcp",
+        "react",
+        "solid",
+        "svelte",
+        "vue",
+        "web-components",
+        "webmcp"
+      ],
+      "owner": {
+        "login": "vercel-labs",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/108547162?v=4",
+        "url": "https://github.com/vercel-labs"
+      },
+      "createdAt": "2026-10-26T17:39:27Z",
+      "updatedAt": "2026-11-16T17:50:32Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1104,9 +1145,9 @@
       "description": "A minimal, accessible and SEO-friendly Astro blog theme.",
       "url": "https://github.com/satnaing/astro-paper",
       "homepage": "https://astro-paper.pages.dev/",
-      "stars": 5210,
-      "forks": 1127,
-      "watchers": 5210,
+      "stars": 5211,
+      "forks": 1130,
+      "watchers": 5211,
       "language": "Astro",
       "topics": [
         "a11y",
@@ -1131,8 +1172,48 @@
         "url": "https://github.com/satnaing"
       },
       "createdAt": "2022-09-08T12:46:37Z",
-      "updatedAt": "2026-11-15T14:45:45Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T12:15:26Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1342930695",
+      "repoId": 1342930695,
+      "fullName": "nateherkai/scroll-craft",
+      "name": "scroll-craft",
+      "description": "An agent skill for building premium, immersive, scroll-driven websites. Works with Codex, Claude Code, and other coding agents. Also available as a Claude Code plugin.",
+      "url": "https://github.com/nateherkai/scroll-craft",
+      "homepage": "https://github.com/nateherkai/scroll-craft",
+      "stars": 5139,
+      "forks": 718,
+      "watchers": 5139,
+      "language": "JavaScript",
+      "topics": [
+        "accessibility",
+        "agent-skills",
+        "ai-web-design",
+        "anthropic",
+        "claude-code",
+        "claude-code-plugin",
+        "creative-coding",
+        "design-system",
+        "frontend",
+        "interaction-design",
+        "landing-page",
+        "scroll-animation",
+        "scrollytelling",
+        "typography",
+        "web-design"
+      ],
+      "owner": {
+        "login": "nateherkai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/253835467?v=4",
+        "url": "https://github.com/nateherkai"
+      },
+      "createdAt": "2026-08-22T15:25:08Z",
+      "updatedAt": "2026-11-16T17:55:12Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1144,9 +1225,9 @@
       "description": "Extract any website's complete design system with one command. DTCG tokens, semantic+primitive+composite, MCP server for Claude Code/Cursor/Windsurf, multi-platform emitters (iOS SwiftUI, Android Compose, Flutter, WordPress), Tailwind v4, Figma variables, shadcn/ui, CSS health audit, WCAG remediation, Chrome extension. MIT, Playwright, Node 20+.",
       "url": "https://github.com/Manavarya09/design-extract",
       "homepage": "https://www.designlang.app",
-      "stars": 5098,
+      "stars": 5112,
       "forks": 425,
-      "watchers": 5098,
+      "watchers": 5112,
       "language": "HTML",
       "topics": [
         "accessibility",
@@ -1176,88 +1257,8 @@
         "url": "https://github.com/Manavarya09"
       },
       "createdAt": "2026-04-15T10:11:22Z",
-      "updatedAt": "2026-11-15T13:49:42Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1342930695",
-      "repoId": 1342930695,
-      "fullName": "nateherkai/scroll-craft",
-      "name": "scroll-craft",
-      "description": "An agent skill for building premium, immersive, scroll-driven websites. Works with Codex, Claude Code, and other coding agents. Also available as a Claude Code plugin.",
-      "url": "https://github.com/nateherkai/scroll-craft",
-      "homepage": "https://github.com/nateherkai/scroll-craft",
-      "stars": 5093,
-      "forks": 707,
-      "watchers": 5093,
-      "language": "JavaScript",
-      "topics": [
-        "accessibility",
-        "agent-skills",
-        "ai-web-design",
-        "anthropic",
-        "claude-code",
-        "claude-code-plugin",
-        "creative-coding",
-        "design-system",
-        "frontend",
-        "interaction-design",
-        "landing-page",
-        "scroll-animation",
-        "scrollytelling",
-        "typography",
-        "web-design"
-      ],
-      "owner": {
-        "login": "nateherkai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/253835467?v=4",
-        "url": "https://github.com/nateherkai"
-      },
-      "createdAt": "2026-08-22T15:25:08Z",
-      "updatedAt": "2026-11-15T15:14:17Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1434724807",
-      "repoId": 1434724807,
-      "fullName": "vercel-labs/ui",
-      "name": "ui",
-      "description": "A library of behaviors for agents to build the next generation of user interfaces.",
-      "url": "https://github.com/vercel-labs/ui",
-      "homepage": "https://ui-sdk.dev",
-      "stars": 4789,
-      "forks": 147,
-      "watchers": 4789,
-      "language": "TypeScript",
-      "topics": [
-        "accessibility",
-        "agent",
-        "agents",
-        "aria",
-        "behaviors",
-        "component",
-        "component-library",
-        "headless",
-        "mcp",
-        "react",
-        "solid",
-        "svelte",
-        "vue",
-        "web-components",
-        "webmcp"
-      ],
-      "owner": {
-        "login": "vercel-labs",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/108547162?v=4",
-        "url": "https://github.com/vercel-labs"
-      },
-      "createdAt": "2026-10-26T17:39:27Z",
-      "updatedAt": "2026-11-15T15:17:41Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T17:06:57Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1291,7 +1292,7 @@
       },
       "createdAt": "2013-03-05T09:51:11Z",
       "updatedAt": "2026-11-14T21:14:27Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1303,9 +1304,9 @@
       "description": "Популярные HTML / CSS / JavaScript / ECMAScript / TypeScript / React / Vue / Angular / Node вопросы на интервью и ответы на них (https://tinyurl.com/wxysrpsy)",
       "url": "https://github.com/YauhenKavalchuk/interview-questions",
       "homepage": "http://youtube.com/c/YauhenKavalchuk/",
-      "stars": 4576,
+      "stars": 4575,
       "forks": 597,
-      "watchers": 4576,
+      "watchers": 4575,
       "language": null,
       "topics": [
         "accessibility",
@@ -1331,8 +1332,8 @@
         "url": "https://github.com/YauhenKavalchuk"
       },
       "createdAt": "2021-03-30T14:06:13Z",
-      "updatedAt": "2026-11-14T18:27:05Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-15T20:29:45Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1373,7 +1374,7 @@
       },
       "createdAt": "2014-07-14T21:23:52Z",
       "updatedAt": "2026-11-06T13:29:39Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1402,8 +1403,8 @@
         "url": "https://github.com/a11yproject"
       },
       "createdAt": "2013-01-10T20:39:57Z",
-      "updatedAt": "2026-11-14T21:14:37Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-15T18:37:38Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1415,9 +1416,9 @@
       "description": "Vuestic UI is an open-source Vue 3 component library designed for rapid development, easy maintenance, and high accessibility. Maintained by Epicmax (@epicmaxco).",
       "url": "https://github.com/epicmaxco/vuestic-ui",
       "homepage": "https://vuestic.dev",
-      "stars": 3750,
+      "stars": 3749,
       "forks": 353,
-      "watchers": 3750,
+      "watchers": 3749,
       "language": "Vue",
       "topics": [
         "accessibility",
@@ -1441,8 +1442,8 @@
         "url": "https://github.com/epicmaxco"
       },
       "createdAt": "2019-08-03T11:58:26Z",
-      "updatedAt": "2026-11-15T10:45:50Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-15T23:03:49Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1486,8 +1487,8 @@
         "url": "https://github.com/vidstack"
       },
       "createdAt": "2021-01-25T22:50:37Z",
-      "updatedAt": "2026-11-14T23:24:18Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T03:54:28Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": true
     },
@@ -1530,7 +1531,7 @@
       },
       "createdAt": "2015-05-19T22:42:39Z",
       "updatedAt": "2026-11-13T19:15:41Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1560,7 +1561,7 @@
       },
       "createdAt": "2017-08-10T17:24:03Z",
       "updatedAt": "2026-11-13T21:20:46Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1592,7 +1593,7 @@
       },
       "createdAt": "2016-02-17T20:50:33Z",
       "updatedAt": "2026-11-12T22:15:36Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1604,9 +1605,9 @@
       "description": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
       "url": "https://github.com/plugin87/ux-ui-agent-skills",
       "homepage": "https://plugin87.github.io/ux-ui-agent-skills/",
-      "stars": 3177,
-      "forks": 309,
-      "watchers": 3177,
+      "stars": 3179,
+      "forks": 310,
+      "watchers": 3179,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -1632,8 +1633,8 @@
         "url": "https://github.com/plugin87"
       },
       "createdAt": "2026-03-16T13:08:49Z",
-      "updatedAt": "2026-11-15T11:45:36Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T15:19:44Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1645,9 +1646,9 @@
       "description": "Agent Skills for optimizing web quality based on Lighthouse and Core Web Vitals.",
       "url": "https://github.com/addyosmani/web-quality-skills",
       "homepage": null,
-      "stars": 3085,
-      "forks": 268,
-      "watchers": 3085,
+      "stars": 3097,
+      "forks": 269,
+      "watchers": 3097,
       "language": "Shell",
       "topics": [
         "accessibility",
@@ -1665,8 +1666,53 @@
         "url": "https://github.com/addyosmani"
       },
       "createdAt": "2026-01-18T10:53:04Z",
-      "updatedAt": "2026-11-15T12:42:53Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T16:42:00Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1213220459",
+      "repoId": 1213220459,
+      "fullName": "iFurySt/open-computer-use",
+      "name": "open-computer-use",
+      "description": "👾 Open Computer Use – Open-Source Alternative to Codex Computer Use",
+      "url": "https://github.com/iFurySt/open-computer-use",
+      "homepage": null,
+      "stars": 2995,
+      "forks": 276,
+      "watchers": 2995,
+      "language": "Swift",
+      "topics": [
+        "accessibility",
+        "ai-agent",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "codex-computer-use",
+        "computer-use",
+        "computer-use-agent",
+        "cross-platform",
+        "cua",
+        "desktop-automation",
+        "gemini-cli",
+        "gui-automation",
+        "locked-use",
+        "macos",
+        "mcp",
+        "open-computer-use",
+        "open-computer-use-mcp",
+        "openai-codex",
+        "opencode"
+      ],
+      "owner": {
+        "login": "iFurySt",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/16201837?v=4",
+        "url": "https://github.com/iFurySt"
+      },
+      "createdAt": "2026-04-17T06:51:32Z",
+      "updatedAt": "2026-11-16T17:50:45Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1678,9 +1724,9 @@
       "description": "Cutting-edge tools powering Angular full-stack development.",
       "url": "https://github.com/spartan-ng/spartan",
       "homepage": "https://spartan.ng",
-      "stars": 2994,
-      "forks": 339,
-      "watchers": 2994,
+      "stars": 2995,
+      "forks": 341,
+      "watchers": 2995,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -1695,8 +1741,8 @@
         "url": "https://github.com/spartan-ng"
       },
       "createdAt": "2023-04-06T13:04:03Z",
-      "updatedAt": "2026-11-14T20:03:10Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T13:23:15Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1729,52 +1775,7 @@
       },
       "createdAt": "2020-04-16T21:22:34Z",
       "updatedAt": "2026-11-13T03:24:31Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1213220459",
-      "repoId": 1213220459,
-      "fullName": "iFurySt/open-computer-use",
-      "name": "open-computer-use",
-      "description": "👾 Open Computer Use – Open-Source Alternative to Codex Computer Use",
-      "url": "https://github.com/iFurySt/open-computer-use",
-      "homepage": null,
-      "stars": 2979,
-      "forks": 276,
-      "watchers": 2979,
-      "language": "Swift",
-      "topics": [
-        "accessibility",
-        "ai-agent",
-        "ai-agents",
-        "claude-code",
-        "codex",
-        "codex-computer-use",
-        "computer-use",
-        "computer-use-agent",
-        "cross-platform",
-        "cua",
-        "desktop-automation",
-        "gemini-cli",
-        "gui-automation",
-        "locked-use",
-        "macos",
-        "mcp",
-        "open-computer-use",
-        "open-computer-use-mcp",
-        "openai-codex",
-        "opencode"
-      ],
-      "owner": {
-        "login": "iFurySt",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/16201837?v=4",
-        "url": "https://github.com/iFurySt"
-      },
-      "createdAt": "2026-04-17T06:51:32Z",
-      "updatedAt": "2026-11-15T14:56:47Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1786,9 +1787,9 @@
       "description": "NVDA, the free and open source Screen Reader for Microsoft Windows",
       "url": "https://github.com/nvaccess/nvda",
       "homepage": "https://www.nvaccess.org/",
-      "stars": 2692,
+      "stars": 2693,
       "forks": 872,
-      "watchers": 2692,
+      "watchers": 2693,
       "language": "Python",
       "topics": [
         "accessibility",
@@ -1801,8 +1802,8 @@
         "url": "https://github.com/nvaccess"
       },
       "createdAt": "2015-11-10T03:47:11Z",
-      "updatedAt": "2026-11-14T21:47:31Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "updatedAt": "2026-11-16T02:24:52Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     },
@@ -1831,7 +1832,7 @@
       },
       "createdAt": "2016-02-11T11:01:11Z",
       "updatedAt": "2026-11-13T03:02:39Z",
-      "firstSeenAt": "2026-11-15T15:18:26.620Z",
+      "firstSeenAt": "2026-11-16T17:55:23.664Z",
       "isNew": true,
       "existing": false
     }

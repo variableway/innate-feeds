@@ -1,6 +1,6 @@
 {
   "topic": "e2e-testing",
-  "fetchedAt": "2026-11-15T15:22:07.829Z",
+  "fetchedAt": "2026-11-16T17:59:27.089Z",
   "count": 50,
   "newCount": 45,
   "existingCount": 5,
@@ -13,9 +13,9 @@
       "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "url": "https://github.com/microsoft/playwright",
       "homepage": "https://playwright.dev",
-      "stars": 100234,
-      "forks": 6881,
-      "watchers": 100234,
+      "stars": 100332,
+      "forks": 6894,
+      "watchers": 100332,
       "language": "TypeScript",
       "topics": [
         "automation",
@@ -40,8 +40,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2019-11-15T18:32:42Z",
-      "updatedAt": "2026-11-15T14:46:34Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T17:36:18Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -53,9 +53,9 @@
       "description": "See interfaces like a human. E2E testing in natural language.",
       "url": "https://github.com/web-infra-dev/midscene",
       "homepage": "https://midscenejs.com",
-      "stars": 15616,
+      "stars": 15623,
       "forks": 1223,
-      "watchers": 15616,
+      "watchers": 15623,
       "language": "TypeScript",
       "topics": [
         "browser-use",
@@ -73,8 +73,8 @@
         "url": "https://github.com/web-infra-dev"
       },
       "createdAt": "2024-07-23T04:03:50Z",
-      "updatedAt": "2026-11-15T13:58:42Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T16:07:40Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": true
     },
@@ -86,9 +86,9 @@
       "description": "Next generation e2e testing framework for web and mobile apps.",
       "url": "https://github.com/e2e-inc/e2e",
       "homepage": "https://e2e.com",
-      "stars": 13906,
-      "forks": 746,
-      "watchers": 13906,
+      "stars": 13950,
+      "forks": 753,
+      "watchers": 13950,
       "language": "TypeScript",
       "topics": [
         "agentic-testing",
@@ -114,8 +114,8 @@
         "url": "https://github.com/e2e-inc"
       },
       "createdAt": "2026-07-22T09:29:04Z",
-      "updatedAt": "2026-11-15T14:41:03Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T17:47:14Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -124,12 +124,12 @@
       "repoId": 17420614,
       "fullName": "seleniumbase/SeleniumBase",
       "name": "SeleniumBase",
-      "description": "📊 Blazing fast Python framework for web crawling, testing, scraping, and stealth. Supports pytest. Bypasses bot-detection with CDP Mode. Works with Playwright.",
+      "description": "📊 Blazing fast Python framework for web crawling, testing, scraping, and stealth. Supports pytest. Bypasses bot-detection with CDP Mode. Compatible with Playwright.",
       "url": "https://github.com/seleniumbase/SeleniumBase",
       "homepage": "https://seleniumbase.io",
-      "stars": 13258,
+      "stars": 13265,
       "forks": 1616,
-      "watchers": 13258,
+      "watchers": 13265,
       "language": "Python",
       "topics": [
         "bot-detection",
@@ -155,8 +155,8 @@
         "url": "https://github.com/seleniumbase"
       },
       "createdAt": "2014-03-04T23:07:33Z",
-      "updatedAt": "2026-11-15T15:21:41Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T17:42:56Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -189,7 +189,7 @@
       },
       "createdAt": "2018-01-05T14:19:59Z",
       "updatedAt": "2026-11-15T01:41:30Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -201,9 +201,9 @@
       "description": "QA via natural language AI tests",
       "url": "https://github.com/antiwork/shortest",
       "homepage": "https://shortest.com",
-      "stars": 5699,
+      "stars": 5701,
       "forks": 340,
-      "watchers": 5699,
+      "watchers": 5701,
       "language": "TypeScript",
       "topics": [
         "anthropic",
@@ -226,8 +226,8 @@
         "url": "https://github.com/antiwork"
       },
       "createdAt": "2024-09-18T20:44:05Z",
-      "updatedAt": "2026-11-15T14:52:23Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T12:24:34Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": true
     },
@@ -239,9 +239,9 @@
       "description": "Open source device layer for AI coding agents: a CLI, MCP server, and typed Node.js API to control mobile, web, TV, and desktop apps on devices and simulators, locally or in the cloud.",
       "url": "https://github.com/callstack/agent-device",
       "homepage": "https://agent-device.dev",
-      "stars": 5403,
-      "forks": 406,
-      "watchers": 5403,
+      "stars": 5413,
+      "forks": 408,
+      "watchers": 5413,
       "language": "TypeScript",
       "topics": [
         "adb",
@@ -268,8 +268,8 @@
         "url": "https://github.com/callstack"
       },
       "createdAt": "2026-01-30T18:41:54Z",
-      "updatedAt": "2026-11-15T14:25:22Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T14:10:40Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -281,9 +281,9 @@
       "description": "Official TestSprite CLI — AI-powered automated testing from your terminal",
       "url": "https://github.com/TestSprite/testsprite-cli",
       "homepage": "https://www.testsprite.com",
-      "stars": 5179,
+      "stars": 5183,
       "forks": 299,
-      "watchers": 5179,
+      "watchers": 5183,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -300,8 +300,8 @@
         "url": "https://github.com/TestSprite"
       },
       "createdAt": "2026-06-11T10:44:15Z",
-      "updatedAt": "2026-11-15T14:21:41Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T16:02:28Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": true
     },
@@ -313,9 +313,9 @@
       "description": "Headless Chrome .NET API",
       "url": "https://github.com/hardkoded/puppeteer-sharp",
       "homepage": "https://www.puppeteersharp.com",
-      "stars": 3934,
+      "stars": 3935,
       "forks": 481,
-      "watchers": 3934,
+      "watchers": 3935,
       "language": "C#",
       "topics": [
         "automation",
@@ -335,8 +335,8 @@
         "url": "https://github.com/hardkoded"
       },
       "createdAt": "2017-09-30T20:32:25Z",
-      "updatedAt": "2026-11-14T09:52:10Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-15T22:13:41Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -348,9 +348,9 @@
       "description": "A browser testing and web crawling library for PHP and Symfony",
       "url": "https://github.com/symfony/panther",
       "homepage": "https://symfony.com/packages/Panther",
-      "stars": 3072,
-      "forks": 236,
-      "watchers": 3072,
+      "stars": 3073,
+      "forks": 237,
+      "watchers": 3073,
       "language": "PHP",
       "topics": [
         "chromedriver",
@@ -369,8 +369,8 @@
         "url": "https://github.com/symfony"
       },
       "createdAt": "2018-03-16T20:54:41Z",
-      "updatedAt": "2026-11-14T21:20:33Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T07:03:02Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -406,7 +406,7 @@
       },
       "createdAt": "2018-02-11T14:53:01Z",
       "updatedAt": "2026-11-13T01:28:23Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -436,7 +436,7 @@
       },
       "createdAt": "2019-03-15T18:05:12Z",
       "updatedAt": "2026-11-11T14:27:29Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -470,7 +470,7 @@
       },
       "createdAt": "2020-07-07T17:19:36Z",
       "updatedAt": "2026-11-10T09:23:12Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -506,7 +506,7 @@
       },
       "createdAt": "2017-01-30T15:45:30Z",
       "updatedAt": "2026-11-11T13:36:06Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -518,9 +518,9 @@
       "description": "The open-source Playwright library for AI browser regression testing with intelligent caching, auto-healing, and multi-model verification.",
       "url": "https://github.com/bug0inc/qa-agent",
       "homepage": "https://ai.bug0.com",
-      "stars": 1332,
-      "forks": 191,
-      "watchers": 1332,
+      "stars": 1330,
+      "forks": 190,
+      "watchers": 1330,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -545,43 +545,8 @@
         "url": "https://github.com/bug0inc"
       },
       "createdAt": "2026-03-29T18:22:06Z",
-      "updatedAt": "2026-11-13T18:55:40Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1417558351",
-      "repoId": 1417558351,
-      "fullName": "open-wxa/wxa-runner",
-      "name": "wxa-runner",
-      "description": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
-      "url": "https://github.com/open-wxa/wxa-runner",
-      "homepage": "https://open-wxa.github.io/wxa-runner/",
-      "stars": 1272,
-      "forks": 146,
-      "watchers": 1272,
-      "language": "TypeScript",
-      "topics": [
-        "e2e-testing",
-        "mini-program",
-        "miniprogram",
-        "playwright",
-        "simulator",
-        "taro",
-        "uni-app",
-        "weapp",
-        "wechat",
-        "wechat-miniprogram"
-      ],
-      "owner": {
-        "login": "open-wxa",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/341914348?v=4",
-        "url": "https://github.com/open-wxa"
-      },
-      "createdAt": "2026-10-13T17:06:51Z",
-      "updatedAt": "2026-11-15T13:49:00Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T13:32:49Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -626,7 +591,7 @@
       },
       "createdAt": "2021-12-27T08:20:06Z",
       "updatedAt": "2026-11-12T04:07:15Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -671,7 +636,7 @@
       },
       "createdAt": "2024-02-13T06:36:15Z",
       "updatedAt": "2026-11-10T07:56:55Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -712,7 +677,7 @@
       },
       "createdAt": "2010-08-03T03:58:46Z",
       "updatedAt": "2026-11-11T13:34:14Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -744,7 +709,7 @@
       },
       "createdAt": "2025-06-05T21:16:31Z",
       "updatedAt": "2026-11-14T08:26:51Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -785,7 +750,7 @@
       },
       "createdAt": "2022-04-28T09:18:16Z",
       "updatedAt": "2026-11-09T22:09:48Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -823,7 +788,7 @@
       },
       "createdAt": "2018-11-01T15:11:47Z",
       "updatedAt": "2026-11-10T12:03:11Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -865,7 +830,7 @@
       },
       "createdAt": "2016-02-17T11:26:05Z",
       "updatedAt": "2026-11-10T13:33:03Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -878,7 +843,7 @@
       "url": "https://github.com/yashaka/selene",
       "homepage": "https://yashaka.github.io/selene/",
       "stars": 736,
-      "forks": 180,
+      "forks": 179,
       "watchers": 736,
       "language": "Python",
       "topics": [
@@ -899,7 +864,7 @@
       },
       "createdAt": "2015-04-17T08:52:14Z",
       "updatedAt": "2026-11-14T21:35:05Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -936,7 +901,7 @@
       },
       "createdAt": "2019-06-03T08:54:58Z",
       "updatedAt": "2026-11-10T09:32:02Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -979,7 +944,7 @@
       },
       "createdAt": "2016-06-16T16:20:06Z",
       "updatedAt": "2026-11-10T09:35:05Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1018,7 +983,7 @@
       },
       "createdAt": "2019-12-25T11:53:42Z",
       "updatedAt": "2026-11-10T08:25:57Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1053,7 +1018,7 @@
       },
       "createdAt": "2020-07-26T13:46:10Z",
       "updatedAt": "2026-11-10T11:45:18Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1065,9 +1030,9 @@
       "description": "Mobilewright is a dev framework for Mobile App Testing and Automation. It allows testing iOS/Android app on real devices, emulators and simulators with a single API. ",
       "url": "https://github.com/mobile-next/mobilewright",
       "homepage": "https://mobilewright.dev",
-      "stars": 474,
+      "stars": 478,
       "forks": 72,
-      "watchers": 474,
+      "watchers": 478,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1088,8 +1053,8 @@
         "url": "https://github.com/mobile-next"
       },
       "createdAt": "2026-03-24T10:22:09Z",
-      "updatedAt": "2026-11-13T15:48:00Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T10:59:36Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1124,7 +1089,7 @@
       },
       "createdAt": "2018-07-15T07:02:02Z",
       "updatedAt": "2026-11-14T15:58:44Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1169,7 +1134,7 @@
       },
       "createdAt": "2026-01-29T20:55:29Z",
       "updatedAt": "2026-11-14T23:41:49Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1203,7 +1168,7 @@
       },
       "createdAt": "2017-05-03T03:45:27Z",
       "updatedAt": "2026-11-11T13:33:05Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1238,7 +1203,7 @@
       },
       "createdAt": "2023-07-23T20:55:17Z",
       "updatedAt": "2026-10-09T15:23:11Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1251,7 +1216,7 @@
       "url": "https://github.com/microsoft/lisa",
       "homepage": "https://aka.ms/lisa",
       "stars": 337,
-      "forks": 262,
+      "forks": 264,
       "watchers": 337,
       "language": "Python",
       "topics": [
@@ -1271,7 +1236,7 @@
       },
       "createdAt": "2019-03-09T00:23:37Z",
       "updatedAt": "2026-11-12T08:47:47Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1310,7 +1275,7 @@
       },
       "createdAt": "2024-01-25T20:11:22Z",
       "updatedAt": "2026-11-15T12:10:30Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1351,7 +1316,7 @@
       },
       "createdAt": "2026-03-12T01:47:17Z",
       "updatedAt": "2026-11-14T22:37:24Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1389,7 +1354,52 @@
       },
       "createdAt": "2023-01-18T13:03:34Z",
       "updatedAt": "2026-11-12T15:38:41Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1151752366",
+      "repoId": 1151752366,
+      "fullName": "jfarcand/mirroir-mcp",
+      "name": "mirroir-mcp",
+      "description": "Drive a real, stock iPhone (and any macOS app) from any MCP client via iPhone Mirroring — no Developer Mode, no Xcode, no WebDriverAgent. Tap, swipe, type, OCR, plus replayable AI-authored test skills.",
+      "url": "https://github.com/jfarcand/mirroir-mcp",
+      "homepage": "https://mirroir.dev",
+      "stars": 307,
+      "forks": 39,
+      "watchers": 307,
+      "language": "Swift",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "ai-testing",
+        "claude-code",
+        "computer-use",
+        "e2e-testing",
+        "ios",
+        "ios-automation",
+        "iphone",
+        "iphone-mirroring",
+        "macos",
+        "mcp",
+        "mcp-server",
+        "mobile-ai",
+        "mobile-automation",
+        "mobile-testing",
+        "model-context-protocol",
+        "ocr",
+        "real-device",
+        "test-automation"
+      ],
+      "owner": {
+        "login": "jfarcand",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/51285?v=4",
+        "url": "https://github.com/jfarcand"
+      },
+      "createdAt": "2026-02-06T21:20:07Z",
+      "updatedAt": "2026-11-16T17:58:20Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1434,7 +1444,7 @@
       },
       "createdAt": "2017-12-29T15:58:24Z",
       "updatedAt": "2026-11-10T09:13:35Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1447,7 +1457,7 @@
       "url": "https://github.com/MarcusFelling/demo.playwright",
       "homepage": null,
       "stars": 298,
-      "forks": 53,
+      "forks": 54,
       "watchers": 298,
       "language": "TypeScript",
       "topics": [
@@ -1465,52 +1475,7 @@
       },
       "createdAt": "2021-11-19T16:14:05Z",
       "updatedAt": "2026-11-06T10:15:13Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1151752366",
-      "repoId": 1151752366,
-      "fullName": "jfarcand/mirroir-mcp",
-      "name": "mirroir-mcp",
-      "description": "Drive a real, stock iPhone (and any macOS app) from any MCP client via iPhone Mirroring — no Developer Mode, no Xcode, no WebDriverAgent. Tap, swipe, type, OCR, plus replayable AI-authored test skills.",
-      "url": "https://github.com/jfarcand/mirroir-mcp",
-      "homepage": "https://mirroir.dev",
-      "stars": 297,
-      "forks": 39,
-      "watchers": 297,
-      "language": "Swift",
-      "topics": [
-        "agent-skills",
-        "ai-agent",
-        "ai-testing",
-        "claude-code",
-        "computer-use",
-        "e2e-testing",
-        "ios",
-        "ios-automation",
-        "iphone",
-        "iphone-mirroring",
-        "macos",
-        "mcp",
-        "mcp-server",
-        "mobile-ai",
-        "mobile-automation",
-        "mobile-testing",
-        "model-context-protocol",
-        "ocr",
-        "real-device",
-        "test-automation"
-      ],
-      "owner": {
-        "login": "jfarcand",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/51285?v=4",
-        "url": "https://github.com/jfarcand"
-      },
-      "createdAt": "2026-02-06T21:20:07Z",
-      "updatedAt": "2026-11-13T22:20:25Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1522,9 +1487,9 @@
       "description": "50 QA and test-automation skills for Claude Code, Codex, Cursor, and any Agent Skills Standard runtime.",
       "url": "https://github.com/petrkindlmann/qa-skills",
       "homepage": "https://qa-skills.com",
-      "stars": 274,
+      "stars": 279,
       "forks": 44,
-      "watchers": 274,
+      "watchers": 279,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -1554,8 +1519,8 @@
         "url": "https://github.com/petrkindlmann"
       },
       "createdAt": "2026-03-23T16:11:04Z",
-      "updatedAt": "2026-11-15T08:59:27Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T15:56:14Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": true
     },
@@ -1595,7 +1560,7 @@
       },
       "createdAt": "2026-04-14T11:10:09Z",
       "updatedAt": "2026-11-15T11:59:02Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1632,7 +1597,7 @@
       },
       "createdAt": "2023-02-16T20:59:01Z",
       "updatedAt": "2026-10-13T15:32:17Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1676,8 +1641,8 @@
         "url": "https://github.com/mubaidr"
       },
       "createdAt": "2026-01-12T09:20:28Z",
-      "updatedAt": "2026-11-13T14:56:57Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "updatedAt": "2026-11-16T10:15:48Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1720,7 +1685,7 @@
       },
       "createdAt": "2020-05-01T11:05:44Z",
       "updatedAt": "2026-11-03T10:00:15Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": true
     },
@@ -1749,7 +1714,7 @@
       },
       "createdAt": "2020-02-26T19:01:26Z",
       "updatedAt": "2026-09-28T03:34:01Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1789,7 +1754,7 @@
       },
       "createdAt": "2025-11-11T09:34:40Z",
       "updatedAt": "2026-11-09T19:12:46Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1823,7 +1788,7 @@
       },
       "createdAt": "2020-10-22T18:33:52Z",
       "updatedAt": "2026-11-07T08:30:26Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1857,7 +1822,7 @@
       },
       "createdAt": "2018-05-26T13:58:04Z",
       "updatedAt": "2026-09-17T15:09:00Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     },
@@ -1893,7 +1858,39 @@
       },
       "createdAt": "2020-01-31T21:32:50Z",
       "updatedAt": "2026-07-24T06:26:53Z",
-      "firstSeenAt": "2026-11-15T15:22:07.829Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-434339413",
+      "repoId": 434339413,
+      "fullName": "elgentos/magento2-cypress-testing-suite",
+      "name": "magento2-cypress-testing-suite",
+      "description": "A community-driven Cypress testing suite for Magento 2",
+      "url": "https://github.com/elgentos/magento2-cypress-testing-suite",
+      "homepage": "https://elgentos.com",
+      "stars": 172,
+      "forks": 41,
+      "watchers": 172,
+      "language": "JavaScript",
+      "topics": [
+        "cypress",
+        "cypress-io",
+        "e2e-testing",
+        "hacktoberfest",
+        "magento",
+        "magento2",
+        "testing"
+      ],
+      "owner": {
+        "login": "elgentos",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2070687?v=4",
+        "url": "https://github.com/elgentos"
+      },
+      "createdAt": "2021-12-02T18:56:04Z",
+      "updatedAt": "2026-11-10T09:25:50Z",
+      "firstSeenAt": "2026-11-16T17:59:27.089Z",
       "isNew": true,
       "existing": false
     }
