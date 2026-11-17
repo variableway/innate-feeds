@@ -1,6 +1,6 @@
 {
   "topic": "requirements",
-  "fetchedAt": "2026-11-16T17:58:00.482Z",
+  "fetchedAt": "2026-11-17T17:25:49.681Z",
   "count": 50,
   "newCount": 50,
   "existingCount": 0,
@@ -35,7 +35,7 @@
       },
       "createdAt": "2012-09-10T08:50:26Z",
       "updatedAt": "2026-11-13T11:41:48Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -67,7 +67,7 @@
       },
       "createdAt": "2015-09-30T14:17:28Z",
       "updatedAt": "2026-10-15T09:17:58Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -100,7 +100,7 @@
       },
       "createdAt": "2016-12-15T00:29:44Z",
       "updatedAt": "2026-11-13T11:42:45Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -112,9 +112,9 @@
       "description": "A stream-based runtime-verification framework for generating hard real-time C code.",
       "url": "https://github.com/Copilot-Language/copilot",
       "homepage": "http://copilot-language.github.io",
-      "stars": 840,
+      "stars": 841,
       "forks": 83,
-      "watchers": 840,
+      "watchers": 841,
       "language": "Haskell",
       "topics": [
         "c",
@@ -136,8 +136,46 @@
         "url": "https://github.com/Copilot-Language"
       },
       "createdAt": "2015-06-09T23:48:41Z",
-      "updatedAt": "2026-11-11T16:02:04Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-16T19:41:14Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1394090266",
+      "repoId": 1394090266,
+      "fullName": "supercli-site/xiaobai-kanban",
+      "name": "xiaobai-kanban",
+      "description": "中文 AI 编程助手入门教程：认识 Agent、表达需求、安装 CLI 与学习 Git 工作流。 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+      "url": "https://github.com/supercli-site/xiaobai-kanban",
+      "homepage": "https://xiaobai.supercli.site",
+      "stars": 586,
+      "forks": 52,
+      "watchers": 586,
+      "language": "HTML",
+      "topics": [
+        "agent-guide",
+        "ai-agent",
+        "ai-coding",
+        "beginner-friendly",
+        "chinese",
+        "cli",
+        "coding-agent",
+        "command-line",
+        "documentation",
+        "git",
+        "git-workflow",
+        "requirements",
+        "tutorial"
+      ],
+      "owner": {
+        "login": "supercli-site",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/351021036?v=4",
+        "url": "https://github.com/supercli-site"
+      },
+      "createdAt": "2026-09-29T02:19:05Z",
+      "updatedAt": "2026-11-17T12:18:44Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -168,45 +206,7 @@
       },
       "createdAt": "2017-04-26T09:53:37Z",
       "updatedAt": "2026-11-10T06:18:22Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1394090266",
-      "repoId": 1394090266,
-      "fullName": "supercli-site/xiaobai-kanban",
-      "name": "xiaobai-kanban",
-      "description": "中文 AI 编程助手入门教程：认识 Agent、表达需求、安装 CLI 与学习 Git 工作流。 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
-      "url": "https://github.com/supercli-site/xiaobai-kanban",
-      "homepage": "https://xiaobai.supercli.site",
-      "stars": 535,
-      "forks": 49,
-      "watchers": 535,
-      "language": "HTML",
-      "topics": [
-        "agent-guide",
-        "ai-agent",
-        "ai-coding",
-        "beginner-friendly",
-        "chinese",
-        "cli",
-        "coding-agent",
-        "command-line",
-        "documentation",
-        "git",
-        "git-workflow",
-        "requirements",
-        "tutorial"
-      ],
-      "owner": {
-        "login": "supercli-site",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/351021036?v=4",
-        "url": "https://github.com/supercli-site"
-      },
-      "createdAt": "2026-09-29T02:19:05Z",
-      "updatedAt": "2026-11-16T17:24:52Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -241,7 +241,7 @@
       },
       "createdAt": "2019-11-26T04:56:57Z",
       "updatedAt": "2026-11-15T15:12:13Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -253,9 +253,9 @@
       "description": "Software for technical documentation and requirements management.",
       "url": "https://github.com/strictdoc-project/strictdoc",
       "homepage": "https://strictdoc-project.github.io/",
-      "stars": 450,
+      "stars": 451,
       "forks": 95,
-      "watchers": 450,
+      "watchers": 451,
       "language": "Python",
       "topics": [
         "documentation",
@@ -267,8 +267,8 @@
         "url": "https://github.com/strictdoc-project"
       },
       "createdAt": "2020-05-14T18:03:48Z",
-      "updatedAt": "2026-11-12T01:04:36Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-17T12:55:35Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -280,9 +280,9 @@
       "description": "CycloneDX Software Bill of Materials (SBOM) generator for Python projects and environments",
       "url": "https://github.com/CycloneDX/cyclonedx-python",
       "homepage": "https://cyclonedx.org",
-      "stars": 406,
-      "forks": 106,
-      "watchers": 406,
+      "stars": 405,
+      "forks": 107,
+      "watchers": 405,
       "language": "Python",
       "topics": [
         "bill-of-materials",
@@ -311,8 +311,8 @@
         "url": "https://github.com/CycloneDX"
       },
       "createdAt": "2018-11-15T05:53:33Z",
-      "updatedAt": "2026-11-16T17:04:15Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-17T09:42:09Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -341,7 +341,7 @@
       },
       "createdAt": "2022-02-06T08:44:43Z",
       "updatedAt": "2026-11-10T07:01:48Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -377,8 +377,8 @@
         "url": "https://github.com/useblocks"
       },
       "createdAt": "2016-11-30T20:49:13Z",
-      "updatedAt": "2026-11-16T00:19:35Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-16T18:44:43Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -408,7 +408,7 @@
       },
       "createdAt": "2017-08-22T04:51:06Z",
       "updatedAt": "2026-11-10T11:59:53Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -420,9 +420,9 @@
       "description": "Native deterministic engine and read-only MCP server for engineering decisions.",
       "url": "https://github.com/asdecided/core",
       "homepage": "https://asdecided.com",
-      "stars": 302,
+      "stars": 301,
       "forks": 9,
-      "watchers": 302,
+      "watchers": 301,
       "language": "Rust",
       "topics": [
         "cli",
@@ -443,8 +443,8 @@
         "url": "https://github.com/asdecided"
       },
       "createdAt": "2026-06-01T08:42:02Z",
-      "updatedAt": "2026-11-16T17:42:36Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-17T09:29:36Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -488,7 +488,7 @@
       },
       "createdAt": "2024-06-20T18:38:41Z",
       "updatedAt": "2026-11-12T04:00:06Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -518,7 +518,7 @@
       },
       "createdAt": "2026-01-29T23:08:07Z",
       "updatedAt": "2026-11-06T09:31:45Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -546,7 +546,7 @@
       },
       "createdAt": "2016-11-04T05:59:30Z",
       "updatedAt": "2026-10-28T12:28:40Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -578,7 +578,7 @@
       },
       "createdAt": "2016-05-02T16:06:55Z",
       "updatedAt": "2026-10-23T12:23:54Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -620,7 +620,7 @@
       },
       "createdAt": "2012-03-21T20:17:05Z",
       "updatedAt": "2026-11-02T14:58:17Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -649,7 +649,7 @@
       },
       "createdAt": "2018-06-05T03:07:00Z",
       "updatedAt": "2026-11-09T15:07:29Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -661,9 +661,9 @@
       "description": "A Claude skill that keeps your AI coding tools from contradicting  each other. Generates requirements.md, design.md, and tasks.md  before any code is written — then creates matching config files  for Claude Code, Cursor, Copilot, Windsurf, and Aider.",
       "url": "https://github.com/FredAntB/Spec-Driven-Development",
       "homepage": null,
-      "stars": 159,
+      "stars": 160,
       "forks": 18,
-      "watchers": 159,
+      "watchers": 160,
       "language": "Python",
       "topics": [
         "ai",
@@ -683,8 +683,8 @@
         "url": "https://github.com/FredAntB"
       },
       "createdAt": "2026-05-18T17:04:47Z",
-      "updatedAt": "2026-11-15T16:13:21Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "updatedAt": "2026-11-17T03:14:53Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -724,7 +724,7 @@
       },
       "createdAt": "2021-07-18T10:10:46Z",
       "updatedAt": "2026-10-30T19:17:15Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -765,7 +765,7 @@
       },
       "createdAt": "2021-03-05T20:42:43Z",
       "updatedAt": "2026-11-10T14:01:04Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -778,7 +778,7 @@
       "url": "https://github.com/brunocampos01/understanding-the-python-ecosystem",
       "homepage": null,
       "stars": 116,
-      "forks": 19,
+      "forks": 20,
       "watchers": 116,
       "language": "Jupyter Notebook",
       "topics": [
@@ -807,7 +807,7 @@
       },
       "createdAt": "2018-07-30T16:46:58Z",
       "updatedAt": "2026-08-24T05:28:59Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -839,7 +839,7 @@
       },
       "createdAt": "2020-02-22T03:21:42Z",
       "updatedAt": "2026-09-15T13:32:01Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -869,7 +869,7 @@
       },
       "createdAt": "2018-05-10T01:57:42Z",
       "updatedAt": "2026-07-18T05:51:51Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -899,7 +899,7 @@
       },
       "createdAt": "2017-04-29T23:27:32Z",
       "updatedAt": "2026-08-02T18:31:32Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -931,7 +931,7 @@
       },
       "createdAt": "2019-03-31T19:28:06Z",
       "updatedAt": "2026-10-08T19:41:47Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -961,7 +961,7 @@
       },
       "createdAt": "2015-11-24T14:41:23Z",
       "updatedAt": "2026-09-11T23:44:59Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -988,7 +988,7 @@
       },
       "createdAt": "2022-09-19T08:50:37Z",
       "updatedAt": "2026-11-16T00:09:23Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1020,7 +1020,7 @@
       },
       "createdAt": "2026-03-27T23:13:03Z",
       "updatedAt": "2026-11-14T13:52:45Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1058,7 +1058,7 @@
       },
       "createdAt": "2026-08-14T03:33:58Z",
       "updatedAt": "2026-11-09T03:01:05Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1090,7 +1090,7 @@
       },
       "createdAt": "2020-10-01T14:46:22Z",
       "updatedAt": "2026-10-01T11:34:36Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1120,7 +1120,7 @@
       },
       "createdAt": "2018-08-07T04:06:04Z",
       "updatedAt": "2026-04-07T14:02:25Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1150,7 +1150,7 @@
       },
       "createdAt": "2013-04-21T17:55:05Z",
       "updatedAt": "2026-11-12T07:06:41Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1187,7 +1187,7 @@
       },
       "createdAt": "2019-10-06T14:11:14Z",
       "updatedAt": "2026-01-11T12:46:17Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1219,7 +1219,7 @@
       },
       "createdAt": "2026-03-03T06:58:56Z",
       "updatedAt": "2026-11-16T13:16:18Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1251,36 +1251,7 @@
       },
       "createdAt": "2020-06-13T18:34:57Z",
       "updatedAt": "2025-03-14T03:47:34Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-500791427",
-      "repoId": 500791427,
-      "fullName": "repo-helper/hatch-requirements-txt",
-      "name": "hatch-requirements-txt",
-      "description": "Hatchling plugin to read project dependencies from requirements.txt",
-      "url": "https://github.com/repo-helper/hatch-requirements-txt",
-      "homepage": null,
-      "stars": 40,
-      "forks": 6,
-      "watchers": 40,
-      "language": "Python",
-      "topics": [
-        "dependencies",
-        "hatch",
-        "python",
-        "requirements"
-      ],
-      "owner": {
-        "login": "repo-helper",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/74879566?v=4",
-        "url": "https://github.com/repo-helper"
-      },
-      "createdAt": "2022-06-07T10:23:39Z",
-      "updatedAt": "2026-11-09T18:33:39Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1310,7 +1281,36 @@
       },
       "createdAt": "2020-07-09T21:57:08Z",
       "updatedAt": "2026-10-19T18:55:08Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-500791427",
+      "repoId": 500791427,
+      "fullName": "repo-helper/hatch-requirements-txt",
+      "name": "hatch-requirements-txt",
+      "description": "Hatchling plugin to read project dependencies from requirements.txt",
+      "url": "https://github.com/repo-helper/hatch-requirements-txt",
+      "homepage": null,
+      "stars": 40,
+      "forks": 6,
+      "watchers": 40,
+      "language": "Python",
+      "topics": [
+        "dependencies",
+        "hatch",
+        "python",
+        "requirements"
+      ],
+      "owner": {
+        "login": "repo-helper",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/74879566?v=4",
+        "url": "https://github.com/repo-helper"
+      },
+      "createdAt": "2022-06-07T10:23:39Z",
+      "updatedAt": "2026-11-09T18:33:39Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1352,7 +1352,7 @@
       },
       "createdAt": "2026-06-07T09:25:46Z",
       "updatedAt": "2026-11-09T20:07:21Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1381,7 +1381,7 @@
       },
       "createdAt": "2017-06-25T20:33:54Z",
       "updatedAt": "2026-10-18T17:57:55Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1414,7 +1414,7 @@
       },
       "createdAt": "2022-10-15T20:15:01Z",
       "updatedAt": "2026-09-23T20:44:25Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1445,7 +1445,7 @@
       },
       "createdAt": "2020-03-22T15:21:23Z",
       "updatedAt": "2026-08-30T05:37:43Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1480,7 +1480,7 @@
       },
       "createdAt": "2023-06-30T01:20:57Z",
       "updatedAt": "2026-10-12T21:16:08Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1516,7 +1516,7 @@
       },
       "createdAt": "2013-09-05T20:17:32Z",
       "updatedAt": "2026-02-18T07:12:01Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1529,7 +1529,7 @@
       "url": "https://github.com/reqvire-org/reqvire",
       "homepage": "https://www.reqvire.org",
       "stars": 30,
-      "forks": 8,
+      "forks": 9,
       "watchers": 30,
       "language": "Rust",
       "topics": [
@@ -1551,7 +1551,7 @@
       },
       "createdAt": "2024-12-27T14:39:23Z",
       "updatedAt": "2026-11-04T03:26:17Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1591,7 +1591,7 @@
       },
       "createdAt": "2025-11-09T14:58:54Z",
       "updatedAt": "2026-10-20T16:53:35Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1625,7 +1625,7 @@
       },
       "createdAt": "2020-05-07T03:41:32Z",
       "updatedAt": "2026-09-02T16:56:54Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1668,7 +1668,7 @@
       },
       "createdAt": "2018-12-31T18:31:12Z",
       "updatedAt": "2026-09-07T17:18:51Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     },
@@ -1699,7 +1699,7 @@
       },
       "createdAt": "2023-02-17T03:42:59Z",
       "updatedAt": "2026-07-25T13:44:29Z",
-      "firstSeenAt": "2026-11-16T17:58:00.482Z",
+      "firstSeenAt": "2026-11-17T17:25:49.681Z",
       "isNew": true,
       "existing": false
     }
