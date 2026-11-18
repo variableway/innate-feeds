@@ -1,6 +1,6 @@
 {
   "topic": "ux-audit",
-  "fetchedAt": "2026-11-17T17:28:00.361Z",
+  "fetchedAt": "2026-11-18T17:01:46.307Z",
   "count": 50,
   "newCount": 50,
   "existingCount": 0,
@@ -46,7 +46,7 @@
       },
       "createdAt": "2026-03-23T15:09:14Z",
       "updatedAt": "2026-11-14T14:03:31Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -79,7 +79,7 @@
       },
       "createdAt": "2026-04-01T15:06:32Z",
       "updatedAt": "2026-11-07T12:18:04Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -91,9 +91,9 @@
       "description": "Heuristic UX audits from screenshots for Claude Code & Codex with severity-rated findings, heuristic citations, annotated screenshots, structured reports.",
       "url": "https://github.com/EliaAlberti/ux-audit-skill",
       "homepage": null,
-      "stars": 30,
+      "stars": 31,
       "forks": 4,
-      "watchers": 30,
+      "watchers": 31,
       "language": "Python",
       "topics": [
         "accessibility",
@@ -113,8 +113,8 @@
         "url": "https://github.com/EliaAlberti"
       },
       "createdAt": "2026-06-12T08:51:06Z",
-      "updatedAt": "2026-11-16T14:41:11Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "updatedAt": "2026-11-18T15:44:50Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -126,9 +126,9 @@
       "description": "Give your AI coding assistant a design eye. 12 principles, 13 reference docs, 7 component checklists. Works with Claude Code, Cursor, Codex, and Windsurf.",
       "url": "https://github.com/narenkatakam/ux-audit",
       "homepage": "https://narenkatakam.github.io/ux-audit/skill-coverage-map.html",
-      "stars": 15,
+      "stars": 16,
       "forks": 6,
-      "watchers": 15,
+      "watchers": 16,
       "language": "HTML",
       "topics": [
         "accessibility",
@@ -150,8 +150,8 @@
         "url": "https://github.com/narenkatakam"
       },
       "createdAt": "2026-02-27T22:01:23Z",
-      "updatedAt": "2026-11-14T08:19:22Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "updatedAt": "2026-11-17T19:35:41Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -186,7 +186,7 @@
       },
       "createdAt": "2026-08-01T16:05:02Z",
       "updatedAt": "2026-11-06T15:55:17Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -216,7 +216,7 @@
       },
       "createdAt": "2026-02-23T20:18:47Z",
       "updatedAt": "2026-10-16T23:20:02Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -249,38 +249,7 @@
       },
       "createdAt": "2026-03-20T23:39:43Z",
       "updatedAt": "2026-08-01T19:33:49Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1178151314",
-      "repoId": 1178151314,
-      "fullName": "FuzulsFriend/roast-my-landing-page",
-      "name": "roast-my-landing-page",
-      "description": "Claude Code skill: brutally honest landing page audit — scored out of 100 across 6 dimensions with specific fixes in plain English",
-      "url": "https://github.com/FuzulsFriend/roast-my-landing-page",
-      "homepage": null,
-      "stars": 8,
-      "forks": 0,
-      "watchers": 8,
-      "language": "HTML",
-      "topics": [
-        "claude-code",
-        "conversion-rate-optimization",
-        "landing-page",
-        "skill",
-        "ux-audit",
-        "web-analytics"
-      ],
-      "owner": {
-        "login": "FuzulsFriend",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/255360241?v=4",
-        "url": "https://github.com/FuzulsFriend"
-      },
-      "createdAt": "2026-03-10T18:33:38Z",
-      "updatedAt": "2026-10-07T03:44:18Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -314,7 +283,39 @@
       },
       "createdAt": "2026-05-19T12:58:51Z",
       "updatedAt": "2026-10-18T21:21:37Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1178151314",
+      "repoId": 1178151314,
+      "fullName": "FuzulsFriend/roast-my-landing-page",
+      "name": "roast-my-landing-page",
+      "description": "Claude Code skill: a brutally honest landing page audit, scored out of 100 across 6 dimensions, with specific fixes in plain English.",
+      "url": "https://github.com/FuzulsFriend/roast-my-landing-page",
+      "homepage": null,
+      "stars": 8,
+      "forks": 0,
+      "watchers": 8,
+      "language": "HTML",
+      "topics": [
+        "claude-code",
+        "claude-skills",
+        "conversion-rate-optimization",
+        "landing-page",
+        "skill",
+        "ux-audit",
+        "web-analytics"
+      ],
+      "owner": {
+        "login": "FuzulsFriend",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/255360241?v=4",
+        "url": "https://github.com/FuzulsFriend"
+      },
+      "createdAt": "2026-03-10T18:33:38Z",
+      "updatedAt": "2026-11-17T22:53:18Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -350,7 +351,7 @@
       },
       "createdAt": "2026-10-11T10:42:22Z",
       "updatedAt": "2026-10-20T16:08:32Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -389,7 +390,7 @@
       },
       "createdAt": "2026-03-10T05:45:29Z",
       "updatedAt": "2026-10-25T20:42:27Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -427,7 +428,7 @@
       },
       "createdAt": "2026-05-11T17:10:06Z",
       "updatedAt": "2026-09-28T03:53:20Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -464,7 +465,7 @@
       },
       "createdAt": "2026-03-25T16:39:37Z",
       "updatedAt": "2026-11-02T11:21:10Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -501,7 +502,7 @@
       },
       "createdAt": "2026-07-19T22:14:37Z",
       "updatedAt": "2026-11-08T12:57:28Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -534,7 +535,7 @@
       },
       "createdAt": "2026-09-04T10:07:13Z",
       "updatedAt": "2026-11-07T15:06:18Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -565,7 +566,7 @@
       },
       "createdAt": "2026-09-02T07:38:27Z",
       "updatedAt": "2026-10-20T03:24:46Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -599,7 +600,7 @@
       },
       "createdAt": "2026-08-12T14:32:31Z",
       "updatedAt": "2026-08-31T19:52:17Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -641,7 +642,7 @@
       },
       "createdAt": "2026-06-19T14:38:40Z",
       "updatedAt": "2026-10-16T18:03:33Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -674,7 +675,7 @@
       },
       "createdAt": "2026-07-02T06:10:27Z",
       "updatedAt": "2026-08-16T04:19:29Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -716,7 +717,7 @@
       },
       "createdAt": "2026-10-28T11:02:55Z",
       "updatedAt": "2026-11-17T04:08:41Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -748,7 +749,7 @@
       },
       "createdAt": "2026-07-25T20:57:30Z",
       "updatedAt": "2026-07-30T14:25:41Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -793,7 +794,7 @@
       },
       "createdAt": "2026-03-13T11:39:49Z",
       "updatedAt": "2026-11-09T19:44:29Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -836,7 +837,7 @@
       },
       "createdAt": "2026-08-26T19:14:13Z",
       "updatedAt": "2026-08-26T21:22:02Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -870,7 +871,7 @@
       },
       "createdAt": "2026-06-11T15:20:13Z",
       "updatedAt": "2026-11-11T17:32:22Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -909,7 +910,7 @@
       },
       "createdAt": "2026-03-19T19:32:35Z",
       "updatedAt": "2026-10-19T03:14:15Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -939,48 +940,7 @@
       },
       "createdAt": "2026-10-08T02:37:32Z",
       "updatedAt": "2026-10-08T02:38:59Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1380722815",
-      "repoId": 1380722815,
-      "fullName": "masanggil1986/flutter-ux-journey",
-      "name": "flutter-ux-journey",
-      "description": "Journey-level UX audit for Flutter apps, measured from a running app: real pixel rects, real contrast ratios, real semantics labels.",
-      "url": "https://github.com/masanggil1986/flutter-ux-journey",
-      "homepage": "https://github.com/masanggil1986/flutter-ux-journey#readme",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Dart",
-      "topics": [
-        "a11y",
-        "accessibility",
-        "agent-skills",
-        "claude-code",
-        "claude-code-plugin",
-        "dart",
-        "flutter",
-        "flutter-test",
-        "integration-test",
-        "semantics",
-        "usability",
-        "user-journey",
-        "ux",
-        "ux-audit",
-        "ux-research",
-        "wcag"
-      ],
-      "owner": {
-        "login": "masanggil1986",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5173379?v=4",
-        "url": "https://github.com/masanggil1986"
-      },
-      "createdAt": "2026-09-22T01:32:36Z",
-      "updatedAt": "2026-10-10T01:24:59Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1021,7 +981,7 @@
       },
       "createdAt": "2026-07-24T18:33:48Z",
       "updatedAt": "2026-10-29T17:03:00Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1053,7 +1013,7 @@
       },
       "createdAt": "2026-07-12T17:44:21Z",
       "updatedAt": "2026-09-03T07:34:52Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1087,7 +1047,48 @@
       },
       "createdAt": "2026-10-18T00:14:22Z",
       "updatedAt": "2026-10-18T21:50:15Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1380722815",
+      "repoId": 1380722815,
+      "fullName": "masanggil1986/flutter-ux-journey",
+      "name": "flutter-ux-journey",
+      "description": "Journey-level UX audit for Flutter apps, measured from a running app: real pixel rects, real contrast ratios, real semantics labels.",
+      "url": "https://github.com/masanggil1986/flutter-ux-journey",
+      "homepage": "https://github.com/masanggil1986/flutter-ux-journey#readme",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Dart",
+      "topics": [
+        "a11y",
+        "accessibility",
+        "agent-skills",
+        "claude-code",
+        "claude-code-plugin",
+        "dart",
+        "flutter",
+        "flutter-test",
+        "integration-test",
+        "semantics",
+        "usability",
+        "user-journey",
+        "ux",
+        "ux-audit",
+        "ux-research",
+        "wcag"
+      ],
+      "owner": {
+        "login": "masanggil1986",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5173379?v=4",
+        "url": "https://github.com/masanggil1986"
+      },
+      "createdAt": "2026-09-22T01:32:36Z",
+      "updatedAt": "2026-10-10T01:24:59Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1123,7 +1124,7 @@
       },
       "createdAt": "2026-05-17T19:45:48Z",
       "updatedAt": "2026-10-28T13:37:46Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1166,7 +1167,7 @@
       },
       "createdAt": "2026-10-18T19:24:11Z",
       "updatedAt": "2026-11-08T11:50:07Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1202,7 +1203,7 @@
       },
       "createdAt": "2026-08-02T21:14:16Z",
       "updatedAt": "2026-10-31T18:47:37Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1234,7 +1235,7 @@
       },
       "createdAt": "2026-07-21T08:35:39Z",
       "updatedAt": "2026-11-15T22:20:11Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1267,7 +1268,7 @@
       },
       "createdAt": "2026-08-06T22:15:41Z",
       "updatedAt": "2026-08-06T23:57:28Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1304,7 +1305,7 @@
       },
       "createdAt": "2026-10-14T23:55:54Z",
       "updatedAt": "2026-10-16T21:39:08Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1339,7 +1340,7 @@
       },
       "createdAt": "2026-07-08T06:15:01Z",
       "updatedAt": "2026-10-26T15:16:30Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1374,7 +1375,7 @@
       },
       "createdAt": "2026-04-21T16:12:03Z",
       "updatedAt": "2026-08-16T18:02:58Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1406,7 +1407,7 @@
       },
       "createdAt": "2026-07-19T13:40:24Z",
       "updatedAt": "2026-11-10T21:44:12Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1440,7 +1441,7 @@
       },
       "createdAt": "2026-04-23T18:31:34Z",
       "updatedAt": "2026-07-25T13:27:01Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1485,7 +1486,7 @@
       },
       "createdAt": "2026-08-07T12:02:32Z",
       "updatedAt": "2026-11-13T13:20:13Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1518,7 +1519,7 @@
       },
       "createdAt": "2026-06-18T18:55:01Z",
       "updatedAt": "2026-06-18T19:26:03Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1550,7 +1551,7 @@
       },
       "createdAt": "2026-06-01T16:28:57Z",
       "updatedAt": "2026-06-25T15:28:17Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1580,7 +1581,7 @@
       },
       "createdAt": "2026-07-21T15:40:13Z",
       "updatedAt": "2026-07-24T12:57:33Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1617,7 +1618,7 @@
       },
       "createdAt": "2026-05-08T21:43:41Z",
       "updatedAt": "2026-05-09T14:13:40Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1648,7 +1649,7 @@
       },
       "createdAt": "2026-09-29T20:07:25Z",
       "updatedAt": "2026-10-16T01:12:23Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1678,7 +1679,7 @@
       },
       "createdAt": "2026-03-15T05:33:41Z",
       "updatedAt": "2026-09-16T20:37:02Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1714,7 +1715,7 @@
       },
       "createdAt": "2026-10-20T05:53:13Z",
       "updatedAt": "2026-11-10T21:37:37Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1743,7 +1744,7 @@
       },
       "createdAt": "2026-10-22T09:37:21Z",
       "updatedAt": "2026-11-09T15:59:10Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     },
@@ -1777,7 +1778,7 @@
       },
       "createdAt": "2026-02-06T01:54:17Z",
       "updatedAt": "2026-02-06T02:35:27Z",
-      "firstSeenAt": "2026-11-17T17:28:00.361Z",
+      "firstSeenAt": "2026-11-18T17:01:46.307Z",
       "isNew": true,
       "existing": false
     }

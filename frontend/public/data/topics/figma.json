@@ -1,6 +1,6 @@
 {
   "topic": "figma",
-  "fetchedAt": "2026-11-17T17:23:09.945Z",
+  "fetchedAt": "2026-11-18T16:56:56.688Z",
   "count": 50,
   "newCount": 46,
   "existingCount": 4,
@@ -13,9 +13,9 @@
       "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
       "url": "https://github.com/VoltAgent/awesome-design-md",
       "homepage": "https://getdesign.md/",
-      "stars": 127953,
-      "forks": 14150,
-      "watchers": 127953,
+      "stars": 128099,
+      "forks": 14158,
+      "watchers": 128099,
       "language": null,
       "topics": [
         "awesome-list",
@@ -34,8 +34,8 @@
         "url": "https://github.com/VoltAgent"
       },
       "createdAt": "2026-03-31T16:37:01Z",
-      "updatedAt": "2026-11-17T17:12:49Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T16:56:02Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": true
     },
@@ -47,12 +47,13 @@
       "description": "The Developer Tool for Designers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Designers and Visual Engineers to design with Real Code.",
       "url": "https://github.com/onlook-dev/onlook",
       "homepage": "https://onlook.com",
-      "stars": 27236,
-      "forks": 2149,
-      "watchers": 27236,
+      "stars": 27259,
+      "forks": 2150,
+      "watchers": 27259,
       "language": "TypeScript",
       "topics": [
         "ai",
+        "astryx",
         "claude-code",
         "codex",
         "cursor",
@@ -63,10 +64,8 @@
         "figma",
         "frontend",
         "ide",
-        "nextjs",
         "react",
-        "supabase",
-        "tailwindcss",
+        "styled-components",
         "typescript",
         "ui",
         "vibe-coding",
@@ -79,8 +78,8 @@
         "url": "https://github.com/onlook-dev"
       },
       "createdAt": "2024-06-25T19:16:02Z",
-      "updatedAt": "2026-11-17T14:58:05Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T16:08:42Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": true
     },
@@ -92,9 +91,9 @@
       "description": "Beautiful & consistent icon toolkit made by the community. Lucide is an open-source icon library that provides 2000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. ",
       "url": "https://github.com/lucide-icons/lucide",
       "homepage": "https://lucide.dev",
-      "stars": 25814,
-      "forks": 1694,
-      "watchers": 25814,
+      "stars": 25843,
+      "forks": 1697,
+      "watchers": 25843,
       "language": "TypeScript",
       "topics": [
         "feather-icons",
@@ -114,8 +113,8 @@
         "url": "https://github.com/lucide-icons"
       },
       "createdAt": "2020-06-08T15:36:21Z",
-      "updatedAt": "2026-11-17T16:48:06Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T15:37:21Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -127,9 +126,9 @@
       "description": "MCP server to provide Figma layout information to AI coding agents like Cursor",
       "url": "https://github.com/GLips/Figma-Context-MCP",
       "homepage": "https://www.framelink.ai/",
-      "stars": 16232,
-      "forks": 1291,
-      "watchers": 16232,
+      "stars": 16249,
+      "forks": 1293,
+      "watchers": 16249,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -144,8 +143,8 @@
         "url": "https://github.com/GLips"
       },
       "createdAt": "2025-02-13T02:55:06Z",
-      "updatedAt": "2026-11-17T17:05:49Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T16:03:30Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -157,9 +156,9 @@
       "description": "Write components once, run everywhere. Compiles to React, Vue, Qwik, Solid, Angular, Svelte, and more. ",
       "url": "https://github.com/BuilderIO/mitosis",
       "homepage": "https://mitosis.builder.io",
-      "stars": 14463,
-      "forks": 677,
-      "watchers": 14463,
+      "stars": 14469,
+      "forks": 680,
+      "watchers": 14469,
       "language": "TypeScript",
       "topics": [
         "angular",
@@ -185,8 +184,8 @@
         "url": "https://github.com/BuilderIO"
       },
       "createdAt": "2020-11-06T01:09:07Z",
-      "updatedAt": "2026-11-16T12:00:11Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T13:10:04Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -198,9 +197,9 @@
       "description": "An easy and fast way to create a Python GUI 🐍",
       "url": "https://github.com/ParthJadhav/Tkinter-Designer",
       "homepage": "https://www.parthjadhav.com/products/tkinter-designer",
-      "stars": 10247,
+      "stars": 10248,
       "forks": 923,
-      "watchers": 10247,
+      "watchers": 10248,
       "language": "Python",
       "topics": [
         "automatic",
@@ -230,8 +229,8 @@
         "url": "https://github.com/ParthJadhav"
       },
       "createdAt": "2021-05-18T07:29:26Z",
-      "updatedAt": "2026-11-17T12:39:17Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T09:03:05Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -243,9 +242,9 @@
       "description": "DiceBear is an avatar library for designers and developers. 🌍",
       "url": "https://github.com/dicebear/dicebear",
       "homepage": "https://www.dicebear.com",
-      "stars": 10099,
-      "forks": 447,
-      "watchers": 10099,
+      "stars": 10105,
+      "forks": 446,
+      "watchers": 10105,
       "language": "Vue",
       "topics": [
         "api",
@@ -264,8 +263,8 @@
         "url": "https://github.com/dicebear"
       },
       "createdAt": "2017-03-21T12:58:17Z",
-      "updatedAt": "2026-11-17T15:06:52Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T15:30:24Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -277,9 +276,9 @@
       "description": "700+ Pure CSS, SVG & Figma UI Icons, 6000+ glyphs, patterns, colors and layouts.",
       "url": "https://github.com/astrit/css.gg",
       "homepage": "https://css.gg",
-      "stars": 10061,
+      "stars": 10062,
       "forks": 494,
-      "watchers": 10061,
+      "watchers": 10062,
       "language": "JavaScript",
       "topics": [
         "adobe-xd",
@@ -309,8 +308,8 @@
         "url": "https://github.com/astrit"
       },
       "createdAt": "2019-10-01T21:35:58Z",
-      "updatedAt": "2026-11-16T16:42:29Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T04:15:27Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -322,9 +321,9 @@
       "description": "Open-source UI component library and front-end development framework based on Tailwind CSS",
       "url": "https://github.com/themesberg/flowbite",
       "homepage": "https://flowbite.com",
-      "stars": 9388,
+      "stars": 9389,
       "forks": 866,
-      "watchers": 9388,
+      "watchers": 9389,
       "language": "HTML",
       "topics": [
         "components",
@@ -351,8 +350,8 @@
         "url": "https://github.com/themesberg"
       },
       "createdAt": "2021-07-28T15:21:50Z",
-      "updatedAt": "2026-11-17T05:17:24Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T01:04:19Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -364,9 +363,9 @@
       "description": "TalkToFigma: MCP integration between AI Agent (Cursor, Claude Code, Codex) and Figma, allowing Agentic AI to communicate with Figma for reading designs and modifying them programmatically.",
       "url": "https://github.com/grab/cursor-talk-to-figma-mcp",
       "homepage": "https://www.figma.com/community/plugin/1485687494525374295/cursor-talk-to-figma-mcp-plugin",
-      "stars": 7116,
+      "stars": 7120,
       "forks": 795,
-      "watchers": 7116,
+      "watchers": 7120,
       "language": "JavaScript",
       "topics": [
         "agent",
@@ -392,8 +391,8 @@
         "url": "https://github.com/grab"
       },
       "createdAt": "2025-03-16T16:45:37Z",
-      "updatedAt": "2026-11-17T09:26:22Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T12:49:12Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -405,9 +404,9 @@
       "description": "Generate responsive pages and apps on HTML, Tailwind, Flutter and SwiftUI.",
       "url": "https://github.com/bernaferrari/FigmaToCode",
       "homepage": "https://www.figma.com/community/plugin/842128343887142055",
-      "stars": 5272,
+      "stars": 5274,
       "forks": 508,
-      "watchers": 5272,
+      "watchers": 5274,
       "language": "TypeScript",
       "topics": [
         "conversion",
@@ -431,8 +430,8 @@
         "url": "https://github.com/bernaferrari"
       },
       "createdAt": "2020-06-19T21:02:32Z",
-      "updatedAt": "2026-11-17T02:54:38Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T11:42:35Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -444,9 +443,9 @@
       "description": "Extract any website's complete design system with one command. DTCG tokens, semantic+primitive+composite, MCP server for Claude Code/Cursor/Windsurf, multi-platform emitters (iOS SwiftUI, Android Compose, Flutter, WordPress), Tailwind v4, Figma variables, shadcn/ui, CSS health audit, WCAG remediation, Chrome extension. MIT, Playwright, Node 20+.",
       "url": "https://github.com/Manavarya09/design-extract",
       "homepage": "https://www.designlang.app",
-      "stars": 5133,
+      "stars": 5151,
       "forks": 427,
-      "watchers": 5133,
+      "watchers": 5151,
       "language": "HTML",
       "topics": [
         "accessibility",
@@ -476,8 +475,8 @@
         "url": "https://github.com/Manavarya09"
       },
       "createdAt": "2026-04-15T10:11:22Z",
-      "updatedAt": "2026-11-17T15:52:09Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T16:36:17Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -489,9 +488,9 @@
       "description": "Free, open source (MIT) SVG icon library: 1,383 icons (1,671 SVGs with solid variants) for React, React Native, Vue, Solid, Flutter, CSS, Figma and Framer.",
       "url": "https://github.com/iconoir-icons/iconoir",
       "homepage": "https://iconoir.com",
-      "stars": 4645,
-      "forks": 202,
-      "watchers": 4645,
+      "stars": 4647,
+      "forks": 203,
+      "watchers": 4647,
       "language": "TypeScript",
       "topics": [
         "css",
@@ -521,8 +520,8 @@
         "url": "https://github.com/iconoir-icons"
       },
       "createdAt": "2018-03-27T18:33:08Z",
-      "updatedAt": "2026-11-17T01:20:24Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T07:38:04Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -534,9 +533,9 @@
       "description": "Awesome Claude Design: 68 ready-to-use design system inspirations in DESIGN.md format. Drop one in, scaffold a full UI in one shot.",
       "url": "https://github.com/VoltAgent/awesome-claude-design",
       "homepage": "https://getdesign.md/",
-      "stars": 4601,
-      "forks": 498,
-      "watchers": 4601,
+      "stars": 4608,
+      "forks": 499,
+      "watchers": 4608,
       "language": null,
       "topics": [
         "claude-code",
@@ -551,8 +550,8 @@
         "url": "https://github.com/VoltAgent"
       },
       "createdAt": "2026-04-18T06:40:04Z",
-      "updatedAt": "2026-11-17T13:30:52Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T16:43:23Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -583,7 +582,7 @@
       },
       "createdAt": "2024-05-23T12:30:24Z",
       "updatedAt": "2026-11-17T02:41:52Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -595,9 +594,9 @@
       "description": "Angular components library for awesome people",
       "url": "https://github.com/taiga-family/taiga-ui",
       "homepage": "https://taiga-ui.dev",
-      "stars": 4096,
-      "forks": 584,
-      "watchers": 4096,
+      "stars": 4097,
+      "forks": 587,
+      "watchers": 4097,
       "language": "TypeScript",
       "topics": [
         "angular",
@@ -623,8 +622,8 @@
         "url": "https://github.com/taiga-family"
       },
       "createdAt": "2020-09-25T16:09:18Z",
-      "updatedAt": "2026-11-17T09:52:07Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T13:25:38Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -636,9 +635,9 @@
       "description": "Convert any website to editable Figma designs",
       "url": "https://github.com/BuilderIO/figma-html",
       "homepage": "https://www.figma.com/community/plugin/747985167520967365",
-      "stars": 3714,
-      "forks": 365,
-      "watchers": 3714,
+      "stars": 3717,
+      "forks": 366,
+      "watchers": 3717,
       "language": "TypeScript",
       "topics": [
         "angular",
@@ -664,8 +663,8 @@
         "url": "https://github.com/BuilderIO"
       },
       "createdAt": "2019-08-27T00:54:23Z",
-      "updatedAt": "2026-11-16T13:50:28Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T11:42:44Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -677,9 +676,9 @@
       "description": "Your design system as an API. Connect AI to Figma for extraction, creation, and debugging.",
       "url": "https://github.com/southleft/figma-console-mcp",
       "homepage": "https://southleft.com",
-      "stars": 3341,
-      "forks": 304,
-      "watchers": 3341,
+      "stars": 3355,
+      "forks": 305,
+      "watchers": 3355,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -695,8 +694,8 @@
         "url": "https://github.com/southleft"
       },
       "createdAt": "2025-10-05T16:28:53Z",
-      "updatedAt": "2026-11-17T15:33:28Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T14:36:25Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -725,7 +724,7 @@
       },
       "createdAt": "2017-12-26T10:16:52Z",
       "updatedAt": "2026-11-16T22:05:44Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -734,12 +733,12 @@
       "repoId": 1183286798,
       "fullName": "plugin87/ux-ui-agent-skills",
       "name": "ux-ui-agent-skills",
-      "description": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
+      "description": "Design-system skills for Claude Code, Codex, Cursor, Copilot and Gemini CLI: DTCG tokens, WCAG 2.2 AA to AAA, 2,144 design systems, 26 skills, any-framework code, and 52 gates that fail the build instead of taking the agent's word for it.",
       "url": "https://github.com/plugin87/ux-ui-agent-skills",
       "homepage": "https://plugin87.github.io/ux-ui-agent-skills/",
-      "stars": 3190,
+      "stars": 3194,
       "forks": 310,
-      "watchers": 3190,
+      "watchers": 3194,
       "language": "JavaScript",
       "topics": [
         "accessibility",
@@ -765,8 +764,8 @@
         "url": "https://github.com/plugin87"
       },
       "createdAt": "2026-03-16T13:08:49Z",
-      "updatedAt": "2026-11-17T16:04:40Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T15:10:54Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -811,7 +810,7 @@
       },
       "createdAt": "2017-11-18T22:42:36Z",
       "updatedAt": "2026-10-30T13:51:22Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -839,7 +838,7 @@
       },
       "createdAt": "2019-08-11T07:26:37Z",
       "updatedAt": "2026-11-07T20:26:59Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -881,7 +880,7 @@
       },
       "createdAt": "2017-01-08T10:33:28Z",
       "updatedAt": "2026-11-17T14:28:01Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -893,9 +892,9 @@
       "description": "Craft beautiful websites effortlessly with an intuitive visual builder and publish them instantly",
       "url": "https://github.com/frappe/builder",
       "homepage": "https://frappe.io/builder",
-      "stars": 2497,
-      "forks": 582,
-      "watchers": 2497,
+      "stars": 2499,
+      "forks": 583,
+      "watchers": 2499,
       "language": "Python",
       "topics": [
         "ai-website-builder",
@@ -918,8 +917,8 @@
         "url": "https://github.com/frappe"
       },
       "createdAt": "2023-01-10T17:39:53Z",
-      "updatedAt": "2026-11-17T09:45:17Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T14:03:11Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -949,7 +948,7 @@
       },
       "createdAt": "2023-06-13T19:00:15Z",
       "updatedAt": "2026-11-16T05:47:42Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -986,7 +985,7 @@
       },
       "createdAt": "2019-07-14T14:34:27Z",
       "updatedAt": "2026-11-13T03:00:28Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1016,7 +1015,7 @@
       },
       "createdAt": "2019-07-30T00:05:41Z",
       "updatedAt": "2026-11-16T03:50:14Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1028,9 +1027,9 @@
       "description": "Beautiful, hand-crafted animated weather icons that feel alive.",
       "url": "https://github.com/basmilius/meteocons",
       "homepage": "https://meteocons.com",
-      "stars": 1695,
-      "forks": 176,
-      "watchers": 1695,
+      "stars": 1696,
+      "forks": 177,
+      "watchers": 1696,
       "language": "TypeScript",
       "topics": [
         "animations",
@@ -1053,8 +1052,8 @@
         "url": "https://github.com/basmilius"
       },
       "createdAt": "2019-02-19T17:43:22Z",
-      "updatedAt": "2026-11-17T10:12:25Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T02:00:06Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1067,7 +1066,7 @@
       "url": "https://github.com/tokens-studio/figma-plugin",
       "homepage": "https://www.figma.com/community/plugin/843461159747178978",
       "stars": 1631,
-      "forks": 230,
+      "forks": 231,
       "watchers": 1631,
       "language": "TypeScript",
       "topics": [
@@ -1083,7 +1082,7 @@
       },
       "createdAt": "2020-05-18T16:43:45Z",
       "updatedAt": "2026-11-16T13:44:17Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1095,9 +1094,9 @@
       "description": "Free, two-way Figma MCP server. Turn designs into framework-aware code, and push code back to the canvas. Works with Claude Code, Cursor, Codex, and any MCP client.",
       "url": "https://github.com/awdr74100/figwright",
       "homepage": null,
-      "stars": 1441,
+      "stars": 1450,
       "forks": 93,
-      "watchers": 1441,
+      "watchers": 1450,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1119,8 +1118,8 @@
         "url": "https://github.com/awdr74100"
       },
       "createdAt": "2026-06-18T16:34:43Z",
-      "updatedAt": "2026-11-17T13:59:28Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T14:53:06Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1148,7 +1147,7 @@
       },
       "createdAt": "2024-02-02T10:30:04Z",
       "updatedAt": "2026-11-16T14:41:00Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1192,7 +1191,7 @@
       },
       "createdAt": "2020-05-10T10:52:29Z",
       "updatedAt": "2026-11-12T13:09:35Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1204,9 +1203,9 @@
       "description": "Make posters, social posts, slides and landing pages in the coding agent or chat you already use (Copilot, Claude, Codex, Cursor), with 198 design systems, checks and PDF/PNG/PowerPoint export.",
       "url": "https://github.com/feimacode/open-design-agent-kit",
       "homepage": "https://marketplace.visualstudio.com/items?itemName=feima.open-design-agent-kit",
-      "stars": 1144,
-      "forks": 106,
-      "watchers": 1144,
+      "stars": 1149,
+      "forks": 111,
+      "watchers": 1149,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -1236,8 +1235,8 @@
         "url": "https://github.com/feimacode"
       },
       "createdAt": "2026-09-19T23:36:29Z",
-      "updatedAt": "2026-11-17T15:35:27Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T15:32:44Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1269,7 +1268,7 @@
       },
       "createdAt": "2020-09-17T11:07:26Z",
       "updatedAt": "2026-11-07T15:30:35Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1303,7 +1302,7 @@
       },
       "createdAt": "2019-07-20T02:08:07Z",
       "updatedAt": "2026-11-17T00:43:09Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1331,7 +1330,7 @@
       },
       "createdAt": "2017-03-27T16:51:01Z",
       "updatedAt": "2026-11-17T01:25:47Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1375,7 +1374,7 @@
       },
       "createdAt": "2021-05-23T11:46:41Z",
       "updatedAt": "2026-11-13T02:05:38Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1410,7 +1409,7 @@
       },
       "createdAt": "2021-04-13T16:36:28Z",
       "updatedAt": "2026-11-14T23:26:50Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1422,9 +1421,9 @@
       "description": "Curated list of awesome AI tools to build beautiful UI/UX.",
       "url": "https://github.com/maxbogo/awesome-ai-tools-for-ui",
       "homepage": null,
-      "stars": 1043,
+      "stars": 1048,
       "forks": 143,
-      "watchers": 1043,
+      "watchers": 1048,
       "language": null,
       "topics": [
         "awesome",
@@ -1447,8 +1446,8 @@
         "url": "https://github.com/maxbogo"
       },
       "createdAt": "2026-03-28T19:20:28Z",
-      "updatedAt": "2026-11-17T15:25:18Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T14:38:06Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": true
     },
@@ -1482,7 +1481,7 @@
       },
       "createdAt": "2022-12-28T15:18:32Z",
       "updatedAt": "2026-11-16T23:10:33Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1510,7 +1509,7 @@
       },
       "createdAt": "2019-08-02T17:21:59Z",
       "updatedAt": "2026-11-16T23:40:09Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1539,7 +1538,7 @@
       },
       "createdAt": "2019-03-20T09:23:01Z",
       "updatedAt": "2026-11-13T06:52:54Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1551,9 +1550,9 @@
       "description": "Figma Plugin & MCP server to bypass API limits",
       "url": "https://github.com/gethopp/figma-mcp-bridge",
       "homepage": null,
-      "stars": 925,
-      "forks": 123,
-      "watchers": 925,
+      "stars": 931,
+      "forks": 124,
+      "watchers": 931,
       "language": "TypeScript",
       "topics": [
         "design-to-code",
@@ -1567,8 +1566,8 @@
         "url": "https://github.com/gethopp"
       },
       "createdAt": "2026-02-03T21:37:39Z",
-      "updatedAt": "2026-11-17T12:30:56Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T11:39:52Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1580,9 +1579,9 @@
       "description": "📒 A curated list of bookmarks, resources and articles about design systems focused on developers.",
       "url": "https://github.com/klaufel/awesome-design-systems",
       "homepage": null,
-      "stars": 912,
-      "forks": 83,
-      "watchers": 912,
+      "stars": 913,
+      "forks": 84,
+      "watchers": 913,
       "language": null,
       "topics": [
         "atomic-design",
@@ -1609,8 +1608,8 @@
         "url": "https://github.com/klaufel"
       },
       "createdAt": "2020-04-20T20:53:45Z",
-      "updatedAt": "2026-11-15T11:11:48Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "updatedAt": "2026-11-18T15:41:51Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1639,7 +1638,7 @@
       },
       "createdAt": "2018-07-27T04:36:40Z",
       "updatedAt": "2026-11-16T19:39:39Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1671,7 +1670,7 @@
       },
       "createdAt": "2019-08-27T20:35:50Z",
       "updatedAt": "2026-11-14T22:01:22Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1705,7 +1704,7 @@
       },
       "createdAt": "2018-04-12T07:43:40Z",
       "updatedAt": "2026-11-09T20:07:02Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1734,7 +1733,7 @@
       },
       "createdAt": "2026-01-17T21:37:17Z",
       "updatedAt": "2026-11-17T14:14:33Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     },
@@ -1747,7 +1746,7 @@
       "url": "https://github.com/once-ui-system/nextjs-starter",
       "homepage": "https://once-ui.com/",
       "stars": 831,
-      "forks": 194,
+      "forks": 195,
       "watchers": 831,
       "language": "TypeScript",
       "topics": [
@@ -1766,7 +1765,7 @@
       },
       "createdAt": "2024-06-27T13:56:48Z",
       "updatedAt": "2026-11-10T09:29:12Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": true
     },
@@ -1803,7 +1802,7 @@
       },
       "createdAt": "2020-05-21T12:03:23Z",
       "updatedAt": "2026-10-27T16:09:15Z",
-      "firstSeenAt": "2026-11-17T17:23:09.945Z",
+      "firstSeenAt": "2026-11-18T16:56:56.688Z",
       "isNew": true,
       "existing": false
     }

@@ -1,6 +1,6 @@
 {
   "topic": "issue-tracking",
-  "fetchedAt": "2026-11-17T17:26:26.112Z",
+  "fetchedAt": "2026-11-18T17:00:13.480Z",
   "count": 50,
   "newCount": 50,
   "existingCount": 0,
@@ -13,9 +13,9 @@
       "description": "The only tool you need to know what is happening and how to fix it.",
       "url": "https://github.com/tracewayapp/traceway",
       "homepage": "https://tracewayapp.com",
-      "stars": 1779,
+      "stars": 1783,
       "forks": 96,
-      "watchers": 1779,
+      "watchers": 1783,
       "language": "Go",
       "topics": [
         "alerting",
@@ -37,8 +37,8 @@
         "url": "https://github.com/tracewayapp"
       },
       "createdAt": "2025-12-18T03:35:02Z",
-      "updatedAt": "2026-11-17T15:39:53Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "updatedAt": "2026-11-18T10:47:58Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -67,7 +67,7 @@
       },
       "createdAt": "2020-12-04T23:32:59Z",
       "updatedAt": "2026-10-02T15:14:26Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -97,7 +97,7 @@
       },
       "createdAt": "2019-10-23T02:10:11Z",
       "updatedAt": "2026-11-12T04:13:50Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -142,7 +142,7 @@
       },
       "createdAt": "2025-03-23T11:55:53Z",
       "updatedAt": "2026-11-13T13:42:10Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -154,9 +154,9 @@
       "description": "Open-source alternative to Intercom, Fin and Linear. Support, projects, CRM, meetings, and docs in one workspace—with AI agents that use customer history to answer questions, plan work, and follow up.",
       "url": "https://github.com/helpin-ai/helpin",
       "homepage": "https://helpin.ai",
-      "stars": 76,
+      "stars": 77,
       "forks": 13,
-      "watchers": 76,
+      "watchers": 77,
       "language": "Go",
       "topics": [
         "ai-agents",
@@ -182,8 +182,8 @@
         "url": "https://github.com/helpin-ai"
       },
       "createdAt": "2026-02-28T11:35:20Z",
-      "updatedAt": "2026-11-11T21:26:57Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "updatedAt": "2026-11-18T08:37:45Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -219,7 +219,7 @@
       },
       "createdAt": "2026-02-07T20:55:55Z",
       "updatedAt": "2026-11-14T21:55:58Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -248,7 +248,7 @@
       },
       "createdAt": "2025-11-26T22:26:12Z",
       "updatedAt": "2026-11-05T08:31:51Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -285,7 +285,7 @@
       },
       "createdAt": "2024-01-17T19:51:59Z",
       "updatedAt": "2026-10-10T18:18:01Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -327,7 +327,7 @@
       },
       "createdAt": "2015-09-04T03:49:51Z",
       "updatedAt": "2026-11-07T17:36:32Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -361,46 +361,7 @@
       },
       "createdAt": "2022-02-24T11:53:42Z",
       "updatedAt": "2026-10-05T11:55:59Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-808054558",
-      "repoId": 808054558,
-      "fullName": "Aeliot-Tm/todo-registrar",
-      "name": "todo-registrar",
-      "description": "This tool creates issues in Issue Tracker depends on your TODO-comments in php-code",
-      "url": "https://github.com/Aeliot-Tm/todo-registrar",
-      "homepage": null,
-      "stars": 15,
-      "forks": 1,
-      "watchers": 15,
-      "language": "PHP",
-      "topics": [
-        "ci-cd",
-        "github-issues",
-        "gitlab-issues",
-        "issue-automation",
-        "issue-tracking",
-        "jira-api",
-        "readmine",
-        "readmine-issues",
-        "static-anaysis",
-        "todo-automation",
-        "todo-comment",
-        "todo-registrar",
-        "todo-tracker",
-        "yandex-tracker"
-      ],
-      "owner": {
-        "login": "Aeliot-Tm",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/8513062?v=4",
-        "url": "https://github.com/Aeliot-Tm"
-      },
-      "createdAt": "2024-05-30T09:40:37Z",
-      "updatedAt": "2026-08-09T18:12:49Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -441,7 +402,46 @@
       },
       "createdAt": "2025-06-23T22:50:56Z",
       "updatedAt": "2026-06-16T23:05:10Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-808054558",
+      "repoId": 808054558,
+      "fullName": "Aeliot-Tm/todo-registrar",
+      "name": "todo-registrar",
+      "description": "This tool creates issues in Issue Tracker depends on your TODO-comments in php-code",
+      "url": "https://github.com/Aeliot-Tm/todo-registrar",
+      "homepage": null,
+      "stars": 15,
+      "forks": 1,
+      "watchers": 15,
+      "language": "PHP",
+      "topics": [
+        "ci-cd",
+        "github-issues",
+        "gitlab-issues",
+        "issue-automation",
+        "issue-tracking",
+        "jira-api",
+        "readmine",
+        "readmine-issues",
+        "static-anaysis",
+        "todo-automation",
+        "todo-comment",
+        "todo-registrar",
+        "todo-tracker",
+        "yandex-tracker"
+      ],
+      "owner": {
+        "login": "Aeliot-Tm",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/8513062?v=4",
+        "url": "https://github.com/Aeliot-Tm"
+      },
+      "createdAt": "2024-05-30T09:40:37Z",
+      "updatedAt": "2026-08-09T18:12:49Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -476,7 +476,7 @@
       },
       "createdAt": "2024-11-20T02:46:10Z",
       "updatedAt": "2026-07-27T14:15:48Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -507,7 +507,7 @@
       },
       "createdAt": "2026-06-09T20:39:50Z",
       "updatedAt": "2026-11-16T02:19:52Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -538,7 +538,7 @@
       },
       "createdAt": "2015-04-06T11:56:10Z",
       "updatedAt": "2026-09-18T14:29:12Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -582,7 +582,7 @@
       },
       "createdAt": "2024-10-10T10:07:24Z",
       "updatedAt": "2026-05-28T20:20:43Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -620,7 +620,7 @@
       },
       "createdAt": "2026-05-07T21:56:40Z",
       "updatedAt": "2026-07-04T13:03:45Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -653,7 +653,7 @@
       },
       "createdAt": "2026-02-20T04:41:52Z",
       "updatedAt": "2026-10-11T01:07:02Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -690,7 +690,7 @@
       },
       "createdAt": "2026-01-29T20:25:20Z",
       "updatedAt": "2026-11-12T05:50:42Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -725,7 +725,7 @@
       },
       "createdAt": "2026-04-18T08:24:42Z",
       "updatedAt": "2026-09-09T14:03:54Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -766,7 +766,7 @@
       },
       "createdAt": "2026-02-18T04:35:20Z",
       "updatedAt": "2026-05-08T02:23:36Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -809,7 +809,7 @@
       },
       "createdAt": "2026-08-04T05:40:36Z",
       "updatedAt": "2026-11-10T07:55:19Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -837,7 +837,7 @@
       },
       "createdAt": "2021-07-21T11:58:37Z",
       "updatedAt": "2026-05-17T07:22:30Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -881,7 +881,7 @@
       },
       "createdAt": "2025-09-10T17:09:59Z",
       "updatedAt": "2026-10-26T13:37:49Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -922,7 +922,7 @@
       },
       "createdAt": "2026-06-26T21:03:14Z",
       "updatedAt": "2026-10-31T18:58:55Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -964,7 +964,45 @@
       },
       "createdAt": "2025-12-21T02:12:19Z",
       "updatedAt": "2026-09-25T05:33:20Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1062043932",
+      "repoId": 1062043932,
+      "fullName": "itsaryanchauhan/JANMARG-APP",
+      "name": "JANMARG-APP",
+      "description": "A mobile app for reporting and tracking civic infrastructure issues. Built for Smart India Hackathon 2025 with React Native & Expo.",
+      "url": "https://github.com/itsaryanchauhan/JANMARG-APP",
+      "homepage": "https://play.google.com/store/apps/details?id=com.connect.janmarg",
+      "stars": 6,
+      "forks": 1,
+      "watchers": 6,
+      "language": "TypeScript",
+      "topics": [
+        "android-app",
+        "citizen-management-application",
+        "civic-tech",
+        "community",
+        "expo",
+        "expo-router",
+        "issue-tracking",
+        "mobile-app",
+        "nativewind",
+        "react-native",
+        "smart-india-hackathon",
+        "tailwindcss",
+        "typescript"
+      ],
+      "owner": {
+        "login": "itsaryanchauhan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/146752682?v=4",
+        "url": "https://github.com/itsaryanchauhan"
+      },
+      "createdAt": "2025-09-22T18:20:28Z",
+      "updatedAt": "2026-09-14T18:50:42Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1009,45 +1047,7 @@
       },
       "createdAt": "2026-08-11T15:23:37Z",
       "updatedAt": "2026-11-01T14:04:29Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1062043932",
-      "repoId": 1062043932,
-      "fullName": "itsaryanchauhan/JANMARG-APP",
-      "name": "JANMARG-APP",
-      "description": "A mobile app for reporting and tracking civic infrastructure issues. Built for Smart India Hackathon 2025 with React Native & Expo.",
-      "url": "https://github.com/itsaryanchauhan/JANMARG-APP",
-      "homepage": "https://play.google.com/store/apps/details?id=com.connect.janmarg",
-      "stars": 6,
-      "forks": 1,
-      "watchers": 6,
-      "language": "TypeScript",
-      "topics": [
-        "android-app",
-        "citizen-management-application",
-        "civic-tech",
-        "community",
-        "expo",
-        "expo-router",
-        "issue-tracking",
-        "mobile-app",
-        "nativewind",
-        "react-native",
-        "smart-india-hackathon",
-        "tailwindcss",
-        "typescript"
-      ],
-      "owner": {
-        "login": "itsaryanchauhan",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/146752682?v=4",
-        "url": "https://github.com/itsaryanchauhan"
-      },
-      "createdAt": "2025-09-22T18:20:28Z",
-      "updatedAt": "2026-09-14T18:50:42Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1083,7 +1083,7 @@
       },
       "createdAt": "2026-04-08T18:04:05Z",
       "updatedAt": "2026-11-11T12:13:10Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1112,7 +1112,41 @@
       },
       "createdAt": "2018-07-11T18:39:33Z",
       "updatedAt": "2026-10-18T15:40:39Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1166046860",
+      "repoId": 1166046860,
+      "fullName": "snipcodeit/mgw",
+      "name": "mgw",
+      "description": "Issue in. PR out. No excuses. — GitHub project orchestration for Claude Code, powered by Get Shit Done.",
+      "url": "https://github.com/snipcodeit/mgw",
+      "homepage": "https://github.com/snipcodeit/mgw#readme",
+      "stars": 4,
+      "forks": 0,
+      "watchers": 4,
+      "language": "JavaScript",
+      "topics": [
+        "ai-automation",
+        "claude-code",
+        "cli-tool",
+        "developer-tools",
+        "github-automation",
+        "gsd",
+        "issue-tracking",
+        "pr-automation",
+        "project-management"
+      ],
+      "owner": {
+        "login": "snipcodeit",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/21005207?v=4",
+        "url": "https://github.com/snipcodeit"
+      },
+      "createdAt": "2026-02-24T20:28:21Z",
+      "updatedAt": "2026-09-17T13:22:30Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1147,7 +1181,7 @@
       },
       "createdAt": "2026-03-23T08:18:05Z",
       "updatedAt": "2026-06-01T07:35:34Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1188,41 +1222,7 @@
       },
       "createdAt": "2023-09-04T16:26:34Z",
       "updatedAt": "2026-07-30T16:20:42Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1166046860",
-      "repoId": 1166046860,
-      "fullName": "snipcodeit/mgw",
-      "name": "mgw",
-      "description": "Issue in. PR out. No excuses. — GitHub project orchestration for Claude Code, powered by Get Shit Done.",
-      "url": "https://github.com/snipcodeit/mgw",
-      "homepage": "https://github.com/snipcodeit/mgw#readme",
-      "stars": 4,
-      "forks": 0,
-      "watchers": 4,
-      "language": "JavaScript",
-      "topics": [
-        "ai-automation",
-        "claude-code",
-        "cli-tool",
-        "developer-tools",
-        "github-automation",
-        "gsd",
-        "issue-tracking",
-        "pr-automation",
-        "project-management"
-      ],
-      "owner": {
-        "login": "snipcodeit",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/21005207?v=4",
-        "url": "https://github.com/snipcodeit"
-      },
-      "createdAt": "2026-02-24T20:28:21Z",
-      "updatedAt": "2026-09-17T13:22:30Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1261,7 +1261,7 @@
       },
       "createdAt": "2026-03-28T16:13:38Z",
       "updatedAt": "2026-09-21T13:48:45Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1296,7 +1296,7 @@
       },
       "createdAt": "2026-07-19T17:01:07Z",
       "updatedAt": "2026-10-21T05:40:35Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1328,7 +1328,7 @@
       },
       "createdAt": "2025-12-01T07:32:54Z",
       "updatedAt": "2026-01-09T17:36:26Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1358,7 +1358,7 @@
       },
       "createdAt": "2026-07-20T03:53:35Z",
       "updatedAt": "2026-09-21T09:56:51Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1398,7 +1398,7 @@
       },
       "createdAt": "2026-10-15T15:49:51Z",
       "updatedAt": "2026-11-15T12:09:04Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1438,7 +1438,7 @@
       },
       "createdAt": "2025-09-27T08:34:42Z",
       "updatedAt": "2026-10-14T06:45:21Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1483,7 +1483,64 @@
       },
       "createdAt": "2026-03-02T17:11:17Z",
       "updatedAt": "2026-07-29T09:22:15Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-157690958",
+      "repoId": 157690958,
+      "fullName": "siesgstarena/arena-issue-tracking",
+      "name": "arena-issue-tracking",
+      "description": "Issue Tracking for SIESGSTarena Platform hosted @ http://arena.siesgst.ac.in/",
+      "url": "https://github.com/siesgstarena/arena-issue-tracking",
+      "homepage": null,
+      "stars": 3,
+      "forks": 0,
+      "watchers": 3,
+      "language": null,
+      "topics": [
+        "issue-tracking",
+        "siesgstarena"
+      ],
+      "owner": {
+        "login": "siesgstarena",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/31792460?v=4",
+        "url": "https://github.com/siesgstarena"
+      },
+      "createdAt": "2018-11-15T10:08:19Z",
+      "updatedAt": "2021-08-25T02:07:44Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1190061503",
+      "repoId": 1190061503,
+      "fullName": "guirguispierre/pokedex",
+      "name": "pokedex",
+      "description": "Discord bot for engineering triage, issue tracking, and feedback management — with MCP agent integration and Firebase backend",
+      "url": "https://github.com/guirguispierre/pokedex",
+      "homepage": "https://dashboard-vercel-puce.vercel.app",
+      "stars": 3,
+      "forks": 4,
+      "watchers": 3,
+      "language": "JavaScript",
+      "topics": [
+        "discord-bot",
+        "firebase",
+        "issue-tracking",
+        "mcp",
+        "triage"
+      ],
+      "owner": {
+        "login": "guirguispierre",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/22091706?v=4",
+        "url": "https://github.com/guirguispierre"
+      },
+      "createdAt": "2026-03-23T23:45:29Z",
+      "updatedAt": "2026-11-08T01:00:27Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1521,64 +1578,38 @@
       },
       "createdAt": "2025-03-15T23:20:10Z",
       "updatedAt": "2026-05-08T01:18:50Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-157690958",
-      "repoId": 157690958,
-      "fullName": "siesgstarena/arena-issue-tracking",
-      "name": "arena-issue-tracking",
-      "description": "Issue Tracking for SIESGSTarena Platform hosted @ http://arena.siesgst.ac.in/",
-      "url": "https://github.com/siesgstarena/arena-issue-tracking",
-      "homepage": null,
+      "id": "gh-topic-1355742547",
+      "repoId": 1355742547,
+      "fullName": "priyam-26/LabSync",
+      "name": "LabSync",
+      "description": "LabSync is a web-based lab equipment complaint management system that allows students to report issues and administrators to track, filter, update, and manage complaints. It provides role-based access, complaint status tracking, real-time updates, and an organized workflow for efficient issue resolution.",
+      "url": "https://github.com/priyam-26/LabSync",
+      "homepage": "https://priyam-26.github.io/LabSync/",
       "stars": 3,
-      "forks": 0,
-      "watchers": 3,
-      "language": null,
-      "topics": [
-        "issue-tracking",
-        "siesgstarena"
-      ],
-      "owner": {
-        "login": "siesgstarena",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/31792460?v=4",
-        "url": "https://github.com/siesgstarena"
-      },
-      "createdAt": "2018-11-15T10:08:19Z",
-      "updatedAt": "2021-08-25T02:07:44Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1190061503",
-      "repoId": 1190061503,
-      "fullName": "guirguispierre/pokedex",
-      "name": "pokedex",
-      "description": "Discord bot for engineering triage, issue tracking, and feedback management — with MCP agent integration and Firebase backend",
-      "url": "https://github.com/guirguispierre/pokedex",
-      "homepage": "https://dashboard-vercel-puce.vercel.app",
-      "stars": 3,
-      "forks": 4,
+      "forks": 1,
       "watchers": 3,
       "language": "JavaScript",
       "topics": [
-        "discord-bot",
-        "firebase",
+        "complaint-management",
         "issue-tracking",
-        "mcp",
-        "triage"
+        "javascript",
+        "lab-management",
+        "student-project",
+        "web-application"
       ],
       "owner": {
-        "login": "guirguispierre",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22091706?v=4",
-        "url": "https://github.com/guirguispierre"
+        "login": "priyam-26",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/205050362?v=4",
+        "url": "https://github.com/priyam-26"
       },
-      "createdAt": "2026-03-23T23:45:29Z",
-      "updatedAt": "2026-11-08T01:00:27Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "createdAt": "2026-09-03T08:56:24Z",
+      "updatedAt": "2026-09-08T14:40:34Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1615,38 +1646,7 @@
       },
       "createdAt": "2026-08-16T20:29:04Z",
       "updatedAt": "2026-11-04T09:08:44Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1355742547",
-      "repoId": 1355742547,
-      "fullName": "priyam-26/LabSync",
-      "name": "LabSync",
-      "description": "LabSync is a web-based lab equipment complaint management system that allows students to report issues and administrators to track, filter, update, and manage complaints. It provides role-based access, complaint status tracking, real-time updates, and an organized workflow for efficient issue resolution.",
-      "url": "https://github.com/priyam-26/LabSync",
-      "homepage": "https://priyam-26.github.io/LabSync/",
-      "stars": 3,
-      "forks": 1,
-      "watchers": 3,
-      "language": "JavaScript",
-      "topics": [
-        "complaint-management",
-        "issue-tracking",
-        "javascript",
-        "lab-management",
-        "student-project",
-        "web-application"
-      ],
-      "owner": {
-        "login": "priyam-26",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/205050362?v=4",
-        "url": "https://github.com/priyam-26"
-      },
-      "createdAt": "2026-09-03T08:56:24Z",
-      "updatedAt": "2026-09-08T14:40:34Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1681,7 +1681,7 @@
       },
       "createdAt": "2025-12-22T04:19:18Z",
       "updatedAt": "2026-02-24T05:01:32Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1718,7 +1718,7 @@
       },
       "createdAt": "2026-06-30T10:42:34Z",
       "updatedAt": "2026-11-09T18:25:55Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1752,7 +1752,7 @@
       },
       "createdAt": "2024-07-06T14:24:29Z",
       "updatedAt": "2025-01-02T06:16:53Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1789,7 +1789,7 @@
       },
       "createdAt": "2024-05-09T06:40:02Z",
       "updatedAt": "2026-11-12T14:27:01Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     },
@@ -1829,7 +1829,7 @@
       },
       "createdAt": "2026-05-06T10:59:10Z",
       "updatedAt": "2026-11-06T08:05:33Z",
-      "firstSeenAt": "2026-11-17T17:26:26.112Z",
+      "firstSeenAt": "2026-11-18T17:00:13.480Z",
       "isNew": true,
       "existing": false
     }
