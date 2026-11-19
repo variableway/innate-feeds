@@ -1,6 +1,6 @@
 {
   "topic": "sdd",
-  "fetchedAt": "2026-11-18T17:00:51.520Z",
+  "fetchedAt": "2026-11-19T17:07:01.730Z",
   "count": 50,
   "newCount": 47,
   "existingCount": 3,
@@ -13,9 +13,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 75170,
-      "forks": 5156,
-      "watchers": 75170,
+      "stars": 75260,
+      "forks": 5157,
+      "watchers": 75260,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -35,8 +35,8 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-18T16:43:42Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T17:02:50Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": true
     },
@@ -48,9 +48,9 @@
       "description": "Turn approved specs into long-running autonomous implementation. A minimal, adaptable SDD harness with Agent Skills for Claude Code, Codex, Cursor, Copilot, Windsurf, OpenCode, Gemini CLI, and Antigravity.",
       "url": "https://github.com/gotalab/cc-sdd",
       "homepage": null,
-      "stars": 3772,
+      "stars": 3774,
       "forks": 285,
-      "watchers": 3772,
+      "watchers": 3774,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -72,8 +72,8 @@
         "url": "https://github.com/gotalab"
       },
       "createdAt": "2025-07-17T04:41:37Z",
-      "updatedAt": "2026-11-18T12:36:40Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T06:06:54Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -85,9 +85,9 @@
       "description": "Comet: agent skill harness for turning ideas into evaluated workflows",
       "url": "https://github.com/rpamis/comet",
       "homepage": "https://docs.comet.rpamis.com",
-      "stars": 3306,
+      "stars": 3307,
       "forks": 317,
-      "watchers": 3306,
+      "watchers": 3307,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -106,8 +106,8 @@
         "url": "https://github.com/rpamis"
       },
       "createdAt": "2026-05-14T09:22:35Z",
-      "updatedAt": "2026-11-18T05:50:26Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T10:04:00Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -119,9 +119,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2785,
-      "forks": 291,
-      "watchers": 2785,
+      "stars": 2824,
+      "forks": 295,
+      "watchers": 2824,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -151,8 +151,8 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-18T16:49:42Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T16:52:36Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -182,7 +182,7 @@
       },
       "createdAt": "2025-09-20T03:12:06Z",
       "updatedAt": "2026-11-17T03:44:06Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -194,9 +194,9 @@
       "description": "Curso de SDD (Spec-Driven Development) desde cero",
       "url": "https://github.com/mouredev/hello-sdd",
       "homepage": "https://youtube.com/live/5HaOxAAA5qI",
-      "stars": 809,
-      "forks": 199,
-      "watchers": 809,
+      "stars": 811,
+      "forks": 200,
+      "watchers": 811,
       "language": "Python",
       "topics": [
         "sdd",
@@ -208,8 +208,8 @@
         "url": "https://github.com/mouredev"
       },
       "createdAt": "2026-08-27T11:49:48Z",
-      "updatedAt": "2026-11-18T09:34:19Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-18T19:09:39Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -221,9 +221,9 @@
       "description": "Spec-driven development for coding agents — a desktop app, a CLI, and skills for Codex, Claude Code, Cursor, Copilot, Antigravity and Junie",
       "url": "https://github.com/kaochenlong/spectra-app",
       "homepage": null,
-      "stars": 776,
+      "stars": 777,
       "forks": 33,
-      "watchers": 776,
+      "watchers": 777,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -242,8 +242,8 @@
         "url": "https://github.com/kaochenlong"
       },
       "createdAt": "2026-02-04T03:13:04Z",
-      "updatedAt": "2026-11-17T09:41:48Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T01:56:49Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -255,9 +255,9 @@
       "description": "OpenSpec Practical Guide",
       "url": "https://github.com/ForceInjection/OpenSpec-practise",
       "homepage": "https://forceinjection.github.io/OpenSpec-practise/",
-      "stars": 653,
+      "stars": 652,
       "forks": 92,
-      "watchers": 653,
+      "watchers": 652,
       "language": null,
       "topics": [
         "sdd",
@@ -269,8 +269,8 @@
         "url": "https://github.com/ForceInjection"
       },
       "createdAt": "2026-01-27T11:25:10Z",
-      "updatedAt": "2026-11-17T10:45:57Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T13:48:43Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -299,7 +299,7 @@
       },
       "createdAt": "2026-03-07T03:44:10Z",
       "updatedAt": "2026-11-15T08:48:22Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -342,7 +342,7 @@
       },
       "createdAt": "2026-03-31T02:49:55Z",
       "updatedAt": "2026-11-09T22:06:50Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -370,7 +370,7 @@
       },
       "createdAt": "2025-09-11T08:28:19Z",
       "updatedAt": "2026-10-23T17:49:02Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -403,7 +403,7 @@
       },
       "createdAt": "2026-03-29T13:46:50Z",
       "updatedAt": "2026-11-18T11:57:20Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": true
     },
@@ -430,7 +430,7 @@
       },
       "createdAt": "2026-05-15T09:19:02Z",
       "updatedAt": "2026-10-22T14:02:21Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -468,7 +468,7 @@
       },
       "createdAt": "2025-12-24T14:28:50Z",
       "updatedAt": "2026-11-17T19:00:25Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -480,9 +480,9 @@
       "description": "🪼 Lagune AI is your security copilot as you build, your Blue Team when you audit, whether you're a developer or not (no API key needed).",
       "url": "https://github.com/wellwelwel/lagune",
       "homepage": "https://lagune.ai",
-      "stars": 220,
+      "stars": 222,
       "forks": 8,
-      "watchers": 220,
+      "watchers": 222,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -512,8 +512,8 @@
         "url": "https://github.com/wellwelwel"
       },
       "createdAt": "2026-06-17T21:19:02Z",
-      "updatedAt": "2026-11-17T07:51:58Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T11:07:29Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -525,9 +525,9 @@
       "description": "OpenSpec and OpenCode template for intent-driven development with specs, ADRs, C4 diagrams, Gherkin, TDD, Multi-Model Adversarial Spec Authoring, Glossary for Domain Terms, and reusable engineering workflows. This also makes OpenSpec spec-as-source capable.",
       "url": "https://github.com/intent-driven-dev/intent-driven-template",
       "homepage": "https://intent-driven.dev",
-      "stars": 201,
+      "stars": 202,
       "forks": 40,
-      "watchers": 201,
+      "watchers": 202,
       "language": "Python",
       "topics": [
         "adversarial-ai",
@@ -557,8 +557,8 @@
         "url": "https://github.com/intent-driven-dev"
       },
       "createdAt": "2026-05-10T11:13:51Z",
-      "updatedAt": "2026-11-16T21:04:06Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T14:09:11Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -596,7 +596,7 @@
       },
       "createdAt": "2025-09-19T05:47:57Z",
       "updatedAt": "2026-11-05T01:23:14Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -631,7 +631,7 @@
       },
       "createdAt": "2026-09-06T21:28:21Z",
       "updatedAt": "2026-11-14T06:43:50Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -667,7 +667,7 @@
       },
       "createdAt": "2026-01-19T09:33:40Z",
       "updatedAt": "2026-11-13T14:44:52Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -694,7 +694,7 @@
       },
       "createdAt": "2026-03-01T17:54:24Z",
       "updatedAt": "2026-10-31T06:27:35Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -730,7 +730,7 @@
       },
       "createdAt": "2025-12-16T02:14:49Z",
       "updatedAt": "2026-11-16T14:29:31Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": true
     },
@@ -742,9 +742,9 @@
       "description": "Collection of OpenSpec Custom Schema for Workflows other than standard spec-driven schema that is included in OpenSpec.",
       "url": "https://github.com/intent-driven-dev/openspec-schemas",
       "homepage": null,
-      "stars": 122,
-      "forks": 29,
-      "watchers": 122,
+      "stars": 123,
+      "forks": 30,
+      "watchers": 123,
       "language": null,
       "topics": [
         "aicoding",
@@ -761,8 +761,8 @@
         "url": "https://github.com/intent-driven-dev"
       },
       "createdAt": "2026-02-11T16:54:55Z",
-      "updatedAt": "2026-11-18T01:20:41Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "updatedAt": "2026-11-19T11:06:34Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -806,7 +806,7 @@
       },
       "createdAt": "2026-03-01T01:14:30Z",
       "updatedAt": "2026-11-09T09:26:15Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -837,7 +837,7 @@
       },
       "createdAt": "2026-05-12T06:01:30Z",
       "updatedAt": "2026-11-18T06:17:09Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -876,7 +876,7 @@
       },
       "createdAt": "2025-10-02T22:03:29Z",
       "updatedAt": "2026-11-10T08:22:43Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -917,7 +917,7 @@
       },
       "createdAt": "2025-11-24T16:21:05Z",
       "updatedAt": "2026-11-01T22:54:10Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -952,7 +952,7 @@
       },
       "createdAt": "2025-11-14T15:16:54Z",
       "updatedAt": "2026-11-16T10:47:35Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -981,7 +981,7 @@
       },
       "createdAt": "2026-07-27T19:53:08Z",
       "updatedAt": "2026-11-16T16:52:27Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1011,7 +1011,7 @@
       },
       "createdAt": "2026-03-09T17:08:36Z",
       "updatedAt": "2026-11-16T18:26:43Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1042,7 +1042,7 @@
       },
       "createdAt": "2026-06-27T07:27:09Z",
       "updatedAt": "2026-11-17T02:10:37Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1070,7 +1070,7 @@
       },
       "createdAt": "2026-02-13T15:05:35Z",
       "updatedAt": "2026-11-13T15:04:23Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1101,7 +1101,7 @@
       },
       "createdAt": "2018-03-14T15:37:17Z",
       "updatedAt": "2026-05-15T20:56:51Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1137,7 +1137,7 @@
       },
       "createdAt": "2026-03-06T16:47:43Z",
       "updatedAt": "2026-11-18T15:15:37Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1174,7 +1174,7 @@
       },
       "createdAt": "2026-04-11T07:21:16Z",
       "updatedAt": "2026-09-21T13:51:04Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1212,7 +1212,7 @@
       },
       "createdAt": "2026-03-21T15:44:15Z",
       "updatedAt": "2026-11-15T17:11:17Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1257,7 +1257,7 @@
       },
       "createdAt": "2026-03-21T23:18:51Z",
       "updatedAt": "2026-10-29T05:43:18Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1302,7 +1302,7 @@
       },
       "createdAt": "2021-02-04T21:35:23Z",
       "updatedAt": "2026-10-11T09:07:03Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1339,7 +1339,7 @@
       },
       "createdAt": "2026-01-11T15:09:37Z",
       "updatedAt": "2026-11-15T10:11:47Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1383,7 +1383,7 @@
       },
       "createdAt": "2026-01-07T18:09:09Z",
       "updatedAt": "2026-11-02T16:54:58Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1414,7 +1414,7 @@
       },
       "createdAt": "2026-04-02T02:38:08Z",
       "updatedAt": "2026-11-14T08:02:34Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1455,7 +1455,7 @@
       },
       "createdAt": "2026-03-22T05:37:37Z",
       "updatedAt": "2026-10-31T06:55:00Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1492,7 +1492,7 @@
       },
       "createdAt": "2026-03-04T13:11:24Z",
       "updatedAt": "2026-11-13T18:06:22Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1524,7 +1524,7 @@
       },
       "createdAt": "2026-03-03T06:58:56Z",
       "updatedAt": "2026-11-16T13:16:18Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1562,7 +1562,7 @@
       },
       "createdAt": "2025-12-31T10:39:46Z",
       "updatedAt": "2026-11-17T20:09:41Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1602,7 +1602,7 @@
       },
       "createdAt": "2026-04-09T11:24:04Z",
       "updatedAt": "2026-11-16T14:23:37Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1632,7 +1632,7 @@
       },
       "createdAt": "2026-02-19T06:46:08Z",
       "updatedAt": "2026-11-12T02:43:10Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1672,7 +1672,7 @@
       },
       "createdAt": "2025-09-27T11:51:17Z",
       "updatedAt": "2026-11-11T09:27:14Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1706,7 +1706,7 @@
       },
       "createdAt": "2016-12-10T19:19:17Z",
       "updatedAt": "2024-12-07T14:23:17Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
@@ -1742,40 +1742,41 @@
       },
       "createdAt": "2026-05-15T02:32:13Z",
       "updatedAt": "2026-11-13T13:56:11Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-189569904",
-      "repoId": 189569904,
-      "fullName": "d1024choi/traj-pred-irl",
-      "name": "traj-pred-irl",
-      "description": "Official implementation of \"Regularizing neural networks for future trajectory prediction via IRL framework\" published in IET CV",
-      "url": "https://github.com/d1024choi/traj-pred-irl",
+      "id": "gh-topic-1419308939",
+      "repoId": 1419308939,
+      "fullName": "shanggqm/my-ai-infra",
+      "name": "my-ai-infra",
+      "description": "面向企业级 AI Coding 的轻量 SDD 脚手架，以规格驱动交付，让开发经验持续沉淀与复用。",
+      "url": "https://github.com/shanggqm/my-ai-infra",
       "homepage": null,
-      "stars": 37,
-      "forks": 6,
-      "watchers": 37,
-      "language": "Python",
+      "stars": 38,
+      "forks": 12,
+      "watchers": 38,
+      "language": "JavaScript",
       "topics": [
-        "computer-vision",
-        "crowd",
-        "datasets",
-        "machine-learning",
-        "regularization",
+        "ai-agents",
+        "ai-coding",
+        "claude-code",
+        "codex",
+        "cursor",
+        "developer-tools",
+        "github-copilot",
         "sdd",
-        "tensorflow",
-        "trajectory-prediction"
+        "spec-driven-development"
       ],
       "owner": {
-        "login": "d1024choi",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/26245546?v=4",
-        "url": "https://github.com/d1024choi"
+        "login": "shanggqm",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2172641?v=4",
+        "url": "https://github.com/shanggqm"
       },
-      "createdAt": "2019-05-31T09:45:50Z",
-      "updatedAt": "2026-05-06T07:49:52Z",
-      "firstSeenAt": "2026-11-18T17:00:51.520Z",
+      "createdAt": "2026-10-14T15:45:28Z",
+      "updatedAt": "2026-11-19T15:37:25Z",
+      "firstSeenAt": "2026-11-19T17:07:01.730Z",
       "isNew": true,
       "existing": false
     }
