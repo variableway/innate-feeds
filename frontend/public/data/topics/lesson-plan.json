@@ -1,6 +1,6 @@
 {
   "topic": "lesson-plan",
-  "fetchedAt": "2026-11-19T17:04:49.169Z",
+  "fetchedAt": "2026-11-20T16:44:06.260Z",
   "count": 49,
   "newCount": 49,
   "existingCount": 0,
@@ -38,7 +38,7 @@
       },
       "createdAt": "2026-08-06T10:53:48Z",
       "updatedAt": "2026-11-04T15:14:37Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -73,7 +73,7 @@
       },
       "createdAt": "2026-10-28T12:41:15Z",
       "updatedAt": "2026-11-18T08:05:38Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -106,7 +106,42 @@
       },
       "createdAt": "2026-09-26T01:56:20Z",
       "updatedAt": "2026-10-19T01:18:51Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1217277572",
+      "repoId": 1217277572,
+      "fullName": "revjake1/lesson-plan-magic",
+      "name": "lesson-plan-magic",
+      "description": "K-12 lesson planning AI plugin for Cowork & Claude Code — learns your voice, fills your district's template, and generates standards-aligned plans, agenda slides, exit tickets, do-nows, and sub plans.",
+      "url": "https://github.com/revjake1/lesson-plan-magic",
+      "homepage": null,
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "classroom",
+        "claude-code",
+        "cowork",
+        "curriculum",
+        "docx",
+        "education",
+        "k-12",
+        "lesson-plan",
+        "teacher"
+      ],
+      "owner": {
+        "login": "revjake1",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/44690932?v=4",
+        "url": "https://github.com/revjake1"
+      },
+      "createdAt": "2026-04-21T18:15:21Z",
+      "updatedAt": "2026-11-20T14:52:04Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -143,7 +178,7 @@
       },
       "createdAt": "2025-04-15T09:13:42Z",
       "updatedAt": "2026-06-04T04:10:58Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -178,7 +213,7 @@
       },
       "createdAt": "2026-05-31T02:42:17Z",
       "updatedAt": "2026-10-14T03:12:09Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -223,7 +258,7 @@
       },
       "createdAt": "2026-07-16T03:01:57Z",
       "updatedAt": "2026-11-12T15:59:26Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -255,7 +290,7 @@
       },
       "createdAt": "2026-07-21T08:57:19Z",
       "updatedAt": "2026-09-01T06:19:28Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -290,7 +325,7 @@
       },
       "createdAt": "2026-09-11T13:12:25Z",
       "updatedAt": "2026-10-25T05:26:38Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -335,42 +370,7 @@
       },
       "createdAt": "2026-08-31T09:29:53Z",
       "updatedAt": "2026-11-04T14:22:03Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1217277572",
-      "repoId": 1217277572,
-      "fullName": "revjake1/lesson-plan-magic",
-      "name": "lesson-plan-magic",
-      "description": "K-12 lesson planning AI plugin for Cowork & Claude Code — learns your voice, fills your district's template, and generates standards-aligned plans, agenda slides, exit tickets, do-nows, and sub plans.",
-      "url": "https://github.com/revjake1/lesson-plan-magic",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "ai",
-        "classroom",
-        "claude-code",
-        "cowork",
-        "curriculum",
-        "docx",
-        "education",
-        "k-12",
-        "lesson-plan",
-        "teacher"
-      ],
-      "owner": {
-        "login": "revjake1",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/44690932?v=4",
-        "url": "https://github.com/revjake1"
-      },
-      "createdAt": "2026-04-21T18:15:21Z",
-      "updatedAt": "2026-04-24T19:14:56Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -415,7 +415,7 @@
       },
       "createdAt": "2026-11-12T15:29:21Z",
       "updatedAt": "2026-11-19T02:33:33Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -460,7 +460,7 @@
       },
       "createdAt": "2026-07-06T01:35:26Z",
       "updatedAt": "2026-09-21T04:46:57Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -505,40 +505,7 @@
       },
       "createdAt": "2026-07-27T04:08:13Z",
       "updatedAt": "2026-07-27T08:00:43Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1377791653",
-      "repoId": 1377791653,
-      "fullName": "swlfaye-sketch/xiaoxue-quanke-jiaoshi",
-      "name": "xiaoxue-quanke-jiaoshi",
-      "description": "小学教师全科教学助手 — 一至六年级六科备课助手（语文、数学、英语、科学、自然、人文），输出结构完整的备课材料，附自动校验结果与人工核对清单。",
-      "url": "https://github.com/swlfaye-sketch/xiaoxue-quanke-jiaoshi",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "chinese",
-        "cli",
-        "education",
-        "lesson-plan",
-        "offline",
-        "primary-school",
-        "python",
-        "teaching"
-      ],
-      "owner": {
-        "login": "swlfaye-sketch",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/244677466?v=4",
-        "url": "https://github.com/swlfaye-sketch"
-      },
-      "createdAt": "2026-09-20T01:54:52Z",
-      "updatedAt": "2026-09-27T13:52:35Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -572,7 +539,7 @@
       },
       "createdAt": "2026-09-05T12:10:15Z",
       "updatedAt": "2026-11-01T04:00:10Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -605,7 +572,40 @@
       },
       "createdAt": "2026-10-21T12:19:21Z",
       "updatedAt": "2026-11-05T04:24:03Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1377791653",
+      "repoId": 1377791653,
+      "fullName": "swlfaye-sketch/xiaoxue-quanke-jiaoshi",
+      "name": "xiaoxue-quanke-jiaoshi",
+      "description": "小学教师全科教学助手 — 一至六年级六科备课助手（语文、数学、英语、科学、自然、人文），输出结构完整的备课材料，附自动校验结果与人工核对清单。",
+      "url": "https://github.com/swlfaye-sketch/xiaoxue-quanke-jiaoshi",
+      "homepage": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Python",
+      "topics": [
+        "chinese",
+        "cli",
+        "education",
+        "lesson-plan",
+        "offline",
+        "primary-school",
+        "python",
+        "teaching"
+      ],
+      "owner": {
+        "login": "swlfaye-sketch",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/244677466?v=4",
+        "url": "https://github.com/swlfaye-sketch"
+      },
+      "createdAt": "2026-09-20T01:54:52Z",
+      "updatedAt": "2026-09-27T13:52:35Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -638,7 +638,7 @@
       },
       "createdAt": "2026-10-27T16:55:34Z",
       "updatedAt": "2026-11-08T03:27:52Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -667,7 +667,7 @@
       },
       "createdAt": "2026-05-29T16:42:03Z",
       "updatedAt": "2026-06-05T10:01:16Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -702,7 +702,7 @@
       },
       "createdAt": "2026-03-16T14:55:01Z",
       "updatedAt": "2026-10-06T01:25:01Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -747,37 +747,7 @@
       },
       "createdAt": "2026-07-06T09:54:48Z",
       "updatedAt": "2026-09-21T07:13:56Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1438846593",
-      "repoId": 1438846593,
-      "fullName": "ALENZACODES/whmis-udl-planner",
-      "name": "whmis-udl-planner",
-      "description": "A 30-minute WHMIS 2015 pictogram onboarding plan built on Universal Design for Learning and fact-checked against CCOHS.",
-      "url": "https://github.com/ALENZACODES/whmis-udl-planner",
-      "homepage": "https://alenzacodes.github.io/whmis-udl-planner/",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "HTML",
-      "topics": [
-        "lesson-plan",
-        "training",
-        "udl",
-        "whmis",
-        "workplace-safety"
-      ],
-      "owner": {
-        "login": "ALENZACODES",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/309250657?v=4",
-        "url": "https://github.com/ALENZACODES"
-      },
-      "createdAt": "2026-10-29T19:05:39Z",
-      "updatedAt": "2026-11-17T16:25:45Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -809,7 +779,7 @@
       },
       "createdAt": "2026-10-10T19:17:53Z",
       "updatedAt": "2026-11-09T09:24:12Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -842,7 +812,37 @@
       },
       "createdAt": "2026-06-13T19:40:36Z",
       "updatedAt": "2026-06-13T19:48:18Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1438846593",
+      "repoId": 1438846593,
+      "fullName": "ALENZACODES/whmis-udl-planner",
+      "name": "whmis-udl-planner",
+      "description": "A 30-minute WHMIS 2015 pictogram onboarding plan built on Universal Design for Learning and fact-checked against CCOHS.",
+      "url": "https://github.com/ALENZACODES/whmis-udl-planner",
+      "homepage": "https://alenzacodes.github.io/whmis-udl-planner/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "HTML",
+      "topics": [
+        "lesson-plan",
+        "training",
+        "udl",
+        "whmis",
+        "workplace-safety"
+      ],
+      "owner": {
+        "login": "ALENZACODES",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309250657?v=4",
+        "url": "https://github.com/ALENZACODES"
+      },
+      "createdAt": "2026-10-29T19:05:39Z",
+      "updatedAt": "2026-11-17T16:25:45Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -874,7 +874,7 @@
       },
       "createdAt": "2026-04-02T21:25:43Z",
       "updatedAt": "2026-04-02T21:26:21Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -904,7 +904,7 @@
       },
       "createdAt": "2022-02-11T20:18:05Z",
       "updatedAt": "2024-02-18T00:18:22Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -948,7 +948,7 @@
       },
       "createdAt": "2026-11-13T15:29:09Z",
       "updatedAt": "2026-11-13T23:44:02Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -984,7 +984,7 @@
       },
       "createdAt": "2026-10-24T13:57:18Z",
       "updatedAt": "2026-11-06T02:01:53Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1013,7 +1013,7 @@
       },
       "createdAt": "2020-09-28T19:07:44Z",
       "updatedAt": "2024-09-20T20:29:41Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1047,7 +1047,7 @@
       },
       "createdAt": "2026-09-27T14:28:29Z",
       "updatedAt": "2026-09-27T14:46:22Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1080,7 +1080,7 @@
       },
       "createdAt": "2026-09-28T16:05:04Z",
       "updatedAt": "2026-10-16T04:48:11Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1114,7 +1114,7 @@
       },
       "createdAt": "2026-09-12T03:09:30Z",
       "updatedAt": "2026-09-12T03:09:48Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1149,7 +1149,7 @@
       },
       "createdAt": "2026-09-21T22:54:30Z",
       "updatedAt": "2026-09-25T13:11:41Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1187,7 +1187,7 @@
       },
       "createdAt": "2026-05-26T09:01:33Z",
       "updatedAt": "2026-05-26T09:02:03Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1221,7 +1221,7 @@
       },
       "createdAt": "2026-09-17T05:37:29Z",
       "updatedAt": "2026-09-17T05:37:37Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1251,7 +1251,7 @@
       },
       "createdAt": "2024-10-06T11:14:52Z",
       "updatedAt": "2024-12-15T15:24:25Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1284,7 +1284,7 @@
       },
       "createdAt": "2026-10-14T09:07:38Z",
       "updatedAt": "2026-10-14T11:21:09Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1319,7 +1319,7 @@
       },
       "createdAt": "2026-07-26T20:20:19Z",
       "updatedAt": "2026-08-15T05:22:11Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1351,7 +1351,7 @@
       },
       "createdAt": "2026-06-16T04:27:01Z",
       "updatedAt": "2026-06-18T06:32:25Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1385,7 +1385,7 @@
       },
       "createdAt": "2026-05-17T00:08:26Z",
       "updatedAt": "2026-07-21T20:32:13Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1430,7 +1430,7 @@
       },
       "createdAt": "2026-08-15T03:58:41Z",
       "updatedAt": "2026-08-15T05:21:48Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1463,7 +1463,109 @@
       },
       "createdAt": "2026-07-22T14:41:11Z",
       "updatedAt": "2026-10-30T10:14:56Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1416245388",
+      "repoId": 1416245388,
+      "fullName": "lhs1121/teaching-material-generator",
+      "name": "teaching-material-generator",
+      "description": "",
+      "url": "https://github.com/lhs1121/teaching-material-generator",
+      "homepage": "https://lhs1121.github.io/teaching-material-generator/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "course-design",
+        "education",
+        "lesson-plan",
+        "skill",
+        "teaching",
+        "teaching-materials",
+        "vocational-education",
+        "workbuddy"
+      ],
+      "owner": {
+        "login": "lhs1121",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/315589900?v=4",
+        "url": "https://github.com/lhs1121"
+      },
+      "createdAt": "2026-10-12T23:51:09Z",
+      "updatedAt": "2026-10-28T07:25:02Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1384206818",
+      "repoId": 1384206818,
+      "fullName": "sehunYang/classforge",
+      "name": "classforge",
+      "description": "수업 설계서 한 장으로 슬라이드·활동지·정답지·교수학습 과정안을 만드는 Claude Code 스킬 (20개 품질 게이트 + 도메인 검토, 계산해서 그린 삽화)",
+      "url": "https://github.com/sehunYang/classforge",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "JavaScript",
+      "topics": [
+        "claude-code",
+        "claude-code-skill",
+        "claude-skill",
+        "codex",
+        "education",
+        "korean",
+        "lesson-plan",
+        "tikz",
+        "worksheet"
+      ],
+      "owner": {
+        "login": "sehunYang",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/269443987?v=4",
+        "url": "https://github.com/sehunYang"
+      },
+      "createdAt": "2026-09-23T21:12:12Z",
+      "updatedAt": "2026-10-20T14:00:30Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1288867012",
+      "repoId": 1288867012,
+      "fullName": "drwjkirkpatrick-web/mako-coders-curriculum",
+      "name": "mako-coders-curriculum",
+      "description": "52-week coding curriculum for Kenyan learners, aligned to Kenya's CBE framework. Marine life themed. Final project: Mako Shark Expedition.",
+      "url": "https://github.com/drwjkirkpatrick-web/mako-coders-curriculum",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "52-week-curriculum",
+        "coding-curriculum",
+        "education",
+        "k-12",
+        "kenya-cbe",
+        "lesson-plan",
+        "marine-life",
+        "python"
+      ],
+      "owner": {
+        "login": "drwjkirkpatrick-web",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/278879602?v=4",
+        "url": "https://github.com/drwjkirkpatrick-web"
+      },
+      "createdAt": "2026-07-04T04:07:12Z",
+      "updatedAt": "2026-08-15T05:22:33Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1500,109 +1602,7 @@
       },
       "createdAt": "2026-07-27T10:13:32Z",
       "updatedAt": "2026-09-02T14:18:01Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1416245388",
-      "repoId": 1416245388,
-      "fullName": "lhs1121/teaching-material-generator",
-      "name": "teaching-material-generator",
-      "description": "",
-      "url": "https://github.com/lhs1121/teaching-material-generator",
-      "homepage": "https://lhs1121.github.io/teaching-material-generator/",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "Python",
-      "topics": [
-        "ai",
-        "ai-agent",
-        "course-design",
-        "education",
-        "lesson-plan",
-        "skill",
-        "teaching",
-        "teaching-materials",
-        "vocational-education",
-        "workbuddy"
-      ],
-      "owner": {
-        "login": "lhs1121",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/315589900?v=4",
-        "url": "https://github.com/lhs1121"
-      },
-      "createdAt": "2026-10-12T23:51:09Z",
-      "updatedAt": "2026-10-28T07:25:02Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1384206818",
-      "repoId": 1384206818,
-      "fullName": "sehunYang/classforge",
-      "name": "classforge",
-      "description": "수업 설계서 한 장으로 슬라이드·활동지·정답지·교수학습 과정안을 만드는 Claude Code 스킬 (20개 품질 게이트 + 도메인 검토, 계산해서 그린 삽화)",
-      "url": "https://github.com/sehunYang/classforge",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "JavaScript",
-      "topics": [
-        "claude-code",
-        "claude-code-skill",
-        "claude-skill",
-        "codex",
-        "education",
-        "korean",
-        "lesson-plan",
-        "tikz",
-        "worksheet"
-      ],
-      "owner": {
-        "login": "sehunYang",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/269443987?v=4",
-        "url": "https://github.com/sehunYang"
-      },
-      "createdAt": "2026-09-23T21:12:12Z",
-      "updatedAt": "2026-10-20T14:00:30Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1288867012",
-      "repoId": 1288867012,
-      "fullName": "drwjkirkpatrick-web/mako-coders-curriculum",
-      "name": "mako-coders-curriculum",
-      "description": "52-week coding curriculum for Kenyan learners, aligned to Kenya's CBE framework. Marine life themed. Final project: Mako Shark Expedition.",
-      "url": "https://github.com/drwjkirkpatrick-web/mako-coders-curriculum",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "Python",
-      "topics": [
-        "52-week-curriculum",
-        "coding-curriculum",
-        "education",
-        "k-12",
-        "kenya-cbe",
-        "lesson-plan",
-        "marine-life",
-        "python"
-      ],
-      "owner": {
-        "login": "drwjkirkpatrick-web",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/278879602?v=4",
-        "url": "https://github.com/drwjkirkpatrick-web"
-      },
-      "createdAt": "2026-07-04T04:07:12Z",
-      "updatedAt": "2026-08-15T05:22:33Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1633,7 +1633,7 @@
       },
       "createdAt": "2026-09-14T18:01:31Z",
       "updatedAt": "2026-10-27T12:45:15Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1665,7 +1665,7 @@
       },
       "createdAt": "2026-11-13T09:18:52Z",
       "updatedAt": "2026-11-13T09:19:53Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1697,7 +1697,7 @@
       },
       "createdAt": "2026-08-17T04:25:06Z",
       "updatedAt": "2026-09-12T14:35:54Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     },
@@ -1725,7 +1725,7 @@
       },
       "createdAt": "2026-10-29T06:00:01Z",
       "updatedAt": "2026-10-29T06:26:40Z",
-      "firstSeenAt": "2026-11-19T17:04:49.169Z",
+      "firstSeenAt": "2026-11-20T16:44:06.260Z",
       "isNew": true,
       "existing": false
     }

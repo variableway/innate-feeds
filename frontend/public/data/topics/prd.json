@@ -1,6 +1,6 @@
 {
   "topic": "prd",
-  "fetchedAt": "2026-11-19T17:05:46.270Z",
+  "fetchedAt": "2026-11-20T16:45:07.127Z",
   "count": 50,
   "newCount": 46,
   "existingCount": 4,
@@ -13,9 +13,9 @@
       "description": "💫 Toolkit to help you get started with SDD or any other process!",
       "url": "https://github.com/github/spec-kit",
       "homepage": "https://github.github.com/spec-kit/",
-      "stars": 150657,
-      "forks": 13532,
-      "watchers": 150657,
+      "stars": 150795,
+      "forks": 13548,
+      "watchers": 150795,
       "language": "Python",
       "topics": [
         "ai",
@@ -32,8 +32,8 @@
         "url": "https://github.com/github"
       },
       "createdAt": "2025-08-21T22:54:31Z",
-      "updatedAt": "2026-11-19T16:59:42Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "updatedAt": "2026-11-20T16:31:00Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": true
     },
@@ -45,9 +45,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 75260,
-      "forks": 5157,
-      "watchers": 75260,
+      "stars": 75334,
+      "forks": 5159,
+      "watchers": 75334,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -67,8 +67,8 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-19T17:02:50Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "updatedAt": "2026-11-20T16:19:15Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": true
     },
@@ -113,7 +113,7 @@
       },
       "createdAt": "2025-04-22T17:05:43Z",
       "updatedAt": "2026-11-19T08:10:32Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -145,7 +145,7 @@
       },
       "createdAt": "2025-08-05T08:53:12Z",
       "updatedAt": "2026-11-18T21:57:30Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -180,7 +180,7 @@
       },
       "createdAt": "2025-10-21T16:08:42Z",
       "updatedAt": "2026-11-16T00:25:47Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": true
     },
@@ -192,9 +192,9 @@
       "description": "PRD 한 장으로 한국 앱 스타일 모바일 화면 초안을 15분 안팎에 만드는 Claude Code·Codex 플러그인",
       "url": "https://github.com/vmc-inner-circle/k-style-ui-ux",
       "homepage": "https://www.vibemafiaclub.com/inner-circle",
-      "stars": 408,
+      "stars": 409,
       "forks": 52,
-      "watchers": 408,
+      "watchers": 409,
       "language": "Python",
       "topics": [
         "claude-code",
@@ -212,8 +212,8 @@
         "url": "https://github.com/vmc-inner-circle"
       },
       "createdAt": "2026-09-09T10:52:27Z",
-      "updatedAt": "2026-11-19T14:17:57Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "updatedAt": "2026-11-20T06:15:08Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -253,7 +253,7 @@
       },
       "createdAt": "2026-01-14T01:27:15Z",
       "updatedAt": "2026-11-09T22:06:09Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -286,7 +286,7 @@
       },
       "createdAt": "2026-01-26T13:32:13Z",
       "updatedAt": "2026-11-12T18:43:02Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -320,7 +320,7 @@
       },
       "createdAt": "2026-07-04T19:57:44Z",
       "updatedAt": "2026-11-05T21:30:19Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -332,9 +332,9 @@
       "description": "RFC-driven development for AI coding agents: idea or existing codebase → verified PRD → features → rules → sequenced RFCs → reviewed code. Agent Skills for Claude Code, Codex, Copilot, Cursor, Gemini CLI, OpenCode, Devin.",
       "url": "https://github.com/nurettincoban/ai-prd-workflow",
       "homepage": "https://nurettincoban.github.io/ai-prd-workflow/",
-      "stars": 314,
+      "stars": 315,
       "forks": 35,
-      "watchers": 314,
+      "watchers": 315,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -361,8 +361,8 @@
         "url": "https://github.com/nurettincoban"
       },
       "createdAt": "2025-03-09T19:23:57Z",
-      "updatedAt": "2026-11-19T08:09:26Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "updatedAt": "2026-11-19T20:04:10Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -396,7 +396,7 @@
       },
       "createdAt": "2026-02-15T21:07:33Z",
       "updatedAt": "2026-11-19T11:30:02Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -441,7 +441,7 @@
       },
       "createdAt": "2026-06-17T21:19:02Z",
       "updatedAt": "2026-11-19T11:07:29Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -474,7 +474,7 @@
       },
       "createdAt": "2026-04-19T05:56:45Z",
       "updatedAt": "2026-11-13T02:44:44Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -519,7 +519,7 @@
       },
       "createdAt": "2026-03-03T09:19:21Z",
       "updatedAt": "2026-11-18T15:26:57Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": true
     },
@@ -561,7 +561,7 @@
       },
       "createdAt": "2025-08-13T20:32:26Z",
       "updatedAt": "2026-11-16T15:22:55Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -602,7 +602,7 @@
       },
       "createdAt": "2025-07-10T01:36:43Z",
       "updatedAt": "2026-11-19T13:31:38Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -635,7 +635,7 @@
       },
       "createdAt": "2026-02-27T00:06:23Z",
       "updatedAt": "2026-11-08T20:43:04Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -675,7 +675,7 @@
       },
       "createdAt": "2025-12-15T03:02:04Z",
       "updatedAt": "2026-11-13T18:25:20Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -714,7 +714,43 @@
       },
       "createdAt": "2026-07-20T19:56:49Z",
       "updatedAt": "2026-11-10T08:06:52Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1217180034",
+      "repoId": 1217180034,
+      "fullName": "mileson/open-vibecoding",
+      "name": "open-vibecoding",
+      "description": "面向 Vibe Coding 的能力增强型协作框架（Harness），让 Vibe Coding 看得见，可审查、可学习、可进化。",
+      "url": "https://github.com/mileson/open-vibecoding",
+      "homepage": null,
+      "stars": 135,
+      "forks": 25,
+      "watchers": 135,
+      "language": "JavaScript",
+      "topics": [
+        "ai",
+        "context-engineering",
+        "engineering",
+        "human-in-the-loop",
+        "planning",
+        "prd",
+        "spec",
+        "spec-driven-development",
+        "specification",
+        "vibe-coding",
+        "workflow-automation"
+      ],
+      "owner": {
+        "login": "mileson",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/12807957?v=4",
+        "url": "https://github.com/mileson"
+      },
+      "createdAt": "2026-04-21T16:15:08Z",
+      "updatedAt": "2026-11-20T16:18:53Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -752,7 +788,7 @@
       },
       "createdAt": "2026-03-11T03:31:37Z",
       "updatedAt": "2026-11-01T16:32:53Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -794,7 +830,7 @@
       },
       "createdAt": "2025-10-06T03:29:38Z",
       "updatedAt": "2026-11-18T12:37:43Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -831,7 +867,7 @@
       },
       "createdAt": "2026-06-18T01:33:03Z",
       "updatedAt": "2026-11-09T22:49:36Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -864,7 +900,7 @@
       },
       "createdAt": "2026-06-16T15:39:11Z",
       "updatedAt": "2026-10-13T19:24:10Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -877,7 +913,7 @@
       "url": "https://github.com/rwliebs/Dossier",
       "homepage": "http://www.dossierbuilds.app",
       "stars": 88,
-      "forks": 19,
+      "forks": 20,
       "watchers": 88,
       "language": "TypeScript",
       "topics": [
@@ -909,7 +945,7 @@
       },
       "createdAt": "2026-01-23T20:04:26Z",
       "updatedAt": "2026-11-14T19:39:06Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -942,7 +978,7 @@
       },
       "createdAt": "2026-02-18T09:32:59Z",
       "updatedAt": "2026-11-18T08:44:58Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -976,7 +1012,7 @@
       },
       "createdAt": "2026-05-19T03:41:18Z",
       "updatedAt": "2026-11-04T05:57:18Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -988,9 +1024,9 @@
       "description": "5 free Claude AI skills for Product Managers & Business Analysts — PRDs, user stories, meeting notes, market research, stakeholder updates",
       "url": "https://github.com/luckybajaj22031996/pm-ba-claude-skills",
       "homepage": null,
-      "stars": 59,
+      "stars": 60,
       "forks": 13,
-      "watchers": 59,
+      "watchers": 60,
       "language": null,
       "topics": [
         "ai-tools",
@@ -1008,8 +1044,8 @@
         "url": "https://github.com/luckybajaj22031996"
       },
       "createdAt": "2026-02-27T08:25:00Z",
-      "updatedAt": "2026-11-15T12:25:46Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "updatedAt": "2026-11-19T18:17:42Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1040,7 +1076,7 @@
       },
       "createdAt": "2026-01-14T10:28:16Z",
       "updatedAt": "2026-11-06T23:59:28Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1075,7 +1111,7 @@
       },
       "createdAt": "2026-07-02T18:28:03Z",
       "updatedAt": "2026-11-19T12:18:28Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1102,7 +1138,7 @@
       },
       "createdAt": "2026-03-26T14:22:26Z",
       "updatedAt": "2026-09-19T00:46:29Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1133,7 +1169,7 @@
       },
       "createdAt": "2026-08-28T03:11:02Z",
       "updatedAt": "2026-11-17T09:06:43Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1170,7 +1206,7 @@
       },
       "createdAt": "2026-02-16T19:00:47Z",
       "updatedAt": "2026-10-12T11:37:12Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1202,7 +1238,7 @@
       },
       "createdAt": "2026-07-22T12:33:36Z",
       "updatedAt": "2026-09-09T01:50:33Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1237,7 +1273,7 @@
       },
       "createdAt": "2023-06-11T18:05:24Z",
       "updatedAt": "2026-09-08T12:23:10Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1279,7 +1315,7 @@
       },
       "createdAt": "2026-06-07T09:25:46Z",
       "updatedAt": "2026-11-09T20:07:21Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1311,43 +1347,7 @@
       },
       "createdAt": "2026-09-05T03:00:42Z",
       "updatedAt": "2026-11-10T07:52:43Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1217180034",
-      "repoId": 1217180034,
-      "fullName": "mileson/open-vibecoding",
-      "name": "open-vibecoding",
-      "description": "面向 Vibe Coding 的能力增强型协作框架（Harness），让 Vibe Coding 看得见，可审查、可学习、可进化。",
-      "url": "https://github.com/mileson/open-vibecoding",
-      "homepage": null,
-      "stars": 35,
-      "forks": 12,
-      "watchers": 35,
-      "language": "JavaScript",
-      "topics": [
-        "ai",
-        "context-engineering",
-        "engineering",
-        "human-in-the-loop",
-        "planning",
-        "prd",
-        "spec",
-        "spec-driven-development",
-        "specification",
-        "vibe-coding",
-        "workflow-automation"
-      ],
-      "owner": {
-        "login": "mileson",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/12807957?v=4",
-        "url": "https://github.com/mileson"
-      },
-      "createdAt": "2026-04-21T16:15:08Z",
-      "updatedAt": "2026-11-19T17:02:18Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1392,7 +1392,7 @@
       },
       "createdAt": "2026-07-07T08:55:24Z",
       "updatedAt": "2026-11-05T00:19:13Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1424,7 +1424,39 @@
       },
       "createdAt": "2025-05-21T07:17:56Z",
       "updatedAt": "2026-10-28T14:19:50Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1259147822",
+      "repoId": 1259147822,
+      "fullName": "Panix22/prd-writer-skill",
+      "name": "prd-writer-skill",
+      "description": "对话式 PRD 生成技能，中文优化，通用 Agent Skill（Claude Code / Codex / Hermes / OpenClaw 等） · A conversational PRD-writing Agent Skill",
+      "url": "https://github.com/Panix22/prd-writer-skill",
+      "homepage": null,
+      "stars": 30,
+      "forks": 1,
+      "watchers": 30,
+      "language": null,
+      "topics": [
+        "agent-skill",
+        "ai-agent",
+        "claude-code",
+        "claude-skill",
+        "codex",
+        "prd",
+        "product-management"
+      ],
+      "owner": {
+        "login": "Panix22",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/22882850?v=4",
+        "url": "https://github.com/Panix22"
+      },
+      "createdAt": "2026-06-04T08:31:07Z",
+      "updatedAt": "2026-11-20T06:10:58Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1463,7 +1495,7 @@
       },
       "createdAt": "2026-04-28T16:21:11Z",
       "updatedAt": "2026-10-23T00:05:30Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1502,39 +1534,7 @@
       },
       "createdAt": "2026-06-25T10:17:07Z",
       "updatedAt": "2026-11-04T16:57:33Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1259147822",
-      "repoId": 1259147822,
-      "fullName": "Panix22/prd-writer-skill",
-      "name": "prd-writer-skill",
-      "description": "对话式 PRD 生成技能，中文优化，通用 Agent Skill（Claude Code / Codex / Hermes / OpenClaw 等） · A conversational PRD-writing Agent Skill",
-      "url": "https://github.com/Panix22/prd-writer-skill",
-      "homepage": null,
-      "stars": 29,
-      "forks": 1,
-      "watchers": 29,
-      "language": null,
-      "topics": [
-        "agent-skill",
-        "ai-agent",
-        "claude-code",
-        "claude-skill",
-        "codex",
-        "prd",
-        "product-management"
-      ],
-      "owner": {
-        "login": "Panix22",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22882850?v=4",
-        "url": "https://github.com/Panix22"
-      },
-      "createdAt": "2026-06-04T08:31:07Z",
-      "updatedAt": "2026-11-08T12:15:37Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1564,7 +1564,7 @@
       },
       "createdAt": "2025-10-08T15:04:38Z",
       "updatedAt": "2026-11-13T02:08:26Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1598,7 +1598,7 @@
       },
       "createdAt": "2026-06-22T06:43:04Z",
       "updatedAt": "2026-08-12T08:46:03Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1631,7 +1631,7 @@
       },
       "createdAt": "2026-07-03T08:40:34Z",
       "updatedAt": "2026-09-21T13:14:55Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1671,7 +1671,7 @@
       },
       "createdAt": "2026-09-15T04:57:28Z",
       "updatedAt": "2026-10-15T16:48:32Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1706,7 +1706,7 @@
       },
       "createdAt": "2026-03-26T19:29:43Z",
       "updatedAt": "2026-09-08T11:25:39Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1738,7 +1738,7 @@
       },
       "createdAt": "2026-06-09T13:41:11Z",
       "updatedAt": "2026-11-03T18:17:33Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1772,7 +1772,7 @@
       },
       "createdAt": "2026-03-16T11:21:25Z",
       "updatedAt": "2026-08-30T03:16:48Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     },
@@ -1808,7 +1808,7 @@
       },
       "createdAt": "2026-05-26T11:13:14Z",
       "updatedAt": "2026-11-18T16:00:58Z",
-      "firstSeenAt": "2026-11-19T17:05:46.270Z",
+      "firstSeenAt": "2026-11-20T16:45:07.127Z",
       "isNew": true,
       "existing": false
     }
