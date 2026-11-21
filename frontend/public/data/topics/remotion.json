@@ -1,6 +1,6 @@
 {
   "topic": "remotion",
-  "fetchedAt": "2026-11-20T16:44:31.181Z",
+  "fetchedAt": "2026-11-21T15:57:09.251Z",
   "count": 50,
   "newCount": 48,
   "existingCount": 2,
@@ -13,9 +13,9 @@
       "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
       "url": "https://github.com/OpenMontageInc/OpenMontage",
       "homepage": "https://www.openmontage.video/",
-      "stars": 81902,
-      "forks": 11149,
-      "watchers": 81902,
+      "stars": 82059,
+      "forks": 11170,
+      "watchers": 82059,
       "language": "Python",
       "topics": [
         "agent",
@@ -44,8 +44,8 @@
         "url": "https://github.com/OpenMontageInc"
       },
       "createdAt": "2026-03-29T15:23:22Z",
-      "updatedAt": "2026-11-20T16:28:33Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:47:52Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -57,9 +57,9 @@
       "description": "AI video skill for Claude Code & Codex — cinematic, editable product promos with Remotion: 124 shot recipe cards, 150 motion previews, beat sync, sound design, Motion Workbench & JianYing (CapCut CN) export.",
       "url": "https://github.com/Vincentwei1021/video-shotcraft",
       "homepage": "https://vincentwei1021.github.io/video-shotcraft/",
-      "stars": 21791,
-      "forks": 2007,
-      "watchers": 21791,
+      "stars": 21936,
+      "forks": 2027,
+      "watchers": 21936,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -83,8 +83,8 @@
         "url": "https://github.com/Vincentwei1021"
       },
       "createdAt": "2026-07-19T11:44:41Z",
-      "updatedAt": "2026-11-20T16:36:15Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:55:03Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": true
     },
@@ -96,9 +96,9 @@
       "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI 生成的还是代码做的，再告诉你怎么复刻；拆解结果按 VIDEO.md 格式输出。",
       "url": "https://github.com/JuneYaooo/rea-video",
       "homepage": "https://www.reavideo.ai/",
-      "stars": 11332,
-      "forks": 1686,
-      "watchers": 11332,
+      "stars": 11637,
+      "forks": 1728,
+      "watchers": 11637,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -126,8 +126,8 @@
         "url": "https://github.com/JuneYaooo"
       },
       "createdAt": "2026-10-29T16:15:01Z",
-      "updatedAt": "2026-11-20T16:40:23Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:55:41Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -139,9 +139,9 @@
       "description": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. Chinese or English; every frame drawn in code with Remotion.",
       "url": "https://github.com/Vincentwei1021/anything2explainer",
       "homepage": null,
-      "stars": 3441,
-      "forks": 431,
-      "watchers": 3441,
+      "stars": 3463,
+      "forks": 434,
+      "watchers": 3463,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -169,8 +169,8 @@
         "url": "https://github.com/Vincentwei1021"
       },
       "createdAt": "2026-09-08T17:19:54Z",
-      "updatedAt": "2026-11-20T15:39:23Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:48:58Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -182,9 +182,9 @@
       "description": "Open-source, local-first conversational AI video editor with a professional multi-track timeline, Agent Skills, MCP integration, and Remotion rendering.",
       "url": "https://github.com/0xsline/OpenChatCut",
       "homepage": "https://openchatcut.com",
-      "stars": 3240,
-      "forks": 492,
-      "watchers": 3240,
+      "stars": 3253,
+      "forks": 494,
+      "watchers": 3253,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -214,8 +214,8 @@
         "url": "https://github.com/0xsline"
       },
       "createdAt": "2026-07-15T02:49:42Z",
-      "updatedAt": "2026-11-20T16:02:59Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:45:51Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -227,9 +227,9 @@
       "description": "programmatic video rendering framework that is actually fast",
       "url": "https://github.com/dmtrKovalenko/fframes",
       "homepage": "https://fframes.studio/",
-      "stars": 3113,
-      "forks": 99,
-      "watchers": 3113,
+      "stars": 3120,
+      "forks": 101,
+      "watchers": 3120,
       "language": "Rust",
       "topics": [
         "agentic-ai",
@@ -243,8 +243,8 @@
         "url": "https://github.com/dmtrKovalenko"
       },
       "createdAt": "2021-11-22T14:40:26Z",
-      "updatedAt": "2026-11-20T16:26:57Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T13:59:52Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -256,9 +256,9 @@
       "description": "Make videos with Claude Code: script, AI voiceover, music, video clips and render, on open-source models that cost cents",
       "url": "https://github.com/digitalsamba/claude-code-video-toolkit",
       "homepage": "https://digitalsamba.github.io/claude-code-video-toolkit/",
-      "stars": 2681,
-      "forks": 464,
-      "watchers": 2681,
+      "stars": 2694,
+      "forks": 468,
+      "watchers": 2694,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -288,8 +288,43 @@
         "url": "https://github.com/digitalsamba"
       },
       "createdAt": "2025-12-09T20:33:03Z",
-      "updatedAt": "2026-11-20T15:49:52Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:52:10Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1390088311",
+      "repoId": 1390088311,
+      "fullName": "zhuyansen/awesome-claude-video-skills",
+      "name": "awesome-claude-video-skills",
+      "description": "Open-source skills and toolkits that let Claude Code, Codex and other coding agents make video. 180 repos by type, each security-graded. English / 中文.",
+      "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
+      "homepage": "https://agentskillshub.top/best/claude-video-skills/",
+      "stars": 2478,
+      "forks": 235,
+      "watchers": 2478,
+      "language": null,
+      "topics": [
+        "agent-skills",
+        "awesome-list",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "hyperframes",
+        "motion-graphics",
+        "opus-5-5",
+        "remotion",
+        "video"
+      ],
+      "owner": {
+        "login": "zhuyansen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/24306647?v=4",
+        "url": "https://github.com/zhuyansen"
+      },
+      "createdAt": "2026-09-27T04:06:05Z",
+      "updatedAt": "2026-11-21T15:05:50Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -301,9 +336,9 @@
       "description": "Agent skill that turns Claude Code / Codex into a motion-design studio for voiceover-driven explainer videos — word-level voiceover sync, 109 motion recipe cards, an anti-slideshow camera system, Remotion rendering.",
       "url": "https://github.com/Vincentwei1021/video-talkcraft",
       "homepage": "https://vincentwei1021.github.io/video-talkcraft/",
-      "stars": 2443,
-      "forks": 247,
-      "watchers": 2443,
+      "stars": 2459,
+      "forks": 249,
+      "watchers": 2459,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -325,43 +360,8 @@
         "url": "https://github.com/Vincentwei1021"
       },
       "createdAt": "2026-08-22T17:11:05Z",
-      "updatedAt": "2026-11-20T15:54:36Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1390088311",
-      "repoId": 1390088311,
-      "fullName": "zhuyansen/awesome-claude-video-skills",
-      "name": "awesome-claude-video-skills",
-      "description": "Open-source skills and toolkits that let Claude Code, Codex and other coding agents make video. 180 repos by type, each security-graded. English / 中文.",
-      "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
-      "homepage": "https://agentskillshub.top/best/claude-video-skills/",
-      "stars": 2436,
-      "forks": 229,
-      "watchers": 2436,
-      "language": null,
-      "topics": [
-        "agent-skills",
-        "awesome-list",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "hyperframes",
-        "motion-graphics",
-        "opus-5-5",
-        "remotion",
-        "video"
-      ],
-      "owner": {
-        "login": "zhuyansen",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/24306647?v=4",
-        "url": "https://github.com/zhuyansen"
-      },
-      "createdAt": "2026-09-27T04:06:05Z",
-      "updatedAt": "2026-11-20T16:36:21Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:48:09Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -373,9 +373,9 @@
       "description": "Your Creative Copilot for Video Editing",
       "url": "https://github.com/trykimu/videoeditor",
       "homepage": "https://trykimu.com",
-      "stars": 2311,
+      "stars": 2313,
       "forks": 260,
-      "watchers": 2311,
+      "watchers": 2313,
       "language": "TypeScript",
       "topics": [
         "canva",
@@ -396,8 +396,8 @@
         "url": "https://github.com/trykimu"
       },
       "createdAt": "2025-05-22T18:49:18Z",
-      "updatedAt": "2026-11-18T23:10:35Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:06:31Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": true
     },
@@ -409,9 +409,9 @@
       "description": "56 open-source skills that teach your AI coding agent to make motion graphics, animation & video — kinetic typography, data-viz, explainers, TikTok/Reels, WebGL, Manim. 19 installable packs. By iart.ai, the AI motion agent.",
       "url": "https://github.com/iart-ai/motion-skills",
       "homepage": "https://www.iart.ai/skills",
-      "stars": 1952,
-      "forks": 204,
-      "watchers": 1952,
+      "stars": 1991,
+      "forks": 207,
+      "watchers": 1991,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -441,8 +441,8 @@
         "url": "https://github.com/iart-ai"
       },
       "createdAt": "2026-06-22T12:40:08Z",
-      "updatedAt": "2026-11-20T16:26:23Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:37:15Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -454,9 +454,9 @@
       "description": "Online react video editor using remotion. Capcut and canva clone.",
       "url": "https://github.com/openvideodev/react-video-editor",
       "homepage": null,
-      "stars": 1844,
+      "stars": 1843,
       "forks": 418,
-      "watchers": 1844,
+      "watchers": 1843,
       "language": "TypeScript",
       "topics": [
         "canva",
@@ -471,8 +471,8 @@
         "url": "https://github.com/openvideodev"
       },
       "createdAt": "2024-08-02T15:56:30Z",
-      "updatedAt": "2026-11-19T16:11:23Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:06:32Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -484,9 +484,9 @@
       "description": "Production-ready animations, transitions, backgrounds, and scenes for Remotion",
       "url": "https://github.com/Remocn/remocn",
       "homepage": "https://remocn.dev",
-      "stars": 1817,
+      "stars": 1829,
       "forks": 101,
-      "watchers": 1817,
+      "watchers": 1829,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -508,8 +508,8 @@
         "url": "https://github.com/Remocn"
       },
       "createdAt": "2026-04-07T22:37:41Z",
-      "updatedAt": "2026-11-20T16:23:34Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:37:30Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -521,9 +521,9 @@
       "description": "Topic → 4K narrated video for coding agents. v5.3.0: local TTS (edge free + azure, no external engine), manifest-based Asset Engine, Remotion composition, cost-gated AI generation, Bilibili/YouTube/Xiaohongshu/Douyin/WeChat Channels",
       "url": "https://github.com/Agents365-ai/video-podcast-maker",
       "homepage": null,
-      "stars": 1730,
-      "forks": 179,
-      "watchers": 1730,
+      "stars": 1729,
+      "forks": 178,
+      "watchers": 1729,
       "language": "Python",
       "topics": [
         "agent-skill",
@@ -541,8 +541,8 @@
         "url": "https://github.com/Agents365-ai"
       },
       "createdAt": "2026-02-16T14:15:27Z",
-      "updatedAt": "2026-11-19T00:19:15Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-20T17:10:48Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -554,9 +554,9 @@
       "description": "Creates short videos for TikTok, Instagram Reels, and YouTube Shorts using the Model Context Protocol (MCP) and a REST API.",
       "url": "https://github.com/gyoridavid/short-video-maker",
       "homepage": "https://www.skool.com/ai-agents-az/about?s1r",
-      "stars": 1513,
-      "forks": 456,
-      "watchers": 1513,
+      "stars": 1516,
+      "forks": 458,
+      "watchers": 1516,
       "language": "TypeScript",
       "topics": [
         "faceless-video",
@@ -586,8 +586,39 @@
         "url": "https://github.com/gyoridavid"
       },
       "createdAt": "2025-04-14T09:12:14Z",
-      "updatedAt": "2026-11-20T16:19:15Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T10:05:21Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1393935935",
+      "repoId": 1393935935,
+      "fullName": "Leonxlnx/cinetic",
+      "name": "cinetic",
+      "description": "Cinematic launch films and motion design from code, directed by your coding agent.",
+      "url": "https://github.com/Leonxlnx/cinetic",
+      "homepage": null,
+      "stars": 1330,
+      "forks": 84,
+      "watchers": 1330,
+      "language": "TypeScript",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-skills",
+        "launch-video",
+        "motion-design",
+        "remotion"
+      ],
+      "owner": {
+        "login": "Leonxlnx",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/219127460?v=4",
+        "url": "https://github.com/Leonxlnx"
+      },
+      "createdAt": "2026-09-28T22:57:22Z",
+      "updatedAt": "2026-11-21T15:18:07Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -617,7 +648,7 @@
       },
       "createdAt": "2023-09-14T07:30:42Z",
       "updatedAt": "2026-11-19T23:04:04Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -645,38 +676,7 @@
       },
       "createdAt": "2022-11-19T10:43:06Z",
       "updatedAt": "2026-11-19T22:44:54Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1393935935",
-      "repoId": 1393935935,
-      "fullName": "Leonxlnx/cinetic",
-      "name": "cinetic",
-      "description": "Cinematic launch films and motion design from code, directed by your coding agent.",
-      "url": "https://github.com/Leonxlnx/cinetic",
-      "homepage": null,
-      "stars": 1314,
-      "forks": 82,
-      "watchers": 1314,
-      "language": "TypeScript",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "claude-skills",
-        "launch-video",
-        "motion-design",
-        "remotion"
-      ],
-      "owner": {
-        "login": "Leonxlnx",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/219127460?v=4",
-        "url": "https://github.com/Leonxlnx"
-      },
-      "createdAt": "2026-09-28T22:57:22Z",
-      "updatedAt": "2026-11-20T16:43:01Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -688,9 +688,9 @@
       "description": "Open-source Claude agent skill that teaches Claude Code, Claude Desktop & Claude AI to create and edit professional motion graphics videos with Remotion. AI video editing, B-roll, captions, sound design — from one prompt.",
       "url": "https://github.com/haidrrrry/claude-remotion-skill",
       "homepage": "https://instagram.com/haidercodes",
-      "stars": 1181,
-      "forks": 165,
-      "watchers": 1181,
+      "stars": 1214,
+      "forks": 168,
+      "watchers": 1214,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -718,8 +718,8 @@
         "url": "https://github.com/haidrrrry"
       },
       "createdAt": "2026-06-13T10:04:30Z",
-      "updatedAt": "2026-11-20T16:17:27Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:54:24Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -731,9 +731,9 @@
       "description": "Claude Opus 5.5 用代码生成视频：全网案例与可直接复制的提示词 | Copy-ready prompts & 54 cases of Opus 5.5 code-rendered videos",
       "url": "https://github.com/joeseesun/opus-video-prompts",
       "homepage": null,
-      "stars": 1167,
+      "stars": 1176,
       "forks": 117,
-      "watchers": 1167,
+      "watchers": 1176,
       "language": null,
       "topics": [
         "claude",
@@ -750,8 +750,8 @@
         "url": "https://github.com/joeseesun"
       },
       "createdAt": "2026-09-27T00:16:07Z",
-      "updatedAt": "2026-11-20T13:38:15Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:53:27Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -777,7 +777,7 @@
       },
       "createdAt": "2021-01-22T14:01:21Z",
       "updatedAt": "2026-11-19T14:16:00Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -812,7 +812,7 @@
       },
       "createdAt": "2025-04-18T16:02:11Z",
       "updatedAt": "2026-11-16T17:17:01Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -824,9 +824,9 @@
       "description": "Fully automated video maker using motion graphics and text-to-speech synthesis to turn newsletters into daily YouTube videos.",
       "url": "https://github.com/FelippeChemello/podcast-maker",
       "homepage": "https://youtube.com/@CodeStackMe",
-      "stars": 712,
+      "stars": 711,
       "forks": 90,
-      "watchers": 712,
+      "watchers": 711,
       "language": "TypeScript",
       "topics": [
         "nodejs",
@@ -845,8 +845,8 @@
         "url": "https://github.com/FelippeChemello"
       },
       "createdAt": "2021-03-16T15:23:36Z",
-      "updatedAt": "2026-11-12T02:00:22Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:06:30Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -858,9 +858,9 @@
       "description": "A motion design studio on your own machine: Claude makes the video step by step, you approve every stage. Bring your own Claude Code or API key.",
       "url": "https://github.com/GTKottman/mortiflix-oss",
       "homepage": null,
-      "stars": 709,
-      "forks": 33,
-      "watchers": 709,
+      "stars": 711,
+      "forks": 34,
+      "watchers": 711,
       "language": "JavaScript",
       "topics": [
         "ai-agents",
@@ -878,8 +878,8 @@
         "url": "https://github.com/GTKottman"
       },
       "createdAt": "2026-10-05T15:15:13Z",
-      "updatedAt": "2026-11-20T14:46:22Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:31:08Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -891,9 +891,9 @@
       "description": "A shadcn registry of Remotion components for product demo videos. Install a text reveal, device frame, terminal session, logo sting or a whole scene with a command.",
       "url": "https://github.com/shadcn-labs/snapcn",
       "homepage": "https://snapcn.dev",
-      "stars": 662,
+      "stars": 669,
       "forks": 34,
-      "watchers": 662,
+      "watchers": 669,
       "language": "TypeScript",
       "topics": [
         "gemini-cli-extension",
@@ -912,8 +912,8 @@
         "url": "https://github.com/shadcn-labs"
       },
       "createdAt": "2026-07-24T01:22:52Z",
-      "updatedAt": "2026-11-20T16:17:41Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T15:45:32Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -951,7 +951,7 @@
       },
       "createdAt": "2022-06-24T02:32:28Z",
       "updatedAt": "2026-11-07T06:08:31Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -963,9 +963,9 @@
       "description": "一句话，做成有封面、有动画的 Live 图。Turn a sentence into a Live Photo with a designed cover and animation.",
       "url": "https://github.com/pengchujin/livecanvas",
       "homepage": null,
-      "stars": 561,
+      "stars": 563,
       "forks": 33,
-      "watchers": 561,
+      "watchers": 563,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -980,39 +980,8 @@
         "url": "https://github.com/pengchujin"
       },
       "createdAt": "2026-09-30T10:26:35Z",
-      "updatedAt": "2026-11-18T09:38:26Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1377960577",
-      "repoId": 1377960577,
-      "fullName": "trustfuture/simon-skills",
-      "name": "simon-skills",
-      "description": "不露脸做视频账号的 AI skill 合集：调查长片 + 手绘白板讲解视频，一句选题出片、配音字幕、封面与各平台文案",
-      "url": "https://github.com/trustfuture/simon-skills",
-      "homepage": null,
-      "stars": 549,
-      "forks": 103,
-      "watchers": 549,
-      "language": "JavaScript",
-      "topics": [
-        "claude-code",
-        "codex",
-        "excalidraw",
-        "remotion",
-        "skills",
-        "video-generation"
-      ],
-      "owner": {
-        "login": "trustfuture",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/29225052?v=4",
-        "url": "https://github.com/trustfuture"
-      },
-      "createdAt": "2026-09-20T05:33:22Z",
-      "updatedAt": "2026-11-20T08:53:21Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:16:59Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1024,9 +993,9 @@
       "description": "AI video factory: from one topic to a finished, multilingual YouTube video. Claude agents write, plan, draw and review; a Studio keeps the human in charge.",
       "url": "https://github.com/ersinkoc/AI-Video-Factory",
       "homepage": null,
-      "stars": 544,
-      "forks": 75,
-      "watchers": 544,
+      "stars": 553,
+      "forks": 77,
+      "watchers": 553,
       "language": "TypeScript",
       "topics": [
         "ai-video",
@@ -1043,8 +1012,39 @@
         "url": "https://github.com/ersinkoc"
       },
       "createdAt": "2026-10-29T22:27:41Z",
-      "updatedAt": "2026-11-20T14:35:58Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:58:02Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1377960577",
+      "repoId": 1377960577,
+      "fullName": "trustfuture/simon-skills",
+      "name": "simon-skills",
+      "description": "不露脸做视频账号的 AI skill 合集：调查长片 + 手绘白板讲解视频，一句选题出片、配音字幕、封面与各平台文案",
+      "url": "https://github.com/trustfuture/simon-skills",
+      "homepage": null,
+      "stars": 550,
+      "forks": 103,
+      "watchers": 550,
+      "language": "JavaScript",
+      "topics": [
+        "claude-code",
+        "codex",
+        "excalidraw",
+        "remotion",
+        "skills",
+        "video-generation"
+      ],
+      "owner": {
+        "login": "trustfuture",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/29225052?v=4",
+        "url": "https://github.com/trustfuture"
+      },
+      "createdAt": "2026-09-20T05:33:22Z",
+      "updatedAt": "2026-11-21T05:01:51Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1056,9 +1056,9 @@
       "description": "A blazingly fast programmatic video engine, made for agents.",
       "url": "https://github.com/0xS4N4TG/kinetograph",
       "homepage": "https://kinetograph.dev",
-      "stars": 538,
+      "stars": 541,
       "forks": 40,
-      "watchers": 538,
+      "watchers": 541,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -1084,8 +1084,8 @@
         "url": "https://github.com/0xS4N4TG"
       },
       "createdAt": "2026-10-23T05:15:41Z",
-      "updatedAt": "2026-11-20T15:11:41Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T13:34:10Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1097,9 +1097,9 @@
       "description": "Ready-made animated components for Remotion — charts, transitions, text reveals, and more",
       "url": "https://github.com/av/remotion-bits",
       "homepage": "https://remotion-bits.dev",
-      "stars": 520,
+      "stars": 521,
       "forks": 29,
-      "watchers": 520,
+      "watchers": 521,
       "language": "TypeScript",
       "topics": [
         "animation",
@@ -1118,8 +1118,8 @@
         "url": "https://github.com/av"
       },
       "createdAt": "2026-01-23T21:58:35Z",
-      "updatedAt": "2026-11-20T03:31:56Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:54:14Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1164,7 +1164,7 @@
       },
       "createdAt": "2026-10-09T08:44:30Z",
       "updatedAt": "2026-11-20T09:31:25Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1176,9 +1176,9 @@
       "description": "Skills that teach Claude Code to be a first-pass video editor in DaVinci Resolve: transcript cuts, vlog pacing, B-roll, music & SFX, clean captions, motion graphics, YouTube export. CC BY-NC 4.0 (no commercial use).",
       "url": "https://github.com/appariciojunior/video-editor-skills",
       "homepage": null,
-      "stars": 466,
+      "stars": 468,
       "forks": 66,
-      "watchers": 466,
+      "watchers": 468,
       "language": null,
       "topics": [
         "claude-code",
@@ -1194,8 +1194,8 @@
         "url": "https://github.com/appariciojunior"
       },
       "createdAt": "2026-10-23T07:51:02Z",
-      "updatedAt": "2026-11-19T20:30:21Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T01:22:39Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1207,9 +1207,9 @@
       "description": "Create polished product demo videos with AI coding agents and Remotion. The UI is code, not a screen recording.",
       "url": "https://github.com/Alexwtlf/agentic-product-demo",
       "homepage": null,
-      "stars": 420,
+      "stars": 419,
       "forks": 2,
-      "watchers": 420,
+      "watchers": 419,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1228,8 +1228,8 @@
         "url": "https://github.com/Alexwtlf"
       },
       "createdAt": "2026-08-24T18:38:19Z",
-      "updatedAt": "2026-11-20T03:37:08Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T13:30:23Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1241,9 +1241,9 @@
       "description": "把中文文案、画风提示词和声音做成前后连贯的代码动画（Remotion / Canvas / HTML）的 DeepSeek Harness 技能。341 画风库检索、语义分镜、镜头转场、角色表演、四案音乐与音效、检查返修。",
       "url": "https://github.com/Akillll-DuoHe/fy-code-animation",
       "homepage": "https://gitee.com/Akillll-DuoHe/fy-code-animation",
-      "stars": 406,
-      "forks": 57,
-      "watchers": 406,
+      "stars": 411,
+      "forks": 60,
+      "watchers": 411,
       "language": "TypeScript",
       "topics": [
         "animation",
@@ -1261,8 +1261,8 @@
         "url": "https://github.com/Akillll-DuoHe"
       },
       "createdAt": "2026-10-30T09:55:43Z",
-      "updatedAt": "2026-11-20T15:10:31Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T13:47:16Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1274,9 +1274,9 @@
       "description": "Record the talking head, Claude Code does the rest: the cut, the visuals, the voice, the sound effects, the thumbnail, and the YouTube upload. Every screen moment is built as Remotion TSX code, never screen-recorded.",
       "url": "https://github.com/hassancs91/claude-youtube-editor",
       "homepage": "https://learnwithhasan.com/guide/how-to-edit-videos-with-claude-code/",
-      "stars": 386,
-      "forks": 132,
-      "watchers": 386,
+      "stars": 387,
+      "forks": 131,
+      "watchers": 387,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1296,8 +1296,8 @@
         "url": "https://github.com/hassancs91"
       },
       "createdAt": "2026-07-19T06:27:45Z",
-      "updatedAt": "2026-11-18T19:39:40Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-20T19:19:45Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1309,9 +1309,9 @@
       "description": "A faceless YouTube-Shorts factory driven by Claude Code: pure-TSX Remotion visuals, ElevenLabs voice with word-exact captions, library-first sound design. 12 complete example shorts included.",
       "url": "https://github.com/hassancs91/claude-faceless-shorts-creator",
       "homepage": "https://learnwithhasan.com/guide/how-to-make-faceless-youtube-shorts-with-claude-code/",
-      "stars": 373,
-      "forks": 137,
-      "watchers": 373,
+      "stars": 378,
+      "forks": 138,
+      "watchers": 378,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1331,8 +1331,8 @@
         "url": "https://github.com/hassancs91"
       },
       "createdAt": "2026-07-15T07:38:32Z",
-      "updatedAt": "2026-11-20T16:14:03Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T11:36:59Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1364,7 +1364,7 @@
       },
       "createdAt": "2026-05-17T14:13:44Z",
       "updatedAt": "2026-11-20T09:51:28Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1376,9 +1376,9 @@
       "description": "AI agent skills to be professional at 2D and 3D",
       "url": "https://github.com/codepawl/creator-generalist",
       "homepage": "https://codepawl.com",
-      "stars": 342,
-      "forks": 30,
-      "watchers": 342,
+      "stars": 346,
+      "forks": 31,
+      "watchers": 346,
       "language": "Python",
       "topics": [
         "2d-animation",
@@ -1396,8 +1396,8 @@
         "url": "https://github.com/codepawl"
       },
       "createdAt": "2026-11-06T18:29:48Z",
-      "updatedAt": "2026-11-20T15:48:53Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T14:52:53Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1429,7 +1429,7 @@
       },
       "createdAt": "2026-03-18T07:47:55Z",
       "updatedAt": "2026-11-17T15:29:18Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1458,7 +1458,7 @@
       },
       "createdAt": "2024-02-17T12:25:48Z",
       "updatedAt": "2026-11-11T16:50:34Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1470,9 +1470,9 @@
       "description": "AI-powered video editor by @soyenriquerocha — built with Remotion + Claude Code. Describe videos in natural language, get professional MP4s. 25 components, 9 templates, 7 skills.",
       "url": "https://github.com/Hainrixz/editor-pro-max",
       "homepage": "https://www.tododeia.com",
-      "stars": 306,
+      "stars": 307,
       "forks": 127,
-      "watchers": 306,
+      "watchers": 307,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1489,8 +1489,8 @@
         "url": "https://github.com/Hainrixz"
       },
       "createdAt": "2026-03-25T19:28:42Z",
-      "updatedAt": "2026-11-19T16:52:20Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-21T12:47:57Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1502,9 +1502,9 @@
       "description": "Hand-drawn and pixel-art explainer videos written entirely in code — Remotion + React + SVG, procedural music & SFX, subtitle-driven timing",
       "url": "https://github.com/Azure12355/weilanx-claude-videos",
       "homepage": null,
-      "stars": 271,
+      "stars": 272,
       "forks": 42,
-      "watchers": 271,
+      "watchers": 272,
       "language": "TypeScript",
       "topics": [
         "animation",
@@ -1520,8 +1520,8 @@
         "url": "https://github.com/Azure12355"
       },
       "createdAt": "2026-10-10T13:34:45Z",
-      "updatedAt": "2026-11-20T08:02:23Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-20T19:18:19Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1553,7 +1553,47 @@
       },
       "createdAt": "2026-07-17T07:35:05Z",
       "updatedAt": "2026-11-19T00:22:59Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1276487550",
+      "repoId": 1276487550,
+      "fullName": "iart-ai/motion-design-skills",
+      "name": "motion-design-skills",
+      "description": "Motion design fundamentals, engines, and brand elements as installable Claude Code skills — timing, typography, color, composition, After Effects, Remotion, logos, and backgrounds.",
+      "url": "https://github.com/iart-ai/motion-design-skills",
+      "homepage": "https://www.iart.ai/skills#motion-design-skills",
+      "stars": 256,
+      "forks": 43,
+      "watchers": 256,
+      "language": "HTML",
+      "topics": [
+        "after-effects",
+        "agent-skills",
+        "ai-animation",
+        "claude-code",
+        "claude-skill",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "deepseek",
+        "kinetic-typography",
+        "logo-animation",
+        "motion-background",
+        "motion-design",
+        "motion-graphics",
+        "remotion"
+      ],
+      "owner": {
+        "login": "iart-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/113883324?v=4",
+        "url": "https://github.com/iart-ai"
+      },
+      "createdAt": "2026-06-22T02:57:42Z",
+      "updatedAt": "2026-11-21T09:47:15Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1586,7 +1626,7 @@
       },
       "createdAt": "2026-07-10T08:00:22Z",
       "updatedAt": "2026-11-04T21:01:41Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1619,47 +1659,44 @@
       },
       "createdAt": "2026-07-20T16:29:46Z",
       "updatedAt": "2026-11-20T09:24:58Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1276487550",
-      "repoId": 1276487550,
-      "fullName": "iart-ai/motion-design-skills",
-      "name": "motion-design-skills",
-      "description": "Motion design fundamentals, engines, and brand elements as installable Claude Code skills — timing, typography, color, composition, After Effects, Remotion, logos, and backgrounds.",
-      "url": "https://github.com/iart-ai/motion-design-skills",
-      "homepage": "https://www.iart.ai/skills#motion-design-skills",
-      "stars": 253,
-      "forks": 42,
-      "watchers": 253,
-      "language": "HTML",
+      "id": "gh-topic-1416452717",
+      "repoId": 1416452717,
+      "fullName": "0xS4N4TG/papercut-explainer",
+      "name": "papercut-explainer",
+      "description": "Short vertical cut-paper explainer reels, made by your coding agent. Nine Agent Skills plus a Remotion library. Works with Claude Code, OpenCode, Codex, Gemini CLI, Cursor, Copilot and more.",
+      "url": "https://github.com/0xS4N4TG/papercut-explainer",
+      "homepage": null,
+      "stars": 251,
+      "forks": 27,
+      "watchers": 251,
+      "language": "TypeScript",
       "topics": [
-        "after-effects",
         "agent-skills",
-        "ai-animation",
+        "agents-md",
         "claude-code",
-        "claude-skill",
-        "claude-skills",
+        "claude-code-skills",
         "codex",
-        "cursor",
-        "deepseek",
-        "kinetic-typography",
-        "logo-animation",
-        "motion-background",
-        "motion-design",
-        "motion-graphics",
-        "remotion"
+        "explainer-videos",
+        "gemini-cli",
+        "opencode",
+        "papercut",
+        "remotion",
+        "text-to-speech",
+        "video-generation"
       ],
       "owner": {
-        "login": "iart-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/113883324?v=4",
-        "url": "https://github.com/iart-ai"
+        "login": "0xS4N4TG",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/62789975?v=4",
+        "url": "https://github.com/0xS4N4TG"
       },
-      "createdAt": "2026-06-22T02:57:42Z",
-      "updatedAt": "2026-11-20T16:01:08Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "createdAt": "2026-10-13T04:26:57Z",
+      "updatedAt": "2026-11-21T14:06:13Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1671,9 +1708,9 @@
       "description": "Bộ skill cho AI agent tạo video ngắn 9:16 bằng Remotion: giải thích chủ đề, giới thiệu GitHub repo, so sánh hai lựa chọn.",
       "url": "https://github.com/Cuongyd196/remotion-cuongit-template",
       "homepage": "https://cuongit.net/products/remotion-cuongit-template",
-      "stars": 249,
+      "stars": 250,
       "forks": 143,
-      "watchers": 249,
+      "watchers": 250,
       "language": "TypeScript",
       "topics": [
         "cuongit",
@@ -1688,8 +1725,8 @@
         "url": "https://github.com/Cuongyd196"
       },
       "createdAt": "2026-01-22T04:13:49Z",
-      "updatedAt": "2026-11-20T16:09:49Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "updatedAt": "2026-11-20T21:20:02Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     },
@@ -1734,44 +1771,7 @@
       },
       "createdAt": "2026-03-28T08:40:01Z",
       "updatedAt": "2026-11-19T15:26:12Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1416452717",
-      "repoId": 1416452717,
-      "fullName": "0xS4N4TG/papercut-explainer",
-      "name": "papercut-explainer",
-      "description": "Short vertical cut-paper explainer reels, made by your coding agent. Nine Agent Skills plus a Remotion library. Works with Claude Code, OpenCode, Codex, Gemini CLI, Cursor, Copilot and more.",
-      "url": "https://github.com/0xS4N4TG/papercut-explainer",
-      "homepage": null,
-      "stars": 245,
-      "forks": 27,
-      "watchers": 245,
-      "language": "TypeScript",
-      "topics": [
-        "agent-skills",
-        "agents-md",
-        "claude-code",
-        "claude-code-skills",
-        "codex",
-        "explainer-videos",
-        "gemini-cli",
-        "opencode",
-        "papercut",
-        "remotion",
-        "text-to-speech",
-        "video-generation"
-      ],
-      "owner": {
-        "login": "0xS4N4TG",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/62789975?v=4",
-        "url": "https://github.com/0xS4N4TG"
-      },
-      "createdAt": "2026-10-13T04:26:57Z",
-      "updatedAt": "2026-11-20T06:11:56Z",
-      "firstSeenAt": "2026-11-20T16:44:31.181Z",
+      "firstSeenAt": "2026-11-21T15:57:09.251Z",
       "isNew": true,
       "existing": false
     }

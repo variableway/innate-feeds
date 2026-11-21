@@ -1,8 +1,8 @@
 {
   "topic": "lesson-plan",
-  "fetchedAt": "2026-11-20T16:44:06.260Z",
-  "count": 49,
-  "newCount": 49,
+  "fetchedAt": "2026-11-21T15:56:47.441Z",
+  "count": 50,
+  "newCount": 50,
   "existingCount": 0,
   "items": [
     {
@@ -38,7 +38,7 @@
       },
       "createdAt": "2026-08-06T10:53:48Z",
       "updatedAt": "2026-11-04T15:14:37Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -73,7 +73,7 @@
       },
       "createdAt": "2026-10-28T12:41:15Z",
       "updatedAt": "2026-11-18T08:05:38Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -106,7 +106,7 @@
       },
       "createdAt": "2026-09-26T01:56:20Z",
       "updatedAt": "2026-10-19T01:18:51Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -141,7 +141,7 @@
       },
       "createdAt": "2026-04-21T18:15:21Z",
       "updatedAt": "2026-11-20T14:52:04Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -178,7 +178,7 @@
       },
       "createdAt": "2025-04-15T09:13:42Z",
       "updatedAt": "2026-06-04T04:10:58Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -213,7 +213,7 @@
       },
       "createdAt": "2026-05-31T02:42:17Z",
       "updatedAt": "2026-10-14T03:12:09Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -258,7 +258,7 @@
       },
       "createdAt": "2026-07-16T03:01:57Z",
       "updatedAt": "2026-11-12T15:59:26Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -290,7 +290,7 @@
       },
       "createdAt": "2026-07-21T08:57:19Z",
       "updatedAt": "2026-09-01T06:19:28Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -325,7 +325,7 @@
       },
       "createdAt": "2026-09-11T13:12:25Z",
       "updatedAt": "2026-10-25T05:26:38Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -370,7 +370,7 @@
       },
       "createdAt": "2026-08-31T09:29:53Z",
       "updatedAt": "2026-11-04T14:22:03Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -415,7 +415,7 @@
       },
       "createdAt": "2026-11-12T15:29:21Z",
       "updatedAt": "2026-11-19T02:33:33Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -460,7 +460,7 @@
       },
       "createdAt": "2026-07-06T01:35:26Z",
       "updatedAt": "2026-09-21T04:46:57Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -505,7 +505,40 @@
       },
       "createdAt": "2026-07-27T04:08:13Z",
       "updatedAt": "2026-07-27T08:00:43Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1377791653",
+      "repoId": 1377791653,
+      "fullName": "swlfaye-sketch/xiaoxue-quanke-jiaoshi",
+      "name": "xiaoxue-quanke-jiaoshi",
+      "description": "小学教师全科教学助手 — 一至六年级六科备课助手（语文、数学、英语、科学、自然、人文），输出结构完整的备课材料，附自动校验结果与人工核对清单。",
+      "url": "https://github.com/swlfaye-sketch/xiaoxue-quanke-jiaoshi",
+      "homepage": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Python",
+      "topics": [
+        "chinese",
+        "cli",
+        "education",
+        "lesson-plan",
+        "offline",
+        "primary-school",
+        "python",
+        "teaching"
+      ],
+      "owner": {
+        "login": "swlfaye-sketch",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/244677466?v=4",
+        "url": "https://github.com/swlfaye-sketch"
+      },
+      "createdAt": "2026-09-20T01:54:52Z",
+      "updatedAt": "2026-09-27T13:52:35Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -539,7 +572,7 @@
       },
       "createdAt": "2026-09-05T12:10:15Z",
       "updatedAt": "2026-11-01T04:00:10Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -572,40 +605,7 @@
       },
       "createdAt": "2026-10-21T12:19:21Z",
       "updatedAt": "2026-11-05T04:24:03Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1377791653",
-      "repoId": 1377791653,
-      "fullName": "swlfaye-sketch/xiaoxue-quanke-jiaoshi",
-      "name": "xiaoxue-quanke-jiaoshi",
-      "description": "小学教师全科教学助手 — 一至六年级六科备课助手（语文、数学、英语、科学、自然、人文），输出结构完整的备课材料，附自动校验结果与人工核对清单。",
-      "url": "https://github.com/swlfaye-sketch/xiaoxue-quanke-jiaoshi",
-      "homepage": null,
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "language": "Python",
-      "topics": [
-        "chinese",
-        "cli",
-        "education",
-        "lesson-plan",
-        "offline",
-        "primary-school",
-        "python",
-        "teaching"
-      ],
-      "owner": {
-        "login": "swlfaye-sketch",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/244677466?v=4",
-        "url": "https://github.com/swlfaye-sketch"
-      },
-      "createdAt": "2026-09-20T01:54:52Z",
-      "updatedAt": "2026-09-27T13:52:35Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -638,7 +638,7 @@
       },
       "createdAt": "2026-10-27T16:55:34Z",
       "updatedAt": "2026-11-08T03:27:52Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -667,7 +667,7 @@
       },
       "createdAt": "2026-05-29T16:42:03Z",
       "updatedAt": "2026-06-05T10:01:16Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -702,7 +702,7 @@
       },
       "createdAt": "2026-03-16T14:55:01Z",
       "updatedAt": "2026-10-06T01:25:01Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -747,39 +747,37 @@
       },
       "createdAt": "2026-07-06T09:54:48Z",
       "updatedAt": "2026-09-21T07:13:56Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1413577894",
-      "repoId": 1413577894,
-      "fullName": "lhg-plugs/lhg-lesson-plan",
-      "name": "lhg-lesson-plan",
-      "description": "小白一句话生成完整教案的 Claude Code 插件 ｜ 一键安装：/plugin marketplace add lhg-plugs/lhg-lesson-plan",
-      "url": "https://github.com/lhg-plugs/lhg-lesson-plan",
-      "homepage": null,
+      "id": "gh-topic-1438846593",
+      "repoId": 1438846593,
+      "fullName": "ALENZACODES/whmis-udl-planner",
+      "name": "whmis-udl-planner",
+      "description": "A 30-minute WHMIS 2015 pictogram onboarding plan built on Universal Design for Learning and fact-checked against CCOHS.",
+      "url": "https://github.com/ALENZACODES/whmis-udl-planner",
+      "homepage": "https://alenzacodes.github.io/whmis-udl-planner/",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "language": "Python",
+      "language": "HTML",
       "topics": [
-        "agent-skills",
-        "claude-code",
-        "claude-plugin",
-        "curriculum",
-        "education",
         "lesson-plan",
-        "teaching"
+        "training",
+        "udl",
+        "whmis",
+        "workplace-safety"
       ],
       "owner": {
-        "login": "lhg-plugs",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/340703478?v=4",
-        "url": "https://github.com/lhg-plugs"
+        "login": "ALENZACODES",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309250657?v=4",
+        "url": "https://github.com/ALENZACODES"
       },
-      "createdAt": "2026-10-10T19:17:53Z",
-      "updatedAt": "2026-11-09T09:24:12Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "createdAt": "2026-10-29T19:05:39Z",
+      "updatedAt": "2026-11-17T16:25:45Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -812,37 +810,39 @@
       },
       "createdAt": "2026-06-13T19:40:36Z",
       "updatedAt": "2026-06-13T19:48:18Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1438846593",
-      "repoId": 1438846593,
-      "fullName": "ALENZACODES/whmis-udl-planner",
-      "name": "whmis-udl-planner",
-      "description": "A 30-minute WHMIS 2015 pictogram onboarding plan built on Universal Design for Learning and fact-checked against CCOHS.",
-      "url": "https://github.com/ALENZACODES/whmis-udl-planner",
-      "homepage": "https://alenzacodes.github.io/whmis-udl-planner/",
+      "id": "gh-topic-1413577894",
+      "repoId": 1413577894,
+      "fullName": "lhg-plugs/lhg-lesson-plan",
+      "name": "lhg-lesson-plan",
+      "description": "小白一句话生成完整教案的 Claude Code 插件 ｜ 一键安装：/plugin marketplace add lhg-plugs/lhg-lesson-plan",
+      "url": "https://github.com/lhg-plugs/lhg-lesson-plan",
+      "homepage": null,
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "language": "HTML",
+      "language": "Python",
       "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-plugin",
+        "curriculum",
+        "education",
         "lesson-plan",
-        "training",
-        "udl",
-        "whmis",
-        "workplace-safety"
+        "teaching"
       ],
       "owner": {
-        "login": "ALENZACODES",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/309250657?v=4",
-        "url": "https://github.com/ALENZACODES"
+        "login": "lhg-plugs",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/340703478?v=4",
+        "url": "https://github.com/lhg-plugs"
       },
-      "createdAt": "2026-10-29T19:05:39Z",
-      "updatedAt": "2026-11-17T16:25:45Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "createdAt": "2026-10-10T19:17:53Z",
+      "updatedAt": "2026-11-09T09:24:12Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -874,7 +874,7 @@
       },
       "createdAt": "2026-04-02T21:25:43Z",
       "updatedAt": "2026-04-02T21:26:21Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -904,7 +904,72 @@
       },
       "createdAt": "2022-02-11T20:18:05Z",
       "updatedAt": "2024-02-18T00:18:22Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1432237031",
+      "repoId": 1432237031,
+      "fullName": "242742532Celestia/junior-faculty-agent",
+      "name": "junior-faculty-agent",
+      "description": "An open-source local agent for university teachers and researchers: lesson plans, exam papers, grant applications, journal submissions — every deliverable has machine-checkable acceptance criteria.",
+      "url": "https://github.com/242742532Celestia/junior-faculty-agent",
+      "homepage": "https://242742532celestia.github.io/junior-faculty-agent/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "agents",
+        "backwards-design",
+        "chinese",
+        "course-design",
+        "higher-education",
+        "lesson-plan",
+        "openai-compatible",
+        "pptx",
+        "skills",
+        "teaching"
+      ],
+      "owner": {
+        "login": "242742532Celestia",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/296549951?v=4",
+        "url": "https://github.com/242742532Celestia"
+      },
+      "createdAt": "2026-10-24T13:57:18Z",
+      "updatedAt": "2026-11-06T02:01:53Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-299406581",
+      "repoId": 299406581,
+      "fullName": "ctakasaka/Minecraft-Integrated-AI-Dashboard",
+      "name": "Minecraft-Integrated-AI-Dashboard",
+      "description": "This contains a modified behaviour pack where the agent actively follows the player.",
+      "url": "https://github.com/ctakasaka/Minecraft-Integrated-AI-Dashboard",
+      "homepage": null,
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "language": "JavaScript",
+      "topics": [
+        "data-science",
+        "lesson",
+        "lesson-plan",
+        "minecraft"
+      ],
+      "owner": {
+        "login": "ctakasaka",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/44279067?v=4",
+        "url": "https://github.com/ctakasaka"
+      },
+      "createdAt": "2020-09-28T19:07:44Z",
+      "updatedAt": "2024-09-20T20:29:41Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -948,72 +1013,38 @@
       },
       "createdAt": "2026-11-13T15:29:09Z",
       "updatedAt": "2026-11-13T23:44:02Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
     {
-      "id": "gh-topic-1432237031",
-      "repoId": 1432237031,
-      "fullName": "242742532Celestia/junior-faculty-agent",
-      "name": "junior-faculty-agent",
-      "description": "An open-source local agent for university teachers and researchers: lesson plans, exam papers, grant applications, journal submissions — every deliverable has machine-checkable acceptance criteria.",
-      "url": "https://github.com/242742532Celestia/junior-faculty-agent",
-      "homepage": "https://242742532celestia.github.io/junior-faculty-agent/",
+      "id": "gh-topic-1466178127",
+      "repoId": 1466178127,
+      "fullName": "divelux/sauna-physics-lesson",
+      "name": "sauna-physics-lesson",
+      "description": "Why warm air rises: a free 50-minute physics lesson for middle school, with a no-flame experiment, handout and answer key. NGSS-aligned.",
+      "url": "https://github.com/divelux/sauna-physics-lesson",
+      "homepage": "https://divelux.github.io/sauna-physics-lesson/",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "language": "Python",
+      "language": "HTML",
       "topics": [
-        "agent-skills",
-        "agents",
-        "backwards-design",
-        "chinese",
-        "course-design",
-        "higher-education",
+        "convection",
+        "education",
         "lesson-plan",
-        "openai-compatible",
-        "pptx",
-        "skills",
-        "teaching"
+        "ngss",
+        "physics",
+        "teachers"
       ],
       "owner": {
-        "login": "242742532Celestia",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/296549951?v=4",
-        "url": "https://github.com/242742532Celestia"
+        "login": "divelux",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/358932249?v=4",
+        "url": "https://github.com/divelux"
       },
-      "createdAt": "2026-10-24T13:57:18Z",
-      "updatedAt": "2026-11-06T02:01:53Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-299406581",
-      "repoId": 299406581,
-      "fullName": "ctakasaka/Minecraft-Integrated-AI-Dashboard",
-      "name": "Minecraft-Integrated-AI-Dashboard",
-      "description": "This contains a modified behaviour pack where the agent actively follows the player.",
-      "url": "https://github.com/ctakasaka/Minecraft-Integrated-AI-Dashboard",
-      "homepage": null,
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "language": "JavaScript",
-      "topics": [
-        "data-science",
-        "lesson",
-        "lesson-plan",
-        "minecraft"
-      ],
-      "owner": {
-        "login": "ctakasaka",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/44279067?v=4",
-        "url": "https://github.com/ctakasaka"
-      },
-      "createdAt": "2020-09-28T19:07:44Z",
-      "updatedAt": "2024-09-20T20:29:41Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "createdAt": "2026-11-21T04:32:43Z",
+      "updatedAt": "2026-11-21T04:32:53Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1047,7 +1078,7 @@
       },
       "createdAt": "2026-09-27T14:28:29Z",
       "updatedAt": "2026-09-27T14:46:22Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1080,7 +1111,7 @@
       },
       "createdAt": "2026-09-28T16:05:04Z",
       "updatedAt": "2026-10-16T04:48:11Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1114,7 +1145,7 @@
       },
       "createdAt": "2026-09-12T03:09:30Z",
       "updatedAt": "2026-09-12T03:09:48Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1149,7 +1180,7 @@
       },
       "createdAt": "2026-09-21T22:54:30Z",
       "updatedAt": "2026-09-25T13:11:41Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1187,7 +1218,7 @@
       },
       "createdAt": "2026-05-26T09:01:33Z",
       "updatedAt": "2026-05-26T09:02:03Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1221,7 +1252,7 @@
       },
       "createdAt": "2026-09-17T05:37:29Z",
       "updatedAt": "2026-09-17T05:37:37Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1251,7 +1282,7 @@
       },
       "createdAt": "2024-10-06T11:14:52Z",
       "updatedAt": "2024-12-15T15:24:25Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1284,7 +1315,7 @@
       },
       "createdAt": "2026-10-14T09:07:38Z",
       "updatedAt": "2026-10-14T11:21:09Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1319,7 +1350,7 @@
       },
       "createdAt": "2026-07-26T20:20:19Z",
       "updatedAt": "2026-08-15T05:22:11Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1351,7 +1382,7 @@
       },
       "createdAt": "2026-06-16T04:27:01Z",
       "updatedAt": "2026-06-18T06:32:25Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1385,7 +1416,7 @@
       },
       "createdAt": "2026-05-17T00:08:26Z",
       "updatedAt": "2026-07-21T20:32:13Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1430,7 +1461,7 @@
       },
       "createdAt": "2026-08-15T03:58:41Z",
       "updatedAt": "2026-08-15T05:21:48Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1463,7 +1494,7 @@
       },
       "createdAt": "2026-07-22T14:41:11Z",
       "updatedAt": "2026-10-30T10:14:56Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1498,7 +1529,7 @@
       },
       "createdAt": "2026-10-12T23:51:09Z",
       "updatedAt": "2026-10-28T07:25:02Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1532,7 +1563,7 @@
       },
       "createdAt": "2026-09-23T21:12:12Z",
       "updatedAt": "2026-10-20T14:00:30Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1565,7 +1596,7 @@
       },
       "createdAt": "2026-07-04T04:07:12Z",
       "updatedAt": "2026-08-15T05:22:33Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1602,70 +1633,7 @@
       },
       "createdAt": "2026-07-27T10:13:32Z",
       "updatedAt": "2026-09-02T14:18:01Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1370352883",
-      "repoId": 1370352883,
-      "fullName": "h2ohojat/kelas-zende",
-      "name": "kelas-zende",
-      "description": "کلاس زنده: موتور متن‌باز طرح درس تعاملی تک‌فایلی (HTML آفلاین) با بازخورد تشخیصی، راهنمای پله‌ای و بازی‌وارسازی سالم",
-      "url": "https://github.com/h2ohojat/kelas-zende",
-      "homepage": "https://h2ohojat.github.io/kelas-zende/",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "HTML",
-      "topics": [
-        "education",
-        "gamification",
-        "lesson-plan",
-        "offline-first",
-        "persian",
-        "teachers"
-      ],
-      "owner": {
-        "login": "h2ohojat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/13200290?v=4",
-        "url": "https://github.com/h2ohojat"
-      },
-      "createdAt": "2026-09-14T18:01:31Z",
-      "updatedAt": "2026-10-27T12:45:15Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1456395385",
-      "repoId": 1456395385,
-      "fullName": "xunshenwu-eng/prep-pack",
-      "name": "prep-pack",
-      "description": "家教备课包生成器：题目 JSON → 四段式讲义 + 知识点网 + 讲授课话术，输出 md/html",
-      "url": "https://github.com/xunshenwu-eng/prep-pack",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "language": "Python",
-      "topics": [
-        "education",
-        "html",
-        "lesson-plan",
-        "markdown",
-        "python",
-        "teaching",
-        "tutoring"
-      ],
-      "owner": {
-        "login": "xunshenwu-eng",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/246670813?v=4",
-        "url": "https://github.com/xunshenwu-eng"
-      },
-      "createdAt": "2026-11-13T09:18:52Z",
-      "updatedAt": "2026-11-13T09:19:53Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1697,7 +1665,7 @@
       },
       "createdAt": "2026-08-17T04:25:06Z",
       "updatedAt": "2026-09-12T14:35:54Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     },
@@ -1725,7 +1693,70 @@
       },
       "createdAt": "2026-10-29T06:00:01Z",
       "updatedAt": "2026-10-29T06:26:40Z",
-      "firstSeenAt": "2026-11-20T16:44:06.260Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1370352883",
+      "repoId": 1370352883,
+      "fullName": "h2ohojat/kelas-zende",
+      "name": "kelas-zende",
+      "description": "کلاس زنده: موتور متن‌باز طرح درس تعاملی تک‌فایلی (HTML آفلاین) با بازخورد تشخیصی، راهنمای پله‌ای و بازی‌وارسازی سالم",
+      "url": "https://github.com/h2ohojat/kelas-zende",
+      "homepage": "https://h2ohojat.github.io/kelas-zende/",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "HTML",
+      "topics": [
+        "education",
+        "gamification",
+        "lesson-plan",
+        "offline-first",
+        "persian",
+        "teachers"
+      ],
+      "owner": {
+        "login": "h2ohojat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/13200290?v=4",
+        "url": "https://github.com/h2ohojat"
+      },
+      "createdAt": "2026-09-14T18:01:31Z",
+      "updatedAt": "2026-10-27T12:45:15Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1456395385",
+      "repoId": 1456395385,
+      "fullName": "xunshenwu-eng/prep-pack",
+      "name": "prep-pack",
+      "description": "家教备课包生成器：题目 JSON → 四段式讲义 + 知识点网 + 讲授课话术，输出 md/html",
+      "url": "https://github.com/xunshenwu-eng/prep-pack",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Python",
+      "topics": [
+        "education",
+        "html",
+        "lesson-plan",
+        "markdown",
+        "python",
+        "teaching",
+        "tutoring"
+      ],
+      "owner": {
+        "login": "xunshenwu-eng",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/246670813?v=4",
+        "url": "https://github.com/xunshenwu-eng"
+      },
+      "createdAt": "2026-11-13T09:18:52Z",
+      "updatedAt": "2026-11-13T09:19:53Z",
+      "firstSeenAt": "2026-11-21T15:56:47.441Z",
       "isNew": true,
       "existing": false
     }
