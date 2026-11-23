@@ -1,6 +1,6 @@
 {
   "topic": "fine-tuning",
-  "fetchedAt": "2026-11-22T15:54:35.350Z",
+  "fetchedAt": "2026-11-23T19:48:27.941Z",
   "count": 50,
   "newCount": 45,
   "existingCount": 5,
@@ -13,9 +13,9 @@
       "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
       "url": "https://github.com/unslothai/unsloth",
       "homepage": "https://unsloth.ai/docs",
-      "stars": 79970,
-      "forks": 7441,
-      "watchers": 79970,
+      "stars": 80079,
+      "forks": 7457,
+      "watchers": 80079,
       "language": "Python",
       "topics": [
         "agent",
@@ -45,8 +45,8 @@
         "url": "https://github.com/unslothai"
       },
       "createdAt": "2023-11-29T16:50:09Z",
-      "updatedAt": "2026-11-22T15:40:07Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T19:47:34Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": true
     },
@@ -58,9 +58,9 @@
       "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
       "url": "https://github.com/hiyouga/LlamaFactory",
       "homepage": "https://llamafactory.readthedocs.io",
-      "stars": 76197,
-      "forks": 9385,
-      "watchers": 76197,
+      "stars": 76242,
+      "forks": 9392,
+      "watchers": 76242,
       "language": "Python",
       "topics": [
         "agent",
@@ -90,8 +90,8 @@
         "url": "https://github.com/hiyouga"
       },
       "createdAt": "2023-05-28T10:09:12Z",
-      "updatedAt": "2026-11-22T14:28:09Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T18:45:35Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -103,9 +103,9 @@
       "description": "LlamaIndex is the document processing platform for AI",
       "url": "https://github.com/run-llama/llama_index",
       "homepage": "https://developers.llamaindex.ai",
-      "stars": 52982,
-      "forks": 8612,
-      "watchers": 52982,
+      "stars": 52985,
+      "forks": 8620,
+      "watchers": 52985,
       "language": "Python",
       "topics": [
         "agents",
@@ -125,8 +125,8 @@
         "url": "https://github.com/run-llama"
       },
       "createdAt": "2022-11-02T04:24:54Z",
-      "updatedAt": "2026-11-22T15:34:14Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T19:27:39Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -138,9 +138,9 @@
       "description": "Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability.",
       "url": "https://github.com/QwenAudio/CosyVoice",
       "homepage": "https://funaudiollm.github.io/cosyvoice3",
-      "stars": 24480,
+      "stars": 24490,
       "forks": 2791,
-      "watchers": 24480,
+      "watchers": 24490,
       "language": "Python",
       "topics": [
         "audio-generation",
@@ -169,8 +169,8 @@
         "url": "https://github.com/QwenAudio"
       },
       "createdAt": "2024-07-03T02:59:22Z",
-      "updatedAt": "2026-11-22T15:38:06Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T17:15:44Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -182,9 +182,9 @@
       "description": "🚀 A curated collection of AI engineering resources, roadmaps, tools, and projects covering LLMs, RAG, AI Agents, MCP, fine-tuning, evaluations, and production AI systems.",
       "url": "https://github.com/dipakkr/awesome-ai-engineering",
       "homepage": null,
-      "stars": 22611,
-      "forks": 4866,
-      "watchers": 22611,
+      "stars": 22621,
+      "forks": 4867,
+      "watchers": 22621,
       "language": null,
       "topics": [
         "agentic-ai",
@@ -213,8 +213,8 @@
         "url": "https://github.com/dipakkr"
       },
       "createdAt": "2018-09-17T11:15:29Z",
-      "updatedAt": "2026-11-22T14:38:47Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T17:35:43Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -226,9 +226,9 @@
       "description": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
       "url": "https://github.com/huggingface/peft",
       "homepage": "https://huggingface.co/docs/peft",
-      "stars": 21916,
-      "forks": 2681,
-      "watchers": 21916,
+      "stars": 21918,
+      "forks": 2682,
+      "watchers": 21918,
       "language": "Python",
       "topics": [
         "adapter",
@@ -248,8 +248,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2022-11-25T03:51:09Z",
-      "updatedAt": "2026-11-22T13:36:29Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T18:59:12Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -261,9 +261,9 @@
       "description": "A powerful tool for creating datasets for LLM fine-tuning 、RAG and Eval",
       "url": "https://github.com/ConardLi/easy-dataset",
       "homepage": "https://docs.easy-dataset.com",
-      "stars": 15136,
+      "stars": 15139,
       "forks": 1550,
-      "watchers": 15136,
+      "watchers": 15139,
       "language": "JavaScript",
       "topics": [
         "dataset",
@@ -278,8 +278,8 @@
         "url": "https://github.com/ConardLi"
       },
       "createdAt": "2025-03-04T16:14:14Z",
-      "updatedAt": "2026-11-22T14:54:41Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T12:10:07Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -291,9 +291,9 @@
       "description": "Go ahead and axolotl questions",
       "url": "https://github.com/axolotl-ai-cloud/axolotl",
       "homepage": "https://docs.axolotl.ai",
-      "stars": 12744,
+      "stars": 12747,
       "forks": 1477,
-      "watchers": 12744,
+      "watchers": 12747,
       "language": "Python",
       "topics": [
         "fine-tuning",
@@ -305,8 +305,8 @@
         "url": "https://github.com/axolotl-ai-cloud"
       },
       "createdAt": "2023-04-14T04:25:47Z",
-      "updatedAt": "2026-11-22T01:44:37Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T10:02:27Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -348,8 +348,8 @@
         "url": "https://github.com/bentoml"
       },
       "createdAt": "2023-04-19T00:27:52Z",
-      "updatedAt": "2026-11-22T13:17:39Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T17:05:57Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -361,9 +361,9 @@
       "description": "Low-code framework for building custom LLMs, neural networks, and other AI models",
       "url": "https://github.com/ludwig-ai/ludwig",
       "homepage": "http://ludwig.ai",
-      "stars": 11793,
-      "forks": 1212,
-      "watchers": 11793,
+      "stars": 11792,
+      "forks": 1213,
+      "watchers": 11792,
       "language": "Python",
       "topics": [
         "computer-vision",
@@ -393,8 +393,8 @@
         "url": "https://github.com/ludwig-ai"
       },
       "createdAt": "2018-12-27T23:58:12Z",
-      "updatedAt": "2026-11-20T19:28:03Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-22T16:55:21Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -406,9 +406,9 @@
       "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
       "url": "https://github.com/MakazhanAlpamys/Soup",
       "homepage": "https://trysoup.dev",
-      "stars": 10720,
-      "forks": 1780,
-      "watchers": 10720,
+      "stars": 10747,
+      "forks": 1790,
+      "watchers": 10747,
       "language": "Python",
       "topics": [
         "cli",
@@ -438,8 +438,8 @@
         "url": "https://github.com/MakazhanAlpamys"
       },
       "createdAt": "2026-02-20T11:05:01Z",
-      "updatedAt": "2026-11-22T13:38:33Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T18:59:55Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": true
     },
@@ -452,7 +452,7 @@
       "url": "https://github.com/oumi-ai/oumi",
       "homepage": "https://oumi.ai",
       "stars": 9441,
-      "forks": 801,
+      "forks": 799,
       "watchers": 9441,
       "language": "Python",
       "topics": [
@@ -483,8 +483,8 @@
         "url": "https://github.com/oumi-ai"
       },
       "createdAt": "2024-05-07T17:45:15Z",
-      "updatedAt": "2026-11-22T10:40:56Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T09:55:30Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": true
     },
@@ -496,9 +496,9 @@
       "description": "Using Low-rank adaptation to quickly fine-tune diffusion models.",
       "url": "https://github.com/cloneofsimo/lora",
       "homepage": "https://arxiv.org/abs/2106.09685",
-      "stars": 7556,
+      "stars": 7555,
       "forks": 498,
-      "watchers": 7556,
+      "watchers": 7555,
       "language": "Jupyter Notebook",
       "topics": [
         "diffusion",
@@ -513,8 +513,8 @@
         "url": "https://github.com/cloneofsimo"
       },
       "createdAt": "2022-12-08T00:09:05Z",
-      "updatedAt": "2026-11-22T04:32:42Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T07:50:46Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -526,9 +526,9 @@
       "description": "Build, Evaluate, and Optimize AI Systems. Includes evals, RAG, agents, fine-tuning, synthetic data generation, dataset management, MCP, and more.",
       "url": "https://github.com/Kiln-AI/Kiln",
       "homepage": "https://kiln.tech",
-      "stars": 5288,
-      "forks": 406,
-      "watchers": 5288,
+      "stars": 5291,
+      "forks": 407,
+      "watchers": 5291,
       "language": "Python",
       "topics": [
         "ai",
@@ -558,8 +558,8 @@
         "url": "https://github.com/Kiln-AI"
       },
       "createdAt": "2024-07-23T23:10:13Z",
-      "updatedAt": "2026-11-22T09:20:23Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T13:00:29Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -597,7 +597,7 @@
       },
       "createdAt": "2023-04-17T17:56:33Z",
       "updatedAt": "2026-11-19T22:54:50Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -632,7 +632,7 @@
       },
       "createdAt": "2024-04-15T02:50:32Z",
       "updatedAt": "2026-11-22T07:37:44Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -675,7 +675,7 @@
       },
       "createdAt": "2023-07-26T13:08:54Z",
       "updatedAt": "2026-11-22T03:34:14Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -718,8 +718,8 @@
         "url": "https://github.com/nucleuscloud"
       },
       "createdAt": "2023-08-24T21:41:12Z",
-      "updatedAt": "2026-11-19T23:02:55Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T13:51:08Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -732,7 +732,7 @@
       "url": "https://github.com/predibase/lorax",
       "homepage": "https://loraexchange.ai",
       "stars": 3832,
-      "forks": 329,
+      "forks": 328,
       "watchers": 3832,
       "language": "Python",
       "topics": [
@@ -755,7 +755,7 @@
       },
       "createdAt": "2023-10-20T18:19:49Z",
       "updatedAt": "2026-11-20T21:01:45Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -767,9 +767,9 @@
       "description": "Your Cheat Sheet for AI Engineering Interview – Questions and Answers.",
       "url": "https://github.com/amitshekhariitbhu/ai-engineering-interview-questions",
       "homepage": "https://outcomeschool.com/program/ai-and-machine-learning",
-      "stars": 3724,
-      "forks": 668,
-      "watchers": 3724,
+      "stars": 3739,
+      "forks": 671,
+      "watchers": 3739,
       "language": "Markdown",
       "topics": [
         "agents",
@@ -793,8 +793,8 @@
         "url": "https://github.com/amitshekhariitbhu"
       },
       "createdAt": "2026-03-21T07:28:38Z",
-      "updatedAt": "2026-11-22T15:37:31Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T18:50:19Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -832,7 +832,7 @@
       },
       "createdAt": "2023-04-08T15:54:15Z",
       "updatedAt": "2026-11-19T22:54:04Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -844,9 +844,9 @@
       "description": "OpenDeepWiki is the open-source version of the DeepWiki project, aiming to provide a powerful knowledge management and collaboration platform. The project is mainly developed using C# and TypeScript, supporting modular design, and is easy to expand and customize.",
       "url": "https://github.com/AIDotNet/OpenDeepWiki",
       "homepage": "https://opendeep.wiki/",
-      "stars": 3671,
+      "stars": 3672,
       "forks": 467,
-      "watchers": 3671,
+      "watchers": 3672,
       "language": "C#",
       "topics": [
         "chatgpt",
@@ -860,8 +860,8 @@
         "url": "https://github.com/AIDotNet"
       },
       "createdAt": "2025-04-27T11:40:00Z",
-      "updatedAt": "2026-11-22T10:51:35Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T10:41:45Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": true
     },
@@ -906,7 +906,7 @@
       },
       "createdAt": "2019-01-04T02:22:17Z",
       "updatedAt": "2026-11-19T21:13:42Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -941,7 +941,7 @@
       },
       "createdAt": "2023-04-19T06:43:51Z",
       "updatedAt": "2026-11-20T10:02:01Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": true
     },
@@ -953,9 +953,9 @@
       "description": "OML 1.0 via Fingerprinting: Open, Monetizable, and Loyal AI",
       "url": "https://github.com/sentient-agi/OML-1.0-Fingerprinting",
       "homepage": null,
-      "stars": 3494,
+      "stars": 3493,
       "forks": 233,
-      "watchers": 3494,
+      "watchers": 3493,
       "language": "Python",
       "topics": [
         "fine-tuning",
@@ -971,8 +971,8 @@
         "url": "https://github.com/sentient-agi"
       },
       "createdAt": "2024-11-14T05:37:14Z",
-      "updatedAt": "2026-11-21T00:08:57Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-22T16:12:13Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -985,7 +985,7 @@
       "url": "https://github.com/aiming-lab/MetaClaw",
       "homepage": "https://arxiv.org/abs/2603.17187",
       "stars": 3470,
-      "forks": 457,
+      "forks": 456,
       "watchers": 3470,
       "language": "Python",
       "topics": [
@@ -1010,7 +1010,7 @@
       },
       "createdAt": "2026-03-09T13:47:13Z",
       "updatedAt": "2026-11-18T21:50:22Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1022,9 +1022,9 @@
       "description": "🦖 𝗟𝗲𝗮𝗿𝗻 about 𝗟𝗟𝗠𝘀, 𝗟𝗟𝗠𝗢𝗽𝘀, and 𝘃𝗲𝗰𝘁𝗼𝗿 𝗗𝗕𝘀 for free by designing, training, and deploying a real-time financial advisor LLM system ~ 𝘴𝘰𝘶𝘳𝘤𝘦 𝘤𝘰𝘥𝘦 + 𝘷𝘪𝘥𝘦𝘰 & 𝘳𝘦𝘢𝘥𝘪𝘯𝘨 𝘮𝘢𝘵𝘦𝘳𝘪𝘢𝘭𝘴",
       "url": "https://github.com/iusztinpaul/hands-on-llms",
       "homepage": null,
-      "stars": 3420,
+      "stars": 3419,
       "forks": 549,
-      "watchers": 3420,
+      "watchers": 3419,
       "language": "Jupyter Notebook",
       "topics": [
         "3-pipeline-design",
@@ -1052,8 +1052,8 @@
         "url": "https://github.com/iusztinpaul"
       },
       "createdAt": "2023-06-28T06:23:06Z",
-      "updatedAt": "2026-11-21T01:22:09Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-22T21:40:10Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1065,9 +1065,9 @@
       "description": "OneTrainer is a one-stop solution for all your Diffusion training needs.",
       "url": "https://github.com/Nerogar/OneTrainer",
       "homepage": null,
-      "stars": 3267,
+      "stars": 3268,
       "forks": 337,
-      "watchers": 3267,
+      "watchers": 3268,
       "language": "Python",
       "topics": [
         "fine-tuning",
@@ -1081,8 +1081,8 @@
         "url": "https://github.com/Nerogar"
       },
       "createdAt": "2023-04-12T07:01:57Z",
-      "updatedAt": "2026-11-21T21:35:57Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T15:47:23Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1094,9 +1094,9 @@
       "description": "Learn to build your Second Brain AI assistant with LLMs, agents, RAG, fine-tuning, LLMOps and AI systems techniques.",
       "url": "https://github.com/itsdecodingai/second-brain-ai-assistant-course",
       "homepage": "https://decodingml.substack.com/p/build-your-second-brain-ai-assistant",
-      "stars": 3139,
+      "stars": 3141,
       "forks": 529,
-      "watchers": 3139,
+      "watchers": 3141,
       "language": "Jupyter Notebook",
       "topics": [
         "agents",
@@ -1117,8 +1117,8 @@
         "url": "https://github.com/itsdecodingai"
       },
       "createdAt": "2024-12-30T14:57:41Z",
-      "updatedAt": "2026-11-22T11:13:45Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T10:02:52Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1163,7 +1163,7 @@
       },
       "createdAt": "2019-04-10T12:00:20Z",
       "updatedAt": "2026-11-19T21:21:10Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1175,9 +1175,9 @@
       "description": "LLM Finetuning with peft",
       "url": "https://github.com/ashishpatel26/LLM-Finetuning",
       "homepage": null,
-      "stars": 2998,
+      "stars": 2997,
       "forks": 770,
-      "watchers": 2998,
+      "watchers": 2997,
       "language": "Jupyter Notebook",
       "topics": [
         "falcon",
@@ -1198,8 +1198,8 @@
         "url": "https://github.com/ashishpatel26"
       },
       "createdAt": "2023-06-08T05:11:00Z",
-      "updatedAt": "2026-11-20T02:31:55Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T14:53:52Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1211,9 +1211,9 @@
       "description": "A general fine-tuning kit geared toward image/video/audio diffusion models.",
       "url": "https://github.com/bghira/SimpleTuner",
       "homepage": null,
-      "stars": 2961,
+      "stars": 2962,
       "forks": 296,
-      "watchers": 2961,
+      "watchers": 2962,
       "language": "Python",
       "topics": [
         "diffusers",
@@ -1229,8 +1229,8 @@
         "url": "https://github.com/bghira"
       },
       "createdAt": "2023-05-28T18:01:02Z",
-      "updatedAt": "2026-11-20T05:56:54Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T13:22:45Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1266,7 +1266,7 @@
       },
       "createdAt": "2023-11-24T13:28:57Z",
       "updatedAt": "2026-11-20T18:23:40Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1307,7 +1307,7 @@
       },
       "createdAt": "2023-03-19T15:59:38Z",
       "updatedAt": "2026-11-22T12:07:15Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1320,7 +1320,7 @@
       "url": "https://github.com/pykeio/ort",
       "homepage": "https://ort.pyke.io/",
       "stars": 2627,
-      "forks": 278,
+      "forks": 279,
       "watchers": 2627,
       "language": "Rust",
       "topics": [
@@ -1340,7 +1340,7 @@
       },
       "createdAt": "2022-11-26T19:26:15Z",
       "updatedAt": "2026-11-22T15:43:54Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1352,9 +1352,9 @@
       "description": "A simple, performant, and scalable Jax LLM!",
       "url": "https://github.com/AI-Hypercomputer/maxtext",
       "homepage": "https://maxtext.readthedocs.io",
-      "stars": 2471,
-      "forks": 648,
-      "watchers": 2471,
+      "stars": 2473,
+      "forks": 650,
+      "watchers": 2473,
       "language": "Python",
       "topics": [
         "deepseek",
@@ -1378,8 +1378,8 @@
         "url": "https://github.com/AI-Hypercomputer"
       },
       "createdAt": "2023-02-28T19:47:29Z",
-      "updatedAt": "2026-11-22T00:58:19Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T13:35:44Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1412,7 +1412,7 @@
       },
       "createdAt": "2023-10-05T07:04:25Z",
       "updatedAt": "2026-11-22T15:44:19Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1424,9 +1424,9 @@
       "description": "Developer Asset Hub for NVIDIA Nemotron — A one-stop resource for training recipes, usage cookbooks, datasets, and full end-to-end reference examples to build with Nemotron models",
       "url": "https://github.com/NVIDIA-NeMo/Nemotron",
       "homepage": "https://docs.nvidia.com/nemotron/latest/index.html",
-      "stars": 2376,
-      "forks": 497,
-      "watchers": 2376,
+      "stars": 2380,
+      "forks": 498,
+      "watchers": 2380,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -1442,8 +1442,8 @@
         "url": "https://github.com/NVIDIA-NeMo"
       },
       "createdAt": "2025-10-03T15:58:06Z",
-      "updatedAt": "2026-11-22T08:42:38Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T17:27:12Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1456,7 +1456,7 @@
       "url": "https://github.com/dstackai/dstack",
       "homepage": "https://dstack.ai/docs",
       "stars": 2319,
-      "forks": 278,
+      "forks": 277,
       "watchers": 2319,
       "language": "Python",
       "topics": [
@@ -1486,7 +1486,7 @@
       },
       "createdAt": "2022-01-04T10:29:46Z",
       "updatedAt": "2026-11-20T09:52:22Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1498,9 +1498,9 @@
       "description": "Distributed AI Model Training and LLM Fine-Tuning on Kubernetes",
       "url": "https://github.com/kubeflow/trainer",
       "homepage": "https://trainer.kubeflow.org/en/latest/",
-      "stars": 2288,
-      "forks": 1118,
-      "watchers": 2288,
+      "stars": 2289,
+      "forks": 1119,
+      "watchers": 2289,
       "language": "Go",
       "topics": [
         "ai",
@@ -1525,8 +1525,8 @@
         "url": "https://github.com/kubeflow"
       },
       "createdAt": "2017-06-28T18:38:14Z",
-      "updatedAt": "2026-11-21T16:15:47Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T14:18:34Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1570,7 +1570,7 @@
       },
       "createdAt": "2023-07-15T02:04:35Z",
       "updatedAt": "2026-11-19T23:00:29Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1605,7 +1605,7 @@
       },
       "createdAt": "2023-06-02T03:58:07Z",
       "updatedAt": "2026-11-19T22:57:50Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1617,9 +1617,9 @@
       "description": "Custom Diffusion: Multi-Concept Customization of Text-to-Image Diffusion (CVPR 2023)",
       "url": "https://github.com/adobe-research/custom-diffusion",
       "homepage": "https://www.cs.cmu.edu/~custom-diffusion",
-      "stars": 1977,
+      "stars": 1976,
       "forks": 140,
-      "watchers": 1977,
+      "watchers": 1976,
       "language": "Python",
       "topics": [
         "computer-vision",
@@ -1636,8 +1636,8 @@
         "url": "https://github.com/adobe-research"
       },
       "createdAt": "2022-12-08T19:18:41Z",
-      "updatedAt": "2026-11-19T22:59:42Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-22T16:23:51Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1667,7 +1667,7 @@
       },
       "createdAt": "2024-04-04T01:13:03Z",
       "updatedAt": "2026-11-19T23:14:18Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1696,7 +1696,7 @@
       },
       "createdAt": "2024-08-12T16:00:19Z",
       "updatedAt": "2026-11-19T23:20:14Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1708,9 +1708,9 @@
       "description": "Scalable data pre processing and curation toolkit for LLMs",
       "url": "https://github.com/NVIDIA-NeMo/Curator",
       "homepage": null,
-      "stars": 1867,
-      "forks": 378,
-      "watchers": 1867,
+      "stars": 1868,
+      "forks": 379,
+      "watchers": 1868,
       "language": "Python",
       "topics": [
         "data",
@@ -1739,8 +1739,8 @@
         "url": "https://github.com/NVIDIA-NeMo"
       },
       "createdAt": "2024-03-14T20:41:51Z",
-      "updatedAt": "2026-11-22T04:32:29Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-22T17:25:07Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1773,7 +1773,7 @@
       },
       "createdAt": "2023-08-16T04:41:26Z",
       "updatedAt": "2026-11-19T23:02:28Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1816,7 +1816,7 @@
       },
       "createdAt": "2023-11-15T00:53:21Z",
       "updatedAt": "2026-11-22T04:01:13Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1852,7 +1852,7 @@
       },
       "createdAt": "2024-10-28T01:11:41Z",
       "updatedAt": "2026-11-19T23:23:39Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     },
@@ -1864,9 +1864,9 @@
       "description": "",
       "url": "https://github.com/R6410418/Jackrong-llm-finetuning-guide",
       "homepage": "https://r6410418.github.io/Jackrong-llm-finetuning-guide/",
-      "stars": 1761,
+      "stars": 1762,
       "forks": 277,
-      "watchers": 1761,
+      "watchers": 1762,
       "language": "Jupyter Notebook",
       "topics": [
         "dataset",
@@ -1888,8 +1888,8 @@
         "url": "https://github.com/R6410418"
       },
       "createdAt": "2026-04-05T08:04:43Z",
-      "updatedAt": "2026-11-22T01:40:53Z",
-      "firstSeenAt": "2026-11-22T15:54:35.350Z",
+      "updatedAt": "2026-11-23T09:51:22Z",
+      "firstSeenAt": "2026-11-23T19:48:27.941Z",
       "isNew": true,
       "existing": false
     }

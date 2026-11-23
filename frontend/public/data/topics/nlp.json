@@ -1,9 +1,9 @@
 {
   "topic": "nlp",
-  "fetchedAt": "2026-11-22T15:54:52.981Z",
+  "fetchedAt": "2026-11-23T19:48:47.676Z",
   "count": 50,
-  "newCount": 44,
-  "existingCount": 6,
+  "newCount": 43,
+  "existingCount": 7,
   "items": [
     {
       "id": "gh-topic-155220641",
@@ -13,9 +13,9 @@
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
       "homepage": "https://huggingface.co/transformers",
-      "stars": 169380,
-      "forks": 35263,
-      "watchers": 169380,
+      "stars": 169272,
+      "forks": 35280,
+      "watchers": 169272,
       "language": "Python",
       "topics": [
         "audio",
@@ -44,8 +44,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2018-10-29T13:56:00Z",
-      "updatedAt": "2026-11-22T15:09:37Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:47:55Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
     },
@@ -57,9 +57,9 @@
       "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
       "url": "https://github.com/hiyouga/LlamaFactory",
       "homepage": "https://llamafactory.readthedocs.io",
-      "stars": 76197,
-      "forks": 9385,
-      "watchers": 76197,
+      "stars": 76242,
+      "forks": 9392,
+      "watchers": 76242,
       "language": "Python",
       "topics": [
         "agent",
@@ -89,10 +89,55 @@
         "url": "https://github.com/hiyouga"
       },
       "createdAt": "2023-05-28T10:09:12Z",
-      "updatedAt": "2026-11-22T14:28:09Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:45:35Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
+    },
+    {
+      "id": "gh-topic-1140843380",
+      "repoId": 1140843380,
+      "fullName": "mvanhorn/last30days-skill",
+      "name": "last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "homepage": null,
+      "stars": 73328,
+      "forks": 6477,
+      "watchers": 73328,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "artificial-intelligence",
+        "automation",
+        "bot",
+        "command-line",
+        "data-science",
+        "dsh",
+        "dsh-plugin",
+        "golang",
+        "instagram",
+        "llms",
+        "nlp",
+        "osint",
+        "polymarket",
+        "python3",
+        "reddit",
+        "terminal",
+        "tiktok",
+        "twitter",
+        "youtube"
+      ],
+      "owner": {
+        "login": "mvanhorn",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/455140?v=4",
+        "url": "https://github.com/mvanhorn"
+      },
+      "createdAt": "2026-01-23T20:37:37Z",
+      "updatedAt": "2026-11-23T19:42:57Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-344190478",
@@ -102,9 +147,9 @@
       "description": "12 Weeks, 24 Lessons, AI for All!",
       "url": "https://github.com/microsoft/AI-For-Beginners",
       "homepage": null,
-      "stars": 71162,
-      "forks": 13851,
-      "watchers": 71162,
+      "stars": 71206,
+      "forks": 13860,
+      "watchers": 71206,
       "language": "Jupyter Notebook",
       "topics": [
         "ai",
@@ -124,8 +169,8 @@
         "url": "https://github.com/microsoft"
       },
       "createdAt": "2021-03-03T16:27:36Z",
-      "updatedAt": "2026-11-22T15:48:59Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:13:40Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
     },
@@ -137,9 +182,9 @@
       "description": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
       "url": "https://github.com/666ghj/BettaFish",
       "homepage": "https://deepwiki.com/666ghj/BettaFish",
-      "stars": 42757,
-      "forks": 7646,
-      "watchers": 42757,
+      "stars": 42776,
+      "forks": 7649,
+      "watchers": 42776,
       "language": "Python",
       "topics": [
         "agent-framework",
@@ -159,8 +204,8 @@
         "url": "https://github.com/666ghj"
       },
       "createdAt": "2024-07-01T13:11:38Z",
-      "updatedAt": "2026-11-22T14:47:45Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:27:00Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
     },
@@ -172,9 +217,9 @@
       "description": "AiLearning：数据分析+机器学习实战+线性代数+PyTorch+NLTK+TF2",
       "url": "https://github.com/apachecn/ailearning",
       "homepage": "http://ailearning.apachecn.org/",
-      "stars": 42637,
+      "stars": 42642,
       "forks": 11480,
-      "watchers": 42637,
+      "watchers": 42642,
       "language": "Python",
       "topics": [
         "adaboost",
@@ -204,8 +249,8 @@
         "url": "https://github.com/apachecn"
       },
       "createdAt": "2017-02-25T08:53:02Z",
-      "updatedAt": "2026-11-22T15:47:23Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T15:13:21Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -234,8 +279,8 @@
         "url": "https://github.com/google-research"
       },
       "createdAt": "2018-10-25T22:57:34Z",
-      "updatedAt": "2026-11-22T11:45:28Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T10:45:26Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -247,9 +292,9 @@
       "description": "A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.",
       "url": "https://github.com/google/langextract",
       "homepage": "https://pypi.org/project/langextract/",
-      "stars": 39348,
+      "stars": 39351,
       "forks": 2757,
-      "watchers": 39348,
+      "watchers": 39351,
       "language": "Python",
       "topics": [
         "gemini",
@@ -270,8 +315,8 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2025-07-08T20:46:06Z",
-      "updatedAt": "2026-11-22T10:50:43Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T16:38:53Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
     },
@@ -283,9 +328,9 @@
       "description": "500 AI Machine learning Deep learning Computer vision NLP Projects with code",
       "url": "https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code",
       "homepage": null,
-      "stars": 37848,
+      "stars": 37862,
       "forks": 7563,
-      "watchers": 37848,
+      "watchers": 37862,
       "language": null,
       "topics": [
         "artificial-intelligence",
@@ -308,8 +353,8 @@
         "url": "https://github.com/ashishpatel26"
       },
       "createdAt": "2021-01-02T12:08:37Z",
-      "updatedAt": "2026-11-22T13:53:13Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T17:50:29Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -318,12 +363,12 @@
       "repoId": 24976755,
       "fullName": "hankcs/HanLP",
       "name": "HanLP",
-      "description": "中文分词 词性标注 命名实体识别 依存句法分析 成分句法分析 语义依存分析 语义角色标注 指代消解 风格转换 语义相似度 新词发现 关键词短语提取 自动摘要 文本分类聚类 拼音简繁转换 自然语言处理",
+      "description": "Natural Language Processing for the next decade. Tokenization, Part-of-Speech Tagging, Named Entity Recognition, Syntactic & Semantic Dependency Parsing, Document Classification",
       "url": "https://github.com/hankcs/HanLP",
-      "homepage": "https://hanlp.hankcs.com/",
-      "stars": 36542,
-      "forks": 10869,
-      "watchers": 36542,
+      "homepage": "https://hanlp.hankcs.com/en/",
+      "stars": 36543,
+      "forks": 10870,
+      "watchers": 36543,
       "language": "Python",
       "topics": [
         "dependency-parser",
@@ -341,8 +386,8 @@
         "url": "https://github.com/hankcs"
       },
       "createdAt": "2014-10-09T06:36:16Z",
-      "updatedAt": "2026-11-22T14:57:45Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T16:00:03Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -354,9 +399,9 @@
       "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
       "url": "https://github.com/NandhaKishorM/laya",
       "homepage": "https://huggingface.co/convaiinnovations/laya",
-      "stars": 35827,
-      "forks": 3208,
-      "watchers": 35827,
+      "stars": 35846,
+      "forks": 3210,
+      "watchers": 35846,
       "language": "Python",
       "topics": [
         "calibration",
@@ -379,8 +424,8 @@
         "url": "https://github.com/NandhaKishorM"
       },
       "createdAt": "2026-09-18T04:46:33Z",
-      "updatedAt": "2026-11-22T15:53:43Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:47:31Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -392,9 +437,9 @@
       "description": "💫 Industrial-strength Natural Language Processing (NLP) in Python",
       "url": "https://github.com/explosion/spaCy",
       "homepage": "https://spacy.io",
-      "stars": 34084,
+      "stars": 34090,
       "forks": 4750,
-      "watchers": 34084,
+      "watchers": 34090,
       "language": "Python",
       "topics": [
         "ai",
@@ -421,8 +466,8 @@
         "url": "https://github.com/explosion"
       },
       "createdAt": "2014-07-03T15:15:40Z",
-      "updatedAt": "2026-11-22T14:25:48Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:05:20Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -434,9 +479,9 @@
       "description": "An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations.",
       "url": "https://github.com/stanford-oval/storm",
       "homepage": "http://storm.genie.stanford.edu",
-      "stars": 31924,
-      "forks": 3021,
-      "watchers": 31924,
+      "stars": 31937,
+      "forks": 3020,
+      "watchers": 31937,
       "language": "Python",
       "topics": [
         "agentic-rag",
@@ -455,8 +500,8 @@
         "url": "https://github.com/stanford-oval"
       },
       "createdAt": "2024-03-24T16:23:39Z",
-      "updatedAt": "2026-11-22T10:51:22Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:28:10Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -468,9 +513,9 @@
       "description": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. Each technique has a detailed notebook tutorial.",
       "url": "https://github.com/NirDiamant/RAG_Techniques",
       "homepage": "https://diamant-ai.com",
-      "stars": 30474,
-      "forks": 3723,
-      "watchers": 30474,
+      "stars": 30518,
+      "forks": 3724,
+      "watchers": 30518,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-rag",
@@ -498,8 +543,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-07-13T16:08:36Z",
-      "updatedAt": "2026-11-22T15:27:40Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:15:01Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -511,9 +556,9 @@
       "description": "✅（已完结）超级全面的 深度学习 笔记【土堆 Pytorch】【李沐 动手学深度学习】【吴恩达 深度学习】【大飞 大模型Agent】",
       "url": "https://github.com/AccumulateMore/CV",
       "homepage": null,
-      "stars": 24333,
+      "stars": 24342,
       "forks": 2674,
-      "watchers": 24333,
+      "watchers": 24342,
       "language": "Jupyter Notebook",
       "topics": [
         "agent",
@@ -539,8 +584,8 @@
         "url": "https://github.com/AccumulateMore"
       },
       "createdAt": "2022-03-31T13:19:32Z",
-      "updatedAt": "2026-11-22T13:29:43Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T13:42:39Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -552,9 +597,9 @@
       "description": "🏆 A ranked list of awesome machine learning Python libraries. Updated weekly.",
       "url": "https://github.com/lukasmasuch/best-of-ml-python",
       "homepage": "https://ml-python.best-of.org",
-      "stars": 23876,
-      "forks": 3144,
-      "watchers": 23876,
+      "stars": 23878,
+      "forks": 3146,
+      "watchers": 23878,
       "language": null,
       "topics": [
         "automl",
@@ -583,8 +628,8 @@
         "url": "https://github.com/lukasmasuch"
       },
       "createdAt": "2020-11-29T19:41:36Z",
-      "updatedAt": "2026-11-22T13:18:26Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T11:13:25Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -597,7 +642,7 @@
       "url": "https://github.com/AiHubCN/Awesome-Chinese-LLM",
       "homepage": null,
       "stars": 22781,
-      "forks": 2146,
+      "forks": 2147,
       "watchers": 22781,
       "language": null,
       "topics": [
@@ -615,7 +660,7 @@
       },
       "createdAt": "2023-05-22T12:27:03Z",
       "updatedAt": "2026-11-22T13:36:03Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -660,7 +705,7 @@
       },
       "createdAt": "2019-07-23T04:15:28Z",
       "updatedAt": "2026-11-22T01:55:28Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -672,9 +717,9 @@
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "url": "https://github.com/huggingface/datasets",
       "homepage": "https://huggingface.co/docs/datasets",
-      "stars": 22178,
-      "forks": 3680,
-      "watchers": 22178,
+      "stars": 22181,
+      "forks": 3682,
+      "watchers": 22181,
       "language": "Python",
       "topics": [
         "ai",
@@ -701,8 +746,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2020-03-26T09:23:22Z",
-      "updatedAt": "2026-11-22T04:21:47Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:26:58Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -714,9 +759,9 @@
       "description": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.",
       "url": "https://github.com/AI4Finance-Foundation/FinGPT",
       "homepage": "https://fingpt.io",
-      "stars": 21679,
-      "forks": 3072,
-      "watchers": 21679,
+      "stars": 21693,
+      "forks": 3073,
+      "watchers": 21693,
       "language": "Jupyter Notebook",
       "topics": [
         "chatgpt",
@@ -739,8 +784,8 @@
         "url": "https://github.com/AI4Finance-Foundation"
       },
       "createdAt": "2023-02-11T20:21:34Z",
-      "updatedAt": "2026-11-22T14:10:44Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T16:41:49Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -752,9 +797,9 @@
       "description": "💬   Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants",
       "url": "https://github.com/RasaHQ/rasa",
       "homepage": "https://rasa.com/docs/rasa/",
-      "stars": 21400,
+      "stars": 21402,
       "forks": 4910,
-      "watchers": 21400,
+      "watchers": 21402,
       "language": "Python",
       "topics": [
         "bot",
@@ -784,8 +829,8 @@
         "url": "https://github.com/RasaHQ"
       },
       "createdAt": "2016-10-14T12:27:49Z",
-      "updatedAt": "2026-11-22T04:12:26Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T14:37:06Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -797,9 +842,9 @@
       "description": ":book: A curated list of resources dedicated to Natural Language Processing (NLP)",
       "url": "https://github.com/keon/awesome-nlp",
       "homepage": null,
-      "stars": 19178,
-      "forks": 2884,
-      "watchers": 19178,
+      "stars": 19180,
+      "forks": 2883,
+      "watchers": 19180,
       "language": null,
       "topics": [
         "awesome",
@@ -817,8 +862,8 @@
         "url": "https://github.com/keon"
       },
       "createdAt": "2015-12-01T11:11:33Z",
-      "updatedAt": "2026-11-22T11:31:25Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-22T18:37:49Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -830,9 +875,9 @@
       "description": "中文LLaMA&Alpaca大语言模型+本地CPU/GPU训练部署 (Chinese LLaMA & Alpaca LLMs)",
       "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca",
       "homepage": "https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki",
-      "stars": 18915,
+      "stars": 18914,
       "forks": 1830,
-      "watchers": 18915,
+      "watchers": 18914,
       "language": "Python",
       "topics": [
         "alpaca",
@@ -853,8 +898,8 @@
         "url": "https://github.com/ymcui"
       },
       "createdAt": "2023-03-15T11:09:39Z",
-      "updatedAt": "2026-11-20T05:45:53Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T07:11:21Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -866,9 +911,9 @@
       "description": "此项目是机器学习(Machine Learning)、深度学习(Deep Learning)、NLP面试中常考到的知识点和代码实现，也是作为一个算法工程师必会的理论基础知识。",
       "url": "https://github.com/NLP-LOVE/ML-NLP",
       "homepage": "http://era.dx3906.info",
-      "stars": 17846,
+      "stars": 17847,
       "forks": 4608,
-      "watchers": 17846,
+      "watchers": 17847,
       "language": "Jupyter Notebook",
       "topics": [
         "deep-learning",
@@ -881,8 +926,8 @@
         "url": "https://github.com/NLP-LOVE"
       },
       "createdAt": "2019-07-05T12:49:53Z",
-      "updatedAt": "2026-11-19T22:58:15Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-22T17:48:19Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -894,9 +939,9 @@
       "description": "📺 Discover the latest machine learning / AI courses on YouTube.",
       "url": "https://github.com/dair-ai/ML-YouTube-Courses",
       "homepage": null,
-      "stars": 17504,
-      "forks": 2126,
-      "watchers": 17504,
+      "stars": 17510,
+      "forks": 2125,
+      "watchers": 17510,
       "language": null,
       "topics": [
         "ai",
@@ -912,8 +957,8 @@
         "url": "https://github.com/dair-ai"
       },
       "createdAt": "2021-06-25T09:39:16Z",
-      "updatedAt": "2026-11-22T12:53:28Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T13:15:55Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -925,9 +970,9 @@
       "description": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
       "url": "https://github.com/memvid/memvid",
       "homepage": "https://www.memvid.com",
-      "stars": 17435,
+      "stars": 17437,
       "forks": 1461,
-      "watchers": 17435,
+      "watchers": 17437,
       "language": "Rust",
       "topics": [
         "ai",
@@ -957,8 +1002,8 @@
         "url": "https://github.com/memvid"
       },
       "createdAt": "2025-05-27T16:01:08Z",
-      "updatedAt": "2026-11-22T14:47:03Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T17:06:55Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
     },
@@ -970,9 +1015,9 @@
       "description": "A comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc.",
       "url": "https://github.com/bharathgs/Awesome-pytorch-list",
       "homepage": null,
-      "stars": 16771,
-      "forks": 2837,
-      "watchers": 16771,
+      "stars": 16773,
+      "forks": 2835,
+      "watchers": 16773,
       "language": null,
       "topics": [
         "awesome",
@@ -1002,8 +1047,8 @@
         "url": "https://github.com/bharathgs"
       },
       "createdAt": "2017-03-01T16:58:16Z",
-      "updatedAt": "2026-11-22T07:08:19Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T17:30:45Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1015,9 +1060,9 @@
       "description": "Nano vLLM",
       "url": "https://github.com/GeeeekExplorer/nano-vllm",
       "homepage": null,
-      "stars": 16535,
-      "forks": 2883,
-      "watchers": 16535,
+      "stars": 16546,
+      "forks": 2888,
+      "watchers": 16546,
       "language": "Python",
       "topics": [
         "deep-learning",
@@ -1033,8 +1078,8 @@
         "url": "https://github.com/GeeeekExplorer"
       },
       "createdAt": "2025-06-09T16:22:14Z",
-      "updatedAt": "2026-11-22T14:50:54Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:23:27Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1046,9 +1091,9 @@
       "description": "Topic Modelling for Humans",
       "url": "https://github.com/piskvorky/gensim",
       "homepage": "https://radimrehurek.com/gensim",
-      "stars": 16518,
-      "forks": 4405,
-      "watchers": 16518,
+      "stars": 16520,
+      "forks": 4403,
+      "watchers": 16520,
       "language": "Python",
       "topics": [
         "data-mining",
@@ -1073,8 +1118,8 @@
         "url": "https://github.com/piskvorky"
       },
       "createdAt": "2011-02-10T07:43:04Z",
-      "updatedAt": "2026-11-21T00:51:56Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:12:30Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1086,9 +1131,9 @@
       "description": " Oxford Deep NLP 2017 course",
       "url": "https://github.com/oxford-cs-deepnlp-2017/lectures",
       "homepage": null,
-      "stars": 15849,
+      "stars": 15846,
       "forks": 3528,
-      "watchers": 15849,
+      "watchers": 15846,
       "language": null,
       "topics": [
         "deep-learning",
@@ -1103,8 +1148,8 @@
         "url": "https://github.com/oxford-cs-deepnlp-2017"
       },
       "createdAt": "2017-02-06T11:32:46Z",
-      "updatedAt": "2026-11-21T09:22:58Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T14:31:52Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1116,9 +1161,9 @@
       "description": "Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding.",
       "url": "https://github.com/Unstructured-IO/unstructured",
       "homepage": "https://www.unstructured.io/",
-      "stars": 15770,
-      "forks": 1408,
-      "watchers": 15770,
+      "stars": 15775,
+      "forks": 1410,
+      "watchers": 15775,
       "language": "HTML",
       "topics": [
         "data-pipelines",
@@ -1148,8 +1193,8 @@
         "url": "https://github.com/Unstructured-IO"
       },
       "createdAt": "2022-09-26T21:53:41Z",
-      "updatedAt": "2026-11-21T18:55:14Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T13:55:13Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1194,7 +1239,7 @@
       },
       "createdAt": "2019-03-12T18:45:36Z",
       "updatedAt": "2026-11-22T07:50:18Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1206,9 +1251,9 @@
       "description": "The open-source hub to build & deploy GPT/LLM Agents ⚡️",
       "url": "https://github.com/botpress/botpress",
       "homepage": "https://botpress.com",
-      "stars": 15003,
-      "forks": 2298,
-      "watchers": 15003,
+      "stars": 15006,
+      "forks": 2297,
+      "watchers": 15006,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -1230,8 +1275,8 @@
         "url": "https://github.com/botpress"
       },
       "createdAt": "2016-11-16T21:57:59Z",
-      "updatedAt": "2026-11-22T06:28:22Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T15:21:12Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1264,8 +1309,8 @@
         "url": "https://github.com/graykode"
       },
       "createdAt": "2019-01-09T11:44:20Z",
-      "updatedAt": "2026-11-22T05:23:46Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:49:59Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1278,7 +1323,7 @@
       "url": "https://github.com/NVIDIA/DeepLearningExamples",
       "homepage": null,
       "stars": 14884,
-      "forks": 3401,
+      "forks": 3399,
       "watchers": 14884,
       "language": "Jupyter Notebook",
       "topics": [
@@ -1304,8 +1349,8 @@
         "url": "https://github.com/NVIDIA"
       },
       "createdAt": "2018-05-02T17:04:05Z",
-      "updatedAt": "2026-11-22T09:43:23Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:58:45Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1317,9 +1362,9 @@
       "description": "NLTK Source",
       "url": "https://github.com/nltk/nltk",
       "homepage": "https://www.nltk.org",
-      "stars": 14779,
-      "forks": 3090,
-      "watchers": 14779,
+      "stars": 14778,
+      "forks": 3089,
+      "watchers": 14778,
       "language": "Python",
       "topics": [
         "machine-learning",
@@ -1334,8 +1379,8 @@
         "url": "https://github.com/nltk"
       },
       "createdAt": "2009-09-07T10:53:58Z",
-      "updatedAt": "2026-11-22T14:22:35Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T02:50:36Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1347,9 +1392,9 @@
       "description": "A very simple framework for state-of-the-art Natural Language Processing (NLP)",
       "url": "https://github.com/flairNLP/flair",
       "homepage": "https://flairnlp.github.io/flair/",
-      "stars": 14398,
+      "stars": 14399,
       "forks": 2096,
-      "watchers": 14398,
+      "watchers": 14399,
       "language": "Python",
       "topics": [
         "machine-learning",
@@ -1367,8 +1412,8 @@
         "url": "https://github.com/flairNLP"
       },
       "createdAt": "2018-06-11T11:04:18Z",
-      "updatedAt": "2026-11-21T00:14:19Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T14:42:57Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1380,9 +1425,9 @@
       "description": "💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
       "url": "https://github.com/neuml/txtai",
       "homepage": "https://neuml.github.io/txtai",
-      "stars": 13712,
-      "forks": 1067,
-      "watchers": 13712,
+      "stars": 13722,
+      "forks": 1071,
+      "watchers": 13722,
       "language": "Python",
       "topics": [
         "agents",
@@ -1412,8 +1457,8 @@
         "url": "https://github.com/neuml"
       },
       "createdAt": "2020-08-09T19:14:59Z",
-      "updatedAt": "2026-11-22T15:44:59Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T14:30:25Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1457,8 +1502,8 @@
         "url": "https://github.com/tangyudi"
       },
       "createdAt": "2020-01-28T01:55:06Z",
-      "updatedAt": "2026-11-22T15:09:36Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T09:40:13Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1470,9 +1515,9 @@
       "description": "🔥Highlighting the top ML papers every week.",
       "url": "https://github.com/dair-ai/AI-Papers-of-the-Week",
       "homepage": null,
-      "stars": 13361,
+      "stars": 13369,
       "forks": 835,
-      "watchers": 13361,
+      "watchers": 13369,
       "language": null,
       "topics": [
         "ai",
@@ -1487,8 +1532,8 @@
         "url": "https://github.com/dair-ai"
       },
       "createdAt": "2023-01-08T19:26:35Z",
-      "updatedAt": "2026-11-22T15:01:57Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:16:39Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1500,9 +1545,9 @@
       "description": "Easy-to-use and powerful LLM and SLM library with awesome model zoo.",
       "url": "https://github.com/PaddlePaddle/PaddleNLP",
       "homepage": "https://paddlenlp.readthedocs.io",
-      "stars": 13000,
+      "stars": 12998,
       "forks": 3015,
-      "watchers": 13000,
+      "watchers": 12998,
       "language": "Python",
       "topics": [
         "bert",
@@ -1531,36 +1576,8 @@
         "url": "https://github.com/PaddlePaddle"
       },
       "createdAt": "2021-02-05T13:07:42Z",
-      "updatedAt": "2026-11-21T02:51:25Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1999522",
-      "repoId": 1999522,
-      "fullName": "spencermountain/compromise",
-      "name": "compromise",
-      "description": "modest natural-language processing",
-      "url": "https://github.com/spencermountain/compromise",
-      "homepage": "http://compromise.cool",
-      "stars": 12176,
-      "forks": 673,
-      "watchers": 12176,
-      "language": "JavaScript",
-      "topics": [
-        "named-entity-recognition",
-        "nlp",
-        "part-of-speech"
-      ],
-      "owner": {
-        "login": "spencermountain",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/399657?v=4",
-        "url": "https://github.com/spencermountain"
-      },
-      "createdAt": "2011-07-05T09:04:38Z",
-      "updatedAt": "2026-11-21T00:10:03Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T11:21:43Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1572,9 +1589,9 @@
       "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
       "url": "https://github.com/openvinotoolkit/openvino",
       "homepage": "https://docs.openvino.ai",
-      "stars": 12042,
-      "forks": 3655,
-      "watchers": 12042,
+      "stars": 12250,
+      "forks": 3677,
+      "watchers": 12250,
       "language": "C++",
       "topics": [
         "ai",
@@ -1603,10 +1620,38 @@
         "url": "https://github.com/openvinotoolkit"
       },
       "createdAt": "2018-10-15T10:54:40Z",
-      "updatedAt": "2026-11-22T15:49:02Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T19:40:17Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": true
+    },
+    {
+      "id": "gh-topic-1999522",
+      "repoId": 1999522,
+      "fullName": "spencermountain/compromise",
+      "name": "compromise",
+      "description": "modest natural-language processing",
+      "url": "https://github.com/spencermountain/compromise",
+      "homepage": "http://compromise.cool",
+      "stars": 12176,
+      "forks": 673,
+      "watchers": 12176,
+      "language": "JavaScript",
+      "topics": [
+        "named-entity-recognition",
+        "nlp",
+        "part-of-speech"
+      ],
+      "owner": {
+        "login": "spencermountain",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/399657?v=4",
+        "url": "https://github.com/spencermountain"
+      },
+      "createdAt": "2011-07-05T09:04:38Z",
+      "updatedAt": "2026-11-21T00:10:03Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
+      "isNew": true,
+      "existing": false
     },
     {
       "id": "gh-topic-132129752",
@@ -1616,9 +1661,9 @@
       "description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.",
       "url": "https://github.com/data-privacy-stack/presidio",
       "homepage": "https://presidio.dataprivacystack.org",
-      "stars": 11999,
-      "forks": 1460,
-      "watchers": 11999,
+      "stars": 12013,
+      "forks": 1464,
+      "watchers": 12013,
       "language": "Python",
       "topics": [
         "anonymization",
@@ -1648,8 +1693,8 @@
         "url": "https://github.com/data-privacy-stack"
       },
       "createdAt": "2018-05-04T11:08:58Z",
-      "updatedAt": "2026-11-22T08:43:45Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T17:21:38Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1680,7 +1725,7 @@
       },
       "createdAt": "2017-05-15T15:52:41Z",
       "updatedAt": "2026-11-22T01:43:57Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1692,9 +1737,9 @@
       "description": "💥 Fast State-of-the-Art Tokenizers optimized for Research and Production",
       "url": "https://github.com/huggingface/tokenizers",
       "homepage": "https://huggingface.co/docs/tokenizers",
-      "stars": 11276,
-      "forks": 1277,
-      "watchers": 11276,
+      "stars": 11288,
+      "forks": 1281,
+      "watchers": 11288,
       "language": "Rust",
       "topics": [
         "bert",
@@ -1711,8 +1756,8 @@
         "url": "https://github.com/huggingface"
       },
       "createdAt": "2019-11-01T17:52:20Z",
-      "updatedAt": "2026-11-22T15:04:26Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T14:04:41Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1746,7 +1791,7 @@
       },
       "createdAt": "2022-10-08T10:26:28Z",
       "updatedAt": "2026-11-22T01:50:51Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1758,9 +1803,9 @@
       "description": "🌸 Run LLMs at home, BitTorrent-style. Fine-tuning and inference up to 10x faster than offloading",
       "url": "https://github.com/bigscience-workshop/petals",
       "homepage": "https://petals.dev",
-      "stars": 10726,
-      "forks": 657,
-      "watchers": 10726,
+      "stars": 10727,
+      "forks": 656,
+      "watchers": 10727,
       "language": "Python",
       "topics": [
         "bloom",
@@ -1790,8 +1835,8 @@
         "url": "https://github.com/bigscience-workshop"
       },
       "createdAt": "2022-06-12T00:10:27Z",
-      "updatedAt": "2026-11-22T09:46:31Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T18:15:08Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1803,9 +1848,9 @@
       "description": "This repository contains code examples for the Stanford's course: TensorFlow for Deep Learning Research. ",
       "url": "https://github.com/chiphuyen/stanford-tensorflow-tutorials",
       "homepage": "http://cs20.stanford.edu",
-      "stars": 10374,
-      "forks": 4219,
-      "watchers": 10374,
+      "stars": 10373,
+      "forks": 4218,
+      "watchers": 10373,
       "language": "Python",
       "topics": [
         "chatbot",
@@ -1825,8 +1870,8 @@
         "url": "https://github.com/chiphuyen"
       },
       "createdAt": "2016-11-05T18:21:51Z",
-      "updatedAt": "2026-11-20T19:55:48Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "updatedAt": "2026-11-23T13:26:14Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     },
@@ -1861,36 +1906,7 @@
       },
       "createdAt": "2019-06-19T22:55:01Z",
       "updatedAt": "2026-11-22T15:44:07Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-631454728",
-      "repoId": 631454728,
-      "fullName": "Mooler0410/LLMsPracticalGuide",
-      "name": "LLMsPracticalGuide",
-      "description": "A curated list of practical guide resources of LLMs (LLMs Tree, Examples, Papers)",
-      "url": "https://github.com/Mooler0410/LLMsPracticalGuide",
-      "homepage": "https://arxiv.org/abs/2304.13712v2",
-      "stars": 10214,
-      "forks": 782,
-      "watchers": 10214,
-      "language": null,
-      "topics": [
-        "large-language-models",
-        "natural-language-processing",
-        "nlp",
-        "survey"
-      ],
-      "owner": {
-        "login": "Mooler0410",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/37475129?v=4",
-        "url": "https://github.com/Mooler0410"
-      },
-      "createdAt": "2023-04-23T04:22:20Z",
-      "updatedAt": "2026-11-19T22:55:13Z",
-      "firstSeenAt": "2026-11-22T15:54:52.981Z",
+      "firstSeenAt": "2026-11-23T19:48:47.676Z",
       "isNew": true,
       "existing": false
     }
