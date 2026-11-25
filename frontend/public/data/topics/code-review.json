@@ -1,6 +1,6 @@
 {
   "topic": "code-review",
-  "fetchedAt": "2026-11-24T19:24:58.264Z",
+  "fetchedAt": "2026-11-25T18:29:49.564Z",
   "count": 50,
   "newCount": 39,
   "existingCount": 11,
@@ -13,9 +13,9 @@
       "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "url": "https://github.com/alibaba/open-code-review",
       "homepage": "https://open-codereview.ai",
-      "stars": 56013,
-      "forks": 4628,
-      "watchers": 56013,
+      "stars": 56307,
+      "forks": 4652,
+      "watchers": 56307,
       "language": "Go",
       "topics": [
         "agent",
@@ -31,8 +31,8 @@
         "url": "https://github.com/alibaba"
       },
       "createdAt": "2026-05-18T02:16:36Z",
-      "updatedAt": "2026-11-24T19:21:22Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:22:05Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -44,9 +44,9 @@
       "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
       "url": "https://github.com/tirth8205/code-review-graph",
       "homepage": "https://code-review-graph.com",
-      "stars": 32931,
-      "forks": 2994,
-      "watchers": 32931,
+      "stars": 32946,
+      "forks": 2997,
+      "watchers": 32946,
       "language": "Python",
       "topics": [
         "ai-coding",
@@ -68,8 +68,8 @@
         "url": "https://github.com/tirth8205"
       },
       "createdAt": "2026-02-26T17:25:13Z",
-      "updatedAt": "2026-11-24T19:05:00Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:08:39Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -81,9 +81,9 @@
       "description": "GitHub on steroids",
       "url": "https://github.com/ovity/octotree",
       "homepage": "https://www.octotree.io/",
-      "stars": 23330,
+      "stars": 23333,
       "forks": 1781,
-      "watchers": 23330,
+      "watchers": 23333,
       "language": "JavaScript",
       "topics": [
         "browser-extension",
@@ -103,8 +103,8 @@
         "url": "https://github.com/ovity"
       },
       "createdAt": "2014-05-09T18:15:20Z",
-      "updatedAt": "2026-11-24T13:23:55Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T13:20:56Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -116,9 +116,9 @@
       "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
       "url": "https://github.com/The-PR-Agent/pr-agent",
       "homepage": "https://www.pr-agent.ai",
-      "stars": 16633,
-      "forks": 2245,
-      "watchers": 16633,
+      "stars": 16664,
+      "forks": 2250,
+      "watchers": 16664,
       "language": "Python",
       "topics": [
         "ai",
@@ -137,8 +137,8 @@
         "url": "https://github.com/The-PR-Agent"
       },
       "createdAt": "2023-07-05T21:02:15Z",
-      "updatedAt": "2026-11-24T18:51:36Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:34:58Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -150,9 +150,9 @@
       "description": "Your agent writes bad React. This catches it",
       "url": "https://github.com/millionco/react-doctor",
       "homepage": "https://react.doctor",
-      "stars": 15183,
-      "forks": 504,
-      "watchers": 15183,
+      "stars": 15184,
+      "forks": 503,
+      "watchers": 15184,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -167,8 +167,8 @@
         "url": "https://github.com/millionco"
       },
       "createdAt": "2026-02-13T09:02:13Z",
-      "updatedAt": "2026-11-24T18:28:08Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T11:50:55Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -180,9 +180,9 @@
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
       "url": "https://github.com/backnotprop/plannotator",
       "homepage": "https://plannotator.ai",
-      "stars": 14856,
-      "forks": 1432,
-      "watchers": 14856,
+      "stars": 15053,
+      "forks": 1448,
+      "watchers": 15053,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -201,8 +201,8 @@
         "url": "https://github.com/backnotprop"
       },
       "createdAt": "2025-12-28T02:09:40Z",
-      "updatedAt": "2026-11-24T19:21:00Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:21:37Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -214,9 +214,9 @@
       "description": "The developer platform for on-demand cloud development environments to create software faster and more securely.",
       "url": "https://github.com/gitpod-io/gitpod",
       "homepage": "https://www.gitpod.io",
-      "stars": 13800,
+      "stars": 13801,
       "forks": 1389,
-      "watchers": 13800,
+      "watchers": 13801,
       "language": "TypeScript",
       "topics": [
         "cde",
@@ -245,8 +245,8 @@
         "url": "https://github.com/gitpod-io"
       },
       "createdAt": "2018-04-24T15:56:54Z",
-      "updatedAt": "2026-11-24T14:24:57Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-24T21:52:41Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -258,9 +258,9 @@
       "description": "Review-first terminal diff viewer for agentic coders",
       "url": "https://github.com/modem-dev/hunk",
       "homepage": "https://hunk.dev",
-      "stars": 9885,
-      "forks": 340,
-      "watchers": 9885,
+      "stars": 9904,
+      "forks": 339,
+      "watchers": 9904,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -280,8 +280,8 @@
         "url": "https://github.com/modem-dev"
       },
       "createdAt": "2026-03-17T19:16:15Z",
-      "updatedAt": "2026-11-24T16:50:15Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:27:54Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -293,9 +293,9 @@
       "description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
       "url": "https://github.com/reviewdog/reviewdog",
       "homepage": "https://medium.com/@haya14busa/reviewdog-a-code-review-dog-who-keeps-your-codebase-healthy-d957c471938b#.8xctbaw5u",
-      "stars": 9761,
-      "forks": 519,
-      "watchers": 9761,
+      "stars": 9765,
+      "forks": 517,
+      "watchers": 9765,
       "language": "Go",
       "topics": [
         "bitbucket",
@@ -318,8 +318,8 @@
         "url": "https://github.com/reviewdog"
       },
       "createdAt": "2016-10-17T11:58:34Z",
-      "updatedAt": "2026-11-24T12:53:21Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:51:23Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -331,9 +331,9 @@
       "description": "Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, personas, and optional bounded review. Open source, no agent lock-in.",
       "url": "https://github.com/Gentleman-Programming/gentle-ai",
       "homepage": "https://gentlemanprogramming.com/",
-      "stars": 9543,
-      "forks": 907,
-      "watchers": 9543,
+      "stars": 9574,
+      "forks": 910,
+      "watchers": 9574,
       "language": "Go",
       "topics": [
         "agent-skills",
@@ -360,8 +360,8 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-02-27T23:28:01Z",
-      "updatedAt": "2026-11-24T17:04:34Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:18:05Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -373,9 +373,9 @@
       "description": "🦸 AI 编程超能力 · 中文增强版 — superpowers（250k+ ⭐）完整汉化 + 4 个中国原创 skills，让 Claude Code / Copilot CLI / Hermes Agent / Cursor / Windsurf / Kiro / Gemini CLI / Qoder 等 26 款 AI 编程工具真正会干活",
       "url": "https://github.com/jnMetaCode/superpowers-zh",
       "homepage": "https://sp.aiolaola.com",
-      "stars": 8591,
+      "stars": 8598,
       "forks": 798,
-      "watchers": 8591,
+      "watchers": 8598,
       "language": "JavaScript",
       "topics": [
         "agent-skills",
@@ -401,8 +401,8 @@
         "url": "https://github.com/jnMetaCode"
       },
       "createdAt": "2026-03-20T00:12:39Z",
-      "updatedAt": "2026-11-24T18:28:24Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T14:23:59Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -414,9 +414,9 @@
       "description": "DeepAudit：人人拥有的 AI 黑客战队，让漏洞挖掘触手可及。小白一键部署运行，自主协作审计 + 自动化沙箱 PoC 验证。支持 Ollama 私有部署 ，一键生成报告。支持中转站。​让安全不再昂贵，让审计不再复杂。",
       "url": "https://github.com/lintsinghua/DeepAudit",
       "homepage": null,
-      "stars": 7350,
+      "stars": 7356,
       "forks": 899,
-      "watchers": 7350,
+      "watchers": 7356,
       "language": "Python",
       "topics": [
         "ai",
@@ -443,8 +443,8 @@
         "url": "https://github.com/lintsinghua"
       },
       "createdAt": "2025-09-19T15:53:48Z",
-      "updatedAt": "2026-11-24T17:28:31Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T14:16:31Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -456,9 +456,9 @@
       "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
       "url": "https://github.com/Tencent/LoopForge",
       "homepage": "https://loopforge.cn",
-      "stars": 5985,
-      "forks": 846,
-      "watchers": 5985,
+      "stars": 6087,
+      "forks": 859,
+      "watchers": 6087,
       "language": "Go",
       "topics": [
         "agent-orchestration",
@@ -488,8 +488,8 @@
         "url": "https://github.com/Tencent"
       },
       "createdAt": "2026-07-28T03:51:01Z",
-      "updatedAt": "2026-11-24T19:17:24Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T16:07:49Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -523,7 +523,7 @@
       },
       "createdAt": "2015-09-29T05:54:39Z",
       "updatedAt": "2026-11-24T12:22:58Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -535,9 +535,9 @@
       "description": "⚠️ Stop saying \"you forgot to …\" in code review",
       "url": "https://github.com/danger/danger-js",
       "homepage": "http://danger.systems/js/",
-      "stars": 5519,
-      "forks": 387,
-      "watchers": 5519,
+      "stars": 5520,
+      "forks": 385,
+      "watchers": 5520,
       "language": "TypeScript",
       "topics": [
         "ci",
@@ -555,8 +555,8 @@
         "url": "https://github.com/danger"
       },
       "createdAt": "2016-08-20T12:57:06Z",
-      "updatedAt": "2026-11-24T12:48:28Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:19:52Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -585,7 +585,7 @@
       },
       "createdAt": "2018-01-31T22:57:24Z",
       "updatedAt": "2026-11-24T07:21:29Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -597,9 +597,9 @@
       "description": "Antigravity, Claude Code, Codex, Copilot, DeepSeek Harness, Gemini, Grok Build, Kimi Code, MiniMax Code, Muse, OMP, OpenCode, Pi, Prime Agent, etc versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
       "url": "https://github.com/michael-denyer/pstack-claude",
       "homepage": null,
-      "stars": 4824,
-      "forks": 446,
-      "watchers": 4824,
+      "stars": 4868,
+      "forks": 452,
+      "watchers": 4868,
       "language": "JavaScript",
       "topics": [
         "agent-plugin",
@@ -629,8 +629,8 @@
         "url": "https://github.com/michael-denyer"
       },
       "createdAt": "2026-05-26T13:26:00Z",
-      "updatedAt": "2026-11-24T18:41:37Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:36:22Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -673,7 +673,7 @@
       },
       "createdAt": "2023-08-21T14:10:35Z",
       "updatedAt": "2026-11-24T15:02:45Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -685,9 +685,9 @@
       "description": "a code review TUI with vim keybindings",
       "url": "https://github.com/agavra/tuicr",
       "homepage": "https://tuicr.dev/",
-      "stars": 3658,
-      "forks": 350,
-      "watchers": 3658,
+      "stars": 3669,
+      "forks": 351,
+      "watchers": 3669,
       "language": "Rust",
       "topics": [
         "ai-tools",
@@ -701,8 +701,8 @@
         "url": "https://github.com/agavra"
       },
       "createdAt": "2026-01-08T04:55:34Z",
-      "updatedAt": "2026-11-24T17:45:05Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T15:02:25Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -714,9 +714,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2946,
-      "forks": 303,
-      "watchers": 2946,
+      "stars": 2978,
+      "forks": 305,
+      "watchers": 2978,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -746,8 +746,8 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-24T19:01:56Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:14:33Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -759,9 +759,9 @@
       "description": "A modular, stack-agnostic toolkit for AI coding agents to autonomously find, reproduce, and patch vulnerabilities.",
       "url": "https://github.com/google/mantis",
       "homepage": "https://cloud.google.com/",
-      "stars": 2821,
-      "forks": 244,
-      "watchers": 2821,
+      "stars": 2825,
+      "forks": 245,
+      "watchers": 2825,
       "language": "Python",
       "topics": [
         "adk",
@@ -791,8 +791,8 @@
         "url": "https://github.com/google"
       },
       "createdAt": "2026-06-15T20:58:00Z",
-      "updatedAt": "2026-11-24T14:36:33Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T10:55:25Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -821,7 +821,7 @@
       },
       "createdAt": "2018-05-24T23:05:02Z",
       "updatedAt": "2026-11-22T14:07:25Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -859,7 +859,7 @@
       },
       "createdAt": "2015-02-27T12:52:46Z",
       "updatedAt": "2026-11-19T19:29:39Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -871,9 +871,9 @@
       "description": "The ripgrep of AI context: a zero-dependency C++23 CLI + MCP server for coding agents. Cut agent token costs by finding code without reading the repo, then keep large codebases off the complexity wall: blast radius, tests to run, quality deltas as you write. Every guess labelled, every loss published. Paddle out with a map.",
       "url": "https://github.com/redhat-et/ripwire",
       "homepage": null,
-      "stars": 2562,
-      "forks": 180,
-      "watchers": 2562,
+      "stars": 2564,
+      "forks": 181,
+      "watchers": 2564,
       "language": "C++",
       "topics": [
         "agent-tools",
@@ -903,8 +903,8 @@
         "url": "https://github.com/redhat-et"
       },
       "createdAt": "2026-07-29T15:58:33Z",
-      "updatedAt": "2026-11-24T05:32:33Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T09:17:26Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -916,9 +916,9 @@
       "description": "extendable code review and QA agent 🚢",
       "url": "https://github.com/mattzcarey/shippie",
       "homepage": "https://shippie.dev",
-      "stars": 2534,
+      "stars": 2535,
       "forks": 242,
-      "watchers": 2534,
+      "watchers": 2535,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -942,8 +942,8 @@
         "url": "https://github.com/mattzcarey"
       },
       "createdAt": "2023-07-06T22:15:26Z",
-      "updatedAt": "2026-11-24T19:08:26Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:46:03Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -976,7 +976,7 @@
       },
       "createdAt": "2018-08-22T03:37:24Z",
       "updatedAt": "2026-11-24T00:38:18Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -988,9 +988,9 @@
       "description": "Multi-agent graph harness for Claude Code, Codex and other coding agents. Separate agents review and test the work. Runs locally on your subscription.",
       "url": "https://github.com/the-open-engine/zeroshot",
       "homepage": "https://zeroshot.sh",
-      "stars": 2223,
-      "forks": 213,
-      "watchers": 2223,
+      "stars": 2227,
+      "forks": 215,
+      "watchers": 2227,
       "language": "Rust",
       "topics": [
         "agent-harness",
@@ -1020,8 +1020,8 @@
         "url": "https://github.com/the-open-engine"
       },
       "createdAt": "2025-12-25T17:12:45Z",
-      "updatedAt": "2026-11-24T15:19:59Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T05:49:06Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1033,9 +1033,9 @@
       "description": "Mutation testing for Ruby. AI writes your code. AI writes your tests. But who tests the tests?",
       "url": "https://github.com/mbj/mutant",
       "homepage": null,
-      "stars": 2214,
+      "stars": 2215,
       "forks": 163,
-      "watchers": 2214,
+      "watchers": 2215,
       "language": "Ruby",
       "topics": [
         "code-quality-analyzer",
@@ -1055,8 +1055,8 @@
         "url": "https://github.com/mbj"
       },
       "createdAt": "2012-07-23T14:18:46Z",
-      "updatedAt": "2026-11-22T13:54:43Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T13:56:52Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1068,9 +1068,9 @@
       "description": "Plan, implement and verify software with your favorite coding agents. Work in the App or browser, or in your own terminal, IDE or agent app.",
       "url": "https://github.com/maxritter/qualitylayer",
       "homepage": "https://qualitylayer.dev",
-      "stars": 2163,
+      "stars": 2162,
       "forks": 181,
-      "watchers": 2163,
+      "watchers": 2162,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1100,8 +1100,8 @@
         "url": "https://github.com/maxritter"
       },
       "createdAt": "2025-10-18T08:30:23Z",
-      "updatedAt": "2026-11-24T15:47:44Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T13:57:22Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1113,9 +1113,9 @@
       "description": "Agent Skills that teach coding agents to write, review, and port idiomatic Rust, plus a tested clippy config. Works with Claude Code, Codex, Copilot, Cursor, and Gemini CLI.",
       "url": "https://github.com/morganlinton/BeautifulRust",
       "homepage": "https://www.beautifulrust.dev",
-      "stars": 2127,
+      "stars": 2136,
       "forks": 103,
-      "watchers": 2127,
+      "watchers": 2136,
       "language": "Python",
       "topics": [
         "agent-skills",
@@ -1135,8 +1135,8 @@
         "url": "https://github.com/morganlinton"
       },
       "createdAt": "2026-10-23T03:01:11Z",
-      "updatedAt": "2026-11-24T18:55:23Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T10:27:24Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1148,9 +1148,9 @@
       "description": "Static Code Analysis - 静态代码分析",
       "url": "https://github.com/Tencent/CodeAnalysis",
       "homepage": "https://tencent.github.io/CodeAnalysis/",
-      "stars": 1851,
+      "stars": 1852,
       "forks": 305,
-      "watchers": 1851,
+      "watchers": 1852,
       "language": "Python",
       "topics": [
         "code-analysis",
@@ -1166,8 +1166,8 @@
         "url": "https://github.com/Tencent"
       },
       "createdAt": "2021-12-28T10:49:20Z",
-      "updatedAt": "2026-11-19T22:26:15Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T02:14:47Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1197,7 +1197,7 @@
       },
       "createdAt": "2009-08-22T21:39:49Z",
       "updatedAt": "2026-11-24T06:00:22Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1209,9 +1209,9 @@
       "description": "Open source, self-hosted AI code review. Bring your own LLM.",
       "url": "https://github.com/kodustech/kodus-ai",
       "homepage": "https://kodus.io",
-      "stars": 1654,
-      "forks": 212,
-      "watchers": 1654,
+      "stars": 1660,
+      "forks": 214,
+      "watchers": 1660,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1235,8 +1235,8 @@
         "url": "https://github.com/kodustech"
       },
       "createdAt": "2025-03-28T17:05:19Z",
-      "updatedAt": "2026-11-24T12:25:21Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T16:03:10Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1248,9 +1248,9 @@
       "description": "Open-source AI security agents that continuously find, prove and fix security risks. CLI, web console and GitHub Action. Bring your own model.",
       "url": "https://github.com/0sec-labs/0security",
       "homepage": "https://0.security",
-      "stars": 1602,
-      "forks": 224,
-      "watchers": 1602,
+      "stars": 1621,
+      "forks": 223,
+      "watchers": 1621,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -1272,8 +1272,8 @@
         "url": "https://github.com/0sec-labs"
       },
       "createdAt": "2026-08-19T07:54:37Z",
-      "updatedAt": "2026-11-24T15:50:27Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:30:17Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1318,40 +1318,7 @@
       },
       "createdAt": "2026-03-26T11:40:33Z",
       "updatedAt": "2026-11-24T10:25:28Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1173738644",
-      "repoId": 1173738644,
-      "fullName": "michaelshimeles/rstack",
-      "name": "rstack",
-      "description": "Agent skills and an AGENTS.md workflow template — isolate in worktrees, build to a service layer, prove with evidence, ship with before/after proof and Greptile review loops. For Claude Code, Cursor, and Codex.",
-      "url": "https://github.com/michaelshimeles/rstack",
-      "homepage": null,
-      "stars": 1543,
-      "forks": 261,
-      "watchers": 1543,
-      "language": "Python",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "claude-code",
-        "code-review",
-        "codex",
-        "cursor",
-        "developer-workflow",
-        "greptile"
-      ],
-      "owner": {
-        "login": "michaelshimeles",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/69605071?v=4",
-        "url": "https://github.com/michaelshimeles"
-      },
-      "createdAt": "2026-03-05T17:40:23Z",
-      "updatedAt": "2026-11-24T16:37:27Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1363,9 +1330,9 @@
       "description": "Live messaging for coding agents",
       "url": "https://github.com/Get-Concord-AI/concord-mcp",
       "homepage": "https://getconcord.ai",
-      "stars": 1542,
-      "forks": 95,
-      "watchers": 1542,
+      "stars": 1570,
+      "forks": 97,
+      "watchers": 1570,
       "language": "TypeScript",
       "topics": [
         "agentic-coding",
@@ -1388,8 +1355,41 @@
         "url": "https://github.com/Get-Concord-AI"
       },
       "createdAt": "2026-07-14T16:30:00Z",
-      "updatedAt": "2026-11-24T18:08:05Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:11:44Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1173738644",
+      "repoId": 1173738644,
+      "fullName": "michaelshimeles/rstack",
+      "name": "rstack",
+      "description": "Agent skills and an AGENTS.md workflow template — isolate in worktrees, build to a service layer, prove with evidence, ship with before/after proof and Greptile review loops. For Claude Code, Cursor, and Codex.",
+      "url": "https://github.com/michaelshimeles/rstack",
+      "homepage": null,
+      "stars": 1562,
+      "forks": 260,
+      "watchers": 1562,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude-code",
+        "code-review",
+        "codex",
+        "cursor",
+        "developer-workflow",
+        "greptile"
+      ],
+      "owner": {
+        "login": "michaelshimeles",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/69605071?v=4",
+        "url": "https://github.com/michaelshimeles"
+      },
+      "createdAt": "2026-03-05T17:40:23Z",
+      "updatedAt": "2026-11-25T13:48:20Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1401,9 +1401,9 @@
       "description": "Fast, robust, accurate diffing ",
       "url": "https://github.com/ivankovic/omnidiff",
       "homepage": "https://ivankovic.github.io/omnidiff/showcase/",
-      "stars": 1540,
+      "stars": 1544,
       "forks": 37,
-      "watchers": 1540,
+      "watchers": 1544,
       "language": "Rust",
       "topics": [
         "ast-diff",
@@ -1428,8 +1428,8 @@
         "url": "https://github.com/ivankovic"
       },
       "createdAt": "2025-10-17T11:25:02Z",
-      "updatedAt": "2026-11-24T16:19:12Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T09:10:54Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1460,7 +1460,7 @@
       },
       "createdAt": "2017-08-19T18:19:14Z",
       "updatedAt": "2026-11-24T12:15:36Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1472,9 +1472,9 @@
       "description": "Reusable AI agent skills for growing software farms: explore ideas, write specs, let agents build unattended, then curate what grew — weed, prune, and review. Works with Claude Code, Codex, and other skill-compatible agents.",
       "url": "https://github.com/dzhng/skills",
       "homepage": null,
-      "stars": 1519,
+      "stars": 1520,
       "forks": 86,
-      "watchers": 1519,
+      "watchers": 1520,
       "language": "HTML",
       "topics": [
         "agent-skills",
@@ -1496,8 +1496,8 @@
         "url": "https://github.com/dzhng"
       },
       "createdAt": "2026-07-02T10:24:16Z",
-      "updatedAt": "2026-11-24T13:29:15Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-24T19:37:45Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1509,9 +1509,9 @@
       "description": "Free, Micro AI Code Reviews That Run on Git Commit",
       "url": "https://github.com/HexmosTech/git-lrc",
       "homepage": "https://hexmos.com/livereview/git-lrc/",
-      "stars": 1496,
+      "stars": 1497,
       "forks": 189,
-      "watchers": 1496,
+      "watchers": 1497,
       "language": "Go",
       "topics": [
         "ai",
@@ -1534,8 +1534,8 @@
         "url": "https://github.com/HexmosTech"
       },
       "createdAt": "2026-02-08T05:44:39Z",
-      "updatedAt": "2026-11-24T15:32:20Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T12:26:11Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": true
     },
@@ -1567,7 +1567,40 @@
       },
       "createdAt": "2019-03-08T19:47:01Z",
       "updatedAt": "2026-11-19T21:18:30Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1159323006",
+      "repoId": 1159323006,
+      "fullName": "tomasz-tomczyk/crit",
+      "name": "crit",
+      "description": "Review AI coding agents' plans, diffs and running apps in the browser. Local-first, works with any agent.",
+      "url": "https://github.com/tomasz-tomczyk/crit",
+      "homepage": "https://crit.md",
+      "stars": 1360,
+      "forks": 136,
+      "watchers": 1360,
+      "language": "Go",
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "ai-tools",
+        "cli",
+        "code-review",
+        "developer-tools",
+        "llm",
+        "markdown"
+      ],
+      "owner": {
+        "login": "tomasz-tomczyk",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/182303?v=4",
+        "url": "https://github.com/tomasz-tomczyk"
+      },
+      "createdAt": "2026-02-16T15:39:33Z",
+      "updatedAt": "2026-11-25T13:05:26Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1579,9 +1612,9 @@
       "description": "Professional slash commands for Claude Code that provide   structured workflows for software development tasks including   code review, feature creation, security auditing, and architectural analysis.",
       "url": "https://github.com/qdhenry/Claude-Command-Suite",
       "homepage": "https://docs.anthropic.com/en/docs/claude-code",
-      "stars": 1357,
+      "stars": 1359,
       "forks": 160,
-      "watchers": 1357,
+      "watchers": 1359,
       "language": "Shell",
       "topics": [
         "ai-tools",
@@ -1602,41 +1635,8 @@
         "url": "https://github.com/qdhenry"
       },
       "createdAt": "2025-06-13T01:49:01Z",
-      "updatedAt": "2026-11-23T22:15:37Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1159323006",
-      "repoId": 1159323006,
-      "fullName": "tomasz-tomczyk/crit",
-      "name": "crit",
-      "description": "Review AI coding agents' plans, diffs and running apps in the browser. Local-first, works with any agent.",
-      "url": "https://github.com/tomasz-tomczyk/crit",
-      "homepage": "https://crit.md",
-      "stars": 1356,
-      "forks": 134,
-      "watchers": 1356,
-      "language": "Go",
-      "topics": [
-        "agentic-coding",
-        "ai-agents",
-        "ai-tools",
-        "cli",
-        "code-review",
-        "developer-tools",
-        "llm",
-        "markdown"
-      ],
-      "owner": {
-        "login": "tomasz-tomczyk",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/182303?v=4",
-        "url": "https://github.com/tomasz-tomczyk"
-      },
-      "createdAt": "2026-02-16T15:39:33Z",
-      "updatedAt": "2026-11-24T17:38:02Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T03:19:28Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1668,7 +1668,7 @@
       },
       "createdAt": "2017-10-12T10:20:00Z",
       "updatedAt": "2026-11-19T20:40:08Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1680,9 +1680,9 @@
       "description": "Guard skills for coding agents, quality gates that catch AI-generated failure modes in code, tests, and docs",
       "url": "https://github.com/amElnagdy/guard-skills",
       "homepage": "https://skills.sh/amElnagdy/guard-skills",
-      "stars": 1322,
+      "stars": 1324,
       "forks": 140,
-      "watchers": 1322,
+      "watchers": 1324,
       "language": null,
       "topics": [
         "agent-skills",
@@ -1701,8 +1701,8 @@
         "url": "https://github.com/amElnagdy"
       },
       "createdAt": "2026-06-06T16:59:27Z",
-      "updatedAt": "2026-11-24T12:48:08Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T06:39:37Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1746,8 +1746,8 @@
         "url": "https://github.com/Spielewoy"
       },
       "createdAt": "2026-08-17T22:40:47Z",
-      "updatedAt": "2026-11-24T07:24:40Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T17:42:44Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1759,9 +1759,9 @@
       "description": "Open source AI code review for coding agents. A separate reviewer checks every change your agent writes before you push, in Claude Code, Codex, Cursor and Cline. No account or key of its own.",
       "url": "https://github.com/openqodex/openqodex",
       "homepage": "https://openqodex.com",
-      "stars": 1213,
+      "stars": 1216,
       "forks": 87,
-      "watchers": 1213,
+      "watchers": 1216,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1791,8 +1791,8 @@
         "url": "https://github.com/openqodex"
       },
       "createdAt": "2026-10-02T06:19:06Z",
-      "updatedAt": "2026-11-24T17:13:13Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T10:27:46Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1804,9 +1804,9 @@
       "description": "AI Kanban & Development Environment. Orchestrate multiple agents, review changes, open PRs. Multi-provider, self-hostable, no telemetry.",
       "url": "https://github.com/kdlbs/kandev",
       "homepage": "https://kandev.ai",
-      "stars": 1179,
-      "forks": 194,
-      "watchers": 1179,
+      "stars": 1183,
+      "forks": 195,
+      "watchers": 1183,
       "language": "Go",
       "topics": [
         "acp",
@@ -1836,8 +1836,8 @@
         "url": "https://github.com/kdlbs"
       },
       "createdAt": "2026-01-09T23:26:53Z",
-      "updatedAt": "2026-11-24T13:13:23Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "updatedAt": "2026-11-25T18:18:24Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     },
@@ -1871,7 +1871,7 @@
       },
       "createdAt": "2020-09-02T09:37:06Z",
       "updatedAt": "2026-11-19T21:58:00Z",
-      "firstSeenAt": "2026-11-24T19:24:58.264Z",
+      "firstSeenAt": "2026-11-25T18:29:49.564Z",
       "isNew": true,
       "existing": false
     }

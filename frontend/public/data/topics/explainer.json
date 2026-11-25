@@ -1,6 +1,6 @@
 {
   "topic": "explainer",
-  "fetchedAt": "2026-11-24T19:22:13.983Z",
+  "fetchedAt": "2026-11-25T18:27:21.190Z",
   "count": 50,
   "newCount": 50,
   "existingCount": 0,
@@ -13,9 +13,9 @@
       "description": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
       "url": "https://github.com/QingYunA/answer-me-with-html",
       "homepage": "https://answer-me-with-html.com/",
-      "stars": 6644,
-      "forks": 458,
-      "watchers": 6644,
+      "stars": 6662,
+      "forks": 460,
+      "watchers": 6662,
       "language": "JavaScript",
       "topics": [
         "agent-skill",
@@ -38,8 +38,8 @@
         "url": "https://github.com/QingYunA"
       },
       "createdAt": "2026-10-02T09:57:40Z",
-      "updatedAt": "2026-11-24T19:05:02Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "updatedAt": "2026-11-25T16:25:50Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -78,7 +78,7 @@
       },
       "createdAt": "2019-10-30T08:26:16Z",
       "updatedAt": "2026-11-21T02:37:26Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -107,7 +107,7 @@
       },
       "createdAt": "2018-12-06T00:30:17Z",
       "updatedAt": "2026-11-24T17:45:41Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -143,8 +143,8 @@
         "url": "https://github.com/op7418"
       },
       "createdAt": "2026-07-07T13:57:13Z",
-      "updatedAt": "2026-11-24T10:55:52Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "updatedAt": "2026-11-25T15:58:35Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -178,7 +178,7 @@
       },
       "createdAt": "2019-09-25T15:43:56Z",
       "updatedAt": "2026-11-19T21:32:50Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -222,7 +222,7 @@
       },
       "createdAt": "2019-09-04T16:39:48Z",
       "updatedAt": "2026-11-19T21:31:27Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -253,7 +253,7 @@
       },
       "createdAt": "2023-02-07T15:03:04Z",
       "updatedAt": "2026-11-19T22:49:13Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -265,9 +265,9 @@
       "description": "Karpathy's understanding ladder as agent skills: auto-pick text, diagram, interactive HTML, or video storyboard for any explanation. Nothing cut. English + 中文.",
       "url": "https://github.com/ChangWenC/understanding-ladder",
       "homepage": "https://changwenc.github.io/understanding-ladder/docs/demo/",
-      "stars": 123,
+      "stars": 124,
       "forks": 5,
-      "watchers": 123,
+      "watchers": 124,
       "language": null,
       "topics": [
         "agent-skills",
@@ -289,8 +289,39 @@
         "url": "https://github.com/ChangWenC"
       },
       "createdAt": "2026-10-04T21:41:34Z",
-      "updatedAt": "2026-11-14T17:14:50Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "updatedAt": "2026-11-24T20:23:10Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1471546451",
+      "repoId": 1471546451,
+      "fullName": "Moh4696/inkworks-skill",
+      "name": "inkworks-skill",
+      "description": "Inkworks: an agent skill for interactive 3D how-it-works pages drawn like an engineering sheet.",
+      "url": "https://github.com/Moh4696/inkworks-skill",
+      "homepage": "https://x.com/exploraX_",
+      "stars": 90,
+      "forks": 12,
+      "watchers": 90,
+      "language": "JavaScript",
+      "topics": [
+        "3d",
+        "agent-skills",
+        "claude-code",
+        "education",
+        "explainer",
+        "threejs"
+      ],
+      "owner": {
+        "login": "Moh4696",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/110087282?v=4",
+        "url": "https://github.com/Moh4696"
+      },
+      "createdAt": "2026-11-25T09:26:33Z",
+      "updatedAt": "2026-11-25T18:22:44Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -322,7 +353,7 @@
       },
       "createdAt": "2024-09-10T14:27:12Z",
       "updatedAt": "2026-11-24T13:21:53Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -351,7 +382,41 @@
       },
       "createdAt": "2021-04-13T17:15:46Z",
       "updatedAt": "2026-09-17T05:54:18Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1274509298",
+      "repoId": 1274509298,
+      "fullName": "stuinfla/Repo-Explainer",
+      "name": "Repo-Explainer",
+      "description": "Repo Explainer — turn any GitHub repo into a visual explainer page. Pipeline + 5 live examples.",
+      "url": "https://github.com/stuinfla/Repo-Explainer",
+      "homepage": "https://repo-explainer-six.vercel.app",
+      "stars": 71,
+      "forks": 15,
+      "watchers": 71,
+      "language": "JavaScript",
+      "topics": [
+        "ai-tools",
+        "developer-tools",
+        "explainer",
+        "knowledge-base",
+        "notebooklm",
+        "rag",
+        "reuven-cohen",
+        "ruvnet",
+        "vector-database"
+      ],
+      "owner": {
+        "login": "stuinfla",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/86920480?v=4",
+        "url": "https://github.com/stuinfla"
+      },
+      "createdAt": "2026-06-19T15:31:24Z",
+      "updatedAt": "2026-11-25T14:24:11Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -396,41 +461,7 @@
       },
       "createdAt": "2026-10-02T05:59:48Z",
       "updatedAt": "2026-11-23T19:28:25Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1274509298",
-      "repoId": 1274509298,
-      "fullName": "stuinfla/Repo-Explainer",
-      "name": "Repo-Explainer",
-      "description": "Repo Explainer — turn any GitHub repo into a visual explainer page. Pipeline + 5 live examples.",
-      "url": "https://github.com/stuinfla/Repo-Explainer",
-      "homepage": "https://repo-explainer-six.vercel.app",
-      "stars": 69,
-      "forks": 15,
-      "watchers": 69,
-      "language": "JavaScript",
-      "topics": [
-        "ai-tools",
-        "developer-tools",
-        "explainer",
-        "knowledge-base",
-        "notebooklm",
-        "rag",
-        "reuven-cohen",
-        "ruvnet",
-        "vector-database"
-      ],
-      "owner": {
-        "login": "stuinfla",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/86920480?v=4",
-        "url": "https://github.com/stuinfla"
-      },
-      "createdAt": "2026-06-19T15:31:24Z",
-      "updatedAt": "2026-11-24T18:34:00Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -464,7 +495,7 @@
       },
       "createdAt": "2026-10-04T17:16:22Z",
       "updatedAt": "2026-11-17T07:54:05Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -476,9 +507,9 @@
       "description": "First-principles Manim skill for Claude Code — mathematical animation from scratch, paper-explainer patterns, 21 rule files.",
       "url": "https://github.com/AmitSubhash/3brown1blue",
       "homepage": null,
-      "stars": 53,
+      "stars": 54,
       "forks": 5,
-      "watchers": 53,
+      "watchers": 54,
       "language": "Python",
       "topics": [
         "3blue1brown",
@@ -495,8 +526,8 @@
         "url": "https://github.com/AmitSubhash"
       },
       "createdAt": "2026-03-17T21:10:03Z",
-      "updatedAt": "2026-11-24T05:01:59Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "updatedAt": "2026-11-24T20:41:32Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -528,41 +559,7 @@
       },
       "createdAt": "2022-04-14T02:51:37Z",
       "updatedAt": "2026-04-05T11:54:53Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1446942239",
-      "repoId": 1446942239,
-      "fullName": "UnicornPharaoh61609/release-resocket-flow-docs",
-      "name": "release-resocket-flow-docs",
-      "description": "Agent skill for music distributors: keep release-flow docs honest vs code, or scaffold a local Adonis/Nest moderation API.",
-      "url": "https://github.com/UnicornPharaoh61609/release-resocket-flow-docs",
-      "homepage": null,
-      "stars": 33,
-      "forks": 0,
-      "watchers": 33,
-      "language": "HTML",
-      "topics": [
-        "claude-scanner",
-        "claude-skills-for-marketing",
-        "explainer",
-        "learn",
-        "learning-path",
-        "meta",
-        "meta-ads-automation",
-        "meta-ads-mcp",
-        "scaffold"
-      ],
-      "owner": {
-        "login": "UnicornPharaoh61609",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/351038857?v=4",
-        "url": "https://github.com/UnicornPharaoh61609"
-      },
-      "createdAt": "2026-11-05T11:58:42Z",
-      "updatedAt": "2026-11-21T18:33:24Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -589,7 +586,7 @@
       },
       "createdAt": "2023-06-09T14:09:46Z",
       "updatedAt": "2026-11-02T18:57:04Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -621,7 +618,7 @@
       },
       "createdAt": "2026-06-22T21:22:38Z",
       "updatedAt": "2026-11-19T09:06:14Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -653,7 +650,7 @@
       },
       "createdAt": "2026-08-27T00:02:30Z",
       "updatedAt": "2026-11-23T14:41:57Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -683,7 +680,7 @@
       },
       "createdAt": "2026-10-31T15:08:53Z",
       "updatedAt": "2026-11-20T01:31:45Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -726,7 +723,42 @@
       },
       "createdAt": "2026-10-03T10:05:59Z",
       "updatedAt": "2026-10-30T00:54:13Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1437209466",
+      "repoId": 1437209466,
+      "fullName": "21prnv/mapcast",
+      "name": "mapcast",
+      "description": "Animated map videos for explainers and Shorts: highlight countries and states on satellite or paper maps, globe dive, camera flights. CLI, MCP server and AI skill.",
+      "url": "https://github.com/21prnv/mapcast",
+      "homepage": "https://www.npmjs.com/package/mapcast",
+      "stars": 12,
+      "forks": 2,
+      "watchers": 12,
+      "language": "JavaScript",
+      "topics": [
+        "animation",
+        "choropleth",
+        "claude-skill",
+        "explainer",
+        "geography",
+        "globe",
+        "map",
+        "mcp-server",
+        "satellite",
+        "video"
+      ],
+      "owner": {
+        "login": "21prnv",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/110466571?v=4",
+        "url": "https://github.com/21prnv"
+      },
+      "createdAt": "2026-10-28T14:37:36Z",
+      "updatedAt": "2026-11-25T02:11:28Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -757,7 +789,7 @@
       },
       "createdAt": "2022-03-23T12:05:19Z",
       "updatedAt": "2026-11-19T01:43:14Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -792,42 +824,7 @@
       },
       "createdAt": "2026-10-31T22:08:58Z",
       "updatedAt": "2026-11-23T06:07:49Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1437209466",
-      "repoId": 1437209466,
-      "fullName": "21prnv/mapcast",
-      "name": "mapcast",
-      "description": "Animated map videos for explainers and Shorts: highlight countries and states on satellite or paper maps, globe dive, camera flights. CLI, MCP server and AI skill.",
-      "url": "https://github.com/21prnv/mapcast",
-      "homepage": "https://www.npmjs.com/package/mapcast",
-      "stars": 11,
-      "forks": 2,
-      "watchers": 11,
-      "language": "JavaScript",
-      "topics": [
-        "animation",
-        "choropleth",
-        "claude-skill",
-        "explainer",
-        "geography",
-        "globe",
-        "map",
-        "mcp-server",
-        "satellite",
-        "video"
-      ],
-      "owner": {
-        "login": "21prnv",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/110466571?v=4",
-        "url": "https://github.com/21prnv"
-      },
-      "createdAt": "2026-10-28T14:37:36Z",
-      "updatedAt": "2026-11-24T15:43:20Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -866,7 +863,7 @@
       },
       "createdAt": "2026-04-08T17:14:18Z",
       "updatedAt": "2026-06-17T15:26:15Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -899,7 +896,7 @@
       },
       "createdAt": "2026-08-26T11:38:03Z",
       "updatedAt": "2026-11-11T10:39:47Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -933,7 +930,7 @@
       },
       "createdAt": "2026-10-03T20:00:14Z",
       "updatedAt": "2026-10-16T09:52:32Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -962,7 +959,7 @@
       },
       "createdAt": "2016-07-12T11:20:53Z",
       "updatedAt": "2026-10-09T05:53:06Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -992,7 +989,7 @@
       },
       "createdAt": "2026-11-05T14:47:24Z",
       "updatedAt": "2026-11-24T17:58:39Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1030,7 +1027,7 @@
       },
       "createdAt": "2026-05-22T16:21:39Z",
       "updatedAt": "2026-10-23T18:15:58Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1065,7 +1062,7 @@
       },
       "createdAt": "2026-10-10T00:29:24Z",
       "updatedAt": "2026-11-23T01:17:05Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1110,7 +1107,7 @@
       },
       "createdAt": "2026-05-31T01:06:17Z",
       "updatedAt": "2026-10-28T22:41:04Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1142,7 +1139,7 @@
       },
       "createdAt": "2026-08-26T10:39:07Z",
       "updatedAt": "2026-10-02T07:44:33Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1187,7 +1184,7 @@
       },
       "createdAt": "2020-08-25T19:41:44Z",
       "updatedAt": "2024-05-12T09:11:53Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1224,7 +1221,7 @@
       },
       "createdAt": "2026-10-16T17:01:39Z",
       "updatedAt": "2026-11-04T18:24:47Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1253,7 +1250,41 @@
       },
       "createdAt": "2022-01-03T15:18:00Z",
       "updatedAt": "2026-04-08T11:28:46Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1446942239",
+      "repoId": 1446942239,
+      "fullName": "UnicornPharaoh61609/release-resocket-flow-docs",
+      "name": "release-resocket-flow-docs",
+      "description": "Agent skill for music distributors: keep release-flow docs honest vs code, or scaffold a local Adonis/Nest moderation API.",
+      "url": "https://github.com/UnicornPharaoh61609/release-resocket-flow-docs",
+      "homepage": null,
+      "stars": 5,
+      "forks": 0,
+      "watchers": 5,
+      "language": "HTML",
+      "topics": [
+        "claude-scanner",
+        "claude-skills-for-marketing",
+        "explainer",
+        "learn",
+        "learning-path",
+        "meta",
+        "meta-ads-automation",
+        "meta-ads-mcp",
+        "scaffold"
+      ],
+      "owner": {
+        "login": "UnicornPharaoh61609",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/351038857?v=4",
+        "url": "https://github.com/UnicornPharaoh61609"
+      },
+      "createdAt": "2026-11-05T11:58:42Z",
+      "updatedAt": "2026-11-25T15:34:23Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1282,7 +1313,7 @@
       },
       "createdAt": "2020-08-18T16:06:00Z",
       "updatedAt": "2025-12-09T13:40:01Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1313,7 +1344,36 @@
       },
       "createdAt": "2021-03-30T23:22:40Z",
       "updatedAt": "2025-10-08T16:11:09Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1187202328",
+      "repoId": 1187202328,
+      "fullName": "AmitSubhash/3brown1blue-showcase",
+      "name": "3brown1blue-showcase",
+      "description": "Animated explainer videos generated from slide decks using 3brown1blue.",
+      "url": "https://github.com/AmitSubhash/3brown1blue-showcase",
+      "homepage": null,
+      "stars": 4,
+      "forks": 0,
+      "watchers": 4,
+      "language": "Python",
+      "topics": [
+        "3blue1brown",
+        "animation",
+        "explainer",
+        "manim"
+      ],
+      "owner": {
+        "login": "AmitSubhash",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/64542797?v=4",
+        "url": "https://github.com/AmitSubhash"
+      },
+      "createdAt": "2026-03-20T13:07:29Z",
+      "updatedAt": "2026-11-24T20:41:25Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1343,7 +1403,7 @@
       },
       "createdAt": "2026-10-04T10:57:08Z",
       "updatedAt": "2026-11-12T13:49:53Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1376,7 +1436,7 @@
       },
       "createdAt": "2020-09-26T20:16:05Z",
       "updatedAt": "2025-08-12T12:28:27Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1406,36 +1466,7 @@
       },
       "createdAt": "2026-09-26T19:06:31Z",
       "updatedAt": "2026-11-12T13:02:53Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1187202328",
-      "repoId": 1187202328,
-      "fullName": "AmitSubhash/3brown1blue-showcase",
-      "name": "3brown1blue-showcase",
-      "description": "Animated explainer videos generated from slide decks using 3brown1blue.",
-      "url": "https://github.com/AmitSubhash/3brown1blue-showcase",
-      "homepage": null,
-      "stars": 3,
-      "forks": 0,
-      "watchers": 3,
-      "language": "Python",
-      "topics": [
-        "3blue1brown",
-        "animation",
-        "explainer",
-        "manim"
-      ],
-      "owner": {
-        "login": "AmitSubhash",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/64542797?v=4",
-        "url": "https://github.com/AmitSubhash"
-      },
-      "createdAt": "2026-03-20T13:07:29Z",
-      "updatedAt": "2026-11-19T00:09:29Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1470,7 +1501,7 @@
       },
       "createdAt": "2025-06-19T05:24:58Z",
       "updatedAt": "2026-10-01T16:46:04Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1507,7 +1538,7 @@
       },
       "createdAt": "2026-05-17T15:10:25Z",
       "updatedAt": "2026-06-20T00:02:10Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1537,7 +1568,7 @@
       },
       "createdAt": "2026-11-01T03:37:33Z",
       "updatedAt": "2026-11-23T22:58:11Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1572,7 +1603,7 @@
       },
       "createdAt": "2026-09-15T07:59:56Z",
       "updatedAt": "2026-10-12T08:53:58Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1607,73 +1638,7 @@
       },
       "createdAt": "2026-10-06T21:16:35Z",
       "updatedAt": "2026-11-01T03:47:46Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1346824548",
-      "repoId": 1346824548,
-      "fullName": "Krishita17/bioshield-brief",
-      "name": "bioshield-brief",
-      "description": "AI in Biosecurity: Dual-Use Risks and Governance Gaps — a defensive, non-operational policy explainer from a security-engineering lens. Author: Krishita Sanjay Choksi.",
-      "url": "https://github.com/Krishita17/bioshield-brief",
-      "homepage": null,
-      "stars": 3,
-      "forks": 0,
-      "watchers": 3,
-      "language": "TeX",
-      "topics": [
-        "ai-governance",
-        "ai-policy",
-        "ai-safety",
-        "biosafety",
-        "biosecurity",
-        "biosecurity-policy",
-        "dna-synthesis-screening",
-        "dual-use",
-        "explainer",
-        "security-engineering",
-        "threat-modeling"
-      ],
-      "owner": {
-        "login": "Krishita17",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/129031138?v=4",
-        "url": "https://github.com/Krishita17"
-      },
-      "createdAt": "2026-08-26T02:33:48Z",
-      "updatedAt": "2026-09-22T15:42:20Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-959129090",
-      "repoId": 959129090,
-      "fullName": "NickScherbakov/textbook-analyzer",
-      "name": "textbook-analyzer",
-      "description": "Application for explaining difficult to understand textbooks based on Yandex Cloud API (YandexGPT-Pro, Yandex-OCR)",
-      "url": "https://github.com/NickScherbakov/textbook-analyzer",
-      "homepage": null,
-      "stars": 3,
-      "forks": 0,
-      "watchers": 3,
-      "language": "Python",
-      "topics": [
-        "ai-assistant",
-        "explainer",
-        "textbook-explainer",
-        "yandex-api",
-        "yandexcloud"
-      ],
-      "owner": {
-        "login": "NickScherbakov",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/129627987?v=4",
-        "url": "https://github.com/NickScherbakov"
-      },
-      "createdAt": "2025-04-02T10:07:58Z",
-      "updatedAt": "2026-10-19T16:30:26Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     },
@@ -1710,7 +1675,43 @@
       },
       "createdAt": "2026-06-01T20:39:54Z",
       "updatedAt": "2026-08-25T13:21:45Z",
-      "firstSeenAt": "2026-11-24T19:22:13.983Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1346824548",
+      "repoId": 1346824548,
+      "fullName": "Krishita17/bioshield-brief",
+      "name": "bioshield-brief",
+      "description": "AI in Biosecurity: Dual-Use Risks and Governance Gaps — a defensive, non-operational policy explainer from a security-engineering lens. Author: Krishita Sanjay Choksi.",
+      "url": "https://github.com/Krishita17/bioshield-brief",
+      "homepage": null,
+      "stars": 3,
+      "forks": 0,
+      "watchers": 3,
+      "language": "TeX",
+      "topics": [
+        "ai-governance",
+        "ai-policy",
+        "ai-safety",
+        "biosafety",
+        "biosecurity",
+        "biosecurity-policy",
+        "dna-synthesis-screening",
+        "dual-use",
+        "explainer",
+        "security-engineering",
+        "threat-modeling"
+      ],
+      "owner": {
+        "login": "Krishita17",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/129031138?v=4",
+        "url": "https://github.com/Krishita17"
+      },
+      "createdAt": "2026-08-26T02:33:48Z",
+      "updatedAt": "2026-09-22T15:42:20Z",
+      "firstSeenAt": "2026-11-25T18:27:21.190Z",
       "isNew": true,
       "existing": false
     }

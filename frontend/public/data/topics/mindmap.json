@@ -1,6 +1,6 @@
 {
   "topic": "mindmap",
-  "fetchedAt": "2026-11-24T19:22:50.366Z",
+  "fetchedAt": "2026-11-25T18:27:52.859Z",
   "count": 50,
   "newCount": 49,
   "existingCount": 1,
@@ -13,9 +13,9 @@
       "description": "Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown",
       "url": "https://github.com/mermaid-js/mermaid",
       "homepage": "https://mermaid.ai/open-source/",
-      "stars": 91231,
-      "forks": 9525,
-      "watchers": 91231,
+      "stars": 91249,
+      "forks": 9531,
+      "watchers": 91249,
       "language": "TypeScript",
       "topics": [
         "diagrams",
@@ -33,8 +33,8 @@
         "url": "https://github.com/mermaid-js"
       },
       "createdAt": "2014-11-01T23:52:32Z",
-      "updatedAt": "2026-11-24T18:03:02Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T16:05:35Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -46,9 +46,9 @@
       "description": "An open-source, privacy-first, self-hosted knowledge workspace where humans and AI agents work together 开源、隐私优先、自托管的知识工作空间，让人与智能体在此协作",
       "url": "https://github.com/siyuan-note/siyuan",
       "homepage": "https://b3log.org/siyuan",
-      "stars": 47367,
-      "forks": 3131,
-      "watchers": 47367,
+      "stars": 47385,
+      "forks": 3137,
+      "watchers": 47385,
       "language": "TypeScript",
       "topics": [
         "agentic-ai",
@@ -69,8 +69,8 @@
         "url": "https://github.com/siyuan-note"
       },
       "createdAt": "2020-08-30T09:21:35Z",
-      "updatedAt": "2026-11-24T17:06:02Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T17:08:08Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -83,7 +83,7 @@
       "url": "https://github.com/plait-board/drawnix",
       "homepage": "https://drawnix.com",
       "stars": 15110,
-      "forks": 1319,
+      "forks": 1322,
       "watchers": 15110,
       "language": "TypeScript",
       "topics": [
@@ -102,8 +102,8 @@
         "url": "https://github.com/plait-board"
       },
       "createdAt": "2024-06-04T14:49:58Z",
-      "updatedAt": "2026-11-24T16:34:15Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T14:41:15Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": true
     },
@@ -115,9 +115,9 @@
       "description": "Build mindmaps with plain text",
       "url": "https://github.com/markmap/markmap",
       "homepage": "https://markmap.js.org/",
-      "stars": 13286,
-      "forks": 1024,
-      "watchers": 13286,
+      "stars": 13292,
+      "forks": 1026,
+      "watchers": 13292,
       "language": "TypeScript",
       "topics": [
         "markmap",
@@ -129,8 +129,41 @@
         "url": "https://github.com/markmap"
       },
       "createdAt": "2020-01-13T10:23:34Z",
-      "updatedAt": "2026-11-24T06:31:44Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T09:44:53Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-375741607",
+      "repoId": 375741607,
+      "fullName": "wanglin2/mind-map",
+      "name": "mind-map",
+      "description": "SimpleMindMap（思绪思维导图）：一个强大的思维导图。A powerful mind map.",
+      "url": "https://github.com/wanglin2/mind-map",
+      "homepage": "https://sxmind.cn",
+      "stars": 13073,
+      "forks": 1701,
+      "watchers": 13073,
+      "language": "JavaScript",
+      "topics": [
+        "graph",
+        "jsmind",
+        "mind-map",
+        "mind-mapping",
+        "mindmap",
+        "mindmapping",
+        "svg",
+        "xmind"
+      ],
+      "owner": {
+        "login": "wanglin2",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/17272433?v=4",
+        "url": "https://github.com/wanglin2"
+      },
+      "createdAt": "2021-06-10T15:17:16Z",
+      "updatedAt": "2026-11-25T16:29:39Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -143,7 +176,7 @@
       "url": "https://github.com/vnotex/vnote",
       "homepage": "https://docs.vnote.fun",
       "stars": 13068,
-      "forks": 1297,
+      "forks": 1298,
       "watchers": 13068,
       "language": "C++",
       "topics": [
@@ -163,40 +196,7 @@
       },
       "createdAt": "2016-10-05T07:24:54Z",
       "updatedAt": "2026-11-24T19:12:25Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-375741607",
-      "repoId": 375741607,
-      "fullName": "wanglin2/mind-map",
-      "name": "mind-map",
-      "description": "SimpleMindMap（思绪思维导图）：一个强大的思维导图。A powerful mind map.",
-      "url": "https://github.com/wanglin2/mind-map",
-      "homepage": "https://wanglin2.github.io/mind-map-docs/",
-      "stars": 13055,
-      "forks": 1701,
-      "watchers": 13055,
-      "language": "JavaScript",
-      "topics": [
-        "graph",
-        "jsmind",
-        "mind-map",
-        "mind-mapping",
-        "mindmap",
-        "mindmapping",
-        "svg",
-        "xmind"
-      ],
-      "owner": {
-        "login": "wanglin2",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/17272433?v=4",
-        "url": "https://github.com/wanglin2"
-      },
-      "createdAt": "2021-06-10T15:17:16Z",
-      "updatedAt": "2026-11-24T19:01:17Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -208,9 +208,9 @@
       "description": "Everything about note management. All in Zotero.",
       "url": "https://github.com/windingwind/zotero-better-notes",
       "homepage": null,
-      "stars": 8477,
+      "stars": 8482,
       "forks": 275,
-      "watchers": 8477,
+      "watchers": 8482,
       "language": "TypeScript",
       "topics": [
         "addon",
@@ -232,8 +232,8 @@
         "url": "https://github.com/windingwind"
       },
       "createdAt": "2022-04-27T15:46:23Z",
-      "updatedAt": "2026-11-24T18:20:20Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T18:00:46Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -245,9 +245,9 @@
       "description": "VisuallyJs releases and issue tracking",
       "url": "https://github.com/visuallyjs/visuallyjs",
       "homepage": "https://visuallyjs.com",
-      "stars": 7766,
+      "stars": 7767,
       "forks": 1419,
-      "watchers": 7766,
+      "watchers": 7767,
       "language": null,
       "topics": [
         "angular",
@@ -276,8 +276,8 @@
         "url": "https://github.com/visuallyjs"
       },
       "createdAt": "2011-12-15T21:47:50Z",
-      "updatedAt": "2026-11-21T07:43:03Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T03:11:48Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -289,9 +289,9 @@
       "description": "A mindmap summarising Machine Learning concepts, from Data Analysis to Deep Learning.",
       "url": "https://github.com/dformoso/machine-learning-mindmap",
       "homepage": null,
-      "stars": 6270,
+      "stars": 6269,
       "forks": 1002,
-      "watchers": 6270,
+      "watchers": 6269,
       "language": null,
       "topics": [
         "cheatsheet",
@@ -310,8 +310,8 @@
         "url": "https://github.com/dformoso"
       },
       "createdAt": "2017-08-10T04:29:24Z",
-      "updatedAt": "2026-11-23T07:06:17Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T07:55:13Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -324,7 +324,7 @@
       "url": "https://github.com/NaoTu/DesktopNaotu",
       "homepage": null,
       "stars": 5096,
-      "forks": 741,
+      "forks": 742,
       "watchers": 5096,
       "language": "TypeScript",
       "topics": [
@@ -341,7 +341,7 @@
       },
       "createdAt": "2016-11-08T01:32:30Z",
       "updatedAt": "2026-11-24T14:41:10Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -353,9 +353,9 @@
       "description": "🦋Butterfly，A JavaScript/React/Vue2 Diagramming library which concentrate on flow layout field.    (基于JavaScript/React/Vue2的流程图组件)",
       "url": "https://github.com/alibaba/butterfly",
       "homepage": "https://butterfly-dag.gitee.io/butterfly-dag/home",
-      "stars": 4634,
+      "stars": 4635,
       "forks": 609,
-      "watchers": 4634,
+      "watchers": 4635,
       "language": "JavaScript",
       "topics": [
         "bpmn",
@@ -382,8 +382,8 @@
         "url": "https://github.com/alibaba"
       },
       "createdAt": "2018-10-31T06:37:09Z",
-      "updatedAt": "2026-11-21T14:49:36Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T01:17:50Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -395,9 +395,9 @@
       "description": "Application for Mind Mapping, Knowledge Management, Project Management. Develop, organize and communicate your ideas and knowledge in the most effective way.",
       "url": "https://github.com/freeplane/freeplane",
       "homepage": "https://www.freeplane.org",
-      "stars": 4507,
+      "stars": 4508,
       "forks": 508,
-      "watchers": 4507,
+      "watchers": 4508,
       "language": "Java",
       "topics": [
         "groovy-scripts",
@@ -421,8 +421,8 @@
         "url": "https://github.com/freeplane"
       },
       "createdAt": "2012-09-13T08:55:51Z",
-      "updatedAt": "2026-11-24T15:10:30Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T06:28:37Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -434,9 +434,9 @@
       "description": "a mind mapping library built by javascript",
       "url": "https://github.com/hizzgdev/jsmind",
       "homepage": "http://hizzgdev.github.io/jsmind/",
-      "stars": 3794,
+      "stars": 3795,
       "forks": 894,
-      "watchers": 3794,
+      "watchers": 3795,
       "language": "JavaScript",
       "topics": [
         "bsd",
@@ -455,8 +455,8 @@
         "url": "https://github.com/hizzgdev"
       },
       "createdAt": "2012-08-26T19:19:39Z",
-      "updatedAt": "2026-11-24T10:49:27Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T00:06:14Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -468,9 +468,9 @@
       "description": "AI-native note-taking app & Evernote/Obsidian alternative. Instant all-platform sync, rich notes (tables, mind maps, diagrams, posters), web clipper & MCP. 100% free on Cloudflare or Docker.",
       "url": "https://github.com/tianma-if/edgeever",
       "homepage": "https://edgeever.org",
-      "stars": 3535,
-      "forks": 1842,
-      "watchers": 3535,
+      "stars": 3558,
+      "forks": 1850,
+      "watchers": 3558,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -500,8 +500,8 @@
         "url": "https://github.com/tianma-if"
       },
       "createdAt": "2026-06-26T06:59:58Z",
-      "updatedAt": "2026-11-24T16:35:40Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T18:01:56Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -513,9 +513,9 @@
       "description": "This map lists the essential techniques to bypass anti-virus and EDR",
       "url": "https://github.com/matro7sh/BypassAV",
       "homepage": "https://matro7sh.github.io/BypassAV/",
-      "stars": 3492,
+      "stars": 3493,
       "forks": 379,
-      "watchers": 3492,
+      "watchers": 3493,
       "language": null,
       "topics": [
         "av",
@@ -532,8 +532,8 @@
         "url": "https://github.com/matro7sh"
       },
       "createdAt": "2023-02-03T00:29:06Z",
-      "updatedAt": "2026-11-24T00:34:47Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-24T20:57:27Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -561,7 +561,7 @@
       },
       "createdAt": "2013-12-22T19:47:17Z",
       "updatedAt": "2026-11-19T19:07:34Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -573,9 +573,9 @@
       "description": "⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.",
       "url": "https://github.com/SSShooter/mind-elixir-core",
       "homepage": "https://docs.mind-elixir.com/",
-      "stars": 3206,
+      "stars": 3208,
       "forks": 421,
-      "watchers": 3206,
+      "watchers": 3208,
       "language": "TypeScript",
       "topics": [
         "graph",
@@ -591,8 +591,8 @@
         "url": "https://github.com/SSShooter"
       },
       "createdAt": "2019-08-01T01:04:36Z",
-      "updatedAt": "2026-11-24T15:28:38Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T09:42:15Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -627,7 +627,7 @@
       },
       "createdAt": "2026-03-04T05:22:52Z",
       "updatedAt": "2026-11-23T21:43:33Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -655,7 +655,7 @@
       },
       "createdAt": "2011-03-26T16:44:28Z",
       "updatedAt": "2026-11-19T18:37:42Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -683,7 +683,7 @@
       },
       "createdAt": "2022-08-30T15:51:44Z",
       "updatedAt": "2026-11-20T02:15:56Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -728,7 +728,7 @@
       },
       "createdAt": "2023-04-05T19:43:37Z",
       "updatedAt": "2026-11-20T19:18:57Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -766,7 +766,7 @@
       },
       "createdAt": "2020-10-20T18:35:27Z",
       "updatedAt": "2026-11-21T09:06:42Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -803,7 +803,7 @@
       },
       "createdAt": "2014-01-23T04:31:22Z",
       "updatedAt": "2026-11-16T02:46:56Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -815,9 +815,9 @@
       "description": "A mindmap summarising Deep Learning concepts.",
       "url": "https://github.com/dformoso/deeplearning-mindmap",
       "homepage": null,
-      "stars": 1705,
+      "stars": 1704,
       "forks": 347,
-      "watchers": 1705,
+      "watchers": 1704,
       "language": null,
       "topics": [
         "cheatsheet",
@@ -835,8 +835,8 @@
         "url": "https://github.com/dformoso"
       },
       "createdAt": "2017-08-18T03:24:56Z",
-      "updatedAt": "2026-11-23T06:52:56Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T07:54:34Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -848,9 +848,9 @@
       "description": "The most unusual OSINT guide you've ever seen. The repository is intended for bored professionals only. PRs are welcome! ",
       "url": "https://github.com/OffcierCia/non-typical-OSINT-guide",
       "homepage": "https://officercia.medium.com/",
-      "stars": 1631,
+      "stars": 1633,
       "forks": 140,
-      "watchers": 1631,
+      "watchers": 1633,
       "language": null,
       "topics": [
         "awesome-list",
@@ -874,8 +874,8 @@
         "url": "https://github.com/OffcierCia"
       },
       "createdAt": "2023-03-24T12:12:03Z",
-      "updatedAt": "2026-11-23T21:05:07Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T17:33:01Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -908,7 +908,7 @@
       },
       "createdAt": "2024-03-05T05:26:01Z",
       "updatedAt": "2026-11-19T23:12:56Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -921,7 +921,7 @@
       "url": "https://github.com/phase1geo/Minder",
       "homepage": null,
       "stars": 1214,
-      "forks": 89,
+      "forks": 90,
       "watchers": 1214,
       "language": "Vala",
       "topics": [
@@ -936,7 +936,7 @@
       },
       "createdAt": "2017-12-23T18:54:43Z",
       "updatedAt": "2026-11-20T22:02:33Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -968,7 +968,7 @@
       },
       "createdAt": "2021-08-27T12:43:55Z",
       "updatedAt": "2026-11-19T13:42:01Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -980,9 +980,9 @@
       "description": "公务员考试知识思维导图，我们岸上见！",
       "url": "https://github.com/kuriv/civil-service-exam",
       "homepage": null,
-      "stars": 1010,
+      "stars": 1009,
       "forks": 180,
-      "watchers": 1010,
+      "watchers": 1009,
       "language": "Go",
       "topics": [
         "civil-service",
@@ -998,8 +998,8 @@
         "url": "https://github.com/kuriv"
       },
       "createdAt": "2019-07-05T09:03:55Z",
-      "updatedAt": "2026-11-24T06:53:03Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T09:07:06Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1011,9 +1011,9 @@
       "description": "Heimer is a simple cross-platform mind map, diagram, and note-taking tool written in Qt.",
       "url": "https://github.com/juzzlin/Heimer",
       "homepage": null,
-      "stars": 986,
+      "stars": 985,
       "forks": 121,
-      "watchers": 986,
+      "watchers": 985,
       "language": "C++",
       "topics": [
         "cplusplus",
@@ -1042,8 +1042,8 @@
         "url": "https://github.com/juzzlin"
       },
       "createdAt": "2018-02-22T22:04:49Z",
-      "updatedAt": "2026-11-20T02:19:32Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T09:21:01Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1073,7 +1073,7 @@
       },
       "createdAt": "2021-03-22T09:46:27Z",
       "updatedAt": "2026-11-19T22:10:06Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1114,7 +1114,7 @@
       },
       "createdAt": "2022-02-17T03:06:55Z",
       "updatedAt": "2026-11-23T13:45:00Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1143,7 +1143,7 @@
       },
       "createdAt": "2018-03-12T10:40:41Z",
       "updatedAt": "2026-11-19T20:51:52Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1155,9 +1155,9 @@
       "description": " Cross-platform full-featured mind mapping and outline app based on electron.",
       "url": "https://github.com/awehook/blink-mind-desktop",
       "homepage": null,
-      "stars": 727,
+      "stars": 728,
       "forks": 102,
-      "watchers": 727,
+      "watchers": 728,
       "language": "TypeScript",
       "topics": [
         "electron",
@@ -1174,8 +1174,8 @@
         "url": "https://github.com/awehook"
       },
       "createdAt": "2019-08-14T09:37:37Z",
-      "updatedAt": "2026-11-21T09:38:56Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T12:27:17Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1203,7 +1203,7 @@
       },
       "createdAt": "2018-01-11T00:21:04Z",
       "updatedAt": "2026-11-15T09:32:51Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1236,7 +1236,7 @@
       },
       "createdAt": "2017-05-19T20:41:21Z",
       "updatedAt": "2026-11-23T12:30:10Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1275,7 +1275,7 @@
       },
       "createdAt": "2021-05-07T13:40:08Z",
       "updatedAt": "2026-10-27T08:42:26Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1305,7 +1305,7 @@
       },
       "createdAt": "2022-08-25T22:39:56Z",
       "updatedAt": "2026-11-19T22:40:20Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1317,9 +1317,9 @@
       "description": "🧠Mindmap of 🗺️Software Architecture, Software engineering",
       "url": "https://github.com/kimtth/software-architect-mindmap",
       "homepage": null,
-      "stars": 543,
+      "stars": 544,
       "forks": 78,
-      "watchers": 543,
+      "watchers": 544,
       "language": "Python",
       "topics": [
         "architectural-patterns",
@@ -1344,8 +1344,8 @@
         "url": "https://github.com/kimtth"
       },
       "createdAt": "2022-02-02T10:16:50Z",
-      "updatedAt": "2026-11-17T13:24:01Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T05:24:57Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1380,7 +1380,7 @@
       },
       "createdAt": "2021-12-05T07:54:22Z",
       "updatedAt": "2026-11-24T07:42:41Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1422,7 +1422,7 @@
       },
       "createdAt": "2017-09-11T15:43:46Z",
       "updatedAt": "2026-11-10T10:20:45Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1454,7 +1454,7 @@
       },
       "createdAt": "2019-05-29T02:16:03Z",
       "updatedAt": "2026-11-12T03:03:30Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1496,7 +1496,7 @@
       },
       "createdAt": "2020-08-10T08:46:32Z",
       "updatedAt": "2026-10-12T09:58:00Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1526,7 +1526,7 @@
       },
       "createdAt": "2020-01-17T07:43:06Z",
       "updatedAt": "2026-11-19T21:40:23Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1556,7 +1556,7 @@
       },
       "createdAt": "2020-12-30T08:28:24Z",
       "updatedAt": "2026-11-19T22:05:02Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1568,9 +1568,9 @@
       "description": "九十七门真实网课的模块合辑全书 + 思维导图复习笔记 + 逐字稿，全部由 Video2Book 从课程音频重构：883 册模块全书、1,226 篇复习笔记、4,691 份逐字稿，从逐讲精读到考前速查，笔记支持 Markmap / XMind 脑图导入，可按课点播定制。",
       "url": "https://github.com/LINJIANG12/video2book-courses",
       "homepage": null,
-      "stars": 433,
+      "stars": 435,
       "forks": 36,
-      "watchers": 433,
+      "watchers": 435,
       "language": null,
       "topics": [
         "8086",
@@ -1597,8 +1597,8 @@
         "url": "https://github.com/LINJIANG12"
       },
       "createdAt": "2026-09-13T06:06:45Z",
-      "updatedAt": "2026-11-24T15:17:35Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "updatedAt": "2026-11-25T02:40:13Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1629,7 +1629,7 @@
       },
       "createdAt": "2022-11-10T21:44:32Z",
       "updatedAt": "2026-11-24T15:28:23Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1674,7 +1674,7 @@
       },
       "createdAt": "2026-07-18T14:31:23Z",
       "updatedAt": "2026-11-24T08:47:49Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1714,7 +1714,7 @@
       },
       "createdAt": "2015-07-11T17:53:41Z",
       "updatedAt": "2026-11-19T19:38:39Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     },
@@ -1743,7 +1743,7 @@
       },
       "createdAt": "2019-10-20T19:30:30Z",
       "updatedAt": "2026-11-16T03:25:11Z",
-      "firstSeenAt": "2026-11-24T19:22:50.366Z",
+      "firstSeenAt": "2026-11-25T18:27:52.859Z",
       "isNew": true,
       "existing": false
     }
