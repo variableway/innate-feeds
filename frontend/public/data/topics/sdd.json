@@ -1,6 +1,6 @@
 {
   "topic": "sdd",
-  "fetchedAt": "2026-11-25T18:29:22.189Z",
+  "fetchedAt": "2026-11-26T18:11:35.006Z",
   "count": 50,
   "newCount": 47,
   "existingCount": 3,
@@ -13,9 +13,9 @@
       "description": "Spec-driven development (SDD) for AI coding assistants.",
       "url": "https://github.com/Fission-AI/OpenSpec",
       "homepage": "https://openspec.dev/",
-      "stars": 75713,
-      "forks": 5180,
-      "watchers": 75713,
+      "stars": 75802,
+      "forks": 5190,
+      "watchers": 75802,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -35,8 +35,8 @@
         "url": "https://github.com/Fission-AI"
       },
       "createdAt": "2025-08-05T10:37:45Z",
-      "updatedAt": "2026-11-25T18:23:57Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T18:02:01Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": true
     },
@@ -48,9 +48,9 @@
       "description": "Turn approved specs into long-running autonomous implementation. A minimal, adaptable SDD harness with Agent Skills for Claude Code, Codex, Cursor, Copilot, Windsurf, OpenCode, Gemini CLI, and Antigravity.",
       "url": "https://github.com/gotalab/cc-sdd",
       "homepage": null,
-      "stars": 3779,
+      "stars": 3781,
       "forks": 284,
-      "watchers": 3779,
+      "watchers": 3781,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -72,8 +72,8 @@
         "url": "https://github.com/gotalab"
       },
       "createdAt": "2025-07-17T04:41:37Z",
-      "updatedAt": "2026-11-25T09:50:55Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T04:11:43Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -85,9 +85,9 @@
       "description": "Comet: agent skill harness for turning ideas into evaluated workflows",
       "url": "https://github.com/rpamis/comet",
       "homepage": "https://docs.comet.rpamis.com",
-      "stars": 3316,
-      "forks": 317,
-      "watchers": 3316,
+      "stars": 3320,
+      "forks": 318,
+      "watchers": 3320,
       "language": "JavaScript",
       "topics": [
         "ai",
@@ -106,8 +106,8 @@
         "url": "https://github.com/rpamis"
       },
       "createdAt": "2026-05-14T09:22:35Z",
-      "updatedAt": "2026-11-25T09:18:53Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T17:21:03Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -119,9 +119,9 @@
       "description": "Gentle Shell is a Pi-native workspace for AI-assisted development, bringing parallel coding agents, live tasks, Git diffs, persistent memory, and permission controls into one terminal interface. Powered by Gentle AI and Organic Driven Development (ODD).",
       "url": "https://github.com/Gentleman-Programming/gentle-shell",
       "homepage": "https://gentle-ai.gentlemanprogramming.com/",
-      "stars": 2978,
-      "forks": 305,
-      "watchers": 2978,
+      "stars": 3009,
+      "forks": 310,
+      "watchers": 3009,
       "language": "TypeScript",
       "topics": [
         "agent-harness",
@@ -151,8 +151,8 @@
         "url": "https://github.com/Gentleman-Programming"
       },
       "createdAt": "2026-05-10T10:11:33Z",
-      "updatedAt": "2026-11-25T18:14:33Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T17:56:36Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -182,7 +182,7 @@
       },
       "createdAt": "2025-09-20T03:12:06Z",
       "updatedAt": "2026-11-22T08:00:01Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -194,9 +194,9 @@
       "description": "Curso de SDD (Spec-Driven Development) desde cero",
       "url": "https://github.com/mouredev/hello-sdd",
       "homepage": "https://youtube.com/live/5HaOxAAA5qI",
-      "stars": 819,
+      "stars": 821,
       "forks": 203,
-      "watchers": 819,
+      "watchers": 821,
       "language": "Python",
       "topics": [
         "sdd",
@@ -208,8 +208,8 @@
         "url": "https://github.com/mouredev"
       },
       "createdAt": "2026-08-27T11:49:48Z",
-      "updatedAt": "2026-11-25T17:28:25Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T02:03:43Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -221,9 +221,9 @@
       "description": "Spec-driven development for coding agents — a desktop app, a CLI, and skills for Codex, Claude Code, Cursor, Copilot, Antigravity and Junie",
       "url": "https://github.com/kaochenlong/spectra-app",
       "homepage": null,
-      "stars": 777,
+      "stars": 778,
       "forks": 33,
-      "watchers": 777,
+      "watchers": 778,
       "language": "TypeScript",
       "topics": [
         "ai-agents",
@@ -242,8 +242,8 @@
         "url": "https://github.com/kaochenlong"
       },
       "createdAt": "2026-02-04T03:13:04Z",
-      "updatedAt": "2026-11-25T04:06:49Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T07:48:07Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -255,9 +255,9 @@
       "description": "OpenSpec Practical Guide",
       "url": "https://github.com/ForceInjection/OpenSpec-practise",
       "homepage": "https://forceinjection.github.io/OpenSpec-practise/",
-      "stars": 656,
+      "stars": 658,
       "forks": 92,
-      "watchers": 656,
+      "watchers": 658,
       "language": null,
       "topics": [
         "sdd",
@@ -269,8 +269,8 @@
         "url": "https://github.com/ForceInjection"
       },
       "createdAt": "2026-01-27T11:25:10Z",
-      "updatedAt": "2026-11-23T07:40:26Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T14:01:11Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -282,9 +282,9 @@
       "description": "Opinionated list of the spec-driven development (SDD) tools that matter",
       "url": "https://github.com/EfimSafonov/best-sdd-tools",
       "homepage": "https://github.com/EfimSafonov/best-sdd-tools",
-      "stars": 572,
+      "stars": 564,
       "forks": 3,
-      "watchers": 572,
+      "watchers": 564,
       "language": null,
       "topics": [
         "ai-coding-agents",
@@ -298,8 +298,8 @@
         "url": "https://github.com/EfimSafonov"
       },
       "createdAt": "2026-11-14T17:43:11Z",
-      "updatedAt": "2026-11-25T06:54:43Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T18:09:49Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -311,9 +311,9 @@
       "description": "`agent-spec` is an AI-native BDD/spec verification tool for task execution.",
       "url": "https://github.com/ZhangHanDong/agent-spec",
       "homepage": "https://zhanghandong.github.io/agent-spec/",
-      "stars": 464,
+      "stars": 465,
       "forks": 35,
-      "watchers": 464,
+      "watchers": 465,
       "language": "Rust",
       "topics": [
         "agent",
@@ -327,8 +327,8 @@
         "url": "https://github.com/ZhangHanDong"
       },
       "createdAt": "2026-03-07T03:44:10Z",
-      "updatedAt": "2026-11-15T08:48:22Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T01:36:47Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -371,7 +371,7 @@
       },
       "createdAt": "2026-03-31T02:49:55Z",
       "updatedAt": "2026-11-25T17:40:37Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -399,7 +399,7 @@
       },
       "createdAt": "2025-09-11T08:28:19Z",
       "updatedAt": "2026-10-23T17:49:02Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -432,7 +432,7 @@
       },
       "createdAt": "2026-03-29T13:46:50Z",
       "updatedAt": "2026-11-18T11:57:20Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": true
     },
@@ -477,7 +477,7 @@
       },
       "createdAt": "2026-06-17T21:19:02Z",
       "updatedAt": "2026-11-25T00:20:54Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -504,7 +504,7 @@
       },
       "createdAt": "2026-05-15T09:19:02Z",
       "updatedAt": "2026-10-22T14:02:21Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -542,7 +542,7 @@
       },
       "createdAt": "2025-12-24T14:28:50Z",
       "updatedAt": "2026-11-21T23:55:41Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -554,9 +554,9 @@
       "description": "OpenSpec template for intent-driven development with specs, ADRs, C4 diagrams, Gherkin, TDD, multi-model adversarial spec authoring, domain glossary, and reusable engineering workflows. Works with OpenCode, Codex CLI, Copilot CLI, and Claude Code. Spec-as-source capable.",
       "url": "https://github.com/intent-driven-dev/intent-driven-template",
       "homepage": "https://intent-driven.dev",
-      "stars": 222,
+      "stars": 225,
       "forks": 42,
-      "watchers": 222,
+      "watchers": 225,
       "language": "Python",
       "topics": [
         "adversarial-ai",
@@ -586,8 +586,8 @@
         "url": "https://github.com/intent-driven-dev"
       },
       "createdAt": "2026-05-10T11:13:51Z",
-      "updatedAt": "2026-11-25T16:06:25Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T13:03:24Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -622,7 +622,7 @@
       },
       "createdAt": "2026-09-06T21:28:21Z",
       "updatedAt": "2026-11-25T14:25:39Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -660,7 +660,7 @@
       },
       "createdAt": "2025-09-19T05:47:57Z",
       "updatedAt": "2026-11-05T01:23:14Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -696,7 +696,7 @@
       },
       "createdAt": "2026-01-19T09:33:40Z",
       "updatedAt": "2026-11-13T14:44:52Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -723,7 +723,7 @@
       },
       "createdAt": "2026-03-01T17:54:24Z",
       "updatedAt": "2026-10-31T06:27:35Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -759,7 +759,7 @@
       },
       "createdAt": "2025-12-16T02:14:49Z",
       "updatedAt": "2026-11-16T14:29:31Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": true
     },
@@ -771,9 +771,9 @@
       "description": "Collection of OpenSpec Custom Schema for Workflows other than standard spec-driven schema that is included in OpenSpec.",
       "url": "https://github.com/intent-driven-dev/openspec-schemas",
       "homepage": null,
-      "stars": 123,
+      "stars": 124,
       "forks": 29,
-      "watchers": 123,
+      "watchers": 124,
       "language": null,
       "topics": [
         "aicoding",
@@ -790,8 +790,8 @@
         "url": "https://github.com/intent-driven-dev"
       },
       "createdAt": "2026-02-11T16:54:55Z",
-      "updatedAt": "2026-11-19T11:06:34Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T09:52:18Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -835,7 +835,7 @@
       },
       "createdAt": "2026-03-01T01:14:30Z",
       "updatedAt": "2026-11-23T02:04:21Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -847,9 +847,9 @@
       "description": "AlxBDD turns product iterations into Gherkin, coverage-oriented test plans, and RED->GREEN->REFACTOR behavior-driven one-shot development harness with faithful reasoning and built-in reconciliation for requirement changes.",
       "url": "https://github.com/Waterball-Software-Academy/aixbdd",
       "homepage": null,
-      "stars": 101,
+      "stars": 102,
       "forks": 23,
-      "watchers": 101,
+      "watchers": 102,
       "language": "Gherkin",
       "topics": [
         "ai-development",
@@ -865,8 +865,8 @@
         "url": "https://github.com/Waterball-Software-Academy"
       },
       "createdAt": "2026-05-12T06:01:30Z",
-      "updatedAt": "2026-11-23T13:09:03Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T14:57:11Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -905,7 +905,7 @@
       },
       "createdAt": "2025-10-02T22:03:29Z",
       "updatedAt": "2026-11-10T08:22:43Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -946,7 +946,7 @@
       },
       "createdAt": "2025-11-24T16:21:05Z",
       "updatedAt": "2026-11-01T22:54:10Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -959,7 +959,7 @@
       "url": "https://github.com/IBM/iac-spec-kit",
       "homepage": null,
       "stars": 94,
-      "forks": 14,
+      "forks": 15,
       "watchers": 94,
       "language": "Python",
       "topics": [
@@ -981,7 +981,7 @@
       },
       "createdAt": "2025-11-14T15:16:54Z",
       "updatedAt": "2026-11-16T10:47:35Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1010,7 +1010,7 @@
       },
       "createdAt": "2026-07-27T19:53:08Z",
       "updatedAt": "2026-11-23T19:28:03Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1040,7 +1040,7 @@
       },
       "createdAt": "2026-03-09T17:08:36Z",
       "updatedAt": "2026-11-16T18:26:43Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1071,7 +1071,7 @@
       },
       "createdAt": "2026-06-27T07:27:09Z",
       "updatedAt": "2026-11-17T02:10:37Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1099,7 +1099,7 @@
       },
       "createdAt": "2026-02-13T15:05:35Z",
       "updatedAt": "2026-11-24T21:01:52Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1135,7 +1135,7 @@
       },
       "createdAt": "2026-03-06T16:47:43Z",
       "updatedAt": "2026-11-24T11:03:52Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1166,7 +1166,7 @@
       },
       "createdAt": "2018-03-14T15:37:17Z",
       "updatedAt": "2026-05-15T20:56:51Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1203,7 +1203,7 @@
       },
       "createdAt": "2026-04-11T07:21:16Z",
       "updatedAt": "2026-09-21T13:51:04Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1215,9 +1215,9 @@
       "description": "Walden proves that your code meets its spec, and shows what is no longer proven when either one changes. An open-source, deterministic Go CLI: reviewed specs, executable proofs, durable evidence, a release gate for CI.",
       "url": "https://github.com/andrearaponi/walden",
       "homepage": "https://andrearaponi.github.io/walden/",
-      "stars": 62,
+      "stars": 63,
       "forks": 5,
-      "watchers": 62,
+      "watchers": 63,
       "language": "Go",
       "topics": [
         "acceptance-testing",
@@ -1240,8 +1240,8 @@
         "url": "https://github.com/andrearaponi"
       },
       "createdAt": "2026-03-21T15:44:15Z",
-      "updatedAt": "2026-11-15T17:11:17Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T12:21:02Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1286,7 +1286,7 @@
       },
       "createdAt": "2026-03-21T23:18:51Z",
       "updatedAt": "2026-10-29T05:43:18Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1331,7 +1331,41 @@
       },
       "createdAt": "2021-02-04T21:35:23Z",
       "updatedAt": "2026-10-11T09:07:03Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1419308939",
+      "repoId": 1419308939,
+      "fullName": "shanggqm/my-ai-infra",
+      "name": "my-ai-infra",
+      "description": "面向企业级 AI Coding 的轻量 SDD 脚手架，以规格驱动交付，让开发经验持续沉淀与复用。",
+      "url": "https://github.com/shanggqm/my-ai-infra",
+      "homepage": null,
+      "stars": 55,
+      "forks": 18,
+      "watchers": 55,
+      "language": "JavaScript",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "claude-code",
+        "codex",
+        "cursor",
+        "developer-tools",
+        "github-copilot",
+        "sdd",
+        "spec-driven-development"
+      ],
+      "owner": {
+        "login": "shanggqm",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2172641?v=4",
+        "url": "https://github.com/shanggqm"
+      },
+      "createdAt": "2026-10-14T15:45:28Z",
+      "updatedAt": "2026-11-26T16:21:27Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1368,7 +1402,7 @@
       },
       "createdAt": "2026-01-11T15:09:37Z",
       "updatedAt": "2026-11-21T17:48:31Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1399,7 +1433,7 @@
       },
       "createdAt": "2026-04-02T02:38:08Z",
       "updatedAt": "2026-11-14T08:02:34Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1443,41 +1477,7 @@
       },
       "createdAt": "2026-01-07T18:09:09Z",
       "updatedAt": "2026-11-02T16:54:58Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1419308939",
-      "repoId": 1419308939,
-      "fullName": "shanggqm/my-ai-infra",
-      "name": "my-ai-infra",
-      "description": "面向企业级 AI Coding 的轻量 SDD 脚手架，以规格驱动交付，让开发经验持续沉淀与复用。",
-      "url": "https://github.com/shanggqm/my-ai-infra",
-      "homepage": null,
-      "stars": 52,
-      "forks": 17,
-      "watchers": 52,
-      "language": "JavaScript",
-      "topics": [
-        "ai-agents",
-        "ai-coding",
-        "claude-code",
-        "codex",
-        "cursor",
-        "developer-tools",
-        "github-copilot",
-        "sdd",
-        "spec-driven-development"
-      ],
-      "owner": {
-        "login": "shanggqm",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/2172641?v=4",
-        "url": "https://github.com/shanggqm"
-      },
-      "createdAt": "2026-10-14T15:45:28Z",
-      "updatedAt": "2026-11-25T14:08:09Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1518,7 +1518,7 @@
       },
       "createdAt": "2026-03-22T05:37:37Z",
       "updatedAt": "2026-10-31T06:55:00Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1550,7 +1550,45 @@
       },
       "createdAt": "2026-03-03T06:58:56Z",
       "updatedAt": "2026-11-23T09:40:57Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1125776334",
+      "repoId": 1125776334,
+      "fullName": "ToruAI/openspec-ui",
+      "name": "openspec-ui",
+      "description": "Web dashboard for OpenSpec: a live kanban board of changes across all your repos. Local, read-only, checked against the OpenSpec CLI weekly.",
+      "url": "https://github.com/ToruAI/openspec-ui",
+      "homepage": "https://toruai.github.io/openspec-ui/",
+      "stars": 47,
+      "forks": 8,
+      "watchers": 47,
+      "language": "Rust",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "cursor",
+        "dashboard",
+        "developer-tools",
+        "kanban",
+        "openspec",
+        "react",
+        "rust",
+        "sdd",
+        "spec-driven-development",
+        "web-ui"
+      ],
+      "owner": {
+        "login": "ToruAI",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/205692274?v=4",
+        "url": "https://github.com/ToruAI"
+      },
+      "createdAt": "2025-12-31T10:39:46Z",
+      "updatedAt": "2026-11-26T09:41:17Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1587,7 +1625,7 @@
       },
       "createdAt": "2026-03-04T13:11:24Z",
       "updatedAt": "2026-11-13T18:06:22Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1627,45 +1665,7 @@
       },
       "createdAt": "2026-04-09T11:24:04Z",
       "updatedAt": "2026-11-23T14:17:24Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1125776334",
-      "repoId": 1125776334,
-      "fullName": "ToruAI/openspec-ui",
-      "name": "openspec-ui",
-      "description": "Web dashboard for OpenSpec: a live kanban board of changes across all your repos. Local, read-only, checked against the OpenSpec CLI weekly.",
-      "url": "https://github.com/ToruAI/openspec-ui",
-      "homepage": "https://toruai.github.io/openspec-ui/",
-      "stars": 45,
-      "forks": 8,
-      "watchers": 45,
-      "language": "Rust",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "codex",
-        "cursor",
-        "dashboard",
-        "developer-tools",
-        "kanban",
-        "openspec",
-        "react",
-        "rust",
-        "sdd",
-        "spec-driven-development",
-        "web-ui"
-      ],
-      "owner": {
-        "login": "ToruAI",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/205692274?v=4",
-        "url": "https://github.com/ToruAI"
-      },
-      "createdAt": "2025-12-31T10:39:46Z",
-      "updatedAt": "2026-11-17T20:09:41Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1677,9 +1677,9 @@
       "description": "A Spec-Driven Development (SDD) workflow definition repository using takt",
       "url": "https://github.com/j5ik2o/takt-sdd",
       "homepage": null,
-      "stars": 43,
+      "stars": 42,
       "forks": 1,
-      "watchers": 43,
+      "watchers": 42,
       "language": "JavaScript",
       "topics": [
         "ai-agent",
@@ -1694,8 +1694,36 @@
         "url": "https://github.com/j5ik2o"
       },
       "createdAt": "2026-02-19T06:46:08Z",
-      "updatedAt": "2026-11-12T02:43:10Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "updatedAt": "2026-11-26T12:41:32Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-1453218298",
+      "repoId": 1453218298,
+      "fullName": "mtov/AgileSpec",
+      "name": "AgileSpec",
+      "description": "An Agile Workflow for AI-Assisted Software Delivery",
+      "url": "https://github.com/mtov/AgileSpec",
+      "homepage": null,
+      "stars": 42,
+      "forks": 3,
+      "watchers": 42,
+      "language": null,
+      "topics": [
+        "agile-methodologies",
+        "sdd",
+        "spec-driven-development"
+      ],
+      "owner": {
+        "login": "mtov",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/213200?v=4",
+        "url": "https://github.com/mtov"
+      },
+      "createdAt": "2026-11-10T21:37:10Z",
+      "updatedAt": "2026-11-26T14:26:24Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     },
@@ -1735,43 +1763,7 @@
       },
       "createdAt": "2025-09-27T11:51:17Z",
       "updatedAt": "2026-11-11T09:27:14Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-1239353812",
-      "repoId": 1239353812,
-      "fullName": "felipefontoura/pi-sdd-kit",
-      "name": "pi-sdd-kit",
-      "description": "Spec-Driven Development skill pack for the Pi coding agent: steering docs, .status gates, EARS, and a PRD→SPEC→TASKS→EXEC→REVIEW pipeline.",
-      "url": "https://github.com/felipefontoura/pi-sdd-kit",
-      "homepage": "https://felipefontoura.com/get/sdd-book/?utm_source=github&utm_medium=referral&utm_campaign=pi-sdd-kit&utm_content=about",
-      "stars": 40,
-      "forks": 2,
-      "watchers": 40,
-      "language": null,
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "coding-agent",
-        "llm",
-        "pi",
-        "pi-agent",
-        "pi-dev",
-        "pi-package",
-        "sdd",
-        "skills",
-        "spec-driven-development"
-      ],
-      "owner": {
-        "login": "felipefontoura",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/281622?v=4",
-        "url": "https://github.com/felipefontoura"
-      },
-      "createdAt": "2026-05-15T02:32:13Z",
-      "updatedAt": "2026-11-25T09:47:38Z",
-      "firstSeenAt": "2026-11-25T18:29:22.189Z",
+      "firstSeenAt": "2026-11-26T18:11:35.006Z",
       "isNew": true,
       "existing": false
     }
