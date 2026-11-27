@@ -1,10 +1,51 @@
 {
   "topic": "ui-components",
-  "fetchedAt": "2026-11-26T18:07:34.782Z",
+  "fetchedAt": "2026-11-27T17:51:04.085Z",
   "count": 50,
   "newCount": 43,
   "existingCount": 7,
   "items": [
+    {
+      "id": "gh-topic-838695230",
+      "repoId": 838695230,
+      "fullName": "DavidHDev/react-bits",
+      "name": "react-bits",
+      "description": "The largest open-source library of animated, interactive, and customizable React & Next.js components for building standout web products and experiences. Built for humans and AI agents.",
+      "url": "https://github.com/DavidHDev/react-bits",
+      "homepage": "https://reactbits.dev",
+      "stars": 52832,
+      "forks": 2677,
+      "watchers": 52832,
+      "language": "JavaScript",
+      "topics": [
+        "3d",
+        "animations",
+        "component-library",
+        "components",
+        "components-library",
+        "components-react",
+        "css-animations",
+        "javascript",
+        "react",
+        "react-components",
+        "reactjs",
+        "tailwind",
+        "tailwindcss",
+        "ui-components",
+        "ui-library",
+        "web"
+      ],
+      "owner": {
+        "login": "DavidHDev",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/48634587?v=4",
+        "url": "https://github.com/DavidHDev"
+      },
+      "createdAt": "2024-08-06T06:54:54Z",
+      "updatedAt": "2026-11-27T17:50:48Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
+      "isNew": true,
+      "existing": false
+    },
     {
       "id": "gh-topic-12256376",
       "repoId": 12256376,
@@ -43,49 +84,8 @@
         "url": "https://github.com/ionic-team"
       },
       "createdAt": "2013-08-20T23:06:02Z",
-      "updatedAt": "2026-11-26T15:22:29Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-838695230",
-      "repoId": 838695230,
-      "fullName": "DavidHDev/react-bits",
-      "name": "react-bits",
-      "description": "The largest open-source library of animated, interactive, and customizable React & Next.js components for building standout web products and experiences. Built for humans and AI agents.",
-      "url": "https://github.com/DavidHDev/react-bits",
-      "homepage": "https://reactbits.dev",
-      "stars": 52766,
-      "forks": 2675,
-      "watchers": 52766,
-      "language": "JavaScript",
-      "topics": [
-        "3d",
-        "animations",
-        "component-library",
-        "components",
-        "components-library",
-        "components-react",
-        "css-animations",
-        "javascript",
-        "react",
-        "react-components",
-        "reactjs",
-        "tailwind",
-        "tailwindcss",
-        "ui-components",
-        "ui-library",
-        "web"
-      ],
-      "owner": {
-        "login": "DavidHDev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/48634587?v=4",
-        "url": "https://github.com/DavidHDev"
-      },
-      "createdAt": "2024-08-06T06:54:54Z",
-      "updatedAt": "2026-11-26T18:05:49Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:42:51Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -98,7 +98,7 @@
       "url": "https://github.com/Semantic-Org/Semantic-UI",
       "homepage": "http://www.semantic-ui.com",
       "stars": 50991,
-      "forks": 4826,
+      "forks": 4825,
       "watchers": 50991,
       "language": "JavaScript",
       "topics": [
@@ -119,8 +119,8 @@
         "url": "https://github.com/Semantic-Org"
       },
       "createdAt": "2013-04-08T23:32:04Z",
-      "updatedAt": "2026-11-26T03:07:22Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T14:34:08Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -132,9 +132,9 @@
       "description": "Build and share delightful machine learning apps, all in Python. 🌟 Star to support our work!",
       "url": "https://github.com/gradio-app/gradio",
       "homepage": "http://www.gradio.app",
-      "stars": 44158,
-      "forks": 3685,
-      "watchers": 44158,
+      "stars": 44169,
+      "forks": 3686,
+      "watchers": 44169,
       "language": "Python",
       "topics": [
         "data-analysis",
@@ -158,8 +158,8 @@
         "url": "https://github.com/gradio-app"
       },
       "createdAt": "2018-12-19T08:24:04Z",
-      "updatedAt": "2026-11-26T12:21:22Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:49:13Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -171,9 +171,9 @@
       "description": "🐉 Vue Component Framework",
       "url": "https://github.com/vuetifyjs/vuetify",
       "homepage": "https://vuetifyjs.com",
-      "stars": 41044,
-      "forks": 7103,
-      "watchers": 41044,
+      "stars": 41045,
+      "forks": 7105,
+      "watchers": 41045,
       "language": "TypeScript",
       "topics": [
         "javascript",
@@ -202,8 +202,8 @@
         "url": "https://github.com/vuetifyjs"
       },
       "createdAt": "2016-09-12T00:39:35Z",
-      "updatedAt": "2026-11-26T10:37:31Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T07:24:39Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -215,9 +215,9 @@
       "description": "Chakra UI is a component system for building SaaS products with speed ⚡️",
       "url": "https://github.com/chakra-ui/chakra-ui",
       "homepage": "https://chakra-ui.com",
-      "stars": 40750,
-      "forks": 3649,
-      "watchers": 40750,
+      "stars": 40753,
+      "forks": 3650,
+      "watchers": 40753,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -243,8 +243,8 @@
         "url": "https://github.com/chakra-ui"
       },
       "createdAt": "2019-08-17T14:27:54Z",
-      "updatedAt": "2026-11-26T14:07:57Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:34:26Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -256,9 +256,9 @@
       "description": "Beautiful & consistent icon toolkit made by the community. Lucide is an open-source icon library that provides 2000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. ",
       "url": "https://github.com/lucide-icons/lucide",
       "homepage": "https://lucide.dev",
-      "stars": 26016,
-      "forks": 1720,
-      "watchers": 26016,
+      "stars": 26041,
+      "forks": 1727,
+      "watchers": 26041,
       "language": "TypeScript",
       "topics": [
         "feather-icons",
@@ -278,8 +278,8 @@
         "url": "https://github.com/lucide-icons"
       },
       "createdAt": "2020-06-08T15:36:21Z",
-      "updatedAt": "2026-11-26T17:19:39Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:33:33Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -291,9 +291,9 @@
       "description": "Cross-Platform React Native UI Toolkit",
       "url": "https://github.com/react-native-elements/react-native-elements",
       "homepage": "https://reactnativeelements.com",
-      "stars": 25868,
-      "forks": 4642,
-      "watchers": 25868,
+      "stars": 25870,
+      "forks": 4641,
+      "watchers": 25870,
       "language": "MDX",
       "topics": [
         "android",
@@ -312,8 +312,8 @@
         "url": "https://github.com/react-native-elements"
       },
       "createdAt": "2016-09-08T14:21:41Z",
-      "updatedAt": "2026-11-25T12:54:10Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T16:52:34Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -346,8 +346,8 @@
         "url": "https://github.com/GeekyAnts"
       },
       "createdAt": "2016-04-15T11:37:23Z",
-      "updatedAt": "2026-11-26T00:39:16Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T14:34:23Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -359,9 +359,9 @@
       "description": "Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.",
       "url": "https://github.com/radix-ui/primitives",
       "homepage": "https://radix-ui.com/primitives",
-      "stars": 19594,
-      "forks": 1337,
-      "watchers": 19594,
+      "stars": 19613,
+      "forks": 1339,
+      "watchers": 19613,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -380,8 +380,8 @@
         "url": "https://github.com/radix-ui"
       },
       "createdAt": "2020-06-19T13:23:22Z",
-      "updatedAt": "2026-11-26T15:53:41Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:32:50Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -393,9 +393,9 @@
       "description": "A Vue 3 Component Library. Fairly Complete. Theme Customizable. Uses TypeScript. Fast.",
       "url": "https://github.com/tusen-ai/naive-ui",
       "homepage": "https://www.naiveui.com",
-      "stars": 18622,
-      "forks": 1867,
-      "watchers": 18622,
+      "stars": 18621,
+      "forks": 1868,
+      "watchers": 18621,
       "language": "TypeScript",
       "topics": [
         "component-library",
@@ -410,8 +410,8 @@
         "url": "https://github.com/tusen-ai"
       },
       "createdAt": "2021-06-04T13:47:28Z",
-      "updatedAt": "2026-11-26T09:41:00Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T04:26:01Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -423,9 +423,9 @@
       "description": "A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences.",
       "url": "https://github.com/adobe/react-spectrum",
       "homepage": "https://react-spectrum.adobe.com",
-      "stars": 16071,
-      "forks": 1659,
-      "watchers": 16071,
+      "stars": 16073,
+      "forks": 1657,
+      "watchers": 16073,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -441,8 +441,8 @@
         "url": "https://github.com/adobe"
       },
       "createdAt": "2019-09-13T23:32:51Z",
-      "updatedAt": "2026-11-26T09:37:20Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T14:28:18Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -475,8 +475,8 @@
         "url": "https://github.com/marko-js"
       },
       "createdAt": "2014-01-07T23:58:21Z",
-      "updatedAt": "2026-11-24T23:40:43Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T01:15:35Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -488,9 +488,9 @@
       "description": "提高 Android UI 开发效率的 UI 库",
       "url": "https://github.com/Tencent/QMUI_Android",
       "homepage": "http://qmuiteam.com/android",
-      "stars": 14475,
+      "stars": 14476,
       "forks": 2660,
-      "watchers": 14475,
+      "watchers": 14476,
       "language": "Java",
       "topics": [
         "android",
@@ -503,8 +503,8 @@
         "url": "https://github.com/Tencent"
       },
       "createdAt": "2017-04-21T10:03:18Z",
-      "updatedAt": "2026-11-26T08:38:15Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T16:47:59Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -516,9 +516,9 @@
       "description": "Style React fast with 100% parity on React Native, an optional UI kit, and optimizing compiler.",
       "url": "https://github.com/tamagui/tamagui",
       "homepage": "https://tamagui.dev",
-      "stars": 14318,
+      "stars": 14319,
       "forks": 628,
-      "watchers": 14318,
+      "watchers": 14319,
       "language": "TypeScript",
       "topics": [
         "atomic-css",
@@ -540,8 +540,8 @@
         "url": "https://github.com/tamagui"
       },
       "createdAt": "2020-10-16T21:19:51Z",
-      "updatedAt": "2026-11-25T08:52:07Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-26T18:32:32Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -553,9 +553,9 @@
       "description": "Typescript/React Library for AI Chat 💬🚀",
       "url": "https://github.com/assistant-ui/assistant-ui",
       "homepage": "https://www.assistant-ui.com",
-      "stars": 13441,
-      "forks": 1374,
-      "watchers": 13441,
+      "stars": 13454,
+      "forks": 1377,
+      "watchers": 13454,
       "language": "TypeScript",
       "topics": [
         "ai-chatbot",
@@ -575,8 +575,8 @@
         "url": "https://github.com/assistant-ui"
       },
       "createdAt": "2023-11-22T16:01:17Z",
-      "updatedAt": "2026-11-26T17:07:41Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:43:39Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -621,7 +621,7 @@
       },
       "createdAt": "2012-11-06T12:17:46Z",
       "updatedAt": "2026-11-26T08:07:26Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -633,9 +633,9 @@
       "description": "Primer is GitHub's design system. This is the CSS implementation",
       "url": "https://github.com/primer/css",
       "homepage": "https://primer.style/css",
-      "stars": 13064,
+      "stars": 13063,
       "forks": 1291,
-      "watchers": 13064,
+      "watchers": 13063,
       "language": "SCSS",
       "topics": [
         "css",
@@ -655,8 +655,8 @@
         "url": "https://github.com/primer"
       },
       "createdAt": "2015-03-19T23:31:21Z",
-      "updatedAt": "2026-11-26T00:25:58Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T14:54:36Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -688,7 +688,7 @@
       },
       "createdAt": "2017-07-30T10:03:14Z",
       "updatedAt": "2026-11-25T07:23:12Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -700,9 +700,9 @@
       "description": "Generative UI SDK for React",
       "url": "https://github.com/tambo-ai/tambo",
       "homepage": "https://tambo.co",
-      "stars": 11226,
-      "forks": 580,
-      "watchers": 11226,
+      "stars": 11223,
+      "forks": 581,
+      "watchers": 11223,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -723,8 +723,8 @@
         "url": "https://github.com/tambo-ai"
       },
       "createdAt": "2024-06-15T17:11:37Z",
-      "updatedAt": "2026-11-26T13:28:25Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:44:51Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -736,9 +736,9 @@
       "description": "Vuestic Admin is an open-source, ready-to-use admin template suite designed for rapid development, easy maintenance, and high accessibility. Built on Vuestic UI, Vue 3, Vite, Pinia, and Tailwind CSS. Maintained by Epicmax (@epicmaxco).",
       "url": "https://github.com/epicmaxco/vuestic-admin",
       "homepage": "https://admin.vuestic.dev",
-      "stars": 10953,
+      "stars": 10954,
       "forks": 1780,
-      "watchers": 10953,
+      "watchers": 10954,
       "language": "Vue",
       "topics": [
         "admin-dashboard",
@@ -765,8 +765,8 @@
         "url": "https://github.com/epicmaxco"
       },
       "createdAt": "2017-07-31T11:52:40Z",
-      "updatedAt": "2026-11-26T14:38:02Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T11:52:47Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -779,7 +779,7 @@
       "url": "https://github.com/wix/react-native-calendars",
       "homepage": null,
       "stars": 10325,
-      "forks": 3040,
+      "forks": 3039,
       "watchers": 10325,
       "language": "TypeScript",
       "topics": [
@@ -796,8 +796,8 @@
         "url": "https://github.com/wix"
       },
       "createdAt": "2016-11-11T12:17:27Z",
-      "updatedAt": "2026-11-26T01:53:38Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T07:20:21Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -809,9 +809,9 @@
       "description": "Open-source UI component library and front-end development framework based on Tailwind CSS",
       "url": "https://github.com/themesberg/flowbite",
       "homepage": "https://flowbite.com",
-      "stars": 9396,
-      "forks": 869,
-      "watchers": 9396,
+      "stars": 9400,
+      "forks": 870,
+      "watchers": 9400,
       "language": "HTML",
       "topics": [
         "components",
@@ -838,8 +838,8 @@
         "url": "https://github.com/themesberg"
       },
       "createdAt": "2021-07-28T15:21:50Z",
-      "updatedAt": "2026-11-26T01:44:19Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T12:20:00Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -878,7 +878,43 @@
       },
       "createdAt": "2017-08-08T14:59:33Z",
       "updatedAt": "2026-11-26T17:55:07Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
+      "isNew": true,
+      "existing": false
+    },
+    {
+      "id": "gh-topic-654115547",
+      "repoId": 654115547,
+      "fullName": "radix-ui/themes",
+      "name": "themes",
+      "description": "Radix Themes is an open-source component library optimized for fast development, easy maintenance, and accessibility. Maintained by @workos.",
+      "url": "https://github.com/radix-ui/themes",
+      "homepage": "https://radix-ui.com/themes",
+      "stars": 8880,
+      "forks": 350,
+      "watchers": 8880,
+      "language": "TypeScript",
+      "topics": [
+        "accessibility",
+        "colors",
+        "component-library",
+        "design-systems",
+        "radix-ui",
+        "react",
+        "theme-development",
+        "themes",
+        "ui",
+        "ui-components",
+        "ui-kit"
+      ],
+      "owner": {
+        "login": "radix-ui",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/75042455?v=4",
+        "url": "https://github.com/radix-ui"
+      },
+      "createdAt": "2023-06-15T12:21:08Z",
+      "updatedAt": "2026-11-27T16:36:14Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -908,43 +944,7 @@
       },
       "createdAt": "2020-05-14T18:26:36Z",
       "updatedAt": "2026-11-23T10:30:06Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-654115547",
-      "repoId": 654115547,
-      "fullName": "radix-ui/themes",
-      "name": "themes",
-      "description": "Radix Themes is an open-source component library optimized for fast development, easy maintenance, and accessibility. Maintained by @workos.",
-      "url": "https://github.com/radix-ui/themes",
-      "homepage": "https://radix-ui.com/themes",
-      "stars": 8876,
-      "forks": 349,
-      "watchers": 8876,
-      "language": "TypeScript",
-      "topics": [
-        "accessibility",
-        "colors",
-        "component-library",
-        "design-systems",
-        "radix-ui",
-        "react",
-        "theme-development",
-        "themes",
-        "ui",
-        "ui-components",
-        "ui-kit"
-      ],
-      "owner": {
-        "login": "radix-ui",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/75042455?v=4",
-        "url": "https://github.com/radix-ui"
-      },
-      "createdAt": "2023-06-15T12:21:08Z",
-      "updatedAt": "2026-11-26T14:14:43Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -977,8 +977,8 @@
         "url": "https://github.com/IBAnimatable"
       },
       "createdAt": "2015-11-17T23:55:21Z",
-      "updatedAt": "2026-11-24T10:52:33Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T14:49:33Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -990,9 +990,9 @@
       "description": "The Most Complete React UI Component Library",
       "url": "https://github.com/primefaces/primereact",
       "homepage": "https://primereact.org",
-      "stars": 8313,
-      "forks": 1232,
-      "watchers": 8313,
+      "stars": 8312,
+      "forks": 1233,
+      "watchers": 8312,
       "language": "CSS",
       "topics": [
         "bootstrap",
@@ -1021,8 +1021,8 @@
         "url": "https://github.com/primefaces"
       },
       "createdAt": "2016-12-16T15:56:27Z",
-      "updatedAt": "2026-11-26T14:19:06Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T15:58:41Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1034,9 +1034,9 @@
       "description": "A very flexible message bar for UIKit and SwiftUI.",
       "url": "https://github.com/SwiftKickMobile/SwiftMessages",
       "homepage": null,
-      "stars": 7544,
+      "stars": 7545,
       "forks": 761,
-      "watchers": 7544,
+      "watchers": 7545,
       "language": "Swift",
       "topics": [
         "alerts",
@@ -1059,8 +1059,8 @@
         "url": "https://github.com/SwiftKickMobile"
       },
       "createdAt": "2016-08-08T16:17:15Z",
-      "updatedAt": "2026-11-26T13:59:18Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T03:15:52Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1072,9 +1072,9 @@
       "description": "Open-source ThreeUI Community catalog with live interactive components and complete Community source.",
       "url": "https://github.com/MengTo/threeui",
       "homepage": "https://threeui.com",
-      "stars": 7486,
-      "forks": 694,
-      "watchers": 7486,
+      "stars": 7509,
+      "forks": 696,
+      "watchers": 7509,
       "language": "HTML",
       "topics": [
         "react",
@@ -1089,8 +1089,8 @@
         "url": "https://github.com/MengTo"
       },
       "createdAt": "2026-08-21T11:56:39Z",
-      "updatedAt": "2026-11-26T17:25:26Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:49:40Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1103,7 +1103,7 @@
       "url": "https://github.com/Tencent/QMUI_iOS",
       "homepage": "http://qmuiteam.com/ios",
       "stars": 7192,
-      "forks": 1445,
+      "forks": 1444,
       "watchers": 7192,
       "language": "Objective-C",
       "topics": [
@@ -1119,7 +1119,7 @@
       },
       "createdAt": "2016-12-20T07:34:32Z",
       "updatedAt": "2026-11-24T03:31:55Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1151,7 +1151,7 @@
       },
       "createdAt": "2013-10-01T04:31:03Z",
       "updatedAt": "2026-11-24T15:57:19Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1163,9 +1163,9 @@
       "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
       "url": "https://github.com/unovue/reka-ui",
       "homepage": "https://reka-ui.com",
-      "stars": 6977,
-      "forks": 597,
-      "watchers": 6977,
+      "stars": 6978,
+      "forks": 599,
+      "watchers": 6978,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -1191,8 +1191,8 @@
         "url": "https://github.com/unovue"
       },
       "createdAt": "2023-06-22T11:08:02Z",
-      "updatedAt": "2026-11-26T16:14:45Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T00:32:17Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -1204,9 +1204,9 @@
       "description": "A multi window layout manager for webapps",
       "url": "https://github.com/golden-layout/golden-layout",
       "homepage": "https://golden-layout.github.io/golden-layout",
-      "stars": 6722,
+      "stars": 6724,
       "forks": 559,
-      "watchers": 6722,
+      "watchers": 6724,
       "language": "JavaScript",
       "topics": [
         "drag-and-drop",
@@ -1222,8 +1222,8 @@
         "url": "https://github.com/golden-layout"
       },
       "createdAt": "2014-10-05T07:29:06Z",
-      "updatedAt": "2026-11-24T13:55:01Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T16:13:57Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1235,9 +1235,9 @@
       "description": "It's like v0, but in your Cursor / Claude Code / Windsurf: search 10,000+ React/Tailwind components, generate new UI with AI, and publish your own — right from your editor. Magic MCP is now the 21st MCP; this package keeps old configs working. Setup: 21st.dev/mcp",
       "url": "https://github.com/21st-dev/magic-mcp",
       "homepage": "https://21st.dev/mcp",
-      "stars": 6675,
+      "stars": 6682,
       "forks": 554,
-      "watchers": 6675,
+      "watchers": 6682,
       "language": "TypeScript",
       "topics": [
         "21st",
@@ -1255,8 +1255,8 @@
         "url": "https://github.com/21st-dev"
       },
       "createdAt": "2025-02-19T13:17:50Z",
-      "updatedAt": "2026-11-26T17:21:28Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T13:49:18Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1290,7 +1290,7 @@
       },
       "createdAt": "2020-09-26T12:27:00Z",
       "updatedAt": "2026-11-24T06:39:36Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1302,9 +1302,9 @@
       "description": "Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.",
       "url": "https://github.com/htmlstreamofficial/preline",
       "homepage": "https://preline.co",
-      "stars": 6542,
+      "stars": 6543,
       "forks": 417,
-      "watchers": 6542,
+      "watchers": 6543,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -1322,8 +1322,8 @@
         "url": "https://github.com/htmlstreamofficial"
       },
       "createdAt": "2022-05-15T15:29:39Z",
-      "updatedAt": "2026-11-26T14:17:50Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T08:28:58Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -1336,7 +1336,7 @@
       "url": "https://github.com/jpush/aurora-imui",
       "homepage": "https://docs.jiguang.cn",
       "stars": 5683,
-      "forks": 980,
+      "forks": 981,
       "watchers": 5683,
       "language": "Java",
       "topics": [
@@ -1354,7 +1354,7 @@
       },
       "createdAt": "2016-12-13T05:24:01Z",
       "updatedAt": "2026-11-25T13:00:11Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1366,9 +1366,9 @@
       "description": "Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library. ~10KB min+gz.",
       "url": "https://github.com/knadh/oat",
       "homepage": "https://oat.ink",
-      "stars": 5657,
-      "forks": 267,
-      "watchers": 5657,
+      "stars": 5680,
+      "forks": 269,
+      "watchers": 5680,
       "language": "CSS",
       "topics": [
         "component-library",
@@ -1389,8 +1389,8 @@
         "url": "https://github.com/knadh"
       },
       "createdAt": "2026-01-15T05:49:47Z",
-      "updatedAt": "2026-11-26T17:52:57Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:48:13Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1402,9 +1402,9 @@
       "description": "npm for design engineers: largest marketplace of shadcn/ui-based React Tailwind components, blocks and hooks",
       "url": "https://github.com/serafimcloud/21st",
       "homepage": "https://21st.dev",
-      "stars": 5589,
+      "stars": 5590,
       "forks": 341,
-      "watchers": 5589,
+      "watchers": 5590,
       "language": "TypeScript",
       "topics": [
         "nextjs",
@@ -1422,8 +1422,8 @@
         "url": "https://github.com/serafimcloud"
       },
       "createdAt": "2024-09-30T10:56:10Z",
-      "updatedAt": "2026-11-26T01:45:27Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-26T21:24:13Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -1435,9 +1435,9 @@
       "description": "React & React Native Components & Patterns (copy-paste components & patterns crafted with Tailwind CSS (NativeWind))",
       "url": "https://github.com/gluestack/gluestack-ui",
       "homepage": "https://gluestack.io/",
-      "stars": 5363,
+      "stars": 5364,
       "forks": 239,
-      "watchers": 5363,
+      "watchers": 5364,
       "language": "TypeScript",
       "topics": [
         "accessibility",
@@ -1457,8 +1457,8 @@
         "url": "https://github.com/gluestack"
       },
       "createdAt": "2023-01-11T12:03:50Z",
-      "updatedAt": "2026-11-26T12:11:40Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T08:20:48Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1470,9 +1470,9 @@
       "description": "Build your design system in React, Solid, Vue, Svelte or Vanilla. Powered by finite state machines",
       "url": "https://github.com/chakra-ui/zag",
       "homepage": "http://zagjs.com",
-      "stars": 5293,
-      "forks": 319,
-      "watchers": 5293,
+      "stars": 5296,
+      "forks": 321,
+      "watchers": 5296,
       "language": "TypeScript",
       "topics": [
         "a11y",
@@ -1502,8 +1502,8 @@
         "url": "https://github.com/chakra-ui"
       },
       "createdAt": "2021-07-07T11:38:07Z",
-      "updatedAt": "2026-11-26T02:03:53Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T17:43:57Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1515,9 +1515,9 @@
       "description": "A Kawaii React UI component library  一个可爱的 React UI  组件库",
       "url": "https://github.com/guokaigdg/animal-island-ui",
       "homepage": "https://guokaigdg.github.io/animal-island-ui/",
-      "stars": 5206,
+      "stars": 5212,
       "forks": 55,
-      "watchers": 5206,
+      "watchers": 5212,
       "language": "TypeScript",
       "topics": [
         "component-library",
@@ -1532,8 +1532,8 @@
         "url": "https://github.com/guokaigdg"
       },
       "createdAt": "2026-04-12T16:53:42Z",
-      "updatedAt": "2026-11-26T13:57:33Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T15:06:10Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": true
     },
@@ -1545,9 +1545,9 @@
       "description": "Build beautiful website using Vue & Nuxt.",
       "url": "https://github.com/unovue/inspira-ui",
       "homepage": "https://inspira-ui.com",
-      "stars": 5123,
-      "forks": 357,
-      "watchers": 5123,
+      "stars": 5125,
+      "forks": 356,
+      "watchers": 5125,
       "language": "Vue",
       "topics": [
         "components",
@@ -1572,8 +1572,8 @@
         "url": "https://github.com/unovue"
       },
       "createdAt": "2024-08-30T08:20:57Z",
-      "updatedAt": "2026-11-26T10:04:28Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T10:41:29Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1585,9 +1585,9 @@
       "description": "💍A simple and elegant Android native UI framework, free your hands! (一个简洁而优雅的Android原生UI框架，解放你的双手！)",
       "url": "https://github.com/xuexiangjys/XUI",
       "homepage": "https://xuexiangjys.github.io/XUI/",
-      "stars": 5078,
+      "stars": 5079,
       "forks": 850,
-      "watchers": 5078,
+      "watchers": 5079,
       "language": "Java",
       "topics": [
         "android",
@@ -1604,8 +1604,8 @@
         "url": "https://github.com/xuexiangjys"
       },
       "createdAt": "2019-01-07T07:59:02Z",
-      "updatedAt": "2026-11-26T16:00:19Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T03:29:57Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1618,7 +1618,7 @@
       "url": "https://github.com/appbaseio/reactivesearch",
       "homepage": "https://opensource.reactivesearch.io/",
       "stars": 4923,
-      "forks": 476,
+      "forks": 475,
       "watchers": 4923,
       "language": "JavaScript",
       "topics": [
@@ -1647,7 +1647,7 @@
       },
       "createdAt": "2017-02-15T15:21:24Z",
       "updatedAt": "2026-11-26T14:37:20Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1659,9 +1659,9 @@
       "description": "🏆 Use Ant Design like a Pro!",
       "url": "https://github.com/ant-design/pro-components",
       "homepage": "https://pro-components.antdigital.dev",
-      "stars": 4861,
+      "stars": 4863,
       "forks": 1440,
-      "watchers": 4861,
+      "watchers": 4863,
       "language": "TypeScript",
       "topics": [
         "ant",
@@ -1679,8 +1679,8 @@
         "url": "https://github.com/ant-design"
       },
       "createdAt": "2019-04-28T10:45:11Z",
-      "updatedAt": "2026-11-26T08:12:20Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T15:55:38Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1720,7 +1720,7 @@
       },
       "createdAt": "2015-11-19T18:27:43Z",
       "updatedAt": "2026-11-19T19:47:24Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1749,7 +1749,7 @@
       },
       "createdAt": "2017-09-27T10:41:36Z",
       "updatedAt": "2026-11-19T20:39:07Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     },
@@ -1761,9 +1761,9 @@
       "description": "An open source collection of animated, interactive & fully customizable Vue components for building stunning, memorable websites.",
       "url": "https://github.com/DavidHDev/vue-bits",
       "homepage": "https://vue-bits.dev/",
-      "stars": 4674,
+      "stars": 4677,
       "forks": 182,
-      "watchers": 4674,
+      "watchers": 4677,
       "language": "Vue",
       "topics": [
         "javascript",
@@ -1784,8 +1784,8 @@
         "url": "https://github.com/DavidHDev"
       },
       "createdAt": "2025-07-07T18:48:50Z",
-      "updatedAt": "2026-11-26T12:14:39Z",
-      "firstSeenAt": "2026-11-26T18:07:34.782Z",
+      "updatedAt": "2026-11-27T15:49:41Z",
+      "firstSeenAt": "2026-11-27T17:51:04.085Z",
       "isNew": true,
       "existing": false
     }

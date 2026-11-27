@@ -1,9 +1,9 @@
 {
   "topic": "vector-database",
-  "fetchedAt": "2026-11-26T18:06:59.934Z",
+  "fetchedAt": "2026-11-27T17:50:28.370Z",
   "count": 50,
-  "newCount": 36,
-  "existingCount": 14,
+  "newCount": 35,
+  "existingCount": 15,
   "items": [
     {
       "id": "gh-topic-649170660",
@@ -13,9 +13,9 @@
       "description": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience ",
       "url": "https://github.com/Mintplex-Labs/anything-llm",
       "homepage": "https://anythingllm.com",
-      "stars": 68668,
-      "forks": 7758,
-      "watchers": 68668,
+      "stars": 68701,
+      "forks": 7766,
+      "watchers": 68701,
       "language": "JavaScript",
       "topics": [
         "agent-computer",
@@ -40,8 +40,8 @@
         "url": "https://github.com/Mintplex-Labs"
       },
       "createdAt": "2023-06-04T02:29:14Z",
-      "updatedAt": "2026-11-26T17:31:31Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:59:11Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -53,9 +53,9 @@
       "description": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
       "url": "https://github.com/meilisearch/meilisearch",
       "homepage": "https://www.meilisearch.com",
-      "stars": 60018,
-      "forks": 2802,
-      "watchers": 60018,
+      "stars": 60026,
+      "forks": 2803,
+      "watchers": 60026,
       "language": "Rust",
       "topics": [
         "ai",
@@ -85,8 +85,8 @@
         "url": "https://github.com/meilisearch"
       },
       "createdAt": "2018-04-23T11:45:28Z",
-      "updatedAt": "2026-11-26T17:37:17Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:30:09Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -98,9 +98,9 @@
       "description": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
       "url": "https://github.com/pathwaycom/serviette",
       "homepage": "https://github.com/pathwaycom/serviette/blob/main/docs/README.md",
-      "stars": 58675,
-      "forks": 1536,
-      "watchers": 58675,
+      "stars": 58670,
+      "forks": 1538,
+      "watchers": 58670,
       "language": "Python",
       "topics": [
         "chromadb",
@@ -130,8 +130,8 @@
         "url": "https://github.com/pathwaycom"
       },
       "createdAt": "2023-07-19T08:43:37Z",
-      "updatedAt": "2026-11-26T14:51:00Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:18:10Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -143,9 +143,9 @@
       "description": "LlamaIndex is the document processing platform for AI",
       "url": "https://github.com/run-llama/llama_index",
       "homepage": "https://developers.llamaindex.ai",
-      "stars": 53017,
-      "forks": 8647,
-      "watchers": 53017,
+      "stars": 53026,
+      "forks": 8655,
+      "watchers": 53026,
       "language": "Python",
       "topics": [
         "agents",
@@ -165,8 +165,8 @@
         "url": "https://github.com/run-llama"
       },
       "createdAt": "2022-11-02T04:24:54Z",
-      "updatedAt": "2026-11-26T17:08:04Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:39:45Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -178,9 +178,9 @@
       "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
       "url": "https://github.com/milvus-io/milvus",
       "homepage": "https://milvus.io",
-      "stars": 46747,
-      "forks": 4348,
-      "watchers": 46747,
+      "stars": 46752,
+      "forks": 4350,
+      "watchers": 46752,
       "language": "Go",
       "topics": [
         "anns",
@@ -208,8 +208,8 @@
         "url": "https://github.com/milvus-io"
       },
       "createdAt": "2019-09-16T06:43:43Z",
-      "updatedAt": "2026-11-26T09:37:59Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:48:55Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -221,9 +221,9 @@
       "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
       "url": "https://github.com/volcengine/OpenViking",
       "homepage": "https://openviking.ai",
-      "stars": 42870,
-      "forks": 3579,
-      "watchers": 42870,
+      "stars": 42937,
+      "forks": 3583,
+      "watchers": 42937,
       "language": "Python",
       "topics": [
         "agent-context",
@@ -244,8 +244,8 @@
         "url": "https://github.com/volcengine"
       },
       "createdAt": "2026-01-05T07:11:17Z",
-      "updatedAt": "2026-11-26T17:25:41Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:49:13Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -257,9 +257,9 @@
       "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
       "url": "https://github.com/VectifyAI/PageIndex",
       "homepage": "https://pageindex.ai",
-      "stars": 40795,
-      "forks": 3500,
-      "watchers": 40795,
+      "stars": 40814,
+      "forks": 3502,
+      "watchers": 40814,
       "language": "Python",
       "topics": [
         "agentic-ai",
@@ -281,8 +281,8 @@
         "url": "https://github.com/VectifyAI"
       },
       "createdAt": "2025-04-01T10:53:54Z",
-      "updatedAt": "2026-11-26T16:15:27Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:14:50Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -294,9 +294,9 @@
       "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
       "url": "https://github.com/qdrant/qdrant",
       "homepage": "https://qdrant.tech",
-      "stars": 35728,
-      "forks": 2848,
-      "watchers": 35728,
+      "stars": 35743,
+      "forks": 2851,
+      "watchers": 35743,
       "language": "Rust",
       "topics": [
         "ai-search",
@@ -326,8 +326,8 @@
         "url": "https://github.com/qdrant"
       },
       "createdAt": "2020-05-30T21:37:01Z",
-      "updatedAt": "2026-11-26T17:08:07Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:22:51Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -339,9 +339,9 @@
       "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
       "url": "https://github.com/topoteretes/cognee",
       "homepage": "https://www.cognee.ai",
-      "stars": 33648,
-      "forks": 3565,
-      "watchers": 33648,
+      "stars": 33673,
+      "forks": 3570,
+      "watchers": 33673,
       "language": "Python",
       "topics": [
         "agent-memory",
@@ -370,8 +370,8 @@
         "url": "https://github.com/topoteretes"
       },
       "createdAt": "2023-08-16T16:16:33Z",
-      "updatedAt": "2026-11-26T17:38:24Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:36:04Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -383,9 +383,9 @@
       "description": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. Each technique has a detailed notebook tutorial.",
       "url": "https://github.com/NirDiamant/RAG_Techniques",
       "homepage": "https://diamant-ai.com",
-      "stars": 30551,
-      "forks": 3728,
-      "watchers": 30551,
+      "stars": 30556,
+      "forks": 3729,
+      "watchers": 30556,
       "language": "Jupyter Notebook",
       "topics": [
         "agentic-rag",
@@ -413,8 +413,8 @@
         "url": "https://github.com/NirDiamant"
       },
       "createdAt": "2024-07-13T16:08:36Z",
-      "updatedAt": "2026-11-26T15:17:23Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T15:32:37Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -426,9 +426,9 @@
       "description": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
       "url": "https://github.com/memvid/memvid",
       "homepage": "https://www.memvid.com",
-      "stars": 17440,
+      "stars": 17438,
       "forks": 1461,
-      "watchers": 17440,
+      "watchers": 17438,
       "language": "Rust",
       "topics": [
         "ai",
@@ -458,8 +458,8 @@
         "url": "https://github.com/memvid"
       },
       "createdAt": "2025-05-27T16:01:08Z",
-      "updatedAt": "2026-11-26T13:22:28Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T03:04:06Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -471,9 +471,9 @@
       "description": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.",
       "url": "https://github.com/weaviate/weaviate",
       "homepage": "https://weaviate.io/developers/weaviate/",
-      "stars": 16967,
+      "stars": 16970,
       "forks": 1441,
-      "watchers": 16967,
+      "watchers": 16970,
       "language": "Go",
       "topics": [
         "approximate-nearest-neighbor-search",
@@ -503,8 +503,8 @@
         "url": "https://github.com/weaviate"
       },
       "createdAt": "2016-03-30T15:03:17Z",
-      "updatedAt": "2026-11-26T11:41:43Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T13:22:30Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -516,9 +516,9 @@
       "description": "A lightweight, lightning-fast, in-process vector database",
       "url": "https://github.com/alibaba/zvec",
       "homepage": "https://zvec.org",
-      "stars": 16294,
-      "forks": 1027,
-      "watchers": 16294,
+      "stars": 16299,
+      "forks": 1029,
+      "watchers": 16299,
       "language": "C++",
       "topics": [
         "agent-skills",
@@ -543,8 +543,8 @@
         "url": "https://github.com/alibaba"
       },
       "createdAt": "2025-12-05T07:45:38Z",
-      "updatedAt": "2026-11-26T17:02:17Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T14:29:56Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -556,9 +556,9 @@
       "description": "[MLsys2026 Best Paper]: https://arxiv.org/abs/2506.08276. RAG on Everything with LEANN. Enjoy 97% storage savings while running a fast, accurate, and 100% private RAG application on your personal device.",
       "url": "https://github.com/StarTrail-org/LEANN",
       "homepage": "https://arxiv.org/abs/2506.08276",
-      "stars": 13816,
-      "forks": 1290,
-      "watchers": 13816,
+      "stars": 13843,
+      "forks": 1291,
+      "watchers": 13843,
       "language": "Python",
       "topics": [
         "ai",
@@ -584,8 +584,8 @@
         "url": "https://github.com/StarTrail-org"
       },
       "createdAt": "2025-06-09T06:52:59Z",
-      "updatedAt": "2026-11-26T10:59:57Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:39:29Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -597,9 +597,9 @@
       "description": "💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
       "url": "https://github.com/neuml/txtai",
       "homepage": "https://neuml.github.io/txtai",
-      "stars": 13736,
-      "forks": 1083,
-      "watchers": 13736,
+      "stars": 13739,
+      "forks": 1082,
+      "watchers": 13739,
       "language": "Python",
       "topics": [
         "agents",
@@ -629,8 +629,8 @@
         "url": "https://github.com/neuml"
       },
       "createdAt": "2020-08-09T19:14:59Z",
-      "updatedAt": "2026-11-26T17:42:50Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:17:14Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -642,9 +642,9 @@
       "description": "LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing tool calling (including MCP support), agents and RAG easy. It integrates seamlessly with enterprise Java frameworks like Quarkus and Spring Boot.",
       "url": "https://github.com/langchain4j/langchain4j",
       "homepage": "https://docs.langchain4j.dev",
-      "stars": 13447,
+      "stars": 13452,
       "forks": 2715,
-      "watchers": 13447,
+      "watchers": 13452,
       "language": "Java",
       "topics": [
         "anthropic",
@@ -674,8 +674,8 @@
         "url": "https://github.com/langchain4j"
       },
       "createdAt": "2023-06-20T15:30:29Z",
-      "updatedAt": "2026-11-26T16:31:42Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T11:13:07Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -687,9 +687,9 @@
       "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
       "url": "https://github.com/zilliztech/claude-context",
       "homepage": "https://github.com/zilliztech/claude-context/tree/master/docs",
-      "stars": 12734,
+      "stars": 12736,
       "forks": 941,
-      "watchers": 12734,
+      "watchers": 12736,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -719,8 +719,8 @@
         "url": "https://github.com/zilliztech"
       },
       "createdAt": "2025-06-06T02:12:47Z",
-      "updatedAt": "2026-11-26T16:57:20Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T07:11:03Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -732,9 +732,9 @@
       "description": "Developer-friendly OSS embedded retrieval library for multimodal AI. Search More; Manage Less.",
       "url": "https://github.com/lancedb/lancedb",
       "homepage": "https://lancedb.com/docs",
-      "stars": 11992,
-      "forks": 1189,
-      "watchers": 11992,
+      "stars": 11998,
+      "forks": 1193,
+      "watchers": 11998,
       "language": "Rust",
       "topics": [
         "approximate-nearest-neighbor-search",
@@ -752,8 +752,8 @@
         "url": "https://github.com/lancedb"
       },
       "createdAt": "2023-02-28T01:15:17Z",
-      "updatedAt": "2026-11-26T13:45:49Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T15:49:58Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -765,9 +765,9 @@
       "description": "🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.",
       "url": "https://github.com/oramasearch/orama",
       "homepage": "https://docs.orama.com/docs/orama-js",
-      "stars": 10620,
+      "stars": 10622,
       "forks": 411,
-      "watchers": 10620,
+      "watchers": 10622,
       "language": "TypeScript",
       "topics": [
         "algiorithm",
@@ -792,8 +792,8 @@
         "url": "https://github.com/oramasearch"
       },
       "createdAt": "2022-05-10T12:01:50Z",
-      "updatedAt": "2026-11-25T23:35:40Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:39:27Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -805,9 +805,9 @@
       "description": "OceanBase is the unified distributed database for the AI era — open-source, multi-model, one engine for your most demanding workloads.",
       "url": "https://github.com/oceanbase/oceanbase",
       "homepage": "https://en.oceanbase.com",
-      "stars": 10442,
-      "forks": 1936,
-      "watchers": 10442,
+      "stars": 10444,
+      "forks": 1937,
+      "watchers": 10444,
       "language": "C++",
       "topics": [
         "analytics",
@@ -837,8 +837,8 @@
         "url": "https://github.com/oceanbase"
       },
       "createdAt": "2021-05-31T14:36:17Z",
-      "updatedAt": "2026-11-26T16:49:15Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T03:53:40Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -850,9 +850,9 @@
       "description": "One Postgres for your application data, full-text search, vector retrieval, and aggregations. Home of the pg_search extension.",
       "url": "https://github.com/paradedb/paradedb",
       "homepage": "https://paradedb.com",
-      "stars": 9572,
-      "forks": 522,
-      "watchers": 9572,
+      "stars": 9573,
+      "forks": 523,
+      "watchers": 9573,
       "language": "Rust",
       "topics": [
         "aggregations",
@@ -882,8 +882,8 @@
         "url": "https://github.com/paradedb"
       },
       "createdAt": "2023-06-30T20:21:47Z",
-      "updatedAt": "2026-11-26T17:15:42Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T15:38:57Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -922,7 +922,7 @@
       },
       "createdAt": "2020-10-10T06:04:42Z",
       "updatedAt": "2026-11-26T10:23:37Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -934,9 +934,9 @@
       "description": "Deeplake is AI Data Runtime for Agents. It provides serverless postgres with a multimodal datalake, enabling scalable retrieval and training.",
       "url": "https://github.com/activeloopai/deeplake",
       "homepage": "https://deeplake.ai",
-      "stars": 9272,
+      "stars": 9274,
       "forks": 722,
-      "watchers": 9272,
+      "watchers": 9274,
       "language": "C++",
       "topics": [
         "agent",
@@ -965,8 +965,8 @@
         "url": "https://github.com/activeloopai"
       },
       "createdAt": "2019-08-09T06:17:59Z",
-      "updatedAt": "2026-11-24T22:05:31Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T14:20:17Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -978,9 +978,9 @@
       "description": "MariaDB server is a community developed fork of MySQL server. Started by core members of the original MySQL team, MariaDB actively works with outside developers to deliver the most featureful, stable, and sanely licensed open SQL server in the industry.",
       "url": "https://github.com/MariaDB/server",
       "homepage": "https://mariadb.org",
-      "stars": 8666,
-      "forks": 2234,
-      "watchers": 8666,
+      "stars": 8669,
+      "forks": 2235,
+      "watchers": 8669,
       "language": "C++",
       "topics": [
         "amazon-web-services",
@@ -1005,8 +1005,8 @@
         "url": "https://github.com/MariaDB"
       },
       "createdAt": "2014-05-15T10:58:50Z",
-      "updatedAt": "2026-11-26T15:33:29Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:34:15Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1043,7 +1043,7 @@
       },
       "createdAt": "2023-11-27T01:30:44Z",
       "updatedAt": "2026-11-25T23:21:03Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1055,9 +1055,9 @@
       "description": "Open Source Deep Research Alternative to Reason and Search on Private Data. Written in Python.",
       "url": "https://github.com/zilliztech/deep-searcher",
       "homepage": "https://zilliztech.github.io/deep-searcher/",
-      "stars": 8407,
+      "stars": 8408,
       "forks": 820,
-      "watchers": 8407,
+      "watchers": 8408,
       "language": "Python",
       "topics": [
         "agent",
@@ -1084,8 +1084,8 @@
         "url": "https://github.com/zilliztech"
       },
       "createdAt": "2025-02-08T02:07:05Z",
-      "updatedAt": "2026-11-26T07:37:04Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T13:30:50Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -1097,9 +1097,9 @@
       "description": "The AI search platform",
       "url": "https://github.com/vespa-engine/vespa",
       "homepage": "https://vespa.ai",
-      "stars": 7201,
+      "stars": 7202,
       "forks": 753,
-      "watchers": 7201,
+      "watchers": 7202,
       "language": "Java",
       "topics": [
         "ai",
@@ -1123,8 +1123,8 @@
         "url": "https://github.com/vespa-engine"
       },
       "createdAt": "2016-06-03T20:54:20Z",
-      "updatedAt": "2026-11-25T18:27:38Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T08:56:10Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1136,9 +1136,9 @@
       "description": "Postgres with GPUs for ML/AI apps.",
       "url": "https://github.com/postgresml/postgresml",
       "homepage": "https://postgresml.org",
-      "stars": 6833,
+      "stars": 6832,
       "forks": 362,
-      "watchers": 6833,
+      "watchers": 6832,
       "language": "Rust",
       "topics": [
         "ai",
@@ -1165,8 +1165,8 @@
         "url": "https://github.com/postgresml"
       },
       "createdAt": "2022-04-11T05:33:26Z",
-      "updatedAt": "2026-11-25T23:54:07Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T12:18:48Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1178,9 +1178,9 @@
       "description": "Open-source framework for building agentic apps in JavaScript, Go, Dart, and Python, built and used in production by Google",
       "url": "https://github.com/genkit-ai/genkit",
       "homepage": "https://genkit.dev",
-      "stars": 6625,
-      "forks": 893,
-      "watchers": 6625,
+      "stars": 6632,
+      "forks": 895,
+      "watchers": 6632,
       "language": "TypeScript",
       "topics": [
         "agents",
@@ -1198,8 +1198,8 @@
         "url": "https://github.com/genkit-ai"
       },
       "createdAt": "2024-04-29T22:04:42Z",
-      "updatedAt": "2026-11-26T16:03:28Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T17:26:09Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -1211,9 +1211,9 @@
       "description": "HelixDB is an OLTP graph database with native vector and full-text search built in Rust on Object Storage.",
       "url": "https://github.com/HelixDB/helix-db",
       "homepage": "https://helix-db.com",
-      "stars": 6315,
+      "stars": 6323,
       "forks": 403,
-      "watchers": 6315,
+      "watchers": 6323,
       "language": "Rust",
       "topics": [
         "ai",
@@ -1238,8 +1238,8 @@
         "url": "https://github.com/HelixDB"
       },
       "createdAt": "2024-11-23T11:02:14Z",
-      "updatedAt": "2026-11-26T03:58:49Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T13:37:55Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1273,7 +1273,7 @@
       },
       "createdAt": "2016-05-05T13:25:43Z",
       "updatedAt": "2026-11-25T23:22:27Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1285,9 +1285,9 @@
       "description": "Apache Pinot: a real-time analytics database for low-latency SQL and vector search, serving user-facing and agent-facing applications",
       "url": "https://github.com/apache/pinot",
       "homepage": "https://pinot.apache.org/",
-      "stars": 6177,
+      "stars": 6176,
       "forks": 1537,
-      "watchers": 6177,
+      "watchers": 6176,
       "language": "Java",
       "topics": [
         "ai-agents",
@@ -1308,8 +1308,8 @@
         "url": "https://github.com/apache"
       },
       "createdAt": "2014-05-19T23:27:48Z",
-      "updatedAt": "2026-11-26T11:31:39Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T12:41:18Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1322,7 +1322,7 @@
       "url": "https://github.com/vcaesar/riot",
       "homepage": null,
       "stars": 6070,
-      "forks": 469,
+      "forks": 468,
       "watchers": 6070,
       "language": "Go",
       "topics": [
@@ -1344,7 +1344,7 @@
       },
       "createdAt": "2017-06-21T14:17:59Z",
       "updatedAt": "2026-11-25T15:32:13Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1383,7 +1383,7 @@
       },
       "createdAt": "2025-06-24T11:15:21Z",
       "updatedAt": "2026-11-25T23:55:01Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -1427,7 +1427,7 @@
       },
       "createdAt": "2022-07-18T13:52:38Z",
       "updatedAt": "2026-11-25T16:04:13Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -1439,9 +1439,9 @@
       "description": "Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.",
       "url": "https://github.com/CaviraOSS/LongMemory",
       "homepage": "https://cavira.app/projects/longmemory",
-      "stars": 4588,
+      "stars": 4591,
       "forks": 514,
-      "watchers": 4588,
+      "watchers": 4591,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1471,10 +1471,52 @@
         "url": "https://github.com/CaviraOSS"
       },
       "createdAt": "2025-10-19T16:12:49Z",
-      "updatedAt": "2026-11-26T16:27:58Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T14:23:38Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
+    },
+    {
+      "id": "gh-topic-744164276",
+      "repoId": 744164276,
+      "fullName": "oracle-devrel/oracle-ai-developer-hub",
+      "name": "oracle-ai-developer-hub",
+      "description": "Reference apps, notebooks, and workshops for RAG, vector and hybrid search, AI agents, and agent memory on Oracle AI Database and OCI Generative AI, with LangChain and LangGraph examples.",
+      "url": "https://github.com/oracle-devrel/oracle-ai-developer-hub",
+      "homepage": "https://oracle-devrel.github.io/oracle-ai-developer-hub/",
+      "stars": 4495,
+      "forks": 859,
+      "watchers": 4495,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "agent-memory",
+        "agentmemory",
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-developer",
+        "artificial-intelligence",
+        "generative-ai",
+        "hybrid-search",
+        "langchain",
+        "langgraph",
+        "llm",
+        "oracle-database",
+        "oracleaidatabase",
+        "rag",
+        "vector-database",
+        "vector-search"
+      ],
+      "owner": {
+        "login": "oracle-devrel",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/83461399?v=4",
+        "url": "https://github.com/oracle-devrel"
+      },
+      "createdAt": "2024-01-16T18:43:15Z",
+      "updatedAt": "2026-11-27T06:10:04Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
+      "isNew": true,
+      "existing": true
     },
     {
       "id": "gh-topic-9342529",
@@ -1517,7 +1559,7 @@
       },
       "createdAt": "2013-04-10T09:17:16Z",
       "updatedAt": "2026-11-26T13:43:33Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1529,9 +1571,9 @@
       "description": "Knowhere extracts, parses, and outputs structured chunks ready for AI Agents and RAG.",
       "url": "https://github.com/Ontos-AI/knowhere",
       "homepage": "https://knowhereto.ai",
-      "stars": 4132,
+      "stars": 4144,
       "forks": 341,
-      "watchers": 4132,
+      "watchers": 4144,
       "language": "Python",
       "topics": [
         "agent-harness",
@@ -1552,8 +1594,8 @@
         "url": "https://github.com/Ontos-AI"
       },
       "createdAt": "2026-04-30T03:13:10Z",
-      "updatedAt": "2026-11-26T14:43:47Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:33:09Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1565,9 +1607,9 @@
       "description": "Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private Plugin/Skill/Extension or MCP: hybrid semantic search, polyglot dependency graphs, symbol-level impact analysis & call-flow, interactive HTML viewer, cross-project & branch-aware search, DB/API/infra knowledge. 61% less tokens, 84% fewer calls, 37x faster. Cloud in beta.",
       "url": "https://github.com/giancarloerra/SocratiCode",
       "homepage": "https://socraticode.cloud",
-      "stars": 3385,
-      "forks": 425,
-      "watchers": 3385,
+      "stars": 3389,
+      "forks": 426,
+      "watchers": 3389,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1597,8 +1639,8 @@
         "url": "https://github.com/giancarloerra"
       },
       "createdAt": "2026-02-26T16:12:26Z",
-      "updatedAt": "2026-11-26T16:53:29Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T14:16:26Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1610,9 +1652,9 @@
       "description": "The Best GUI for Milvus",
       "url": "https://github.com/zilliztech/attu",
       "homepage": "https://github.com/zilliztech/attu",
-      "stars": 3243,
+      "stars": 3244,
       "forks": 221,
-      "watchers": 3243,
+      "watchers": 3244,
       "language": "Shell",
       "topics": [
         "attu",
@@ -1625,8 +1667,8 @@
         "url": "https://github.com/zilliztech"
       },
       "createdAt": "2021-12-09T09:15:33Z",
-      "updatedAt": "2026-11-26T12:11:56Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T12:19:43Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1639,7 +1681,7 @@
       "url": "https://github.com/pinecone-io/examples",
       "homepage": "https://docs.pinecone.io",
       "stars": 3047,
-      "forks": 1064,
+      "forks": 1063,
       "watchers": 3047,
       "language": "Jupyter Notebook",
       "topics": [
@@ -1660,7 +1702,7 @@
       },
       "createdAt": "2021-03-09T19:42:10Z",
       "updatedAt": "2026-11-21T16:39:22Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1672,9 +1714,9 @@
       "description": "pingcap/autoflow is a Graph RAG based and conversational knowledge base tool built with TiDB Serverless Vector Storage. Demo: https://tidb.ai",
       "url": "https://github.com/pingcap/autoflow",
       "homepage": "https://tidb.ai",
-      "stars": 2985,
+      "stars": 2987,
       "forks": 194,
-      "watchers": 2985,
+      "watchers": 2987,
       "language": "TypeScript",
       "topics": [
         "chatbot",
@@ -1692,8 +1734,8 @@
         "url": "https://github.com/pingcap"
       },
       "createdAt": "2024-02-05T06:53:14Z",
-      "updatedAt": "2026-11-25T09:13:39Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T08:03:43Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1705,9 +1747,9 @@
       "description": "基于 Spring Boot 3、Java 21 与 Spring AI 打造的开源 AI 智能体实战项目，由程序员鱼皮编程导航出品，包含 AI 恋爱大师应用与基于 ReAct 模式的自主规划超级智能体 YuManus（OpenManus Java 实现）。项目完整覆盖 LLM 大模型接入、Ollama 本地部署、Prompt 工程优化、ChatMemory 对话记忆、结构化输出、RAG 知识库与 PgVector 向量检索、Tool Calling 工具调用、MCP 模型上下文协议服务开发、SSE 流式推送与 Serverless 部署上线，配套 Vue 3 前端与独立图片搜索 MCP 服务，助你系统掌握企业级 Java AI Agent 开发。",
       "url": "https://github.com/liyupi/yu-ai-agent",
       "homepage": "https://www.codefather.cn",
-      "stars": 2799,
-      "forks": 622,
-      "watchers": 2799,
+      "stars": 2801,
+      "forks": 623,
+      "watchers": 2801,
       "language": "Java",
       "topics": [
         "ai",
@@ -1737,8 +1779,8 @@
         "url": "https://github.com/liyupi"
       },
       "createdAt": "2025-04-22T08:13:58Z",
-      "updatedAt": "2026-11-26T14:58:03Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T16:56:42Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1750,9 +1792,9 @@
       "description": "VCP 部署在 AI 模型 API 与前端应用之间，是面向AGI OS开发和探索的工业级基建示范项目。通过统一指令协议、多层级持久化记忆、分布式插件引擎及多 Agent 协作框架，将原本“无状态、无记忆、无工具调用能力”的大语言模型，彻底改造成拥有永久自我意识、物理世界操作权及群体协作智能的完整智能体系统。",
       "url": "https://github.com/lioensky/VCPToolBox",
       "homepage": "https://www.vcptoolbox.com",
-      "stars": 2455,
+      "stars": 2457,
       "forks": 401,
-      "watchers": 2455,
+      "watchers": 2457,
       "language": "JavaScript",
       "topics": [
         "agent-framework",
@@ -1779,8 +1821,8 @@
         "url": "https://github.com/lioensky"
       },
       "createdAt": "2025-05-12T13:51:06Z",
-      "updatedAt": "2026-11-26T08:42:51Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "updatedAt": "2026-11-27T12:52:26Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1820,7 +1862,7 @@
       },
       "createdAt": "2019-08-09T10:00:06Z",
       "updatedAt": "2026-11-25T16:30:03Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1856,7 +1898,7 @@
       },
       "createdAt": "2019-05-13T02:37:31Z",
       "updatedAt": "2026-11-25T11:46:25Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": true
     },
@@ -1892,7 +1934,7 @@
       },
       "createdAt": "2026-02-28T08:37:49Z",
       "updatedAt": "2026-11-25T13:57:26Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1937,7 +1979,7 @@
       },
       "createdAt": "2023-07-25T20:19:07Z",
       "updatedAt": "2026-11-21T23:02:06Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     },
@@ -1972,42 +2014,7 @@
       },
       "createdAt": "2023-04-15T09:56:24Z",
       "updatedAt": "2026-11-24T18:42:00Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
-      "isNew": true,
-      "existing": false
-    },
-    {
-      "id": "gh-topic-941562247",
-      "repoId": 941562247,
-      "fullName": "neuron-core/neuron-ai",
-      "name": "neuron-ai",
-      "description": "The Agentic Framework of the PHP ecosystem to build production-ready AI driven applications. Connect components (LLMs, Tools, vector DBs, memory) to agents that interact with your data and UI.",
-      "url": "https://github.com/neuron-core/neuron-ai",
-      "homepage": "https://neuron-ai.dev",
-      "stars": 2186,
-      "forks": 262,
-      "watchers": 2186,
-      "language": "PHP",
-      "topics": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agents",
-        "ai",
-        "llm",
-        "llm-inference",
-        "llms",
-        "php",
-        "vector-database"
-      ],
-      "owner": {
-        "login": "neuron-core",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230101083?v=4",
-        "url": "https://github.com/neuron-core"
-      },
-      "createdAt": "2025-03-02T15:35:21Z",
-      "updatedAt": "2026-11-26T09:37:27Z",
-      "firstSeenAt": "2026-11-26T18:06:59.934Z",
+      "firstSeenAt": "2026-11-27T17:50:28.370Z",
       "isNew": true,
       "existing": false
     }
